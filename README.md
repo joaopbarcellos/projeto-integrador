@@ -54,9 +54,9 @@ b) inclusão das Histórias de usuário desenvolvidas pelo grupo
 
 ### 5. PROTÓTIPOS DO SISTEMA<br>
 #### 5.1 PROTÓTIPO DO SISTEMA MOBILE
-a) https://quant-ux.com/#/test.html?h=a2aa10aNp1hKiT3NPSm7Au7sejqNeysKYczM42YiQPKrwnMVZneAe4zybf1a&ln=en <br>
-b) https://quant-ux.com/#/share.html?h=a2aa10aNp1hKiT3NPSm7Au7sejqNeysKYczM42YiQPKrwnMVZneAe4zybf1a <br>
-c) https://quant-ux.com/#/apps/641ae83c05d7232656948b97/design/s10061_93161.html <br>
+a) [Link para teste do protótipo](https://quant-ux.com/#/test.html?h=a2aa10aNp1hKiT3NPSm7Au7sejqNeysKYczM42YiQPKrwnMVZneAe4zybf1a&ln=en) <br>
+b) [Link da visão geral das telas](https://quant-ux.com/#/share.html?h=a2aa10aNp1hKiT3NPSm7Au7sejqNeysKYczM42YiQPKrwnMVZneAe4zybf1a) <br>
+c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656948b97/design/s10061_93161.html) <br>
 
 #### 5.2 PROTÓTIPO DO SISTEMA WEB
 
