@@ -72,18 +72,8 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
 * Relatório de supervisores e supervisionados incluindo as seguintes informações: nome do supervisor e nome do supervisionado.
  
  ### 6.MODELO CONCEITUAL<br>
-    A) Utilizar a Notação adequada (Preferencialmente utilizar o BR Modelo 3)
-    B) O mínimo de entidades do modelo conceitual pare este trabalho será igual a 4.
-        * informe quais são as 3 principais entidades do sistema em densenvolvimento
-      (se houverem mais de 3 entidades, pense na importância da entidade para o sistema)       
-    C) Principais fluxos de informação/entidades do sistema (mínimo 2). <br>Dica: normalmente estes fluxos estão associados as tabelas que conterão maior quantidade de dados 
-    D) Qualidade e Clareza
-        Garantir que a semântica dos atributos seja clara no esquema (nomes coerentes com os dados).
-        Criar o esquema de forma a garantir a redução de informação redundante, possibilidade de valores null, 
-        e tuplas falsas (Aplicar os conceitos de normalização abordados).   
-        
-![Alt text](https://github.com/discproint/template_projeto_integrador/blob/main/arquivos/concept_sample.png?raw=true "Modelo Conceitual")
-      
+  
+  ![Conceitual_1](https://github.com/jpzb/projeto-integrador/assets/91470894/bb52e3e2-fdf2-46ef-9fce-d3c461197ca3)
     
 #### 7 Descrição dos dados 
     [objeto]: [descrição do objeto]
@@ -98,9 +88,8 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
         (modelos devem obrigatoriamente estar em conformidade de rastreabilidade)
 
 ### 9	MODELO LÓGICO<br>
-        a) inclusão do esquema lógico do banco de dados
-        b) verificação de correspondencia com o modelo conceitual 
-        (não serão aceitos modelos que não estejam em conformidade)
+      
+  ![Lógico_1](https://github.com/jpzb/projeto-integrador/assets/91470894/e373b21c-36e2-4cd9-8df6-0b818d88ecbf)
 
 ### 10	MODELO FÍSICO<br>
         drop table if exists ESTADO, CIDADE, BAIRRO, TIPO_LOGRADOURO, INTUITO, ENDERECO, EVENTO, HORARIO_FIM, CLASSIFICACAO, EVENTO_CLASSIFICACAO, USUARIO, USUARIO_EVENTO;
