@@ -32,6 +32,7 @@ No sistema, existirão informações de usuários e eventos. Dos usuários são 
 ![image](https://github.com/jpzb/projeto-integrador/assets/91470894/033061a0-ebff-4b24-8067-6e10e68e592f)
 ![image](https://github.com/jpzb/projeto-integrador/assets/91470894/1e570287-23b5-4278-ab37-403e312297e0)
 ![image](https://github.com/jpzb/projeto-integrador/assets/91470894/38c0e1ba-dc70-4813-9f52-6476a218d5ab)
+![image](https://github.com/jpzb/projeto-integrador/assets/91470894/514e3cfe-65c5-46ad-82fb-656067e9c675)
 ![image](https://github.com/jpzb/projeto-integrador/assets/91470894/5dea9f2b-fa05-4558-bf82-b8f9eb7d55b4)
 
 
