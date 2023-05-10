@@ -5,9 +5,10 @@ Trabalho desenvolvido durante a disciplina de Banco de Dados do Integrado
 
 ### 1. COMPONENTES<br>
 Integrantes do grupo<br>
-primeiro_componente_do_grupo:email_primeiro_componente@dominio.com<br>
-segundo_componente_do_grupo:email_segundo_componente@dominio.com<br>
-...
+primeiro_componente_do_grupo: fellipywagmacker123@gmail.com<br>
+segundo_componente_do_grupo: gustavo.gustavovat@gmail.com<br>
+terceiro_componente_do_grupo: jpzbarcellos@gmail.com<br>
+quarto_componente_do_grupo: pedro05042006@gmail.com
 
 ### 2.MINIMUNDO<br>
 Descrever o mini-mundo! (Não deve ser maior do que 30 linhas, se necessário resumir para justar)
@@ -15,11 +16,12 @@ Entrevista com o usuário e identificação dos requisitos.(quando for o caso de
 Descrição textual das regras de negócio definidas como um subconjunto do mundo real cujos elementos são propriedades que desejamos incluir, processar, armazenar, gerenciar, atualizar, e que descrevem a proposta/solução a ser desenvolvida.
 <br>
 
-> O sistema proposto para a "Devcom Projetos conterá as informacões aqui detalhadas. Dos Projetos serão armazenados o número, nome e cidade. Dos Departamentos serão armazenados o número e nome. O cliente destacou que cada projeto pode ter vários departamentos auxiliando no seu desenvolvimento, e cada departamento pode estar envolvido em vários projetos. Os dados relativos aos empregados que serão armazenados são: rg, nome, cpf, salário, data inicial do salario e supervisor de cada empregado. É importante destacar que cada empregado pode ser supervisionado por outro empregado, e obrigatoriamente deve estar alocado a um único departamento, mas pode gerenciar vários departamentos ou não gerenciar nenhum. Um empregado também pode participar de vários projetos, caso seja necessário, mas não precisa obrigatoriamente estar alocado em algum projeto. Com relação aos dependentes serão armazenadas as informações de nome do dependente, data de nascimento, sexo e grau de parentesco. Cada empregado pode ter vários dependentes, mas um dependente esta associado apenas a um único empregado. Com relação ao histórico de salário devemos armazenar as informações de valor do salário, data de início do salário no período e data final do salário no período. É importante lembrar que cada funcionario pode ter diversos eventos de histórico de salário associados a ele visto que este dado pode ser alterado várias vezes..
- 
+> Você já teve dificuldade em encontrar pessoas para praticar esportes? Conseguiu marcar um local para realizar a prática?  
+Nosso sistema tem o objetivo de facilitar o contato entre pessoas que querem praticar esportes e tem dificuldade de encontrar outros esportistas. Buscamos permitir aos usuários organizar e participar de eventos esportivos através de um sistema web e mobile. 
+No sistema, existirão informações de usuários e eventos. Dos usuários são armazenadas as informações de nome completo, cpf, email, idade. Dos eventos serão armazenados a localização, imagem do local, horário, quantidade de vagas, custo e outras informações que se mostrarem pertinentes. Da localização, serão armazenadas a cidade, o bairro, a rua.
  
 ### 3.PMC<br>
-![Exemplo de PMC](https://github.com/discproint/template_projeto_integrador/blob/main/arquivos/PMC.jpg?raw=true "PMC")
+![Exemplo de PMC](![image](https://github.com/jpzb/projeto-integrador/assets/91470894/b48af196-75ed-44ba-b167-4ce31d74e1c4))
 
 
 
