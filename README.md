@@ -11,11 +11,6 @@ terceiro_componente_do_grupo: jpzbarcellos@gmail.com<br>
 quarto_componente_do_grupo: pedro05042006@gmail.com
 
 ### 2.MINIMUNDO<br>
-Descrever o mini-mundo! (Não deve ser maior do que 30 linhas, se necessário resumir para justar)
-Entrevista com o usuário e identificação dos requisitos.(quando for o caso de sistemas com cliente real)
-Descrição textual das regras de negócio definidas como um subconjunto do mundo real cujos elementos são propriedades que desejamos incluir, processar, armazenar, gerenciar, atualizar, e que descrevem a proposta/solução a ser desenvolvida.
-<br>
-
 > Você já teve dificuldade em encontrar pessoas para praticar esportes? Conseguiu marcar um local para realizar a prática?  
 Nosso sistema tem o objetivo de facilitar o contato entre pessoas que querem praticar esportes e tem dificuldade de encontrar outros esportistas. Buscamos permitir aos usuários organizar e participar de eventos esportivos através de um sistema web e mobile. 
 No sistema, existirão informações de usuários e eventos. Dos usuários são armazenadas as informações de nome completo, cpf, email, idade. Dos eventos serão armazenados a localização, imagem do local, horário, quantidade de vagas, custo e outras informações que se mostrarem pertinentes. Da localização, serão armazenadas a cidade, o bairro, a rua.
@@ -39,12 +34,13 @@ No sistema, existirão informações de usuários e eventos. Dos usuários são 
 #### 3.2. Requisitos funcionais e não funcionais
 Incluir informações de: Identificador , Descrição e Prioridade
 Exemplos:<br>
-a) <img src="https://raw.githubusercontent.com/discproint/template_projeto_integrador/main/arquivos/requisitos_funcionais.png" width="350" height="100" /> <br>
-b) <img src="https://raw.githubusercontent.com/discproint/template_projeto_integrador/main/arquivos/requisitos_nao_funcionais.png" width="350" height="190" /> <br>
+a) ![image](https://github.com/jpzb/projeto-integrador/assets/91470894/62cddfc3-05be-4316-9414-908efaddf95a) <br>
+b) ![image](https://github.com/jpzb/projeto-integrador/assets/91470894/d385892d-add3-4650-8d31-951c689be891) <br>
+c) ![image](https://github.com/jpzb/projeto-integrador/assets/91470894/73f1ea7c-7315-48f7-a79a-c8ea85c30435) <br>
 
 #### 3.3 Validação da Ideia.
-a) Link do formulário desenvolvido
-b) Link para Relatório/Apresentação de resultados obtidos
+a) [Link do formulário desenvolvido](https://forms.gle/joFpcFsEGCkWMErW7)
+b) [Link para Relatório/Apresentação de resultados obtidos](https://docs.google.com/presentation/d/1fz1FTr4W_PyjrZAZudigT8LeLHav8KxwQgftTyCD5IA/edit?usp=sharing)
 
 ### 4.Personas e Histórias de usuário<br>
 <img src="https://neilpatel.com/wp-content/uploads/2019/07/exemplo-carlos.png" Personas src="https://neilpatel.com/wp-content/uploads/2019/07/exemplo-carlos.png" width="500" height="500" /> <br>
@@ -56,14 +52,10 @@ b) inclusão das Histórias de usuário desenvolvidas pelo grupo
 
 
 ### 5. PROTÓTIPOS DO SISTEMA<br>
-Neste ponto a codificação não e necessária, somente as ideias de telas devem ser desenvolvidas. O princípio aqui é pensar na criação da interface para identificar possíveis informações a serem armazenadas e/ou descartadas <br>
-
-Sugestão: https://balsamiq.com/products/mockups/<br>
-
-![Alt text](https://github.com/discproint/template_projeto_integrador/blob/main/arquivos/balsamiq.png?raw=true "Title")
-![Arquivo PDF do Protótipo Balsamiq feito para Empresa Devcom](https://github.com/discproint/template_projeto_integrador/blob/main/arquivos/EmpresaDevcom.pdf?raw=true "Empresa Devcom")
-
 #### 5.1 PROTÓTIPO DO SISTEMA MOBILE
+a) https://quant-ux.com/#/test.html?h=a2aa10aNp1hKiT3NPSm7Au7sejqNeysKYczM42YiQPKrwnMVZneAe4zybf1a&ln=en <br>
+b) https://quant-ux.com/#/share.html?h=a2aa10aNp1hKiT3NPSm7Au7sejqNeysKYczM42YiQPKrwnMVZneAe4zybf1a <br>
+c) https://quant-ux.com/#/apps/641ae83c05d7232656948b97/design/s10061_93161.html <br>
 
 #### 5.2 PROTÓTIPO DO SISTEMA WEB
 
