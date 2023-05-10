@@ -34,12 +34,15 @@ No sistema, existirão informações de usuários e eventos. Dos usuários são 
 #### 3.2. Requisitos funcionais e não funcionais
 Incluir informações de: Identificador , Descrição e Prioridade
 Exemplos:<br>
-a) ![image](https://github.com/jpzb/projeto-integrador/assets/91470894/62cddfc3-05be-4316-9414-908efaddf95a) <br>
-b) ![image](https://github.com/jpzb/projeto-integrador/assets/91470894/d385892d-add3-4650-8d31-951c689be891) <br>
-c) ![image](https://github.com/jpzb/projeto-integrador/assets/91470894/73f1ea7c-7315-48f7-a79a-c8ea85c30435) <br>
+a) 
+![image](https://github.com/jpzb/projeto-integrador/assets/91470894/62cddfc3-05be-4316-9414-908efaddf95a) <br>
+b) 
+![image](https://github.com/jpzb/projeto-integrador/assets/91470894/d385892d-add3-4650-8d31-951c689be891) <br>
+c) 
+![image](https://github.com/jpzb/projeto-integrador/assets/91470894/73f1ea7c-7315-48f7-a79a-c8ea85c30435) <br>
 
 #### 3.3 Validação da Ideia.
-a) [Link do formulário desenvolvido](https://forms.gle/joFpcFsEGCkWMErW7)
+a) [Link do formulário desenvolvido](https://forms.gle/joFpcFsEGCkWMErW7) <br>
 b) [Link para Relatório/Apresentação de resultados obtidos](https://docs.google.com/presentation/d/1fz1FTr4W_PyjrZAZudigT8LeLHav8KxwQgftTyCD5IA/edit?usp=sharing)
 
 ### 4.Personas e Histórias de usuário<br>
