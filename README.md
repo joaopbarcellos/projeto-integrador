@@ -21,7 +21,7 @@ Nosso sistema tem o objetivo de facilitar o contato entre pessoas que querem pra
 No sistema, existirão informações de usuários e eventos. Dos usuários são armazenadas as informações de nome completo, cpf, email, idade. Dos eventos serão armazenados a localização, imagem do local, horário, quantidade de vagas, custo e outras informações que se mostrarem pertinentes. Da localização, serão armazenadas a cidade, o bairro, a rua.
  
 ### 3.PMC<br>
-![Exemplo de PMC](![image](https://github.com/jpzb/projeto-integrador/assets/91470894/b48af196-75ed-44ba-b167-4ce31d74e1c4))
+![image](https://github.com/jpzb/projeto-integrador/assets/91470894/b48af196-75ed-44ba-b167-4ce31d74e1c4)
 
 
 
