@@ -73,7 +73,7 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
  
  ### 6.MODELO CONCEITUAL<br>
  
- ![Conceitual_1](https://github.com/jpzb/projeto-integrador/assets/91470894/939b2a8b-5d09-40a8-a1f6-cc5dfe3e7f8b)
+ ![Conceitual](https://github.com/jpzb/projeto-integrador/assets/91470894/878f545d-f395-49b7-86ca-3142b00badb5)
     
 #### 7 Descrição dos dados 
     [objeto]: [descrição do objeto]
@@ -88,8 +88,9 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
         (modelos devem obrigatoriamente estar em conformidade de rastreabilidade)
 
 ### 9	MODELO LÓGICO<br>
-  ![Lógico_1](https://github.com/jpzb/projeto-integrador/assets/91470894/df2e37a6-0c0c-4b30-9f2b-18f49db737c4)
 
+  ![Lógico](https://github.com/jpzb/projeto-integrador/assets/91470894/28509a56-691e-4496-b4c3-3ab88b24960a)
+  
 ### 10	MODELO FÍSICO<br>
         drop table if exists ESTADO, CIDADE, BAIRRO, TIPO_LOGRADOURO, INTUITO, ENDERECO, EVENTO, HORARIO_FIM, CLASSIFICACAO, EVENTO_CLASSIFICACAO, USUARIO, USUARIO_EVENTO, USUARIO_USUARIO;
 
