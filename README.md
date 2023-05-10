@@ -73,7 +73,7 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
  
  ### 6.MODELO CONCEITUAL<br>
  
- ![Conceitual](https://github.com/jpzb/projeto-integrador/assets/91470894/f642b477-08dd-4e66-88f9-1913592683fc)
+ ![Conceitual](https://github.com/jpzb/projeto-integrador/assets/91470894/b3880631-b205-47aa-9d1b-1bc02f7aa6a6)
     
 #### 7 Descrição dos dados 
     [objeto]: [descrição do objeto]
