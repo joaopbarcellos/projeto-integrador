@@ -22,14 +22,18 @@ No sistema, existirão informações de usuários e eventos. Dos usuários são 
  
 ### 3.PMC<br>
 ![image](https://github.com/jpzb/projeto-integrador/assets/91470894/b48af196-75ed-44ba-b167-4ce31d74e1c4)
-
-
-
-a) inclusão do PMC desenvolvido pelo grupo <br>
+<br>
 
 #### 3.1. EAP - Estrutura Analítica do Projeto
-a) Incluír imagem da EAP 
-b) Dicinário da EAP 
+![image](https://github.com/jpzb/projeto-integrador/assets/91470894/f23ff293-beab-4d88-ad96-2ec319b46cb6)
+<br>
+![image](https://github.com/jpzb/projeto-integrador/assets/91470894/d05e50be-843e-4044-8913-4f689da40c06)
+![image](https://github.com/jpzb/projeto-integrador/assets/91470894/70c65b2a-0d04-4bd7-b174-64010cebbaa2)
+![image](https://github.com/jpzb/projeto-integrador/assets/91470894/033061a0-ebff-4b24-8067-6e10e68e592f)
+![image](https://github.com/jpzb/projeto-integrador/assets/91470894/1e570287-23b5-4278-ab37-403e312297e0)
+![image](https://github.com/jpzb/projeto-integrador/assets/91470894/38c0e1ba-dc70-4813-9f52-6476a218d5ab)
+![image](https://github.com/jpzb/projeto-integrador/assets/91470894/5dea9f2b-fa05-4558-bf82-b8f9eb7d55b4)
+
 
 #### 3.2. Requisitos funcionais e não funcionais
 Incluir informações de: Identificador , Descrição e Prioridade
