@@ -76,11 +76,58 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
  ![Conceitual](https://github.com/jpzb/projeto-integrador/assets/91470894/b3880631-b205-47aa-9d1b-1bc02f7aa6a6)
     
 #### 7 Descrição dos dados 
-    [objeto]: [descrição do objeto]
-    
-    EXEMPLO:
-    CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
-    CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
+    USUARIO: tabela que irá armazenar os dados de usuário;
+     email: campo que armazena o email do usuário;
+     nome: campo que armazena o nome do usuário;
+     data_nascimento: campo que armazena a data de nascimento do usuário;
+     senha:  campo que armazena a senha do usuário;
+     foto: campo que armazena o link da foto do usuário.
+
+    INTUITO: tabela que irá armazenar informações relativas ao intuito do usuário/evento;
+     id: campo que armazena o id do intuito;
+     nome: campo que armazena o nome do intuito.
+
+    EVENTO: tabela que irá receber informações dos eventos;
+     id: campo que armazena o id do evento;
+     descricao: campo que armazena a descrição do evento;
+     nome: campo que armazena o nome do evento;
+     foto: campo que armazena o link da foto do evento;
+     data: campo que armazena a data que o evento acontecerá;
+     min_pessoas:  campo que armazena o número mínimo de pessoas do evento;
+     preco: campo que armazena o preço do evento;
+     horario_inicio: campo que armazena o horário de início do evento;
+     max_pessoas: campo que armazena o número máximo de pessoas do evento.
+
+    CLASSIFICACAO: tabela que irá receber informações da classificação de cada evento;
+     id: campo que armazena o id da classificação;
+     nome: campo que armazena o nome da classificação;
+
+    HORARIO_FIM: tabela que terá o horário final do evento;
+     id: campo que armazena o id da classificação;
+     nome: campo que armazena o nome da classificação;
+
+    TIPO_LOGRADOURO: tabela com as informações do tipo do logradouro;
+     id: campo que armazena o id do tipo de logradouro;
+     tipo: campo que armazena o tipo do logradouro; 
+
+    ENDERECO: tabela referente às informações do endereço do usuário/evento; 
+     id: campo que armazena o id do endereço;
+     cep: campo que armazena o cep do endereço;
+     numero: campo que armazena o número do endereço;
+     descricao: campo que armazena a descrição do endereço;
+
+    BAIRRO: tabela referente às informações do bairro;
+     id: campo que armazena o id do bairro;
+     nome: campo que armazena o nome do bairro;
+
+    CIDADE: tabela referente às informações do cidade;
+     id: campo que armazena o id da cidade;
+     nome: campo que armazena o nome da cidade;
+
+    ESTADO: tabela referente às informações do estado;
+     id: campo que armazena o id do estado;
+     nome: campo que armazena o nome do estado em sigla;
+
 
 ### 8	RASTREABILIDADE DOS ARTEFATOS<br>
         a) Historia de usuários vs protótipo (Histórias de Usuário e em qual tela do protótipo aquela HU está sendo realizada).
