@@ -253,7 +253,7 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
 ### 11	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
         a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico
         (Drop para exclusão de tabelas + create definição de para tabelas e estruturas de dados 
- <br> + insert para dados a serem inseridos)
+        <br> + insert para dados a serem inseridos)
         b) Criar um novo banco de dados para testar a restauracao 
         (em caso de falha na restauração o grupo não pontuará neste quesito)
         c) formato .SQL
