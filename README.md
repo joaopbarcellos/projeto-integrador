@@ -44,11 +44,7 @@ a) [Link do formulário desenvolvido](https://forms.gle/joFpcFsEGCkWMErW7) <br>
 b) [Link para Relatório/Apresentação de resultados obtidos](https://docs.google.com/presentation/d/1fz1FTr4W_PyjrZAZudigT8LeLHav8KxwQgftTyCD5IA/edit?usp=sharing)
 
 ### 4.Personas e Histórias de usuário<br>
-<img src="https://neilpatel.com/wp-content/uploads/2019/07/exemplo-carlos.png" Personas src="https://neilpatel.com/wp-content/uploads/2019/07/exemplo-carlos.png" width="500" height="500" /> <br>
-a) inclusão dos Persons desenvolvidos pelo grupo<br>
-<br>
-<img src="https://miro.medium.com/max/1400/1*r5GVnOvqpMdxnGUYNRXqbg.png" UserStory src="https://miro.medium.com/max/1400/1*r5GVnOvqpMdxnGUYNRXqbg.png" width="500" height="300" /> <br>
-b) inclusão das Histórias de usuário desenvolvidas pelo grupo
+Não foi desenvolvido.
 <br>
 
 
