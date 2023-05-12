@@ -10,12 +10,12 @@ segundo_componente_do_grupo: gustavo.gustavovat@gmail.com - Gustavo Caetano<br>
 terceiro_componente_do_grupo: jpzbarcellos@gmail.com - João Pedro Barcellos<br>
 quarto_componente_do_grupo: pedro05042006@gmail.com - Pedro Ramos<br>
 
-### 2.MINIMUNDO<br>
+### 2. MINIMUNDO<br>
 > Você já teve dificuldade em encontrar pessoas para praticar esportes? Conseguiu marcar um local para realizar a prática?  
 Nosso sistema tem o objetivo de facilitar o contato entre pessoas que querem praticar esportes e tem dificuldade de encontrar outros esportistas. Buscamos permitir aos usuários organizar e participar de eventos esportivos através de um sistema web e mobile. 
 No sistema, existirão informações de usuários e eventos. Dos usuários são armazenadas as informações de nome completo, cpf, email, idade. Dos eventos serão armazenados a localização, imagem do local, horário, quantidade de vagas, custo e outras informações que se mostrarem pertinentes. Da localização, serão armazenadas a cidade, o bairro, a rua.
  
-### 3.PMC<br>
+### 3. PMC<br>
 ![image](https://github.com/jpzb/projeto-integrador/assets/91470894/b48af196-75ed-44ba-b167-4ce31d74e1c4)
 <br>
 
@@ -71,11 +71,11 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
 * Relatório com a quantidade de empregados por cada departamento incluindo as seguintes informações: nome do departamento, supervisor e quantidade de empregados alocados no departamento.
 * Relatório de supervisores e supervisionados incluindo as seguintes informações: nome do supervisor e nome do supervisionado.
  
- ### 6.MODELO CONCEITUAL<br>
+ ### 6. MODELO CONCEITUAL<br>
  
  ![Conceitual](https://github.com/jpzb/projeto-integrador/assets/91470894/b3880631-b205-47aa-9d1b-1bc02f7aa6a6)
     
-#### 7 Descrição dos dados 
+#### 7. Descrição dos dados 
     USUARIO: tabela que irá armazenar os dados de usuário;
      email: campo que armazena o email do usuário;
      nome: campo que armazena o nome do usuário;
@@ -129,16 +129,16 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
      nome: campo que armazena o nome do estado em sigla;
 
 
-### 8	RASTREABILIDADE DOS ARTEFATOS<br>
+### 8.	RASTREABILIDADE DOS ARTEFATOS<br>
         a) Historia de usuários vs protótipo (Histórias de Usuário e em qual tela do protótipo aquela HU está sendo realizada).
         b) Protótipo vs Modelo conceitual (Histórias de Usuário e em quais tabelas aquele dado está sendo registrado).
         (modelos devem obrigatoriamente estar em conformidade de rastreabilidade)
 
-### 9	MODELO LÓGICO<br>
+### 9.	MODELO LÓGICO<br>
 
   ![Lógico](https://github.com/jpzb/projeto-integrador/assets/91470894/28509a56-691e-4496-b4c3-3ab88b24960a)
   
-### 10	MODELO FÍSICO<br>
+### 10.	MODELO FÍSICO<br>
         drop table if exists ESTADO, CIDADE, BAIRRO, TIPO_LOGRADOURO, INTUITO, ENDERECO, EVENTO, HORARIO_FIM, CLASSIFICACAO, EVENTO_CLASSIFICACAO, USUARIO, USUARIO_EVENTO, USUARIO_USUARIO;
 
         create table ESTADO(
@@ -250,7 +250,7 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
          foreign key (FK_USUARIO_FILHO_id) references USUARIO(id)
         );
        
-### 11	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
+### 11.	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
         a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico
         (Drop para exclusão de tabelas + create definição de para tabelas e estruturas de dados 
         <br> + insert para dados a serem inseridos)
@@ -258,20 +258,20 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
         (em caso de falha na restauração o grupo não pontuará neste quesito)
         c) formato .SQL
 
-#### 12 PRINCIPAIS CONSULTAS DO SISTEMA 
+#### 12. PRINCIPAIS CONSULTAS DO SISTEMA 
  Inserir as principais consultas (relativas aos 5 principais relatórios) definidas previamente no iten 3.1 deste template.
  <br>
   a) Você deve apresentar as consultas em formato SQL para cad um dos relatórios.
  <br>
   b) Além da consulta deve ser apresentada uma imagem com o resultado obtido para cada consulta.<br>
 
- ### 13 Gráficos, relatórios, integração com Linguagem de programação e outras solicitações.<br>
+ ### 13. Gráficos, relatórios, integração com Linguagem de programação e outras solicitações.<br>
      OBS: Observe as instruções relacionadas a cada uma das atividades abaixo.<br>
  #### 13.1	Integração com Linguagem de programação; <br>
  #### 13.2	Desenvolvimento de gráficos/relatórios pertinentes, juntamente com demais <br>
  #### solicitações feitas pelo professor. <br>
  
- ### 14 Slides e Apresentação em vídeo. <br>
+ ### 14. Slides e Apresentação em vídeo. <br>
      OBS: Observe as instruções relacionadas a cada uma das atividades abaixo.<br>
  #### 14.1 Slides; <br>
  #### 14.2 Apresentação em vídeo <br>
