@@ -43,7 +43,7 @@ c) <br>
 a) [Link do formulário desenvolvido](https://forms.gle/joFpcFsEGCkWMErW7) <br>
 b) [Link para Relatório/Apresentação de resultados obtidos](https://docs.google.com/presentation/d/1fz1FTr4W_PyjrZAZudigT8LeLHav8KxwQgftTyCD5IA/edit?usp=sharing)
 
-### 4.Personas e Histórias de usuário<br>
+### 4. Personas e Histórias de usuário<br>
 Não foi desenvolvido.
 <br>
 
