@@ -5,10 +5,10 @@ Trabalho desenvolvido durante a disciplina de Banco de Dados do Integrado
 
 ### 1. COMPONENTES<br>
 Integrantes do grupo<br>
-primeiro_componente_do_grupo: fellipywagmacker123@gmail.com - Fellipy Silva<br> 
-segundo_componente_do_grupo: gustavo.gustavovat@gmail.com - Gustavo Caetano<br>
-terceiro_componente_do_grupo: jpzbarcellos@gmail.com - João Pedro Barcellos<br>
-quarto_componente_do_grupo: pedro05042006@gmail.com - Pedro Ramos<br>
+Fellipy Silva: fellipywagmacker123@gmail.com<br> 
+Gustavo Caetano: gustavo.gustavovat@gmail.com<br>
+João Pedro Barcellos: jpzbarcellos@gmail.com<br>
+Pedro Ramos: pedro05042006@gmail.com<br>
 
 ### 2. MINIMUNDO<br>
 > Você já teve dificuldade em encontrar pessoas para praticar esportes? Conseguiu marcar um local para realizar a prática?  
