@@ -1,0 +1,139 @@
+/* Aplicando fonte e espaçamentos */
+#principaisEventos {
+  padding-left: 2%;
+  font-size: 45px;
+}
+
+/* Aplicando tamanhos e margem*/
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Aplicando display*/
+.mySlides {
+  display: none;
+}
+ 
+/* Aplicando tamanho e borda */
+.exposicao{
+  width: 100%;
+  border-radius: 5px;
+} 
+
+/* Aplicando cor, posição e fonte */
+.titul{
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 30px;
+  left: 15px;
+  font-size: 40px;
+  text-shadow: black 0.1em 0.1em 0.2em
+}
+
+/* Aplicando display, tamanho, posição, cor, borda e transição */
+.fundoTexto{ 
+  box-sizing: border-box;
+  display: none;
+  width: 100%;
+  height: 11%;
+  text-align: center;  
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 5px;
+  background-color: rgba(50, 174, 181, 0.543);
+  opacity: 0;
+  border-radius: 1px 1px 5px 5px;
+  transition: opacity 0.6s ease;
+}
+
+/* Definindo a opacidade como 1 */
+.fundoTexto:hover {
+  opacity: 1;
+}
+
+/* Aplicando cor, fonte, tamanho e alinhamento */
+.text {
+  color: #ffffff;
+  font-size: 15px;
+  width: 100%; 
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 20px;
+  text-align: left;
+}
+
+/* Definindo posição e cursor */
+.slide {
+  position: absolute;
+  left: 87%;
+  bottom: 8px;
+  cursor: pointer;
+}
+
+/* Aplicando cursor, posição, posição, tamanho, margem, cor, fonte, borda, transição e uma limitação de seleção*/
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #1877f2;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Aplicando posição e borda*/
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Aplicando posição e borda */
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Aplicando cor */
+.prev:hover, .next:hover {
+  background-color: #32afb5;
+}
+
+/* Ainho os dot */
+#dots{
+  text-align: center;
+}
+
+/* Definindo cursor, tamanho, margem, cor, borda e display*/
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Definindo cor */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Animação de fade */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+/* Define que o elemento animado deve ter uma opacidade de 0.4 em "from" e opacidade 1 em "to" */
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
