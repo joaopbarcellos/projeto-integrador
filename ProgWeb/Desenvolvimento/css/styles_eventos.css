@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Quicksand:wght@100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#homea{
+    color: #4267b3 !important;
+    text-shadow: none;
+  }
+
+#voltar{
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: baseline;
+    border-radius: 5px;
+    transition: 0.4s ease;
+}
+
+#voltar:hover{
+    background-color: #057dc2;
+}
+
+#voltar p{
+    color: #000000;
+    margin-bottom: 0px;
+}
+
+#voltar img{
+    height: 10px;
+    padding-right: 5px;
+}
+
+h1{
+    font-size: 55px;
+}
+
+#evento{
+    display: flex;
+    flex-direction: row;
+}
+
+#container p{
+    font-size: 23px;
+    margin-right: 5px;
+}
+
+#container{
+    margin-left: 1.67em;
+    margin-right: 1.67em;
+    margin-top: 4em;
+    padding: 10px;
+}
+
+#img_evento{
+    margin-bottom: 20px;
+    min-height: 15%;
+    min-width: 15%;
+    margin-right: 2%;
+}
+
+.iconezin{
+    height: 25px;
+    margin-right: 0.40em;
+
+}
+
+#informacoes{
+    width: 49%;
+    margin: 0 auto;
+}
+
+#desc #t_desc{
+    font-size: 28px;
+}
+
+#localizacao, #alvo, #intuito, #data, #contato, #preco, #num_inscritos, #vagas_restam, #organizador{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    padding-top: 0.5em
+}
+
+#sifrao{
+    margin-right: 5px;
+}
+
+#dia{
+    margin-right: 15px;
+    margin-left: 0.10em;
+}
+
+#data{
+    padding-right: 200px;
+    
+}
+
+#organizador{
+    margin-bottom: 1.5em;
+}
+
+/* define o estilo padrão do elemento fixo */
+.fixo {
+    position: fixed;
+    top: 80%;
+    left: auto;
+    height: 100px;
+    width: 250px;
+    font-size: 23px;
+  }
+  
+  /* define o estilo do elemento quando se torna relativo */
+  .inscrever-relativo {
+    position: relative;
+    margin-top: 50px;
+  }
+
+#tabela{
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+}
+
+#local{
+    color: #000000 !important;
+    display: flex;
+}
+
+.tabelinha{
+    width: 98%;
+}
+
+tr{
+    text-align: center;
+}
+
+thead{
+    background-color: #057dc2;
+}
+th{
+    color: white;
+}
+
+footer{
+    margin-top: 20vh;
+}
+
