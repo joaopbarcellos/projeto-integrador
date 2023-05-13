@@ -1,5 +1,5 @@
-# TRABALHO DE PI:  Título do Trabalho
-Trabalho desenvolvido durante a disciplina de Banco de Dados do Integrado
+# TRABALHO DE PI:  Time In
+Trabalho de desenvolvimento de software realizado no ano de 2023
 
 # Sumário
 
