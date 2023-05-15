@@ -24,6 +24,7 @@
 	
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
 
+
 </head>
 
 <body>
@@ -79,7 +80,7 @@
 				
 				<div class="text">Surf na cidade de Vila Velha - ES na Praia de Itaparica</div> 
 				
-				<button class="slide lista" id="surfItaparica">Saber Mais</button>
+				<button class="sabermais slide" id="surfItaparica"><span>Saber Mais</span></button>
 			
 			</div>
 		
@@ -97,7 +98,7 @@
 				
 				<div class=" text">Basquete na cidade de Vitória - ES na Praça do Cauê, perto da Terceira Ponte</div>
 				
-				<button class="slide lista" id="basqueteCaue">Saber Mais</button>
+				<button class="sabermais slide" id="basqueteCaue"><span>Saber Mais</span></button>
 			
 			</div>
 		
@@ -115,7 +116,7 @@
 				
 				<div class="text">Motocross no Espírito Santo na Arena Capixaba de Verão</div>
 				
-				<button class="slide lista" id="motocrossArena">Saber Mais</button>
+				<button class="sabermais slide" id="motocrossArena"><span>Saber Mais</span></button>
 			
 			</div>
 			
@@ -176,7 +177,7 @@
 						<p><b>R$:</b> 97,00</p> 
 						
 						<!-- Button para o usuário se inscrever -->
-						<button class="lista" id="aulaZico">Saber Mais</button> 
+						<button class="sabermais  " id="aulaZico"><span>Saber Mais</span></button>
 					
 					</div>
 
@@ -219,7 +220,7 @@
 						
 						<p><b>R$:</b> Gratuito</p>
 						
-						<button class="lista" id="treinoBlack">Saber Mais</button>
+						<button class="sabermais  " id="treinoBlack"><span>Saber Mais</span></button>
 					
 					</div>
 				
@@ -262,7 +263,7 @@
 					
 						<p><b>R$:</b> Gratuito</p>
 					
-						<button class="lista" id="desafioNatacao">Saber Mais</button>
+						<button class="sabermais  " id="desafioNatacao"><span>Saber Mais</span></button>
 					
 					</div>
 				
@@ -305,7 +306,7 @@
 					
 						<p><b>R$:</b> 10,00</p>
 					
-						<button class="lista" id="marDourado">Saber Mais</button>
+						<button class="sabermais  " id="marDourado"><span>Saber Mais</span></button>
 					
 					</div>
 
@@ -344,7 +345,7 @@
 						
 						<p><b>R$:</b> Gratuito</p>   
 					
-						<button class="lista" id="corridaPenha">Saber Mais</button>
+						<button class="sabermais  " id="corridaPenha"><span>Saber Mais</span></button>
 					
 					</div>
 				
@@ -383,7 +384,7 @@
 
 						<p><b>R$:</b> 130,00</p>    
 
-						<button class="lista" id="etapeRio">Saber Mais</button>
+						<button class="sabermais  " id="etapeRio"><span>Saber Mais</span></button>
 
 					</div>         
 
@@ -422,7 +423,7 @@
 
 						<p><b>R$:</b> Gratuito</p>    
 
-						<button class="lista" id="surfItaparica">Saber Mais</button>
+						<button class="sabermais  " id="surfItaparica"><span>Saber Mais</span></button>
 
 					</div>         
 
@@ -461,7 +462,7 @@
 
 						<p><b>R$:</b> Gratuito</p>    
 
-						<button class="lista" id="basqueteCaue">Saber Mais</button>
+						<button class="sabermais  " id="basqueteCaue"><span>Saber Mais</span></button>
 
 					</div>         
 
@@ -500,7 +501,7 @@
 						
 						<p><b>R$:</b> 15,90</p>   
 					
-						<button class="lista" id="motocrossArena">Saber Mais</button>
+						<button class="sabermais" id="motocrossArena"><span>Saber Mais</span></button>
 					
 					</div>
 				
@@ -606,13 +607,16 @@
 			<div id="input_group">
 				
 				<input type="email" id="email" placeholder="E-mail">
-				
-				<button id="enviarEmail">
-					
-					<img class="icone" src="img/enviar.png">
-				
-				</button>
-			
+				<button class="send" id="enviarEmail">
+					<div class="svg-wrapper-1">
+					  <div class="svg-wrapper">
+						<svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+						  <path d="M0 0h24v24H0z" fill="none"></path>
+						  <path d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z" fill="currentColor"></path>
+						</svg>
+					  </div>
+					</div>
+				  </button>			
 			</div>
 		
 		</div>

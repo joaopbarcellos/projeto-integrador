@@ -53,7 +53,7 @@ h1{
 #container{
     margin-left: 1.67em;
     margin-right: 1.67em;
-    margin-top: 4em;
+    margin-top: 1em;
     padding: 10px;
 }
 
@@ -104,6 +104,81 @@ h1{
     margin-bottom: 1.5em;
 }
 
+.inscrever {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 10px;
+    color: white;
+    text-shadow: 2px 2px rgb(116, 116, 116);
+    text-transform: uppercase;
+    border: none;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 17px;
+    background-color: #057dc2;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    transition: all .5s ease;
+  }
+
+.inscrever:active {
+    transform: scale(.9);
+    transition: all 100ms ease;
+}
+  
+.inscrever img {
+    transition: all .5s ease;
+    z-index: 2;
+    width: 48px;
+    height: 48px;
+}
+
+.play {
+    transition: all .5s ease;
+    transition-delay: 300ms;
+}
+.inscrever:hover{
+    background-color: #4267b3;
+}
+.inscrever:hover img {
+    transform: scale(3) translate(140%);
+}
+  
+.now {
+    position: absolute;
+    left: 0;
+    transform: translateX(-100%);
+    transition: all .5s ease;
+    z-index: 2;
+}
+  
+.inscrever:hover .now {
+    transform: translateX(30px);
+    transition-delay: 300ms;
+}
+  
+  .inscrever:hover .play {
+    transform: translateX(200%);
+    transition-delay: 300ms;
+}
+/* 
+.inscrever{
+    width: 100px; 
+    color: white;
+    font-size: 15px;
+    border: 0.5px solid #333333;
+    border-radius: 10px;
+    background-color: #057dc2;
+    height: 50px;
+    left: 700px;
+    margin-left: 20px;
+    transition: 0.4s ease;
+    user-select: none;
+  }
+
 /* define o estilo padrão do elemento fixo */
 .fixo {
     position: fixed;
@@ -114,11 +189,12 @@ h1{
     font-size: 23px;
   }
   
-  /* define o estilo do elemento quando se torna relativo */
-  .inscrever-relativo {
+
+/* define o estilo do elemento quando se torna relativo */
+.inscrever-relativo {
     position: relative;
     margin-top: 50px;
-  }
+}
 
 #tabela{
     display: flex;

@@ -56,6 +56,7 @@ function inscrever(evento){
         let dados = JSON.parse(localStorage.getItem(emailLogado));
         // Pegando os dados do usuário logado e adicionando na lista de eventos inscritos o novo evento
         dados.eventos_inscritos.push(evento.id);
+        
 
         let stringJson = JSON.stringify(dados);
         // Setando novamente no localStorage
@@ -171,31 +172,38 @@ if(criaa){
       icon: 'info',
       title: 'Oops...',
       text: 'Esta página está em desenvolvimento'
+  
     })
   }
 }
-//----------DESENVOLVENDO(PEDRO)---------------------DESENVOLVENDO(PEDRO)---------------------DESENVOLVENDO(PEDRO)---------------------DESENVOLVENDO(PEDRO)-----------
 
 window.addEventListener('scroll', () => {  
   const elemento = document.querySelector('.fixo'); //pego o botao
   const tabel = document.querySelector('.table');//pego o elemento q fica no final da tabela
-  const num = document.querySelector('#t_numinscritos');//pego o elemento numero de inscritos
+  const num = document.querySelector('#t_organizador');//pego o elemento numero de inscritos
   const scrollPosition = window.scrollY;//pego a altura da parte mostrada na pagina
-  const posicaoTopnum = num.offsetTop;
-
+  
   let switchHeight = 0
-  if(tabel){
-    const posicaoheighttabel = tabel.offsetHeight;
-    switchHeight = posicaoheighttabel - 30;
-  }else{
-    switchHeight = posicaoTopnum + 160;
+  if(num){
+    const posicaoTopnum = num.offsetTop;
+    if(tabel){
+      const posicaoheighttabel = tabel.offsetHeight;
+      switchHeight = posicaoheighttabel - 30;
+    }else{
+      console.log(posicaoTopnum, scrollPosition)
+      switchHeight = posicaoTopnum - 500;
+    }
   }
-
-  if (scrollPosition > switchHeight) {//quando a altura da parte mostrada for maior que meu momento de troca, faco a troca do meu css
-    // define a classe CSS para tornar o elemento relativo
-    elemento.classList.add('inscrever-relativo');
-  } else {
-    // define a classe CSS para tornar o elemento fixo
-    elemento.classList.remove('inscrever-relativo');
+  
+  
+  if(elemento){
+    if (scrollPosition > switchHeight) {//quando a altura da parte mostrada for maior que meu momento de troca, faco a troca do meu css
+      // define a classe CSS para tornar o elemento relativo
+      elemento.classList.add('inscrever-relativo');
+    } else {
+      // define a classe CSS para tornar o elemento fixo
+      elemento.classList.remove('inscrever-relativo');
+    }
   }
+  
 });

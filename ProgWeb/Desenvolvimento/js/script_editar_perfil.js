@@ -84,6 +84,14 @@ btnEditar.addEventListener("click", () => {
     // Enviando o usuário de volta para a tela de perfil
 });
 
+let voltar = document.querySelector(".cssbuttons-io-button");
+if(voltar){
+  // Adicionando o ouvidor do evento para se inscrever
+  voltar.addEventListener("click", () => {
+    window.location.assign("../perfil.html")
+})
+}
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //-----------------------------FUNÇÕES PARA MUDAR TAMNHO DAS LABELS ESTETICAMENTE-------------------------------
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////

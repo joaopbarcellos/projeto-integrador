@@ -3,31 +3,6 @@
 	text-shadow: none;
 }
 
-#voltar{
-    position: absolute;
-    margin-left: 10px;
-    margin-top: 10px;
-    padding: 25px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-radius: 5px;
-    transition: 0.4s ease;
-}
-
-#voltar:hover{
-    background-color: #057dc2;
-}
-
-#voltar p{
-    color: #000000;
-}
-
-#voltar img{
-    height: 10px;
-    padding-right: 5px;
-}
-
 /* ------------------------------------------------------------------------------------- */
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');

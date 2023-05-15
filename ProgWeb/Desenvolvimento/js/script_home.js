@@ -56,7 +56,7 @@ function mostraSlides(n) {
 
 
 // Pegando todos os botões para ir para o evento
-const btns = document.querySelectorAll(".lista");
+const btns = document.querySelectorAll(".sabermais");
 
 // Percorrendo todos os botões
 btns.forEach(btn =>{
