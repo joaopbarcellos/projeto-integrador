@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Quicksand:wght@600&display=swap');
+
+/* Denindo fonte definição geral da página */
+*{
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Aplicando cor e deixando a imagem fixa independente do navegador */
+body{
+    background: linear-gradient(to top right, #057dc2, #83e3cd);
+    background-attachment: fixed;
+}
+
+
+.container{
+    background-color: #ffffff;
+    margin-top: 5%;
+}
+
+#test{
+    width: 50%;
+}
+
+#floatingInputValue{
+    border: 0;
+}
+

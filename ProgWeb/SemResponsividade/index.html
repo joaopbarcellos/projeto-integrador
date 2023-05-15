@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="logos/icon.png">
+  <title>Time In</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles_index.css">
+  <script src="js/script_valida_login.js" type="module" defer></script>
+  <script src="js/script_base.js" type="module" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <a href="index.html">
+      <img src="logos/11.png">
+    </a>
+  </header>
+  <div class="container">
+    <div class="divLogin">
+      <h1>Login</h1>
+      <form id="form">
+        <div class="mb-3">
+          <label for="email_usuario" class="form-label">E-mail</label>
+          <input type="email" class="form-control" id="email_usuario" placeholder="Digite seu e-mail">
+          <div class="erro" id="noEmail">E-mail deve ser preenchido!</div>
+          <div class="erro" id="noEmailPadrao">E-mail está fora dos padrões!</div>
+        </div>
+        <div class="mb-3">
+          <label for="senha_usuario" class="form-label">Senha</label>
+          <input type="password" class="form-control" id="senha_usuario" placeholder="Digite sua senha">
+          <div class="erro" id="noPass">Senha deve ser preenchida!</div>
+          <div class="erro" id="aotPass">Senha deve ter entre 6 a 30 caracteres</div>
+          <a href="esqueci_senha.html">Esqueci minha senha</a><br>
+          <a href="cadastro.html">Não possui uma conta?</a>
+        </div>
+        <div class="campos log">
+          <button id="btnEnviar" class="btn btn-primary">Entrar</button>
+          <button id="entrar_conv" class="btn btn-secondary">Entrar como convidado</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

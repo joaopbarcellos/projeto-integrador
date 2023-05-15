@@ -1,0 +1,264 @@
+#homea{
+  color: #4267b3 !important;
+  text-shadow: none;
+}
+
+/* Aplicando flexbox, alinhamento, cor e sombra*/
+#btn-home{
+	padding-right: 0;
+}
+
+/* Aplicando margem */
+.search-bar {
+  margin-top: 2%;
+  width: 50%;
+  padding-bottom: 20px;
+}
+
+/* Definindo tamanho,posição e flexbox */
+.container {
+  width:100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+/* Aplicando tamanho, cor, posição e cursor */
+#lupa { 
+  height: 45px;
+  width: 50px;
+  border: none;
+  border-radius: 100%;
+  z-index: 999;
+  position: absolute;
+  top: 6%;
+  left: 1%;
+  cursor: pointer;
+  background-color: transparent;
+
+}
+
+/* Aplicando tamanho, posição, cor, sombra, borda, posicionamento, cursor e tirando coportamento da borda*/
+input {
+  height: 50px;
+  outline: none;
+  padding-left: 50px;
+  width: 100%;
+  background: none;
+  z-index: 3;
+  cursor: pointer;
+  border: none;
+  box-shadow: 1px 0px 3px 2px rgba(78, 78, 78, 0.75);
+  border-radius: 25px;
+  background-color: white;
+}
+
+/* Tirando coportamento da borda  */
+button:focus {
+  outline: none;
+}
+
+
+/* Aplicando flexbox */
+section{    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Aplicando tamanhos e margem*/
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  margin-top: 20px;
+}
+
+/* Aplicando display*/
+.mySlides {
+  display: none;
+  
+}
+
+.mySlides:hover .fundoTexto{
+  opacity: 1;
+}
+
+/* Aplicando tamanho e borda */
+.exposicao{
+  width: 100%;
+  border-radius: 5px;
+} 
+
+/* Aplicando cor, posição e fonte */
+.titul{
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 30px;
+  left: 15px;
+  font-size: 40px;
+  text-shadow: black 0.1em 0.1em 0.2em
+}
+
+/* Aplicando display, tamanho, posição, cor, borda e transição */
+.fundoTexto{ 
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  box-sizing: border-box;
+  width: 100%;
+  height: 11%;
+  text-align: center;  
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 5px;
+  background-color: rgba(50, 174, 181, 0.543);
+  border-radius: 1px 1px 5px 5px;
+}
+
+/* Aplicando cor, fonte, tamanho e alinhamento */
+.text {
+  color: #ffffff;
+  font-size: 15px;
+  width: 100%; 
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 20px;
+  text-align: left;
+}
+
+.sabermais {
+	width: 190px; 
+	height: 40px;
+	;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	background: #284174;
+	font-family: "Montserrat", sans-serif;
+	box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	border: none;
+   }
+   
+.sabermais:after {
+	content: " ";
+	width: 0%;
+	height: 100%;
+	background: #83e3cd;
+	position: absolute;
+	transition: all 0.4s ease-in-out;
+	right: 0;
+   }
+   
+.sabermais:hover::after {
+	right: auto;
+	left: 0;
+	width: 100%;
+   }
+   
+.sabermais span {
+	text-align: center;
+	text-decoration: none;
+	width: 100%;
+	padding: 18px 25px;
+	color: #fff;
+	font-size: 1.125em;
+	font-weight: 700;
+	letter-spacing: 0.3em;
+	z-index: 20;
+	transition: all 0.3s ease-in-out;
+   }
+   
+.sabermais:hover span {
+	color: #183153;
+	animation: scaleUp 0.3s ease-in-out;
+   }
+   
+   @keyframes scaleUp {
+	0% {
+	 transform: scale(1);
+	}
+   
+	50% {
+	 transform: scale(0.95);
+	}
+   
+	100% {
+	 transform: scale(1);
+	}
+}
+
+/* Definindo posição e cursor */
+.slide {
+  left: 80%
+}
+
+/* Aplicando cursor, posição, posição, tamanho, margem, cor, fonte, borda, transição e uma limitação de seleção*/
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #1877f2;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Aplicando posição e borda*/
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Aplicando posição e borda */
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Aplicando cor */
+.prev:hover, .next:hover {
+  background-color: #32afb5;
+}
+
+/* Ainho os dot */
+#dots{
+  text-align: center;
+}
+
+/* Definindo cursor, tamanho, margem, cor, borda e display*/
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Definindo cor */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Animação de fade */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+/* Define que o elemento animado deve ter uma opacidade de 0.4 em "from" e opacidade 1 em "to" */
+@keyframes fade {
+  from {opacity: 0.7}
+  to {opacity: 1}
+}
