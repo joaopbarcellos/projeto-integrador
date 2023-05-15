@@ -1,0 +1,43 @@
+#myeventsa{
+    color: #4267b3 !important;
+    text-shadow: none;
+  }
+
+h1{
+  padding-left: 30px;
+  font-size: 45px;
+}
+
+#semevento{
+  font-size: 20px;
+  color: #69696998;
+  padding-left: 43%;
+  padding-top: 8%;
+  display: block;
+}
+
+.evento{
+  display: none;
+}
+
+/* Definindo tamanho, cor, fonte, borda e posição */
+.inscricao{
+  width: 100px; 
+  color: white;
+  font-size: 15px;
+  border: 0.5px solid #333333;
+  border-radius: 10px;
+  background-color: #ff0000;
+  height: 50px;
+  left: 700px;
+  margin-left: 20px;
+  transition: 0.4s ease;
+  user-select: none;
+}
+
+/* mudo o cursor para pointer ao passar o mouse no botao inscrever-se */
+.inscricao:hover{
+	cursor: pointer;
+	background-color: #962121;
+
+}
