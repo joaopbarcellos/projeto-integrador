@@ -22,20 +22,6 @@
     transition: 0.4s ease;
 }
 
-#voltar:hover{
-    background-color: #057dc2;
-}
-
-#voltar p{
-    color: #000000;
-    margin-bottom: 0px;
-}
-
-#voltar img{
-    height: 10px;
-    padding-right: 5px;
-}
-
 h1{
     font-size: 55px;
 }

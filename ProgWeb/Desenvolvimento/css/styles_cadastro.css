@@ -15,6 +15,7 @@ body{
     background: linear-gradient(to top right, #057dc2, #83e3cd);
     background-attachment: fixed;
     max-width: 100%;
+    min-width: 200px;
     margin: 0 auto;
 }
 
@@ -33,9 +34,14 @@ img{
 
 /* Aplicando tamanho, margens, cor e bordas na div */
 .div_cadastro{
-    width: 35%;
     background-color: rgb(255, 255, 255);
-    margin: 0 auto;
+    margin-top: 2%;
+    border-radius: 10px; 
+    box-shadow: -1px -2px 25px 8px #000000;
+}
+
+.div_esqueci{
+    background-color: rgb(255, 255, 255);
     margin-top: 2%;
     border-radius: 10px; 
     box-shadow: -1px -2px 25px 8px #000000;
@@ -46,11 +52,8 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 8.5%;
     font-weight: bold;
-    font-size: 45px;
 }
-
 /* Aplicando margem e flexbox na div */
 .formulario{
     margin: 7%;
@@ -72,12 +75,14 @@ form .nome{
     margin-bottom: 2%;
 }
 
-
+#arrow{
+    width: 30px;
+}
 
 /* Selecionando todos os inputs e aplicando margem e tamanho */
 input[type="date"]{
     font-size: 20px;
-    width: 96%;
+    width: 100%;
     margin-top: 3.5%;
     border: 0;
     outline: 0;
@@ -85,32 +90,18 @@ input[type="date"]{
 }
 
 
-
 /* Aplicando margen,cor, borda e fonte no botão */
-button{
-    margin-top: 7.5%;
-    margin-bottom: 10%;
-    padding: 3%;
-    cursor: pointer;
-    border: 1px solid black;    
-    background-color: #057dc2;
+.btn-cadastra{
+    border: 1px solid black;
+    background-color: #057dc2 ;
     color: #fff;
-    font-size: 20px;
     border-radius: 5px;
     transition: 0.4s ease;
-    user-select: none;
+    user-select: none; 
 }
 
-button:hover{
-    cursor: pointer;
+.btn-cadastra:hover{
 	background-color: #284174;
-}
-
-/* mudo o cursor para pointer ao passar o mouse no botao inscrever-se */
-.inscrever:hover{
-	cursor: pointer;
-	background-color: #284174;
-
 }
 
 /* Aplicando diplay e cor na mensagem de erro */
@@ -135,41 +126,6 @@ button:hover{
     padding-bottom: 3%;
 }
 
-form .input-single {
-    position: relative;
-    margin: 2% 0;
-  }
-  
-form .input-single label {
-    position: absolute;
-    left: 0;
-    bottom: 2%;
-    cursor: text;
-    transition: all 0.3s;
-    color: #000000;
-}
-  
-form .input-single .input {
-    outline: 0;
-    border: 0;
-    width: 94%;
-    padding: 3%;
-    padding-bottom: 0;
-    padding-left: 0;
-    border-bottom: 1px solid #000000;
-    font-size: 18px;
-}
-  
-form .input-single .input:focus {
-    border-bottom: 2px solid #000000;
-}
-
-
-form .input-single .input:focus ~ label {
-    transform: translateY(-35px);
-    font-size: 12px;
-}
-
 .focado {
     transform: translateY(-35px);
     font-size: 12px;
@@ -187,183 +143,29 @@ form .input-single .input:focus ~ label {
     padding-left: 5%;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    width: 50px;
+    color: black !important;
 }
 
 
-#voltar p{
-    color: #000000;
-}
-
-#voltar img{
+#voltar .img_voltar{
     height: 2.5%;
     padding-right: 2.5px;
-}
-
-/*  
-.valida-label{
-    font-size: 20px; 
-    color: #f58181;
-}
-*/
-
-@media screen and (max-width: 800px){
-    *, button, input[type="date"]{
-        max-width: 800px;
-        font-size: 18px;
-    }
-
-    h1{
-        font-size: 30px;
-    }
-
-    .div_cadastro{
-        width: 60%;
-    }
-
-    img{
-        width: 12%;
-        left: 5%;
-        top: 5%;
-    }
-
-    form .input-single .input{
-        font-size: 15px;
-    }
-
-    form .input-single .input:focus ~ label {
-        transform: translateY(-25px);
-        font-size: 12px;
-    }
-    
-    .focado {
-        transform: translateY(-25px);
-        font-size: 12px;
-    }
-    
-    .semTexto {
-        transform: translateY(0%);
-        font-size: 18px;
-        color: #000000;
-    }
-
-
-    .erro {
-        font-size: 12px;
-    }
-
-    .campos{
-        margin-top: 9%;
-        margin-bottom: 2%;
-    }
+    position: absolute;
 }
 
 
-
-
-@media screen and (max-width: 600px){
-    *, button, input[type="date"]{
-        max-width: 600px;
-        font-size: 18px;
-    }
-
-    h1{
-        font-size: 25px;
-    }
-
-    .div_cadastro{
-        width: 60%;
-    }
-
-    img{
-        width: 14%;
-        left: 5%;
-        top: 5%;
-    }
-
-    form .input-single .input{
-        font-size: 15px;
-    }
-
-    form .input-single .input:focus ~ label {
-        transform: translateY(-25px);
-        font-size: 12px;
-    }
-    
-    .focado {
-        transform: translateY(-25px);
-        font-size: 14px;
-    }
-    
-    .semTexto {
-        transform: translateY(0%);
-        font-size: 18px;
-        color: #000000;
-    }
-
-
-    .erro {
-        font-size: 10px;
-    }
-    .campos{
-        margin-top: 13%;
-        margin-bottom: 2%;
-    }
+#floatingInputGroup1, #floatingInputGroup2, #floatingInputGroup3, #floatingInputGroup4, #floatingInputGroup5{
+    border: none;
+    outline: 0;
+    border-radius: 0;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 0;
+    box-shadow: 0 0 0 0;
     
 }
 
-
-
-
-
-@media screen and (max-width: 400px){
-    *, button, input[type="date"]{
-        max-width: 400px;
-        font-size: 15px;
-    }
-    h1{
-        font-size: 18px;
-    }
-    .div_cadastro{
-        width: 50%;
-    }
-
-    img{
-        width: 17%;
-        left: 5%;
-        top: 5%;
-    }
-
-    form .input-single .input:focus ~ label {
-        transform: translateY(-20px);
-        font-size: 12px;
-    }
-    
-    .focado {
-        transform: translateY(-20px);
-        font-size: 12px;
-    }
-    
-    .semTexto {
-        transform: translateY(0%);
-        font-size: 15px;
-        color: #000000;
-    }
-
-    form .input-single .input{
-        font-size: 12px;
-    }
-
-    .erro {
-        font-size: 11px;
-    }
-
-    .campos{
-        margin-top: 15%;
-        margin-bottom: 2%;
-    }
-    #textin{
-        text-align: unset;
-    }
-    
+#floatingInputGroup1, #floatingInputGroup2, #floatingInputGroup3, #floatingInputGroup4, #floatingInputGroup5:hover{
+    border-bottom: 1px solid #000000;
 }
+

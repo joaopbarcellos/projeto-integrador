@@ -22,18 +22,18 @@ btn.addEventListener("click", () =>{
     const noEmailPadrao = document.querySelector("#noEmailPadrao");
 
     // Campo de nome
-    const campoNome = document.querySelector("#nome");
+    const campoNome = document.querySelector("#floatingInputGroup1");
 
     // Campo de email
-    const campoEmail = document.querySelector("#email");
+    const campoEmail = document.querySelector("#floatingInputGroup2");
 
     // Campos da data
     const labelData = document.querySelector("#labelData");
     const campoData = document.querySelector("#idade");
 
     // Campos de senha e confirmar senha
-    const campoSenha = document.querySelector("#senha");
-    const campoConfSenha = document.querySelector("#confirmasenha");
+    const campoSenha = document.querySelector("#floatingInputGroup3");
+    const campoConfSenha = document.querySelector("#floatingInputGroup4");
 
     // Valor do nome
     let nome = campoNome.value;
@@ -275,3 +275,11 @@ inputConf_Senha.addEventListener("blur", () => {
         labelConf_Senha.classList.add("semTexto");
     }
 })
+
+let voltar = document.querySelector(".cssbuttons-io-button");
+if(voltar){
+  // Adicionando o ouvidor do evento para se inscrever
+  voltar.addEventListener("click", () => {
+    window.location.assign('index.html');
+})
+}

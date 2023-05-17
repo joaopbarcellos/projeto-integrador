@@ -5,8 +5,9 @@ import * as base from "./script_base.js";
 const btnEnviar = document.querySelector("#btnEnviar").addEventListener("click", autenticar);
 
 // Capturando os campos de texto
-const campoEmail = document.querySelector("#email_usuario");
-const campoSenha = document.querySelector("#senha_usuario");
+const campoEmail = document.querySelector("#floatingInputGroup1");
+const campoSenha = document.querySelector("#floatingInputGroup2");
+
 
 // Capturando as labels com mensagem de erro
 const noEmail = document.querySelector("#noEmail");
@@ -17,6 +18,8 @@ const noEmailPadrao = document.querySelector("#noEmailPadrao");
 // Capturando a label de email e senha
 const labelEmail = document.querySelector("#label_email");
 const labelSenha = document.querySelector("#label_senha");
+
+
 
 
 
@@ -38,6 +41,7 @@ function autenticar(){
                 if (!verificaEmail){
                     // Mudando a borda do campo
                     campoEmail.style.cssText = 'border-bottom: 1px solid #f58181';
+                    
                     return false;
                 } else{
                     // Chamando funcao estetica
@@ -54,7 +58,7 @@ function autenticar(){
 
     if (verificaSenhaVazia) {
         // Verifica o tamanho da senha inserida
-        verificaSenha = base.verificaSenhaForaPadrao(campoSenha, labelSenha, aotPass);
+        verificaSenha = base.verificaSenhaForaPadrao(campoSenha, labelSenha, aotPass, place1);
 
         if (!verificaSenha){
             // Mudando a borda do campo

@@ -17,10 +17,8 @@ ul {
 
 /* Aplicando flexbox, margem e bordas */
 .container {
-  width: 87%;
   margin-top: 2rem;
   position: relative;
-  left: 5%;
   border-radius: 10px;
   background-color:  #284174;
 }
@@ -63,14 +61,12 @@ ul {
   background-color: #057dc2;
   width: 65px;
   border-radius: 100%;
-  position: relative;
-  left: 95%;
-  top: 25vh;
 }
 
 #balao{
-  padding: 0.6rem;
+  padding: 0.4rem;
   width: 45px;
+  margin: 10px;
 }
 
 footer{

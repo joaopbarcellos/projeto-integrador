@@ -9,6 +9,7 @@
 body{
     background: linear-gradient(to top right, #057dc2, #83e3cd);
     background-attachment: fixed;
+    min-width: 200px;
 }
 
 /* Definindo posição*/
@@ -31,11 +32,7 @@ header{
 
 /* Aplicando tamanho, cor, margem e bordas */
 .divLogin{
-    width: 30%;
     background-color: rgb(255, 255, 255);
-    margin: 0 auto;
-    margin-bottom: 12%;
-    margin-top: 5%;
     border-radius: 10px;
     box-shadow: -1px -2px 25px 8px #000000;
 }
@@ -50,7 +47,7 @@ h1{
 
 /* Aplicando flexbox, margem e tamanho da fonte */
 #form{
-    margin: 10%;
+    margin: 8%;
     display: flex;
     flex-direction: column;
     padding-top: 2%;
@@ -118,79 +115,6 @@ a{
     color: rgb(95, 201, 74);
 }
 
-form .input-single {
-    position: relative;
-    margin: 8px 0;
-  }
-  
-form .input-single label {
-    position: absolute;
-    left: 3px;
-    bottom: 5px;
-    cursor: text;
-    transition: all 0.3s;
-}
-  
-
-form .input-single .input {
-    outline: 0;
-    border: 0;
-    width: 97%;
-    padding: 3%;
-    padding-bottom: 0;
-    padding-left: 0;
-    border-bottom: 1px solid #000000;
-    font-size: 18px;
-}
-
-  
-form .input-single .input:focus {
-    border-bottom: 2px solid #000000;
-}
-
-form .input-single .input:focus ~ label {
-    transform: translateY(-35px);
-    font-size: 15px;
-}
-  
-
-/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
-
-form .input-sing{
-    position: relative;
-    margin: 8px 0;
-}
-
-form .input-sing label{
-    position: absolute;
-    left: 3px;
-    bottom: 5px;
-    cursor: text;
-    transition: all 0.3s;
-}
-
-
-form .input-sing .input {
-    outline: 0;
-    border: 0;
-    width: 97%;
-    padding: 3%;
-    padding-bottom: 0;
-    padding-left: 0;
-    border-bottom: 1px solid #000000;
-    font-size: 18px;
-}
-
-
-form .input-sing .input:focus{
-    border-bottom: 2px solid #000000;
-}
-
-form .input-sing .input:focus ~ label {
-    transform: translateY(-35px);
-    font-size: 15px;
-}
-
 .focado {
     transform: translateY(-35px);
     font-size: 15px;
@@ -205,201 +129,24 @@ form .input-sing .input:focus ~ label {
 }
 
 
-@media screen and (max-width: 800px){
-    *{
-        max-width: 800px;
-        font-size: 18px;
-    }
 
-    h1{
-        font-size: 25px;
-    }
 
-    .divLogin{
-        width: 45%;
-    }
 
-    .log button{
-        width: 80%;
-        height: 45px;
-    }
-
-    a{
-        font-size: 14px;
-    }
-
-    img{
-        width: 12%;
-        left: 5%;
-        top: 5%;
-    }
-
-    form .input-single .input{
-        font-size: 15px;
-    }
-
-    form .input-single .input:focus ~ label {
-        transform: translateY(-25px);
-        font-size: 12px;
-    }
-
-    form .input-sing .input{
-        font-size: 15px;
-    }
-
-    form .input-sing .input:focus ~ label {
-        transform: translateY(-25px);
-        font-size: 12px;
-    }
-    
-    .focado {
-        transform: translateY(-25px);
-        font-size: 12px;
-    }
-    
-    .semTexto {
-        transform: translateY(0%);
-        font-size: 18px;
-        color: #000000;
-    }
-
-    .erro {
-        font-size: 14px;
-        margin-bottom: 5%;
-    }
-
+#floatingInputGroup1, #floatingInputGroup2{
+    border: none;
+    outline: 0;
+    border-radius: 0;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 0;
+    box-shadow: 0 0 0 0;
 }
 
 
-@media screen and (max-width: 600px){
-    *{
-        max-width: 600px;
-        font-size: 15px;
-    }
 
-    h1{
-        font-size: 25px;
-    }
-
-    .divLogin{
-        width: 55%;
-    }
-
-    .log button{
-        width: 80%;
-        height: 45px;
-    }
-
-    a{
-        font-size: 14px;
-    }
-
-    img{
-        width: 15%;
-        left: 5%;
-        top: 5%;
-    }
-
-    form .input-single .input{
-        font-size: 15px;
-    }
-
-    form .input-single .input:focus ~ label {
-        transform: translateY(-25px);
-        font-size: 12px;
-    }
-
-    form .input-sing .input{
-        font-size: 15px;
-    }
-
-    form .input-sing .input:focus ~ label {
-        transform: translateY(-25px);
-        font-size: 12px;
-    }
-    
-    .focado {
-        transform: translateY(-25px);
-        font-size: 12px;
-    }
-    
-    .semTexto {
-        transform: translateY(0%);
-        font-size: 15px;
-        color: #000000;
-    }
-
-    .erro {
-        font-size: 13px;
-        margin-bottom: 5%;
-    }
-
+#floatingInputGroup1, #floatingInputGroup2{
+    border-bottom: 1px solid #000000;
 }
 
 
-@media screen and (max-width: 400px){
-    *{
-        max-width: 400px;
-        font-size: 15px;
-    }
 
-    h1{
-        font-size: 25px;
-    }
 
-    .divLogin{
-        width: 65%;
-    }
-
-    .log button{
-        width: 80%;
-        height: 45px;
-        font-size: 15px;
-    }
-
-    a{
-        font-size: 12px;
-        
-    }
-
-    img{
-        width: 15%;
-        left: 3%;
-        top: 5%;
-    }
-
-    form .input-single .input{
-        font-size: 15px;
-    }
-
-    form .input-single .input:focus ~ label {
-        transform: translateY(-20px);
-        font-size: 12px;
-    }
-
-    form .input-sing .input{
-        font-size: 12px;
-    }
-
-    form .input-sing .input:focus ~ label {
-        transform: translateY(-20px);
-        font-size: 12px;
-    }
-    
-    .focado {
-        transform: translateY(-25px);
-        font-size: 12px;
-    }
-    
-    .semTexto {
-        transform: translateY(0%);
-        font-size: 15px;
-        color: #000000;
-    }
-
-    .erro {
-        font-size: 12px;
-        margin-bottom: 5%;
-    }
-
-}
