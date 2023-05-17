@@ -72,6 +72,7 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
  ![Conceitual](https://github.com/jpzb/projeto-integrador/assets/91470894/5231e082-6c2e-4a8e-bea9-b7a832823945)
     
 #### 7. Descrição dos dados 
+
      |USUARIO| Tabela que irá armazenar os dados de usuário|
      |------------|---------| 
      |email| Campo que armazena o email do usuário|
