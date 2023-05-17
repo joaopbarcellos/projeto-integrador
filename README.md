@@ -69,7 +69,7 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
  
  ### 6. MODELO CONCEITUAL<br>
  
- ![Conceitual](https://github.com/jpzb/projeto-integrador/assets/91470894/b3880631-b205-47aa-9d1b-1bc02f7aa6a6)
+ ![Conceitual](https://github.com/jpzb/projeto-integrador/assets/91470894/5231e082-6c2e-4a8e-bea9-b7a832823945)
     
 #### 7. Descrição dos dados 
     USUARIO: tabela que irá armazenar os dados de usuário;
@@ -132,7 +132,7 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
 
 ### 9.	MODELO LÓGICO<br>
 
-  ![Lógico](https://github.com/jpzb/projeto-integrador/assets/91470894/28509a56-691e-4496-b4c3-3ab88b24960a)
+  ![Lógico](https://github.com/jpzb/projeto-integrador/assets/91470894/2e16118f-c266-4194-a260-e3426fa7e4e2)
   
 ### 10.	MODELO FÍSICO<br>
         drop table if exists ESTADO, CIDADE, BAIRRO, TIPO_LOGRADOURO, INTUITO, ENDERECO, EVENTO, HORARIO_FIM, CLASSIFICACAO, EVENTO_CLASSIFICACAO, USUARIO, USUARIO_EVENTO, USUARIO_USUARIO, FOTO_EVENTO;
