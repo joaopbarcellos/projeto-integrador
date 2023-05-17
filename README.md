@@ -72,14 +72,14 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
  ![Conceitual](https://github.com/jpzb/projeto-integrador/assets/91470894/5231e082-6c2e-4a8e-bea9-b7a832823945)
     
 #### 7. Descrição dos dados 
-     |       |                                                           |
-     |USUARIO|Tabela que irá armazenar os dados de usuário               |
-     |-------|-----------------------------------------------------------| 
-     |email  | Campo que armazena o email do usuário                     |
-     |nome   | Campo que armazena o nome do usuário                      |
-     |data_nascimento| Campo que armazena a data de nascimento do usuário|
-     |senha  | Campo que armazena a senha do usuário                     |
-     |foto   | Campo que armazena o link da foto do usuário              |
+
+   |USUARIO|Tabela que irá armazenar os dados de usuário               |
+   |-------|-----------------------------------------------------------| 
+   |email  | Campo que armazena o email do usuário                     |
+   |nome   | Campo que armazena o nome do usuário                      |
+   |data_nascimento| Campo que armazena a data de nascimento do usuário|
+   |senha  | Campo que armazena a senha do usuário                     |
+   |foto   | Campo que armazena o link da foto do usuário              |
 
     INTUITO: tabela que irá armazenar informações relativas ao intuito do usuário/evento;
      id: campo que armazena o id do intuito;
