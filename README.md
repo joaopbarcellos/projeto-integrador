@@ -87,31 +87,31 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
    |nome| Campo que armazena o nome do intuito|
 
    |EVENTO| Tabela que irá receber informações dos eventos|
-    |---------|---------|
-    |id| Campo que armazena o id do evento|
-    |descricao| Campo que armazena a descrição do evento|
-    |nome| Campo que armazena o nome do evento|
-    |foto| Campo que armazena o link da foto do evento|
-    |data| Campo que armazena a data que o evento acontecerá|
-    |min_pessoas|  Campo que armazena o número mínimo de pessoas do evento|
-    |preco| Campo que armazena o preço do evento|
-    |horario_inicio| Campo que armazena o horário de início do evento|
-    |max_pessoas| Campo que armazena o número máximo de pessoas do evento|
+   |---------|---------|
+   |id| Campo que armazena o id do evento|
+   |descricao| Campo que armazena a descrição do evento|
+   |nome| Campo que armazena o nome do evento|
+   |foto| Campo que armazena o link da foto do evento|
+   |data| Campo que armazena a data que o evento acontecerá|
+   |min_pessoas|  Campo que armazena o número mínimo de pessoas do evento|
+   |preco| Campo que armazena o preço do evento|
+   |horario_inicio| Campo que armazena o horário de início do evento|
+   |max_pessoas| Campo que armazena o número máximo de pessoas do evento|
 
    |CLASSIFICACAO| Tabela que irá receber informações da classificação de cada evento|
-     |---|---|
-     |id| Campo que armazena o id da classificação|
-     |nome| Campo que armazena o nome da classificação|
+   |---|---|
+   |id| Campo que armazena o id da classificação|
+   |nome| Campo que armazena o nome da classificação|
 
    | HORARIO_FIM| Tabela que terá o horário final do evento|
-    |---|---|
-    | id| Campo que armazena o id da classificação|
-    | nome| Campo que armazena o nome da classificação|
+   |---|---|
+   | id| Campo que armazena o id da classificação|
+   | nome| Campo que armazena o nome da classificação|
 
    |TIPO_LOGRADOURO: tabela com as informações do tipo do logradouro|
-     |---|---|
-     |id | Campo que armazena o id do tipo de logradouro|
-     |tipo| Campo que armazena o tipo do logradouro|
+   |---|---|
+   |id | Campo que armazena o id do tipo de logradouro|
+   |tipo| Campo que armazena o tipo do logradouro|
 
     ENDERECO: tabela referente às informações do endereço do usuário/evento; 
      id: campo que armazena o id do endereço;
