@@ -135,9 +135,9 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
   ![Lógico](https://github.com/jpzb/projeto-integrador/assets/91470894/2e16118f-c266-4194-a260-e3426fa7e4e2)
   
 ### 10.	MODELO FÍSICO<br>
-   [Arquivo SQL dos Creates](https://github.com/jpzb/projeto-integrador/blob/main/Arquivos/creates.sql)
+   [Link do arquivo SQL dos Creates](https://github.com/jpzb/projeto-integrador/blob/main/Arquivos/creates.sql)
 ### 11.	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
-   [Arquivo SQL dos Inserts](https://github.com/jpzb/projeto-integrador/blob/main/Arquivos/inserts.sql)
+   [Link do arquivo SQL dos Inserts](https://github.com/jpzb/projeto-integrador/blob/main/Arquivos/inserts.sql)
        
 
 #### 12. PRINCIPAIS CONSULTAS DO SISTEMA 
