@@ -135,7 +135,7 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
   ![Lógico](https://github.com/jpzb/projeto-integrador/assets/91470894/28509a56-691e-4496-b4c3-3ab88b24960a)
   
 ### 10.	MODELO FÍSICO<br>
-        drop table if exists ESTADO, CIDADE, BAIRRO, TIPO_LOGRADOURO, INTUITO, ENDERECO, EVENTO, HORARIO_FIM, CLASSIFICACAO, EVENTO_CLASSIFICACAO, USUARIO, USUARIO_EVENTO, USUARIO_USUARIO;
+        drop table if exists ESTADO, CIDADE, BAIRRO, TIPO_LOGRADOURO, INTUITO, ENDERECO, EVENTO, HORARIO_FIM, CLASSIFICACAO, EVENTO_CLASSIFICACAO, USUARIO, USUARIO_EVENTO, USUARIO_USUARIO, FOTO_EVENTO;
 
         create table ESTADO(
          id integer primary key,
@@ -186,20 +186,16 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
          senha varchar(30),
          foto varchar(500),
          FK_INTUITO_id integer,
-         FK_ENDERECO_id integer,
-         foreign key (FK_INTUITO_id) references INTUITO(id),
-         foreign key (FK_ENDERECO_id) references ENDERECO(id)
+         foreign key (FK_INTUITO_id) references INTUITO(id)
         );
 
         create table EVENTO(
          id integer primary key,
          descricao varchar(300),
          nome varchar(100),
-         foto varchar(500),
-         data date,
+         data timestamp,
          min_pessoas integer,
          preco float,
-         horario_inicio time,
          max_pessoas integer,
          FK_INTUITO_id integer,
          FK_ENDERECO_id integer,
@@ -208,7 +204,13 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
          foreign key (FK_ENDERECO_id) references ENDERECO(id),
          foreign key (FK_USUARIO_id) references USUARIO(id)
         );
-
+        
+        create table FOTO_EVENTO (
+         id integer, 
+         FK_EVENTO_id integer,
+         foto varchar(500)
+        );
+        
         create table HORARIO_FIM(
          id integer primary key,
          horario time,
