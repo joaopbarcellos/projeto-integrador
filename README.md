@@ -249,12 +249,8 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
         );
        
 ### 11.	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
-        a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico
-        (Drop para exclusão de tabelas + create definição de para tabelas e estruturas de dados 
-        <br> + insert para dados a serem inseridos)
-        b) Criar um novo banco de dados para testar a restauracao 
-        (em caso de falha na restauração o grupo não pontuará neste quesito)
-        c) formato .SQL
+[Arquivo SQL dos Inserts](https://github.com/jpzb/projeto-integrador/blob/main/Arquivos/inserts.sql)
+       
 
 #### 12. PRINCIPAIS CONSULTAS DO SISTEMA 
  Inserir as principais consultas (relativas aos 5 principais relatórios) definidas previamente no iten 3.1 deste template.
