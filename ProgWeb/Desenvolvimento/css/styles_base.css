@@ -10,12 +10,16 @@ img{
 }
 
 /* Aplicando margem, fonte e tirando style das listas */
-body,ul,li,p {
+ul,li,p {
 	margin: 0px;
 	list-style: none;
 	font-size: 1.2rem;
 	font-family: Arial !important;
 	user-select: none;
+}
+
+body{
+	width: 100%;
 }
 
 /* Aplicando cor e tirando decoração dos textos */
@@ -94,6 +98,7 @@ a{
 /* Aplicando fonte, cor, tamanho e espaçamento*/
 footer{
 	font-family: 'Wix Madefor Text', sans-serif !important;
+	width: 100%;
 	background-color: #057dc2;
 	box-sizing: border-box;
 	letter-spacing: 1px;
@@ -108,7 +113,6 @@ footer p{
 
 /* Aplicando cor, display, número de colunas e espaçamento */
 #footer-content{
-	display: grid;
 	padding-bottom: 2.7rem;
 }
 
@@ -149,6 +153,7 @@ footer p{
 	flex-direction: column;
 	gap: 0.75rem;
 	list-style: none;
+	padding-left: 0;
 	
 }
 
