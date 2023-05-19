@@ -60,7 +60,6 @@ a{
 .header{
 	background: linear-gradient(to bottom right, #057dc2, #83e3cd);
 	box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
-	box-sizing:unset !important;
 }
 
 /* Aplicando tamanho, borda e margem */
