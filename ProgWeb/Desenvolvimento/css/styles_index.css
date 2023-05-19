@@ -139,8 +139,13 @@ a{
     border-bottom: 1px solid #000000;
     padding-bottom: 0;
     box-shadow: 0 0 0 0;
+    
 }
 
+
+#label_senha, #label_email{
+    padding-left: 0;
+}
 
 
 #floatingInputGroup1, #floatingInputGroup2{

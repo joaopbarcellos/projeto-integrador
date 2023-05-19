@@ -20,7 +20,7 @@ ul,li,p {
 
 
 /* Aplicando cor e tirando decoração dos textos */
-.menu li, .menu a{
+.header li, .header a{
 	text-decoration: none;
 	color: rgb(255, 255, 255);
 	text-shadow: rgb(0, 0, 0) 0.1em 0.1em 0.2em;
@@ -29,7 +29,7 @@ ul,li,p {
 	user-select: none;
 }
 
-.menu a:hover{
+.header a:hover{
 	color: #4267b3 !important;
 	text-shadow: none;
 }
@@ -47,6 +47,10 @@ a{
 /* Aplicando cor */
 .desc p{
 	color: #ffffff;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
 }
 
 /* Aplicando tamanho, borda e margem */

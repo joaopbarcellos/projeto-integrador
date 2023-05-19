@@ -19,10 +19,6 @@ const noEmailPadrao = document.querySelector("#noEmailPadrao");
 const labelEmail = document.querySelector("#label_email");
 const labelSenha = document.querySelector("#label_senha");
 
-
-
-
-
 // Função para autenticar as informacoes de login e senha
 function autenticar(){
     // Declarando variaveis de verificacao
@@ -58,7 +54,7 @@ function autenticar(){
 
     if (verificaSenhaVazia) {
         // Verifica o tamanho da senha inserida
-        verificaSenha = base.verificaSenhaForaPadrao(campoSenha, labelSenha, aotPass, place1);
+        verificaSenha = base.verificaSenhaForaPadrao(campoSenha, labelSenha, aotPass);
 
         if (!verificaSenha){
             // Mudando a borda do campo

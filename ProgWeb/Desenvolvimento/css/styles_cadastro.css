@@ -89,6 +89,10 @@ input[type="date"]{
     border-bottom: 1px solid #000000;
 }
 
+#label_nome, #email_label, #senha_label, #senha_label_confirma{
+    padding-left: 0;
+}
+
 
 /* Aplicando margen,cor, borda e fonte no botão */
 .btn-cadastra{
