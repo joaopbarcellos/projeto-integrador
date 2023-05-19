@@ -108,28 +108,32 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
    | id| Campo que armazena o id da classificação|
    | nome| Campo que armazena o nome da classificação|
 
-   |TIPO_LOGRADOURO: tabela com as informações do tipo do logradouro|
+   |TIPO_LOGRADOURO| Tabela com as informações do tipo do logradouro|
    |---|---|
    |id | Campo que armazena o id do tipo de logradouro|
    |tipo| Campo que armazena o tipo do logradouro|
 
-    ENDERECO: tabela referente às informações do endereço do usuário/evento; 
-     id: campo que armazena o id do endereço;
-     cep: campo que armazena o cep do endereço;
-     numero: campo que armazena o número do endereço;
-     descricao: campo que armazena a descrição do endereço;
+   |ENDERECO| Tabela referente às informações do endereço do usuário/evento| 
+     |---|---|
+     |id| Campo que armazena o id do endereço|
+     |cep| Campo que armazena o cep do endereço|
+     |numero| Campo que armazena o número do endereço|
+     |descricao| Campo que armazena a descrição do endereço|
 
-    BAIRRO: tabela referente às informações do bairro;
-     id: campo que armazena o id do bairro;
-     nome: campo que armazena o nome do bairro;
+   |BAIRRO| Tabela referente às informações do bairro|
+     |---|---|
+     |id|Campo que armazena o id do bairro|
+     |nome| Campo que armazena o nome do bairro|
 
-    CIDADE: tabela referente às informações do cidade;
-     id: campo que armazena o id da cidade;
-     nome: campo que armazena o nome da cidade;
+   |CIDADE|Tabela referente às informações do cidade|
+     |---|---|
+     |id| Campo que armazena o id da cidade|
+     |nome| Campo que armazena o nome da cidade|
 
-    ESTADO: tabela referente às informações do estado;
-     id: campo que armazena o id do estado;
-     nome: campo que armazena o nome do estado em sigla;
+   |ESTADO| Tabela referente às informações do estado|
+      |---|---|
+     |id| Campo que armazena o id do estado|
+     |nome| Campo que armazena o nome do estado em sigla|
 
 
 ### 8.	RASTREABILIDADE DOS ARTEFATOS<br>
