@@ -114,26 +114,26 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
    |tipo| Campo que armazena o tipo do logradouro|
 
    |ENDERECO| Tabela referente às informações do endereço do usuário/evento| 
-     |---|---|
-     |id| Campo que armazena o id do endereço|
-     |cep| Campo que armazena o cep do endereço|
-     |numero| Campo que armazena o número do endereço|
-     |descricao| Campo que armazena a descrição do endereço|
+   |---|---|
+   |id| Campo que armazena o id do endereço|
+   |cep| Campo que armazena o cep do endereço|
+   |numero| Campo que armazena o número do endereço|
+   |descricao| Campo que armazena a descrição do endereço|
 
    |BAIRRO| Tabela referente às informações do bairro|
-     |---|---|
-     |id|Campo que armazena o id do bairro|
-     |nome| Campo que armazena o nome do bairro|
+   |---|---|
+   |id|Campo que armazena o id do bairro|
+   |nome| Campo que armazena o nome do bairro|
 
    |CIDADE|Tabela referente às informações do cidade|
-     |---|---|
-     |id| Campo que armazena o id da cidade|
-     |nome| Campo que armazena o nome da cidade|
+   |---|---|
+   |id| Campo que armazena o id da cidade|
+   |nome| Campo que armazena o nome da cidade|
 
    |ESTADO| Tabela referente às informações do estado|
-      |---|---|
-     |id| Campo que armazena o id do estado|
-     |nome| Campo que armazena o nome do estado em sigla|
+   |---|---|
+   |id| Campo que armazena o id do estado|
+   |nome| Campo que armazena o nome do estado em sigla|
 
 
 ### 8.	RASTREABILIDADE DOS ARTEFATOS<br>
