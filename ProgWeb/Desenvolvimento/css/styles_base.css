@@ -22,11 +22,15 @@ header{
 	position: absolute;
 	width: 100%;
 	top: 0;
-	z-index: 99999999;
+	z-index: 99999;
+}
+
+.swal2-container{
+	z-index: 999999;
 }
 
 .espaco{
-	height: 97px;
+	height: 95px;
 }
 
 /* Aplicando cor e tirando decoração dos textos */

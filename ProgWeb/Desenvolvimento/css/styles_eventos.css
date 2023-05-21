@@ -192,6 +192,15 @@ footer{
 
 /* Mapa */
 
+
+.slot{
+    height: 60px !important;
+}
+
+.NavBar_MapTypeButtonDropDownIcon{
+    display: none !important;
+}
+
 .birdseye{
     display: none !important;
 }

@@ -50,69 +50,75 @@
 	</header>
 	<div class="espaco"></div>
 	<div id="container">
-		<!-- Crio a section com a carteirinha -->
-		<section id="perfil">
-	
-			<!-- Crio a div com as informacoes do ususario -->
-			<div class="fot_desc">
-	
-				<!-- Como padrao o usuario n possui foto -->
-				<img src="img/semfoto.png" id="semfoto"></img>
+		<div class="col-5" id="alinhar">
+			<!-- Crio a section com a carteirinha -->
+			<section id="perfil">
+		
+				<!-- Crio a div com as informacoes do ususario -->
+				<div class="fot_desc">
+					<div class="row col-12">
+							
+						<div class="col-12 col-lg-4 text-center">
+							<!-- Como padrao o usuario n possui foto -->
+							<img src="img/semfoto.png" id="semfoto"></img>
+						</div>
+							<div class="col-12 col-lg-8 ">
+							<!-- Crio a div pra inserir os dados -->
+							<div class="dados"> 
 				
-				<!-- Crio a div pra inserir os dados -->
-				<div class="dados"> 
-	
-					<!-- Crio a div do nome -->
-					<div class="info">
-	
-						<label class="labels texto"> Nome: </label>
-	
-						<!-- Escrevo na label o nome do usuario -->
-						<label class="cadastro texto" id="nome_usuario"> </label>
-	
-						<!-- Fecho a div do nome -->
+								<!-- Crio a div do nome -->
+								<div class="info">
+				
+									<label class="labels texto word-break"> Nome: </label>
+				
+									<!-- Escrevo na label o nome do usuario -->
+									<label class="cadastro texto word-break" id="nome_usuario"> </label>
+				
+									<!-- Fecho a div do nome -->
+								</div>
+								
+								<!-- Crio a div do nascimento-->
+								<div class="info" >
+				
+									<label class="labels texto word-break">Data de Nascimento: </label>
+				
+									<!-- Escrevo na label o nascimento do usuario -->
+									<label class="cadastro texto word-break" id="dataNasc_usuario"> </label>
+								
+									<!-- Fecho a div do nascimento -->
+								</div>
+								
+								<!-- Crio a div de email-->
+								<div class="info" id="email_user">
+				
+									<label class="labels texto word-break">Email: </label>
+				
+									<!-- Escrevo na label o email do usuario -->
+									<label class="cadastro texto word-break" id="email_usuario"> </label>
+				
+									<!-- Fecho a div de email -->
+								</div>
+							</div>
+							<!-- Fecho a div pra inserir os dados -->
+						</div>
 					</div>
-					
-					<!-- Crio a div do nascimento-->
-					<div class="info" >
-	
-						<label class="labels texto">Data de Nascimento: </label>
-	
-						<!-- Escrevo na label o nascimento do usuario -->
-						<label class="cadastro texto" id="dataNasc_usuario"> </label>
-					
-						<!-- Fecho a div do nascimento -->
-					</div>
-					
-					<!-- Crio a div de email-->
-					<div class="info" id="email_user">
-	
-						<label class="labels texto">Email: </label>
-	
-						<!-- Escrevo na label o email do usuario -->
-						<label class="cadastro texto" id="email_usuario"> </label>
-	
-						<!-- Fecho a div de email -->
-					</div>
-	
-					<!-- Fecho a div pra inserir os dados -->
 				</div>
-	
-			</div>
-	
-			<!-- Crio o rodape da carteirinha com logo e hashtag -->
-			<div id="hashtag">
-	
-				<p class="texto" id="slogan">#AlwaysInMovement</p>	
-	
-				<img src="logos/icone2.png" id="logo_cart"></img>
-	
-			</div>	
-	
-			<!-- Fecho a section com a carteirinha -->
-		</section>
-		<button id="editar">Editar Informações</button>
+		
+				<!-- Crio o rodape da carteirinha com logo e hashtag -->
+				<div id="hashtag">
+		
+					<p class=" word-break" id="sloganperfil">#AlwaysInMovement</p>	
+		
+					<img src="logos/icone2.png" id="logo_cart"></img>
+		
+				</div>	
+		
+				<!-- Fecho a section com a carteirinha -->
+			</section>
+			<button id="editar">Editar Informações</button>
+		</div>
 	</div>
+	
 	<footer>
 		<!-- Inicio do meu container com 3 blocos -->
 		<div class="col-11" id="footer-content">
