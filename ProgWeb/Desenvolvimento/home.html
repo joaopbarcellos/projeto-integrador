@@ -77,16 +77,35 @@
 
 	<div class="espaco"></div>
 	
-	<!--- Div que ficará com todos os slides -->
-	<div class="slideshow-container">
-		<!-- Div do slide 1 -->
+	<div id="carouselExampleInterval" class="carousel slide col-12 col-md-10 col-lg-8 col-xg-6 m-auto" data-bs-ride="carousel">
+		<div class="carousel-inner">
+		  <div class="carousel-item active" data-bs-interval="10000">
+			<img src="img/12.png" class="d-block w-100" alt="...">
+		  </div>
+		  <div class="carousel-item" data-bs-interval="2000">
+			<img src="img/13.png" class="d-block w-100" alt="...">
+		  </div>
+		  <div class="carousel-item">
+			<img src="img/14.png" class="d-block w-100" alt="...">
+		  </div>
+		</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+		  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		  <span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+		  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		  <span class="visually-hidden">Next</span>
+		</button>
+	  </div>
+
+	<!-- <div class="slideshow-container">
 		<div class="mySlides fade">
 			
 			<img src="img/12.png" class="exposicao">
 
 			<div class="titul"><b>Surf - Praia de Itaparica</b></div>
 			
-			<!-- Footer dos slides com o nome do evento e um botão para inscrever-se -->
 			<div class="fundoTexto">
 				
 				<div class="text">Surf na cidade de Vila Velha - ES na Praia de Itaparica</div> 
@@ -97,14 +116,12 @@
 		
 		</div>
 		
-		<!-- Div do slide 2 -->
 		<div class="mySlides fade first">
 			
 			<img src="img/13.png" class="exposicao"> 
 
 			<div class="titul"><b>Basquete - Praça do Cauê</b></div>
 			
-			<!-- Footer dos slides com o nome do evento e um botão para inscrever-se -->
 			<div class="fundoTexto">
 				
 				<div class=" text">Basquete na cidade de Vitória - ES na Praça do Cauê, perto da Terceira Ponte</div>
@@ -115,14 +132,12 @@
 		
 		</div>
 		
-		<!-- Div do slide 3 -->
 		<div class="mySlides fade">
 			
 			<img src="img/14.png" class="exposicao">
 
 			<div class="titul"><b>Motocross - Arena Capixaba de Verão</b></div>
 
-			<!-- Footer dos slides com o nome do evento e um botão para inscrever-se -->
 			<div class="fundoTexto">
 				
 				<div class="text">Motocross no Espírito Santo na Arena Capixaba de Verão</div>
@@ -133,16 +148,13 @@
 			
 		</div>
 		
-		<!-- Link com setas para passar os slides com evento de click-->
 		<a class="prev">&#10094;</a>
 		
 		<a class="next">&#10095;</a>
-	<!-- Fim da div slideshow-container -->
 	</div>
 	
 	<br>
 	
-	<!-- Crio os pontinhos para locomoção entre slides -->
 	<div id="dots">
 	
 		<span class="dot"></span>
@@ -152,6 +164,7 @@
 		<span class="dot"></span>
 	
 	</div>
+	 -->
 	
 	<!-- Section que carrega todas as div eventos -->
     <section class="conteudo col-11 m-auto"> 
