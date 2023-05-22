@@ -5,6 +5,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&family=Parisienne&family=Wix+Madefor+Text&display=swap');
 
+
+
 img{
 	vertical-align: unset;
 }
@@ -46,6 +48,15 @@ header{
 .header a:hover{
 	color: #4267b3 !important;
 	text-shadow: none;
+}
+
+.dropdown-menu{
+	background-color: #057dc2 !important;
+}
+
+.icones{
+	width: 20px;
+	color: #057dc2;
 }
 
 /* Tirando decoracao e aplicando cor no link */
@@ -328,6 +339,10 @@ footer p{
 	align-items: end;
 	margin-top: auto;
 }   
+
+.swal2-container{
+	z-index: 999999999999 !important;
+}
 
 .cssbuttons-io-button {
     position: relative;

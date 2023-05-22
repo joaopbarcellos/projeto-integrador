@@ -74,6 +74,37 @@ const lista_conteudo = document.querySelectorAll(".evento");
 const barra_pesquisa = document.querySelector("#busca");
 // Pegando a barra de pesquisa
 
+const lupa = document.querySelector("#lupa");
+
+lupa.addEventListener("click", () => {
+  let divSlides = document.querySelector(".slideshow-container");
+  let divDots = document.querySelector("#dots");
+
+  if(!barra_pesquisa.value){
+    divSlides.style.display = "block";
+    divDots.style.display = "block";
+    lista_conteudo.forEach(conteudo => {
+      conteudo.style.display = "block";
+    })
+  } else {
+    divSlides.style.display = "none";
+    divDots.style.display = "none";
+    // Percorrendo por todos os eventos
+    lista_conteudo.forEach(conteudo =>{
+      // Pegando o título do evento
+      let titulo = conteudo.children[0].children[1].children[0].textContent.toUpperCase();
+
+      // Verificando se o texto pesquisado é o mesmo que o título
+      if(titulo.includes(barra_pesquisa.value.toUpperCase())){
+        // Mostrando todos os conteúdos que tiverem o texto pesquisado como título
+        conteudo.style.display = "block";
+      }else{
+        // Escondendo todos os conteúdos que não tiverem o texto pesquisado como título
+        conteudo.style.display = "none";
+      }
+  });
+  }
+})
 
 // Adicionando um EventListener para quando for feita a pesquisa
 barra_pesquisa.addEventListener("search", () => {

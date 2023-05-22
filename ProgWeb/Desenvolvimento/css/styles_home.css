@@ -25,19 +25,8 @@
   height: 50px;
 }
 
-/* Aplicando tamanho, cor, posição e cursor */
-#lupa { 
-  height: 45px;
-  width: 50px;
-  border: none;
-  border-radius: 100%;
-  z-index: 999;
-  position: absolute;
-  top: 6%;
-  left: 1%;
-  cursor: pointer;
-  background-color: transparent;
-
+#lupa{
+  background-color: #057dc2;
 }
 
 /* Aplicando tamanho, posição, cor, sombra, borda, posicionamento, cursor e tirando coportamento da borda*/

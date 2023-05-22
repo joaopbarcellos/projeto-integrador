@@ -40,8 +40,6 @@ function entrarEvento(){
   }
 }
 
-entrarEvento();
-
 function inscrever(evento){
   // Pegando o email do usuário logado
   let emailLogado = sessionStorage.getItem("logado");
@@ -187,7 +185,7 @@ const enviaEmail = document.querySelector("#enviarEmail")
 if(enviaEmail){
   // Enviar email do footer
   enviaEmail.addEventListener("click", () =>{
-    send(document.querySelector("#email"))
+    send(document.querySelector("#enviarEmail"))
   })
 }
 
@@ -200,5 +198,14 @@ if(criaa){
       title: 'Oops...',
       text: 'Esta página está em desenvolvimento'
     })
+  }
+}
+
+var logout = document.querySelector("#logout");
+if(logout){
+  logout.addEventListener("click", sair);
+  function sair(){
+    //logout
+    window.location.assign("../index.html")
   }
 }

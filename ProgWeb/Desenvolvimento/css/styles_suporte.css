@@ -30,11 +30,7 @@
 
 #container{
     background:  #057dc2;
-    width: 37%;
     margin: 0 auto;
-    margin-top: 5%;
-    padding-left: 40px;
-    padding-right: 40px;
     border-radius: 10px;
     box-shadow: 0px 0px 41px 3px rgba(0,0,0,0.75);
     display: flex;
@@ -61,51 +57,29 @@ h1{
     color: red;
 }
 
-/* Selecionando todos os inputs e aplicando margem e tamanho */
-input[type="email"], textarea{
-    padding: 3%;
-    font-size: 18px;
-    margin-bottom: 5px;
-    border: 1px solid black;
-    outline: 0;
-    width: 94%;
-}
 
-.email{
-    padding-top: 40px;
-}
+
 
 .campos{
-    width: 90%;
+    width: 95%;
 }
 
-textarea{
-    resize: vertical;
-    font-family: 'Inter', sans-serif;
-    font-size: 18px;
-    min-height: 100px;
-}
+
 
 /* Aplicando flexbox, margem e tamanho da fonte */
 #form{
-    background-color: #fff;
-    width: 100%;
+    background:  transparent;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 40px;
     border-radius: 5px;
-    padding: 10px;
 }
 
 /* Definindo tamanho, margem, borda, cor e tamanho da fonte */
 #envio{
-    width: 45%;
     height: 45px;
-    margin-bottom: 8px;
-    margin-top: 2%;
     border-radius: 5px;
-    background-color: #057dc2;
+    background-color: #145374;
     color: #fff;
     font-size: 15px;
     border: 1px solid black;
@@ -115,10 +89,29 @@ textarea{
 
 #envio:hover{
     cursor: pointer;
-	background-color: #284174;
+    background-color: #043f5c;
 }
 
 .erro{
     color: #f58181;
 }
+
+
+#floatingTextarea1{
+    min-height: 150px;
+    max-height: 400px;
+}
+
+
+#floatingInputGrid{
+    margin-bottom: 5px;
+}
+
+
+#floatingInputGrid, #floatingTextarea1{
+    outline: 0;
+    border: 1px solid;
+    box-shadow: 0 0 0 0;
+}
+
 

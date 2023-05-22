@@ -14,7 +14,24 @@ cancel.forEach(btn =>{
     });
   })
 
+const emailLogado = sessionStorage.getItem("logado");
 
+  // Caso o usuário não esteja logado
+  if(!emailLogado){
+      Swal.fire({
+          // Alert avisando ao usuário fazer login
+          title: 'Faça login!',
+          icon: 'error',
+          text: 'Você precisa estar logado para enviar mensagem',
+          confirmButtonColor: '#3085d6',
+          confirmButtonText: 'Login'
+      }).then((result) => {
+          if(result.isConfirmed){
+              // Enviando o usuário para a tela de login
+              window.location.assign("index.html");
+          }
+      })
+  }
 function meusEventos(){
   // Verificando se o usuário está logado
   if(!email){
@@ -29,14 +46,14 @@ function meusEventos(){
   }
   let todosEventos = document.querySelectorAll(".evento");
   todosEventos.forEach(evento => {
-    for(let i = 0; i < dados.eventos_inscritos  .length; i++){
-      if(evento.id == `div${dados.eventos_inscritos[i]}`){
+      for(let i = 0; i < dados.eventos_inscritos.length; i++){
+        if(evento.id == `div${dados.eventos_inscritos[i]}`){
         // Colocando display block em todos os eventos que o usuário está inscrito
         evento.style.display = "block";
         document.querySelector("#semevento").style.display = "none";
+        }
       }
-    }
-  })
+})
 }
 
 meusEventos()

@@ -5,7 +5,7 @@ const noEmail = document.querySelector("#noEmail");
 const noEmailPadrao = document.querySelector("#noEmailPadrao");
 const noMsg = document.querySelector("#noMsg");
 
-const campoEmail = document.querySelector("#emailuser");
+const campoEmail = document.querySelector("#floatingInputGrid");
 
 const emailLogado = sessionStorage.getItem("logado");
 
@@ -31,7 +31,7 @@ campoEmail.value = emailLogado;
 
 btn.addEventListener("click", () => {
     let verificaEmail = base.verificaCampoVazio(campoEmail, false, noEmail, noEmailPadrao);
-    let verificaMsg = base.verificaCampoVazio(document.querySelector("#mensagem"), false, noMsg, false);
+    let verificaMsg = base.verificaCampoVazio(document.querySelector("#floatingTextarea1"), false, noMsg, false);
 
     if(verificaEmail){
         let verificaForaPadrao = base.verificaEmailForaPadrao(campoEmail, noEmail, noEmailPadrao);

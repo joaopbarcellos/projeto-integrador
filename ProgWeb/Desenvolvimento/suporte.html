@@ -12,58 +12,89 @@
 
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
-	<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css" rel="stylesheet">
-
 	<script src="js/script_suporte.js" type="module" defer></script>
 
 	<script src="js/script_base.js" type="module" defer></script>
 
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
 
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
 
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous" defer></script>
+
 </head>
 <body>
 	<header>
-		<nav class="navbar navbar-expand-md header ps-5">
-			<a class="navbar-brand" href="home.html"><img src="logos/9.png" id="logo"></a>
-			<button class="navbar-toggler me-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-				<span class="navbar-toggler-icon"></span> 
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav ms-auto me-3">
-					<li class="nav-item nav-link"><a href="home.html" id="homea">Home</a></li>
+		<nav class="navbar navbar-expand-lg header ">
+			<div class="container-fluid col-11 m-auto">
+			  	<a class="navbar-brand" href="home.html"><img src="logos/9.png" id="logo"></a>
+			  	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+			  	</button>
 
-					<li class="nav-item nav-link"><a href="#" id="criaa">Criar Evento</a></li>
+			  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-					<li class="nav-item nav-link"><a href="myevents.html" id="myeventsa">Meus Eventos</a></li>
+					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+						<li class="nav-item nav-link"><a href="home.html" id="homea">Home</a></li>
 
-					<li class="nav-item nav-link"><a href="perfil.html" id="perfila">Perfil</a></li>
+						<li class="nav-item nav-link">
+							<a href="#" id="criaa">Criar Evento</a>
+						</li>
 
-					<li class="nav-item nav-link"><a href="ajuda.html" id="ajudaa">Ajuda</a></li>
+						<li class="nav-item nav-link">
+							<a href="myevents.html" id="myeventsa">Meus Eventos</a>
+						</li>
 
-					<li class="nav-item nav-link"><a href="sobre.html" id="sobrea">Sobre</a></li>
-				</ul>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							  Configurações
+							</a>
+
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="perfil.html" id="perfila">Conta</a></li>
+								<li><a class="dropdown-item" href="ajuda.html" id="ajudaa">Ajuda</a></li>
+								<!-- <li><a class="dropdown-item" href="#">Tema</a></li> -->
+								<li><hr class="dropdown-divider"></li>
+								<li><a class="dropdown-item" href="#" id="logout">Sair</a></li>
+							</ul>
+						</li>
+
+						<li class="nav-item nav-link">
+							<a href="sobre.html" id="sobrea">Sobre</a>
+						</li>
+
+					</ul>
+
+			  	</div>
 			</div>
 		</nav>
 	</header>
+
 	<div class="espaco"></div>
 	<button class="cssbuttons-io-button"> Voltar
 		<div class="icon">
 			<svg height="177px" width="177px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 483.284 483.284" xml:space="preserve" fill="#000000" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <polygon style="fill:#057dc2;" points="483.284,221.643 88.284,221.643 88.284,153.358 0,241.644 88.284,241.644 88.284,261.643 483.284,261.643 "></polygon> <polygon style="fill:#145374;" points="0,241.644 88.284,329.926 88.284,241.644 "></polygon> </g> </g></svg>
 		</div>
 	</button>
-		<div class="" id="container">
+
+	<div class="container col-10 col-lg-6 col-md-8 col-sm-9  mt-5" id="container">
+
 		
-			<h1>Seu contato é muito importante para nós!</h1>
-			<p>Envie-nos um e-mail preenchendo os campos abaixo, e logo retornaremos o seu contato</p>
+			<h1 class="text-center">Seu contato é muito importante para nós!</h1>
+			<p class="text-center">Envie-nos um e-mail preenchendo os campos abaixo, e logo retornaremos o seu contato</p>
 	
-			<form id="form">
+			<form class="container col-lg-11 col-md-11 col-sm-11 m-4" id="form">
 	
 				<!-- E-mail do usuário -->
-				<div class="email campos">
-					<input type="email" id="emailuser" name="email_usuario" placeholder="E-mail para contato">
+				<div class="email campos mt-3">
+
+					<div class="form-floating">
+						<input type="email" class="form-control" id="floatingInputGrid" placeholder="E-mail para contato">
+						<label for="floatingInputGrid">Email address</label>
+					</div>
+				  
+
+					<!-- <input type="email" id="emailuser" name="email_usuario" placeholder="E-mail para contato"> -->
 	
 					<label class="erro" id="noEmail">E-mail deve ser preenchido!</label>
 	
@@ -71,19 +102,27 @@
 	
 				</div>
 	
-				<div class="mensagem campos">
+				<div class="mensagem campos mb-3">
+
+					<div class="form-floating">
+						<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea1"></textarea>
+						<label for="floatingTextarea2">Mensagem</label>
+					</div>
 	
-					<textarea id="mensagem" name="mensagem_usuario" placeholder="Mensagem"></textarea>
+					<!-- <textarea id="mensagem" name="mensagem_usuario" placeholder="Mensagem"></textarea> -->
 	
 					<label class="erro" id="noMsg">Mensagem deve ser preenchida!</label>
 	
 				</div>
 				
 			</form>
-			
-			<!-- NÃO COLOCAR O BOTÃO DENTRO DO FORM PFV -->
-			<button id="envio">Enviar</button>
+				<!-- NÃO COLOCAR O BOTÃO DENTRO DO FORM PFV -->
+				<button class="col-6 col-lg-6 col-md-6 col-sm-6 mb-4" id="envio">Enviar</button>
 		</div>
+
+	</div>
+	
+			
 	<footer>
 		<!-- Inicio do meu container com 3 blocos -->
 		<div class="col-11" id="footer-content">
