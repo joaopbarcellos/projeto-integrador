@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="logos/icon.png">
 	<title>Time In</title>
+	
 	<link rel="stylesheet" href="css/styles_base.css">
 
 	<link rel="stylesheet" href="css/styles_myevents.css">
@@ -73,47 +74,58 @@
 	<div class="espaco"></div>
 	<h1>Meus Eventos</h1>
 	<p class="text-center" id="semevento">Você não possui eventos inscritos!</p>
-
+	
 <!-- Section que carrega todas as div eventos -->
 <section class="conteudo col-11 m-auto"> 
 
 	<!-- Div primeiro evento -->
-	<div class="evento primeiro" id="divaulaZico">
+	<div class="evento primeiro">
 		
 		<!-- Div onde ficará todas as informações  -->
 		<div class="informacoes"> 
-			
-			<img src="img/6.png" alt="Aula do Zico" class="imgEventos">
-			
-			<!-- Div desc que contem todas as descrições do evento -->
-			<div class="desc"> 
-
-				<!-- Parágrafo com título do evento -->
-				<p class="pTitulo"><b>Aula do Zico</b></p>
+			<div class="row">
+				<img src="img/6.png" alt="Aula do Zico" class="imgEventos img-fluid col-12  col-lg-5">
 				
-				<!-- Div que contem data e hora -->
-				<div class="data_hora"> 
+				<!-- Div desc que contem todas as descrições do evento -->
+				<div class="desc col-12 col-lg-7"> 
 
-					<p>16/08/23</p>
-
-					<p>12:00 - 14:00</p>
-
-				</div>
-				
-				<!-- Parágrafo com endereço do evento -->
-				<p class="ende">R. Nelcy Lopes Vieira, 1000 - Jardim Limoeiro, Serra - ES, 29164-018 </p>
-
-				<!-- Div com botão para inscrever-se e parágrafo dizendo o valor do evento-->
-				<div class="btn_des">
+					<!-- Parágrafo com título do evento -->
+					<p class="pTitulo"><b>Aula do Zico</b></p>
 					
-					<p><b>R$:</b> 97,00</p> 
+					<!-- Div que contem data e hora -->
+					<div class="data_hora"> 
+
+						<p>16/08/23</p>
+
+						<p>12:00 - 14:00</p>
+
+					</div>
+
+					<!-- Div com o intuito-->
+					<div class="intuito d-none d-lg-block">
+						<p><b>Intuito:</b> Para toda Família</p>    
+					</div> 
+
+					<!-- Div com o público-->
+					<div class="publico d-none d-lg-block">
+						<p><b>Público-alvo:</b> Entre 5 e 10 anos</p>    
+					</div> 
 					
+					<!-- Parágrafo com endereço do evento -->
+					<p class="ende">R. Nelcy Lopes Vieira, 1000 - Jardim Limoeiro, Serra - ES, 29164-018 </p>
+
+					<!-- Div com botão para inscrever-se e parágrafo dizendo o valor do evento-->
+					<div class="btn_des">
+						<p><b>R$:</b> 97,00</p> 
+					</div>
+
 					<!-- Button para o usuário se inscrever -->
-					<button class="cancelar inscricao" id="btnaulaZico">Cancelar inscrição</button> 
-				
-				</div>
+					<button class="sabermais sb-list" id="aulaZico"><span>Saber Mais</span></button>
+					
+					
 
-			<!-- Fim da div desc -->
+				<!-- Fim da div desc -->
+				</div>
 			</div>
 		
 		<!--- Fim da div informacoes -->
@@ -123,42 +135,52 @@
 	</div>
 
 	<!-- Div do segundo evento -->
-	<div class="evento segundo" id="divtreinoBlack">
+	<div class="evento segundo">
 
 		<div class="informacoes">
+			<div class="row">
+				<img src="img/7.png" alt="Treino Black Knights" class="imgEventos img-fluid col-12  col-lg-5">
 
-			<img src="img/7.png" alt="Treino Black Knights" class="imgEventos">
+				<!-- Div desc que contem todas as descrições do evento -->
+				<div class="desc col-12 col-lg-7">
 
-			<!-- Div desc que contem todas as descrições do evento -->
-			<div class="desc">
-
-				<!-- Parágrafo com título do evento -->
-				<p class="pTitulo"><b>Treino Black Knights</b></p>
-				
-				<!-- Div que contem data e hora -->
-				<div class="data_hora"> 
-
-					<p>26/05/23</p>
-
-					<p>10:00 - 12:00</p>
-
-				</div>
-				
-				<!-- Parágrafo com endereço do evento -->
-				<p class="ende">R. Ana Viêira Mafra, s/n - Mata da Praia, Vitória - ES, 29066-010</p>
-
-				<!-- Div com botão para inscrever-se e parágrafo dizendo o valor do evento-->
-				<div class="btn_des">
+					<!-- Parágrafo com título do evento -->
+					<p class="pTitulo"><b>Treino Black Knights</b></p>
 					
-					<p><b>R$:</b> Gratuito</p>
+					<!-- Div que contem data e hora -->
+					<div class="data_hora"> 
+
+						<p>26/05/23</p>
+
+						<p>10:00 - 12:00</p>
+
+					</div>
+
+					<!-- Div com o intuito-->
+					<div class="intuito d-none d-lg-block">
+						<p><b>Intuito:</b> Treino para Amadores</p>    
+					</div> 
+
+					<!-- Div com o público-->
+					<div class="publico d-none d-lg-block">
+						<p><b>Público-alvo:</b> Entre 18 e 35 anos</p>    
+					</div> 
+
+					<!-- Parágrafo com endereço do evento -->
+					<p class="ende">R. Ana Viêira Mafra, s/n - Mata da Praia, Vitória - ES, 29066-010</p>
+
+					<!-- Div com botão para inscrever-se e parágrafo dizendo o valor do evento-->
+					<div class="btn_des">
+						<p><b>R$:</b> Gratuito</p>
+					</div>
 					
-					<button class="cancelar inscricao" id="btntreinoBlack">Cancelar inscrição</button> 
+						<button class="sabermais sb-list " id="treinoBlack"><span>Saber Mais</span></button>
+					
+					
 				
+				<!-- Fim da div desc -->
 				</div>
-			
-			<!-- Fim da div desc -->
 			</div>
-		
 		<!-- Fim da div informacoes -->
 		</div>
 	
@@ -166,42 +188,52 @@
 	</div>
 
 	<!-- Div do terceiro evento -->
-	<div class="evento terceiro" id="divdesafioNatacao">
+	<div class="evento terceiro">
 		
 		<div class="informacoes">
-			
-			<img src="img/10.png" alt="Desafio de Natação" class="imgEventos">
-				
-			<!-- Div desc que contem todas as descrições do evento -->
-			<div class="desc">
+			<div class="row">
+				<img src="img/10.png" alt="Desafio de Natação" class="imgEventos img-fluid col-12  col-lg-5">
+					
+				<!-- Div desc que contem todas as descrições do evento -->
+				<div class="desc col-12 col-lg-7">
 
-				<!-- Parágrafo com título do evento -->
-				<p class="pTitulo"><b>Desafio de Natação</b></p>
+					<!-- Parágrafo com título do evento -->
+					<p class="pTitulo"><b>Desafio de Natação</b></p>
 
-				<!-- Div que contem data e hora -->
-				<div class="data_hora"> 
+					<!-- Div que contem data e hora -->
+					<div class="data_hora"> 
+					
+						<p>12/07/23</p>
+					
+						<p>08:00</p>
+					
+					</div>
+
+					<!-- Div com o intuito-->
+					<div class="intuito d-none d-lg-block">
+						<p><b>Intuito:</b> Para toda Família</p>    
+					</div> 
+
+					<!-- Div com o público-->
+					<div class="publico d-none d-lg-block">
+						<p><b>Público-alvo:</b> Acima de 2 anos</p>    
+					</div> 
+
+					<!-- Parágrafo com endereço do evento -->
+					<p class="ende">Rodovia ES-010, Km 35 - Santa Cruz, Aracruz - ES, 29199-548</p>
+
+					<!-- Div com botão para inscrever-se e parágrafo dizendo o valor do evento-->
+					<div class="btn_des">
+						<p><b>R$:</b> Gratuito</p>
+					</div>
+
+						<button class="sabermais  sb-list" id="desafioNatacao"><span>Saber Mais</span></button>
+					
+					
 				
-					<p>12/07/23</p>
-				
-					<p>08:00</p>
-				
+				<!-- Fim da div desc -->
 				</div>
-				
-				<!-- Parágrafo com endereço do evento -->
-				<p class="ende">Rodovia ES-010, Km 35 - Santa Cruz, Aracruz - ES, 29199-548</p>
-
-				<!-- Div com botão para inscrever-se e parágrafo dizendo o valor do evento-->
-				<div class="btn_des">
-				
-					<p><b>R$:</b> Gratuito</p>
-				
-					<button class="cancelar inscricao" id="btndesafioNatacao">Cancelar inscrição</button> 
-				
-				</div>
-			
-			<!-- Fim da div desc -->
 			</div>
-			
 		<!--- Fim da div informacoes -->
 		</div>
 
@@ -209,81 +241,101 @@
 	</div>
 
 	<!-- Div do quarto evento -->
-	<div class="evento quarto" id="divmarDourado">
+	<div class="evento quarto">
 
 		<div class="informacoes">
+			<div class="row">
+				<img src="img/11.png" alt="Mar Dourado Beach Tennis" class="imgEventos img-fluid col-12  col-lg-5">
 
-			<img src="img/11.png" alt="Mar Dourado Beach Tennis" class="imgEventos">
+				<!-- Div desc que contem todas as descrições do evento -->
+				<div class="desc col-12 col-lg-7">
+					
+					<!-- Parágrafo com título do evento -->
+					<p class="pTitulo"><b>Mar Dourado Beach Tennis</b></p>
+					
+					<!-- Div que contem data e hora -->
+					<div class="data_hora"> 
+					
+						<p>12/09/23</p>
+					
+						<p>11:00</p>
+					
+					</div>
+					
+					<!-- Div com o intuito-->
+					<div class="intuito d-none d-lg-block">
+						<p><b>Intuito:</b> Para toda Família</p>    
+					</div> 
 
-			<!-- Div desc que contem todas as descrições do evento -->
-			<div class="desc">
-				
-				<!-- Parágrafo com título do evento -->
-				<p class="pTitulo"><b>Mar Dourado Beach Tennis</b></p>
-				
-				<!-- Div que contem data e hora -->
-				<div class="data_hora"> 
-				
-					<p>12/06/23</p>
-				
-					<p>11:00</p>
-				
+					<!-- Div com o público-->
+					<div class="publico d-none d-lg-block">
+						<p><b>Público-alvo:</b> Acima de 12 anos</p>    
+					</div> 
+
+					<!-- Parágrafo com endereço do evento -->
+					<p class="ende">Av. Est. José Júlio de Souza - Praia de Itaparica, Vila Velha - ES, 29103-865</p>
+
+					<!-- Div com botão para inscrever-se e parágrafo dizendo o valor do evento-->
+					<div class="btn_des">
+						<p><b>R$:</b> 10,00</p>
+					</div>
+
+						<button class="sabermais  sb-list" id="marDourado"><span>Saber Mais</span></button>
+					
+					
+
+				<!-- Fim da div desc -->
 				</div>
-				
-				<!-- Parágrafo com endereço do evento -->
-				<p class="ende">Av. Est. José Júlio de Souza - Praia de Itaparica, Vila Velha - ES, 29103-865</p>
-
-				<!-- Div com botão para inscrever-se e parágrafo dizendo o valor do evento-->
-				<div class="btn_des">
-				
-					<p><b>R$:</b> Gratuito</p>
-				
-					<button class="cancelar inscricao" id="btnmarDourado">Cancelar inscrição</button> 
-				
-				</div>
-
-			<!-- Fim da div desc -->
 			</div>
-		
 		<!-- Fim da div informacoes -->
 		</div> 
 		
 	</div><!-- Fim da div evento quarto -->
 	
 	<!-- Div do quinto evento -->
-	<div class="evento quinto" id="divcorridaPenha">
+	<div class="evento quinto">
 		
 		<div class="informacoes">
-			
-			<img src="img/9.png" alt="10ª Corrida da Penha" class="imgEventos">
-			
-			<div class="desc"><!-- Div desc que contem todas as descrições do evento -->
+			<div class="row">
+				<img src="img/9.png" alt="10ª Corrida da Penha" class="imgEventos img-fluid col-12  col-lg-5">
 				
-				<p class="pTitulo"><b>10ª Corrida da Penha</b></p><!-- Parágrafo com título do evento -->
-				
-				<div class="data_hora"> <!-- Div que contem data e hora -->
+				<div class="desc col-12 col-lg-7"><!-- Div desc que contem todas as descrições do evento -->
 					
-					<p>09/04/23</p>
+					<p class="pTitulo"><b>10ª Corrida da Penha</b></p><!-- Parágrafo com título do evento -->
 					
-					<p>07:30</p>
-				
-				</div>
-				
-				<!-- Parágrafo com endereço do evento -->
-				<p class="ende">Av. Estudante José Júlio de Souza - Av. Antônio Gil Veloso - Rua Antônio Ataíde - Parque da Prainha</p>
+					<div class="data_hora"> <!-- Div que contem data e hora -->
+						
+						<p>09/04/23</p>
+						
+						<p>07:30</p>
+					
+					</div>
+					
+					<!-- Div com o intuito-->
+					<div class="intuito d-none d-lg-block">
+						<p><b>Intuito:</b> Para profissionais</p>    
+					</div> 
 
-				<!-- Div com botão para inscrever-se e parágrafo dizendo o valor do evento-->
-				<div class="btn_des">
+					<!-- Div com o público-->
+					<div class="publico d-none d-lg-block">
+						<p><b>Público-alvo:</b> Acima de 6 anos</p>    
+					</div> 
+
+					<!-- Parágrafo com endereço do evento -->
+					<p class="ende">Av. Estudante José Júlio de Souza - Av. Antônio Gil Veloso - Rua Antônio Ataíde - Parque da Prainha</p>
+
+					<!-- Div com botão para inscrever-se e parágrafo dizendo o valor do evento-->
+					<div class="btn_des">
+						<p><b>R$:</b> Gratuito</p>   
+					</div>
 					
-					<p><b>R$:</b> Gratuito</p>   
+						<button class="sabermais  sb-list" id="corridaPenha"><span>Saber Mais</span></button>
+					
+					
 				
-					<button class="cancelar inscricao" id="btncorridaPenha">Cancelar inscrição</button> 
-				
+				<!-- Fim da div desc -->
 				</div>
-			
-			<!-- Fim da div desc -->
 			</div>
-
 		<!-- Fim da div informacoes -->
 		</div>
 
@@ -291,163 +343,204 @@
 	</div>
 
 	<!-- Div do sexto evento -->
-	<div class="evento sexto" id="divetapeRio">
+	<div class="evento sexto">
 
 		<div class="informacoes">
-			
-			<img src="img/8.png" alt="L'Étape Rio de Janeiro" class="imgEventos">
-			
-			<div class="desc"><!-- Div desc que contem todas as descrições do evento -->
-			
-				<p class="pTitulo"><b>L'Étape Rio de Janeiro</b></p><!-- Parágrafo com título do evento -->
-			
-				<div class="data_hora"> <!-- Div que contem data e hora -->
-			
-					<p>30/06/23</p>
-			
-					<p>12:00</p>
-			
+			<div class="row">
+				<img src="img/8.png" alt="L'Étape Rio de Janeiro" class="imgEventos img-fluid col-12  col-lg-5">
+				
+				<div class="desc col-12 col-lg-7"><!-- Div desc que contem todas as descrições do evento -->
+				
+					<p class="pTitulo"><b>L'Étape Rio de Janeiro</b></p><!-- Parágrafo com título do evento -->
+				
+					<div class="data_hora"> <!-- Div que contem data e hora -->
+				
+						<p>30/06/23</p>
+				
+						<p>12:00</p>
+				
+					</div>
+					
+					<!-- Div com o intuito-->
+					<div class="intuito d-none d-lg-block">
+						<p><b>Intuito:</b> Para profissionais</p>    
+					</div> 
+
+					<!-- Div com o público-->
+					<div class="publico d-none d-lg-block">
+						<p><b>Público-alvo:</b> Acima de 18 anos</p>    
+					</div> 
+
+					<!-- Parágrafo com endereço do evento -->
+					<p class="ende">Avenida Infante Dom Henrique - Marina da Glória, Rio de Janeiro, RJ, Brasil</p>
+
+					<div class="btn_des"><!-- Div com botão para inscrever-se e parágrafo dizendo o valor do evento-->
+						<p><b>R$:</b> 130,00</p>    
+					</div>
+
+						<button class="sabermais  sb-list" id="etapeRio"><span>Saber Mais</span></button>
+
+					</div>         
+
+				<!-- Fim da div desc -->
 				</div>
-			
-				<!-- Parágrafo com endereço do evento -->
-				<p class="ende">Avenida Infante Dom Henrique - Marina da Glória, Rio de Janeiro, RJ, Brasil</p>
-
-				<div class="btn_des"><!-- Div com botão para inscrever-se e parágrafo dizendo o valor do evento-->
-
-					<p><b>R$:</b> Gratuito</p>   
-
-					<button class="cancelar inscricao" id="btnetapeRio">Cancelar inscrição</button> 
-
-				</div>         
-
-			<!-- Fim da div desc -->
 			</div>
-
 		<!-- Fim da div informacoes -->
 		</div>
 
 	<!-- Fim da div evento sexto -->
 	</div>
+
 	<!-- Div do setimo evento -->
-	<div class="evento setimo" id="divsurfItaparica">
+	<div class="evento setimo">
 
 		<div class="informacoes">
-			
-			<img src="img/12.png" alt="Surf - Praia de Itaparica" class="imgEventos">
-			
-			<div class="desc"><!-- Div desc que contem todas as descrições do evento -->
-			
-				<p class="pTitulo"><b>Surf - Praia de Itaparica</b></p><!-- Parágrafo com título do evento -->
-			
-				<div class="data_hora"> <!-- Div que contem data e hora -->
-			
-					<p>27/08/23</p>
-			
-					<p>06:00</p>
-			
+			<div class="row">
+				<img src="img/12.png" alt="Surf - Praia de Itaparica" class="imgEventos img-fluid col-12  col-lg-5">
+				
+				<div class="desc col-12 col-lg-7"><!-- Div desc que contem todas as descrições do evento -->
+				
+					<p class="pTitulo"><b>Surf - Praia de Itaparica</b></p><!-- Parágrafo com título do evento -->
+				
+					<div class="data_hora"> <!-- Div que contem data e hora -->
+				
+						<p>27/08/23</p>
+				
+						<p>06:00</p>
+				
+					</div>
+					
+					<!-- Div com o intuito-->
+					<div class="intuito d-none d-lg-block">
+						<p><b>Intuito:</b> Treino para amadores</p>    
+					</div> 
+
+					<!-- Div com o público-->
+					<div class="publico d-none d-lg-block">
+						<p><b>Público-alvo:</b> Acima de 12 anos</p>    
+					</div> 
+
+					<!-- Parágrafo com endereço do evento -->
+					<p class="ende">Vila Velha - ES na Praia de Itaparica</p>
+
+					<div class="btn_des"><!-- Div com botão para inscrever-se e parágrafo dizendo o valor do evento-->
+						<p><b>R$:</b> Gratuito</p>    
+					</div>
+
+						<button class="sabermais  sb-list" id="surfItaparica"><span>Saber Mais</span></button>
+
+							 
+
+				<!-- Fim da div desc -->
 				</div>
-			
-				<!-- Parágrafo com endereço do evento -->
-				<p class="ende">Vila Velha - ES na Praia de Itaparica</p>
-
-				<div class="btn_des"><!-- Div com botão para inscrever-se e parágrafo dizendo o valor do evento-->
-
-					<p><b>R$:</b> Gratuito</p>   
-
-					<button class="cancelar inscricao" id="btnsurfItaparica">Cancelar inscrição</button> 
-
-				</div>          
-
-			<!-- Fim da div desc -->
 			</div>
-
 		<!-- Fim da div informacoes -->
 		</div>
 
 	<!-- Fim da div evento setimo -->
 	</div>
 
-	<!-- Div do oitavo evento -->
-	<div class="evento oitavo" id="divbasqueteCaue">
+	<!-- Div do setimo evento -->
+	<div class="evento oitavo">
 
 		<div class="informacoes">
-			
-			<img src="img/13.png" alt="Basquete - Praça do Cauê" class="imgEventos">
-			
-			<div class="desc"><!-- Div desc que contem todas as descrições do evento -->
-			
-				<p class="pTitulo"><b>Basquete - Praça do Cauê</b></p><!-- Parágrafo com título do evento -->
-			
-				<div class="data_hora"> <!-- Div que contem data e hora -->
-			
-					<p>05/07/23</p>
-			
-					<p>18:00</p>
-			
+			<div class="row">
+				<img src="img/13.png" alt="Basquete - Praça do Cauê" class="imgEventos img-fluid col-12  col-lg-5">
+				
+				<div class="desc col-12 col-lg-7"><!-- Div desc que contem todas as descrições do evento -->
+				
+					<p class="pTitulo"><b>Basquete - Praça do Cauê</b></p><!-- Parágrafo com título do evento -->
+				
+					<div class="data_hora"> <!-- Div que contem data e hora -->
+				
+						<p>05/07/23</p>
+				
+						<p>18:00</p>
+				
+					</div>
+					
+					<!-- Div com o intuito-->
+					<div class="intuito d-none d-lg-block">
+						<p><b>Intuito:</b> Treino para amadores</p>    
+					</div> 
+
+					<!-- Div com o público-->
+					<div class="publico d-none d-lg-block">
+						<p><b>Público-alvo:</b> Acima de 16 anos</p>    
+					</div> 
+
+					<!-- Parágrafo com endereço do evento -->
+					<p class="ende">Praça Cristóvão Jaques, 189-273 - Santa Helena, Vitória - ES, 29055-070</p>
+
+					<div class="btn_des"><!-- Div com botão para inscrever-se e parágrafo dizendo o valor do evento-->
+						<p><b>R$:</b> Gratuito</p>    
+					</div> 
+
+						<button class="sabermais  sb-list" id="basqueteCaue"><span>Saber Mais</span></button>
+
+							
+
+				<!-- Fim da div desc -->
 				</div>
-			
-				<!-- Parágrafo com endereço do evento -->
-				<p class="ende">Praça Cristóvão Jaques, 189-273 - Santa Helena, Vitória - ES, 29055-070</p>
-
-				<div class="btn_des"><!-- Div com botão para inscrever-se e parágrafo dizendo o valor do evento-->
-
-					<p><b>R$:</b> Gratuito</p>   
-
-					<button class="cancelar inscricao" id="btnbasqueteCaue">Cancelar inscrição</button> 
-
-				</div>     
-
-			<!-- Fim da div desc -->
 			</div>
-
 		<!-- Fim da div informacoes -->
 		</div>
 
-	<!-- Fim da div oitavo evento -->
+	<!-- Fim da div evento oitavo -->
 	</div>
-
 	<!-- Div do nove evento -->
-	<div class="evento nove" id="divmotocrossArena">
+	<div class="evento nove">
 		
 		<div class="informacoes">
-			
-			<img src="img/14.png" alt="Motocross - Arena Capixaba de Verão" class="imgEventos">
-			
-			<div class="desc"><!-- Div desc que contem todas as descrições do evento -->
+			<div class="row">
+				<img src="img/14.png" alt="Motocross - Arena Capixaba de Verão" class="imgEventos img-fluid col-12  col-lg-5">
 				
-				<p class="pTitulo"><b>Motocross - Arena Capixaba de Verão</b></p><!-- Parágrafo com título do evento -->
-				
-				<div class="data_hora"> <!-- Div que contem data e hora -->
+				<div class="desc col-12 col-lg-7"><!-- Div desc que contem todas as descrições do evento -->
 					
-					<p>09/09/23</p>
+					<p class="pTitulo"><b>Motocross - Arena Capixaba de Verão</b></p><!-- Parágrafo com título do evento -->
 					
-					<p>07:30</p>
+					<div class="data_hora"> <!-- Div que contem data e hora -->
+						
+						<p>09/09/23</p>
+						
+						<p>07:30</p>
+					
+					</div>
+					
+					<!-- Div com o intuito-->
+					<div class="intuito d-none d-lg-block">
+						<p><b>Intuito:</b> Para profissionais</p>    
+					</div> 
+
+					<!-- Div com o público-->
+					<div class="publico d-none d-lg-block">
+						<p><b>Público-alvo:</b> Acima de 18 anos</p>    
+					</div> 
+
+					<!-- Parágrafo com endereço do evento -->
+					<p class="ende">Arena Jacaraípe. Av. Abido Saad, n° 714, Estância Monazítica Município da Serra / ES.</p>
+
+					<!-- Div com botão para inscrever-se e parágrafo dizendo o valor do evento-->
+					<div class="btn_des">
+						<p><b>R$:</b> 15,90</p>   
+					</div>
+
+						<button class="sabermais sb-list" id="motocrossArena"><span>Saber Mais</span></button>
+					
+					
 				
+				<!-- Fim da div desc -->
 				</div>
-				
-				<!-- Parágrafo com endereço do evento -->
-				<p class="ende">Arena Jacaraípe. Av. Abido Saad, n° 714, Estância Monazítica Município da Serra / ES.</p>
-
-				<!-- Div com botão para inscrever-se e parágrafo dizendo o valor do evento-->
-				<div class="btn_des">
-
-					<p><b>R$:</b> Gratuito</p>   
-
-					<button class="cancelar inscricao" id="btnmotocrossArena">Cancelar inscrição</button> 
-
-				</div>     
-			
-			<!-- Fim da div desc -->
 			</div>
-
 		<!-- Fim da div informacoes -->
 		</div>
 
 	<!--Fim da div evento nove-->
 	</div>
 
-	<!--- Fim da Section -->
-	</section> 
+<!--- Fim da Section -->
+</section> 
+
 	<footer>
 		<!-- Inicio do meu container com 3 blocos -->
 		<div class="col-11" id="footer-content">

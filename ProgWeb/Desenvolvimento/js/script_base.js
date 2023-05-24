@@ -68,7 +68,6 @@ function inscrever(evento){
           }
         })
         let dados = JSON.parse(localStorage.getItem(emailLogado));
-        
         for(let i = 0; i < dados.eventos_inscritos.length; i++){
           if(dados.eventos_inscritos[i] == evento.id){
             Swal.fire({

@@ -1,5 +1,5 @@
 // Pegando todos os botões para se inscrever
-const cancel = document.querySelectorAll(".inscricao");
+const cancel = document.querySelectorAll(".inscrever");
 
 // Pegando o email do usuário logado
 const email = sessionStorage.getItem("logado");
@@ -55,8 +55,6 @@ function meusEventos(){
       }
 })
 }
-
-meusEventos()
 
 
 function cancelarInscricao(id){
