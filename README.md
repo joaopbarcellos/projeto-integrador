@@ -58,9 +58,6 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
 [Link para pasta do Sistema Web](https://github.com/jpzb/projeto-integrador/tree/main/ProgWeb)
 
 #### 5.3 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM OS SISTEMA WEB/MOBILE PROPOSTOS?
-    a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? 
-    b) Crie uma lista com os 5 principais relatórios que poderão ser obtidos por meio do sistema proposto!
-    
 > A Empresa Time In precisa inicialmente dos seguintes relatórios:
 * Relatório que informe o número de inscritos em cada eventos para saber o mais popular.
 * Relatório que informe o número de eventos de cada esporte para saber qual é o mais popular.
