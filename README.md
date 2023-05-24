@@ -152,16 +152,13 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
        
 
 #### 12. PRINCIPAIS CONSULTAS DO SISTEMA 
- Inserir as principais consultas (relativas aos 5 principais relatórios) definidas previamente no iten 3.1 deste template.
- <br>
-  a) Você deve apresentar as consultas em formato SQL para cad um dos relatórios.
- <br>
-  b) Além da consulta deve ser apresentada uma imagem com o resultado obtido para cada consulta.<br>
+#### [Link do Colab](https://colab.research.google.com/drive/1iv5W944-AzT-XDMBuxNEIg5ORYGoJS9p#scrollTo=xzWL96WkHkhZ)
 
  ### 13. Gráficos, relatórios, integração com Linguagem de programação e outras solicitações.<br>
-     OBS: Observe as instruções relacionadas a cada uma das atividades abaixo.<br>
+ 
  #### 13.1	Integração com Linguagem de programação; <br>
  #### 13.2	Desenvolvimento de gráficos/relatórios pertinentes, juntamente com demais <br>
+ #### [Link do Colab](https://colab.research.google.com/drive/1iv5W944-AzT-XDMBuxNEIg5ORYGoJS9p#scrollTo=xzWL96WkHkhZ)
  #### solicitações feitas pelo professor. <br>
  
  ### 14. Slides e Apresentação em vídeo. <br>
