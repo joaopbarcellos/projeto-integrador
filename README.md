@@ -136,8 +136,8 @@ Profissionais do mundo esportivo <br>
 <br>
 Pais de crianças <br>
 
-    Enquanto responsável por uma criança, quero encontrar eventos saudáveis para minha criança para incentivar 
-    a atividade física e diminuir o tempo em frente às telas.
+    Enquanto responsável por uma criança, quero encontrar eventos saudáveis para minha criança para 
+    incentivar a atividade física e diminuir o tempo em frente às telas.
 <br>
 
 ### 5. PROTÓTIPOS DO SISTEMA<br>
