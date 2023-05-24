@@ -45,7 +45,7 @@ b) [Link para Relatório/Apresentação de resultados obtidos](https://docs.goog
 
 ### 4. Personas e Histórias de usuário<br>
 a) <br>
-  Jovem - Atleta <br>
+Jovens/Atletas <br>
   
      Marcos Zaneti, 18
      Quem ele é?
@@ -67,9 +67,62 @@ a) <br>
 
      Por que ele usa nosso aplicativo?
      Consegue conhecer mais pessoas para praticar e treinar mais.
-
 <br>
+Profissionais do mundo esportivo <br>
 
+     Daniella Moraes, 32
+     Quem ela é?
+     Personal Trainer.
+     Está a 8 anos nessa área.
+     Cursou Educação Física.
+
+     Como ela nos encontra?
+     Recomendação de um aluno.
+     Procura meios de facilitar a disponibilização de suas aulas.
+
+     O que ela deseja saber para usar nosso site?
+     Disponibilizar aulas.
+     Personalizar seu próprio evento.
+     Consultar informações sobre seus alunos.
+
+     Pontos de cuidado:
+     Pessoas de má índole nas aulas.
+
+     O que ela não quer?
+     Não dar aula.
+     Não ter alunos.
+
+     Por que ela usa nosso aplicativo?
+     Porque ela consegue mais alcance de pessoas novas.
+<br>
+Pais de crianças <br>
+
+    Felipe, 40
+    Quem ele é?
+    Pai.
+    Trabalha mais de 40 horas por semana.
+    Casado.
+    Filha com menos de 13 anos.
+    Procura eventos para sua filha e não consegue encontrar.
+
+    Como ele nos encontra?
+    Por uma indicação.
+    Por uma pesquisa na internet.
+
+    O que ele deseja saber para usar nosso site?
+    Buscar informações sobre eventos variados para grupos de crianças.
+    Ter meninas incluídas no grupo.
+
+    Pontos de cuidado:
+    Caso seja um evento com um professor/profissional, apresentar as referências de formação e trabalho.
+    Caso seja uma aula paga, deve haver uma aula teste.
+
+    O que ele não quer:
+    Aula não condizente com o público alvo. Por exemplo, numa aula de crianças deverá ocorrer uma aula lúdica, sem a cobrança profissional.
+
+    Por que ele usa nosso aplicativo?
+    Facilidade para encontrar um evento para filha participar em horários que se encaixam para os dois.
+<br>
 
 ### 5. PROTÓTIPOS DO SISTEMA<br>
 #### 5.1 PROTÓTIPO DO SISTEMA MOBILE
