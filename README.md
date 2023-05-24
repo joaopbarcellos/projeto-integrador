@@ -124,8 +124,20 @@ Pais de crianças <br>
     Facilidade para encontrar um evento para filha participar em horários que se encaixam para os dois.
 <br>
 
-b) 
+b) Jovens/Atletas <br>
+    
+    Enquanto jovem atleta, quero encontrar eventos esportivos, porque desejo treinar e encontrar novos 
+    grupos para jogar.
+<br>
+Profissionais do mundo esportivo <br>
 
+    Enquanto profissional da área esportiva, quero divulgar meu trabalho, porque conseguirei alcançar 
+    mais pessoas e aumentar minha renda.
+<br>
+Pais de crianças <br>
+
+    Enquanto responsável por uma criança, quero encontrar eventos saudáveis para minha criança para incentivar 
+    a atividade física e diminuir o tempo em frente às telas.
 <br>
 
 ### 5. PROTÓTIPOS DO SISTEMA<br>
