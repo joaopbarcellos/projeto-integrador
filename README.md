@@ -138,7 +138,6 @@ Pais de crianças <br>
 
     Enquanto responsável por uma criança, quero encontrar eventos saudáveis para minha criança para 
     incentivar a atividade física e diminuir o tempo em frente às telas.
-<br>
 
 ### 5. PROTÓTIPOS DO SISTEMA<br>
 #### 5.1 PROTÓTIPO DO SISTEMA MOBILE
