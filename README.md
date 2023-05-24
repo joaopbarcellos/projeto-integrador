@@ -44,7 +44,30 @@ a) [Link do formulário desenvolvido](https://forms.gle/joFpcFsEGCkWMErW7) <br>
 b) [Link para Relatório/Apresentação de resultados obtidos](https://docs.google.com/presentation/d/1fz1FTr4W_PyjrZAZudigT8LeLHav8KxwQgftTyCD5IA/edit?usp=sharing)
 
 ### 4. Personas e Histórias de usuário<br>
-Não foi desenvolvido.
+a) 
+Jovem - Atleta
+   Marcos Zaneti, 18
+
+   Quem ele é?
+   Atleta desde de pequeno.
+   Gosta de jogar vários jogos de futebol.
+
+   Como ele nos encontra?
+   Indicação de um amigo.
+
+   O que ele deseja saber para usar nosso site?
+   Encontrar eventos voltados para o profissional ou amador.
+
+   Pontos de cuidado:
+   O lugar do evento pode ser perigoso.
+   A diferença de idade nos jogos deve ser pequena e bem especificada.
+
+   O que ele não quer?
+   Ficar sem ter como treinar.
+
+   Por que ele usa nosso aplicativo?
+   Consegue conhecer mais pessoas para praticar e treinar mais.
+
 <br>
 
 
