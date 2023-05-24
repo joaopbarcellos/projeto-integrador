@@ -44,8 +44,7 @@ a) [Link do formulário desenvolvido](https://forms.gle/joFpcFsEGCkWMErW7) <br>
 b) [Link para Relatório/Apresentação de resultados obtidos](https://docs.google.com/presentation/d/1fz1FTr4W_PyjrZAZudigT8LeLHav8KxwQgftTyCD5IA/edit?usp=sharing)
 
 ### 4. Personas e Histórias de usuário<br>
-a) <br>
-Jovens/Atletas <br>
+a) Jovens/Atletas <br>
   
      Marcos Zaneti, 18
      Quem ele é?
@@ -124,6 +123,9 @@ Pais de crianças <br>
     Facilidade para encontrar um evento para filha participar em horários que se encaixam para os dois.
 <br>
 
+b) 
+
+<br>
 ### 5. PROTÓTIPOS DO SISTEMA<br>
 #### 5.1 PROTÓTIPO DO SISTEMA MOBILE
 a) [Link para teste do protótipo](https://quant-ux.com/#/test.html?h=a2aa10aNp1hKiT3NPSm7Au7sejqNeysKYczM42YiQPKrwnMVZneAe4zybf1a&ln=en) <br>
