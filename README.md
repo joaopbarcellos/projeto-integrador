@@ -117,7 +117,8 @@ Pais de crianças <br>
     Caso seja uma aula paga, deve haver uma aula teste.
 
     O que ele não quer:
-    Aula não condizente com o público alvo. Por exemplo, numa aula de crianças deverá ocorrer uma aula lúdica, sem a cobrança profissional.
+    Aula não condizente com o público alvo. Por exemplo, numa aula de crianças 
+    deverá ocorrer uma aula lúdica, sem a cobrança profissional.
 
     Por que ele usa nosso aplicativo?
     Facilidade para encontrar um evento para filha participar em horários que se encaixam para os dois.
