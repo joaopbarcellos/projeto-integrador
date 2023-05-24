@@ -60,12 +60,12 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
     a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? 
     b) Crie uma lista com os 5 principais relatórios que poderão ser obtidos por meio do sistema proposto!
     
-> A Empresa DevCom precisa inicialmente dos seguintes relatórios:
-* Relatório que informe quais são os gerentes de cada departamento incluindo as seguintes informações: número do departamento,  nome do departamento, e nome do gerente.
-* Relatório de empregados por projeto incluindo as seguintes informações: número do projeto, nome do projeto, rg do empregado, nome do empregado e quantidade de horas de trabalho do empregado alocadas ao projeto.
-* Relatório de empregados com dependentes incluindo as seguintes informações: rg do empregado, nome do empregado, nome do dependente, tipo de relação, data de nascimento do dependente e sexo do dependente.
-* Relatório com a quantidade de empregados por cada departamento incluindo as seguintes informações: nome do departamento, supervisor e quantidade de empregados alocados no departamento.
-* Relatório de supervisores e supervisionados incluindo as seguintes informações: nome do supervisor e nome do supervisionado.
+> A Empresa Time In precisa inicialmente dos seguintes relatórios:
+* Relatório que informe o número de inscritos em cada eventos para saber o mais popular.
+* Relatório que informe o número de eventos de cada esporte para saber qual é o mais popular.
+* Relatório que informe quantos eventos existem em cada cidade.
+* Relatório que informe o intuito dos usuários e dos eventos.
+* Relatório que informe o nome do usuário que é responsável pelo outro.
  
  ### 6. MODELO CONCEITUAL<br>
  
