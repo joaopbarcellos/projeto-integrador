@@ -36,13 +36,6 @@ VALUES (1, 'gustavo@gmail.com', 'Gustavo Alves', '2000-01-01', 'gustavo123', 'gu
 (29, 'Mark@gmail.com', 'Mark Zukiberg', '2007-07-15', 'Mark123', 'semfoto.png', 1),
 (30, 'junio@gmail.com', 'Junio Oliveira', '2008-05-02', 'junio123', 'semfoto.png', 1);
 
-INSERT INTO USUARIO_USUARIO (id, FK_USUARIO_PAI_id, FK_USUARIO_FILHO_id) 
-VALUES (1, 5, 2),
-(2, 22, 30),
-(3, 27, 29), 
-(4, 25, 28), 
-(5, 11, 16), 
-(6, 24, 7);
 
 INSERT INTO ESTADO (id, nome)
 VALUES (1, 'AC'), (2, 'AL'), (3, 'AM'), (4, 'AP'), (5, 'BA'), 
@@ -103,17 +96,24 @@ VALUES (1, 1000, 29164018, 'Nelcy Lopes Vieira', 2, 1),
 (6, 189273, 29055070, 'Cristóvão Jaques', 15, 6),
 (7, 714, 29175520, 'Abido Saadi', 1, 7);
 
+INSERT INTO IDADE_PUBLICO(id, intervalo)
+VALUES (1, 'De 3 a 7'),
+(2, 'De 8 a 13'),
+(3, 'De 14 a 15'),
+(4, 'De 16 a 18'),
+(5, 'Acima de 18');
 
-INSERT INTO EVENTO(id, descricao, nome, data, min_pessoas, preco, max_pessoas, FK_INTUITO_id, FK_ENDERECO_id, FK_USUARIO_id)
-VALUES (1, 'Aula ofertada pelo Zico para crianças de até 12 anos. O evento terá duração de 2 horas. Participação somente com inscrição prévia.','Aula do Zico', '2023-08-16 12:00:00', 2, 97, 10, 1, 1, 7),
-(2, 'Treino de futebol americano da igreja. Não pode xingamentos! Venha se ajuntar conosco pra praticar este esporte tão raro aqui no Brasil', 'Treino Black Knights', '2023-05-26 10:00:00', 5, 0, 18, 2, 2, 11),
-(3, 'Aulão de natação no sesc de Aracruz, venha aprender mais sobre natação e se divertir nesse dia!', 'Desafio de Natação', '2023-07-12 08:00:00', 2, 0, 25, 1, 3, 21),
-(4, 'Este é um projeto da Prefeitura de Vila Velha junto com o Point Mar Dourado de Beach Tennis, para inserir a modalidade nos esportes educacionais ofertados nas escolas futuramente.', 'Mar Dourado Beach Tennis', '2023-09-12 11:00:00', 5, 10, 50, 1, 4, 25),
-(5, 'O percurso será da Praça dos Ciclista à Prainha. Os participantes passarão pelas avenidas Estudante José Júlio de Souza e Gil Veloso, além das ruas Castelo Branco e Antônio Ataíde. Durante o trajeto, uma das faixas das vias será interditada para passagem dos atletas. A Guarda Municipal dará apoio com batedores da motopatrulha e viaturas no deslocamento.', '10ª corrida da Penha', '2023-04-09 07:30:00', 100, 0, 500, 3, 4, 30),
-(6, 'O L’ÉTAPE RIO DE JANEIRO SANTANDER é um evento de ciclismo amador, cujo objetivo é aproximar os participantes da experiência da maior competição de ciclismo do mundo.', 'L’ÉTAPE RIO DE JANEIRO', '2023-06-30 12:00:00', 500, 130, 1500, 2, 5, 12),
-(7, 'Surf na cidade de Vila Velha - ES na Praia de Itaparica.', 'Surf - Praia de Itaparica', '2023-08-27 06:00:00', 2, 0, 10, 3, 4, 25),
-(8, 'Basquete na cidade de Vitória - ES na Praça do Cauê, perto da Terceira Ponte.', 'Basquete - Praça do Cauê', '2023-07-05 18:00:00', 6, 0, 18, 3, 6, 15),
-(9, 'Motocross na praia de Jacaraípe, venha aproveitar desse esporte conosco!', 'Motocross Arena Jacaraípe', '2023-09-20 08:00:00', 10, 15.9, 50, 2, 7, 8);
+
+INSERT INTO EVENTO(id, descricao, nome, data, min_pessoas, preco, max_pessoas, visibilidade_tabela, FK_INTUITO_id, FK_ENDERECO_id, FK_USUARIO_id, FK_IDADE_PUBLICO_id)
+VALUES (1, 'Aula ofertada pelo Zico para crianças de até 12 anos. O evento terá duração de 2 horas. Participação somente com inscrição prévia.','Aula do Zico', '2023-08-16 12:00:00', 2, 97, 10, TRUE, 1, 1, 7, 2),
+(2, 'Treino de futebol americano da igreja. Não pode xingamentos! Venha se ajuntar conosco pra praticar este esporte tão raro aqui no Brasil', 'Treino Black Knights', '2023-05-26 10:00:00', 5, 0, 18, TRUE, 2, 2, 11, 5),
+(3, 'Aulão de natação no sesc de Aracruz, venha aprender mais sobre natação e se divertir nesse dia!', 'Desafio de Natação', '2023-07-12 08:00:00', 2, 0, 25, FALSE, 1, 3, 21, 1),
+(4, 'Este é um projeto da Prefeitura de Vila Velha junto com o Point Mar Dourado de Beach Tennis, para inserir a modalidade nos esportes educacionais ofertados nas escolas futuramente.', 'Mar Dourado Beach Tennis', '2023-09-12 11:00:00', 5, 10, 50, FALSE, 1, 4, 25, 3),
+(5, 'O percurso será da Praça dos Ciclista à Prainha. Os participantes passarão pelas avenidas Estudante José Júlio de Souza e Gil Veloso, além das ruas Castelo Branco e Antônio Ataíde. Durante o trajeto, uma das faixas das vias será interditada para passagem dos atletas. A Guarda Municipal dará apoio com batedores da motopatrulha e viaturas no deslocamento.', '10ª corrida da Penha', '2023-04-09 07:30:00', 100, 0, 500, FALSE, 3, 4, 30, 5),
+(6, 'O L’ÉTAPE RIO DE JANEIRO SANTANDER é um evento de ciclismo amador, cujo objetivo é aproximar os participantes da experiência da maior competição de ciclismo do mundo.', 'L’ÉTAPE RIO DE JANEIRO', '2023-06-30 12:00:00', 500, 130, 1500, FALSE, 2, 5, 12, 5),
+(7, 'Surf na cidade de Vila Velha - ES na Praia de Itaparica.', 'Surf - Praia de Itaparica', '2023-08-27 06:00:00', 2, 0, 10, FALSE, 3, 4, 25, 3),
+(8, 'Basquete na cidade de Vitória - ES na Praça do Cauê, perto da Terceira Ponte.', 'Basquete - Praça do Cauê', '2023-07-05 18:00:00', 6, 0, 18, FALSE, 3, 6, 15, 4),
+(9, 'Motocross na praia de Jacaraípe, venha aproveitar desse esporte conosco!', 'Motocross Arena Jacaraípe', '2023-09-20 08:00:00', 10, 15.9, 50, FALSE, 2, 7, 8, 5);
 
 INSERT INTO CLASSIFICACAO (id, nome) 
 VALUES (1, 'Futebol'), 
@@ -126,7 +126,7 @@ VALUES (1, 'Futebol'),
 (8, 'Futebol americano'),
 (9, 'Tênis'),
 (10, 'Beach Tênis'),
-(11, 'Ciclista');
+(11, 'Ciclismo');
 
 
 INSERT INTO USUARIO_EVENTO(id, data_inscricao, FK_USUARIO_id, FK_EVENTO_id)
@@ -184,3 +184,17 @@ VALUES (1, 'aulaZico.png', 1),
 (14, 'letapeRio.png', 6),
 (15, 'letapeRio2.png', 6),
 (16, 'letapeRio3.png', 6);
+
+INSERT INTO RECORRENTE(id, recorrencia)
+VALUES (1, 'Domingo'),
+(2, 'Segunda'),
+(3, 'Terça'),
+(4, 'Quarta'),
+(5, 'Quinta'),
+(6, 'Sexta'),
+(7, 'Sábado');
+
+INSERT INTO EVENTO_RECORRENTE(id, FK_EVENTO_id, FK_RECORRENTE_id)
+VALUES (1, 1, 4),
+(2, 4, 3),
+(3, 2, 6);
