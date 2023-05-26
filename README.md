@@ -164,6 +164,7 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
 
    |USUARIO|Tabela que irá armazenar os dados de usuário               |
    |-------|-----------------------------------------------------------| 
+   |id     | Campo que armazena o id do usuário                        |
    |email  | Campo que armazena o email do usuário                     |
    |nome   | Campo que armazena o nome do usuário                      |
    |data_nascimento| Campo que armazena a data de nascimento do usuário|
@@ -191,11 +192,21 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
    |---|---|
    |id| Campo que armazena o id da classificação|
    |nome| Campo que armazena o nome da classificação|
+   
+   |IDADE_PUBLICO| Tabela que irá receber informações do público-alvo de cada evento|
+   |---|---|
+   |id| Campo que armazena o id da idade público-alvo|
+   |intervalo| Campo que armazena o intervalo de idade|
+   
+   |RECORRENTE| Tabela que irá receber informações se um evento é recorrente|
+   |---|---|
+   |id| Campo que armazena o id da recorrência|
+   |recorrencia| Campo que armazena o intervalo de idade|
 
    | HORARIO_FIM| Tabela que terá o horário final do evento|
    |---|---|
    | id| Campo que armazena o id da classificação|
-   | nome| Campo que armazena o nome da classificação|
+   | nome| Campo que armazena a recorrência do evento|
 
    |TIPO_LOGRADOURO| Tabela com as informações do tipo do logradouro|
    |---|---|
