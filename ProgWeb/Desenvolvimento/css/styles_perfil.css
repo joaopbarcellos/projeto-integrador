@@ -76,7 +76,9 @@
     padding: 30px;
 }
 
-
+.row>*{
+    padding: 0 !important;
+}
 
 /* Defino o tamanho da logo do rodape */
 #logo_cart{

@@ -12,8 +12,8 @@ body{
 
 /* Definindo espaçamentos e flexbox */
 #sobre{
-    padding-left: 2%;
-    padding-right: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
     letter-spacing: 1px;
     display: flex;
     justify-content: center;
@@ -30,45 +30,44 @@ body{
     padding-top: 3%;
 }
 
-/* Aplicando flexbox e espaçamento */
-.integrantes{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.integrantes .parte1, .parte2{
-    display: flex;
-    flex-direction: row;
-    gap: 2%;
-}
-
-
 /* Aplicando espaçamento, cor, margem, flexbox, borda e sombra */
 .pessoas{
     background-color: rgb(69, 182, 211);
     border-radius: 20px;
-    margin: 2%;
     display: flex;
+    height: auto;
+    margin-right: 1%;
+    margin-left: 1%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 10px;
     padding-left: 20px;
+    padding-top: 10px;
     padding-right: 20px;
     box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+}
+
+.participante{
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 /* Definindo fonte */
 .pessoas h3{
     font-size: 17px;
+    text-align: center;
+    word-break: break-all;
+}
+
+.row{
+    align-items: center;
 }
 
 /* Definindo tamanho e margem */
-img{
-    width: 100%;
+.foto{
     border-radius: 10px;
     margin-bottom: 10px;
+    width: 85%;
 }
 
 /* Aplicando flexbox e margem */
@@ -82,10 +81,12 @@ img{
 /* Definindo margem e tamanho */
 .iconeSobre {
     margin-bottom: 0;
-    width: 8%
+    width: 20px;
+    object-fit: contain;
 }
 #textos{
     color: black !important;
+    padding: 0 !important;
 }
 
 #c{
@@ -104,112 +105,4 @@ img{
 
 #c:hover #img_easter{
     display: block;
-}
-
-
-@media screen and (max-width:800px){
-    *{
-        max-width: 800px;
-    }
-
-    #sobre p{
-        font-size: 16px;
-    }
-
-    .h2_equipe{
-        font-size: 20px;
-    }
-
-    .parte1, .parte2{
-        display: flex;
-    }
-
-    .integrantes{
-        flex-direction: column;
-    
-    }
-
-    .pessoas{
-        width: 90%;
-    }
-
-    img{
-        width: 100%;
-    }
-
-    .iconeSobre{
-        width: 32px;
-        height: 23px;
-    }  
-
-    h3{
-        font-size: 18px;
-    }
-
-    footer, p, a{
-        font-size: 16px;
-    }
-
-    .footer-list{
-        margin-right: 20%;
-    }
-
-    #sobre h1{
-        font-size: 25px;
-    }
-
-}
-
-
-@media screen and (max-width:600px){
-    *{
-        max-width: 600px;
-    }
-
-    #sobre p{
-        font-size: 14px;
-    }
-
-    .h2_equipe{
-        font-size: 17px;
-    }
-
-    .parte1, .parte2{
-        display: flex;
-    }
-
-    .integrantes{
-        flex-direction: column;
-    
-    }
-
-    .pessoas{
-        width: 240px;
-    }
-
-    img{
-        width: 200px;
-    }
-
-    .iconeSobre{
-        width: 27px;
-        height: 18px;
-    }  
-
-    h3{
-        font-size: 18px;
-    }
-
-    footer, p, a{
-        font-size: 16px;
-    }
-
-    .footer-list{
-        margin-right: 20%;
-    }
-
-    #sobre h1{
-        font-size: 25px;
-    }
-
 }

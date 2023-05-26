@@ -227,54 +227,66 @@ btn.addEventListener("click", () =>{
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 const inputNome = document.querySelector("#nome");
 const labelNome = document.querySelector("#label_nome");
-inputNome.addEventListener("blur", () => {
-    if (inputNome.value != ""){
-        labelNome.classList.remove("semTexto");
-        labelNome.classList.add("focado");
-    } else {
-        labelNome.classList.remove("focado");
-        labelNome.classList.add("semTexto");
-    }
-})
+if(inputNome){
+    inputNome.addEventListener("blur", () => {
+        if (inputNome.value != ""){
+            labelNome.classList.remove("semTexto");
+            labelNome.classList.add("focado");
+        } else {
+            labelNome.classList.remove("focado");
+            labelNome.classList.add("semTexto");
+        }
+    })
+}
+
 
 
 const inputEmail = document.querySelector("#email");
 const labelEmail = document.querySelector("#email_label");
-inputEmail.addEventListener("blur", () => {
-    if (inputEmail.value != ""){
-        labelEmail.classList.remove("semTexto");
-        labelEmail.classList.add("focado");
-    } else {
-        labelEmail.classList.remove("focado");
-        labelEmail.classList.add("semTexto");
-    }
-})
+if(inputEmail){
+    inputEmail.addEventListener("blur", () => {
+        if (inputEmail.value != ""){
+            labelEmail.classList.remove("semTexto");
+            labelEmail.classList.add("focado");
+        } else {
+            labelEmail.classList.remove("focado");
+            labelEmail.classList.add("semTexto");
+        }
+    })
+}
+
 
 
 const inputSenha = document.querySelector("#senha");
 const labelSenha = document.querySelector("#senha_label");
-inputSenha.addEventListener("blur", () => {
-    if (inputSenha.value != ""){
-        labelSenha.classList.remove("semTexto");
-        labelSenha.classList.add("focado");
-    } else {
-        labelSenha.classList.remove("focado");
-        labelSenha.classList.add("semTexto");
-    }
-})
+if(inputSenha){
+    inputSenha.addEventListener("blur", () => {
+        if (inputSenha.value != ""){
+            labelSenha.classList.remove("semTexto");
+            labelSenha.classList.add("focado");
+        } else {
+            labelSenha.classList.remove("focado");
+            labelSenha.classList.add("semTexto");
+        }
+    })
+}
+
 
 
 const inputConf_Senha = document.querySelector("#confirmasenha");
 const labelConf_Senha = document.querySelector("#senha_label_confirma");
-inputConf_Senha.addEventListener("blur", () => {
-    if (inputConf_Senha.value != ""){
-        labelConf_Senha.classList.remove("semTexto");
-        labelConf_Senha.classList.add("focado");
-    } else {
-        labelConf_Senha.classList.remove("focado");
-        labelConf_Senha.classList.add("semTexto");
-    }
-})
+if(inputConf_Senha){
+    inputConf_Senha.addEventListener("blur", () => {
+        if (inputConf_Senha.value != ""){
+            labelConf_Senha.classList.remove("semTexto");
+            labelConf_Senha.classList.add("focado");
+        } else {
+            labelConf_Senha.classList.remove("focado");
+            labelConf_Senha.classList.add("semTexto");
+        }
+    })
+}
+
 
 let voltar = document.querySelector(".cssbuttons-io-button");
 if(voltar){

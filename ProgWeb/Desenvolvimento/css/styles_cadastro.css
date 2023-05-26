@@ -159,7 +159,7 @@ input[type="date"]{
 }
 
 
-#floatingInputGroup1, #floatingInputGroup2, #floatingInputGroup3, #floatingInputGroup4, #floatingInputGroup5{
+#floatingInputGroup1, #floatingInputGroup2,#floatingInputGroup3,#floatingInputGroup4 {
     border: none;
     outline: 0;
     border-radius: 0;
@@ -169,7 +169,7 @@ input[type="date"]{
     
 }
 
-#floatingInputGroup1, #floatingInputGroup2, #floatingInputGroup3, #floatingInputGroup4, #floatingInputGroup5:hover{
+#floatingInputGroup1, #floatingInputGroup2,#floatingInputGroup3,#floatingInputGroup4:hover{
     border-bottom: 1px solid #000000;
 }
 

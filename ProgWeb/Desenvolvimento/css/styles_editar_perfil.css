@@ -1,6 +1,7 @@
 #perfila{
     color: #4267b3 !important;
 	text-shadow: none;
+    background-color: #fff;
 }
 
 /* ------------------------------------------------------------------------------------- */
@@ -38,6 +39,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     padding-top: 25px;
     font-weight: bold;
     font-size: 25px;
@@ -57,11 +59,6 @@ h1{
     padding: 10px;
 }
 
-/* Aplicando flexbox na div */
-form .nome{
-    display: flex;
-    flex-direction: column;
-}
 
 /* Aplicando margem */
 .campos {
@@ -127,46 +124,21 @@ input[type="date"]{
 }
 
 
-form .input-single {
-    position: relative;
-    margin: 8px 0;
-  }
-  
-form .input-single label {
-    position: absolute;
-    left: 3px;
-    bottom: 5px;
-    cursor: text;
-    transition: all 0.3s;
-    color: #000000;
+#label_nome, #label_email{
+    padding-left: 0;
 }
-  
-form .input-single .input {
+
+
+#floatingInputGroup1, #floatingInputGroup2{
+    border: none;
     outline: 0;
-    border: 0;
-    width: 94%;
+    border-radius: 0;
     border-bottom: 1px solid #000000;
-    padding: 3%;
-    font-size: 16px;
-}
-  
-form .input-single .input:focus {
-    border-bottom: 2px solid #000000;
+    padding-bottom: 0;
+    box-shadow: 0 0 0 0;
+    
 }
 
-
-form .input-single .input:focus ~ label {
-    transform: translateY(-35px);
-    font-size: 15px;
-}
-
-.focado {
-    transform: translateY(-35px);
-    font-size: 15px;
-}
-
-.semTexto {
-    transform: translateY(0px);
-    font-size: 20px;
-    color: #000000;
+#floatingInputGroup1, #floatingInputGroup2:hover{
+    border-bottom: 1px solid #000000;
 }

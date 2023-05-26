@@ -3,8 +3,8 @@ var emailLogado = sessionStorage.getItem("logado");
 const dadosUsuario = JSON.parse(localStorage.getItem(emailLogado));  
 
 // Pegando os campos na tela
-const campoNome = document.querySelector("#nome");
-const campoEmail = document.querySelector("#email");
+const campoNome = document.querySelector("#floatingInputGroup1");
+const campoEmail = document.querySelector("#floatingInputGroup2");
 const campoDataNasc = document.querySelector("#idade");
 const radios = document.querySelectorAll(".radio");
 

@@ -45,6 +45,10 @@
 							<a href="myevents.html" id="myeventsa">Meus Eventos</a>
 						</li>
 
+						<li class="nav-item nav-link">
+							<a href="sobre.html" id="sobrea">Sobre</a>
+						</li>
+
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 							  Configurações
@@ -58,13 +62,7 @@
 								<li><a class="dropdown-item" href="#" id="logout">Sair</a></li>
 							</ul>
 						</li>
-
-						<li class="nav-item nav-link">
-							<a href="sobre.html" id="sobrea">Sobre</a>
-						</li>
-
 					</ul>
-
 			  	</div>
 			</div>
 		</nav>
@@ -79,7 +77,7 @@
 	</button>
 
 	<!-- Div que ficará com o formulário -->
-    <div class="div_cadastro">
+    <div class="div_cadastro col-11 col-sm-8 col-md-7 col-lg-6 col-xg-5">
 
         <!-- Título pro formulário -->
         <h1> Editar informações de login </h1> 
@@ -93,12 +91,18 @@
                 <!-- Nome do usuário -->
                 <div class="nome campos">
 
+					<div class="form-floating">
+                        <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Nome">
+                        <label for="nome" id="label_nome">Nome</label>
+                    </div>
+
+					<!--
                     <div class="input-single">
-                        <input type="text" id="nome" name="nome_usuario" class="input">
+                        <input type="text" class="input" id="floatingInputGroup1" name="nome_usuario" placeholder="Nome">
                         <label for="nome_usuario" id="label_nome">Nome</label>
                     </div>
 
-                    <!-- <input type="text" id="nome" name="nome_usuario" placeholder="Nome"> -->
+                     <input type="text" id="nome" name="nome_usuario" placeholder="Nome"> -->
 
                     <label class="erro" id="noNome">Nome deve ser preenchido!</label>
 
@@ -107,9 +111,9 @@
                 <!-- E-mail do usuário -->
                 <div class="email campos">
 
-                    <div class="input-single">
-                        <input type="email" id="email" name="user_email" class="input">
-                        <label for="email_usuario" id="label_email">E-mail</label>
+                    <div class="form-floating">
+                        <input type="email" class="form-control" id="floatingInputGroup2" placeholder="E-mail">
+                        <label for="email" id="label_email">E-mail</label>
                     </div>
 
                     <!-- <input type="email" id="email" name="user_email" placeholder="E-mail"> -->
