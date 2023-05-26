@@ -154,7 +154,7 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
 * Relatório que informe o número de eventos de cada esporte para saber qual é o mais popular.
 * Relatório que informe quantos eventos existem em cada cidade.
 * Relatório que informe o intuito dos usuários e dos eventos.
-* Relatório que informe o nome do usuário que é responsável pelo outro.
+* Relatório que informe a quantidade de eventos que apresentam determinado público-alvo.
  
  ### 6. MODELO CONCEITUAL<br>
  
