@@ -158,7 +158,7 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
  
  ### 6. MODELO CONCEITUAL<br>
  
- ![Conceitual](https://github.com/jpzb/projeto-integrador/assets/91470894/5231e082-6c2e-4a8e-bea9-b7a832823945)
+ ![Conceitual](https://github.com/jpzb/projeto-integrador/assets/91471627/f918f774-5ee2-42a4-a972-7ea64ca7d067)
     
 #### 7. Descrição dos dados 
 
@@ -232,7 +232,7 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
 
 ### 9.	MODELO LÓGICO<br>
 
-  ![Lógico](https://github.com/jpzb/projeto-integrador/assets/91470894/2e16118f-c266-4194-a260-e3426fa7e4e2)
+  ![Lógico](https://github.com/jpzb/projeto-integrador/assets/91471627/671b2928-d04f-4b28-80c3-54306f7701f1)
   
 ### 10.	MODELO FÍSICO<br>
    [Link do arquivo SQL dos Creates](https://github.com/jpzb/projeto-integrador/blob/main/Arquivos/creates.sql)
