@@ -52,6 +52,11 @@ header{
 	background-color: #057dc2 !important;
 }
 
+.dropdown-toggle, .dropdown-menu{
+	outline: 0;
+	box-shadow: 0 0 0 0;
+}
+
 .icones{
 	width: 20px;
 	color: #057dc2;
@@ -286,7 +291,6 @@ footer p{
     padding: 15px;
     margin-left: 2%;
 	margin-right: 2%;
-    margin-top: 2%;
     border: 0;
     border-radius: 10px; 
     box-shadow: 0 3px 5px 5px rgba(131, 131, 131, 0.46);

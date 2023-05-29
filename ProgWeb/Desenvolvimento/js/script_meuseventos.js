@@ -1,5 +1,5 @@
 // Pegando todos os botões para se inscrever
-const cancel = document.querySelectorAll(".inscrever");
+const cancel = document.querySelectorAll(".inscricao");
 
 // Pegando o email do usuário logado
 const email = sessionStorage.getItem("logado");
@@ -14,10 +14,9 @@ cancel.forEach(btn =>{
     });
   })
 
-const emailLogado = sessionStorage.getItem("logado");
 
   // Caso o usuário não esteja logado
-  if(!emailLogado){
+  if(!email){
       Swal.fire({
           // Alert avisando ao usuário fazer login
           title: 'Faça login!',
@@ -33,17 +32,6 @@ const emailLogado = sessionStorage.getItem("logado");
       })
   }
 function meusEventos(){
-  // Verificando se o usuário está logado
-  if(!email){
-    Swal.fire({
-      icon: 'error',
-      title: 'Oops...',
-      text: 'Você não está logado!'
-    }).then(() => {
-      // Enviando para a tela de login
-      window.location.assign("index.html")
-    })
-  }
   let todosEventos = document.querySelectorAll(".evento");
   todosEventos.forEach(evento => {
       for(let i = 0; i < dados.eventos_inscritos.length; i++){
@@ -56,6 +44,7 @@ function meusEventos(){
 })
 }
 
+meusEventos()
 
 function cancelarInscricao(id){
   Swal.fire({
@@ -76,14 +65,9 @@ function cancelarInscricao(id){
         'success'
       ) 
       
-      let idTodo = id.slice(3);
-      // Id do botão cortado 
-      // Id do botão == btnnomeEvento
-      // Id da div contendo evento == divnomeEvento
-      // Portando, é necessário cortar o id do botão para pegar a div inteira por motivos de praticidade
 
       dados.eventos_inscritos = dados.eventos_inscritos.filter((valor) => {
-        return valor != idTodo;
+        return valor != id;
         // Retirando da lista o evento que o usuário está desinscrevendo
       });
 
@@ -91,7 +75,7 @@ function cancelarInscricao(id){
       localStorage.setItem(email, stringJson);
       // Setando novamente no localStorage
 
-      document.querySelector(`#div${idTodo}`).style.display = "none";
+      document.querySelector(`#div${id}`).style.display = "none";
       // Retirando o evento da tela
       if(!dados.eventos_inscritos.length){
         document.querySelector("#semevento").style.display = "block";

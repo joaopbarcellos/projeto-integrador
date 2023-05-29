@@ -33,14 +33,10 @@ h1{
 
 #container p{
     font-size: 23px;
-    margin-right: 5px;
 }
 
 #container{
-    margin-left: 1.67em;
-    margin-right: 1.67em;
-    margin-top: 1em;
-    padding: 10px;
+    margin-top: 1.5em !important;
 }
 
 #img_evento{
@@ -56,10 +52,11 @@ h1{
 
 }
 
+
 #informacoes{
-    width: 49%;
-    margin: 0 auto;
+    padding-left: 1em !important;
 }
+
 
 #desc #t_desc{
     font-size: 28px;
@@ -76,22 +73,12 @@ h1{
     margin-right: 5px;
 }
 
-#dia{
-    margin-right: 15px;
-    margin-left: 0.10em;
-}
-
-#data{
-    padding-right: 200px;
-    
-}
-
 #organizador{
     margin-bottom: 1.5em;
 }
 
 .inscrever {
-    margin-right: 0;
+    margin-left: auto !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -117,7 +104,11 @@ h1{
     transform: scale(.9);
     transition: all 100ms ease;
 }
-  
+
+
+.container{
+    padding: 0 !important;
+}
 .inscrever img {
     transition: all .5s ease;
     z-index: 2;
@@ -157,7 +148,6 @@ h1{
 #tabela{
     display: flex;
     flex-direction: column;
-    width: 49%;
 }
 
 .table-wrapper{
@@ -235,6 +225,7 @@ footer{
 
 body{
     padding: 0;
+    
 }
 
 .row{
