@@ -249,8 +249,8 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
   Enquanto responsável por uma criança, **quero encontrar eventos saudáveis para minha criança** para incentivar a atividade física e diminuir o tempo em frente às telas. <br>
   ![Responsavel](https://github.com/jpzb/projeto-integrador/assets/91470894/c62088e8-7bbb-43a7-bd47-1b093bc6441c) <br>
 
-        b) Protótipo vs Modelo conceitual (Histórias de Usuário e em quais tabelas aquele dado está sendo registrado).
-        (modelos devem obrigatoriamente estar em conformidade de rastreabilidade)
+### b) **Jovens/Atletas/Profissionais do mundo esportivo/Pais de crianças**
+![Tabela](https://github.com/jpzb/projeto-integrador/assets/91470894/fe8b4d6f-9115-4586-b407-230dfd6abae5)
 
 ### 9.	MODELO LÓGICO<br>
 
