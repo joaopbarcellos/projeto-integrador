@@ -237,17 +237,17 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
 
 
 ### 8.	RASTREABILIDADE DOS ARTEFATOS<br>
-    a) Jovens/Atletas
-              Enquanto jovem atleta, **quero encontrar eventos esportivos**, porque desejo treinar e encontrar novos grupos para jogar.
-              https://github.com/jpzb/projeto-integrador/assets/91470894/1d39acab-418c-4692-b571-892445f578fd       
-              
-       Profissionais do mundo esportivo
-              Enquanto profissional da área esportiva, **quero divulgar meu trabalho**, porque conseguirei alcançar mais pessoas e aumentar minha renda.
-              https://github.com/jpzb/projeto-integrador/assets/91470894/29752b3e-41f0-4c93-9131-d5cd158461bf
-              
-       Pais de crianças
-              Enquanto responsável por uma criança, **quero encontrar eventos saudáveis para minha criança** para incentivar a atividade física e diminuir o tempo em frente às telas.
-              https://github.com/jpzb/projeto-integrador/assets/91470894/c62088e8-7bbb-43a7-bd47-1b093bc6441c
+a) Jovens/Atletas
+          Enquanto jovem atleta, **quero encontrar eventos esportivos**, porque desejo treinar e encontrar novos grupos para jogar.
+          https://github.com/jpzb/projeto-integrador/assets/91470894/1d39acab-418c-4692-b571-892445f578fd       
+
+   Profissionais do mundo esportivo
+          Enquanto profissional da área esportiva, **quero divulgar meu trabalho**, porque conseguirei alcançar mais pessoas e aumentar minha renda.
+          https://github.com/jpzb/projeto-integrador/assets/91470894/29752b3e-41f0-4c93-9131-d5cd158461bf
+
+   Pais de crianças
+          Enquanto responsável por uma criança, **quero encontrar eventos saudáveis para minha criança** para incentivar a atividade física e diminuir o tempo em frente às telas.
+          https://github.com/jpzb/projeto-integrador/assets/91470894/c62088e8-7bbb-43a7-bd47-1b093bc6441c
               
         b) Protótipo vs Modelo conceitual (Histórias de Usuário e em quais tabelas aquele dado está sendo registrado).
         (modelos devem obrigatoriamente estar em conformidade de rastreabilidade)
