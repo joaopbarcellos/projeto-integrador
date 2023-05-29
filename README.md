@@ -237,15 +237,15 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
 
 
 ### 8.	RASTREABILIDADE DOS ARTEFATOS <br>
-a) #**Jovens/Atletas** <br>
+#a) **Jovens/Atletas** <br>
           Enquanto jovem atleta, **quero encontrar eventos esportivos**, porque desejo treinar e encontrar novos grupos para jogar. <br>
           ![Jovem](https://github.com/jpzb/projeto-integrador/assets/91470894/1d39acab-418c-4692-b571-892445f578fd)       <br>
           
-   #**Profissionais do mundo esportivo** <br>
+#   **Profissionais do mundo esportivo** <br>
           Enquanto profissional da área esportiva, **quero divulgar meu trabalho**, porque conseguirei alcançar mais pessoas e aumentar minha renda. <br> 
           ![Profissional](https://github.com/jpzb/projeto-integrador/assets/91470894/29752b3e-41f0-4c93-9131-d5cd158461bf) <br>
 
-   #**Pais de crianças** <br>
+#  **Pais de crianças** <br>
           Enquanto responsável por uma criança, **quero encontrar eventos saudáveis para minha criança** para incentivar a atividade física e diminuir o tempo em frente às telas. <br>
           ![Responsavel](https://github.com/jpzb/projeto-integrador/assets/91470894/c62088e8-7bbb-43a7-bd47-1b093bc6441c) <br>
               
