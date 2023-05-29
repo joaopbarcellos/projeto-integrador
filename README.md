@@ -250,7 +250,7 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
   ![Responsavel](https://github.com/jpzb/projeto-integrador/assets/91470894/c62088e8-7bbb-43a7-bd47-1b093bc6441c) <br>
 
 ### b) **Jovens/Atletas/Profissionais do mundo esportivo/Pais de crianças**
-![Tabela](https://github.com/jpzb/projeto-integrador/assets/91470894/fe8b4d6f-9115-4586-b407-230dfd6abae5)
+![Tabela](https://github.com/jpzb/projeto-integrador/assets/91470894/b1a35775-a79c-41e0-bf80-f2c8cd2a3e91)
 
 ### 9.	MODELO LÓGICO<br>
 
