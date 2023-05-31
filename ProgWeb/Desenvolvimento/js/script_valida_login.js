@@ -2,7 +2,7 @@
 import * as base from "./script_base.js";
 
 // Capturando o botão da tela e adicionando um ouvidor de clique
-const btnEnviar = document.querySelector("#btnEnviar").addEventListener("click", autenticar);
+document.querySelector("#btnEnviar").addEventListener("click", autenticar);
 
 // Capturando os campos de texto
 const campoEmail = document.querySelector("#floatingInputGroup1");

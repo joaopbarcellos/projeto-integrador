@@ -88,6 +88,7 @@
 
 #editar{
     padding: 10px;
+    border: 1px solid black;
     border-radius: 5px;
     background-color: #057dc2;
     color: white;

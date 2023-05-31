@@ -184,7 +184,7 @@ const enviaEmail = document.querySelector("#enviarEmail")
 if(enviaEmail){
   // Enviar email do footer
   enviaEmail.addEventListener("click", () =>{
-    send(document.querySelector("#enviarEmail"))
+    send(document.querySelector("#email"))
   })
 }
 

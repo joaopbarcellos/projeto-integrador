@@ -1,7 +1,11 @@
-// Botão de cadastro
-const btn = document.querySelector("#cadastro");
+// Importando a função de autenticação de campos
+import * as base from "./script_base.js";
 
-btn.addEventListener("click", () =>{
+// Ouvidor de cliques no botão de cadastro
+document.querySelector("#cadastro").addEventListener("click", autenticar());
+
+// Função de autenticar o cadastro
+function autenticar(){
     // Verificação cadastro se algum campo não tiver preenchido
     let autenticaRadio = true;
     let autenticaConfSenha = true;
@@ -219,7 +223,7 @@ btn.addEventListener("click", () =>{
             campoConfSenha.style.cssText = 'border-bottom: 1px solid #f58181';
         }
     }
-})
+}
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////

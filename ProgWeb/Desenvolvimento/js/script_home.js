@@ -18,7 +18,7 @@ const barra_pesquisa = document.querySelector("#busca");
 const lupa = document.querySelector("#lupa");
 
 lupa.addEventListener("click", () => {
-  let divSlides = document.querySelector(".carousel");
+  let divSlides = document.querySelector(".carousel-inner");
   let divDots = document.querySelector(".carousel-indicators");
 
   if(!barra_pesquisa.value){
@@ -33,7 +33,7 @@ lupa.addEventListener("click", () => {
     // Percorrendo por todos os eventos
     lista_conteudo.forEach(conteudo =>{
       // Pegando o título do evento
-      let titulo = conteudo.children[0].children[1].children[0].textContent.toUpperCase();
+      let titulo = conteudo.children[0].children[0].children[1].children[0].textContent.toUpperCase();
 
       // Verificando se o texto pesquisado é o mesmo que o título
       if(titulo.includes(barra_pesquisa.value.toUpperCase())){
@@ -49,7 +49,7 @@ lupa.addEventListener("click", () => {
 
 // Adicionando um EventListener para quando for feita a pesquisa
 barra_pesquisa.addEventListener("search", () => {
-  let divSlides = document.querySelector(".carousel");
+  let divSlides = document.querySelector(".carousel-inner");
   let divDots = document.querySelector(".carousel-indicators");
 
   if(!barra_pesquisa.value){
@@ -64,7 +64,7 @@ barra_pesquisa.addEventListener("search", () => {
     // Percorrendo por todos os eventos
     lista_conteudo.forEach(conteudo =>{
       // Pegando o título do evento
-      let titulo = conteudo.children[0].children[1].children[0].textContent.toUpperCase();
+      let titulo = conteudo.children[0].children[0].children[1].children[0].textContent.toUpperCase();
 
       // Verificando se o texto pesquisado é o mesmo que o título
       if(titulo.includes(barra_pesquisa.value.toUpperCase())){
@@ -77,3 +77,22 @@ barra_pesquisa.addEventListener("search", () => {
   });
   }
 });
+
+// quando o mouse estiver em cima do carousel-inner, ele pausa o timer
+function pausaslide(){
+  $(".carousel-inner").carousel({
+      interval : 10000,
+      pause: true
+  });
+}
+
+function entrarEvento(){
+  let nomeJanela = window.location.pathname.replace("/eventos/", "").replace(".html", "");
+  if(nomeJanela.length < 15){
+    let dados = JSON.parse(localStorage.getItem(sessionStorage.getItem("logado")))
+    if(dados.eventos_inscritos.find(janela => janela == nomeJanela)){
+      document.querySelector(".play").textContent = "Inscrito!"
+      document.querySelector(".now").textContent = "Prepare-se!"
+    }
+  }
+}
