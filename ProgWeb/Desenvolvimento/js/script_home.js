@@ -23,7 +23,7 @@ lupa.addEventListener("click", () => {
 
   if(!barra_pesquisa.value){
     divSlides.style.display = "block";
-    divDots.style.display = "block";
+    divDots.style.display = "flex";
     lista_conteudo.forEach(conteudo => {
       conteudo.style.display = "block";
     })
@@ -54,7 +54,7 @@ barra_pesquisa.addEventListener("search", () => {
 
   if(!barra_pesquisa.value){
     divSlides.style.display = "block";
-    divDots.style.display = "block";
+    divDots.style.display = "flex";
     lista_conteudo.forEach(conteudo => {
       conteudo.style.display = "block";
     })
