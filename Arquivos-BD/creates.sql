@@ -1,4 +1,4 @@
-drop table if exists ESTADO, CIDADE, BAIRRO, TIPO_LOGRADOURO, INTUITO, ENDERECO, EVENTO, HORARIO_FIM, CLASSIFICACAO, EVENTO_CLASSIFICACAO, USUARIO, USUARIO_EVENTO, USUARIO_USUARIO, FOTO_EVENTO, IDADE_PUBLICO, RECORRENTE, EVENTO_RECORRENTE; 
+drop table if exists ESTADO, CIDADE, BAIRRO, TIPO_LOGRADOURO, INTUITO, ENDERECO, EVENTO, HORARIO_FIM, CLASSIFICACAO, EVENTO_CLASSIFICACAO, USUARIO, USUARIO_EVENTO, USUARIO_USUARIO, FOTO_EVENTO;
 
     create table ESTADO(
      id integer primary key,
@@ -52,44 +52,22 @@ drop table if exists ESTADO, CIDADE, BAIRRO, TIPO_LOGRADOURO, INTUITO, ENDERECO,
      foreign key (FK_INTUITO_id) references INTUITO(id)
     );
 
-    create table RECORRENTE(
-     id integer primary key,
-     recorrencia varchar(12)
-    );
-
-
-    create table IDADE_PUBLICO(
-     id integer primary key,
-     intervalo varchar(15)
-    );
-
     create table EVENTO(
      id integer primary key,
-     descricao varchar(500),
+     descricao varchar(300),
      nome varchar(100),
      data timestamp,
      min_pessoas integer,
      preco float,
      max_pessoas integer,
-     visibilidade_tabela boolean,
      FK_INTUITO_id integer,
      FK_ENDERECO_id integer,
      FK_USUARIO_id integer,
-     FK_IDADE_PUBLICO_id integer,
      foreign key (FK_INTUITO_id) references INTUITO(id),
      foreign key (FK_ENDERECO_id) references ENDERECO(id),
-     foreign key (FK_USUARIO_id) references USUARIO(id),
-     foreign key (FK_IDADE_PUBLICO_id) references IDADE_PUBLICO(id)
+     foreign key (FK_USUARIO_id) references USUARIO(id)
     );
     
-    create table EVENTO_RECORRENTE(
-     id integer primary key,
-     FK_EVENTO_id integer,
-     FK_RECORRENTE_id integer,
-     foreign key (FK_EVENTO_id) references EVENTO(id),
-     foreign key (FK_RECORRENTE_id) references RECORRENTE(id)
-    );
-
     create table FOTO_EVENTO (
      id integer, 
      FK_EVENTO_id integer,
@@ -125,3 +103,10 @@ drop table if exists ESTADO, CIDADE, BAIRRO, TIPO_LOGRADOURO, INTUITO, ENDERECO,
      foreign key (FK_EVENTO_id) references EVENTO(id)
     );
 
+    create table USUARIO_USUARIO(
+     id integer primary key,
+     FK_USUARIO_PAI_id integer,
+     FK_USUARIO_FILHO_id integer,
+     foreign key (FK_USUARIO_PAI_id) references USUARIO(id),
+     foreign key (FK_USUARIO_FILHO_id) references USUARIO(id)
+    );
