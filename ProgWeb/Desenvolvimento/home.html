@@ -78,7 +78,7 @@
 	<div id="carouselExampleInterval" class="carousel slide d-none d-sm-block col-11 col-md-10 col-lg-8 col-xg-6 m-auto" data-bs-ride="carousel">
 
 		<div class="carousel-inner">
-			<div class="carousel-item active" data-bs-interval="7000">
+			<div class="carousel-item active" data-bs-interval="500" data-bs-pause="true">
 				<img src="img/12.png" class="d-block w-100" alt="...">
 			
 				<div class="titul"><b>Surf - Praia de Itaparica</b></div>
@@ -89,20 +89,18 @@
 				</div>
 			</div>
 
-		<div class="carousel-item" data-bs-interval="7000">
+		<div class="carousel-item" data-bs-interval="500" data-bs-pause="true">
 			<img src="img/13.png" class="d-block w-100" alt="...">
 			<div class="titul"><b>Basquete - Praça do Cauê</b></div>
 			
 			<div class="fundoTexto">
 				
 				<div class=" text">Basquete na cidade de Vitória - ES na Praça do Cauê, perto da Terceira Ponte</div>
-				
 				<button class="sabermais sb-slide slide" id="basqueteCaue"><span>Saber Mais</span></button>
-			
 			</div>
 		</div>
 
-			<div class="carousel-item" data-bs-interval="7000">
+			<div class="carousel-item" data-bs-interval="500" data-bs-pause="true">
 				<img src="img/14.png" class="d-block w-100" alt="...">
 				<div class="titul"><b>Motocross - Arena Capixaba de Verão</b></div>
 
@@ -133,7 +131,9 @@
 	</div>
 	
 	<!-- Section que carrega todas as div eventos -->
-	<section class="conteudo col-11 m-auto"> 
+	<section class="conteudo col-11 m-auto">
+
+		<div id="naoAchou" class="msg_erro">Nenhum resultado para "" foi encontrado!</div>
 
 		<!-- Div primeiro evento -->
 		<div class="evento mt-3 mt-sm-4 mt-4 mt-5 mt-3 primeiro">

@@ -4,6 +4,7 @@ import * as base from "./script_base.js";
 // Ouvidor de cliques no botão de cadastro
 document.querySelector("#cadastro").addEventListener("click", autenticar());
 
+
 // Função de autenticar o cadastro
 function autenticar(){
     // Verificação cadastro se algum campo não tiver preenchido
@@ -12,7 +13,7 @@ function autenticar(){
     let autenticaSenha  = true;
     let autenticaData  = true;
     let autenticaEmail  = true; 
-    let autenticaNome = true;
+    let autenticaNome = true; 
 
     // Labels de erro
     const noNome = document.querySelector("#noNome");
@@ -65,18 +66,50 @@ function autenticar(){
         }
     })
 
+    autenticaNome = base.verificaCampoVazio(campoNome, document.querySelector("#label_nome"), noNome, false);
+    autenticaEmailVazio = base.verificaCampoVazio(campoEmail, document.querySelector("#email_label"), noEmail, noEmailPadrao);
+    autenticaEmailForaPadrao = base.verificaEmailForaPadrao(campoEmail, noEmail, noEmailPadrao);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // Autenticando o nome
-    if (campoNome.value == ""){
-        // Mudando as cores e visualização das caixas de texto
-        campoNome.style.cssText = 'border-bottom: 1px solid #f58181';
-        document.getElementById('label_nome').style.cssText = 'font-size: 20px; color: #f58181;';
-        noNome.style.display = "block";
-        // Variável de verificação
+    if (base.verificaCampoVazio(campoNome, document.querySelector("#label_nome"), noNome, false)){
         autenticaNome = false;
     } else {
         // Mudando as cores e visualização das caixas de texto
         campoNome.style.cssText = 'border-bottom: 1px solid rgb(95, 201, 74)';
-        document.getElementById('label_nome').style.cssText = 'transform: translateY(-35px); font-size: 15px; color: rgb(95, 201, 74);';
         noNome.style.display = "none";
         // Variável de verificação
         autenticaNome = true;
@@ -94,7 +127,6 @@ function autenticar(){
 
     } else if (!campoEmail.value.includes("@") || !campoEmail.value.includes(".com")){
         campoEmail.style.cssText = 'border-bottom: 1px solid #f58181';
-        document.getElementById('email_label').style.cssText = 'transform: translateY(-35px);font-size: 15px; color: #f58181;';
         noEmail.style.display = "none";
         noEmailPadrao.style.display = "block";
         // Variável de verificação
@@ -102,7 +134,6 @@ function autenticar(){
     } else {
         // Mudando as cores e visualização das caixas de texto
         campoEmail.style.cssText = 'border-bottom: 1px solid rgb(95, 201, 74)';
-        document.getElementById('email_label').style.cssText = 'transform: translateY(-35px);font-size: 15px; color: rgb(95, 201, 74)';
         noEmail.style.display = "none";
         noEmailPadrao.style.display = "none";
         // Variável de verificação
@@ -139,7 +170,6 @@ function autenticar(){
     } else if (senha.length < 6 || senha.length > 30) {
         // Mudando as cores e visualização das caixas de texto
         campoSenha.style.cssText = 'border-bottom: 1px solid #f58181';
-        document.getElementById('senha_label').style.cssText = 'transform: translateY(-35px);font-size: 15px; color: #f58181';
         aotPass.style.display = "block";
         noPass.style.display = "none";
         // Variável de verificação
@@ -147,7 +177,6 @@ function autenticar(){
     } else {
         // Mudando as cores e visualização das caixas de texto
         campoSenha.style.cssText = 'border-bottom: 1px solid rgb(95, 201, 74)';
-        document.getElementById('senha_label').style.cssText = 'transform: translateY(-35px);font-size: 15px; color: rgb(95, 201, 74)';
         noPass.style.display = "none";
         aotPass.style.display = "none";
         // Variável de verificação
@@ -166,8 +195,7 @@ function autenticar(){
         autenticaConfSenha = false;
     } else if (confSenha.length < 6 || confSenha.length > 30) {
         // Mudando as cores e visualização das caixas de texto
-        campoConfSenha.style.cssText = 'border-bottom: 1px solid #f58181'
-        document.getElementById('senha_label_confirma').style.cssText = 'transform: translateY(-35px);font-size: 15px; color: #f58181';
+        campoConfSenha.style.cssText = 'border-bottom: 1px solid #f58181';
         aotConfPass.style.display = "block";
         noConfPass.style.display = "none";
         passConfPass.style.display = "none";
@@ -176,7 +204,6 @@ function autenticar(){
     } else {
         // Mudando as cores e visualização das caixas de texto
         campoConfSenha.style.cssText = 'border-bottom: 1px solid rgb(95, 201, 74)';
-        document.getElementById('senha_label_confirma').style.cssText = 'transform: translateY(-35px);font-size: 15px; color: rgb(95, 201, 74)';
         noConfPass.style.display = "none";
         passConfPass.style.display = "none";
         aotConfPass.style.display = "none";
@@ -299,3 +326,4 @@ if(voltar){
     window.location.assign('index.html');
 })
 }
+

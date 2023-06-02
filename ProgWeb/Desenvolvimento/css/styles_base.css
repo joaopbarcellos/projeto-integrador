@@ -97,8 +97,8 @@ a{
 /* Aplicando tamanho, borda e margem */
 #logo{
     width: 150px;
-  	border-radius: 10px;
-  	margin-bottom: 5px !important;
+	border-radius: 10px;
+	margin-bottom: 5px !important;
 }
 
 .nav-item{
@@ -277,7 +277,7 @@ footer p{
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-  }
+}
 
 .word-break {
     word-break: break-word;
@@ -341,7 +341,7 @@ footer p{
 .sb-list{
 	margin-left: auto;
 	margin-top: auto;
-  }
+}
 
 /* aplico um flex entre o valor do evento e o botao de inscrever-se */ 
 .btn_des{
@@ -361,21 +361,21 @@ footer p{
 	width: 0%;
 	height: 100%;
 	background: #83e3cd;
-  	position: absolute;
+	position: absolute;
 	transition: all 0.4s ease-in-out;
 	right: 0;
-  }
-   
+}
+
 .sabermais:hover::after {
 	right: auto;
 	left: 0;
-  width: 100% ;
-  }
-   
+	width: 100% ;
+}
+
 .sabermais span {
 	text-align: center;
 	text-decoration: none;
-  width: 100%;
+	width: 100%;
 	padding: 18px 25px;
 	color: #fff;
 	font-size: 1.125em;
@@ -383,18 +383,18 @@ footer p{
 	/* letter-spacing: 0.3em; */
 	z-index: 20;
 	transition: all 0.3s ease-in-out;
-   }
-   
+}
+
 .sabermais:hover span {
 	color: #183153;
 	animation: scaleUp 0.3s ease-in-out;
-  }
+}
 
 
-  .sabermais {
+.sabermais {
 	width: 190px; 
 	height: 40px;
-  	position: relative;
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -427,34 +427,34 @@ footer p{
     position: relative;
     height: 2.8em;
     padding-right: 3.3em;
-  }
-  
-  .cssbuttons-io-button .icon {
-    background: white;
-    margin-left: 1em;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 2.2em;
-    width: 2.2em;
-    border-radius: 0.7em;
-    box-shadow: 0.1em 0.1em 0.6em 0.2em #145374;
-    right: 0.3em;
-    transition: all 0.3s;
-  }
-  
-  .cssbuttons-io-button:hover .icon {
-    width: calc(100% - 0.6em);
-  }
-  
-  .cssbuttons-io-button .icon svg {
-    width: 1.1em;
-  }
-  
-  .cssbuttons-io-button:hover .icon svg {
-    transform: translateX(0.1em);
-  }
+}
+
+.cssbuttons-io-button .icon {
+background: white;
+margin-left: 1em;
+position: absolute;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 2.2em;
+width: 2.2em;
+border-radius: 0.7em;
+box-shadow: 0.1em 0.1em 0.6em 0.2em #145374;
+right: 0.3em;
+transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+width: 1.1em;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+transform: translateX(0.1em);
+}
 
 /* css do botao de enviar email */
 .send {
@@ -497,4 +497,25 @@ footer p{
 	.container-fluid {
 		overflow-x: auto;
 	}
+}
+
+
+/* Aplicando display e cor */
+.erro{
+    display: none;
+    color: #f58181;
+    font-size: 12px;
+    margin-bottom: 2%;
+}
+
+.erroVazio {
+    color: #f58181;
+}
+
+.erroPadrao{
+    color: #f58181;
+}
+
+.certo{ 
+    color: rgb(95, 201, 74);
 }

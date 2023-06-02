@@ -33,6 +33,9 @@ function entrarEvento(){
   let nomeJanela = window.location.pathname.replace("/eventos/", "").replace(".html", "");
   if(nomeJanela.length < 15){
     let dados = JSON.parse(localStorage.getItem(sessionStorage.getItem("logado")))
+    if(!dados){
+      return;
+    }
     if(dados.eventos_inscritos.find(janela => janela == nomeJanela)){
       document.querySelector(".play").textContent = "Inscrito!"
       document.querySelector(".now").textContent = "Prepare-se!"
@@ -77,6 +80,7 @@ function inscrever(evento){
               confirmButtonColor: '#3085d6',
               confirmButtonText: 'OK'
             })
+            entrarEvento();
             return;
           }
         }
@@ -103,6 +107,7 @@ function inscrever(evento){
 
 let btnInscrever = document.querySelector(".inscrever");
 if(btnInscrever){
+  entrarEvento();
   // Adicionando o ouvidor do evento para se inscrever
   btnInscrever.addEventListener("click", () => {
     inscrever(btnInscrever);
@@ -205,6 +210,7 @@ if(logout){
   logout.addEventListener("click", sair);
   function sair(){
     //logout
-    window.location.assign("../index.html")
+    sessionStorage.removeItem("logado");
+    window.location.assign("../index.html");
   }
 }

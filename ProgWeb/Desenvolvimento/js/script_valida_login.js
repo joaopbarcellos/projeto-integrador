@@ -28,26 +28,6 @@ function autenticar(){
     // Verificando se o campo de email esta vazio
     let verificaEmailVazio = base.verificaCampoVazio(campoEmail, labelEmail, noEmail, noEmailPadrao);
     verificaEmail = autenticarCampoEmail(verificaEmailVazio, campoEmail, noEmail, noEmailPadrao, labelEmail)
-    
-    function autenticarCampoEmail(verificaEmailVazio, campoEmail, noEmail, noEmailPadrao, labelEmail){
-        if (verificaEmailVazio) {
-                // Verificando se o campo de email esta dentro dos padroes
-                verificaEmail = base.verificaEmailForaPadrao(campoEmail, noEmail, noEmailPadrao);
-
-                if (!verificaEmail){
-                    // Mudando a borda do campo
-                    campoEmail.style.cssText = 'border-bottom: 1px solid #f58181';
-                    
-                    return false;
-                } else{
-                    // Chamando funcao estetica
-                    campoCorreto(campoEmail, labelEmail, noEmail, noEmailPadrao);
-                    return true;
-                }
-            } else {
-                return false;
-            }
-    }
 
     // Verifica se o campo de senha está vazio
     let verificaSenhaVazia = base.verificaCampoVazio(campoSenha, labelSenha, noPass, aotPass);
@@ -106,6 +86,28 @@ function verificaLogin(email, senha){
         }
     }
 }
+
+// Funcao para verificar se o campo de email está correto
+function autenticarCampoEmail(verificaEmailVazio, campoEmail, noEmail, noEmailPadrao, labelEmail){
+    if (verificaEmailVazio) {
+            // Verificando se o campo de email esta dentro dos padroes
+            verificaEmail = base.verificaEmailForaPadrao(campoEmail, noEmail, noEmailPadrao);
+
+            if (!verificaEmail){
+                // Mudando a borda do campo
+                campoEmail.style.cssText = 'border-bottom: 1px solid #f58181';
+                
+                return false;
+            } else{
+                // Chamando funcao estetica
+                campoCorreto(campoEmail, labelEmail, noEmail, noEmailPadrao);
+                return true;
+            }
+        } else {
+            return false;
+        }
+}
+
 
 // Funcao para deixar o campo e label com aparencia de correto
 function campoCorreto(campo, label, noTexto, noTextoPadrao){

@@ -173,3 +173,10 @@ section{
   box-shadow: 0 0 0 0 ;
 }
 
+
+.msg_erro{
+  display: none;
+  font-size: 25px;
+  margin-top: 25px;
+  margin-bottom: 10%;
+}

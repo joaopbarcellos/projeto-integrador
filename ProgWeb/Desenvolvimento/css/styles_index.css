@@ -90,40 +90,6 @@ a{
 
 }
 
-/* Aplicando display e cor */
-.erro{
-    display: none;
-    color: #f58181;
-    font-size: 12px;
-    margin-bottom: 2%;
-}
-
-.erroVazio {
-    font-size: 20px;
-    color: #f58181;
-}
-
-.erroPadrao{
-    transform: translateY(-35px);
-    font-size: 15px;
-    color: #f58181;
-}
-
-.certo{
-    transform: translateY(-35px); 
-    font-size: 15px; 
-    color: rgb(95, 201, 74);
-}
-
-.focado {
-    transform: translateY(-35px);
-    font-size: 15px;
-}
-
-.semTexto {
-    transform: translateY(0px);
-}
-
 #senha_usuario{
     margin-top: 15px;
 }
