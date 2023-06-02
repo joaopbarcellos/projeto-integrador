@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Quicksand:wght@600&display=swap');
+
+
+/* Denindo fonte definição geral da página */
+*{
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Aplicando cor e deixando a imagem fixa independente do navegador */
+body{
+    background: linear-gradient(to top right, #057dc2, #83e3cd);
+    background-attachment: fixed;
+}
+
+/* Definindo posição*/
+img{
+    position: absolute;
+    width: 10%;
+    left: 50px;
+    top: 50px;
+}
+
+
+
+/* Definindo altura */
+header{
+    height: 10%;
+}
+
+/* Aplicando tamanho, cor, margem e bordas */
+.divLogin{
+    width: 27%;
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
+    margin-bottom: 12%;
+    margin-top: 5%;
+    border-radius: 10px;
+    box-shadow: -1px -2px 25px 8px #000000;
+}
+
+/* Aplicando flexbox e espaçamento */
+h1{
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+}
+
+/* Aplicando flexbox, margem e tamanho da fonte */
+#form{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2%;
+    font-size: 20px;
+}
+
+/* Aplicando tamanho da fonte, margem e flexbox */
+label{
+    font-size: 18px;
+    padding-bottom: 7%;
+}
+
+
+/* Definindo tamanho, borda e margem, tamanho da fonte e tirando coportamento da borda*/
+input{
+    padding: 3%;
+    font-size: 18px;
+    width: 94%;
+    margin-bottom: 3.5%;
+    border: 1px solid black;
+    outline: 0;
+}
+
+
+/* Definindo margem */
+.senha{
+    margin-bottom: 5%;
+}
+
+
+/* Definindo margem */
+.senha input{
+    margin-bottom: 2%;
+}
+
+/* Definindo tamanho da fonte e tirando decoração do link */
+a{
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* Aplicando flexbox e espaçamento */
+.log{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5%;
+}
+
+/* Definindo tamanho, margem, borda, cor e tamanho da fonte */
+.log button{
+    width: 45%;
+    height: 45px;
+    margin-bottom: 8px;
+    margin-top: 2%;
+    border-radius: 5px;
+    background-color: #057dc2;
+    color: #fff;
+    font-size: 15px;
+    border: 1px solid black;
+}
+
+/* Aplicando display e cor */
+.erro{
+    display: none;
+    color: #f58181;
+}
