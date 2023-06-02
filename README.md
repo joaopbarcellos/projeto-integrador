@@ -1,8 +1,6 @@
 # TRABALHO DE PI:  Time In
 Trabalho de desenvolvimento de software realizado no ano de 2023
 
-[![](https://img.youtube.com/vi/_213KQtrCCs/0.jpg)](https://www.youtube.com/watch?v=_213KQtrCCs)
-
 # Sumário
 
 ### 1. COMPONENTES<br>
@@ -46,100 +44,9 @@ a) [Link do formulário desenvolvido](https://forms.gle/joFpcFsEGCkWMErW7) <br>
 b) [Link para Relatório/Apresentação de resultados obtidos](https://docs.google.com/presentation/d/1fz1FTr4W_PyjrZAZudigT8LeLHav8KxwQgftTyCD5IA/edit?usp=sharing)
 
 ### 4. Personas e Histórias de usuário<br>
-a) Jovens/Atletas <br>
-  
-     Marcos Zaneti, 18
-     Quem ele é?
-     Atleta desde de pequeno.
-     Gosta de jogar vários jogos de futebol.
-
-     Como ele nos encontra?
-     Indicação de um amigo.
-
-     O que ele deseja saber para usar nosso site?
-     Encontrar eventos voltados para o profissional ou amador.
-
-     Pontos de cuidado:
-     O lugar do evento pode ser perigoso.
-     A diferença de idade nos jogos deve ser pequena e bem especificada.
-
-     O que ele não quer?
-     Ficar sem ter como treinar.
-
-     Por que ele usa nosso aplicativo?
-     Consegue conhecer mais pessoas para praticar e treinar mais.
-<br>
-Profissionais do mundo esportivo <br>
-
-     Daniella Moraes, 32
-     Quem ela é?
-     Personal Trainer.
-     Está a 8 anos nessa área.
-     Cursou Educação Física.
-
-     Como ela nos encontra?
-     Recomendação de um aluno.
-     Procura meios de facilitar a disponibilização de suas aulas.
-
-     O que ela deseja saber para usar nosso site?
-     Disponibilizar aulas.
-     Personalizar seu próprio evento.
-     Consultar informações sobre seus alunos.
-
-     Pontos de cuidado:
-     Pessoas de má índole nas aulas.
-
-     O que ela não quer?
-     Não dar aula.
-     Não ter alunos.
-
-     Por que ela usa nosso aplicativo?
-     Porque ela consegue mais alcance de pessoas novas.
-<br>
-Pais de crianças <br>
-
-    Felipe, 40
-    Quem ele é?
-    Pai.
-    Trabalha mais de 40 horas por semana.
-    Casado.
-    Filha com menos de 13 anos.
-    Procura eventos para sua filha e não consegue encontrar.
-
-    Como ele nos encontra?
-    Por uma indicação.
-    Por uma pesquisa na internet.
-
-    O que ele deseja saber para usar nosso site?
-    Buscar informações sobre eventos variados para grupos de crianças.
-    Ter meninas incluídas no grupo.
-
-    Pontos de cuidado:
-    Caso seja um evento com um professor/profissional, apresentar as referências de formação e trabalho.
-    Caso seja uma aula paga, deve haver uma aula teste.
-
-    O que ele não quer:
-    Aula não condizente com o público alvo. Por exemplo, numa aula de crianças 
-    deverá ocorrer uma aula lúdica, sem a cobrança profissional.
-
-    Por que ele usa nosso aplicativo?
-    Facilidade para encontrar um evento para filha participar em horários que se encaixam para os dois.
+Não foi desenvolvido.
 <br>
 
-b) Jovens/Atletas <br>
-    
-    Enquanto jovem atleta, quero encontrar eventos esportivos, porque desejo treinar e encontrar novos 
-    grupos para jogar.
-<br>
-Profissionais do mundo esportivo <br>
-
-    Enquanto profissional da área esportiva, quero divulgar meu trabalho, porque conseguirei alcançar 
-    mais pessoas e aumentar minha renda.
-<br>
-Pais de crianças <br>
-
-    Enquanto responsável por uma criança, quero encontrar eventos saudáveis para minha criança para 
-    incentivar a atividade física e diminuir o tempo em frente às telas.
 
 ### 5. PROTÓTIPOS DO SISTEMA<br>
 #### 5.1 PROTÓTIPO DO SISTEMA MOBILE
@@ -148,25 +55,26 @@ b) [Link da visão geral das telas](https://quant-ux.com/#/share.html?h=a2aa10aN
 c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656948b97/design/s10061_93161.html) <br>
 
 #### 5.2 PROTÓTIPO DO SISTEMA WEB
-[Link para pasta do Sistema Web](https://github.com/jpzb/projeto-integrador/tree/main/ProgWeb)
 
 #### 5.3 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM OS SISTEMA WEB/MOBILE PROPOSTOS?
-> A Empresa Time In precisa inicialmente dos seguintes relatórios:
-* Relatório que informe o número de inscritos em cada eventos para saber o mais popular.
-* Relatório que informe o número de eventos de cada esporte para saber qual é o mais popular.
-* Relatório que informe quantos eventos existem em cada cidade.
-* Relatório que informe o intuito dos usuários e dos eventos.
-* Relatório que informe a quantidade de eventos que apresentam determinado público-alvo.
+    a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? 
+    b) Crie uma lista com os 5 principais relatórios que poderão ser obtidos por meio do sistema proposto!
+    
+> A Empresa DevCom precisa inicialmente dos seguintes relatórios:
+* Relatório que informe quais são os gerentes de cada departamento incluindo as seguintes informações: número do departamento,  nome do departamento, e nome do gerente.
+* Relatório de empregados por projeto incluindo as seguintes informações: número do projeto, nome do projeto, rg do empregado, nome do empregado e quantidade de horas de trabalho do empregado alocadas ao projeto.
+* Relatório de empregados com dependentes incluindo as seguintes informações: rg do empregado, nome do empregado, nome do dependente, tipo de relação, data de nascimento do dependente e sexo do dependente.
+* Relatório com a quantidade de empregados por cada departamento incluindo as seguintes informações: nome do departamento, supervisor e quantidade de empregados alocados no departamento.
+* Relatório de supervisores e supervisionados incluindo as seguintes informações: nome do supervisor e nome do supervisionado.
  
  ### 6. MODELO CONCEITUAL<br>
  
- ![Conceitual](https://github.com/jpzb/projeto-integrador/assets/91471627/f918f774-5ee2-42a4-a972-7ea64ca7d067)
+ ![Conceitual](https://github.com/jpzb/projeto-integrador/assets/91470894/5231e082-6c2e-4a8e-bea9-b7a832823945)
     
 #### 7. Descrição dos dados 
 
    |USUARIO|Tabela que irá armazenar os dados de usuário               |
    |-------|-----------------------------------------------------------| 
-   |id     | Campo que armazena o id do usuário                        |
    |email  | Campo que armazena o email do usuário                     |
    |nome   | Campo que armazena o nome do usuário                      |
    |data_nascimento| Campo que armazena a data de nascimento do usuário|
@@ -194,21 +102,11 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
    |---|---|
    |id| Campo que armazena o id da classificação|
    |nome| Campo que armazena o nome da classificação|
-   
-   |IDADE_PUBLICO| Tabela que irá receber informações do público-alvo de cada evento|
-   |---|---|
-   |id| Campo que armazena o id da idade público-alvo|
-   |intervalo| Campo que armazena o intervalo de idade|
-   
-   |RECORRENTE| Tabela que irá receber informações se um evento é recorrente|
-   |---|---|
-   |id| Campo que armazena o id da recorrência|
-   |recorrencia| Campo que armazena o intervalo de idade|
 
    | HORARIO_FIM| Tabela que terá o horário final do evento|
    |---|---|
    | id| Campo que armazena o id da classificação|
-   | nome| Campo que armazena a recorrência do evento|
+   | nome| Campo que armazena o nome da classificação|
 
    |TIPO_LOGRADOURO| Tabela com as informações do tipo do logradouro|
    |---|---|
@@ -238,25 +136,14 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
    |nome| Campo que armazena o nome do estado em sigla|
 
 
-### 8.	RASTREABILIDADE DOS ARTEFATOS <br>
-### a) **Jovens/Atletas** <br>
-  Enquanto jovem atleta, **quero encontrar eventos esportivos**, porque desejo treinar e encontrar novos grupos para jogar. <br>
-  ![Jovem](https://github.com/jpzb/projeto-integrador/assets/91470894/1d39acab-418c-4692-b571-892445f578fd)       <br>
-           
-### **Profissionais do mundo esportivo** <br>
-  Enquanto profissional da área esportiva, **quero divulgar meu trabalho**, porque conseguirei alcançar mais pessoas e aumentar minha renda. <br> 
-  ![Profissional](https://github.com/jpzb/projeto-integrador/assets/91470894/29752b3e-41f0-4c93-9131-d5cd158461bf) <br>
-
-### **Pais de crianças** <br>
-  Enquanto responsável por uma criança, **quero encontrar eventos saudáveis para minha criança** para incentivar a atividade física e diminuir o tempo em frente às telas. <br>
-  ![Responsavel](https://github.com/jpzb/projeto-integrador/assets/91470894/c62088e8-7bbb-43a7-bd47-1b093bc6441c) <br>
-
-### b) **Jovens/Atletas/Profissionais do mundo esportivo/Pais de crianças**
-![Tabela](https://github.com/jpzb/projeto-integrador/assets/91470894/b1a35775-a79c-41e0-bf80-f2c8cd2a3e91)
+### 8.	RASTREABILIDADE DOS ARTEFATOS<br>
+        a) Historia de usuários vs protótipo (Histórias de Usuário e em qual tela do protótipo aquela HU está sendo realizada).
+        b) Protótipo vs Modelo conceitual (Histórias de Usuário e em quais tabelas aquele dado está sendo registrado).
+        (modelos devem obrigatoriamente estar em conformidade de rastreabilidade)
 
 ### 9.	MODELO LÓGICO<br>
 
-  ![Lógico](https://github.com/jpzb/projeto-integrador/assets/91471627/671b2928-d04f-4b28-80c3-54306f7701f1)
+  ![Lógico](https://github.com/jpzb/projeto-integrador/assets/91470894/2e16118f-c266-4194-a260-e3426fa7e4e2)
   
 ### 10.	MODELO FÍSICO<br>
    [Link do arquivo SQL dos Creates](https://github.com/jpzb/projeto-integrador/blob/main/Arquivos/creates.sql)
@@ -265,14 +152,17 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
        
 
 #### 12. PRINCIPAIS CONSULTAS DO SISTEMA 
-[Link do Colab](https://colab.research.google.com/drive/1iv5W944-AzT-XDMBuxNEIg5ORYGoJS9p#scrollTo=xzWL96WkHkhZ)
+ Inserir as principais consultas (relativas aos 5 principais relatórios) definidas previamente no iten 3.1 deste template.
+ <br>
+  a) Você deve apresentar as consultas em formato SQL para cad um dos relatórios.
+ <br>
+  b) Além da consulta deve ser apresentada uma imagem com o resultado obtido para cada consulta.<br>
 
  ### 13. Gráficos, relatórios, integração com Linguagem de programação e outras solicitações.<br>
- 
+     OBS: Observe as instruções relacionadas a cada uma das atividades abaixo.<br>
  #### 13.1	Integração com Linguagem de programação; <br>
- #### 13.2	Desenvolvimento de gráficos/relatórios pertinentes, juntamente com demais solicitações feitas pelo professor. <br>
-[Link do Colab](https://colab.research.google.com/drive/1iv5W944-AzT-XDMBuxNEIg5ORYGoJS9p#scrollTo=xzWL96WkHkhZ)
-
+ #### 13.2	Desenvolvimento de gráficos/relatórios pertinentes, juntamente com demais <br>
+ #### solicitações feitas pelo professor. <br>
  
  ### 14. Slides e Apresentação em vídeo. <br>
      OBS: Observe as instruções relacionadas a cada uma das atividades abaixo.<br>
