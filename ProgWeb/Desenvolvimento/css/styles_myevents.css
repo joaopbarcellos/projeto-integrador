@@ -5,11 +5,9 @@
 
 h1{
   padding-left: 30px;
-  font-size: 45px;
 }
 
 #semevento{
-  font-size: 20px;
   color: #69696998;
   margin-top: 10%;
   margin-bottom: 10%;
@@ -22,9 +20,8 @@ h1{
 
 /* Definindo tamanho, cor, fonte, borda e posição */
 .inscricao{
-  width: 100px; 
+  padding: 10px;
   color: white;
-  font-size: 15px;
   border: 0.5px solid #333333;
   border-radius: 10px;
   background-color: #ff0000;

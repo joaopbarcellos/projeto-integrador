@@ -19,7 +19,7 @@ ul,li,p {
 }
 
 header{
-	position: absolute;
+	position: relative;
 	width: 100%;
 	top: 0;
 	z-index: 99999;
@@ -27,10 +27,6 @@ header{
 
 .swal2-container{
 	z-index: 999999;
-}
-
-.espaco{
-	height: 100px;
 }
 
 /* Aplicando cor e tirando decoração dos textos */
@@ -62,10 +58,13 @@ header{
 	color: #057dc2;
 }
 
+.links{
+	color: white !important;
+}
+
 /* Tirando decoracao e aplicando cor no link */
 a{
 	text-decoration: none !important;
-	color: rgb(255, 255, 255) !important;
 	cursor: pointer;
 	transition: 0.4s ease;
 	user-select: none;
@@ -325,7 +324,7 @@ footer p{
 /* Aplicando fonte e margem */
 .pTitulo{
     font-style: oblique;
-	font-size: 25px;
+	font-size: 1.7rem;
 	margin-bottom: 15px;
 }
 
@@ -376,11 +375,9 @@ footer p{
 	text-align: center;
 	text-decoration: none;
 	width: 100%;
-	padding: 18px 25px;
 	color: #fff;
 	font-size: 1.125em;
 	font-weight: 700;
-	/* letter-spacing: 0.3em; */
 	z-index: 20;
 	transition: all 0.3s ease-in-out;
 }
@@ -504,8 +501,8 @@ transform: translateX(0.1em);
 .erro{
     display: none;
     color: #f58181;
-    font-size: 12px;
-    margin-bottom: 2%;
+    font-size: 1rem;
+    margin-bottom: 1%;
 }
 
 .erroVazio {
@@ -518,4 +515,14 @@ transform: translateX(0.1em);
 
 .certo{ 
     color: rgb(95, 201, 74);
+}
+
+/* Selecionando todos os inputs e aplicando margem e tamanho */
+input[type="date"]{
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border: 0;
+    border-bottom: 1px solid #000000;
+    outline: 0; 
 }

@@ -37,7 +37,7 @@ function entrarEvento(){
       return;
     }
     if(dados.eventos_inscritos.find(janela => janela == nomeJanela)){
-      document.querySelector(".play").textContent = "Inscrito!"
+      document.querySelector(".play").textContent = "Você está inscrito!"
       document.querySelector(".now").textContent = "Prepare-se!"
     }
   }
@@ -113,6 +113,37 @@ if(btnInscrever){
     inscrever(btnInscrever);
 })
 }
+// Função para verificar se o login está salvo no localStorage
+export function verificaLogin(email, senha){
+  // Pegando as informações do localStorage onde o email deveria estar cadastrado
+  const dadosSalvos = localStorage.getItem(email);
+  // Transformando para objeto
+  const dados = JSON.parse(dadosSalvos);
+
+  // Verificando se o email está cadastrado
+  if (!dadosSalvos){
+      return "Esse email não está cadastrado!";
+  } else {
+      // Vericando se a senha é a mesma
+      if (dados.senha == senha){
+          return "certo"
+      } else {
+          return "A senha está errada!";
+      }
+  }
+}
+// Funcao para deixar o campo e label com aparencia de correto
+export function campoCorreto(campo, label, noTexto, noTextoPadrao=false){
+  // Mudando a borda do campo
+  campo.style.cssText = 'border-bottom: 1px solid rgb(95, 201, 74)';
+
+  // Alterando a label
+  label.classList.add("certo");    
+  
+  // Escondendo as mensagens de erro
+  noTexto.style.display = "none";
+  noTextoPadrao.style.display = "none";
+}
 
 export function verificaCampoVazio(campo, label=false, noTexto, noTextoPadrao=false){
   if(!campo.value){
@@ -132,23 +163,25 @@ export function verificaCampoVazio(campo, label=false, noTexto, noTextoPadrao=fa
       
       // Retorno da função
       return false;
-
-  } else {
-      // Mostrando a mensagem de erro;
-      noTexto.style.display = "none";
-      // Retorno da função
-      return true;
   }
+    // Mostrando a mensagem de erro;
+    noTexto.style.display = "none";
+    // Retorno da função
+    return true;
 }
 
 
 // Função para autenticar se o email está dentro dos padrões
 export function verificaEmailForaPadrao(campo, noEmail, noEmailPadrao) {
   if(!campo.value.includes("@") || !campo.value.includes(".com")){
+    // Mudando a borda do campo
+    campo.style.cssText = 'border-bottom: 1px solid #f58181';
     noEmail.style.display = "none";
     noEmailPadrao.style.display = "block";
     return false;
   }
+  campo.style.cssText = 'border-bottom: 1px solid rgb(95, 201, 74)';
+  noEmail.style.display = "none";
   noEmailPadrao.style.display = "none";
   return true;
 }
@@ -186,31 +219,18 @@ export function verificaSenhaForaPadrao(campo, label, aotPass){
 }
 
 const enviaEmail = document.querySelector("#enviarEmail")
+const caixa_email = document.querySelector("#email")
 if(enviaEmail){
   // Enviar email do footer
   enviaEmail.addEventListener("click", () =>{
     send(document.querySelector("#email"))
   })
 }
-
-var criaa = document.querySelector("#criaa");
-if(criaa){
-  criaa.addEventListener("click", criarEvento);
-  function criarEvento(){
-    Swal.fire({
-      icon: 'info',
-      title: 'Oops...',
-      text: 'Esta página está em desenvolvimento'
-    })
-  }
-}
-
-var logout = document.querySelector("#logout");
-if(logout){
-  logout.addEventListener("click", sair);
-  function sair(){
-    //logout
-    sessionStorage.removeItem("logado");
-    window.location.assign("../index.html");
-  }
+if(caixa_email){
+  // Enviar email do footer
+  caixa_email.addEventListener("keypress", (event) =>{
+    if(event.key == "Enter"){
+      send(caixa_email)
+    }
+  })
 }

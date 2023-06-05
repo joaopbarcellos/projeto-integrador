@@ -22,17 +22,13 @@
     transition: 0.4s ease;
 }
 
-h1{
-    font-size: 55px;
-}
-
 #evento{
     display: flex;
     flex-direction: row;
 }
 
 #container p{
-    font-size: 23px;
+    font-size: 1.5rem;
 }
 
 #container{
@@ -43,7 +39,6 @@ h1{
     margin-bottom: 20px;
     min-height: 15%;
     min-width: 15%;
-    margin-right: 2%;
 }
 
 .iconezin{
@@ -57,10 +52,6 @@ h1{
     padding-left: 1em !important;
 }
 
-
-#desc #t_desc{
-    font-size: 28px;
-}
 
 #localizacao, #alvo, #intuito, #data, #contato, #preco, #num_inscritos, #vagas_restam, #organizador{
     display: flex;
@@ -82,7 +73,7 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100px;
+    height: 90px;
     width: 250px;
     gap: 10px;
     padding: 0 10px;
@@ -92,7 +83,7 @@ h1{
     border: none;
     letter-spacing: 1px;
     font-weight: 600;
-    font-size: 17px;
+    font-size: 1rem;
     background-color: #057dc2;
     border-radius: 50px;
     position: relative;
@@ -161,84 +152,6 @@ h1{
     display: flex;
 }
 
-
-tr{
-    text-align: center;
-}
-
-thead{
-    position: sticky;
-    top: 0;
-    background-color: #057dc2;
-    color: white;
-    z-index: 100000;
-    font-weight: bold;
-  }
-
 footer{
     margin-top: 20vh;
-}
-
-
-/* Mapa */
-
-
-.slot{
-    height: 60px !important;
-}
-
-.NavBar_MapTypeButtonDropDownIcon{
-    display: none !important;
-}
-
-.birdseye{
-    display: none !important;
-}
-
-#ZoomInButton{
-    display: block !important;
-}
-
-.disabled {
-    display: none !important;
-}
-
-.labelCanvas{
-    width: 100% !important;
-}
-
-.CopyrightContainer{
-    display: none !important;
-}
-
-.bm_LogoContainer{
-    display: none !important;
-}
-
-.ScaleBar{
-    margin-bottom: 10px !important;
-}
-
-#mapa{
-    width: 100% !important;
-}
-
-body{
-    padding: 0;
-    
-}
-
-.row{
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.row> *{
-    width: 100%;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-html   {
-    height: 100%;
 }

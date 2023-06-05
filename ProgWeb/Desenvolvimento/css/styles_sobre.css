@@ -54,7 +54,7 @@ body{
 
 /* Definindo fonte */
 .pessoas h3{
-    font-size: 17px;
+    font-size: 1.3rem;
     text-align: center;
     word-break: break-all;
 }
@@ -106,3 +106,5 @@ body{
 #c:hover #img_easter{
     display: block;
 }
+
+

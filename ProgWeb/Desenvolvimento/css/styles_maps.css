@@ -1,0 +1,59 @@
+.slot{
+    height: 60px !important;
+}
+
+.NavBar_MapTypeButtonDropDownIcon{
+    display: none !important;
+}
+
+.birdseye{
+    display: none !important;
+}
+
+#ZoomInButton{
+    display: block !important;
+}
+
+.disabled {
+    display: none !important;
+}
+
+.labelCanvas{
+    width: 100% !important;
+}
+
+.CopyrightContainer{
+    display: none !important;
+}
+
+.bm_LogoContainer{
+    display: none !important;
+}
+
+.ScaleBar{
+    margin-bottom: 10px !important;
+}
+
+#mapa{
+    width: 100% !important;
+}
+
+body{
+    padding: 0;
+    
+}
+
+.row{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.row> *{
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+html   {
+    height: 100%;
+}

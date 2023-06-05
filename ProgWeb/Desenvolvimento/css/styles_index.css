@@ -51,14 +51,14 @@ h1{
     display: flex;
     flex-direction: column;
     padding-top: 2%;
-    font-size: 20px;
+    font-size: 1.18748em;
 }
 
 
 /* Definindo tamanho da fonte e tirando decoração do link */
 a{
     text-decoration: none;
-    font-size: 15px;
+    font-size: 0.8em;
 }
 
 /* Aplicando flexbox e espaçamento */
@@ -78,7 +78,6 @@ a{
     border-radius: 5px;
     background-color: #057dc2;
     color: #fff;
-    font-size: 15px;
     border: 1px solid black;
     transition: 0.4s ease;
     user-select: none;
@@ -93,9 +92,6 @@ a{
 #senha_usuario{
     margin-top: 15px;
 }
-
-
-
 
 
 #floatingInputGroup1, #floatingInputGroup2{
@@ -117,7 +113,3 @@ a{
 #floatingInputGroup1, #floatingInputGroup2{
     border-bottom: 1px solid #000000;
 }
-
-
-
-

@@ -38,6 +38,7 @@ function barraVazia(){
   naoAchou.style.display = "none"
 }
 
+
 // Adicionando um EventListener para quando for feita a pesquisa
 barra_pesquisa.addEventListener("keypress", (event) => {
   let tecla = event.key;

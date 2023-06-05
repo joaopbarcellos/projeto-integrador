@@ -85,7 +85,8 @@ section{
   position: absolute;
   top: 30px;
   left: 15px;
-  font-size: 40px;
+  font-size: 2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-shadow: black 0.1em 0.1em 0.2em
 }
 
@@ -110,7 +111,7 @@ section{
 /* Aplicando cor, fonte, tamanho e alinhamento */
 .text {
   color: #ffffff;
-  font-size: 15px;
+  font-size: 1.18784rem;
   width: 100%;
   text-align: left;
 }
@@ -120,6 +121,7 @@ section{
   min-height: 30px;
   font-size: 100%;
   left: 0 !important;
+  width: 200px !important;
 }
 
   
@@ -176,7 +178,7 @@ section{
 
 .msg_erro{
   display: none;
-  font-size: 25px;
   margin-top: 25px;
   margin-bottom: 10%;
+  text-align: center;
 }

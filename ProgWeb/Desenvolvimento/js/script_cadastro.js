@@ -2,47 +2,45 @@
 import * as base from "./script_base.js";
 
 // Ouvidor de cliques no botão de cadastro
-document.querySelector("#cadastro").addEventListener("click", autenticar());
+document.querySelector("#cadastro").addEventListener("click", autenticar);
 
+// Labels de erro
+const noNome = document.querySelector("#noNome");
+const noPass = document.querySelector("#noPass");
+const noConfPass = document.querySelector("#noConfPass");
+const noData = document.querySelector("#noData");
+const noEmail = document.querySelector("#noEmail");
+const passConfPass = document.querySelector("#passConfPass");
+const aotPass = document.querySelector("#aotPass");
+const aotConfPass = document.querySelector("#aotConfPass");
+const noEmailPadrao = document.querySelector("#noEmailPadrao");
 
-// Função de autenticar o cadastro
+// Campo de nome
+const campoNome = document.querySelector("#floatingInputGroup1");
+
+// Campo de email
+const campoEmail = document.querySelector("#floatingInputGroup2");
+
+// Campos da data
+const campoData = document.querySelector("#idade");
+
+// Campos de senha e confirmar senha
+const campoSenha = document.querySelector("#floatingInputGroup3");
+const campoConfSenha = document.querySelector("#floatingInputGroup4");
+
+// Labels
+const labelEmail = document.querySelector("#label_email")
+const labelJogador = document.querySelector(".label_joga")
+const labelsJogabilidade = document.querySelectorAll(".jogabilidades");
+const labelConf_Senha = document.querySelector("#senha_label_confirma");
+const labelSenha = document.querySelector("#senha_label");
+const labelNome = document.querySelector("#label_nome");
+const labelData = document.querySelector("#labelData");
+
 function autenticar(){
-    // Verificação cadastro se algum campo não tiver preenchido
-    let autenticaRadio = true;
-    let autenticaConfSenha = true;
-    let autenticaSenha  = true;
-    let autenticaData  = true;
-    let autenticaEmail  = true; 
-    let autenticaNome = true; 
-
-    // Labels de erro
-    const noNome = document.querySelector("#noNome");
-    const noPass = document.querySelector("#noPass");
-    const noConfPass = document.querySelector("#noConfPass");
-    const noData = document.querySelector("#noData");
-    const noEmail = document.querySelector("#noEmail");
-    const passConfPass = document.querySelector("#passConfPass");
-    const aotPass = document.querySelector("#aotPass");
-    const aotConfPass = document.querySelector("#aotConfPass");
-    const noEmailPadrao = document.querySelector("#noEmailPadrao");
-
-    // Campo de nome
-    const campoNome = document.querySelector("#floatingInputGroup1");
-
-    // Campo de email
-    const campoEmail = document.querySelector("#floatingInputGroup2");
-
-    // Campos da data
-    const labelData = document.querySelector("#labelData");
-    const campoData = document.querySelector("#idade");
-
-    // Campos de senha e confirmar senha
-    const campoSenha = document.querySelector("#floatingInputGroup3");
-    const campoConfSenha = document.querySelector("#floatingInputGroup4");
-
     // Valor do nome
     let nome = campoNome.value;
-    
+
     // Valor do email
     let email = campoEmail.value;
 
@@ -53,211 +51,73 @@ function autenticar(){
     let senha = campoSenha.value;
     let confSenha = campoConfSenha.value;
 
-    // Valores e informações de jogabilidade
-    let marcado = true;
+    let verificaNome = base.verificaCampoVazio(campoNome, labelNome, noNome);
+    let verificaEmailVazio = base.verificaCampoVazio(campoEmail, labelEmail, noEmail, noEmailPadrao);
+    let verificaEmailForaPadrao = false;
+    if(verificaEmailVazio){
+        verificaEmailForaPadrao = base.verificaEmailForaPadrao(campoEmail, noEmail, noEmailPadrao);
+    }
+
+    let verificaSenhaVazia = base.verificaCampoVazio(campoSenha, labelSenha, noPass, aotPass);
+    let verificaSenhaForaPadrao = false;
+    if(verificaSenhaVazia){
+        verificaSenhaForaPadrao = base.verificaSenhaForaPadrao(campoSenha, labelSenha, aotPass);
+    }
     
-    const labelJogador = document.querySelector(".label_joga")
-    const labelsJogabilidade = document.querySelectorAll(".jogabilidades");
+    let verificaDataVazia = base.verificaCampoVazio(campoData, labelData, noData);
+
+    let verificaConfSenhaForaPadrao
+    let verificaConfSenhaVazia = base.verificaCampoVazio(campoConfSenha, labelConf_Senha, noConfPass, aotConfPass);
+    if(verificaConfSenhaVazia){
+        verificaConfSenhaForaPadrao = base.verificaEmailForaPadrao(campoConfSenha, labelConf_Senha, aotConfPass);
+    }
+
+
+    // Verificando a jogabilidade
+    let verificaJogabilidade = verificaJogabilidade();
+    
+
+    listaTudo = [verificaConfSenhaForaPadrao, verificaConfSenhaVazia, verificaDataVazia, verificaEmailForaPadrao, verificaEmailVazio, verificaJogabilidade, verificaNome, verificaSenhaForaPadrao, verificaSenhaVazia]
+    if(every(listaTudo)){
+        base.campoCorreto(campoNome, labelNome, noNome)
+    }
+
+}    
+
+function verificaJogabilidade(){
+    let marcado = jogabilidadeMarcada();
+
+    if (!marcado){
+        labelJogador.classList.add("erroVazio");
+        labelsJogabilidade.forEach(labelJogabilidade => {labelJogabilidade.classList.add("errroVazio")});
+        noJogabilidade.style.display = "block";
+        return false;
+    }
+    noJogabilidade.style.display = "none";
+    labelJogador.classList.add("certo")
+    labelsJogabilidade.forEach(labelJogabilidade => {labelJogabilidade.classList.add("certo")});
+    return true;
+}
+
+function jogabilidadeMarcada(){
     const radios = document.querySelectorAll(".radio");
+    let marcado = true;
     
     radios.forEach(radio => {
         if (radio.children[0].checked){
             marcado = radio.children[0].id;
         }
     })
-
-    autenticaNome = base.verificaCampoVazio(campoNome, document.querySelector("#label_nome"), noNome, false);
-    autenticaEmailVazio = base.verificaCampoVazio(campoEmail, document.querySelector("#email_label"), noEmail, noEmailPadrao);
-    autenticaEmailForaPadrao = base.verificaEmailForaPadrao(campoEmail, noEmail, noEmailPadrao);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // Autenticando o nome
-    if (base.verificaCampoVazio(campoNome, document.querySelector("#label_nome"), noNome, false)){
-        autenticaNome = false;
-    } else {
-        // Mudando as cores e visualização das caixas de texto
-        campoNome.style.cssText = 'border-bottom: 1px solid rgb(95, 201, 74)';
-        noNome.style.display = "none";
-        // Variável de verificação
-        autenticaNome = true;
-    }
-
-    // Autenticando o email
-    if (campoEmail.value == ""){
-        // Mudando as cores e visualização das caixas de texto
-        campoEmail.style.cssText = 'border-bottom: 1px solid #f58181;';
-        document.getElementById('email_label').style.cssText = 'font-size: 20px; color: #f58181';
-        noEmail.style.display = "block";
-        noEmailPadrao.style.display = "none";
-        // Variável de verificação
-        autenticaEmail = false;
-
-    } else if (!campoEmail.value.includes("@") || !campoEmail.value.includes(".com")){
-        campoEmail.style.cssText = 'border-bottom: 1px solid #f58181';
-        noEmail.style.display = "none";
-        noEmailPadrao.style.display = "block";
-        // Variável de verificação
-        autenticaEmail = false;
-    } else {
-        // Mudando as cores e visualização das caixas de texto
-        campoEmail.style.cssText = 'border-bottom: 1px solid rgb(95, 201, 74)';
-        noEmail.style.display = "none";
-        noEmailPadrao.style.display = "none";
-        // Variável de verificação
-        autenticaEmail = true;
-    }
-
-    // Autenticando a data
-    if (dataNasc == ""){
-        // Mudando as cores e visualização das caixas de texto
-        labelData.style.cssText = 'color: #f58181';
-        campoData.style.cssText = 'color: #f58181; border-bottom: 1px solid #f58181';
-        noData.style.display = "block";
-        // Variável de verificação
-        autenticaData = false;
-    } else {
-        // Mudando as cores e visualização das caixas de texto
-        labelData.style.cssText = 'color: rgb(95, 201, 74)';
-        campoData.style.cssText = 'color: rgb(95, 201, 74); border-bottom: 1px solid rgb(95, 201, 74)';
-        noData.style.display = "none";
-        // Variável de verificação
-        autenticaData = true;
-    }
-
-    // Autenticando a senha
-    if (senha == "") {
-        // Mudando as cores e visualização das caixas de texto
-        campoSenha.style.cssText = 'border-bottom: 1px solid #f58181';
-        document.getElementById('senha_label').style.cssText = 'font-size: 20px; color: #f58181';
-        document.getElementById('senha_label').style.cssText = 'font-size: 20px; color: #f58181';
-        noPass.style.display = "block";
-        aotPass.style.display = "none";
-        // Variável de verificação
-        autenticaSenha = false;
-    } else if (senha.length < 6 || senha.length > 30) {
-        // Mudando as cores e visualização das caixas de texto
-        campoSenha.style.cssText = 'border-bottom: 1px solid #f58181';
-        aotPass.style.display = "block";
-        noPass.style.display = "none";
-        // Variável de verificação
-        autenticaSenha = false;
-    } else {
-        // Mudando as cores e visualização das caixas de texto
-        campoSenha.style.cssText = 'border-bottom: 1px solid rgb(95, 201, 74)';
-        noPass.style.display = "none";
-        aotPass.style.display = "none";
-        // Variável de verificação
-        autenticaSenha = true;
-    } 
-
-    // Autenticando a confirmação da senha
-    if (confSenha == "") {
-        // Mudando as cores e visualização das caixas de texto
-        campoConfSenha.style.cssText = 'border-bottom: 1px solid #f58181';
-        document.getElementById('senha_label_confirma').style.cssText = 'font-size: 20px; color: #f58181';
-        noConfPass.style.display = "block";
-        aotConfPass.style.display = "none";
-        passConfPass.style.display = "none";
-        // Variável de verificação
-        autenticaConfSenha = false;
-    } else if (confSenha.length < 6 || confSenha.length > 30) {
-        // Mudando as cores e visualização das caixas de texto
-        campoConfSenha.style.cssText = 'border-bottom: 1px solid #f58181';
-        aotConfPass.style.display = "block";
-        noConfPass.style.display = "none";
-        passConfPass.style.display = "none";
-        // Variável de verificação  
-        autenticaConfSenha = false;
-    } else {
-        // Mudando as cores e visualização das caixas de texto
-        campoConfSenha.style.cssText = 'border-bottom: 1px solid rgb(95, 201, 74)';
-        noConfPass.style.display = "none";
-        passConfPass.style.display = "none";
-        aotConfPass.style.display = "none";
-        // Variável de verificação
-        autenticaConfSenha = true;
-    }
-
-    // Autenticando a jogabilidade
-    if (marcado == true){
-        labelJogador.style.cssText = "color: #f58181"
-        labelsJogabilidade.forEach(labelJogabilidade => {labelJogabilidade.style.color = '#f58181'});
-        noJogabilidade.style.display = "block";
-        autenticaRadio = false;
-    } else {
-        noJogabilidade.style.display = "none";
-        labelJogador.style.cssText = "color: rgb(95, 201, 74)"
-        labelsJogabilidade.forEach(labelJogabilidade => {labelJogabilidade.style.color = 'rgb(95, 201, 74)'});
-        autenticaRadio = true;
-    }
-
-    // Autenticação final e cadastro dos dados
-    if (autenticaRadio && autenticaConfSenha && autenticaSenha && autenticaData && autenticaEmail && autenticaNome){ // Verificação se todos os campos estão preenchidos
-        if (senha == confSenha){ // Autenticando se a senha e a confirmação de senha são iguais
-            passConfPass.style.display = "none";
-            campoConfSenha.style.cssText = 'border-bottom: 1px solid rgb(95, 201, 74); font-size: 20px';
-            // Arquivo JSON pra cadastrar os dados
-            
-            let stringJson = JSON.stringify({
-                "nome": nome,
-                "email": email,
-                "dataNasc": dataNasc,
-                "senha": senha,
-                "jogabilidade": marcado,
-                "eventos_inscritos": [],
-                "eventos_criados": []
-            });
-
-            // Salvando os dados no local storage
-            localStorage.setItem(email, stringJson)  
-            // Redirecionando pra próxima pág
-            window.location.assign('index.html');
-        } else { // Se o confirmar senha estiver diferente, mudar a cor da caixa
-            passConfPass.style.display = "block";
-            campoConfSenha.style.cssText = 'border-bottom: 1px solid #f58181';
-        }
-    }
+    return marcado;
 }
 
-
+function salvar(email, stringJSON){
+    localStorage.setItem(email, stringJSON);
+}
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //-----------------------------FUNÇÕES PARA MUDAR TAMNHO DAS LABELS ESTETICAMENTE-------------------------------
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 const inputNome = document.querySelector("#nome");
-const labelNome = document.querySelector("#label_nome");
 if(inputNome){
     inputNome.addEventListener("blur", () => {
         if (inputNome.value != ""){
@@ -273,23 +133,20 @@ if(inputNome){
 
 
 const inputEmail = document.querySelector("#email");
-const labelEmail = document.querySelector("#email_label");
-if(inputEmail){
-    inputEmail.addEventListener("blur", () => {
-        if (inputEmail.value != ""){
-            labelEmail.classList.remove("semTexto");
-            labelEmail.classList.add("focado");
-        } else {
-            labelEmail.classList.remove("focado");
-            labelEmail.classList.add("semTexto");
-        }
-    })
-}
+inputEmail.addEventListener("blur", () => {
+    if (inputEmail.value != ""){
+        labelEmail.classList.remove("semTexto");
+        labelEmail.classList.add("focado");
+    } else {
+        labelEmail.classList.remove("focado");
+        labelEmail.classList.add("semTexto");
+    }
+})
+
 
 
 
 const inputSenha = document.querySelector("#senha");
-const labelSenha = document.querySelector("#senha_label");
 if(inputSenha){
     inputSenha.addEventListener("blur", () => {
         if (inputSenha.value != ""){
@@ -305,7 +162,6 @@ if(inputSenha){
 
 
 const inputConf_Senha = document.querySelector("#confirmasenha");
-const labelConf_Senha = document.querySelector("#senha_label_confirma");
 if(inputConf_Senha){
     inputConf_Senha.addEventListener("blur", () => {
         if (inputConf_Senha.value != ""){
@@ -321,9 +177,8 @@ if(inputConf_Senha){
 
 let voltar = document.querySelector(".cssbuttons-io-button");
 if(voltar){
-  // Adicionando o ouvidor do evento para se inscrever
-  voltar.addEventListener("click", () => {
-    window.location.assign('index.html');
-})
+    // Adicionando o ouvidor do evento para se inscrever
+    voltar.addEventListener("click", () => {
+        window.location.assign('index.html');
+    })
 }
-
