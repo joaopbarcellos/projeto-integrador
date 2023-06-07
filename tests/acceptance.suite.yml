@@ -8,7 +8,7 @@ actor: AcceptanceTester
 modules:
     enabled:
 #        - PhpBrowser:
-#            url: http://ifes.edu.br
+#            url: https://jpzb.github.io/projeto-integrador/ProgWeb/Desenvolvimento/home.html
     enabled:
         - WebDriver:
             url: 'https://jpzb.github.io/projeto-integrador/ProgWeb/Desenvolvimento/home.html' 
