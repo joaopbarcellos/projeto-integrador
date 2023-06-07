@@ -19,6 +19,6 @@ class LoginErradoCest
       $I->amOnPage('/projeto-integrador/ProgWeb/Desenvolvimento/index.html');
       $I->fillField('null', 'dadwadwadadwadwa');
       $I->click('Entrar');
-      $I->see('E-mail está fora dos padrões!')
+      $I->see('E-mail está fora dos padrões!');
     }
 }
