@@ -14,7 +14,6 @@ class AbreEvento
     // tests
     public function abrirEvento(AcceptanceTester $I)
     {
-	    $I = new AcceptanceTester($scenario); 
 	    $I->amOnPage('/projeto-integrador/ProgWeb/Desenvolvimento/home.html'); 
 	    $I->click('Saber Mais'); 
 	    $I->seeCurrentURLEquals('/projeto-integrador/ProgWeb/Desenvolvimento/eventos/aulaZico.html');
