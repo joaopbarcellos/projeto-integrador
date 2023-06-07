@@ -11,7 +11,7 @@ modules:
 #            url: http://ifes.edu.br
     enabled:
         - WebDriver:
-            url: 'http://ifes.edu.br' 
+            url: 'https://jpzb.github.io/projeto-integrador/ProgWeb/Desenvolvimento/home.html' 
             browser: 'firefox' # ou 'firefox'
             host: '127.0.0.1'
             port: 4444
