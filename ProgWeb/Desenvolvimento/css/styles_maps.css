@@ -1,5 +1,10 @@
+.cssbuttons-io-button {
+    position: fixed !important;
+    top: 100px;
+    z-index: 1;
+}
 .slot{
-    height: 60px !important;
+    height: 90px !important;
 }
 
 .NavBar_MapTypeButtonDropDownIcon{
@@ -38,11 +43,6 @@
     width: 100% !important;
 }
 
-body{
-    padding: 0;
-    
-}
-
 .row{
     margin: 0 !important;
     padding: 0 !important;
@@ -53,6 +53,12 @@ body{
     margin: 0 !important;
     padding: 0 !important;
 }
+
+body{
+    padding: 0;
+    margin: 0;    
+}
+
 
 html   {
     height: 100%;

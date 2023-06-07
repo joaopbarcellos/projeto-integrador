@@ -79,4 +79,3 @@ function passaTela(email){
 document.querySelector("#entrar_conv").addEventListener("click", () =>{
     window.location.assign('home.html');
 })
-

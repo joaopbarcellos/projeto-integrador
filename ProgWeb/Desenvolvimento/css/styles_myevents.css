@@ -33,5 +33,50 @@ h1{
 .inscricao:hover{
 	cursor: pointer;
 	background-color: #962121;
+}
 
+/* Aplicando margem */
+.search-bar {
+  margin-top: 2%;
+  width: 50%;
+  padding-bottom: 20px;
+}
+
+#lupa{
+  background-color: #057dc2;
+}
+
+#pesquisar{
+  width: 80%;
+  max-width: 600px;
+}
+
+#busca{
+  outline: 0;
+  box-shadow: 0 0 0 0 ;
+}
+
+input {
+  height: 50px;
+  outline: none;
+  padding-left: 50px;
+  width: 100%;
+  background: none;
+  z-index: 3;
+  cursor: pointer;
+  border: none;
+  box-shadow: 1px 0px 3px 2px rgba(78, 78, 78, 0.75);
+  border-radius: 25px;
+  background-color: white;
+}
+
+.msg_erro{
+  display: none;
+  margin-top: 25px;
+  margin-bottom: 10%;
+  text-align: center;
+}
+
+.sembarra{
+  display: none;
 }

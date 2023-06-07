@@ -6,7 +6,7 @@ function send(tag){ // tag: campo de texto do email
   if (email.includes("@") && email.includes(".com")){ 
     // Mensagem de sucesso
     Swal.fire({
-      // Alert informando para o usuário que algo está errado
+      // Alert informando para o usuário que o email foi enviado
       title: 'EMAIL ENVIADO!',
       icon: 'success',
       text: "Em breve você receberá novidades da Time In!",
@@ -164,8 +164,15 @@ export function verificaCampoVazio(campo, label=false, noTexto, noTextoPadrao=fa
       // Retorno da função
       return false;
   }
-    // Mostrando a mensagem de erro;
+    // Escondendo a mensagem de erro;
     noTexto.style.display = "none";
+
+    // Mudando a borda do campo
+    campo.style.cssText = 'border-bottom: 1px solid rgb(95, 201, 74)';
+    if(label){
+      // Alterando a label
+      label.classList.add("certo");
+    }
     // Retorno da função
     return true;
 }
@@ -209,6 +216,7 @@ export function verificaSenhaForaPadrao(campo, label, aotPass){
 
     // Mudando as classes da label de senha
     label.classList.remove("erroPadrao");
+    label.classList.remove("erroVazio");
     label.classList.add("certo");
 
     // Mostrando a mensagem de erro;
@@ -233,4 +241,56 @@ if(caixa_email){
       send(caixa_email)
     }
   })
+}
+
+
+export function barraVazia(lista_conteudo, home=false){
+  if(home){
+    let divSlides = document.querySelector(".carousel-inner");
+    let divDots = document.querySelector(".carousel-indicators");
+    divSlides.style.display = "block";
+    divDots.style.display = "flex";
+  }
+  lista_conteudo.forEach(conteudo => {
+    conteudo.style.display = "block";
+  })
+  naoAchou.style.display = "none"
+}
+
+export function pesquisar(lista_conteudo, barra_pesquisa, home=false){
+  let naoAchou = document.querySelector("#naoAchou");
+  let contAchou = 0;
+
+  if(!barra_pesquisa.value){
+    barraVazia(lista_conteudo, home);
+  } else {
+    if(home){
+      let divSlides = document.querySelector(".carousel-inner");
+      let divDots = document.querySelector(".carousel-indicators");
+      divSlides.style.display = "none";
+      divDots.style.display = "none";
+    }
+    // Percorrendo por todos os eventos
+    lista_conteudo.forEach(conteudo =>{
+      // Pegando o título do evento
+      let titulo = conteudo.children[0].children[0].children[1].children[0].textContent.toUpperCase();
+
+      // Verificando se o texto pesquisado é o mesmo que o título
+      if(titulo.includes(barra_pesquisa.value.toUpperCase())){
+        // Mostrando todos os conteúdos que tiverem o texto pesquisado como título
+        conteudo.style.display = "block";
+        contAchou += 1;
+      }else{
+        // Escondendo todos os conteúdos que não tiverem o texto pesquisado como título
+        conteudo.style.display = "none";
+      }
+
+      if(contAchou > 0){
+        naoAchou.style.display = "none"
+      } else {
+        naoAchou.textContent = `Nenhum resultado para "${barra_pesquisa.value}" encontrado!`
+        naoAchou.style.display = "block"
+      }
+    });
+  }
 }

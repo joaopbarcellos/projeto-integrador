@@ -15,7 +15,6 @@ ul,li,p {
 	list-style: none;
 	font-size: 1.2rem;
 	font-family: Arial !important;
-	user-select: none;
 }
 
 header{
@@ -67,7 +66,6 @@ a{
 	text-decoration: none !important;
 	cursor: pointer;
 	transition: 0.4s ease;
-	user-select: none;
 	font-family: unset !important;
 }
 

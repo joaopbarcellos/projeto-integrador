@@ -130,6 +130,10 @@
     transform: translateX(30px);
     transition-delay: 300ms;
 }
+
+.inscrever{
+    user-select: none;
+}
   
   .inscrever:hover .play {
     transform: translateX(200%);

@@ -19,9 +19,13 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
-    <script src="js/script_cadastro.js" defer></script>
+    <script src="js/script_cadastro.js" type="module" defer></script>
 
     <script src="js/script_base.js" type="module" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+	
+	<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css" rel="stylesheet">
 </head>
 
 <body> 
@@ -53,7 +57,7 @@
 
 
                     <div class="form-floating fs-5">
-                        <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Nome">
+                        <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Nome" name="nomeCampo">
                         <label for="nome" id="label_nome">Nome</label>
                     </div>
 
@@ -72,7 +76,7 @@
                 <div class="email campos">
 
                     <div class="form-floating fs-5">
-                        <input type="email" class="form-control" id="floatingInputGroup2" placeholder="E-mail">
+                        <input type="email" class="form-control" id="floatingInputGroup2" placeholder="E-mail" name="emailCampo">
                         <label for="email" id="email_label">E-mail</label>
                     </div>
 
@@ -93,7 +97,7 @@
                 <div class="idade campos fs-5">
                     <label for="idade" id="labelData">Data de Nascimento:</label>
 
-                    <input type="date" id="idade" name="idade_usuario">
+                    <input type="date" id="idade" name="dataCampo">
 
                     <label class="erro" id="noData">Data deve ser preenchida!</label>
 
@@ -103,7 +107,7 @@
                 <div class="senha campos">
 
                     <div class="form-floating fs-5">
-                        <input type="password" class="form-control" id="floatingInputGroup3" placeholder="Senha">
+                        <input type="password" class="form-control" id="floatingInputGroup3" placeholder="Senha" name="senhaCampo">
                         <label for="senha" id="senha_label">Senha</label>
                     </div>
 
@@ -124,7 +128,7 @@
                 <div class="confir_senha campos fs-5">
                     
                     <div class="form-floating">
-                        <input type="password" class="form-control" id="floatingInputGroup4" placeholder="Confirmação de senha">
+                        <input type="password" class="form-control" id="floatingInputGroup4" placeholder="Confirmação de senha" name="confsenhaCampo">
                         <label for="confirmasenha" id="senha_label_confirma">Confirmação de senha</label>
                     </div>
 

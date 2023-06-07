@@ -37,20 +37,97 @@ const labelSenha = document.querySelector("#senha_label");
 const labelNome = document.querySelector("#label_nome");
 const labelData = document.querySelector("#labelData");
 
+
+function jogabilidadeMarcada(){
+    const radios = document.querySelectorAll(".radio");
+    let marcado = false;
+    
+    radios.forEach(radio => {
+        if (radio.children[0].checked){
+            marcado = radio.children[0].id;
+        }
+    })
+    return marcado;
+}
+
+
+function emailIgual(email){
+    if(JSON.parse(localStorage.getItem(email))){
+        Swal.fire({
+            icon: 'error',
+            title: 'Erro!',
+            text: 'O Email já foi cadastrado!'
+        });
+        return false;
+    }
+    return true;
+}
+
+
+
 function autenticar(){
-    // Valor do nome
-    let nome = campoNome.value;
+    if(verificaTudo()){
+        // Valor do nome
+        let nome = campoNome.value;
 
-    // Valor do email
-    let email = campoEmail.value;
+        // Valor da tipo do jogador
+        let jogabilidade = jogabilidadeMarcada();
 
-    // Valor da data de nascimento
-    let dataNasc = campoData.value;
+        // Valor do email
+        let email = campoEmail.value;
 
-    // Valores de senha e confirmar senha
-    let senha = campoSenha.value;
-    let confSenha = campoConfSenha.value;
+        // Valor da data de nascimento
+        let dataNasc = campoData.value;
 
+        // Valores de senha e confirmar senha
+        let senha = campoSenha.value;
+        let confSenha = campoConfSenha.value;
+
+        if(senhaIgual(senha, confSenha) && emailIgual(email)){
+            let stringJSON = {
+                "email": email,
+                "nome": nome,
+                "dataNasc": dataNasc,
+                "senha": senha,
+                "jogabilidade": jogabilidade,
+                "eventos_inscritos": []
+            }
+            salvar(email, stringJSON)
+            window.location.assign("index.html");
+        }
+    }
+}
+
+function senhaIgual(senha, confsenha){
+    if(senha == confsenha){
+        passConfPass.style.display = "none";
+        return true;
+    }
+    passConfPass.style.display = "block";
+    return false;
+}
+
+
+function verificaJogabilidade(){
+    let marcado = jogabilidadeMarcada();
+
+    if (!marcado){
+        labelJogador.classList.remove("certo")
+        labelsJogabilidade.forEach(labelJogabilidade => {labelJogabilidade.classList.remove("certo")});
+        labelJogador.classList.add("erroVazio");
+        labelsJogabilidade.forEach(labelJogabilidade => {labelJogabilidade.classList.add("erroVazio")});
+        noJogabilidade.style.display = "block";
+        return false;
+    }
+    noJogabilidade.style.display = "none";
+    labelJogador.classList.add("certo")
+    labelsJogabilidade.forEach(labelJogabilidade => {labelJogabilidade.classList.add("certo")});
+    labelJogador.classList.remove("erroVazio");
+    labelsJogabilidade.forEach(labelJogabilidade => {labelJogabilidade.classList.remove("erroVazio")});
+    return true;
+}
+
+function verificaTudo(){
     let verificaNome = base.verificaCampoVazio(campoNome, labelNome, noNome);
     let verificaEmailVazio = base.verificaCampoVazio(campoEmail, labelEmail, noEmail, noEmailPadrao);
     let verificaEmailForaPadrao = false;
@@ -66,119 +143,90 @@ function autenticar(){
     
     let verificaDataVazia = base.verificaCampoVazio(campoData, labelData, noData);
 
-    let verificaConfSenhaForaPadrao
+    let verificaConfSenhaForaPadrao = false;
     let verificaConfSenhaVazia = base.verificaCampoVazio(campoConfSenha, labelConf_Senha, noConfPass, aotConfPass);
     if(verificaConfSenhaVazia){
-        verificaConfSenhaForaPadrao = base.verificaEmailForaPadrao(campoConfSenha, labelConf_Senha, aotConfPass);
+        verificaConfSenhaForaPadrao = base.verificaSenhaForaPadrao(campoConfSenha, labelConf_Senha, aotConfPass);
     }
 
 
     // Verificando a jogabilidade
-    let verificaJogabilidade = verificaJogabilidade();
+    let verJog = verificaJogabilidade();
     
 
-    listaTudo = [verificaConfSenhaForaPadrao, verificaConfSenhaVazia, verificaDataVazia, verificaEmailForaPadrao, verificaEmailVazio, verificaJogabilidade, verificaNome, verificaSenhaForaPadrao, verificaSenhaVazia]
-    if(every(listaTudo)){
-        base.campoCorreto(campoNome, labelNome, noNome)
-    }
-
-}    
-
-function verificaJogabilidade(){
-    let marcado = jogabilidadeMarcada();
-
-    if (!marcado){
-        labelJogador.classList.add("erroVazio");
-        labelsJogabilidade.forEach(labelJogabilidade => {labelJogabilidade.classList.add("errroVazio")});
-        noJogabilidade.style.display = "block";
-        return false;
-    }
-    noJogabilidade.style.display = "none";
-    labelJogador.classList.add("certo")
-    labelsJogabilidade.forEach(labelJogabilidade => {labelJogabilidade.classList.add("certo")});
-    return true;
+    let listaTudo = [verificaConfSenhaForaPadrao, verificaConfSenhaVazia, verificaDataVazia, verificaEmailForaPadrao, verificaEmailVazio, verJog, verificaNome, verificaSenhaForaPadrao, verificaSenhaVazia]
+    return listaTudo.every(element => element);
 }
 
-function jogabilidadeMarcada(){
-    const radios = document.querySelectorAll(".radio");
-    let marcado = true;
-    
-    radios.forEach(radio => {
-        if (radio.children[0].checked){
-            marcado = radio.children[0].id;
-        }
-    })
-    return marcado;
-}
 
 function salvar(email, stringJSON){
-    localStorage.setItem(email, stringJSON);
+    localStorage.setItem(email, JSON.stringify(stringJSON));
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //-----------------------------FUNÇÕES PARA MUDAR TAMNHO DAS LABELS ESTETICAMENTE-------------------------------
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-const inputNome = document.querySelector("#nome");
-if(inputNome){
-    inputNome.addEventListener("blur", () => {
-        if (inputNome.value != ""){
-            labelNome.classList.remove("semTexto");
-            labelNome.classList.add("focado");
-        } else {
-            labelNome.classList.remove("focado");
-            labelNome.classList.add("semTexto");
-        }
-    })
-}
+// const inputNome = document.querySelector("#nome");
+// if(inputNome){
+//     inputNome.addEventListener("blur", () => {
+//         if (inputNome.value != ""){
+//             labelNome.classList.remove("semTexto");
+//             labelNome.classList.add("focado");
+//         } else {
+//             labelNome.classList.remove("focado");
+//             labelNome.classList.add("semTexto");
+//         }
+//     })
+// }
 
 
 
-const inputEmail = document.querySelector("#email");
-inputEmail.addEventListener("blur", () => {
-    if (inputEmail.value != ""){
-        labelEmail.classList.remove("semTexto");
-        labelEmail.classList.add("focado");
-    } else {
-        labelEmail.classList.remove("focado");
-        labelEmail.classList.add("semTexto");
-    }
-})
+// const inputEmail = document.querySelector("#email");
+// inputEmail.addEventListener("blur", () => {
+//     if (inputEmail.value != ""){
+//         labelEmail.classList.remove("semTexto");
+//         labelEmail.classList.add("focado");
+//     } else {
+//         labelEmail.classList.remove("focado");
+//         labelEmail.classList.add("semTexto");
+//     }
+// })
 
 
 
 
-const inputSenha = document.querySelector("#senha");
-if(inputSenha){
-    inputSenha.addEventListener("blur", () => {
-        if (inputSenha.value != ""){
-            labelSenha.classList.remove("semTexto");
-            labelSenha.classList.add("focado");
-        } else {
-            labelSenha.classList.remove("focado");
-            labelSenha.classList.add("semTexto");
-        }
-    })
-}
+// const inputSenha = document.querySelector("#senha");
+// if(inputSenha){
+//     inputSenha.addEventListener("blur", () => {
+//         if (inputSenha.value != ""){
+//             labelSenha.classList.remove("semTexto");
+//             labelSenha.classList.add("focado");
+//         } else {
+//             labelSenha.classList.remove("focado");
+//             labelSenha.classList.add("semTexto");
+//         }
+//     })
+// }
 
 
 
-const inputConf_Senha = document.querySelector("#confirmasenha");
-if(inputConf_Senha){
-    inputConf_Senha.addEventListener("blur", () => {
-        if (inputConf_Senha.value != ""){
-            labelConf_Senha.classList.remove("semTexto");
-            labelConf_Senha.classList.add("focado");
-        } else {
-            labelConf_Senha.classList.remove("focado");
-            labelConf_Senha.classList.add("semTexto");
-        }
-    })
-}
+// const inputConf_Senha = document.querySelector("#confirmasenha");
+// if(inputConf_Senha){
+//     inputConf_Senha.addEventListener("blur", () => {
+//         if (inputConf_Senha.value != ""){
+//             labelConf_Senha.classList.remove("semTexto");
+//             labelConf_Senha.classList.add("focado");
+//         } else {
+//             labelConf_Senha.classList.remove("focado");
+//             labelConf_Senha.classList.add("semTexto");
+//         }
+//     })
+// }
 
 
 let voltar = document.querySelector(".cssbuttons-io-button");
 if(voltar){
     // Adicionando o ouvidor do evento para se inscrever
     voltar.addEventListener("click", () => {
-        window.location.assign('index.html');
+        window.history.back();
     })
 }
