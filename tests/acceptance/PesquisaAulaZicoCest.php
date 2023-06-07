@@ -14,7 +14,6 @@ class PesquisaAulaZico
     // tests
     public function PesquisaAulaZico(AcceptanceTester $I)
     {
-	    $I = new AcceptanceTester($scenario); 
       $I->amOnPage('/projeto-integrador/ProgWeb/Desenvolvimento/home.html'); 
       $I->fillField('null', 'Aula do Zico'); 
       $I->click('🔍'); 
