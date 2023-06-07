@@ -12,7 +12,7 @@ class LoginErradoCest
     }
 
     // tests
-    public function loginErrado(AcceptanceTester $I)
+    public function loginErradoCest(AcceptanceTester $I)
     {
       $I->amOnPage('/projeto-integrador/ProgWeb/Desenvolvimento/index.html');
       $I->fillField('null', 'dadwadwadadwadwa');
