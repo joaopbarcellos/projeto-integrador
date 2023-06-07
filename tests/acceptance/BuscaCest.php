@@ -5,18 +5,18 @@ namespace Tests\Acceptance;
 
 use Tests\Support\AcceptanceTester;
 
-class BuscaCest
+class AbreEvento
 {
     public function _before(AcceptanceTester $I)
     {
     }
 
     // tests
-    public function buscarResultadosNaPaginaTest(AcceptanceTester $I)
+    public function abrirEvento(AcceptanceTester $I)
     {
-		$I->amOnPage('/');
-		$I->fillField('searchword', 'edital');
-		$I->click('Buscar');
-		$I->see('resultados encontdos');
+	    $I = new AcceptanceTester($scenario); 
+	    $I->amOnPage('/projeto-integrador/ProgWeb/Desenvolvimento/home.html'); 
+	    $I->click('Saber Mais'); 
+	    $I->seeCurrentURLEquals('/projeto-integrador/ProgWeb/Desenvolvimento/eventos/aulaZico.html');
     }
 }
