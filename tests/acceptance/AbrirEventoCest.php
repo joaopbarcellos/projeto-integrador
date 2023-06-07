@@ -16,6 +16,6 @@ class AbreEventoCest
     {
 	    $I->amOnPage('/projeto-integrador/ProgWeb/Desenvolvimento/home.html'); 
 	    $I->click('Saber Mais'); 
-	    $I->seeCurrentURLEquals('/projeto-integrador/ProgWeb/Desenvolvimento/eventos/aulaZico.html');
+	    $I->seeCurrentURLEquals('/projeto-integrador/ProgWeb/Desenvolvimento/eventos/surfItaparica.html');
     }
 }
