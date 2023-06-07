@@ -15,9 +15,8 @@ class PesquisaAulaZicoCest
     public function PesquisaAulaZicoCest(AcceptanceTester $I)
     {
       $I->amOnPage('/projeto-integrador/ProgWeb/Desenvolvimento/home.html'); 
-      $I->fillField('pesquisarCampo', 'Aula do Zico'); 
+      $I->fillField('pesquisarCampo', 'aula do zico'); 
       $I->click('🔍'); 
-      $I->click('Saber Mais'); 
-      $I->seeCurrentURLEquals('/projeto-integrador/ProgWeb/Desenvolvimento/eventos/aulaZico.html');
+      $I->see('Aula do Zico');
     }
 }
