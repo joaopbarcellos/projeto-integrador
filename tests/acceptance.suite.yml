@@ -11,7 +11,7 @@ modules:
 #            url: https://jpzb.github.io/projeto-integrador/ProgWeb/Desenvolvimento/home.html
     enabled:
         - WebDriver:
-            url: 'https://jpzb.github.io/projeto-integrador/ProgWeb/Desenvolvimento/home.html' 
+            url: 'https://jpzb.github.io/' 
             browser: 'firefox' # ou 'firefox'
             host: '127.0.0.1'
             port: 4444
