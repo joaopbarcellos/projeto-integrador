@@ -5,7 +5,7 @@ namespace Tests\Acceptance;
 
 use Tests\Support\AcceptanceTester;
 
-class AbreEvento
+class AbreEventoCest
 {
     public function _before(AcceptanceTester $I)
     {
