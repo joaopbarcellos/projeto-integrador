@@ -12,7 +12,7 @@ class AbreEvento
     }
 
     // tests
-    public function abrirEvento(AcceptanceTester $I)
+    public function abrirEventoTest(AcceptanceTester $I)
     {
 	    $I->amOnPage('/projeto-integrador/ProgWeb/Desenvolvimento/home.html'); 
 	    $I->click('Saber Mais'); 
