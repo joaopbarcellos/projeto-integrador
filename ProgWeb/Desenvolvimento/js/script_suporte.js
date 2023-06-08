@@ -67,7 +67,6 @@ function verifica(email){
         return false;
     }
     return true;
-
 }
 
 let voltar = document.querySelector(".cssbuttons-io-button");

@@ -294,3 +294,27 @@ export function pesquisar(lista_conteudo, barra_pesquisa, home=false){
     });
   }
 }
+
+const sair = document.querySelector("#logout");
+
+if(sair){
+  sair.addEventListener("click", () => {
+    window.location.assign('index.html');
+    sessionStorage.clear();
+  })
+}
+
+
+let criaevento = document.querySelector("#criaa");
+if(criaevento){
+    criaevento.addEventListener("click", () => {
+        Swal.fire({
+            // Alert avisando ao usuário que o email não está cadastrado no banco
+            title: 'Página em desenvolvimento',
+            icon: 'info',
+            text: 'Em breve será desponibilizada',
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'OK'
+        })
+    })
+}

@@ -1,10 +1,10 @@
 // Capturando o campo de email
-const campoEmail = document.querySelector("#email_usuario_confirma");
+const campoEmail = document.querySelector("#floatingInputGroup5");
 const labelEmail = document.querySelector("#label_email_confirma");
 
 // Capturando as labels de erro
-const noEmail = document.querySelector("#noEmail");
-const noEmailPadrao = document.querySelector("#noEmailPadrao"); 
+//const noEmail = document.querySelector("#noEmail");
+//const noEmailPadrao = document.querySelector("#noEmailPadrao"); 
 
 
 // Capturando o botão de enviar
@@ -23,19 +23,19 @@ btn.addEventListener("click", () => {
     // Verificando se o email está de acordo com os padrões
     if(!email){
         // Mostrando e escondendo as mensagens de erro
-        noEmail.style.display = "block";
-        noEmailPadrao.style.display = "none";
+        //noEmail.style.display = "block";
+        //noEmailPadrao.style.display = "none";
     } else if(!email.includes("@") || !email.includes(".com")){
         // Mostrando e escondendo as mensages de erro
-        noEmail.style.display = "none";
-        noEmailPadrao.style.display = "block";
+       // noEmail.style.display = "none";
+       // noEmailPadrao.style.display = "block";
     } else {
         // Mudando a cor da borda
         campoEmail.style.cssText = 'border-bottom: 1px solid rgb(95, 201, 74)';
         labelEmail.style.cssText = 'transform:TranslateY(-35); color: rgb(95, 201, 74)';
         // Escondendo as mensagens de erro
-        noEmail.style.display = "none";
-        noEmailPadrao.style.display = "none";
+       // noEmail.style.display = "none";
+       // noEmailPadrao.style.display = "none";
         // Dando o alert e chamando a função para verificar o email escrito
 
         if(!dados){
