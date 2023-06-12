@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+
+/* Aplicando fonte */
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+
+#sobrea{
+    color: #4267b3 !important;
+	text-shadow: none;
+}
+
+.iconesobre{
+    fill: #4267b3;
+}
+
+
+/* Definindo espaçamentos e flexbox */
+#sobre{
+    padding-left: 5%;
+    padding-right: 5%;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: justify;
+}
+
+/* Aplicando flexbox e espaçamento */
+.h2_equipe{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3%;
+}
+
+/* Aplicando espaçamento, cor, margem, flexbox, borda e sombra */
+.pessoas{
+    background-color: rgb(69, 182, 211);
+    border-radius: 20px;
+    display: flex;
+    height: auto;
+    margin-right: 1%;
+    margin-left: 1%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 20px;
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+}
+
+.participante{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Definindo fonte */
+.pessoas h3{
+    font-size: 1.3rem;
+    text-align: center;
+    word-break: break-all;
+}
+
+.row{
+    align-items: center;
+}
+
+/* Definindo tamanho e margem */
+.foto{
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 85%;
+}
+
+/* Aplicando flexbox e margem */
+.span_integrantes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 2.5%;
+}
+
+/* Definindo margem e tamanho */
+.iconeSobre {
+    margin-bottom: 0;
+    width: 20px;
+    object-fit: contain;
+}
+#textos{
+    color: black !important;
+    padding: 0 !important;
+}
+
+#c{
+    cursor: pointer;
+}
+
+#img_easter{
+    position: absolute;
+    top: 0;
+    display: none;
+    width: 50%;
+    top: 970px;
+    left: 50%;
+    transition: 2s ease;
+}
+
+#c:hover #img_easter{
+    display: block;
+}
+
+

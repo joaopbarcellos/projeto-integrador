@@ -1,0 +1,120 @@
+#ajudaa{
+    color: #4267b3 !important;
+    text-shadow: none;
+    background-color: #fff;
+  }
+
+.iconeajuda{
+    fill: #4267b3;
+}
+
+#voltar{
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 5px;
+    transition: 0.4s ease;
+}
+
+#voltar:hover{
+    background-color: #057dc2;
+}
+
+#voltar p{
+    color: #000000;
+}
+
+#voltar img{
+    height: 10px;
+    padding-right: 5px;
+}
+
+#container{
+    background:  #057dc2;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 41px 3px rgba(0,0,0,0.75);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container h1, p{
+    color: #fff;
+}
+
+/* Aplicando flexbox e espaçamento */
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+    font-weight: bold;      
+}
+
+.erro{
+    display: none;
+    color: red;
+}
+
+
+
+
+.campos{
+    width: 95%;
+}
+
+
+
+/* Aplicando flexbox, margem e tamanho da fonte */
+#form{
+    background:  transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+}
+
+/* Definindo tamanho, margem, borda, cor e tamanho da fonte */
+#envio{
+    height: 45px;
+    border-radius: 5px;
+    background-color: #145374;
+    color: #fff;
+    border: 1px solid black;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+#envio:hover{
+    cursor: pointer;
+    background-color: #043f5c;
+}
+
+.erro{
+    color: #f58181;
+}
+
+
+#floatingTextarea1{
+    min-height: 150px;
+    max-height: 400px;
+}
+
+
+#floatingInputGrid{
+    margin-bottom: 5px;
+}
+
+
+#floatingInputGrid, #floatingTextarea1{
+    outline: 0;
+    border: 1px solid;
+    box-shadow: 0 0 0 0;
+}
+
+
