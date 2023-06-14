@@ -270,6 +270,7 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
  ### 13. Gráficos, relatórios, integração com Linguagem de programação e outras solicitações.<br>
  
  #### 13.1	Integração com Linguagem de programação; <br>
+[Link do Colab](https://colab.research.google.com/drive/1iv5W944-AzT-XDMBuxNEIg5ORYGoJS9p#scrollTo=xzWL96WkHkhZ)
  #### 13.2	Desenvolvimento de gráficos/relatórios pertinentes, juntamente com demais solicitações feitas pelo professor. <br>
 [Link do Colab](https://colab.research.google.com/drive/1iv5W944-AzT-XDMBuxNEIg5ORYGoJS9p#scrollTo=xzWL96WkHkhZ)
 
