@@ -7,7 +7,15 @@ const noMsg = document.querySelector("#noMsg");
 
 const campoEmail = document.querySelector("#floatingInputGrid");
 
-btn.addEventListener("click", () => {
+document.querySelectorAll("input").forEach(input => {
+    input.addEventListener("keypress", (event) => {
+        if(event.key == "Enter"){
+            suporte();
+        }
+    })
+})
+
+function suporte(){
     let verificaEmail = base.verificaCampoVazio(campoEmail, false, noEmail, noEmailPadrao);
     let verificaMsg = base.verificaCampoVazio(document.querySelector("#floatingTextarea1"), false, noMsg, false);
 
@@ -27,4 +35,6 @@ btn.addEventListener("click", () => {
             })
         }
     }
-});
+}
+
+btn.addEventListener("click", suporte)
