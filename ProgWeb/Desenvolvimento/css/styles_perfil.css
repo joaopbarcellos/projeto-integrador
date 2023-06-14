@@ -91,17 +91,38 @@
     position: relative;
 }
 
-#editar{
+#editar, #excluir{
     padding: 10px;
     border: 1px solid black;
     border-radius: 5px;
-    background-color: #057dc2;
     color: white;
     transition: 0.4s ease;
     user-select: none;
 }
 
+#editar{
+    width: 180px;
+    background-color: #057dc2;
+    margin-bottom: 10px;
+}
+
+#botoes{
+    display: flex;
+    flex-direction: column;
+}
+
+#excluir{
+    background-color: #c20505;
+    width: 130px;
+}
+
+#excluir:hover{
+    cursor: pointer;
+    background-color: #740707;
+}
+
 #editar:hover{
     cursor: pointer;
+    
     background-color: #284174;
 }

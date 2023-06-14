@@ -1,6 +1,11 @@
 // Importando a função de autenticação de campos
 import * as base from "./script_base.js";
 
+document.querySelector("#alterarSenha").addEventListener("click", () => {
+    window.location.assign("alterarSenha.html");
+})
+
+
 // Pegando os dados do usuário logado
 var emailLogado = sessionStorage.getItem("logado");
 const dadosUsuario = JSON.parse(localStorage.getItem(emailLogado));  
@@ -70,8 +75,15 @@ function verificaTudo(){
 // Pegando o botão de editar
 const btnEditar = document.querySelector("#alterar");
 
-btnEditar.addEventListener("click", () => {
+btnEditar.addEventListener("click", autenticar);
+
+function autenticar(){
     if(verificaTudo()){
+        let dataNasc = campoDataNasc.value;
+        if(base.verficiaSeEleNasceuNaDataCorreta(dataNasc)){
+            base.dataErrada(campoDataNasc, labelData);
+            return;
+        }
         Swal.fire({
             icon: 'question',
             text: 'Deseja editar suas informações?',
@@ -84,7 +96,7 @@ btnEditar.addEventListener("click", () => {
             if(result.isConfirmed){
                 // Alterando os dados no localStorage
                 dadosUsuario.nome = campoNome.value;
-                dadosUsuario.dataNasc = campoDataNasc.value;
+                dadosUsuario.dataNasc = dataNasc;
                 dadosUsuario.jogabilidade = base.jogabilidadeMarcada();
                 dadosUsuario.email = campoEmail.value;
                 // Colocando tudo no dicionário/mapa de dadosUsuario
@@ -111,7 +123,7 @@ btnEditar.addEventListener("click", () => {
             }
         })
     }
-});
+}
 
 let voltar = document.querySelector(".cssbuttons-io-button");
 if(voltar){

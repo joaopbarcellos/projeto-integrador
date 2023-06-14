@@ -7,6 +7,7 @@
 
 img{
 	vertical-align: unset !important;
+	user-select: none;
 }
 
 /* Aplicando margem, fonte e tirando style das listas */
@@ -51,6 +52,28 @@ header{
 	outline: 0;
 	box-shadow: 0 0 0 0;
 }
+
+
+/* Aplicando margem */
+.search-bar {
+	margin-top: 2% ;
+	width: 50% ;
+	padding-bottom: 20px ;
+  }
+  
+  #lupa{
+	background-color: #057dc2;
+  }
+  
+  #pesquisar{
+	width: 100% !important;
+	max-width: 700px;
+  }
+  
+  #busca{
+	outline: 0;
+	box-shadow: 0 0 0 0 ;
+  }
 
 .icones{
 	width: 20px;
@@ -266,6 +289,7 @@ footer p{
 	padding: 0.8rem;
 	font-weight: 100;
 	font-family: unset !important;
+	user-select: none;
 }
 
 /* Aplicando flexbox */
@@ -570,10 +594,41 @@ input[type="date"]{
 	fill: #4267b3;
 }
 
-.dropdown:hover .iconeconfig{
+.dropdown-toggle:hover .iconeconfig{
 	fill: #4267b3;
 }
 
 .iconeloc, .iconedata{
 	fill: #145374;
+}
+
+.olho {
+    cursor: pointer;
+	position: absolute !important;
+    left: unset;
+    right: 0;
+    top: 25px;
+    width: 1.8rem;    
+}
+
+.iconeeditar{
+	fill: white;
+	margin-top: 1px;
+	margin-bottom: 5px;
+	
+}
+
+.iconesuporte{
+	fill: #145374;
+	height: 30px;
+	margin: 10px;
+}
+
+.iconeexcluir{
+	fill: white;
+	margin-bottom: 5px;
+}
+
+.iconelocev, .iconedataev{
+	fill: #000000;
 }

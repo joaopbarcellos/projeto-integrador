@@ -39,3 +39,10 @@ barra_pesquisa.addEventListener("keypress", (event) => {
 lupa.addEventListener("click", () =>{
   base.pesquisar(lista_conteudo, barra_pesquisa, true)
 })
+
+barra_pesquisa.addEventListener("input", () =>{
+  if(!barra_pesquisa.value){
+    base.barraVazia(lista_conteudo, true)
+  }
+})
+

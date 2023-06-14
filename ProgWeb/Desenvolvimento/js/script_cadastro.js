@@ -29,6 +29,11 @@ const campoData = document.querySelector("#idade");
 const campoSenha = document.querySelector("#floatingInputGroup3");
 const campoConfSenha = document.querySelector("#floatingInputGroup4");
 
+campoConfSenha.addEventListener("keypress", (event) => {
+    if(event.key == "Enter"){
+        autenticar();
+    }
+})
 // Labels
 const labelEmail = document.querySelector("#email_label")
 const labelJogador = document.querySelector(".label_joga")
@@ -56,9 +61,6 @@ function emailIgual(email){
 }
 
 
-
-
-
 function autenticar(){
     if(verificaTudo()){
         // Valor da data de nascimento
@@ -81,7 +83,7 @@ function autenticar(){
         let senha = campoSenha.value;
         let confSenha = campoConfSenha.value;
 
-        if(senhaIgual(senha, confSenha) && emailIgual(email)){
+        if(base.senhaIgual(senha, confSenha) && emailIgual(email)){
             let stringJSON = {
                 "email": email,
                 "nome": nome,
@@ -95,16 +97,6 @@ function autenticar(){
         }
     }
 }
-
-function senhaIgual(senha, confsenha){
-    if(senha == confsenha){
-        passConfPass.style.display = "none";
-        return true;
-    }
-    passConfPass.style.display = "block";
-    return false;
-}
-
 
 function verificaTudo(){
     let verificaNome = base.verificaCampoVazio(campoNome, labelNome, noNome);
@@ -153,11 +145,11 @@ olho1.addEventListener('click', function() {
     let input = document.querySelector('#floatingInputGroup3')
     if(input.type == 'text'){
         input.type = 'password';
-        olho1.src = './img/olho_aberto.jpg';
+        olho1.src = './img/olho_aberto.png';
         
     } else if (input.type == 'password'){
         input.type = 'text';
-        olho1.src = './img/olho_fechado.jpg';
+        olho1.src = './img/olho_fechado.png';
     }
 });
 
@@ -168,10 +160,10 @@ olho2.addEventListener('click', function() {
     let input = document.querySelector('#floatingInputGroup4');
     if(input.type == 'text'){
         input.type = 'password';
-        olho2.src = './img/olho_aberto.jpg';
+        olho2.src = './img/olho_aberto.png';
         
     } else if (input.type == 'password'){
         input.type = 'text';
-        olho2.src = './img/olho_fechado.jpg';
+        olho2.src = './img/olho_fechado.png';
     }
 });

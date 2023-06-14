@@ -64,12 +64,6 @@ ul {
 
 #suporte{
   background-color: #057dc2;
-  width: 65px;
   border-radius: 100%;
-}
-
-#balao{
-  padding: 0.4rem;
-  width: 45px;
-  margin: 10px;
+  width: 50px;
 }

@@ -166,12 +166,3 @@ input[type="date"]{
 #noEmailPadrao{
     margin-bottom:9%;
 }
-
-
-.olho {
-    cursor: pointer;
-    position: absolute;
-    left: 93%;
-    top: 40%;
-    width: 2.8rem;    
-}

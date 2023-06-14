@@ -9,11 +9,11 @@
 #homea{
     color: #4267b3 !important;
     text-shadow: none;
-  }
-  
-  .iconecasinha{
-      fill: #4267b3;
-  }
+}
+
+.iconecasinha{
+    fill: #4267b3;
+}
 
 
 
@@ -123,7 +123,7 @@
 .inscrever:hover img {
     transform: scale(3) translate(140%);
 }
-  
+
 .now {
     position: absolute;
     left: 0;
@@ -131,7 +131,7 @@
     transition: all .5s ease;
     z-index: 2;
 }
-  
+
 .inscrever:hover .now {
     transform: translateX(30px);
     transition-delay: 300ms;
@@ -140,8 +140,8 @@
 .inscrever{
     user-select: none;
 }
-  
-  .inscrever:hover .play {
+
+.inscrever:hover .play {
     transform: translateX(200%);
     transition-delay: 300ms;
 }

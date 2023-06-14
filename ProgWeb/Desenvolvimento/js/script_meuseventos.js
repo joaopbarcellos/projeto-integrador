@@ -34,10 +34,8 @@ cancel.forEach(btn =>{
           confirmButtonColor: '#3085d6',
           confirmButtonText: 'Login'
       }).then((result) => {
-          if(result.isConfirmed){
-              // Enviando o usuário para a tela de login
-              window.location.assign("index.html");
-          }
+        // Enviando o usuário para a tela de login
+        window.location.assign("index.html");
       })
   }
 
@@ -50,9 +48,24 @@ function meusEventos(){
       meus_eventos.push(evento);
       document.querySelector("#semevento").style.display = "none";
     }
+    if(meus_eventos.length == 0){
+      lupa.classList.add("sembarra");
+      barra_pesquisa.classList.add("sembarra");
+      barra_pesquisa.classList.remove("form-control");
+      barra_pesquisa.classList.remove("me-2");
+      lupa.classList.remove("btn");
+    }else{
+      barra_pesquisa.classList.add("form-control");
+      barra_pesquisa.classList.add("me-2");
+      barra_pesquisa.classList.remove("sembarra");
+      lupa.classList.remove("sembarra");
+      lupa.classList.add("btn");
+    }
 })}
 
 meusEventos()
+
+
 
 function cancelarInscricao(id){
   Swal.fire({
@@ -111,5 +124,11 @@ barra_pesquisa.addEventListener("keypress", (event) => {
 barra_pesquisa.addEventListener("search", () =>{
   if(!barra_pesquisa.value){
     base.barraVazia(meus_eventos)
+  }
+})
+
+barra_pesquisa.addEventListener("input", () =>{
+  if(!barra_pesquisa.value){
+    base.barraVazia(meus_eventos, false)
   }
 })

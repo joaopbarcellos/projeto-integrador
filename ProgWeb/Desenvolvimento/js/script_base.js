@@ -21,7 +21,7 @@ function send(tag){ // tag: campo de texto do email
       icon: 'error',
       text: "Email inválido!",
       confirmButtonColor: '#3085d6',
-      confirmButtonText: 'Confirmar',
+      confirmButtonText: 'Login',
   }) 
   }
 
@@ -222,6 +222,14 @@ export function verificaEmailForaPadrao(campo, noEmail, noEmailPadrao, noEmailEx
   return true;
 }
 
+export function senhaIgual(senha, confsenha){
+  if(senha == confsenha){
+      passConfPass.style.display = "none";
+      return true;
+  }
+  passConfPass.style.display = "block";
+  return false;
+}
 
 // Função para autenticar se a senha está dentro dos padrões
 export function verificaSenhaForaPadrao(campo, label, aotPass){
@@ -272,8 +280,8 @@ if(caixa_email){
   })
 }
 
-
 export function barraVazia(lista_conteudo, home=false){
+
   if(home){
     let divSlides = document.querySelector(".carousel-inner");
     let divDots = document.querySelector(".carousel-indicators");
@@ -328,7 +336,11 @@ const sair = document.querySelector("#logout");
 
 if(sair){
   sair.addEventListener("click", () => {
-    window.location.assign('../index.html');
+    if(window.location.pathname.includes("eventos")){
+      window.location.assign('../index.html');
+    }else{
+      window.location.assign('./index.html');
+    }
     sessionStorage.clear();
   })
 }

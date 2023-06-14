@@ -8,6 +8,14 @@ document.querySelector("#btnEnviar").addEventListener("click", autenticar);
 const campoEmail = document.querySelector("#floatingInputGroup1");
 const campoSenha = document.querySelector("#floatingInputGroup2");
 
+document.querySelectorAll("input").forEach(input => {
+    input.addEventListener("keypress", (event) => {
+        if(event.key == "Enter"){
+            autenticar();
+        }
+    })
+})
+
 
 // Capturando as labels com mensagem de erro
 const noEmail = document.querySelector("#noEmail");
@@ -18,7 +26,6 @@ const aotPass = document.querySelector("#aotPass");
 // Capturando a label de email e senha
 const labelEmail = document.querySelector("#label_email");  
 const labelSenha = document.querySelector("#label_senha");
-
 
 function autenticar(){
 
@@ -100,10 +107,10 @@ olho.addEventListener('click', function() {
     let input = document.querySelector('#floatingInputGroup2');
     if(input.type == 'text'){
         input.type = 'password';
-        olho.src = './img/olho_aberto.jpg';
+        olho.src = './img/olho_aberto.png';
         
     } else if (input.type == 'password'){
         input.type = 'text';
-        olho.src = './img/olho_fechado.jpg';
+        olho.src = './img/olho_fechado.png';
     }
 });

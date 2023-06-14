@@ -39,29 +39,6 @@ h1{
 	background-color: #962121;
 }
 
-/* Aplicando margem */
-.search-bar {
-  margin-top: 2%;
-  width: 50%;
-  padding-bottom: 20px;
-}
-
-#lupa{
-  background-color: #057dc2;
-}
-
-#pesquisar{
-  width: 30%;
-  max-width: 600px;
-  margin-left: 2%;
-  margin-right: 2%;
-}
-
-#busca{
-  outline: 0;
-  box-shadow: 0 0 0 0 ;
-}
-
 /* Aplicando tamanho, posição, cor, sombra, borda, posicionamento, cursor e tirando coportamento da borda*/
 input {
   height: 50px;

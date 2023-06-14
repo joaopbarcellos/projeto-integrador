@@ -72,8 +72,7 @@ h1{
 }
 
 /* Aplicando margen,cor, borda e fonte no botão */
-#alterar{
-    margin-top: 25px;
+#alterar, #alterarSenha{
     margin-bottom: 1%;
     padding: 11px;
     cursor: pointer;
@@ -85,7 +84,12 @@ h1{
     user-select: none;
 }
 
-#alterar:hover{
+#alterarSenha{
+    margin-top: 2rem;
+}
+
+
+#alterar:hover, #alterarSenha:hover{
     cursor: pointer;
 	background-color: #284174;
 }
@@ -131,3 +135,5 @@ h1{
 #floatingInputGroup1, #floatingInputGroup2:hover{
     border-bottom: 1px solid #000000;
 }
+
+
