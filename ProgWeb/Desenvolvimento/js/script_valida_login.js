@@ -1,7 +1,7 @@
-// Importando a função de autenticação de campos
+// Importando a funcao de autenticacao de campos
 import * as base from "./script_base.js";
 
-// Capturando o botão da tela e adicionando um ouvidor de clique
+// Capturando o botao da tela e adicionando um ouvidor de clique
 document.querySelector("#btnEnviar").addEventListener("click", autenticar);
 
 // Capturando os campos de texto
@@ -29,31 +29,28 @@ const labelSenha = document.querySelector("#label_senha");
 
 function autenticar(){
 
-    // Verificando se o email está vazio
+    // Verificando se o email esta vazio
     let verificaEmail = base.verificaCampoVazio(campoEmail, labelEmail, noEmail, noEmailCadastrado);
 
     if(verificaEmail){
-        // Verifica o padrão do email
+        // Verifica o padrao do email
         verificaEmail = base.verificaEmailForaPadrao(campoEmail, noEmail, noEmail, noEmailCadastrado);
     }
     
-    // Verifica se o campo de senha está vazio
+    // Verifica se o campo de senha esta vazio
     let verificaSenhaVazia = base.verificaCampoVazio(campoSenha, labelSenha, noPass, aotPass);
 
-    // Verificando se estão todos os campos certos
+    // Verificando se estao todos os campos certos
     if(verificaEmail && verificaSenhaVazia){    
-        // Arrumando a estética com a função
-        //base.campoCorreto(campoEmail, labelEmail, noEmail, noEmailCadastrado);
-        //base.campoCorreto(campoSenha, labelSenha, noPass, aotPass);
-        
-        // Se o usuário tiver a conta criada
+
+        // Se o usuario tiver a conta criada
         if(verificaLogin(campoEmail.value.toLowerCase(), campoSenha.value) == "certo"){
             // Passa a tela para home com a conta logada
             passaTela(campoEmail.value.toLowerCase());
         
         } else {
             Swal.fire({
-                // Alert informando para o usuário que algo está errado
+                // Alert informando para o usuario que algo esta errado
                 title: 'ERRO!',
                 icon: 'error',
                 text: verificaLogin(campoEmail.value.toLowerCase(), campoSenha.value),
@@ -64,19 +61,19 @@ function autenticar(){
     }
 }
 
-// Função para verificar se o login está salvo no localStorage
-export function verificaLogin(email, senha){
-    // Pegando as informações do localStorage onde o email deveria estar cadastrado
+// Funcao para verificar se o login esta salvo no localStorage
+function verificaLogin(email, senha){
+    // Pegando as informacoes do localStorage onde o email deveria estar cadastrado
     const dadosSalvos = localStorage.getItem(email);
     // Transformando para objeto
     const dados = JSON.parse(dadosSalvos);
-    // Verificando se o email está cadastrado
+    // Verificando se o email esta cadastrado
     if (!dadosSalvos){
         noEmailCadastrado.style.display = "block"
         campoEmail.style.cssText = "border-bottom: 1px solid #f58181";
         return "Esse email não está cadastrado!";
     } else {
-        // Vericando se a senha é a mesma
+        // Vericando se a senha e a mesma
         if (dados.senha == senha){
             return "certo"
         } else {
@@ -87,11 +84,11 @@ export function verificaLogin(email, senha){
     }
 }
 
-// Funcao para levar para tela de home e setar o usuário logado no sessionStorage
+// Funcao para levar para tela de home e setar o usuario logado no sessionStorage
 function passaTela(email){
-    // Salvando o email na chave logado no session storage para saber qual usuário está logado
+    // Salvando o email na chave logado no sessionStorage para saber qual usuario está logado
     sessionStorage.setItem("logado", email);
-    // levando para a tela de home
+    // Levando para a tela de home
     window.location.assign('home.html');
 }
 

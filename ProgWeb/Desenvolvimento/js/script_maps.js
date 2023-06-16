@@ -5,7 +5,7 @@ function nomeEvento(){
 
 const mapa = document.getElementById("mapa");
 
-/*funcao que calcula o tamanho do mapa com base no tamanho da tela*/
+// Funcao que calcula o tamanho do mapa com base no tamanho da tela
 function calculaTamanhoMapa(mapa){
     const posicaoYMapa = mapa.offsetTop;
     var alturaPagina = window.innerHeight;

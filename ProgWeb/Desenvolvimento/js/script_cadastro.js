@@ -1,7 +1,7 @@
-// Importando a função de autenticação de campos
+// Importando a funcao de autenticacao de campos
 import * as base from "./script_base.js";
 
-// Ouvidor de cliques no botão de cadastro
+// Ouvidor de cliques no botao de cadastro
 document.querySelector("#cadastro").addEventListener("click", autenticar);
 
 // Labels de erro
@@ -15,6 +15,7 @@ const aotPass = document.querySelector("#aotPass");
 const aotConfPass = document.querySelector("#aotConfPass");
 const noEmailPadrao = document.querySelector("#noEmailPadrao");
 const noEmailExiste = document.querySelector("#noEmailExiste")
+const passouData = document.querySelector("#passouData");
 
 // Campo de nome
 const campoNome = document.querySelector("#floatingInputGroup1");
@@ -29,11 +30,15 @@ const campoData = document.querySelector("#idade");
 const campoSenha = document.querySelector("#floatingInputGroup3");
 const campoConfSenha = document.querySelector("#floatingInputGroup4");
 
-campoConfSenha.addEventListener("keypress", (event) => {
-    if(event.key == "Enter"){
-        autenticar();
-    }
-})
+document.querySelectorAll("input").forEach(input => {
+    input.addEventListener("keypress", (event) => {
+        if(event.key == "Enter"){
+            // Chamando a funcao quando o usuario apertar enter em qualquer campo
+            autenticar();
+        }
+    })
+});
+
 // Labels
 const labelEmail = document.querySelector("#email_label")
 const labelJogador = document.querySelector(".label_joga")
@@ -44,41 +49,13 @@ const labelNome = document.querySelector("#label_nome");
 const labelData = document.querySelector("#labelData");
 
 
-function emailIgual(email){
-    // Função para verificar se o email já foi cadastrado
-    if(JSON.parse(localStorage.getItem(email))){
-        // Mostrando uma mensagem de erro para o usuário
-        Swal.fire({
-            icon: 'error',
-            title: 'Erro!',
-            text: 'O Email já foi cadastrado!'
-        });
-        // Mudando a cor do campo de texto
-        campoEmail.style.cssText = 'border-bottom: 1px solid #f58181'
-        // Mostrando a label de email já cadastrado
-        noEmailExiste.style.display = 'block'
-        return false;
-    }
-    // Mudando a cor do campo de texto
-    campoEmail.style.cssText = 'border-bottom: 1px solid rgb(95, 201, 74)'
-    // Retirando a label de email já cadastradp
-    noEmailExiste.style.display = 'none'
-    return true;
-}
-
-
 function autenticar(){
-    // Função para autenticar todos os campos
+    // Funcao para autenticar todos os campos
 
-    // Verificando se todos os campos são válidos
+    // Verificando se todos os campos sao validos
     if(verificaTudo()){
         // Valor da data de nascimento
         let dataNasc = campoData.value; 
-        // Verificando se a data informada for válida (< do que o dia atual)
-        if(base.verficiaSeEleNasceuNaDataCorreta(dataNasc)){
-            base.dataErrada(campoData, labelData);
-            return;
-        }
 
         // Valor do nome
         let nome = campoNome.value;
@@ -92,60 +69,68 @@ function autenticar(){
         // Valores de senha 
         let senha = campoSenha.value;
 
-        // Verificando se o email já foi cadastrado
-        if(emailIgual(email)){
-            let stringJSON = {
-                "email": email,
-                "nome": nome,
-                "dataNasc": dataNasc,
-                "senha": senha,
-                "jogabilidade": jogabilidade,
-                "eventos_inscritos": []
-            }
-            // Salvando os dados no localStorage
-            salvar(email, stringJSON)
-            window.location.assign("index.html");
+        // Verificando se o email ja foi cadastrado
+        
+        let stringJSON = {
+            "email": email,
+            "nome": nome,
+            "dataNasc": dataNasc,
+            "senha": senha,
+            "jogabilidade": jogabilidade,
+            "eventos_inscritos": []
         }
+        // Salvando os dados no localStorage
+        salvar(email, stringJSON)
+        window.location.assign("index.html");
     }
 }
 
 function verificaTudo(){
-    // Verificando se o campo de nome é vazio
+    // Verificando se o campo de nome e vazio
     let verificaNome = base.verificaCampoVazio(campoNome, labelNome, noNome);
 
-    // Verificando se o campo de email é vazio
+    // Verificando se o campo de email e vazio
     let verificaEmail = base.verificaCampoVazio(campoEmail, labelEmail, noEmail, noEmailPadrao, noEmailExiste);
     if(verificaEmail){
-        // Verificando se o campo de email está fora dos padrões
+        // Verificando se o campo de email esta fora dos padroes
         verificaEmail = base.verificaEmailForaPadrao(campoEmail, noEmail, noEmailPadrao, noEmailExiste);
     } 
 
-    // Verificando se o campo de senha é vazio
+    if(verificaEmail){
+        // Verificando se o email ja foi cadastrado antes
+        verificaEmail = base.emailIgual(campoEmail, noEmailExiste);
+    }
+    // Verificando se o campo de senha e vazio
     let verificaSenha = base.verificaCampoVazio(campoSenha, labelSenha, noPass, aotPass);
     if(verificaSenha){
-        // Verificando se o campo de senha está fora dos padrões
+        // Verificando se o campo de senha esta fora dos padroes
         verificaSenha = base.verificaSenhaForaPadrao(campoSenha, labelSenha, aotPass);
     }
     
-    // Verificando se o campo de data é vazio
-    let verificaDataVazia = base.verificaCampoVazio(campoData, labelData, noData); 
+    // Verificando se o campo de data e vazio
+    let verificaData = base.verificaCampoVazio(campoData, labelData, noData, passouData);
+    if(verificaData){
+        // Verificando se a data informada for valida (< do que o dia atual)
+        verificaData = base.dataErrada(campoData, labelData, passouData);
+    }
 
-    // Verificando se o campo de confirmar senha é vazio
+    // Verificando se o campo de confirmar senha e vazio
     let verificaConfSenha = base.verificaCampoVazio(campoConfSenha, labelConf_Senha, noConfPass, aotConfPass);
     if(verificaConfSenha){
-        // Verificando se o campo de confirmar senha está fora dos padrões
+        // Verificando se o campo de confirmar senha esta fora dos padroes
         verificaConfSenha = base.verificaSenhaForaPadrao(campoConfSenha, labelConf_Senha, aotConfPass);
+    }
+    if(verificaConfSenha){
+        // Verificando se a senha e igual ao confirmar senha
+        verificaConfSenha = base.verificaSenhaSalva(campoSenha, campoConfSenha, labelConf_Senha, labelSenha, passConfPass);
     }
 
 
     // Verificando a jogabilidade
     let verJog = base.verificaJogabilidade(labelJogador, labelsJogabilidade, noJogabilidade);
     
-    // Verificando se a senha é igual ao confirmar senha
-    let senhaIgual = base.senhaIgual(campoSenha.value, campoConfSenha.value);
-
-    let listaTudo = [verificaConfSenha, verificaDataVazia, verificaEmail, verJog, verificaNome, verificaSenha, senhaIgual]
-    // Verificando se todos os elementos são válidos
+    let listaTudo = [verificaConfSenha, verificaData, verificaEmail, verJog, verificaNome, verificaSenha]
+    // Verificando se todos os elementos sao validos
     return listaTudo.every(element => element);
 }
 
@@ -161,7 +146,6 @@ if(voltar){
         window.history.back();
     })
 }
-
 
 const olho1 = document.querySelector("#olho");
 // Mostrar/ocultar senha

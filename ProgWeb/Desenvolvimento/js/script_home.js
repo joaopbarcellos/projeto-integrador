@@ -1,10 +1,10 @@
-// Importando a função de autenticação de campos
+// Importando a funcao de autenticacao de campos
 import * as base from "./script_base.js";
 
-// Pegando todos os botões para ir para o evento
+// Pegando todos os botoes para ir para o evento
 const btns = document.querySelectorAll(".sabermais");
 
-// Percorrendo todos os botões
+// Percorrendo todos os botoes
 btns.forEach(btn =>{
   // Adicionando um EventListener em cada um
   btn.addEventListener("click", () => {
@@ -20,7 +20,7 @@ const lista_conteudo = document.querySelectorAll(".evento");
 
 const lupa = document.querySelector("#lupa");
 
-// Adicionando EventListener para resetar a página quando o campo estiver em branco
+// Adicionando EventListener para resetar a pagina quando o campo estiver em branco
 barra_pesquisa.addEventListener("search", () =>{
   if(!barra_pesquisa.value){
     base.barraVazia(lista_conteudo, true)

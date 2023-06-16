@@ -23,11 +23,14 @@ let passConfPass = document.querySelector("#passConfPass")
 
 // Adicionando um ouvidor de evento no botao e no campo de texto de confirmar senha
 document.querySelector("#alterar").addEventListener("click", autenticar);
-campoConfSenha.addEventListener("keypress", (event) => {
-    if(event.key == "Enter"){
-        autenticar();
-    }
-})
+document.querySelectorAll("input").forEach(input => {
+    input.addEventListener("keypress", (event) => {
+        if(event.key == "Enter"){
+            // Chamando a funcao quando o usuario apertar enter em qualquer campo
+            autenticar();
+        }
+    })
+});
 
 // Funcao para autenticar as entradas do usuario 
 function autenticar(){
@@ -41,63 +44,16 @@ function autenticar(){
         // Pegando os dados salvos
         let dados = JSON.parse(localStorage.getItem(sessionStorage.getItem("logado")));
 
-        if(base.senhaIgual(senhaAntiga, dados.senha) && base.senhaIgual(senhaNova, confSenha)){
-            dados.senha = senhaNova;
-            // Trocando a senha no localStorage
-            let string = JSON.stringify(dados)
-            localStorage.removeItem(dados.email);
-            localStorage.setItem(dados.email, string)
-            // Mudando de tela para a tela de perfil
-            window.location.assign("perfil.html")
-        }
+        dados.senha = senhaNova;
+        // Trocando a senha no localStorage
+        let string = JSON.stringify(dados)
+        localStorage.removeItem(dados.email);
+        localStorage.setItem(dados.email, string)
+        // Mudando de tela para a tela de perfil
+        window.location.assign("perfil.html")
     }
 }
 
-function verificaSenhaSalva(campoSenha, outroCampo=false, label, label2=false, erro){
-    if(outroCampo){
-        if(campoSenha.value != outroCampo.value){
-            campoSenha.style.cssText = 'border-bottom: 1px solid #f58181';
-            outroCampo.style.cssText = 'border-bottom: 1px solid #f58181';
-            erro.style.display = "block";
-            // Mudando as classes da label de senha
-            label.classList.add("erroPadrao");
-            label.classList.remove("erroVazio");
-            label.classList.remove("certo");
-            label2.classList.add("erroPadrao");
-            label2.classList.remove("erroVazio");
-            label2.classList.remove("certo");
-            return false;
-        }
-        campoSenha.style.cssText = 'border-bottom: 1px solid rgb(95, 201, 74';
-        outroCampo.style.cssText = 'border-bottom: 1px solid rgb(95, 201, 74';
-        erro.style.display = "none";
-        // Mudando as classes da label de senha
-        label.classList.remove("erroPadrao");
-        label.classList.remove("erroVazio");
-        label.classList.add("certo");
-        label2.classList.add("erroPadrao");
-        label2.classList.remove("erroVazio");
-        label2.classList.remove("certo");
-        return true;
-    }else{
-        if(campoSenha.value != JSON.parse(localStorage.getItem(sessionStorage.getItem("logado"))).senha){
-            campoSenha.style.cssText = 'border-bottom: 1px solid #f58181';
-            erro.style.display = "block";
-            // Mudando as classes da label de senha
-            label.classList.add("erroPadrao");
-            label.classList.remove("erroVazio");
-            label.classList.remove("certo");
-            return false;
-        }
-        campoSenha.style.cssText = 'border-bottom: 1px solid rgb(95, 201, 74';
-        erro.style.display = "none";
-        // Mudando as classes da label de senha
-        label.classList.remove("erroPadrao");
-        label.classList.remove("erroVazio");
-        label.classList.add("certo");
-        return true;
-    }
-}
 
 function verificaTudo(){
 
@@ -108,7 +64,7 @@ function verificaTudo(){
         verificaSenhaAntiga = base.verificaSenhaForaPadrao(campoSenhaAntiga, labelSenhaAntiga, aotPassNew, passPassNew);
     }
     if(verificaSenhaAntiga){
-        verificaSenhaAntiga = verificaSenhaSalva(campoSenhaAntiga, false, labelSenhaAntiga, false, passPassNew);
+        verificaSenhaAntiga = base.verificaSenhaSalva(campoSenhaAntiga, false, labelSenhaAntiga, false, passPassNew);
     }
 
     // Verificando se o campo de senha nova e vazio
@@ -125,12 +81,8 @@ function verificaTudo(){
         verificaConfSenha = base.verificaSenhaForaPadrao(campoConfSenha, labelConfSenha, aotConfPass, passConfPass);
     }
     if(verificaConfSenha){
-        verificaConfSenha = verificaSenhaSalva(campoSenha, campoConfSenha, labelConfSenha, labelSenha, passConfPass);
+        verificaConfSenha = base.verificaSenhaSalva(campoSenha, campoConfSenha, labelConfSenha, labelSenha, passConfPass);
     }
-    // let senhaIgual = base.senhaIgual(JSON.parse(localStorage.getItem(sessionStorage.getItem("logado"))).senha, campoSenhaAntiga.value)
-    // tira(senhaIgual, noPassNew, aotPassNew, passPassNew, campoSenhaAntiga);
-    // let confSenhaIgual = base.senhaIgual(campoSenha, campoConfSenha, campoSenha.value, campoConfSenha.value, passConfPass)
-
     let lista = [verificaConfSenha, verificaSenhaAntiga, verificaSenhaNova]
     // Verificando se todos os elementos sao validos
     return lista.every(element => element);

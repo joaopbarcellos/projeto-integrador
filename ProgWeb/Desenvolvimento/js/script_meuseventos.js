@@ -1,12 +1,12 @@
-// Importando a função de autenticação de campos
+// Importando a funcao de autenticacao de campos
 import * as base from "./script_base.js";
 
-// Pegando todos os botões para se inscrever
+// Pegando todos os botoes para se inscrever
 const cancel = document.querySelectorAll(".inscricao");
 
-// Pegando o email do usuário logado
+// Pegando o email do usuario logado
 const email = sessionStorage.getItem("logado");
-// Pegando todos os dados do usuário
+// Pegando todos os dados do usuario
 const dados = JSON.parse(localStorage.getItem(email));
 
 var meus_eventos = [];
@@ -15,7 +15,7 @@ const barra_pesquisa = document.querySelector("#busca");
 
 const lupa = document.querySelector("#lupa");
 
-// Percorrendo todos os botões
+// Percorrendo todos os botoes
 cancel.forEach(btn =>{
     // Adicionando um EventListener em cada um
     btn.addEventListener("click", () => {
@@ -24,17 +24,17 @@ cancel.forEach(btn =>{
   })
 
 
-// Caso o usuário não esteja logado
+// Caso o usuario não esteja logado
 if(!email){
     Swal.fire({
-        // Alert avisando ao usuário fazer login
+        // Alert avisando ao usuario fazer login
         title: 'Faça login!',
         icon: 'error',
         text: 'Você precisa estar logado para acessar essa funcionalidade.',
         confirmButtonColor: '#3085d6',
         confirmButtonText: 'Login'
     }).then(() => {
-      // Enviando o usuário para a tela de login
+      // Enviando o usuario para a tela de login
       window.location.assign("index.html");
     })
 }
@@ -43,7 +43,7 @@ function meusEventos(){
   let todosEventos = document.querySelectorAll(".evento");
   todosEventos.forEach(evento => {    
     if(dados.eventos_inscritos.includes(evento.id.slice(3))){
-      // Colocando display block em todos os eventos que o usuário está inscrito
+      // Colocando display block em todos os eventos que o usuario está inscrito
       evento.style.display = "block";
       meus_eventos.push(evento);
       document.querySelector("#semevento").style.display = "none";
@@ -66,10 +66,9 @@ function meusEventos(){
 meusEventos()
 
 
-
 function cancelarInscricao(id){
   Swal.fire({
-    // Iniciando um alert perguntando se o usuário deseja cancelar a inscrição.
+    // Iniciando um alert perguntando se o usuario deseja cancelar a inscricao.
     title: 'Cancelar inscrição?',
     icon: 'question',
     showCancelButton: true,
@@ -79,7 +78,7 @@ function cancelarInscricao(id){
     cancelButtonText: 'Não'
   }).then((result) => {
     if (result.isConfirmed) {
-      // Alert para caso o usuário se inscreveu.
+      // Alert para caso o usuario cancelou sua inscricao.
       Swal.fire(
         'Feito!',
         'Sua inscrição foi cancelada.',
@@ -102,7 +101,7 @@ function cancelarInscricao(id){
         document.querySelector("#semevento").style.display = "block";
         document.querySelector("#pesquisar").classList.add("sembarra");
         document.querySelector("#pesquisar").classList.remove("d-flex");
-        // Caso não haja eventos inscritos, irá aparecer a mensagem
+        // Caso nao haja eventos inscritos, ira aparecer a mensagem
       }
     }
   })

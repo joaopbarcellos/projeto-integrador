@@ -5,6 +5,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&family=Parisienne&family=Wix+Madefor+Text&display=swap');
 
+:root{
+	--azul_princ: #057dc2;
+	--branco: #ffffff;
+	--azul_sec: #4267b3;
+	--ciano: #83e3cd;
+	--black: #000000;
+	--azul_terc: #284174;
+	--azul_quart: #183153;
+	--lilas: #4169e1;
+	--roxo: #7f37c9;
+	--azul_quint: #145374;
+	--vermelho_claro: #f58181;
+	--verde: rgb(95, 201, 74);
+}
+
+/* .dark-mode:root {
+	--azul_princ: #;
+	--branco: #;
+	--azul_sec: #;
+	--ciano: #;
+	--black: #;
+	--azul_terc: #;
+	--azul_quart: #;
+	--lilas: #;
+	--roxo: #;
+	--azul_quint: #;
+	--vermelho_claro: #;
+	--verde: ;
+
+} */
+
 img{
 	vertical-align: unset !important;
 	user-select: none;
@@ -32,7 +63,7 @@ header{
 /* Aplicando cor e tirando decoração dos textos */
 .header li, .header a{
 	text-decoration: none;
-	color: rgb(255, 255, 255);
+	color: var(--branco);
 	text-shadow: rgb(0, 0, 0) 0.1em 0.1em 0.2em;
 	cursor: pointer;
 	transition: 0.4s ease;
@@ -40,12 +71,12 @@ header{
 }
 
 .header a:hover{
-	color: #4267b3 !important;
+	color: var(--azul_sec) !important;
 	text-shadow: none;
 }
 
 .dropdown-menu{
-	background-color: #057dc2 !important;
+	background-color: var(--azul_princ) !important;
 }
 
 .dropdown-toggle, .dropdown-menu{
@@ -59,29 +90,29 @@ header{
 	margin-top: 2% ;
 	width: 50% ;
 	padding-bottom: 20px ;
-  }
-  
-  #lupa{
-	background-color: #057dc2;
-  }
-  
-  #pesquisar{
+}
+
+#lupa{
+	background-color: var(--azul_princ);
+}
+
+#pesquisar{
 	width: 100% !important;
 	max-width: 700px;
-  }
-  
-  #busca{
+}
+
+#busca{
 	outline: 0;
 	box-shadow: 0 0 0 0 ;
-  }
+}
 
 .icones{
 	width: 20px;
-	color: #057dc2;
+	color: var(--azul_princ);
 }
 
 .links{
-	color: white !important;
+	color: (--branco) !important;
 }
 
 /* Tirando decoracao e aplicando cor no link */
@@ -94,7 +125,7 @@ a{
 
 /* Aplicando cor */
 .desc p{
-	color: #ffffff;
+	color: var(--branco);
 }
 
 .navbar-toggler:focus {
@@ -110,7 +141,7 @@ a{
 
 /* Aplicando flexbox, alinhamento, cor e sombra*/
 .header{
-	background: linear-gradient(to bottom right, #057dc2, #83e3cd);
+	background: linear-gradient(to bottom right, var(--azul_princ), var(--ciano));
 	box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
 }
 
@@ -131,17 +162,17 @@ a{
 
 /* Aplicando cor */
 #textos{
-	color: black;
+	color: var(--black);
 }
 
 /* Aplicando fonte, cor, tamanho e espaçamento*/
 footer{
 	font-family: 'Wix Madefor Text', sans-serif !important;
 	width: 100%;
-	background-color: #057dc2;
+	background-color: var(--azul_princ);
 	box-sizing: border-box;
 	letter-spacing: 1px;
-	color:rgb(255, 255, 255);
+	color:var(--branco);
 	margin-top: 25vh;
 	box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.75);
 }
@@ -202,12 +233,12 @@ footer p{
 
 /* Aplicando cor */
 .footer-list .footer-link:hover{
-	color: #7f37c9 !important;
+	color: var(--roxo) !important;
 }
 
 /* Aplicando cor, flexbox e alinhando*/
 #instagram{
-	background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+	background: linear-gradient(var(--roxo), #ff2992, #ff9807);
 	display: flex;
 	justify-content: center;
 	align-items: end;
@@ -246,7 +277,7 @@ footer p{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: #ffffff;
+	background-color: var(--branco);
 	border-radius: 5px 5px 5px 5px;
 }
 
@@ -255,14 +286,14 @@ footer p{
 	all: unset;
 	padding: 0.75rem;
 	width: 100%;
-	color: black;
+	color: var(--black);
 }
 
 /* Aplicando cor, borda, fonte e cursor */
 #input_group button{
-	background-color: #4267b3 ;
+	background-color: var(--azul_sec) ;
 	border: none;
-	color: #ffffff;
+	color: var(--branco);
 	padding: 0px 1.25rem;
 	font-size: 1.125rem;
 	height: 50px;
@@ -284,7 +315,7 @@ footer p{
 #copyright{
 	display: flex;
 	justify-content: center;
-	background-color: #284174;
+	background-color: var(--azul_terc);
 	font-size: 0.9rem;
 	padding: 0.8rem;
 	font-weight: 100;
@@ -315,7 +346,7 @@ footer p{
     border: 0;
     border-radius: 10px; 
     box-shadow: 0 3px 5px 5px rgba(131, 131, 131, 0.46);
-	background: linear-gradient(55deg,#83e3cd, #057dc2, #83e3cd);
+	background: linear-gradient(55deg,var(--ciano), var(--azul_princ), var(--ciano));
 }
 
 /* aplico um display flex entre a imagem e as informacoes de um evento*/
@@ -381,7 +412,7 @@ footer p{
 	content: " ";
 	width: 0%;
 	height: 100%;
-	background: #83e3cd;
+	background: var(--ciano);
 	position: absolute;
 	transition: all 0.4s ease-in-out;
 	right: 0;
@@ -397,7 +428,7 @@ footer p{
 	text-align: center;
 	text-decoration: none;
 	width: 100%;
-	color: #fff;
+	color: var(--branco);
 	font-size: 1.125em;
 	font-weight: 700;
 	z-index: 20;
@@ -405,7 +436,7 @@ footer p{
 }
 
 .sabermais:hover span {
-	color: #183153;
+	color: var(--azul_quart);
 	animation: scaleUp 0.3s ease-in-out;
 }
 
@@ -418,7 +449,7 @@ footer p{
 	justify-content: center;
 	align-items: center;
 	border-radius: 5px;
-	background: #284174;
+	background: var(--azul_terc);
 	font-family: "Noto Sans", sans-serif;
 	box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
 	overflow: hidden;
@@ -429,8 +460,8 @@ footer p{
     position: relative;
     margin-left: 1.67em;
     margin-top: 1.67em;
-    background: #057dc2;
-    color: white;
+    background: var(--azul_princ);
+    color: (--branco);
     font-family: inherit;
     padding: 0.35em;
     padding-left: 1.2em;
@@ -441,7 +472,7 @@ footer p{
     letter-spacing: 0.05em;
     display: flex;
     align-items: center;
-    box-shadow: inset 0 0 1.6em -0.6em #057dc2;
+    box-shadow: inset 0 0 1.6em -0.6em var(--azul_princ);
     overflow: hidden;
     position: relative;
     height: 2.8em;
@@ -458,7 +489,7 @@ justify-content: center;
 height: 2.2em;
 width: 2.2em;
 border-radius: 0.7em;
-box-shadow: 0.1em 0.1em 0.6em 0.2em #145374;
+box-shadow: 0.1em 0.1em 0.6em 0.2em var(--azul_quint);
 right: 0.3em;
 transition: all 0.3s;
 }
@@ -477,7 +508,7 @@ transform: translateX(0.1em);
 
 /* css do botao de enviar email */
 .send {
-	background: royalblue;
+	background: var(--lilas);
 	overflow: hidden;
 	transition: all 0.2s;
 }
@@ -521,21 +552,21 @@ transform: translateX(0.1em);
 /* Aplicando display e cor */
 .erro{
     display: none;
-    color: #f58181;
+    color: var(--vermelho_claro);
     font-size: 1rem;
     margin-bottom: 1%;
 }
 
 .erroVazio {
-    color: #f58181;
+    color: var(--vermelho_claro);
 }
 
 .erroPadrao{
-    color: #f58181;
+    color: var(--vermelho_claro);
 }
 
 .certo{ 
-    color: rgb(95, 201, 74);
+    color: var(--verde);
 }
 
 /* Selecionando todos os inputs e aplicando margem e tamanho */
@@ -544,7 +575,7 @@ input[type="date"]{
     margin-top: 1%;
     margin-bottom: 1%;
     border: 0;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid var(--black);
     outline: 0; 
 }
 
@@ -567,39 +598,39 @@ input[type="date"]{
 }
 
 #ajudaa:hover .iconeajuda{
-	fill: #4267b3;
+	fill: var(--azul_sec);
 }
 
 #perfila:hover .iconeuser{
-	fill: #4267b3;
+	fill: var(--azul_sec);
 }
 
 #logout:hover .iconelogout{
-	fill: #4267b3;
+	fill: var(--azul_sec);
 }
 
 #homea:hover .iconecasinha{
-	fill: #4267b3;
+	fill: var(--azul_sec);
 }
 
 #criaa:hover .iconecria{
-	fill: #4267b3;
+	fill: var(--azul_sec);
 }
 
 #myeventsa:hover .iconemeusevents{
-	fill: #4267b3;
+	fill: var(--azul_sec);
 }
 
 #sobrea:hover .iconesobre{
-	fill: #4267b3;
+	fill: var(--azul_sec);
 }
 
 .dropdown-toggle:hover .iconeconfig{
-	fill: #4267b3;
+	fill: var(--azul_sec);
 }
 
 .iconeloc, .iconedata{
-	fill: #145374;
+	fill: var(--azul_quint);
 }
 
 .olho {
@@ -619,7 +650,7 @@ input[type="date"]{
 }
 
 .iconesuporte{
-	fill: #145374;
+	fill: var(--azul_quint);
 	height: 30px;
 	margin: 10px;
 }
@@ -630,5 +661,5 @@ input[type="date"]{
 }
 
 .iconelocev, .iconedataev{
-	fill: #000000;
+	fill: var(--black);
 }

@@ -1,12 +1,13 @@
-// Importando a função de autenticação de campos
+// Importando a funcao de autenticacao de campos
 import * as base from "./script_base.js";
 
 document.querySelector("#alterarSenha").addEventListener("click", () => {
+    // Levando para a tela de alteracao de senha
     window.location.assign("alterarSenha.html");
 })
 
 
-// Pegando os dados do usuário logado
+// Pegando os dados do usuario logado
 var emailLogado = sessionStorage.getItem("logado");
 const dadosUsuario = JSON.parse(localStorage.getItem(emailLogado));  
 
@@ -31,8 +32,10 @@ const noEmail = document.querySelector("#noEmail")
 const noEmailPadrao = document.querySelector("#noEmailPadrao");
 const noData = document.querySelector("#noData");
 const noJogabilidade = document.querySelector("#noJogabilidade");
+const passouData = document.querySelector("#passouData");
+const noEmailExiste = document.querySelector("#noEmailExiste");
 
-// Função para preencher automaticamente os campos com os dados do usuário
+// Funcao para preencher automaticamente os campos com os dados do usuario
 function preencherAuto(){
     campoNome.value = dadosUsuario.nome;
     campoEmail.value = emailLogado;
@@ -45,7 +48,7 @@ function preencherAuto(){
 
     labelEmail.classList.add("focado");
 
-    // Selecionando qual é o nível do jogador
+    // Selecionando qual e o nivel do jogador
     radios.forEach(radio => {
         if(radio.children[0].id == radioMarcada){
             radio.children[0].checked = true;
@@ -53,38 +56,59 @@ function preencherAuto(){
     })
 }
 
-// chamando a função
+// chamando a funcao
 preencherAuto();
 
 
-
 function verificaTudo(){
-    let verificaNome = base.verificaCampoVazio(campoNome, labelNome, noNome, false);
-    let verificaEmail = base.verificaCampoVazio(campoEmail, labelEmail, noEmail, noEmailPadrao);
+    // Verificando se o campo de nome e vazio
+    let verificaNome = base.verificaCampoVazio(campoNome, labelNome, noNome);
+    
+    // Verificando se o campo de email e vazio
+    let verificaEmail = base.verificaCampoVazio(campoEmail, labelEmail, noEmail, noEmailPadrao, noEmailExiste);
     if(verificaEmail){
-        verificaEmail = base.verificaEmailForaPadrao(campoEmail, noEmail, noEmailPadrao)
+        // Verificando se o campo de email esta fora dos padroes
+        verificaEmail = base.verificaEmailForaPadrao(campoEmail, noEmail, noEmailPadrao, noEmailExiste)
     }
-    let verDataNasc = base.verificaCampoVazio(campoDataNasc, labelData, noData, false); 
+    
+    if(verificaEmail){
+        // Verificando se o email ja foi cadastrado antes
+        verificaEmail = base.emailIgual(campoEmail, noEmailExiste);
+    }
+    // Verificando se o campo de data e vazio
+    let verDataNasc = base.verificaCampoVazio(campoDataNasc, labelData, noData, passouData); 
+    if(verDataNasc){
+        // Verificando se a data informada for valida (< do que o dia atual)
+        verDataNasc = base.dataErrada(campoDataNasc, labelData, passouData)
+    }
 
+    // Verificando se uma jogabilidade foi marcada
     let verjog = base.verificaJogabilidade(labelJogador, labelsJogabilidade, noJogabilidade);
 
     let lista = [verificaNome, verificaEmail, verDataNasc, verjog];
+    // Verificando se todos os elementos sao true
     return lista.every(element => element);
 }
 
-// Pegando o botão de editar
+// Pegando o botao de editar
 const btnEditar = document.querySelector("#alterar");
 
 btnEditar.addEventListener("click", autenticar);
 
-function autenticar(){
-    if(verificaTudo()){
-        let dataNasc = campoDataNasc.value;
-        if(base.verficiaSeEleNasceuNaDataCorreta(dataNasc)){
-            base.dataErrada(campoDataNasc, labelData);
-            return;
+document.querySelectorAll("input").forEach(input => {
+    input.addEventListener("keypress", (event) => {
+        if(event.key == "Enter"){
+            // Chamando a funcao quando o usuario apertar enter em qualquer campo
+            autenticar();
         }
+    })
+});
+
+function autenticar(){
+    // Verificando se todos os campos estao preenchidos corretamente
+    if(verificaTudo()){
         Swal.fire({
+            // Perguntando para o usuario se ele deseja editar suas informacoes
             icon: 'question',
             text: 'Deseja editar suas informações?',
             confirmButtonColor: '#3085d6',
@@ -96,10 +120,10 @@ function autenticar(){
             if(result.isConfirmed){
                 // Alterando os dados no localStorage
                 dadosUsuario.nome = campoNome.value;
-                dadosUsuario.dataNasc = dataNasc;
+                dadosUsuario.dataNasc = campoDataNasc.value;
                 dadosUsuario.jogabilidade = base.jogabilidadeMarcada();
                 dadosUsuario.email = campoEmail.value;
-                // Colocando tudo no dicionário/mapa de dadosUsuario
+                // Colocando tudo no dicionario/mapa de dadosUsuario
 
                 let stringJson = JSON.stringify(dadosUsuario);
 
@@ -116,10 +140,9 @@ function autenticar(){
                     icon: 'success',
                     title: 'Perfil atualizado'
                 }).then(() => {
-                    // Enviando para a página de login
+                    // Enviando para a pagina de perfil
                     window.location.assign("perfil.html")
                 })
-                // Enviando o usuário de volta para a tela de perfil
             }
         })
     }
