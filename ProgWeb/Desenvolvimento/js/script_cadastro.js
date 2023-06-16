@@ -45,26 +45,36 @@ const labelData = document.querySelector("#labelData");
 
 
 function emailIgual(email){
+    // Função para verificar se o email já foi cadastrado
     if(JSON.parse(localStorage.getItem(email))){
+        // Mostrando uma mensagem de erro para o usuário
         Swal.fire({
             icon: 'error',
             title: 'Erro!',
             text: 'O Email já foi cadastrado!'
         });
+        // Mudando a cor do campo de texto
         campoEmail.style.cssText = 'border-bottom: 1px solid #f58181'
+        // Mostrando a label de email já cadastrado
         noEmailExiste.style.display = 'block'
         return false;
     }
+    // Mudando a cor do campo de texto
     campoEmail.style.cssText = 'border-bottom: 1px solid rgb(95, 201, 74)'
+    // Retirando a label de email já cadastradp
     noEmailExiste.style.display = 'none'
     return true;
 }
 
 
 function autenticar(){
+    // Função para autenticar todos os campos
+
+    // Verificando se todos os campos são válidos
     if(verificaTudo()){
         // Valor da data de nascimento
         let dataNasc = campoData.value; 
+        // Verificando se a data informada for válida (< do que o dia atual)
         if(base.verficiaSeEleNasceuNaDataCorreta(dataNasc)){
             base.dataErrada(campoData, labelData);
             return;
@@ -79,11 +89,11 @@ function autenticar(){
         let email = campoEmail.value.toLowerCase();
         
 
-        // Valores de senha e confirmar senha
+        // Valores de senha 
         let senha = campoSenha.value;
-        let confSenha = campoConfSenha.value;
 
-        if(base.senhaIgual(senha, confSenha) && emailIgual(email)){
+        // Verificando se o email já foi cadastrado
+        if(emailIgual(email)){
             let stringJSON = {
                 "email": email,
                 "nome": nome,
@@ -92,6 +102,7 @@ function autenticar(){
                 "jogabilidade": jogabilidade,
                 "eventos_inscritos": []
             }
+            // Salvando os dados no localStorage
             salvar(email, stringJSON)
             window.location.assign("index.html");
         }
@@ -99,21 +110,30 @@ function autenticar(){
 }
 
 function verificaTudo(){
+    // Verificando se o campo de nome é vazio
     let verificaNome = base.verificaCampoVazio(campoNome, labelNome, noNome);
+
+    // Verificando se o campo de email é vazio
     let verificaEmail = base.verificaCampoVazio(campoEmail, labelEmail, noEmail, noEmailPadrao, noEmailExiste);
     if(verificaEmail){
+        // Verificando se o campo de email está fora dos padrões
         verificaEmail = base.verificaEmailForaPadrao(campoEmail, noEmail, noEmailPadrao, noEmailExiste);
-    }
+    } 
 
+    // Verificando se o campo de senha é vazio
     let verificaSenha = base.verificaCampoVazio(campoSenha, labelSenha, noPass, aotPass);
     if(verificaSenha){
+        // Verificando se o campo de senha está fora dos padrões
         verificaSenha = base.verificaSenhaForaPadrao(campoSenha, labelSenha, aotPass);
     }
     
+    // Verificando se o campo de data é vazio
     let verificaDataVazia = base.verificaCampoVazio(campoData, labelData, noData); 
 
+    // Verificando se o campo de confirmar senha é vazio
     let verificaConfSenha = base.verificaCampoVazio(campoConfSenha, labelConf_Senha, noConfPass, aotConfPass);
     if(verificaConfSenha){
+        // Verificando se o campo de confirmar senha está fora dos padrões
         verificaConfSenha = base.verificaSenhaForaPadrao(campoConfSenha, labelConf_Senha, aotConfPass);
     }
 
@@ -121,12 +141,16 @@ function verificaTudo(){
     // Verificando a jogabilidade
     let verJog = base.verificaJogabilidade(labelJogador, labelsJogabilidade, noJogabilidade);
     
+    // Verificando se a senha é igual ao confirmar senha
+    let senhaIgual = base.senhaIgual(campoSenha.value, campoConfSenha.value);
 
-    let listaTudo = [verificaConfSenha, verificaDataVazia, verificaEmail, verJog, verificaNome, verificaSenha]
+    let listaTudo = [verificaConfSenha, verificaDataVazia, verificaEmail, verJog, verificaNome, verificaSenha, senhaIgual]
+    // Verificando se todos os elementos são válidos
     return listaTudo.every(element => element);
 }
 
 function salvar(email, stringJSON){
+    // Salvando no localStorage a stringJson com a chave de email
     localStorage.setItem(email, JSON.stringify(stringJSON));
 }
 

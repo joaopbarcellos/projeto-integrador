@@ -1,4 +1,4 @@
-function send(tag){ // tag: campo de texto do email
+  function send(tag){ // tag: campo de texto do email
   // Capturando o valor escrito no campo de texto
   let email = tag.value 
   
@@ -223,20 +223,18 @@ export function verificaEmailForaPadrao(campo, noEmail, noEmailPadrao, noEmailEx
 }
 
 export function senhaIgual(senha, confsenha){
-  if(senha == confsenha){
-      passConfPass.style.display = "none";
-      return true;
-  }
-  passConfPass.style.display = "block";
-  return false;
+  return senha == confsenha;
 }
 
-// Função para autenticar se a senha está dentro dos padrões
-export function verificaSenhaForaPadrao(campo, label, aotPass){
+// Funcao para autenticar se a senha esta dentro dos padroes
+export function verificaSenhaForaPadrao(campo, label, aotPass, passPassNew=false){
   if (campo.value.length < 6 || campo.value.length > 30) {
     // Mudando a borda do campo
     campo.style.cssText = 'border-bottom: 1px solid #f58181';
 
+    if(passPassNew){
+      passPassNew.style.display = "none";
+    }
     // Mudando as classes da label de senha
     label.classList.add("erroPadrao");
     label.classList.remove("erroVazio");

@@ -611,7 +611,7 @@ input[type="date"]{
     width: 1.8rem;    
 }
 
-.iconeeditar{
+.iconeeditar, .iconesenha{
 	fill: white;
 	margin-top: 1px;
 	margin-bottom: 5px;

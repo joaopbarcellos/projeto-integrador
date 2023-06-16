@@ -24,20 +24,20 @@ cancel.forEach(btn =>{
   })
 
 
-  // Caso o usuário não esteja logado
-  if(!email){
-      Swal.fire({
-          // Alert avisando ao usuário fazer login
-          title: 'Faça login!',
-          icon: 'error',
-          text: 'Você precisa estar logado para enviar mensagem',
-          confirmButtonColor: '#3085d6',
-          confirmButtonText: 'Login'
-      }).then((result) => {
-        // Enviando o usuário para a tela de login
-        window.location.assign("index.html");
-      })
-  }
+// Caso o usuário não esteja logado
+if(!email){
+    Swal.fire({
+        // Alert avisando ao usuário fazer login
+        title: 'Faça login!',
+        icon: 'error',
+        text: 'Você precisa estar logado para acessar essa funcionalidade.',
+        confirmButtonColor: '#3085d6',
+        confirmButtonText: 'Login'
+    }).then(() => {
+      // Enviando o usuário para a tela de login
+      window.location.assign("index.html");
+    })
+}
 
 function meusEventos(){   
   let todosEventos = document.querySelectorAll(".evento");

@@ -55,79 +55,93 @@
                 <!-- Nome do usuário -->
                 <div class="nome campos">
 
-
+                    <!-- Div com o input de nome -->
                     <div class="form-floating fs-5">
                         <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Nome" name="nomeCampo">
                         <label for="nome" id="label_nome">Nome</label>
                     </div>
 
+                    <!-- Mensagem de erro -->
                     <label class="erro" id="noNome">Nome deve ser preenchido!</label>
 
-                </div>
+                </div> <!-- Fechando div de nome -->
                 
+
                 <!-- E-mail do usuário -->
                 <div class="email campos">
 
+                    <!-- Div com o input de email -->
                     <div class="form-floating fs-5">
                         <input type="email" class="form-control" id="floatingInputGroup2" placeholder="E-mail" name="emailCampo">
                         <label for="email" id="email_label">E-mail</label>
                     </div>
 
+                    <!-- Mensagens de erro -->
                     <label class="erro" id="noEmail">E-mail deve ser preenchido!</label><br>
 
                     <label class="erro" id="noEmailPadrao">E-mail está fora dos padrões!</label>
 
                     <label class="erro" id="noEmailExiste">E-mail já está cadastrado!</label>
 
-                </div>
+                </div> <!-- Fechando div de email -->
                 
+
                 <!-- Idade do usuário -->
                 <div class="idade campos fs-5">
+                    <!-- Label e input da idade -->
                     <label for="idade" id="labelData">Data de Nascimento:</label>
-
                     <input type="date" id="idade" name="dataCampo">
 
+                    <!-- Mensagem de erro -->
                     <label class="erro" id="noData">Data deve ser preenchida!</label>
 
-                </div> 
+                </div> <!-- Fechando div de idade -->
                 
+
                 <!-- Senha do usuário -->
                 <div class="senha campos">
 
+                    <!-- Div com o input de senha -->
                     <div class="form-floating fs-5">
                         <img src="img/olho_aberto.png" id="olho" class="olho">
                         <input type="password" class="form-control" id="floatingInputGroup3" placeholder="Senha" name="senhaCampo">
                         <label for="senha" id="senha_label">Senha</label>
                     </div>
 
+                    <!-- Mensagens de erro -->
                     <label class="erro" id="noPass">Senha deve ser preenchida!</label><br>
 
                     <label class="erro" id="aotPass">Senha deve ter 6 a 30 caracteres!</label>
 
-                </div>
+                </div> <!-- Fechando div de senha -->
                 
+
                 <!-- Confirmação de senha do usuário -->
                 <div class="confir_senha campos fs-5">
                     
+                    <!-- Div com input de confirmacao de senha -->
                     <div class="form-floating">
                         <img src="img/olho_aberto.png" id="olho2" class="olho">
                         <input type="password" class="form-control" id="floatingInputGroup4" placeholder="Confirmação de senha" name="confsenhaCampo">
                         <label for="confirmasenha" id="senha_label_confirma">Confirmação de senha</label>
                     </div>
 
+                    <!-- Mensagens de erro -->
                     <label class="erro" id="noConfPass">Confirmar senha deve ser preenchida!</label><br>
 
                     <label class="erro" id="aotConfPass">Confirmar senha deve ter 6 a 30 caracteres!</label><br>
 
                     <label class="erro" id="passConfPass">Confirmar senha deve ser igual à senha!</label>
 
-                </div>
+                </div> <!-- Fechando div de confirmação de senha -->
 
+                <!-- Div experiencia -->
                 <div class="joga campos">
 
+                    <!-- Div com input de experiencia -->
                     <div class="jogabilidade fs-5">
 
-                        <!-- Grau de conhecimento -->
+                        <!-- Grau de experiencia -->
                         <label for="jogabilidade" class="label_joga">Jogador:</label>
 
                         <div class="radios">
@@ -159,6 +173,7 @@
 
                             </div>
 
+                            <!-- Mensagem de erro -->
                             <label class="erro" id="noJogabilidade">Nível de experiência deve ser escolhido!</label>
                         
                             <!-- Fim da div radios -->
