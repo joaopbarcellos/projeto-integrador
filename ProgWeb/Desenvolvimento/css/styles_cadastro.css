@@ -2,26 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Quicksand:wght@600&display=swap');
 
-:root{
-    --body_grad: linear-gradient(to top right, #057dc2, #83e3cd);
-    --azul_princ: #057dc2;
-    --azul_claro: rgb(0, 198, 255);
-    --branco: #ffffff;
-    --azul_sec: #4267b3;
-    --ciano: #83e3cd;
-    --black: #000000;
-    --azul_terc: #284174;
-    --azul_quart: #183153;
-    --lilas: #4169e1;
-    --roxo: #7f37c9;
-    --azul_quint: #145374;
-}
-
-/* [data-theme="black"] {
-    --azul_princ: #012f49;
-    --branco: #000000;
-    --black: #ffffff;
-}  */
 
 /* Definições geral da página */
 *{
@@ -112,7 +92,6 @@ input[type="date"]{
     padding-left: 0;
 }
 
-
 /* Aplicando margen,cor, borda e fonte no botão */
 .btn-cadastra{
     border: 1px solid var(--black);
@@ -135,7 +114,6 @@ input[type="date"]{
     padding-bottom: 0px;
     text-align: justify;
 }
-
 
 .senha{
     padding-bottom: 3%;
@@ -160,13 +138,11 @@ input[type="date"]{
     color: var(--black) !important;
 }
 
-
 #voltar .img_voltar{
     height: 2.5%;
     padding-right: 2.5px;
     position: absolute;
 }
-
 
 #floatingInputGroup1, #floatingInputGroup2,#floatingInputGroup3,#floatingInputGroup4, #floatingInputGroup5 {
     border: none;
@@ -182,7 +158,6 @@ input[type="date"]{
     border-bottom: 1px solid var(--black);
     background-color: unset !important;
 }
-
 
 #noEmailPadrao{
     margin-bottom:9%;

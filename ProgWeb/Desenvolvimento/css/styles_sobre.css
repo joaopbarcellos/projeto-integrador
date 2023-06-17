@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
 
-:root{
+:root {
     --body_grad: linear-gradient(to top right, #057dc2, #83e3cd);
     --azul_princ: #057dc2;
     --azul_claro: rgb(0, 198, 255);
@@ -16,28 +16,20 @@
     --azul_quint: #145374;
 }
 
-/* [data-theme="black"] {
-    --azul_princ: #012f49;
-    --branco: #000000;
-    --black: #ffffff;
-}  */
-
-/* Aplicando fonte */
-body{
+body {
     font-family: 'Quicksand', sans-serif;
 }
 
-#sobrea{
+#sobrea {
     color: var(--azul_sec) !important;
-	text-shadow: none;
+    text-shadow: none;
 }
 
-.iconesobre{
+.iconesobre {
     fill: var(--azul_sec);
 }
 
-/* Definindo espaçamentos e flexbox */
-#sobre{
+#sobre {
     padding-left: 5%;
     padding-right: 5%;
     letter-spacing: 1px;
@@ -48,16 +40,14 @@ body{
     text-align: justify;
 }
 
-/* Aplicando flexbox e espaçamento */
-.h2_equipe{
+.h2_equipe {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 3%;
 }
 
-/* Aplicando espaçamento, cor, margem, flexbox, borda e sombra */
-.pessoas{
+.pessoas {
     background-color: var(--azul-claro_sec);
     border-radius: 20px;
     display: flex;
@@ -70,22 +60,21 @@ body{
     padding-left: 20px;
     padding-top: 10px;
     padding-right: 20px;
-    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.75);
 }
 
-.participante{
+.participante {
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-/* Definindo fonte */
-.pessoas h3{
+.pessoas h3 {
     font-size: 1.3rem;
     text-align: center;
     word-break: break-all;
 }
 
-.container{
+.container {
     margin-top: 3%;
 }
 
@@ -95,6 +84,7 @@ body{
     height: 0;
     overflow: hidden;
 }
+
 .video-container iframe {
     position: absolute;
     top: 0;
@@ -103,52 +93,34 @@ body{
     height: 100%;
 }
 
-.row{
+.row {
     align-items: center;
 }
 
-/* Definindo tamanho e margem */
-.foto{
+.foto {
     border-radius: 10px;
     margin-bottom: 10px;
     width: 85%;
 }
 
-/* Aplicando flexbox e margem */
-.span_integrantes{
+.span_integrantes {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-bottom: 2.5%;
 }
 
-/* Definindo margem e tamanho */
 .iconeSobre {
     margin-bottom: 0;
     width: 20px;
     object-fit: contain;
 }
-#textos{
+
+#textos {
     color: var(--black) !important;
     padding: 0 !important;
 }
 
-#c{
+#c {
     cursor: pointer;
 }
-
-#img_easter{
-    position: absolute;
-    top: 0;
-    display: none;
-    width: 50%;
-    top: 970px;
-    left: 50%;
-    transition: 2s ease;
-}
-
-#c:hover #img_easter{
-    display: block;
-}
-
-

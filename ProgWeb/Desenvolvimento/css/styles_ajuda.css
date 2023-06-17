@@ -1,26 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
 
-:root{
-  --body_grad: linear-gradient(to top right, #057dc2, #83e3cd);
-  --azul_princ: #057dc2;
-  --azul_claro: rgb(0, 198, 255);
-  --branco: #ffffff;
-  --azul_sec: #4267b3;
-  --ciano: #83e3cd;
-  --black: #000000;
-  --azul_terc: #284174;
-  --azul_quart: #183153;
-  --lilas: #4169e1;
-  --roxo: #7f37c9;
-  --azul_quint: #145374;
-}
-
-/* [data-theme="black"] {
-  --azul_princ: #012f49;
-  --branco: #000000;
-  --black: #ffffff;
-}  */
-
 #ajudaa{
   color: var(--azul_sec) !important;
   text-shadow: none;
@@ -31,17 +10,14 @@
 	fill: var(--azul_sec);
 }
 
-/* Aplicando marge nas definições gerais da página */
 * {
   margin: 0;
 }
 
-/* Aplicando style na lista */
 ul {
   list-style: none;
 }
 
-/* Aplicando flexbox, margem e bordas */
 #container {
   margin-top: 2rem;
   position: relative;
@@ -49,12 +25,10 @@ ul {
   background-color:  var(--azul_terc);
 }
 
-/* Mudando cursor no hover */
 .item:hover {
   cursor: pointer;
 }
 
-/* Aplicando tamanho, cor e alinhamento */
 .pergunta{
   padding: 0.6rem;
   width: 100%;
@@ -62,18 +36,14 @@ ul {
   text-align: justify;
 }
 
-/* Mudando bordas e cor */
 .prim{
   background-color:  var(--azul_quint);
 }
 
-
-/* Aplicando bordas e cor */
 .seg{
   background-color:  var(--azul_princ) ;
 }
 
-/* Aplicando tamanho, cor e display */
 .conteudo{
   padding: 0.6rem;
   display: none;

@@ -1,5 +1,4 @@
-/* temas */
-:root{
+:root {
     --body_grad: linear-gradient(to top right, #057dc2, #83e3cd);
     --azul_princ: #057dc2;
     --azul_claro: rgb(0, 198, 255);
@@ -13,143 +12,125 @@
     --lilas: #4169e1;
     --roxo: #7f37c9;
     --azul_quint: #145374;
-}
-
-/* [data-theme="black"] {
-    --azul_princ: #012f49;
-    --branco: #000000;
-    --black: #ffffff;
-}  */
-
-
-#perfila{
+  }
+  
+  #perfila {
     color: var(--azul_sec) !important;
-	text-shadow: none;
-}
-
-.iconeuser{
+    text-shadow: none;
+  }
+  
+  .iconeuser {
     fill: var(--azul_sec);
-}
-
-
-#container{
+  }
+  
+  #container {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-
-/* Configuro a estetica e posicao da carteirinha */
-#perfil{
+  }
+  
+  #perfil {
     margin-top: 50px;
     border: solid 0px #000000;
     border-radius: 12px;
     box-shadow: inset 0 0 0.5em rgb(90, 90, 90), 0 0 1em rgb(90, 90, 90);
-	background-color: var(--azul-claro_sec);
+    background-color: var(--azul-claro_sec);
     margin-bottom: 30px;
-}
-
-/* configuro o flex da caixa de informacoes com a foto */
-.fot_desc{
+  }
+  
+  .fot_desc {
     display: flex;
     flex-direction: row;
-
-}
-
-.row{
+  }
+  
+  .row {
     margin: 0 !important;
-}
-
-/* Configuro a foto padrão dos usuários */
-#semfoto {
+  }
+  
+  #semfoto {
     height: 8rem;
     width: auto;
     margin: 20px;
-}
-
-.word-break {
+  }
+  
+  .word-break {
     word-break: break-word;
-}
-
-/* Posiciono a caixa usando flexbox */
-.dados {
+  }
+  
+  .dados {
     display: flex;
     flex-direction: column;
     margin: 5%;
     border-radius: 5px;
-} 
-
-/* Configuro cada linha de variável com cor e posicionamento */
-.info{
+  }
+  
+  .info {
     background-color: rgba(128, 128, 128, 0.447);
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 10px;
-}
-
-.texto{
+  }
+  
+  .texto {
     color: var(--branco);
-}
-
-/* Padronizo os textos para a cor branca */
-#sloganperfil{
+  }
+  
+  #sloganperfil {
     color: var(--branco);
     margin-bottom: 0 !important;
     margin-right: auto;
-}
-
-/* Posiciono o rodape da carteirinha */
-#hashtag{
+  }
+  
+  #hashtag {
     display: flex;
     align-items: center;
     padding: 30px;
-}
-
-.row>*{
+  }
+  
+  .row > * {
     padding: 0 !important;
-}
-
-/* Defino o tamanho da logo do rodape */
-#logo_cart{
+  }
+  
+  #logo_cart {
     width: 40px;
     position: relative;
-}
-
-#editar, #excluir{
+  }
+  
+  #editar,
+  #excluir {
     padding: 10px;
     border: 1px solid black;
     border-radius: 5px;
     color: var(--branco);
     transition: 0.4s ease;
     user-select: none;
-}
-
-#editar{
+  }
+  
+  #editar {
     width: 180px;
     background-color: var(--azul_princ);
     margin-bottom: 10px;
-}
-
-#botoes{
+  }
+  
+  #botoes {
     display: flex;
     flex-direction: column;
-}
-
-#excluir{
+  }
+  
+  #excluir {
     background-color: #c20505;
     width: 130px;
-}
-
-#excluir:hover{
+  }
+  
+  #excluir:hover {
     cursor: pointer;
     background-color: #740707;
-}
-
-#editar:hover{
+  }
+  
+  #editar:hover {
     cursor: pointer;
-    
     background-color: var(--azul_terc);
-}
+  }
 
 /* switch */
 .switch {

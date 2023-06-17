@@ -1,39 +1,6 @@
-:root{
-    --body_grad: linear-gradient(to top right, #057dc2, #83e3cd);
-    --azul_princ: #057dc2;
-    --azul_claro: rgb(0, 198, 255);
-    --branco: #ffffff;
-    --azul_sec: #4267b3;
-    --ciano: #83e3cd;
-    --black: #000000;
-    --azul_terc: #284174;
-    --azul_quart: #183153;
-    --lilas: #4169e1;
-    --roxo: #7f37c9;
-    --azul_quint: #145374;
-}
-
-/* [data-theme="black"] {
-    --azul_princ: #012f49;
-    --branco: #000000;
-    --black: #ffffff;
-}  */
-
 #perfila{
     color: var(--azul_sec) !important;
-	text-shadow: none;
-    background-color: var(--branco);
 }
-
-.iconeuser{
-    fill: var(--azul_sec);
-}
-
-/* ------------------------------------------------------------------------------------- */
-
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Quicksand:wght@600&display=swap');
 
 /* Definições geral da página */
 *{
@@ -41,7 +8,6 @@
     padding: 0;
     font-family: 'Quicksand', sans-serif;
 }
-
 
 /* Aplicando altura no header */
 header{
@@ -82,7 +48,6 @@ h1{
     padding: 10px;
 }
 
-
 /* Aplicando margem */
 .campos {
     margin-top: 3%;
@@ -92,7 +57,7 @@ h1{
     padding-top: 5%;
 }
 
-/* Aplicando margen,cor, borda e fonte no botão */
+/* Aplicando margen, cor, borda e fonte no botão */
 #alterar, #alterarSenha{
     margin-bottom: 1%;
     padding: 11px;
@@ -110,17 +75,15 @@ h1{
     margin-left: 25%;
 }
 
-
 #alterar:hover, #alterarSenha:hover{
     cursor: pointer;
-	background-color: var(--azul_terc);
+    background-color: var(--azul_terc);
 }
 
 /* mudo o cursor para pointer ao passar o mouse no botao inscrever-se */
 .inscrever:hover{
-	cursor: pointer;
-	background-color: var(--azul_terc);
-
+    cursor: pointer;
+    background-color: var(--azul_terc);
 }
 
 /* Aplicando diplay e cor na mensagem de erro */
@@ -138,11 +101,9 @@ h1{
     text-align: justify;
 }
 
-
 #label_nome, #label_email{
     padding-left: 0;
 }
-
 
 #floatingInputGroup1, #floatingInputGroup2{
     border: none;
@@ -151,11 +112,8 @@ h1{
     border-bottom: 1px solid var(--black);
     padding-bottom: 0;
     box-shadow: 0 0 0 0;
-    
 }
 
 #floatingInputGroup1, #floatingInputGroup2:hover{
     border-bottom: 1px solid var(--black);
 }
-
-

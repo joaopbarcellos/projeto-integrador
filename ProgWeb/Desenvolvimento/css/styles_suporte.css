@@ -1,4 +1,4 @@
-:root{
+:root {
     --body_grad: linear-gradient(to top right, #057dc2, #83e3cd);
     --azul_princ: #057dc2;
     --azul_claro: rgb(0, 198, 255);
@@ -11,26 +11,20 @@
     --lilas: #4169e1;
     --roxo: #7f37c9;
     --azul_quint: #145374;
-    --azul_escuro :#043f5c;
-}
-
-/* [data-theme="black"] {
-    --azul_princ: #012f49;
-    --branco: #000000;
-    --black: #ffffff;
-}  */
-
-#ajudaa{
+    --azul_escuro: #043f5c;
+  }
+  
+  #ajudaa {
     color: var(--azul_sec) !important;
     text-shadow: none;
     background-color: var(--branco);
   }
-
-.iconeajuda{
+  
+  .iconeajuda {
     fill: var(--azul_sec);
-}
-
-#voltar{
+  }
+  
+  #voltar {
     position: absolute;
     margin-left: 10px;
     margin-top: 10px;
@@ -40,64 +34,62 @@
     align-items: center;
     border-radius: 5px;
     transition: 0.4s ease;
-}
-
-#voltar:hover{
+  }
+  
+  #voltar:hover {
     background-color: var(--azul_princ);
-}
-
-#voltar p{
+  }
+  
+  #voltar p {
     color: var(--black);
-}
-
-#voltar img{
+  }
+  
+  #voltar img {
     height: 10px;
     padding-right: 5px;
-}
-
-#container{
+  }
+  
+  #container {
     background: var(--azul_princ);
     margin: 0 auto;
     border-radius: 10px;
-    box-shadow: 0px 0px 41px 3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 41px 3px rgba(0, 0, 0, 0.75);
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-#container h1, p{
-    color: var(--branco)
-}
-
-/* Aplicando flexbox e espaçamento */
-h1{
+  }
+  
+  #container h1,
+  p {
+    color: var(--branco);
+  }
+  
+  h1 {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 25px;
-    font-weight: bold;      
-}
-
-.erro{
+    font-weight: bold;
+  }
+  
+  .erro {
     display: none;
     color: #f58181;
-}
-
-.campos{
+  }
+  
+  .campos {
     width: 95%;
-}
-
-/* Aplicando flexbox, margem e tamanho da fonte */
-#form{
-    background:  transparent;
+  }
+  
+  #form {
+    background: transparent;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 5px;
-}
-
-/* Definindo tamanho, margem, borda, cor e tamanho da fonte */
-#envio{
+  }
+  
+  #envio {
     height: 45px;
     border-radius: 5px;
     background-color: var(--azul_quint);
@@ -105,28 +97,25 @@ h1{
     border: 1px solid black;
     transition: 0.4s ease;
     cursor: pointer;
-}
-
-#envio:hover{
+  }
+  
+  #envio:hover {
     cursor: pointer;
     background-color: var(--azul_escuro);
-}
-
-#floatingTextarea1{
+  }
+  
+  #floatingTextarea1 {
     min-height: 150px;
     max-height: 400px;
-}
-
-
-#floatingInputGrid{
+  }
+  
+  #floatingInputGrid {
     margin-bottom: 5px;
-}
-
-
-#floatingInputGrid, #floatingTextarea1{
+  }
+  
+  #floatingInputGrid,
+  #floatingTextarea1 {
     outline: 0;
     border: 1px solid;
     box-shadow: 0 0 0 0;
-}
-
-
+  }  

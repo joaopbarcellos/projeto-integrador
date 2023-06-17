@@ -1,63 +1,51 @@
+/* Importação de fontes */
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Quicksand:wght@600&display=swap');
 
-:root{
-    --body_grad: linear-gradient(to top right, #057dc2, #83e3cd);
-    --azul_princ: #057dc2;
-    --azul_claro: rgb(0, 198, 255);
-    --branco: #ffffff;
-    --azul_sec: #4267b3;
-    --ciano: #83e3cd;
-    --black: #000000;
-    --azul_terc: #284174;
-    --azul_quart: #183153;
-    --lilas: #4169e1;
-    --roxo: #7f37c9;
-    --azul_quint: #145374;
-}
-
-/*
-[data-theme="black"] {
-
-} */
-
-*{
+/* Estilos base para todos os elementos */
+* {
     font-family: 'Quicksand', sans-serif;
 }
 
-body{
+/* Estilos para o elemento body */
+body {
     min-width: 200px;
 }
 
-h1{
+/* Estilos para o elemento h1 */
+h1 {
     color: var(--branco) !important;
 }
 
-.divGeral{
+/* Estilos para a classe .divGeral */
+.divGeral {
     background-color: #057dc2;
     border-radius: 10px;
     box-shadow: -1px -2px 25px 8px #000000;
     padding: 10px;
 }
 
-
-#floatingInputGroup1, #floatingInputGroup2, #floatingInputGroup3{
+/* Estilos para os elementos #floatingInputGroup1, #floatingInputGroup2, #floatingInputGroup3 */
+#floatingInputGroup1,
+#floatingInputGroup2,
+#floatingInputGroup3 {
     border: none;
     outline: 0;
     border-radius: 0;
     border-bottom: 1px solid #000000;
     box-shadow: 0 0 0 0;
     padding-top: 2rem;
-}
-
-#label_senha, #label_senhaAnti, #label_confSenha{
-    padding-left: 0;
-}
-
-#floatingInputGroup1, #floatingInputGroup2, #floatingInputGroup3{
     border-bottom: 1px solid #000000;
 }
 
-.formulario{
+/* Estilos para os elementos #label_senha, #label_senhaAnti, #label_confSenha */
+#label_senha,
+#label_senhaAnti,
+#label_confSenha {
+    padding-left: 0;
+}
+
+/* Estilos para a classe .formulario */
+.formulario {
     background-color: var(--branco) !important;
     margin-left: 4% !important;
     margin-right: 4% !important;
@@ -70,12 +58,13 @@ h1{
     padding: 10px;
 }
 
-#alterar{
+/* Estilos para o elemento #alterar */
+#alterar {
     margin-bottom: 2%;
     margin-left: 8%;
     padding: 11px;
     cursor: pointer;
-    border: 1px solid black;    
+    border: 1px solid black;
     background-color: #057dc2;
     color: #fff;
     border-radius: 5px;
@@ -83,7 +72,7 @@ h1{
     user-select: none;
 }
 
-#alterar:hover{
+#alterar:hover {
     cursor: pointer;
-	background-color: #284174;
+    background-color: #284174;
 }
