@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+
+:root{
+    --body_grad: linear-gradient(to top right, #057dc2, #83e3cd);
+    --azul_princ: #057dc2;
+    --azul_claro: rgb(0, 198, 255);
+    --azul-claro_sec: rgb(0, 167, 245);
+    --branco: #ffffff;
+    --azul_sec: #4267b3;
+    --ciano: #83e3cd;
+    --black: #000000;
+    --azul_terc: #284174;
+    --azul_quart: #183153;
+    --lilas: #4169e1;
+    --roxo: #7f37c9;
+    --azul_quint: #145374;
+}
+
+/* [data-theme="black"] {
+    --azul_princ: #012f49;
+    --branco: #000000;
+    --black: #ffffff;
+}  */
+
+/* Aplicando fonte */
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+
+#sobrea{
+    color: var(--azul_sec) !important;
+	text-shadow: none;
+}
+
+.iconesobre{
+    fill: var(--azul_sec);
+}
+
+/* Definindo espaçamentos e flexbox */
+#sobre{
+    padding-left: 5%;
+    padding-right: 5%;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: justify;
+}
+
+/* Aplicando flexbox e espaçamento */
+.h2_equipe{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+/* Aplicando espaçamento, cor, margem, flexbox, borda e sombra */
+.pessoas{
+    background-color: var(--azul-claro_sec);
+    border-radius: 20px;
+    display: flex;
+    height: auto;
+    margin-right: 1%;
+    margin-left: 1%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 20px;
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+}
+
+.participante{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Definindo fonte */
+.pessoas h3{
+    font-size: 1.3rem;
+    text-align: center;
+    word-break: break-all;
+}
+
+.container{
+    margin-top: 3%;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.row{
+    align-items: center;
+}
+
+/* Definindo tamanho e margem */
+.foto{
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 85%;
+}
+
+/* Aplicando flexbox e margem */
+.span_integrantes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 2.5%;
+}
+
+/* Definindo margem e tamanho */
+.iconeSobre {
+    margin-bottom: 0;
+    width: 20px;
+    object-fit: contain;
+}
+#textos{
+    color: var(--black) !important;
+    padding: 0 !important;
+}
+
+#c{
+    cursor: pointer;
+}
+
+#img_easter{
+    position: absolute;
+    top: 0;
+    display: none;
+    width: 50%;
+    top: 970px;
+    left: 50%;
+    transition: 2s ease;
+}
+
+#c:hover #img_easter{
+    display: block;
+}
+
+
