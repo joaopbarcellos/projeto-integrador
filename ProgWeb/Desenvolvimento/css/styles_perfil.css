@@ -1,0 +1,263 @@
+/* temas */
+:root{
+    --body_grad: linear-gradient(to top right, #057dc2, #83e3cd);
+    --azul_princ: #057dc2;
+    --azul_claro: rgb(0, 198, 255);
+    --azul-claro_sec: rgb(0, 167, 245);
+    --branco: #ffffff;
+    --azul_sec: #4267b3;
+    --ciano: #83e3cd;
+    --black: #000000;
+    --azul_terc: #284174;
+    --azul_quart: #183153;
+    --lilas: #4169e1;
+    --roxo: #7f37c9;
+    --azul_quint: #145374;
+}
+
+/* [data-theme="black"] {
+    --azul_princ: #012f49;
+    --branco: #000000;
+    --black: #ffffff;
+}  */
+
+
+#perfila{
+    color: var(--azul_sec) !important;
+	text-shadow: none;
+}
+
+.iconeuser{
+    fill: var(--azul_sec);
+}
+
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Configuro a estetica e posicao da carteirinha */
+#perfil{
+    margin-top: 50px;
+    border: solid 0px #000000;
+    border-radius: 12px;
+    box-shadow: inset 0 0 0.5em rgb(90, 90, 90), 0 0 1em rgb(90, 90, 90);
+	background-color: var(--azul-claro_sec);
+    margin-bottom: 30px;
+}
+
+/* configuro o flex da caixa de informacoes com a foto */
+.fot_desc{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.row{
+    margin: 0 !important;
+}
+
+/* Configuro a foto padrão dos usuários */
+#semfoto {
+    height: 8rem;
+    width: auto;
+    margin: 20px;
+}
+
+.word-break {
+    word-break: break-word;
+}
+
+/* Posiciono a caixa usando flexbox */
+.dados {
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    border-radius: 5px;
+} 
+
+/* Configuro cada linha de variável com cor e posicionamento */
+.info{
+    background-color: rgba(128, 128, 128, 0.447);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.texto{
+    color: var(--branco);
+}
+
+/* Padronizo os textos para a cor branca */
+#sloganperfil{
+    color: var(--branco);
+    margin-bottom: 0 !important;
+    margin-right: auto;
+}
+
+/* Posiciono o rodape da carteirinha */
+#hashtag{
+    display: flex;
+    align-items: center;
+    padding: 30px;
+}
+
+.row>*{
+    padding: 0 !important;
+}
+
+/* Defino o tamanho da logo do rodape */
+#logo_cart{
+    width: 40px;
+    position: relative;
+}
+
+#editar, #excluir{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: var(--branco);
+    transition: 0.4s ease;
+    user-select: none;
+}
+
+#editar{
+    width: 180px;
+    background-color: var(--azul_princ);
+    margin-bottom: 10px;
+}
+
+#botoes{
+    display: flex;
+    flex-direction: column;
+}
+
+#excluir{
+    background-color: #c20505;
+    width: 130px;
+}
+
+#excluir:hover{
+    cursor: pointer;
+    background-color: #740707;
+}
+
+#editar:hover{
+    cursor: pointer;
+    
+    background-color: var(--azul_terc);
+}
+
+/* switch */
+.switch {
+    display: none !important;
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 64px;
+    height: 34px;
+    top: 20px;
+    left: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #73C0FC;
+    transition: .4s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    left: 2px;
+    bottom: 2px;
+    z-index: 2;
+    background-color: #e8e8e8;
+    transition: .4s;
+}
+
+.sun svg {
+    position: absolute;
+    top: 6px;
+    left: 36px;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+}
+
+.moon svg {
+    fill: #73C0FC;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+}
+
+/* .switch:hover */
+.sun svg {
+animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* .switch:hover */.moon svg {
+animation: tilt 5s linear infinite;
+}
+
+@keyframes tilt {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-10deg);
+    }
+
+    75% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.input:checked + .slider {
+    background-color: #183153;
+}
+
+.input:focus + .slider {
+    box-shadow: 0 0 1px #183153;
+}
+
+.input:checked + .slider:before {
+    transform: translateX(30px);
+}
