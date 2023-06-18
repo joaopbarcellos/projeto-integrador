@@ -1,10 +1,10 @@
 #homea{
     color: var(--azul_sec) !important;
     text-shadow: none;
-  }
-  
+}
+
 .iconecasinha{
-    fill: var(--azul_sec);
+    fill: var(--azul_sec) !important;
 }
 
 .cssbuttons-io-button {

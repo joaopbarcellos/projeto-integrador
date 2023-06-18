@@ -41,20 +41,6 @@ img{
     box-shadow: -1px -2px 25px 8px var(--black);
 }
 
-.div_esqueci{
-    background-color: var(--branco);
-    margin-top: 2%;
-    border-radius: 10px; 
-    box-shadow: -1px -2px 25px 8px var(--black);
-}
-
-/* Aplicando flexbox e fonte */
-h1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-}
 /* Aplicando margem e flexbox na div */
 .formulario{
     margin: 7%;
@@ -73,10 +59,6 @@ form .nome{
 .campos {
     margin-top: 4%;
     margin-bottom: 2%;
-}
-
-#arrow{
-    width: 30px;
 }
 
 /* Selecionando todos os inputs e aplicando margem e tamanho */
@@ -106,28 +88,9 @@ input[type="date"]{
 	background-color: var(--azul_terc)
 }
 
-/* Configurando paragrafo com padding e espaco entre letras */
-#textin{
-    padding: 15%;
-    padding-top: 5%;
-    letter-spacing: 1px;
-    padding-bottom: 0px;
-    text-align: justify;
-}
-
 .senha{
     padding-bottom: 3%;
 }
-
-.focado {
-    transform: translateY(-35px);
-}
-
-.semTexto {
-    transform: translateY(0%);
-    color: var(--black);
-}
-
 
 #voltar{
     padding-top: 5%;

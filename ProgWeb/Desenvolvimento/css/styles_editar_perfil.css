@@ -1,5 +1,11 @@
 #perfila{
     color: var(--azul_sec) !important;
+    text-shadow: none;
+    background-color: var(--branco);
+}
+
+.iconeuser{
+    fill: var(--azul_sec);
 }
 
 /* Definições geral da página */
@@ -12,6 +18,12 @@
 /* Aplicando altura no header */
 header{
     height: 10%;
+}
+
+#editar{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }
 
 /* Aplicando tamanho, margens, cor e bordas na div */
@@ -80,25 +92,10 @@ h1{
     background-color: var(--azul_terc);
 }
 
-/* mudo o cursor para pointer ao passar o mouse no botao inscrever-se */
-.inscrever:hover{
-    cursor: pointer;
-    background-color: var(--azul_terc);
-}
-
 /* Aplicando diplay e cor na mensagem de erro */
 .erro {
     display: none;
     color: #f58181;
-}
-
-/* Configurando paragrafo com padding e espaco entre letras */
-#textin{
-    padding: 45px;
-    padding-top: 15px;
-    letter-spacing: 1px;
-    padding-bottom: 0px;
-    text-align: justify;
 }
 
 #label_nome, #label_email{

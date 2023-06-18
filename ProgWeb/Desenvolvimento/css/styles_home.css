@@ -4,17 +4,12 @@
 }
 
 .iconecasinha{
-	fill: var(--azul_sec);
+  fill: var(--azul_sec);
 }
-
-/* Aplicando flexbox, alinhamento, cor e sombra*/
-#btn-home{
-	padding-right: 0;
-}
-
 
 .carousel{
   position: unset !important;
+  left: 80%
 }
 
 /* Definindo tamanho,posição e flexbox */
@@ -120,26 +115,6 @@ section{
   
 .carousel-inner{
   margin-top: 2%;
-}
-
-  
-@keyframes scaleUp {
-	0% {
-	transform: scale(1);
-  }
-
-	50% {
-	transform: scale(0.95);
-  }
-
-100% {
-	transform: scale(1);
-	}
-}
-
-/* Definindo posição e cursor */
-.slide {
-  left: 80%
 }
 
 .carousel-control-prev, .carousel-control-next{

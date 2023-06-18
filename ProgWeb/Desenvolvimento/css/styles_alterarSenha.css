@@ -1,6 +1,16 @@
 /* Importação de fontes */
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Quicksand:wght@600&display=swap');
 
+#perfila{
+    color: var(--azul_sec) !important;
+    text-shadow: none;
+    background-color: var(--branco);
+  }
+  
+.iconeuser{
+      fill: var(--azul_sec);
+  }
+
 /* Estilos base para todos os elementos */
 * {
     font-family: 'Quicksand', sans-serif;

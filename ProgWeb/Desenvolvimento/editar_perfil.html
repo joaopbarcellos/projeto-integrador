@@ -130,125 +130,126 @@
 			</div>
 		</button>
 	</div>
+	<div id="editar">
+		<!-- Div que ficará com o formulário -->
+		<div class="div_cadastro col-11 col-sm-8 col-md-7 col-lg-6 col-xg-5 mt-5 mt-md-0">
 
-	<!-- Div que ficará com o formulário -->
-    <div class="div_cadastro col-11 col-sm-8 col-md-7 col-lg-6 col-xg-5 mt-5 mt-md-0">
+			<!-- Título pro formulário -->
+			<h1 class="fs-1"> Editar informações de login </h1> 
 
-        <!-- Título pro formulário -->
-        <h1 class="fs-1"> Editar informações de login </h1> 
+			<!-- Div para estilizar o formulário -->
+			<div class="formulario fs-5"> 
 
-        <!-- Div para estilizar o formulário -->
-        <div class="formulario fs-5"> 
+				<!-- Criando fomulário de Cadastro -->
+				<form> 
 
-            <!-- Criando fomulário de Cadastro -->
-            <form> 
+					<!-- Nome do usuário -->
+					<div class="nome campos">
 
-                <!-- Nome do usuário -->
-                <div class="nome campos">
-
-					<div class="form-floating">
-                        <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Nome">
-                        <label for="nome" id="label_nome">Nome</label>
-                    </div>
+						<div class="form-floating">
+							<input type="text" class="form-control" id="floatingInputGroup1" placeholder="Nome">
+							<label for="nome" id="label_nome">Nome</label>
+						</div>
 
 
-                    <label class="erro fs-6 fs-10 fs-7 fs-6 fs-5" id="noNome">Nome deve ser preenchido!</label>
+						<label class="erro fs-6 fs-10 fs-7 fs-6 fs-5" id="noNome">Nome deve ser preenchido!</label>
 
-                </div>
-                
-                <!-- E-mail do usuário -->
-                <div class="email campos">
-
-                    <div class="form-floating">
-                        <input type="email" class="form-control" id="floatingInputGroup2" placeholder="E-mail">
-                        <label for="email" id="label_email">E-mail</label>
-                    </div>
-
-                    <label class="erro fs-6 fs-10 fs-7 fs-6 fs-5" id="noEmail">E-mail deve ser preenchido!</label><br>
-
-                    <label class="erro fs-6 fs-10 fs-7 fs-6 fs-5" id="noEmailPadrao">E-mail está fora dos padrões!</label>
+					</div>
 					
-					<label class="erro fs-6 fs-10 fs-7 fs-6 fs-5" id="noEmailExiste">E-mail já está cadastrado!</label>
+					<!-- E-mail do usuário -->
+					<div class="email campos">
 
-                </div>
-                
-                <!-- Idade do usuário -->
-                <div class="idade campos">
-                    <label for="idade" id="labelData">Data de Nascimento:</label>
+						<div class="form-floating">
+							<input type="email" class="form-control" id="floatingInputGroup2" placeholder="E-mail">
+							<label for="email" id="label_email">E-mail</label>
+						</div>
 
-                    <input type="date" id="idade" name="idade_usuario">
+						<label class="erro fs-6 fs-10 fs-7 fs-6 fs-5" id="noEmail">E-mail deve ser preenchido!</label><br>
 
-                    <label class="erro fs-6 fs-10 fs-7 fs-6 fs-5" id="noData">Data deve ser preenchida!</label>
+						<label class="erro fs-6 fs-10 fs-7 fs-6 fs-5" id="noEmailPadrao">E-mail está fora dos padrões!</label>
+						
+						<label class="erro fs-6 fs-10 fs-7 fs-6 fs-5" id="noEmailExiste">E-mail já está cadastrado!</label>
 
-					<label class="erro fs-6 fs-10 fs-7 fs-6 fs-5" id="passouData">Data inválida!</label>
+					</div>
+					
+					<!-- Idade do usuário -->
+					<div class="idade campos">
+						<label for="idade" id="labelData">Data de Nascimento:</label>
 
-                </div> 
-                
-                <div class="joga campos">
+						<input type="date" id="idade" name="idade_usuario">
 
-                    <div class="jogabilidade">
+						<label class="erro fs-6 fs-10 fs-7 fs-6 fs-5" id="noData">Data deve ser preenchida!</label>
 
-                        <!-- Grau de conhecimento -->
-                        <label for="jogabilidade" class="label_joga">Jogador:</label>
+						<label class="erro fs-6 fs-10 fs-7 fs-6 fs-5" id="passouData">Data inválida!</label>
 
-                        <div class="radios">
+					</div> 
+					
+					<div class="joga campos">
 
-                            <!-- Profissional-->
-                            <div class="radio profissa">
+						<div class="jogabilidade">
 
-								<!-- Input e label -->
-                                <input type="radio" id="Profissional" name="jogabilidade" class="bolaRadio">
+							<!-- Grau de conhecimento -->
+							<label for="jogabilidade" class="label_joga">Jogador:</label>
 
-                                <label class="jogabilidades" for="Profissional"> Profissional </label>
+							<div class="radios">
 
-                            </div>
+								<!-- Profissional-->
+								<div class="radio profissa">
 
-                            <!-- Amador -->
-                            <div class="radio amad">
+									<!-- Input e label -->
+									<input type="radio" id="Profissional" name="jogabilidade" class="bolaRadio">
 
-								<!-- Input e label -->
-                                <input type="radio" id="Amador" name="jogabilidade" class="bolaRadio">
+									<label class="jogabilidades" for="Profissional"> Profissional </label>
 
-                                <label class="jogabilidades" for="Amador"> Amador </label>               
+								</div>
 
-                            </div>
+								<!-- Amador -->
+								<div class="radio amad">
 
-                            <!--Iniciante -->
-                            <div class="radio inic">
+									<!-- Input e label -->
+									<input type="radio" id="Amador" name="jogabilidade" class="bolaRadio">
 
-								<!-- Input e label -->
-                                <input type="radio" id="Iniciante" name="jogabilidade" class="bolaRadio">
+									<label class="jogabilidades" for="Amador"> Amador </label>               
 
-                                <label class="jogabilidades" for="Iniciante"> Iniciante </label>
+								</div>
 
-                            </div>
+								<!--Iniciante -->
+								<div class="radio inic">
 
-							<!-- Mensagem de erro -->
-                            <label class="erro fs-6 fs-10 fs-7 fs-6 fs-5" id="noJogabilidade">Nível de experiência deve ser escolhido!</label>
-                        
-                            <!-- Fim da div radios -->
-                        </div>
+									<!-- Input e label -->
+									<input type="radio" id="Iniciante" name="jogabilidade" class="bolaRadio">
 
-                        <!-- Fim da div jogabilidade -->
-                    </div>
+									<label class="jogabilidades" for="Iniciante"> Iniciante </label>
 
-                    <!-- Fim da div joga -->
-                </div>
+								</div>
 
-            </form>
+								<!-- Mensagem de erro -->
+								<label class="erro fs-6 fs-10 fs-7 fs-6 fs-5" id="noJogabilidade">Nível de experiência deve ser escolhido!</label>
+							
+								<!-- Fim da div radios -->
+							</div>
 
-            <!-- Botão para cadastrar usuário, está fora do form para não resetar a página ao clicar-->
-            <button id="alterar" class="fs-5 col-12 col-lg-8 mt-4 mx-auto"> SALVAR ALTERAÇÕES </button> 
+							<!-- Fim da div jogabilidade -->
+						</div>
 
-        </div>
+						<!-- Fim da div joga -->
+					</div>
 
-    </div>
+				</form>
 
-	<!-- Botão para levar para a página de alterar senha -->
-	<button id="alterarSenha" class="fs-5">
-		<svg class="iconesenha" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M336 352c97.2 0 176-78.8 176-176S433.2 0 336 0S160 78.8 160 176c0 18.7 2.9 36.8 8.3 53.7L7 391c-4.5 4.5-7 10.6-7 17v80c0 13.3 10.7 24 24 24h80c13.3 0 24-10.7 24-24V448h40c13.3 0 24-10.7 24-24V384h40c6.4 0 12.5-2.5 17-7l33.3-33.3c16.9 5.4 35 8.3 53.7 8.3zM376 96a40 40 0 1 1 0 80 40 40 0 1 1 0-80z"/></svg>
-		Alterar Senha
-	</button>
+				<!-- Botão para cadastrar usuário, está fora do form para não resetar a página ao clicar-->
+				<button id="alterar" class="fs-5 col-12 col-lg-8 mt-4 mx-auto"> SALVAR ALTERAÇÕES </button> 
+
+			</div>
+
+		</div>
+
+		<!-- Botão para levar para a página de alterar senha -->
+		<button id="alterarSenha" class="fs-5">
+			<svg class="iconesenha" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M336 352c97.2 0 176-78.8 176-176S433.2 0 336 0S160 78.8 160 176c0 18.7 2.9 36.8 8.3 53.7L7 391c-4.5 4.5-7 10.6-7 17v80c0 13.3 10.7 24 24 24h80c13.3 0 24-10.7 24-24V448h40c13.3 0 24-10.7 24-24V384h40c6.4 0 12.5-2.5 17-7l33.3-33.3c16.9 5.4 35 8.3 53.7 8.3zM376 96a40 40 0 1 1 0 80 40 40 0 1 1 0-80z"/></svg>
+			Alterar Senha
+		</button>
+	</div>
 
 	<footer>
 		<!-- Inicio do meu container com 3 blocos -->

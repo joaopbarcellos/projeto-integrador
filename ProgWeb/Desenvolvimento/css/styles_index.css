@@ -1,39 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Quicksand:wght@600&display=swap');
 
-:root{
-    --body_grad: linear-gradient(to top right, #057dc2, #83e3cd);
-    --azul_princ: #057dc2;
-    --azul_claro: rgb(0, 198, 255);
-    --branco: #ffffff;
-    --azul_sec: #4267b3;
-    --ciano: #83e3cd;
-    --black: #000000;
-    --azul_terc: #284174;
-    --azul_quart: #183153;
-    --lilas: #4169e1;
-    --roxo: #7f37c9;
-    --azul_quint: #145374;
-}
-
-/* [data-theme="black"] {
-    --azul_princ: #012f49;
-    --branco: #000000;
-    --black: #ffffff;
-}  */
-
-/* Denindo fonte definição geral da página */
+/* Definindo fonte para toda a página */
 *{
     font-family: 'Quicksand', sans-serif;
 }
 
-/* Aplicando cor e deixando a imagem fixa independente do navegador */
+/* Definindo plano de fundo e posição */
 body{
     background: var(--body_grad);
     background-attachment: fixed;
     min-width: 200px;
 }
 
-/* Definindo posição*/
+/* Posição e tamanho da imagem */
 img{
     position: absolute;
     width: 10%;
@@ -41,32 +20,26 @@ img{
     top: 50px;
 }
 
-#logina{
-    color: var(--azul_sec) !important;
-	text-shadow: none;
-}
-
-/* Definindo altura */
+/* Altura do header */
 header{
     height: 10%;
 }
 
-/* Aplicando tamanho, cor, margem e bordas */
+/* Estilos da div de login */
 .divLogin{
     background-color: var(--branco);
     border-radius: 10px;
     box-shadow: -1px -2px 25px 8px var(--black);
 }
 
-
-/* Aplicando flexbox e espaçamento */
+/* Estilos do título */
 h1{
     display: flex;
     justify-content: center;
     padding-top: 5%;
 }
 
-/* Aplicando flexbox, margem e tamanho da fonte */
+/* Estilos do formulário */
 #form{
     margin: 8%;
     display: flex;
@@ -75,14 +48,13 @@ h1{
     font-size: 1.18748em;
 }
 
-
-/* Definindo tamanho da fonte e tirando decoração do link */
+/* Estilos para links */
 a{
     text-decoration: none;
     font-size: 0.8em;
 }
 
-/* Aplicando flexbox e espaçamento */
+/* Estilos do botão de login */
 .log{
     display: flex;
     flex-direction: column;
@@ -91,7 +63,7 @@ a{
     padding-bottom: 5%;
 }
 
-/* Definindo tamanho, margem, borda, cor e tamanho da fonte */
+/* Estilos do botão de login */
 .log button{
     width: 80%;
     height: 45px;
@@ -107,13 +79,12 @@ a{
 .log button:hover{
 	cursor: pointer;
 	background-color: var(--azul_terc);
-
 }
 
+/* Estilos dos campos de senha */
 #senha_usuario{
     margin-top: 15px;
 }
-
 
 #floatingInputGroup1, #floatingInputGroup2{
     border: none;
@@ -124,11 +95,9 @@ a{
     padding-top: 2rem;
 }
 
-
 #label_senha, #label_email{
     padding-left: 0;
 }
-
 
 #floatingInputGroup1, #floatingInputGroup2{
     border-bottom: 1px solid #000000;
