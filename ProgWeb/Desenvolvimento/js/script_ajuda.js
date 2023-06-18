@@ -4,13 +4,13 @@ perguntas.forEach(pergunta => {
   pergunta.addEventListener('click', () => {
 
     // Atribuindo como resposta o proximo elemento irmao da div pergunta
-    const resposta = pergunta.nextElementSibling; 
+    const resposta = pergunta.nextElementSibling;
 
     // Caso a resposta seja visivel, ela desaparecera de forma suave
     if (resposta.style.display == 'block') {
       $(resposta).slideUp('slow');
 
-    // Caso a resposta seja invisivel, mostra a resposta de forma suave
+      // Caso a resposta seja invisivel, mostra a resposta de forma suave
     } else {
       $(resposta).slideDown('slow');
     }
@@ -27,8 +27,8 @@ respostas.forEach(rep => {
   // Adicionando um ouvidor de cliques
   rep.addEventListener('click', () => {
 
-      // Ao clicar na resposta, ela desaparece de forma suave
-      $(rep).slideUp('slow');
-    
+    // Ao clicar na resposta, ela desaparece de forma suave
+    $(rep).slideUp('slow');
+
   })
 });

@@ -1,9 +1,9 @@
-#homea{
+#homea {
     color: var(--azul_sec) !important;
     text-shadow: none;
 }
 
-.iconecasinha{
+.iconecasinha {
     fill: var(--azul_sec) !important;
 }
 
@@ -12,19 +12,20 @@
     top: 100px;
     z-index: 1;
 }
-.slot{
+
+.slot {
     height: 90px !important;
 }
 
-.NavBar_MapTypeButtonDropDownIcon{
+.NavBar_MapTypeButtonDropDownIcon {
     display: none !important;
 }
 
-.birdseye{
+.birdseye {
     display: none !important;
 }
 
-#ZoomInButton{
+#ZoomInButton {
     display: block !important;
 }
 
@@ -32,43 +33,43 @@
     display: none !important;
 }
 
-.labelCanvas{
+.labelCanvas {
     width: 100% !important;
 }
 
-.CopyrightContainer{
+.CopyrightContainer {
     display: none !important;
 }
 
-.bm_LogoContainer{
+.bm_LogoContainer {
     display: none !important;
 }
 
-.ScaleBar{
+.ScaleBar {
     margin-bottom: 10px !important;
 }
 
-#mapa{
+#mapa {
     width: 100% !important;
 }
 
-.row{
+.row {
     margin: 0 !important;
     padding: 0 !important;
 }
 
-.row> *{
+.row>* {
     width: 100%;
     margin: 0 !important;
     padding: 0 !important;
 }
 
-body{
+body {
     padding: 0;
-    margin: 0;    
+    margin: 0;
 }
 
 
-html   {
+html {
     height: 100%;
 }

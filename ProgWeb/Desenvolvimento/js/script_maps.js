@@ -1,79 +1,53 @@
-function nomeEvento(){
-    let nomeJanela = document.referrer.replace("/ProgWeb/Desenvolvimento").replace("/eventos/", "").replace(".html", "").replace("http://", "").replace("localhost", "").replace("127.0.0.1", "").replace( ":5500", "");
-    return nomeJanela.toLowerCase();
+function nomeEvento() {
+    let nomeJanela = document.referrer.replace("/ProgWeb/Desenvolvimento").replace("/eventos/", "").replace(".html", "").replace("http://", "").replace("localhost", "").replace("127.0.0.1", "").replace(":5500", "");
+    return nomeJanela;
 };
 
-// const mapa = document.getElementById("mapa");
-
-// // Funcao que calcula o tamanho do mapa com base no tamanho da tela
-// function calculaTamanhoMapa(mapa){
-//     const posicaoYMapa = mapa.offsetTop;
-//     var alturaPagina = window.innerHeight;
-//     mapa.style.height = `${alturaPagina - posicaoYMapa}px`;
-//     mapa.style.width = `${document.querySelector("nav").clientWidth}px`
-// }
-
-// // locIfes, locAulaZico, locTreinoBlack, locNatacao, locMarDourado, loc10Corrida, locLEtape, locSurf, locBasquete, locMotocross
-// const locIfes = (-20.197329691804068, -40.2170160437478);
-// const locAulaZico = (-20.210745686329638, -40.26339017193191);
-// const locTreinoBlack = (-20.277042066307818, -40.299547001384624);
-// const locNatacao = (-19.98934303687819, -40.149159630227594);
-// const locMarDourado = (-20.372179535206815, -40.30335365665824);
-// const loc10Corrida = (-20.326947780230874, -40.291622531407256);
-// const locLEtape = (-22.919773340159463, -43.1700841452671);
-// const locSurf = (-20.37053693311, -40.30429837370785);
-// const locBasquete = (-20.309387282525176, -40.294921876227576);
-// const locMotocross = (-20.144511854276182, -40.18332926312631);
-// const locEventos = {};
-// locEventos["locIfes"] = locIfes;
-// locEventos["aulazico"] = locAulaZico;
-// locEventos["basquetecaue"] = locBasquete;
-// locEventos["corridapenha"] = loc10Corrida;
-// locEventos["desafionatacao"] = locNatacao;
-// locEventos["etaperio"] = locLEtape;
-// locEventos["mardourado"] = locMarDourado;
-// locEventos["motocrossarena"] = locMotocross;
-// locEventos["surfitaparica"] = locSurf;
-// locEventos["treinoblack"] = locTreinoBlack;
-
-// function initMap() {
-//     calculaTamanhoMapa(mapa)
-//     // Cria um objeto de mapa
-//     var map = new Microsoft.Maps.Map('#map', {
-//         credentials: 'ApnC6tV3CfJdVOfveqNzIuG3c35nb-C9fVqrksCiQD2-BOQNdsDS76pGWTgx4y4w', // Substitua por sua chave da API do Bing Maps
-//         center: new Microsoft.Maps.Location(locEventos[nomeEvento()][0], locEventos[nomeEvento()][1]),
-//         zoom: 12
-//     });
-
-//     // Adicione um marcador no centro do mapa
-//     var centerMarker = new Microsoft.Maps.Pushpin(map.getCenter(), {});
-//     map.entities.push(centerMarker);
-// }
-
-
-// window.addEventListener("resize", (e) =>{
-//     calculaTamanhoMapa(document.getElementById("mapa"));
-//});
+// Alterando o tamanho do mapa para mostrar na pagina
+function calculaTamanhoMapa(mapa) {
+    const posicaoYMapa = mapa.offsetTop;
+    var alturaPagina = window.innerHeight;
+    mapa.style.height = `${alturaPagina - posicaoYMapa}px`;
+    mapa.style.width = `${document.querySelector("nav").clientWidth}px`
+}
 
 function initMap() {
-    // Recupere a latitude e longitude do local storage
+    // Recuperando a latitude e longitude do localStorage
+    const localizacao = localStorage.getItem(nomeEvento());
+    const coordenadas = JSON.parse(localizacao);
+    const latitude = coordenadas["0"];
+    const longitude = coordenadas["1"];
 
-    const localizacao = parseFloat(localStorage.getItem([nomeJanela][0]));
-
-    // Verifique se a latitude e a longitude são válidas
-    if (!isNaN(localizacao)){
-        const map = new Microsoft.Maps.Map('#mapa', {
-            credentials: 'ApnC6tV3CfJdVOfveqNzIuG3c35nb-C9fVqrksCiQD2-BOQNdsDS76pGWTgx4y4w',
-            center: new Microsoft.Maps.Location(localizacao),
-            zoom: 10
-        });
-
+    // Verificando se deu f5 e se precisa carregar o mapa de uma nova pagina ou o anterior
+    if (coordenadas == null) {
+        coordenadas = localStorage.getItem("mapaAtual")
     } else {
-        // Caso a latitude e a longitude não sejam válidas, defina um centro padrão para o mapa
-        const map = new Microsoft.Maps.Map('#mapa', {
-            credentials: 'ApnC6tV3CfJdVOfveqNzIuG3c35nb-C9fVqrksCiQD2-BOQNdsDS76pGWTgx4y4w',
-            center: new Microsoft.Maps.Location(0, 0),
-            zoom: 1
+        localStorage.setItem("mapaAtual", coordenadas)
+    }
+
+    // Criando o location do evento
+    const locEvento = new Microsoft.Maps.Location(latitude, longitude);
+
+    // Definindo tamanho do mapa
+    mapa = document.querySelector("#mapa")
+    calculaTamanhoMapa(mapa)
+
+    // Verificando o tamanho da tela para a orientação da NavBar
+    if (window.innerWidth <= 540) {
+        const map = new Microsoft.Maps.Map(mapa, {
+            center: locEvento,
+            zoom: 19,
+            NavigationBarMode: "minified",
+            navigationBarOrientation: "vertical",
+            showMapTypeSelector: false,
+            showLocateMeButton: true,
+        });
+    } else {
+        const map = new Microsoft.Maps.Map(mapa, {
+            center: locEvento,
+            zoom: 19,
+            NavigationBarMode: "minified",
+            navigationBarOrientation: "horizontal"
         });
     }
 }

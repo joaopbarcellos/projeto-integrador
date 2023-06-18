@@ -2,7 +2,7 @@ let usuarioLogado = sessionStorage.getItem("logado");
 // Armazenando a informacao de qual usuario esta logado
 
 // Verficando se um usuario esta logado
-if(!usuarioLogado){
+if (!usuarioLogado) {
 
     Swal.fire({
         // Alert informando que o usuario nao esta logado
@@ -30,7 +30,7 @@ if(!usuarioLogado){
     document.querySelector("#dataNasc_usuario").textContent = data
 }
 
-document.querySelector("#editar").addEventListener("click", () =>{
+document.querySelector("#editar").addEventListener("click", () => {
     // Enviando o usuario para a tela de editar perfil
     window.location.assign('editar_perfil.html')
 })
@@ -39,7 +39,7 @@ document.querySelector("#editar").addEventListener("click", () =>{
 document.querySelector("#excluir").addEventListener("click", excluirPerfil);
 
 // Funcao para excluir perfil
-function excluirPerfil(){
+function excluirPerfil() {
     // Perguntando para o usuario se ele deseja apagar seu perfil
     Swal.fire({
         title: "Você tem certeza?",
@@ -52,7 +52,7 @@ function excluirPerfil(){
         cancelButtonColor: '#f27474',
         reverseButtons: true
     }).then((result) => {
-        if(result.isConfirmed){
+        if (result.isConfirmed) {
             // Se ele confirmou
             let email = sessionStorage.getItem("logado");
             // Apagando o item do localStorage e do sessionStorage
@@ -67,8 +67,8 @@ function excluirPerfil(){
                 // Enviando para a tela de login
                 window.location.assign("index.html");
             })
-            
-        } else if (result.dismiss === Swal.DismissReason.cancel){
+
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
             // Informando ao usuario que sua conta nao foi deletada
             Swal.fire(
                 'Cancelada!',

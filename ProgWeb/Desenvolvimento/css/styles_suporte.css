@@ -4,8 +4,8 @@
   background-color: var(--branco);
 }
 
-.iconeajuda{
-	fill: var(--azul_sec);
+.iconeajuda {
+  fill: var(--azul_sec);
 }
 
 #container {
@@ -77,4 +77,4 @@ h1 {
   outline: 0;
   border: 1px solid;
   box-shadow: 0 0 0 0;
-}  
+}

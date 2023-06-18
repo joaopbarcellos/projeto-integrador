@@ -32,7 +32,7 @@ const campoConfSenha = document.querySelector("#floatingInputGroup4");
 
 document.querySelectorAll("input").forEach(input => {
     input.addEventListener("keypress", (event) => {
-        if(event.key == "Enter"){
+        if (event.key == "Enter") {
             // Chamando a funcao quando o usuario apertar enter em qualquer campo
             autenticar();
         }
@@ -49,13 +49,13 @@ const labelNome = document.querySelector("#label_nome");
 const labelData = document.querySelector("#labelData");
 
 
-function autenticar(){
+function autenticar() {
     // Funcao para autenticar todos os campos
 
     // Verificando se todos os campos sao validos
-    if(verificaTudo()){
+    if (verificaTudo()) {
         // Valor da data de nascimento
-        let dataNasc = campoData.value; 
+        let dataNasc = campoData.value;
 
         // Valor do nome
         let nome = campoNome.value;
@@ -64,13 +64,13 @@ function autenticar(){
 
         // Valor do email
         let email = campoEmail.value.toLowerCase();
-        
+
 
         // Valores de senha 
         let senha = campoSenha.value;
 
         // Verificando se o email ja foi cadastrado
-        
+
         let stringJSON = {
             "email": email,
             "nome": nome,
@@ -85,42 +85,42 @@ function autenticar(){
     }
 }
 
-function verificaTudo(){
+function verificaTudo() {
     // Verificando se o campo de nome e vazio
     let verificaNome = base.verificaCampoVazio(campoNome, labelNome, noNome);
 
     // Verificando se o campo de email e vazio
     let verificaEmail = base.verificaCampoVazio(campoEmail, labelEmail, noEmail, noEmailPadrao, noEmailExiste);
-    if(verificaEmail){
+    if (verificaEmail) {
         // Verificando se o campo de email esta fora dos padroes
         verificaEmail = base.verificaEmailForaPadrao(campoEmail, noEmail, noEmailPadrao, noEmailExiste);
-    } 
+    }
 
-    if(verificaEmail){
+    if (verificaEmail) {
         // Verificando se o email ja foi cadastrado antes
         verificaEmail = base.emailIgual(campoEmail, noEmailExiste);
     }
     // Verificando se o campo de senha e vazio
     let verificaSenha = base.verificaCampoVazio(campoSenha, labelSenha, noPass, aotPass);
-    if(verificaSenha){
+    if (verificaSenha) {
         // Verificando se o campo de senha esta fora dos padroes
         verificaSenha = base.verificaSenhaForaPadrao(campoSenha, labelSenha, aotPass);
     }
-    
+
     // Verificando se o campo de data e vazio
     let verificaData = base.verificaCampoVazio(campoData, labelData, noData, passouData);
-    if(verificaData){
+    if (verificaData) {
         // Verificando se a data informada for valida (< do que o dia atual)
         verificaData = base.dataErrada(campoData, labelData, passouData);
     }
 
     // Verificando se o campo de confirmar senha e vazio
     let verificaConfSenha = base.verificaCampoVazio(campoConfSenha, labelConf_Senha, noConfPass, aotConfPass);
-    if(verificaConfSenha){
+    if (verificaConfSenha) {
         // Verificando se o campo de confirmar senha esta fora dos padroes
         verificaConfSenha = base.verificaSenhaForaPadrao(campoConfSenha, labelConf_Senha, aotConfPass);
     }
-    if(verificaConfSenha){
+    if (verificaConfSenha) {
         // Verificando se a senha e igual ao confirmar senha
         verificaConfSenha = base.verificaSenhaSalva(campoSenha, campoConfSenha, labelConf_Senha, labelSenha, passConfPass);
     }
@@ -128,19 +128,19 @@ function verificaTudo(){
 
     // Verificando a jogabilidade
     let verJog = base.verificaJogabilidade(labelJogador, labelsJogabilidade, noJogabilidade);
-    
+
     let listaTudo = [verificaConfSenha, verificaData, verificaEmail, verJog, verificaNome, verificaSenha]
     // Verificando se todos os elementos sao validos
     return listaTudo.every(element => element);
 }
 
-function salvar(email, stringJSON){
+function salvar(email, stringJSON) {
     // Salvando no localStorage a stringJson com a chave de email
     localStorage.setItem(email, JSON.stringify(stringJSON));
 }
 
 let voltar = document.querySelector(".cssbuttons-io-button");
-if(voltar){
+if (voltar) {
     // Adicionando o ouvidor do evento para se inscrever
     voltar.addEventListener("click", () => {
         window.history.back();
@@ -149,13 +149,13 @@ if(voltar){
 
 const olho1 = document.querySelector("#olho");
 // Mostrar/ocultar senha
-olho1.addEventListener('click', function() {
+olho1.addEventListener('click', function () {
     let input = document.querySelector('#floatingInputGroup3')
-    if(input.type == 'text'){
+    if (input.type == 'text') {
         input.type = 'password';
         olho1.src = './img/olho_aberto.png';
-        
-    } else if (input.type == 'password'){
+
+    } else if (input.type == 'password') {
         input.type = 'text';
         olho1.src = './img/olho_fechado.png';
     }
@@ -164,13 +164,13 @@ olho1.addEventListener('click', function() {
 const olho2 = document.querySelector("#olho2");
 
 // Mostrar/ocultar senha
-olho2.addEventListener('click', function() {
+olho2.addEventListener('click', function () {
     let input = document.querySelector('#floatingInputGroup4');
-    if(input.type == 'text'){
+    if (input.type == 'text') {
         input.type = 'password';
         olho2.src = './img/olho_aberto.png';
-        
-    } else if (input.type == 'password'){
+
+    } else if (input.type == 'password') {
         input.type = 'text';
         olho2.src = './img/olho_fechado.png';
     }

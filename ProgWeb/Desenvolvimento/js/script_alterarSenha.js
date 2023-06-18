@@ -25,7 +25,7 @@ let passConfPass = document.querySelector("#passConfPass")
 document.querySelector("#alterar").addEventListener("click", autenticar);
 document.querySelectorAll("input").forEach(input => {
     input.addEventListener("keypress", (event) => {
-        if(event.key == "Enter"){
+        if (event.key == "Enter") {
             // Chamando a funcao quando o usuario apertar enter em qualquer campo
             autenticar();
         }
@@ -33,9 +33,9 @@ document.querySelectorAll("input").forEach(input => {
 });
 
 // Funcao para autenticar as entradas do usuario 
-function autenticar(){
+function autenticar() {
     // Chamando a funcao que verifica todos os campos
-    if(verificaTudo()){
+    if (verificaTudo()) {
         // Recebendo o valor de senha
         let senhaAntiga = campoSenhaAntiga.value;
         let senhaNova = campoSenha.value;
@@ -43,44 +43,45 @@ function autenticar(){
 
         // Pegando os dados salvos
         let dados = JSON.parse(localStorage.getItem(sessionStorage.getItem("logado")));
-        
+
         dados.senha = senhaNova;
         // Trocando a senha no localStorage
         let string = JSON.stringify(dados)
         localStorage.removeItem(dados.email);
         localStorage.setItem(dados.email, string)
+
         // Mudando de tela para a tela de perfil
-        window.location.assign("perfil.html")
+        window.location.assign("editar_perfil.html")
     }
 }
 
 
-function verificaTudo(){
+function verificaTudo() {
 
     // Verificando se o campo de senha antiga e vazio
     let verificaSenhaAntiga = base.verificaCampoVazio(campoSenhaAntiga, labelSenhaAntiga, noPassNew, aotPassNew, passPassNew);
-    if(verificaSenhaAntiga){
+    if (verificaSenhaAntiga) {
         // Verificando se o campo de senha antiga esta fora dos padroes
         verificaSenhaAntiga = base.verificaSenhaForaPadrao(campoSenhaAntiga, labelSenhaAntiga, aotPassNew, passPassNew);
     }
-    if(verificaSenhaAntiga){
+    if (verificaSenhaAntiga) {
         verificaSenhaAntiga = base.verificaSenhaSalva(campoSenhaAntiga, false, labelSenhaAntiga, false, passPassNew);
     }
 
     // Verificando se o campo de senha nova e vazio
     let verificaSenhaNova = base.verificaCampoVazio(campoSenha, labelSenha, noPass, aotPass);
-    if(verificaSenhaNova){
+    if (verificaSenhaNova) {
         // Verificando se o campo de senha nova esta fora dos padroes
         verificaSenhaNova = base.verificaSenhaForaPadrao(campoSenha, labelSenha, aotPass);
     }
 
     // Verificando se o campo de confirmar senha e vazio
     let verificaConfSenha = base.verificaCampoVazio(campoConfSenha, labelConfSenha, noConfPass, aotConfPass);
-    if(verificaConfSenha){
+    if (verificaConfSenha) {
         // Verificando se o campo de confirmar senha esta fora dos padroes
         verificaConfSenha = base.verificaSenhaForaPadrao(campoConfSenha, labelConfSenha, aotConfPass, passConfPass);
     }
-    if(verificaConfSenha){
+    if (verificaConfSenha) {
         verificaConfSenha = base.verificaSenhaSalva(campoSenha, campoConfSenha, labelConfSenha, labelSenha, passConfPass);
     }
     let lista = [verificaConfSenha, verificaSenhaAntiga, verificaSenhaNova]
@@ -91,13 +92,13 @@ function verificaTudo(){
 
 const olho1 = document.querySelector("#olho");
 // Mostrar/ocultar senha
-olho1.addEventListener('click', function() {
+olho1.addEventListener('click', function () {
     let input = document.querySelector('#floatingInputGroup1')
-    if(input.type == 'text'){
+    if (input.type == 'text') {
         input.type = 'password';
         olho1.src = './img/olho_aberto.png';
-        
-    } else if (input.type == 'password'){
+
+    } else if (input.type == 'password') {
         input.type = 'text';
         olho1.src = './img/olho_fechado.png';
     }
@@ -106,13 +107,13 @@ olho1.addEventListener('click', function() {
 const olho2 = document.querySelector("#olho2");
 
 // Mostrar/ocultar senha
-olho2.addEventListener('click', function() {
+olho2.addEventListener('click', function () {
     let input = document.querySelector('#floatingInputGroup2');
-    if(input.type == 'text'){
+    if (input.type == 'text') {
         input.type = 'password';
         olho2.src = './img/olho_aberto.png';
-        
-    } else if (input.type == 'password'){
+
+    } else if (input.type == 'password') {
         input.type = 'text';
         olho2.src = './img/olho_fechado.png';
     }
@@ -121,13 +122,13 @@ olho2.addEventListener('click', function() {
 
 const olho3 = document.querySelector("#olho3");
 // Mostrar/ocultar senha
-olho3.addEventListener('click', function() {
+olho3.addEventListener('click', function () {
     let input = document.querySelector('#floatingInputGroup3')
-    if(input.type == 'text'){
+    if (input.type == 'text') {
         input.type = 'password';
         olho3.src = './img/olho_aberto.png';
-        
-    } else if (input.type == 'password'){
+
+    } else if (input.type == 'password') {
         input.type = 'text';
         olho3.src = './img/olho_fechado.png';
     }

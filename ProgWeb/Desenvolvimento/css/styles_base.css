@@ -22,13 +22,11 @@
 	--header_bg_grad:linear-gradient(to bottom right, #057dc2,  #83e3cd);
 }
 
-/* [data-theme="black"] {
+[data-theme="black"] {
     --azul_princ: #012f49;
     --branco: #000000;
     --black: #ffffff;
-}  */
-
-
+} 
 
 img{
 	vertical-align: unset !important;

@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
 
-#ajudaa{
+#ajudaa {
   color: var(--azul_sec) !important;
   text-shadow: none;
   background-color: var(--branco);
 }
 
-.iconeajuda{
-	fill: var(--azul_sec);
+.iconeajuda {
+  fill: var(--azul_sec);
 }
 
 * {
@@ -22,38 +22,38 @@ ul {
   margin-top: 2rem;
   position: relative;
   border-radius: 10px;
-  background-color:  var(--azul_terc);
+  background-color: var(--azul_terc);
 }
 
 .item:hover {
   cursor: pointer;
 }
 
-.pergunta{
+.pergunta {
   padding: 0.6rem;
   width: 100%;
   color: var(--branco);
   text-align: justify;
 }
 
-.prim{
-  background-color:  var(--azul_quint);
+.prim {
+  background-color: var(--azul_quint);
 }
 
-.seg{
-  background-color:  var(--azul_princ) ;
+.seg {
+  background-color: var(--azul_princ);
 }
 
-.conteudo{
+.conteudo {
   padding: 0.6rem;
   display: none;
   color: var(--black);
   width: 100%;
-  text-align: justify; 
-  background-color:  var(--azul_claro);
+  text-align: justify;
+  background-color: var(--azul_claro);
 }
 
-#suporte{
+#suporte {
   background-color: var(--azul_princ);
   border-radius: 100%;
   width: 50px;

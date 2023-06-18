@@ -1,62 +1,62 @@
 #myeventsa {
-color: var(--azul_sec) !important;
-text-shadow: none;
+    color: var(--azul_sec) !important;
+    text-shadow: none;
 }
 
-.iconemeusevents{
+.iconemeusevents {
     fill: var(--azul_sec);
 }
 
 h1 {
-padding-left: 30px;
+    padding-left: 30px;
 }
 
 #semevento {
-color: #69696998;
-margin-top: 10%;
-margin-bottom: 10%;
-display: block;
+    color: #69696998;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    display: block;
 }
 
 .evento {
-display: none;
+    display: none;
 }
 
 .inscricao {
-padding: 10px;
-color: var(--branco);
-border: 0.5px solid #333333;
-border-radius: 10px;
-background-color: red;
-transition: 0.4s ease;
-user-select: none;
+    padding: 10px;
+    color: var(--branco);
+    border: 0.5px solid #333333;
+    border-radius: 10px;
+    background-color: red;
+    transition: 0.4s ease;
+    user-select: none;
 }
 
 .inscricao:hover {
-cursor: pointer;
-background-color: #962121;
+    cursor: pointer;
+    background-color: #962121;
 }
 
 input {
-height: 50px;
-outline: none;
-padding-left: 50px;
-width: 100%;
-background: none;
-z-index: 3;
-border: none;
-box-shadow: 1px 0px 3px 2px rgba(78, 78, 78, 0.75);
-border-radius: 25px;
-background-color: var(--branco);
+    height: 50px;
+    outline: none;
+    padding-left: 50px;
+    width: 100%;
+    background: none;
+    z-index: 3;
+    border: none;
+    box-shadow: 1px 0px 3px 2px rgba(78, 78, 78, 0.75);
+    border-radius: 25px;
+    background-color: var(--branco);
 }
 
 .msg_erro {
-display: none;
-margin-top: 25px;
-margin-bottom: 10%;
-text-align: center;
+    display: none;
+    margin-top: 25px;
+    margin-bottom: 10%;
+    text-align: center;
 }
 
 .sembarra {
-display: none;
+    display: none;
 }

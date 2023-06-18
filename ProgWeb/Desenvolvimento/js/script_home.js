@@ -5,7 +5,7 @@ import * as base from "./script_base.js";
 const btns = document.querySelectorAll(".sabermais");
 
 // Percorrendo todos os botoes
-btns.forEach(btn =>{
+btns.forEach(btn => {
   // Adicionando um EventListener em cada um
   btn.addEventListener("click", () => {
     window.location.assign(`eventos/${btn.id}.html`)
@@ -21,8 +21,8 @@ const lista_conteudo = document.querySelectorAll(".evento");
 const lupa = document.querySelector("#lupa");
 
 // Adicionando EventListener para resetar a pagina quando o campo estiver em branco
-barra_pesquisa.addEventListener("search", () =>{
-  if(!barra_pesquisa.value){
+barra_pesquisa.addEventListener("search", () => {
+  if (!barra_pesquisa.value) {
     base.barraVazia(lista_conteudo, true)
   }
 })
@@ -31,17 +31,17 @@ barra_pesquisa.addEventListener("search", () =>{
 barra_pesquisa.addEventListener("keypress", (event) => {
   let tecla = event.key;
 
-  if(tecla == "Enter"){
-      base.pesquisar(lista_conteudo, barra_pesquisa, true);
-    }
+  if (tecla == "Enter") {
+    base.pesquisar(lista_conteudo, barra_pesquisa, true);
+  }
 });
 
-lupa.addEventListener("click", () =>{
+lupa.addEventListener("click", () => {
   base.pesquisar(lista_conteudo, barra_pesquisa, true)
 })
 
-barra_pesquisa.addEventListener("input", () =>{
-  if(!barra_pesquisa.value){
+barra_pesquisa.addEventListener("input", () => {
+  if (!barra_pesquisa.value) {
     base.barraVazia(lista_conteudo, true)
   }
 })

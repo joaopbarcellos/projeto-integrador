@@ -9,7 +9,7 @@ document.querySelector("#alterarSenha").addEventListener("click", () => {
 
 // Pegando os dados do usuario logado
 var emailLogado = sessionStorage.getItem("logado");
-const dadosUsuario = JSON.parse(localStorage.getItem(emailLogado));  
+const dadosUsuario = JSON.parse(localStorage.getItem(emailLogado));
 
 // Pegando os campos na tela
 const campoNome = document.querySelector("#floatingInputGroup1");
@@ -36,7 +36,7 @@ const passouData = document.querySelector("#passouData");
 const noEmailExiste = document.querySelector("#noEmailExiste");
 
 // Funcao para preencher automaticamente os campos com os dados do usuario
-function preencherAuto(){
+function preencherAuto() {
     campoNome.value = dadosUsuario.nome;
     campoEmail.value = emailLogado;
     campoDataNasc.value = dadosUsuario.dataNasc;
@@ -50,7 +50,7 @@ function preencherAuto(){
 
     // Selecionando qual e o nivel do jogador
     radios.forEach(radio => {
-        if(radio.children[0].id == radioMarcada){
+        if (radio.children[0].id == radioMarcada) {
             radio.children[0].checked = true;
         }
     })
@@ -60,24 +60,24 @@ function preencherAuto(){
 preencherAuto();
 
 
-function verificaTudo(){
+function verificaTudo() {
     // Verificando se o campo de nome e vazio
     let verificaNome = base.verificaCampoVazio(campoNome, labelNome, noNome);
-    
+
     // Verificando se o campo de email e vazio
     let verificaEmail = base.verificaCampoVazio(campoEmail, labelEmail, noEmail, noEmailPadrao, noEmailExiste);
-    if(verificaEmail){
+    if (verificaEmail) {
         // Verificando se o campo de email esta fora dos padroes
         verificaEmail = base.verificaEmailForaPadrao(campoEmail, noEmail, noEmailPadrao, noEmailExiste)
     }
-    
-    if(verificaEmail){
+
+    if (verificaEmail) {
         // Verificando se o email ja foi cadastrado antes
         verificaEmail = base.emailIgual(campoEmail, noEmailExiste);
     }
     // Verificando se o campo de data e vazio
-    let verDataNasc = base.verificaCampoVazio(campoDataNasc, labelData, noData, passouData); 
-    if(verDataNasc){
+    let verDataNasc = base.verificaCampoVazio(campoDataNasc, labelData, noData, passouData);
+    if (verDataNasc) {
         // Verificando se a data informada for valida (< do que o dia atual)
         verDataNasc = base.dataErrada(campoDataNasc, labelData, passouData)
     }
@@ -97,16 +97,16 @@ btnEditar.addEventListener("click", autenticar);
 
 document.querySelectorAll("input").forEach(input => {
     input.addEventListener("keypress", (event) => {
-        if(event.key == "Enter"){
+        if (event.key == "Enter") {
             // Chamando a funcao quando o usuario apertar enter em qualquer campo
             autenticar();
         }
     })
 });
 
-function autenticar(){
+function autenticar() {
     // Verificando se todos os campos estao preenchidos corretamente
-    if(verificaTudo()){
+    if (verificaTudo()) {
         Swal.fire({
             // Perguntando para o usuario se ele deseja editar suas informacoes
             icon: 'question',
@@ -116,8 +116,8 @@ function autenticar(){
             cancelButtonColor: '#d33',
             showCancelButton: true,
             cancelButtonText: 'Não'
-        }).then((result) =>{
-            if(result.isConfirmed){
+        }).then((result) => {
+            if (result.isConfirmed) {
                 // Alterando os dados no localStorage
                 dadosUsuario.nome = campoNome.value;
                 dadosUsuario.dataNasc = campoDataNasc.value;
@@ -149,9 +149,9 @@ function autenticar(){
 }
 
 let voltar = document.querySelector(".cssbuttons-io-button");
-if(voltar){
+if (voltar) {
     // Adicionando o ouvidor do evento para se inscrever
     voltar.addEventListener("click", () => {
-    window.location.assign("perfil.html")
-})
+        window.location.assign("perfil.html")
+    })
 }

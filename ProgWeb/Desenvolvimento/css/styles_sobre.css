@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
 
-#sobrea{
+#sobrea {
     color: var(--azul_sec) !important;
     text-shadow: none;
 }
 
-.iconesobre{
+.iconesobre {
     fill: var(--azul_sec);
 }
 
