@@ -260,6 +260,7 @@ c) [Link para edição das telas](https://quant-ux.com/#/apps/641ae83c05d7232656
   
 ### 10.	MODELO FÍSICO<br>
    [Link do arquivo SQL dos Creates](https://github.com/jpzb/projeto-integrador/blob/main/Arquivos/creates.sql)
+
 ### 11.	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
    [Link do arquivo SQL dos Inserts](https://github.com/jpzb/projeto-integrador/blob/main/Arquivos/inserts.sql)
        
