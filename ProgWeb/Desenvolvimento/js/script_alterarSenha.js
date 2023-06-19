@@ -36,24 +36,42 @@ document.querySelectorAll("input").forEach((input) => {
 function autenticar() {
   // Chamando a funcao que verifica todos os campos
   if (verificaTudo()) {
-    // Recebendo o valor de senha
-    let senhaAntiga = campoSenhaAntiga.value;
-    let senhaNova = campoSenha.value;
-    let confSenha = campoConfSenha.value;
+    Swal.fire({
+      // Perguntando para o usuario se ele deseja editar suas informacoes
+      icon: "question",
+      text: "Deseja alterar sua senha?",
+      confirmButtonColor: "#3085d6",
+      confirmButtonText: "Sim",
+      cancelButtonColor: "#d33",
+      showCancelButton: true,
+      cancelButtonText: "Não",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // Recebendo o valor de senha
+        let senhaAntiga = campoSenhaAntiga.value;
+        let senhaNova = campoSenha.value;
+        let confSenha = campoConfSenha.value;
 
-    // Pegando os dados salvos
-    let dados = JSON.parse(
-      localStorage.getItem(sessionStorage.getItem("logado"))
-    );
+        // Pegando os dados salvos
+        let dados = JSON.parse(
+          localStorage.getItem(sessionStorage.getItem("logado"))
+        );
 
-    dados.senha = senhaNova;
-    // Trocando a senha no localStorage
-    let string = JSON.stringify(dados);
-    localStorage.removeItem(dados.email);
-    localStorage.setItem(dados.email, string);
+        dados.senha = senhaNova;
+        // Trocando a senha no localStorage
+        let string = JSON.stringify(dados);
+        localStorage.removeItem(dados.email);
+        localStorage.setItem(dados.email, string);
 
-    // Mudando de tela para a tela de perfil
-    window.location.assign("perfil.html");
+        Swal.fire({
+          icon: "success",
+          title: "Senha atualizada",
+        }).then(() => {
+          // Enviando para a pagina de perfil
+          window.location.assign("perfil.html");
+        });
+      }
+    });
   }
 }
 
