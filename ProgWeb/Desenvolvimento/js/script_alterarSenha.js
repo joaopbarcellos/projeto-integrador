@@ -48,9 +48,7 @@ function autenticar() {
     }).then((result) => {
       if (result.isConfirmed) {
         // Recebendo o valor de senha
-        let senhaAntiga = campoSenhaAntiga.value;
         let senhaNova = campoSenha.value;
-        let confSenha = campoConfSenha.value;
 
         // Pegando os dados salvos
         let dados = JSON.parse(
