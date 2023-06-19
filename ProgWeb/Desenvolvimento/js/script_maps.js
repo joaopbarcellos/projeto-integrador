@@ -1,6 +1,7 @@
 function nomeEvento() {
     let nomeJanela = document.referrer.replace("/ProgWeb/Desenvolvimento", "").replace("/eventos/", "").replace(".html", "").replace("http://", "").replace("localhost", "").replace("127.0.0.1", "").replace(":5500", "").replace("https://", "").replace("jpzb.github.io/", "").replace("projeto-integrador", "");
     console.log(nomeJanela)
+    console.log(document.referrer)
     return nomeJanela;
 };
 
