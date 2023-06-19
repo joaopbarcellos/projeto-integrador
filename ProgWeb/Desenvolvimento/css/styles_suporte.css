@@ -1,13 +1,16 @@
+/* Adicionando cor e tirando a sombra */
 #ajudaa {
   color: var(--azul_sec) !important;
   text-shadow: none;
   background-color: var(--branco);
 }
 
+/* Trocando a cor  */
 .iconeajuda {
   fill: var(--azul_sec);
 }
 
+/* Adicionando cor, margin, borda e flex-box */
 #container {
   background: var(--azul_princ);
   margin: 0 auto;
@@ -18,11 +21,13 @@
   align-items: center;
 }
 
+/* Adicionando cor */
 #container h1,
 p {
   color: var(--branco);
 }
 
+/* Adicionando flex-box e colocando estilo negrito */
 h1 {
   display: flex;
   justify-content: center;
@@ -31,15 +36,18 @@ h1 {
   font-weight: bold;
 }
 
+/* Adiionando cor e escondendo a label */
 .erro {
   display: none;
   color: #f58181;
 }
 
+/* Adicionando tamanho */
 .campos {
   width: 95%;
 }
 
+/* Adicionando cor, flex-box e borda */
 #form {
   background: transparent;
   display: flex;
@@ -48,6 +56,7 @@ h1 {
   border-radius: 5px;
 }
 
+/* Adicionando tamanho, borda, cursor, cor e transicao */
 #envio {
   height: 45px;
   border-radius: 5px;
@@ -58,20 +67,24 @@ h1 {
   cursor: pointer;
 }
 
+/* Adicionando cursor e cor */
 #envio:hover {
   cursor: pointer;
   background-color: var(--azul_escuro);
 }
 
+/* Adicionando minino e maximo nos inputs */
 #floatingTextarea1 {
   min-height: 150px;
   max-height: 400px;
 }
 
+/* Adicionando margin */
 #floatingInputGrid {
   margin-bottom: 5px;
 }
 
+/* Adicionando outline, borda e tirando sombra */
 #floatingInputGrid,
 #floatingTextarea1 {
   outline: 0;

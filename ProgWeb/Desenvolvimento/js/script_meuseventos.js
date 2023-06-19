@@ -16,32 +16,31 @@ const barra_pesquisa = document.querySelector("#busca");
 const lupa = document.querySelector("#lupa");
 
 // Percorrendo todos os botoes
-cancel.forEach(btn => {
+cancel.forEach((btn) => {
   // Adicionando um EventListener em cada um
   btn.addEventListener("click", () => {
     cancelarInscricao(btn.id);
   });
-})
+});
 
-
-// Caso o usuario não esteja logado
+// Caso o usuario nao esteja logado
 if (!email) {
   Swal.fire({
     // Alert avisando ao usuario fazer login
-    title: 'Faça login!',
-    icon: 'error',
-    text: 'Você precisa estar logado para acessar essa funcionalidade.',
-    confirmButtonColor: '#3085d6',
-    confirmButtonText: 'Login'
+    title: "Faça login!",
+    icon: "error",
+    text: "Você precisa estar logado para acessar essa funcionalidade.",
+    confirmButtonColor: "#3085d6",
+    confirmButtonText: "Login",
   }).then(() => {
     // Enviando o usuario para a tela de login
     window.location.assign("index.html");
-  })
+  });
 }
 
 function meusEventos() {
   let todosEventos = document.querySelectorAll(".evento");
-  todosEventos.forEach(evento => {
+  todosEventos.forEach((evento) => {
     if (dados.eventos_inscritos.includes(evento.id.slice(3))) {
       // Colocando display block em todos os eventos que o usuario está inscrito
       evento.style.display = "block";
@@ -61,34 +60,29 @@ function meusEventos() {
       lupa.classList.remove("sembarra");
       lupa.classList.add("btn");
     }
-  })
+  });
 }
 
-meusEventos()
-
+meusEventos();
 
 function cancelarInscricao(id) {
   Swal.fire({
     // Iniciando um alert perguntando se o usuario deseja cancelar a inscricao.
-    title: 'Cancelar inscrição?',
-    icon: 'question',
+    title: "Cancelar inscrição?",
+    icon: "question",
     showCancelButton: true,
-    confirmButtonColor: '#3085d6',
-    cancelButtonColor: '#d33',
-    confirmButtonText: 'Sim',
-    cancelButtonText: 'Não'
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Sim",
+    cancelButtonText: "Não",
   }).then((result) => {
     if (result.isConfirmed) {
       // Alert para caso o usuario cancelou sua inscricao.
-      Swal.fire(
-        'Feito!',
-        'Sua inscrição foi cancelada.',
-        'success'
-      )
+      Swal.fire("Feito!", "Sua inscrição foi cancelada.", "success");
 
       dados.eventos_inscritos = dados.eventos_inscritos.filter((valor) => {
         return valor != id;
-        // Retirando da lista o evento que o usuário está desinscrevendo
+        // Retirando da lista o evento que o usuario esta desinscrevendo
       });
 
       let stringJson = JSON.stringify(dados);
@@ -105,12 +99,11 @@ function cancelarInscricao(id) {
         // Caso nao haja eventos inscritos, ira aparecer a mensagem
       }
     }
-  })
+  });
 }
 
-
 lupa.addEventListener("click", () => {
-  base.pesquisar(meus_eventos, barra_pesquisa)
+  base.pesquisar(meus_eventos, barra_pesquisa);
 });
 
 // Adicionando um EventListener para quando for feita a pesquisa
@@ -123,12 +116,12 @@ barra_pesquisa.addEventListener("keypress", (event) => {
 
 barra_pesquisa.addEventListener("search", () => {
   if (!barra_pesquisa.value) {
-    base.barraVazia(meus_eventos)
+    base.barraVazia(meus_eventos);
   }
-})
+});
 
 barra_pesquisa.addEventListener("input", () => {
   if (!barra_pesquisa.value) {
-    base.barraVazia(meus_eventos, false)
+    base.barraVazia(meus_eventos, false);
   }
-})
+});

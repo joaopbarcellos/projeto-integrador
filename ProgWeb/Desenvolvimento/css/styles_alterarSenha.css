@@ -1,88 +1,91 @@
 /* Importação de fontes */
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Quicksand:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Quicksand:wght@600&display=swap");
 
-#perfila{
-    color: var(--azul_sec) !important;
-    text-shadow: none;
-    background-color: var(--branco);
-  }
-  
-.iconeuser{
-      fill: var(--azul_sec);
-  }
+/* Adicionando cor e tirando sombra */
+#perfila {
+  color: var(--azul_sec) !important;
+  text-shadow: none;
+  background-color: var(--branco);
+}
+
+/* Trocando cor da imagem */
+.iconeuser {
+  fill: var(--azul_sec);
+}
 
 /* Estilos base para todos os elementos */
 * {
-    font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
-/* Estilos para o elemento body */
+/* Limitando minimo de largura */
 body {
-    min-width: 200px;
+  min-width: 200px;
 }
 
-/* Estilos para o elemento h1 */
+/* Adicionando cor */
 h1 {
-    color: var(--branco) !important;
+  color: var(--branco) !important;
 }
 
-/* Estilos para a classe .divGeral */
+/* Adicionando cor, espaçamento e tirando sombra */
 .divGeral {
-    background-color: #057dc2;
-    border-radius: 10px;
-    box-shadow: -1px -2px 25px 8px #000000;
-    padding: 10px;
+  background-color: #057dc2;
+  border-radius: 10px;
+  box-shadow: -1px -2px 25px 8px #000000;
+  padding: 10px;
 }
 
-/* Estilos para os elementos #floatingInputGroup1, #floatingInputGroup2, #floatingInputGroup3 */
+/* Tirando borda, outline, sombra e o raio e adicionando espaçamento e borda */
 #floatingInputGroup1,
 #floatingInputGroup2,
 #floatingInputGroup3 {
-    border: none;
-    outline: 0;
-    border-radius: 0;
-    border-bottom: 1px solid #000000;
-    box-shadow: 0 0 0 0;
-    padding-top: 2rem;
-    border-bottom: 1px solid #000000;
+  border: none;
+  outline: 0;
+  border-radius: 0;
+  border-bottom: 1px solid #000000;
+  box-shadow: 0 0 0 0;
+  padding-top: 2rem;
+  border-bottom: 1px solid #000000;
 }
 
-/* Estilos para os elementos #label_senha, #label_senhaAnti, #label_confSenha */
+/* Adicionando espacamento */
 #label_senha,
 #label_senhaAnti,
 #label_confSenha {
-    padding-left: 0;
+  padding-left: 0;
 }
 
-/* Estilos para a classe .formulario */
+/* Adicionando cor, espacamento, tamanho da fonte e colocando um flex-box  */
 .formulario {
-    background-color: var(--branco) !important;
-    margin-left: 4% !important;
-    margin-right: 4% !important;
-    margin-top: 6% !important;
-    margin-bottom: 4% !important;
-    display: flex;
-    flex-direction: column;
-    font-size: 1.18748em;
-    border-radius: 5px;
-    padding: 10px;
+  background-color: var(--branco) !important;
+  margin-left: 4% !important;
+  margin-right: 4% !important;
+  margin-top: 6% !important;
+  margin-bottom: 4% !important;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.18748em;
+  border-radius: 5px;
+  padding: 10px;
 }
 
-/* Estilos para o elemento #alterar */
+/* Adicionando espacamento, mudando o cursor, cor, transicao e espacamento entre letras */
 #alterar {
-    margin-bottom: 2%;
-    margin-left: 8%;
-    padding: 11px;
-    cursor: pointer;
-    border: 1px solid black;
-    background-color: #057dc2;
-    color: #fff;
-    border-radius: 5px;
-    transition: 0.4s ease;
-    user-select: none;
+  margin-bottom: 2%;
+  margin-left: 8%;
+  padding: 11px;
+  cursor: pointer;
+  border: 1px solid black;
+  background-color: #057dc2;
+  color: #fff;
+  border-radius: 5px;
+  transition: 0.4s ease;
+  user-select: none;
 }
 
+/* Trocando o cursor e a cor apos passar o mouse */
 #alterar:hover {
-    cursor: pointer;
-    background-color: #284174;
+  cursor: pointer;
+  background-color: #284174;
 }

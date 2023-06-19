@@ -1,149 +1,186 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Quicksand:wght@100&display=swap');
+/* Importando fonte */
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Quicksand:wght@100&display=swap");
 
-#homea{
-    color: var(--azul_sec) !important;
-    text-shadow: none;
+/* Adicionando cor e tirando sombrea das letras */
+#homea {
+  color: var(--azul_sec) !important;
+  text-shadow: none;
 }
 
-.iconecasinha{
-    fill: var(--azul_sec);
+/* Trocando cor da imagem */
+.iconecasinha {
+  fill: var(--azul_sec);
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Quicksand', sans-serif;
+/* Adicionando espacamento na pagina toda */
+* {
+  padding: 0;
 }
 
-#homea{
-    color: var(--azul_sec) !important;
-    text-shadow: none;
+/* Adicionando cor e tirando sombra dos textos */
+#homea {
+  color: var(--azul_sec) !important;
+  text-shadow: none;
 }
 
-#evento{
-    display: flex;
-    flex-direction: row;
+/* Adiconando flex-box */
+#evento {
+  display: flex;
+  flex-direction: row;
 }
 
-#container p{
-    font-size: 1.5rem;
+/* Adiconando tamanho da fonte */
+#container p {
+  font-size: 1.5rem;
 }
 
-#container{
-    margin-top: 1.5em !important;
+/* Adicionando margin */
+#container {
+  margin-top: 1.5em !important;
 }
 
-#img_evento{
-    margin-bottom: 20px;
-    min-height: 15%;
-    min-width: 15%;
+/* Colocando tamanho nas imagens */
+#img_evento {
+  margin-bottom: 20px;
+  min-height: 15%;
+  min-width: 15%;
 }
 
-.iconezin{
-    height: 25px;
-    margin-right: 0.40em;
+/* Adicionando tamnho e espacamento */
+.iconezin {
+  height: 25px;
+  margin-right: 0.4em;
 }
 
-#informacoes{
-    padding-left: 1em !important;
+/* Adicionando espacamento */
+#informacoes {
+  padding-left: 1em !important;
 }
 
-#localizacao, #alvo, #intuito, #data, #contato, #preco, #num_inscritos, #vagas_restam, #organizador{
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    padding-top: 0.5em
+/* Adiconando flex-box, alinhamento e espacamento */
+#localizacao,
+#alvo,
+#intuito,
+#data,
+#contato,
+#preco,
+#num_inscritos,
+#vagas_restam,
+#organizador {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  padding-top: 0.5em;
 }
 
-#sifrao{
-    margin-right: 5px;
+/* Adicionando margin */
+#sifrao {
+  margin-right: 5px;
 }
 
-#organizador{
-    margin-bottom: 1.5em;
+/* Adicionando margin */
+#organizador {
+  margin-bottom: 1.5em;
 }
 
+/* Adicionando espacamento, flex-box, tamanho, borda, espaco entre letras, tamanho de letras, cor, transicao e defino um overflow hidden para fazer o span sumir quando nao estiver no botao */
 .inscrever {
-    margin-left: auto !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 90px;
-    width: 250px;
-    gap: 10px;
-    padding: 0 10px;
-    color: var(--branco);
-    text-shadow: 2px 2px rgb(116, 116, 116);
-    text-transform: uppercase;
-    border: none;
-    letter-spacing: 1px;
-    font-weight: 600;
-    font-size: 1rem;
-    background-color: var(--azul_princ);
-    border-radius: 50px;
-    position: relative;
-    overflow: hidden;
-    transition: all .5s ease;
+  margin-left: auto !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  width: 250px;
+  gap: 10px;
+  padding: 0 10px;
+  color: var(--branco);
+  text-shadow: 2px 2px rgb(116, 116, 116);
+  text-transform: uppercase;
+  border: none;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 1rem;
+  background-color: var(--azul_princ);
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
 }
 
+/* Adicionando transicao e transform  */
 .inscrever:active {
-    transform: scale(.9);
-    transition: all 100ms ease;
+  transform: scale(0.9);
+  transition: all 100ms ease;
 }
 
-.container{
-    padding: 0 !important;
+/* Tirando espacamento */
+.container {
+  padding: 0 !important;
 }
+
+/* Adicionando transicao e tamanho */
 .inscrever img {
-    transition: all .5s ease;
-    z-index: 2;
-    width: 48px;
-    height: 48px;
+  transition: all 0.5s ease;
+  z-index: 2;
+  width: 48px;
+  height: 48px;
 }
 
+/* Adicionando transicao */
 .play {
-    transition: all .5s ease;
-    transition-delay: 300ms;
+  transition: all 0.5s ease;
+  transition-delay: 300ms;
 }
-.inscrever:hover{
-    background-color: var(--azul_sec);
+
+/* Adicionando cor */
+.inscrever:hover {
+  background-color: var(--azul_sec);
 }
+
+/* Aumenta tamanho da imagem quando passar o mouse por cima */
 .inscrever:hover img {
-    transform: scale(3) translate(140%);
+  transform: scale(3) translate(140%);
 }
 
+/* Adicionando transicao e posicao */
 .now {
-    position: absolute;
-    left: 0;
-    transform: translateX(-100%);
-    transition: all .5s ease;
-    z-index: 2;
+  position: absolute;
+  left: 0;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+  z-index: 2;
 }
 
+/* Adicionando transicao */
 .inscrever:hover .now {
-    transform: translateX(30px);
-    transition-delay: 300ms;
+  transform: translateX(30px);
+  transition-delay: 300ms;
 }
 
-.inscrever{
-    user-select: none;
+/* Nao e copiavel */
+.inscrever {
+  user-select: none;
 }
 
+/* Adicionando transicao */
 .inscrever:hover .play {
-    transform: translateX(200%);
-    transition-delay: 300ms;
+  transform: translateX(200%);
+  transition-delay: 300ms;
 }
 
-#tabela{
-    display: flex;
-    flex-direction: column;
+/* Adicionando flex-box */
+#tabela {
+  display: flex;
+  flex-direction: column;
 }
 
-#local{
-    color: var(--black) !important;
-    display: flex;
+/* Adicionando cor e flex */
+#local {
+  color: var(--black) !important;
+  display: flex;
 }
 
-footer{
-    margin-top: 20vh;
+/* Adicionando margin */
+footer {
+  margin-top: 20vh;
 }

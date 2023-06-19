@@ -166,7 +166,9 @@
 	</header> <!-- Fechando header -->
 
 	<div class="d-none d-md-block">
+		<!-- Botao de voltar -->
 		<button class="cssbuttons-io-button "> Voltar
+			<!-- Div com icone para voltar -->
 			<div class="icon">
 				<svg height="177px" width="177px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
 					xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 483.284 483.284" xml:space="preserve"
@@ -175,19 +177,20 @@
 					<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
 					<g id="SVGRepo_iconCarrier">
 						<g>
-							<polygon style="fill:#057dc2;"
+							<polygon class="iconevoltar"
 								points="483.284,221.643 88.284,221.643 88.284,153.358 0,241.644 88.284,241.644 88.284,261.643 483.284,261.643 ">
 							</polygon>
-							<polygon style="fill:#145374;" points="0,241.644 88.284,329.926 88.284,241.644 "></polygon>
+							<polygon class="iconevoltar2" points="0,241.644 88.284,329.926 88.284,241.644 "></polygon>
 						</g>
 					</g>
 				</svg>
 			</div>
+			<!--  -->
 		</button>
 	</div>
-	<div id="editar">
+	<div class="col-11 col-sm-8 col-md-7 col-lg-6 col-xg-5 mx-auto" id="editar">
 		<!-- Div que ficará com o formulário -->
-		<div class="div_cadastro col-11 col-sm-8 col-md-7 col-lg-6 col-xg-5 mt-5 mt-md-0">
+		<div class="div_cadastro mt-5 mt-md-0 col-12">
 
 			<!-- Título pro formulário -->
 			<h1 class="fs-1"> Editar informações de login </h1>
@@ -202,25 +205,27 @@
 					<div class="nome campos">
 
 						<div class="form-floating">
+							<!-- input de nome -->
 							<input type="text" class="form-control" id="floatingInputGroup1" placeholder="Nome">
 							<label for="nome" id="label_nome">Nome</label>
 						</div>
 
-
+						<!-- Mensagem de erro -->
 						<label class="erro fs-6 fs-10 fs-7 fs-6 fs-5" id="noNome">Nome deve ser preenchido!</label>
 
 					</div>
 
-					<!-- E-mail do usuário -->
+					<!-- E-mail do usuario -->
 					<div class="email campos">
 
 						<div class="form-floating">
 							<input type="email" class="form-control" id="floatingInputGroup2" placeholder="E-mail">
 							<label for="email" id="label_email">E-mail</label>
 						</div>
-
+						
+						<!-- Mensagens de erro -->
 						<label class="erro fs-6 fs-10 fs-7 fs-6 fs-5" id="noEmail">E-mail deve ser
-							preenchido!</label><br>
+							preenchido!</label>
 
 						<label class="erro fs-6 fs-10 fs-7 fs-6 fs-5" id="noEmailPadrao">E-mail está fora dos
 							padrões!</label>
@@ -230,12 +235,13 @@
 
 					</div>
 
-					<!-- Idade do usuário -->
+					<!-- Idade do usuario -->
 					<div class="idade campos">
 						<label for="idade" id="labelData">Data de Nascimento:</label>
 
 						<input type="date" id="idade" name="idade_usuario">
 
+						<!-- Mensagens de erro -->
 						<label class="erro fs-6 fs-10 fs-7 fs-6 fs-5" id="noData">Data deve ser preenchida!</label>
 
 						<label class="erro fs-6 fs-10 fs-7 fs-6 fs-5" id="passouData">Data inválida!</label>

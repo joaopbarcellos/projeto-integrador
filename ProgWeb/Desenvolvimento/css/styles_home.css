@@ -1,15 +1,18 @@
+/* Tirando sombra */
 #homea {
   color: var(--azul_sec) !important;
   text-shadow: none;
 }
 
+/* Colocando cor no icone de home */
 .iconecasinha {
   fill: var(--azul_sec);
 }
 
+/* editando carousel de eventos principais */
 .carousel {
   position: unset !important;
-  left: 80%
+  left: 80%;
 }
 
 /* Definindo tamanho,posição e flexbox */
@@ -41,6 +44,7 @@ button:focus {
   outline: none;
 }
 
+/* colocando margins nas cetinhas */
 .carousel-indicators {
   top: 57%;
   margin-top: 10px;
@@ -48,21 +52,17 @@ button:focus {
   position: relative !important;
 }
 
+/* mudando cor de fundo */
 .carousel-indicators [data-bs-target] {
   background-color: var(--ciano) !important;
 }
 
+/* colocando espacamento no primeiro evento */
 .primeiro {
   margin-top: 0 !important;
 }
 
-/* Aplicando flexbox */
-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
+/* ao ter hover, o fundotexto aparece */
 .active:hover .fundoTexto {
   opacity: 1;
 }
@@ -75,7 +75,7 @@ section {
   left: 15px;
   font-size: 2rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-shadow: black 0.1em 0.1em 0.2em
+  text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 /* Aplicando display, tamanho, posição, cor, borda e transição */
@@ -104,6 +104,7 @@ section {
   text-align: left;
 }
 
+/* edito o slide com tamanhos, font e posicionamento */
 .sb-slide {
   height: 100% !important;
   min-height: 30px;
@@ -112,27 +113,12 @@ section {
   width: 200px !important;
 }
 
-
+/* adiciono espacamento no carousel */
 .carousel-inner {
   margin-top: 2%;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-  width: 10% !important;
-}
-
-.carousel-control-next-icon,
-.carousel-control-prev-icon {
-  color: #183153 !important;
-  opacity: 1 !important;
-}
-
-.carousel-control-next-icon:hover,
-.carousel-control-prev-icon:hover {
-  color: #183153 !important;
-}
-
+/* defino a imagem da seta */
 .carousel-control-next-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2383e3cd'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
 }
@@ -141,6 +127,7 @@ section {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2383e3cd'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e") !important;
 }
 
+/* deixo a msg de erro e altero seus espacamentos */
 .msg_erro {
   display: none;
   margin-top: 25px;

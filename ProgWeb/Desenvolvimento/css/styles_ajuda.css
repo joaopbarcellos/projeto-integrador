@@ -1,23 +1,24 @@
+/* Adicionando */
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
 
+/* Adicionando cores e tirando sombra   */
 #ajudaa {
   color: var(--azul_sec) !important;
   text-shadow: none;
   background-color: var(--branco);
 }
 
+/* Trocando a cor da imagem */
 .iconeajuda {
   fill: var(--azul_sec);
 }
 
-* {
-  margin: 0;
-}
-
+/* Tirando estilo da lista */
 ul {
   list-style: none;
 }
 
+/* Adicionando margin, cor e posicionado o container */
 #container {
   margin-top: 2rem;
   position: relative;
@@ -25,10 +26,12 @@ ul {
   background-color: var(--azul_terc);
 }
 
+/* Adicionando um cursor ao passar o mouse por cima */
 .item:hover {
   cursor: pointer;
 }
 
+/* Adicionando espacamento, tamanho, cor e alinhamento  */
 .pergunta {
   padding: 0.6rem;
   width: 100%;
@@ -36,14 +39,17 @@ ul {
   text-align: justify;
 }
 
+/* Adicionando cor */
 .prim {
   background-color: var(--azul_quint);
 }
 
+/* Adicionando cor */
 .seg {
   background-color: var(--azul_princ);
 }
 
+/* Adicionando espacamento, cor, tamanho, alinhamento e deixando ele escondido */
 .conteudo {
   padding: 0.6rem;
   display: none;
@@ -53,6 +59,7 @@ ul {
   background-color: var(--azul_claro);
 }
 
+/* Adicionando cor, borda e tamanho */
 #suporte {
   background-color: var(--azul_princ);
   border-radius: 100%;

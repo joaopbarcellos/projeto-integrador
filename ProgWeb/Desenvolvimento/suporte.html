@@ -27,21 +27,27 @@
 		defer></script>
 
 </head>
-
 <body>
+	<!-- Header com a navbar -->
 	<header>
+		<!-- navbar com menu hamburguer -->
 		<nav class="navbar navbar-expand-lg header ">
 			<div class="container-fluid col-11 m-auto">
 				<a class="navbar-brand" href="home.html"><img src="logos/9.png" id="logo"></a>
+				<!-- Botão com imagem do menu hamburguer -->
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 					data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 					aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
+				<!-- Div com a lista dos links para as páginas -->
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 
+					<!-- Lista geral contendo todos os links -->
 					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+						<!-- Lista com o link -->
 						<li class="nav-item nav-link">
 							<a href="home.html" id="homea">
 								<svg class="iconecasinha" xmlns="http://www.w3.org/2000/svg" height="1em"
@@ -53,6 +59,7 @@
 							</a>
 						</li>
 
+						<!-- Lista com o link -->
 						<li class="nav-item nav-link">
 							<a href="#" id="criaa">
 								<svg class="iconecria" xmlns="http://www.w3.org/2000/svg" height="1em"
@@ -64,6 +71,7 @@
 							</a>
 						</li>
 
+						<!-- Lista com o link -->
 						<li class="nav-item nav-link">
 							<a href="myevents.html" id="myeventsa">
 								<svg class="iconemeusevents" xmlns="http://www.w3.org/2000/svg" height="1em"
@@ -74,6 +82,7 @@
 								Meus Eventos</a>
 						</li>
 
+						<!-- Lista com o link -->
 						<li class="nav-item nav-link">
 							<a href="sobre.html" id="sobrea">
 								<svg class="iconesobre" xmlns="http://www.w3.org/2000/svg" height="1em"
@@ -85,6 +94,7 @@
 							</a>
 						</li>
 
+						<!-- Lista geral com o dropdown -->
 						<li class="nav-item dropdown">
 							<a class="links nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
 								aria-expanded="false">
@@ -96,7 +106,9 @@
 								Configurações
 							</a>
 
+							<!-- Lista com os links dos dropdown -->
 							<ul class="dropdown-menu">
+								<!-- Primeiro link -->
 								<li>
 									<a class="dropdown-item" href="perfil.html" id="perfila">
 										<svg class="iconeuser" xmlns="http://www.w3.org/2000/svg" height="1em"
@@ -107,6 +119,8 @@
 										Conta
 									</a>
 								</li>
+
+								<!-- Segundo link -->
 								<li>
 									<a class="dropdown-item" href="ajuda.html" id="ajudaa">
 										<svg class="iconeajuda" xmlns="http://www.w3.org/2000/svg" height="1em"
@@ -117,10 +131,13 @@
 										Ajuda
 									</a>
 								</li>
+
 								<!-- <li><a class="dropdown-item" href="#">Tema</a></li> -->
 								<li>
 									<hr class="dropdown-divider">
 								</li>
+
+								<!-- Terceiro link -->
 								<li>
 									<a class="dropdown-item" href="#" id="logout">
 										<svg class="iconelogout" xmlns="http://www.w3.org/2000/svg" height="1em"
@@ -130,17 +147,27 @@
 										</svg>
 										Sair
 									</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</div>
+
+								</li> <!-- Fechando lista com os link -->
+
+							</ul> <!--Fechando lista geral com o dropdown  -->
+
+						</li> <!-- Fechando lista geral contendo todos os links -->
+
+					</ul> <!-- Fechando div com a lista dos links -->
+
+				</div> <!-- Fechando div com a lista dos links -->
+
 			</div>
-		</nav>
-	</header>
+
+		</nav> <!-- Fechando navbar -->
+
+	</header> <!-- Fechando header -->
 
 	<div class="d-none d-md-block">
+		<!-- Botao de voltar -->
 		<button class="cssbuttons-io-button "> Voltar
+			<!-- Div com icone para voltar -->
 			<div class="icon">
 				<svg height="177px" width="177px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
 					xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 483.284 483.284" xml:space="preserve"
@@ -149,10 +176,10 @@
 					<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
 					<g id="SVGRepo_iconCarrier">
 						<g>
-							<polygon style="fill:#057dc2;"
+							<polygon class="iconevoltar"
 								points="483.284,221.643 88.284,221.643 88.284,153.358 0,241.644 88.284,241.644 88.284,261.643 483.284,261.643 ">
 							</polygon>
-							<polygon style="fill:#145374;" points="0,241.644 88.284,329.926 88.284,241.644 "></polygon>
+							<polygon class="iconevoltar2" points="0,241.644 88.284,329.926 88.284,241.644 "></polygon>
 						</g>
 					</g>
 				</svg>
@@ -176,8 +203,6 @@
 					<label for="floatingInputGrid">Email</label>
 				</div>
 
-				<!-- <input type="email" id="emailuser" name="email_usuario" placeholder="E-mail para contato"> -->
-
 				<label class="erro" id="noEmail">E-mail deve ser preenchido!</label><br>
 
 				<label class="erro" id="noEmailPadrao">E-mail está fora dos padrões!</label>
@@ -191,14 +216,11 @@
 					<label for="floatingTextarea2">Mensagem</label>
 				</div>
 
-				<!-- <textarea id="mensagem" name="mensagem_usuario" placeholder="Mensagem"></textarea> -->
-
 				<label class="erro" id="noMsg">Mensagem deve ser preenchida!</label>
 
 			</div>
 
 		</form>
-		<!-- NÃO COLOCAR O BOTÃO DENTRO DO FORM PFV -->
 		<button class="col-6 col-lg-6 col-md-6 col-sm-6 mb-4 fs-6" id="envio">Enviar</button>
 	</div>
 

@@ -1,19 +1,23 @@
+/* Adiciono a cor do link, tiro sua sombra e coloco o fundo branco atras */
 #perfila {
   color: var(--azul_sec) !important;
   text-shadow: none;
   background-color: var(--branco);
 }
 
+/* Mudo a cor do icone de conta */
 .iconeuser {
   fill: var(--azul_sec);
 }
 
+/* adiciono um flex no container */
 #container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* MEXO NA CARTEIRINHA TIME  */
 #perfil {
   margin-top: 50px;
   border: solid 0px #000000;
@@ -23,25 +27,29 @@
   margin-bottom: 30px;
 }
 
+/* coloco um display flex nas foto e descricao */
 .fot_desc {
   display: flex;
   flex-direction: row;
 }
 
+/* tiro o margin de row */
 .row {
   margin: 0 !important;
 }
 
+/* edito a foto */
 #semfoto {
   height: 8rem;
   width: auto;
   margin: 20px;
 }
 
+/* deixo quebrar as letras quando nao couber no espaco horizontal */
 .word-break {
   word-break: break-word;
 }
-
+/* coloco os espacamentos e defino como fles nos campos de dados */
 .dados {
   display: flex;
   flex-direction: column;
@@ -49,6 +57,7 @@
   border-radius: 5px;
 }
 
+/* mudo a cor de fundo dos locais onde terão os inputs */
 .info {
   background-color: rgba(128, 128, 128, 0.447);
   border-radius: 5px;
@@ -56,31 +65,36 @@
   margin-bottom: 10px;
 }
 
+/* coloco a cor dos textos como branco */
 .texto {
   color: var(--branco);
 }
 
+/* defino os espacamentos do slogan e sua cor */
 #sloganperfil {
   color: var(--branco);
   margin-bottom: 0 !important;
   margin-right: auto;
 }
 
+/* coloco um flex na div que tera a hashtag */
 #hashtag {
   display: flex;
   align-items: center;
   padding: 30px;
 }
 
-.row>* {
+.row > * {
   padding: 0 !important;
 }
 
+/* defino a largura da logo da carteirinha  */
 #logo_cart {
   width: 40px;
   position: relative;
 }
 
+/* mudo os espacamentos e cores de fonte dos botoes */
 #editar,
 #excluir {
   padding: 10px;
@@ -91,33 +105,40 @@
   user-select: none;
 }
 
+/* defino a cor de fundo, espacamento e largura de editar */
 #editar {
   width: 180px;
   background-color: var(--azul_princ);
   margin-bottom: 10px;
 }
 
+/* coloco um flex na div que possui os botoes */
 #botoes {
   display: flex;
   flex-direction: column;
 }
 
+/* coloco a cor e defino a largura do botao de excluir perfil */
 #excluir {
   background-color: #c20505;
   width: 130px;
 }
 
+/* mudo o cursor e a cor de fundo no hover do botao de excluir perfil */
 #excluir:hover {
   cursor: pointer;
   background-color: #740707;
 }
 
+/* mudo o cursor e a cor de fundo no hover do botao de editar perfil */
 #editar:hover {
   cursor: pointer;
   background-color: var(--azul_terc);
 }
 
-/* switch */
+/* Abaixo tenho os css do switch que está em desenvolvimento para a funcao de alterar tema */
+
+/* defino os tamanhos e posicoes do switch */
 .switch {
   display: none !important;
   font-size: 17px;
@@ -129,12 +150,14 @@
   left: 20px;
 }
 
+/* defino o input de switch como invisivel */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
+/* defino a estetica do switch antes de ser apertado */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -142,11 +165,12 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #73C0FC;
-  transition: .4s;
+  background-color: #73c0fc;
+  transition: 0.4s;
   border-radius: 30px;
 }
 
+/* defino a estetica do switch depois de ser apertado */
 .slider:before {
   position: absolute;
   content: "";
@@ -157,9 +181,10 @@
   bottom: 2px;
   z-index: 2;
   background-color: #e8e8e8;
-  transition: .4s;
+  transition: 0.4s;
 }
 
+/* defino o svg de sol como absoluto */
 .sun svg {
   position: absolute;
   top: 6px;
@@ -169,8 +194,9 @@
   height: 24px;
 }
 
+/* defino a estetica do icone de lua */
 .moon svg {
-  fill: #73C0FC;
+  fill: #73c0fc;
   position: absolute;
   top: 5px;
   left: 5px;
@@ -179,7 +205,7 @@
   height: 24px;
 }
 
-/* .switch:hover */
+/* crio uma animacao para o icone de sol rodar no seu proprio eixo */
 .sun svg {
   animation: rotate 15s linear infinite;
 }
@@ -194,7 +220,7 @@
   }
 }
 
-/* .switch:hover */
+/* crio uma animacao para o icone de lua*/
 .moon svg {
   animation: tilt 5s linear infinite;
 }
@@ -217,14 +243,14 @@
   }
 }
 
-.input:checked+.slider {
+.input:checked + .slider {
   background-color: #183153;
 }
 
-.input:focus+.slider {
+.input:focus + .slider {
   box-shadow: 0 0 1px #183153;
 }
 
-.input:checked+.slider:before {
+.input:checked + .slider:before {
   transform: translateX(30px);
 }

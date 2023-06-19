@@ -29,19 +29,26 @@
 </head>
 
 <body>
+	<!-- Header com a navbar -->
 	<header>
+		<!-- navbar com menu hamburguer -->
 		<nav class="navbar navbar-expand-lg header ">
 			<div class="container-fluid col-11 m-auto">
 				<a class="navbar-brand" href="../home.html"><img src="../logos/9.png" id="logo"></a>
+				<!-- Botao com imagem do menu hamburguer -->
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 					data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 					aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
+				<!-- Div com a lista dos links para as paginas -->
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 
+					<!-- Lista geral contendo todos os links -->
 					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+						<!-- Lista com o link -->
 						<li class="nav-item nav-link">
 							<a href="../home.html" id="homea">
 								<svg class="iconecasinha" xmlns="http://www.w3.org/2000/svg" height="1em"
@@ -53,6 +60,7 @@
 							</a>
 						</li>
 
+						<!-- Lista com o link -->
 						<li class="nav-item nav-link">
 							<a href="#" id="criaa">
 								<svg class="iconecria" xmlns="http://www.w3.org/2000/svg" height="1em"
@@ -64,6 +72,7 @@
 							</a>
 						</li>
 
+						<!-- Lista com o link -->
 						<li class="nav-item nav-link">
 							<a href="../myevents.html" id="myeventsa">
 								<svg class="iconemeusevents" xmlns="http://www.w3.org/2000/svg" height="1em"
@@ -74,6 +83,7 @@
 								Meus Eventos</a>
 						</li>
 
+						<!-- Lista com o link -->
 						<li class="nav-item nav-link">
 							<a href="../sobre.html" id="sobrea">
 								<svg class="iconesobre" xmlns="http://www.w3.org/2000/svg" height="1em"
@@ -85,6 +95,7 @@
 							</a>
 						</li>
 
+						<!-- Lista geral com o dropdown -->
 						<li class="nav-item dropdown">
 							<a class="links nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
 								aria-expanded="false">
@@ -96,7 +107,9 @@
 								Configurações
 							</a>
 
+							<!-- Lista com os links dos dropdown -->
 							<ul class="dropdown-menu">
+								<!-- Primeiro link -->
 								<li>
 									<a class="dropdown-item" href="../perfil.html" id="perfila">
 										<svg class="iconeuser" xmlns="http://www.w3.org/2000/svg" height="1em"
@@ -107,6 +120,8 @@
 										Conta
 									</a>
 								</li>
+
+								<!-- Segundo link -->
 								<li>
 									<a class="dropdown-item" href="../ajuda.html" id="ajudaa">
 										<svg class="iconeajuda" xmlns="http://www.w3.org/2000/svg" height="1em"
@@ -117,10 +132,13 @@
 										Ajuda
 									</a>
 								</li>
+
 								<!-- <li><a class="dropdown-item" href="#">Tema</a></li> -->
 								<li>
 									<hr class="dropdown-divider">
 								</li>
+
+								<!-- Terceiro link -->
 								<li>
 									<a class="dropdown-item" href="#" id="logout">
 										<svg class="iconelogout" xmlns="http://www.w3.org/2000/svg" height="1em"
@@ -130,18 +148,26 @@
 										</svg>
 										Sair
 									</a>
-								</li>
-							</ul>
-						</li>
 
-					</ul>
+								</li> <!-- Fechando lista com os link -->
 
-				</div>
+							</ul> <!--Fechando lista geral com o dropdown  -->
+
+						</li> <!-- Fechando lista geral contendo todos os links -->
+
+					</ul> <!-- Fechando div com a lista dos links -->
+
+				</div> <!-- Fechando div com a lista dos links -->
+
 			</div>
-		</nav>
-	</header>
+
+		</nav> <!-- Fechando navbar -->
+
+	</header> <!-- Fechando header -->
 	<div class="d-none d-md-block">
+		<!-- Botao de voltar -->
 		<button class="cssbuttons-io-button "> Voltar
+			<!-- Div com icone para voltar -->
 			<div class="icon">
 				<svg height="177px" width="177px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
 					xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 483.284 483.284" xml:space="preserve"
@@ -150,10 +176,10 @@
 					<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
 					<g id="SVGRepo_iconCarrier">
 						<g>
-							<polygon style="fill:#057dc2;"
+							<polygon class="iconevoltar"
 								points="483.284,221.643 88.284,221.643 88.284,153.358 0,241.644 88.284,241.644 88.284,261.643 483.284,261.643 ">
 							</polygon>
-							<polygon style="fill:#145374;" points="0,241.644 88.284,329.926 88.284,241.644 "></polygon>
+							<polygon class="iconevoltar2" points="0,241.644 88.284,329.926 88.284,241.644 "></polygon>
 						</g>
 					</g>
 				</svg>
@@ -161,15 +187,21 @@
 		</button>
 	</div>
 
+	<!-- Div com o conteudo ta pagina geral -->
 	<div id="container" class="container col-12 m-auto">
+
+		<!-- Adicionando titulo -->
 		<h1 id="titulo" class="text-center text-lg-start offset-1">Motocross Arena Jacaraípe</h1>
 		<div id="evento" class="row">
 
 			<div id="tabela" class="col-12 col-lg-10 m-auto">
 				<img src="../img/14.png" id="img_evento">
 			</div>
+
+			<!-- Div geral com as informacoes do evento -->
 			<div id="informacoes" class="col-12 col-lg-10 m-auto">
 
+				<!-- Div com as descricoes -->
 				<div id="desc">
 					<p id="t_desc" class="fs-3" class="fs-3"><b>Descrição</b></p>
 					<p id="p_desc">
@@ -177,18 +209,23 @@
 					</p>
 				</div>
 
+				<!-- Div de localizacao -->
 				<div id="localizacao"><a id="local" href="maps.html">
+
+					<!-- Icone da localizacao -->
 						<svg class="iconezin iconelocev" xmlns="http://www.w3.org/2000/svg" height="1em"
 							viewBox="0 0 384 512">
 							<path
 								d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
 						</svg>
 						<p>
+							<!-- localizacao do evento-->
 							Estância Monazítica, Serra - ES
 						</p>
 					</a>
 				</div>
 
+				<!-- Div com a data -->
 				<div id="data">
 					<svg class="iconezin iconedataev" xmlns="http://www.w3.org/2000/svg" height="1em"
 						viewBox="0 0 448 512">
@@ -198,30 +235,39 @@
 					<p id="dia">20/09/23 08:00 - 16:00</p>
 				</div>
 
+				<!-- Div com o custo do evento -->
 				<div id="preco">
 					<p id="sifrao"><b>R$: </b>15,90</p>
 				</div>
 
+				<!-- Div com o publico-alvo do evento -->
 				<div id="alvo">
 					<p id="publi"><b>Público alvo: </b>Acima de 18 anos</p>
 				</div>
 
+				<!-- Div com o intuito do evento -->
 				<div id="intuito">
 					<p id="sifrao"><b>Intuito do Evento: </b>Para profissionais</p>
 				</div>
 
+				<!-- Div com o numero de vagas restantes -->
 				<div class="vagas">
 					<div id="vagas_restam">
 						<p id="t_vagasrestam"><b>Vagas restantes: </b>13</p>
 					</div>
 
+					<!-- Div com o numero de inscritos do evento -->
 					<div id="num_inscritos">
 						<p id="t_numinscritos"><b>Número de Inscritos: </b>37</p>
 					</div>
 				</div>
+
+				<!-- Div com o organizador do evento -->
 				<div id="organizador">
 					<p id="t_organizador"><b>Evento organizado por: </b>Mariana Alves Castro</p>
 				</div>
+
+				<!-- Botao de inscrever-se -->
 				<button class="inscrever fixo" id="motocrossArena">
 					<img src="../img/bola.png">
 					<span class="now">Agora!</span>
