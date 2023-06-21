@@ -8,16 +8,6 @@ const noEmailPadrao = document.querySelector("#noEmailPadrao");
 const noMsg = document.querySelector("#noMsg");
 const campoEmail = document.querySelector("#floatingInputGrid");
 
-// Capturando os inputs pra saber se clicou enter
-document.querySelectorAll("input").forEach((input) => {
-  input.addEventListener("keypress", (event) => {
-    if (event.key == "Enter") {
-      // Chamando a funcao caso o usuario apertou a tecla enter em algum campo de texto
-      suporte();
-    }
-  });
-});
-
 function suporte() {
   // Verificando se o campo de email e vazio
   let verificaEmail = base.verificaCampoVazio(
@@ -58,3 +48,13 @@ function suporte() {
 }
 
 btn.addEventListener("click", suporte);
+
+// Funcao para preencher o campo de email se estiver logado
+function preencheCampoEmailSeEstiverLogado(){
+  // Pegando o email logado do sessionStorage
+  let emailLogado = sessionStorage.getItem("logado");  
+  if (emailLogado){ // Se estiver logado
+    campoEmail.value = emailLogado; // Coloca o email logado no campo de email
+  }
+}
+preencheCampoEmailSeEstiverLogado();

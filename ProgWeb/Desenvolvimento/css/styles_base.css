@@ -9,9 +9,10 @@
 :root {
   --body_grad: linear-gradient(to top right, #057dc2, #83e3cd);
   --azul_princ: #057dc2;
-  --azul_claro: rgb(0, 198, 255);
-  --azul-claro_sec: rgb(0, 167, 245);
+  --azul_claro: #00C6FF;
+  --azul-claro_sec: #00a7f5;
   --branco: #ffffff;
+  --bg_body: #ffffff;
   --azul_sec: #4267b3;
   --ciano: #83e3cd;
   --black: #000000;
@@ -20,14 +21,39 @@
   --lilas: #4169e1;
   --roxo: #7f37c9;
   --azul_quint: #145374;
+  --roxo_princ: #145374;
+  --roxo_terc: #145374;
+  --roxo_sec: #057dc2;
   --header_bg_grad: linear-gradient(to bottom right, #057dc2, #83e3cd);
+  --bg_grad_eve: linear-gradient( 55deg, #83e3cd, #057dc2, #83e3cd);
+  --fundotext: rgba(50, 174, 181, 0.543);
 }
 
 /* Criando variaveis com cores */
 [data-theme="black"] {
-  --azul_princ: #012f49;
-  --branco: #000000;
+  --body_grad: linear-gradient(to top right, #7C36A8, #045C8F);
+  --azul_princ: #045C8F;
+  --azul_claro: #00A0CC;
+  --azul-claro_sec: #0084C2;
+  --bg_body: #0A212E;
+  --azul_sec: #8c92e1;
+  --roxo_princ: #522d96;
+  --ciano: #B38CE1;
   --black: #ffffff;
+  --azul_terc: #045C8F;
+  --azul_quart: #183153;
+  --lilas: #4169e1;
+  --roxo: #a96ce6;
+  --azul_quint: #145374;
+  --roxo_sec: #4d55d1;
+  --roxo_terc: #363c91;
+  --header_bg_grad: linear-gradient(to bottom right, #045C8F, #7C36A8);
+  --bg_grad_eve: linear-gradient( 55deg, #7C36A8, #045C8F, #7C36A8);
+  --fundotext: rgba(11, 28, 102, 0.543);
+}
+
+body{
+  background-color: var(--bg_body) !important;
 }
 
 /* Deixando o texto nao copiavel e tirando o alinhamento vertical */
@@ -78,7 +104,7 @@ header {
 
 /* Adicionando cor */
 .dropdown-menu {
-  background-color: var(--azul_princ) !important;
+  background-color: var(--roxo_princ) !important;
 }
 
 .dropdown-toggle,
@@ -96,13 +122,13 @@ header {
 
 /* Adicionando cor e transicao */
 #lupa {
-  background-color: var(--azul_princ);
+  background-color: var(--roxo_sec);
   transition: 0.2s ease-in-out;
 }
 
 /* Adicionando cor */
 #lupa:hover {
-  background-color: var(--azul_quint);
+  background-color: var( --roxo_princ);
 }
 
 /* Adicionando tamanho */
@@ -216,6 +242,11 @@ footer p {
 #footer_social_media {
   margin-left: auto;
   margin-right: auto;
+  
+}
+
+#slogan, .h3atualizado, footer p{
+  color: #ffffff !important;
 }
 
 /* Aplicando tamanho e espaçamento */
@@ -258,7 +289,7 @@ footer p {
 
 /* Aplicando cor, flexbox e alinhando*/
 #instagram {
-  background: linear-gradient(var(--roxo), #ff2992, #ff9807);
+  background: linear-gradient( #7f37c9, #ff2992, #ff9807);
   display: flex;
   justify-content: center;
   align-items: end;
@@ -306,7 +337,7 @@ footer p {
   all: unset;
   padding: 0.75rem;
   width: 100%;
-  color: var(--black);
+  color: #000000;
 }
 
 /* Aplicando cor, borda, fonte e cursor */
@@ -323,7 +354,7 @@ footer p {
 
 /* Aplicando opacidade */
 #input_group button:hover {
-  opacity: 0.8;
+  opacity: 0.95;
 }
 
 /* Adicionando margem na imagem */
@@ -335,7 +366,7 @@ footer p {
 #copyright {
   display: flex;
   justify-content: center;
-  background-color: var(--azul_terc);
+  background-color: var(--roxo_terc);
   font-size: 0.9rem;
   padding: 0.8rem;
   font-weight: 100;
@@ -367,12 +398,7 @@ footer p {
   border: 0;
   border-radius: 10px;
   box-shadow: 0 3px 5px 5px rgba(131, 131, 131, 0.46);
-  background: linear-gradient(
-    55deg,
-    var(--ciano),
-    var(--azul_princ),
-    var(--ciano)
-  );
+  background: var(--bg_grad_eve);
 }
 
 /* aplico um display flex entre a imagem e as informacoes de um evento*/
@@ -631,7 +657,6 @@ input[type="date"] {
 }
 
 /* cores e transicao  dos icones*/
-
 .iconeajuda,
 .iconeuser,
 .iconelogout,
@@ -652,16 +677,20 @@ input[type="date"] {
 #criaa:hover .iconecria,
 #myeventsa:hover .iconemeusevents,
 #sobrea:hover .iconesobre,
-.dropdown-toggle:hover .iconeconfig {
+.dropdown-toggle:hover .iconeconfig{
   fill: var(--azul_sec);
 }
 
 /* defino a cor do icone de localizacao */
-.iconeloc,
-.iconedata,
 .iconevoltar,
 .iconevoltar2 {
   fill: var(--azul_princ);
+}
+
+/* defino a cor do icone de localização e data dos eventos */
+.iconeloc,
+.iconedata{
+  fill: var(--azul_quint);
 }
 
 /* Trocando cursor, adicionando posicionamento e tamanho */
@@ -699,4 +728,12 @@ input[type="date"] {
 .iconelocev,
 .iconedataev {
   fill: var(--black);
+}
+
+/* Adiciono text decoration para outro tipo de link */
+.link{
+  font-size: 0.8em;
+  left: 0;
+  margin-top: 10px;
+  text-decoration: underline !important;
 }

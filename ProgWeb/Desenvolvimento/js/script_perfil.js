@@ -47,7 +47,7 @@ function excluirPerfil() {
   Swal.fire({
     title: "Você tem certeza?",
     icon: "warning",
-    text: "Você não consiguirá reverter isto!",
+    text: "Você não conseguirá reverter isto!",
     confirmButtonText: "Sim",
     confirmButtonColor: "#3085d6",
     showCancelButton: true,

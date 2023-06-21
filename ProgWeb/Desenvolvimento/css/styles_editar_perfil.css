@@ -1,9 +1,11 @@
+/* altero cor de fundo e cor da fonte do link de conta */
 #perfila {
   color: var(--azul_sec) !important;
   text-shadow: none;
   background-color: var(--branco);
 }
 
+/* altero cor do icone do usuario */
 .iconeuser {
   fill: var(--azul_sec);
 }
@@ -58,6 +60,7 @@ h1 {
   background-color: var(--branco);
   border-radius: 5px;
   padding: 10px;
+  margin-bottom: 5%;
 }
 
 /* Aplicando margem */
@@ -68,7 +71,6 @@ h1 {
 /* Aplicando margen, cor, borda e fonte no botão */
 #alterar,
 #alterarSenha {
-  margin-bottom: 1%;
   padding: 11px;
   cursor: pointer;
   border: 1px solid var(--black);
@@ -79,10 +81,6 @@ h1 {
   user-select: none;
 }
 
-/* Aplicando margin top em alterar senha */
-#alterarSenha {
-  margin-top: 2rem;
-}
 
 /* Adicionando cursor pointer e cor diferente para os hover de botao alterar e alterarsenha */
 #alterar:hover,
@@ -99,8 +97,8 @@ h1 {
 
 /* Tirando padding das label */
 #label_nome,
-#label_email {
-  padding-left: 0;
+#label_email, .focado {
+  padding-left: 0 !important;
 }
 
 /* trocando css do campos de digitação */
@@ -118,4 +116,42 @@ h1 {
 #floatingInputGroup1,
 #floatingInputGroup2:hover {
   border-bottom: 1px solid var(--black);
+}
+
+
+/* ajustando icone de cadeado dentro do input de email */
+.input-group {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  pointer-events: none;
+}
+
+.input-icon svg {
+  height: 16px;
+  fill: rgba(var(--bs-body-color-rgb),.65);;
+}
+
+/* alterando label de email do bootstrap */
+.focado{
+  content: "";
+  border-radius: var(--bs-border-radius);
+  color: rgba(var(--bs-body-color-rgb),.65);
+  transform: scale(.85) translateY(-0.5rem) translateX(0.15rem);
+  font-size: 1.25rem!important;
+  height: unset !important;
+}
+
+/* altero espacamento e cor de fundo do input de email */
+#floatingInputGroup2{
+  padding-top: 1.625rem;
+  background-color: #ccc;
 }

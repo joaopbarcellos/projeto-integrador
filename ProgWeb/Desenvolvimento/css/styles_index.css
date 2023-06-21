@@ -9,7 +9,7 @@ body {
 }
 
 /* Posição e tamanho da imagem */
-img {
+#logo_image {
   position: absolute;
   width: 10%;
   left: 50px;

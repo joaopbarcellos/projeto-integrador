@@ -10,8 +10,7 @@ function nomeEvento() {
     .replace(":5500", "")
     .replace("https://", "")
     .replace("jpzb.github.io/", "")
-    .replace("projeto-integrador", "")
-    .replace("timein.infinityfreeapp.com", "");;
+    .replace("projeto-integrador", "");
   return nomeJanela;
 }
 

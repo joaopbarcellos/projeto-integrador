@@ -93,7 +93,7 @@ button:focus {
   padding: 12px;
   position: absolute;
   bottom: 0px;
-  background-color: rgba(50, 174, 181, 0.543);
+  background-color: var(--fundotext);
 }
 
 /* Aplicando cor, fonte, tamanho e alinhamento */

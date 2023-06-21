@@ -31,7 +31,7 @@
   <body>
     <header class="d-none d-lg-block">
       <!-- Header com imagem dentro de um link -->
-      <a href="index.html"> <img src="logos/11.png" /> </a>
+      <a href="index.html"> <img src="logos/11.png"/> </a>
     </header>
 
     <!-- Div que ficara com o formulário -->
@@ -67,6 +67,7 @@
                 id="floatingInputGroup1"
                 placeholder="Nome"
                 name="nomeCampo"
+                tabindex="1"
               />
               <label for="nome" id="label_nome">Nome</label>
             </div>
@@ -86,6 +87,7 @@
                 id="floatingInputGroup2"
                 placeholder="E-mail"
                 name="emailCampo"
+                tabindex="2"
               />
               <label for="email" id="email_label">E-mail</label>
             </div>
@@ -107,7 +109,7 @@
           <div class="idade campos fs-5">
             <!-- Label e input da idade -->
             <label for="idade" id="labelData">Data de Nascimento:</label>
-            <input type="date" id="idade" name="dataCampo" />
+            <input type="date" id="idade" name="dataCampo" tabindex="3" />
 
             <!-- Mensagem de erro -->
             <label class="erro" id="noData">Data deve ser preenchida!</label>
@@ -127,6 +129,7 @@
                 id="floatingInputGroup3"
                 placeholder="Senha"
                 name="senhaCampo"
+                tabindex="4"
               />
               <label for="senha" id="senha_label">Senha</label>
             </div>
@@ -151,6 +154,7 @@
                 id="floatingInputGroup4"
                 placeholder="Confirmação de senha"
                 name="confsenhaCampo"
+                tabindex="5"
               />
               <label for="confirmasenha" id="senha_label_confirma"
                 >Confirmação de senha</label
@@ -167,7 +171,7 @@
             >
 
             <label class="erro" id="passConfPass"
-              >Confirmar senha deve ser igual à senha!</label
+              >Confirme a senha corretamente!</label
             >
           </div>
           <!-- Fechando div de confirmação de senha -->
@@ -187,6 +191,7 @@
                     id="Profissional"
                     name="jogabilidade"
                     class="bolaRadio"
+                    tabindex="6"
                   />
 
                   <label class="jogabilidades" for="Profissional">
@@ -201,6 +206,7 @@
                     id="Amador"
                     name="jogabilidade"
                     class="bolaRadio"
+                    tabindex="7"
                   />
 
                   <label class="jogabilidades" for="Amador"> Amador </label>
@@ -213,6 +219,7 @@
                     id="Iniciante"
                     name="jogabilidade"
                     class="bolaRadio"
+                    tabindex="8"
                   />
 
                   <label class="jogabilidades" for="Iniciante">
@@ -236,7 +243,7 @@
         </form>
 
         <!-- Botão para cadastrar usuário, está fora do form para não resetar a página ao clicar-->
-        <button class="btn-cadastra mb-4 mt-3 p-2 rounded-3" id="cadastro">
+        <button class="btn-cadastra mb-4 mt-3 p-2 rounded-3" id="cadastro" tabindex="9">
           CADASTRAR
         </button>
       </div>

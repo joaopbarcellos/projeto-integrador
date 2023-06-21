@@ -1,11 +1,6 @@
 // Importando a funcao de autenticacao de campos
 import * as base from "./script_base.js";
 
-document.querySelector("#alterarSenha").addEventListener("click", () => {
-  // Levando para a tela de alteracao de senha
-  window.location.assign("alterarSenha.html");
-});
-
 // Pegando os dados do usuario logado
 var emailLogado = sessionStorage.getItem("logado");
 const dadosUsuario = JSON.parse(localStorage.getItem(emailLogado));
@@ -36,14 +31,13 @@ const noEmailExiste = document.querySelector("#noEmailExiste");
 function preencherAuto() {
   campoNome.value = dadosUsuario.nome;
   campoEmail.value = emailLogado;
+  campoEmail.disabled = true;
   campoDataNasc.value = dadosUsuario.dataNasc;
 
   let radioMarcada = dadosUsuario.jogabilidade;
 
-  // Mudando a classe dos labels para fins estéticos
+  // Mudando a classe dos labels para fins esteticos
   labelNome.classList.add("focado");
-
-  labelEmail.classList.add("focado");
 
   // Selecionando qual e o nivel do jogador
   radios.forEach((radio) => {
@@ -60,28 +54,6 @@ function verificaTudo() {
   // Verificando se o campo de nome e vazio
   let verificaNome = base.verificaCampoVazio(campoNome, labelNome, noNome);
 
-  // Verificando se o campo de email e vazio
-  let verificaEmail = base.verificaCampoVazio(
-    campoEmail,
-    labelEmail,
-    noEmail,
-    noEmailPadrao,
-    noEmailExiste
-  );
-  if (verificaEmail) {
-    // Verificando se o campo de email esta fora dos padroes
-    verificaEmail = base.verificaEmailForaPadrao(
-      campoEmail,
-      noEmail,
-      noEmailPadrao,
-      noEmailExiste
-    );
-  }
-
-  if (verificaEmail) {
-    // Verificando se o email ja foi cadastrado antes
-    verificaEmail = base.emailIgual(campoEmail, noEmailExiste);
-  }
   // Verificando se o campo de data e vazio
   let verDataNasc = base.verificaCampoVazio(
     campoDataNasc,
@@ -103,7 +75,7 @@ function verificaTudo() {
     noJogabilidade
   );
 
-  let lista = [verificaNome, verificaEmail, verDataNasc, verjog];
+  let lista = [verificaNome, verDataNasc, verjog];
   // Verificando se todos os elementos sao true
   return lista.every((element) => element);
 }
@@ -140,14 +112,15 @@ function autenticar() {
         dadosUsuario.nome = campoNome.value;
         dadosUsuario.dataNasc = campoDataNasc.value;
         dadosUsuario.jogabilidade = base.jogabilidadeMarcada();
-        dadosUsuario.email = campoEmail.value;
-        // Colocando tudo no dicionario/mapa de dadosUsuario
 
+        // Chave do usuário para alteracao
+        let emailLogado = campoEmail.value;
+        
+        // Colocando tudo no dicionario/mapa de dadosUsuario
         let stringJson = JSON.stringify(dadosUsuario);
 
         localStorage.removeItem(emailLogado);
         // Removendo o item antigo
-        emailLogado = campoEmail.value;
 
         sessionStorage.setItem("logado", emailLogado);
         // Setando o novo item no sessionStorage

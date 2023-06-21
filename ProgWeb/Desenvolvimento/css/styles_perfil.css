@@ -1,4 +1,4 @@
-/* Adiciono a cor do link, tiro sua sombra e coloco o fundo branco atras */
+/* Adiciono a cor do link, retiro sua sombra e coloco o fundo branco atras */
 #perfila {
   color: var(--azul_sec) !important;
   text-shadow: none;
@@ -33,7 +33,7 @@
   flex-direction: row;
 }
 
-/* tiro o margin de row */
+/* Tirando o margin de row */
 .row {
   margin: 0 !important;
 }
@@ -72,7 +72,7 @@
 
 /* defino os espacamentos do slogan e sua cor */
 #sloganperfil {
-  color: var(--branco);
+  color: #ffffff !important;
   margin-bottom: 0 !important;
   margin-right: auto;
 }
@@ -140,7 +140,7 @@
 
 /* defino os tamanhos e posicoes do switch */
 .switch {
-  display: none !important;
+  display: block !important;
   font-size: 17px;
   position: relative;
   display: inline-block;
@@ -222,7 +222,7 @@
 
 /* crio uma animacao para o icone de lua*/
 .moon svg {
-  animation: tilt 5s linear infinite;
+  animation: tilt 2s linear infinite;
 }
 
 @keyframes tilt {

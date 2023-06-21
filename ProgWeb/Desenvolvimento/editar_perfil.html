@@ -217,22 +217,17 @@
 
 					<!-- E-mail do usuario -->
 					<div class="email campos">
-
 						<div class="form-floating">
-							<input type="email" class="form-control" id="floatingInputGroup2" placeholder="E-mail">
-							<label for="email" id="label_email">E-mail</label>
+							<label  for="floatingInputGroup2" class="focado">E-mail</label>
+							<div class="input-group">
+							  	<input type="email" class="form-control" id="floatingInputGroup2" placeholder="E-mail">
+							  	<div class="input-icon">
+									<svg class="iconefechadura" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+								  	<path d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z"/>
+								</svg>
+							  	</div>
+							</div>
 						</div>
-						
-						<!-- Mensagens de erro -->
-						<label class="erro fs-6 fs-10 fs-7 fs-6 fs-5" id="noEmail">E-mail deve ser
-							preenchido!</label>
-
-						<label class="erro fs-6 fs-10 fs-7 fs-6 fs-5" id="noEmailPadrao">E-mail está fora dos
-							padrões!</label>
-
-						<label class="erro fs-6 fs-10 fs-7 fs-6 fs-5" id="noEmailExiste">E-mail já está
-							cadastrado!</label>
-
 					</div>
 
 					<!-- Idade do usuario -->
@@ -293,31 +288,29 @@
 
 								<!-- Fim da div radios -->
 							</div>
-
+							
 							<!-- Fim da div jogabilidade -->
 						</div>
-
+						
 						<!-- Fim da div joga -->
 					</div>
-
 				</form>
 
+				<!-- Link para alterar senha -->
+				<a href="alterarSenha.html" class="link"> Deseja alterar senha? </a>
 				<!-- Botão para cadastrar usuário, está fora do form para não resetar a página ao clicar-->
 				<button id="alterar" class="fs-5 col-12 col-lg-8 mt-4 mx-auto"> SALVAR ALTERAÇÕES </button>
+				
 
 			</div>
-
+		
 		</div>
 
-		<!-- Botão para levar para a página de alterar senha -->
-		<button id="alterarSenha" class="fs-5">
-			<svg class="iconesenha" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-				<path
-					d="M336 352c97.2 0 176-78.8 176-176S433.2 0 336 0S160 78.8 160 176c0 18.7 2.9 36.8 8.3 53.7L7 391c-4.5 4.5-7 10.6-7 17v80c0 13.3 10.7 24 24 24h80c13.3 0 24-10.7 24-24V448h40c13.3 0 24-10.7 24-24V384h40c6.4 0 12.5-2.5 17-7l33.3-33.3c16.9 5.4 35 8.3 53.7 8.3zM376 96a40 40 0 1 1 0 80 40 40 0 1 1 0-80z" />
-			</svg>
-			Alterar Senha
-		</button>
+	
 	</div>
+
+
+	
 
 	<footer>
 		<!-- Inicio do meu container com 3 blocos -->
