@@ -32,7 +32,7 @@ h1 {
 .divGeral {
   background-color: #057dc2;
   border-radius: 10px;
-  box-shadow: -1px -2px 25px 8px #000000;
+  box-shadow: var(--sombraalterakey);
   padding: 10px;
 }
 

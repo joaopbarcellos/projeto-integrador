@@ -25,8 +25,6 @@ body {
 
 /* Adicionando espacamento, flex-box e alinhamento */
 #sobre {
-  padding-left: 5%;
-  padding-right: 5%;
   letter-spacing: 1px;
   display: flex;
   justify-content: center;

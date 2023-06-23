@@ -22,7 +22,7 @@
   margin-top: 50px;
   border: solid 0px #000000;
   border-radius: 12px;
-  box-shadow: inset 0 0 0.5em rgb(90, 90, 90), 0 0 1em rgb(90, 90, 90);
+  box-shadow: var(--sombraalterakey);
   background-color: var(--azul-claro_sec);
   margin-bottom: 30px;
 }
