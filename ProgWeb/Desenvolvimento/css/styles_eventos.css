@@ -1,26 +1,13 @@
 /* Importando fonte */
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Quicksand:wght@100&display=swap");
 
-/* Adicionando cor e tirando sombrea das letras */
-#homea {
-  color: var(--azul_sec) !important;
-  text-shadow: none;
-}
-
-/* Trocando cor da imagem */
-.iconecasinha {
-  fill: var(--azul_sec);
-}
-
 /* Adicionando espacamento na pagina toda */
 * {
   padding: 0;
 }
 
-/* Adicionando cor e tirando sombra dos textos */
-#homea {
-  color: var(--azul_sec) !important;
-  text-shadow: none;
+p, h1{
+  color: var(--black) !important;
 }
 
 /* Adiconando flex-box */

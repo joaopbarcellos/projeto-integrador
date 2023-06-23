@@ -60,7 +60,7 @@ h1 {
 #envio {
   height: 45px;
   border-radius: 5px;
-  background-color: var(--azul_quint);
+  background-color: var(--azul_escuro);
   color: var(--branco);
   border: 1px solid black;
   transition: 0.4s ease;
@@ -70,7 +70,7 @@ h1 {
 /* Adicionando cursor e cor */
 #envio:hover {
   cursor: pointer;
-  background-color: var(--azul_escuro);
+  background-color: var(--azul_quint);
 }
 
 /* Adicionando minino e maximo nos inputs */

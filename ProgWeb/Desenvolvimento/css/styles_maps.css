@@ -1,14 +1,3 @@
-/* adiciono uma cor e tiro a sombra do link da pagina home */
-#homea {
-  color: var(--azul_sec) !important;
-  text-shadow: none;
-}
-
-/* mudo a cor do icone de casa */
-.iconecasinha {
-  fill: var(--azul_sec) !important;
-}
-
 /* coloco o botao de voltar como fixo */
 .cssbuttons-io-button {
   position: fixed !important;

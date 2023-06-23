@@ -35,12 +35,17 @@ body {
   text-align: justify;
 }
 
+#sobre p, h1{
+  color: var(--black) !important;
+}
+
 /* Adicionando display flex, alinhamento e margin  */
 .h2_equipe {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 3%;
+  color: var(--black);
 }
 
 /* Adiconando cor, flex-box, espacamento, alinhamento e sombra */
@@ -71,6 +76,7 @@ body {
   font-size: 1.3rem;
   text-align: center;
   word-break: break-all;
+  color: var(--black);
 }
 
 /* Adicionando margin */
@@ -113,13 +119,7 @@ body {
   flex-direction: row;
   justify-content: center;
   margin-bottom: 2.5%;
-}
-
-/* Adicionando margin, tamanho e deixando proporcao fixa */
-.iconeSobre {
-  margin-bottom: 0;
-  width: 20px;
-  object-fit: contain;
+  align-items: center;
 }
 
 /* Adicionando cor e espacamento */

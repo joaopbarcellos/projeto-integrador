@@ -12,11 +12,12 @@
 /* adiciono um espacamento na squerda do h1 */
 h1 {
   padding-left: 30px;
+  color: var(--black) !important;
 }
 
 /* altero o p de semeventos trocando a cor e os espacamentos */
 #semevento {
-  color: #69696998;
+  color: var(--semevento);
   margin-top: 10%;
   margin-bottom: 10%;
   display: block;
