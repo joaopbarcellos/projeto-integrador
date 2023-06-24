@@ -10,10 +10,10 @@ body {
 
 /* Posição e tamanho da imagem */
 #logo_image {
-  position: absolute;
+  position: fixed;
   width: 10%;
-  left: 50px;
-  top: 50px;
+  left: 5%;
+  top: 5%;
 }
 
 /* Altura do header */

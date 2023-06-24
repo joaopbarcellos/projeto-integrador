@@ -34,7 +34,6 @@ input {
   background: none;
   z-index: 3;
   border: none;
-  box-shadow: 1px 0px 3px 2px rgba(78, 78, 78, 0.75);
   border-radius: 25px;
   background-color: var(--branco);
 }
@@ -116,6 +115,7 @@ button:focus {
 /* adiciono espacamento no carousel */
 .carousel-inner {
   margin-top: 2%;
+  box-shadow: var(--cor_sombraev);
 }
 
 /* defino a imagem da seta */

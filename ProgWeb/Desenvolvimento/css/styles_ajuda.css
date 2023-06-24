@@ -24,6 +24,7 @@ ul {
   position: relative;
   border-radius: 10px;
   background-color: var(--perg1);
+  box-shadow: var(--cor_sombraev);
 }
 
 /* Adicionando um cursor ao passar o mouse por cima */
