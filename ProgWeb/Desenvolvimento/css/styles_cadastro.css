@@ -37,6 +37,7 @@ img {
 /* Aplicando margem e flexbox na div */
 .formulario {
   margin: 7%;
+  margin-top: 0;
   display: flex;
   flex-direction: column;
   padding-top: 2%;
