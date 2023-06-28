@@ -16,7 +16,7 @@ class LoginCertoCest
     {
         $I->amOnPage('/projeto-integrador/ProgWeb/Desenvolvimento/index.html');
         $I->fillField('emailCampo', 'master@gmail.com');
-        $I->fillField('senhaCampo', '123456')
+        $I->fillField('senhaCampo', '123456');
         $I->click('Entrar');
         $I->seeCurrentURLEquals('/projeto-integrador/ProgWeb/Desenvolvimento/home.html');
     }
