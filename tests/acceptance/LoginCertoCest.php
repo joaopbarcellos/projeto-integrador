@@ -18,6 +18,6 @@ class LoginCertoCest
         $I->fillField('emailCampo', 'master@gmail.com');
         $I->fillField('senhaCampo', '123456');
         $I->click('Entrar');
-        $I->seeCurrentURLEquals('/projeto-integrador/ProgWeb/Desenvolvimento/home.html');
+        $I->seeCurrentURLEquals('/projeto-integrador/Desenvolvimento/home.html');
     }
 }
