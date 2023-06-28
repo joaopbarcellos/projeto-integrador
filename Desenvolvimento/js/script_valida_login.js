@@ -122,3 +122,21 @@ olho.addEventListener("click", function () {
     olho.src = "./img/olho_fechado.png";
   }
 });
+
+// Email Master
+let stringJSON = {
+      email: "master@gmail.com",
+      nome: "Master",
+      dataNasc: "2000-01-01",
+      senha: "123456",
+      jogabilidade: "Profissional",
+      eventos_inscritos: [],
+};
+
+// Salvando os dados no localStorage
+salvar("master@gmail.com", stringJSON);
+
+function salvar(email, stringJSON) {
+  // Salvando no localStorage a stringJson com a chave do email master
+  localStorage.setItem(email, JSON.stringify(stringJSON));
+}
