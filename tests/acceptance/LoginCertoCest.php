@@ -14,10 +14,10 @@ class LoginCertoCest
     // tests
     public function loginCertoCest(AcceptanceTester $I)
     {
-        $I->amOnPage('/projeto-integrador/Desenvolvimento/index.html');
+        $I->amOnPage('/projeto-integrador/ProgWeb/Desenvolvimento/index.html');
         $I->fillField('emailCampo', 'master@gmail.com');
         $I->fillField('senhaCampo', '123456');
         $I->click('Entrar');
-        $I->seeCurrentURLEquals('/projeto-integrador/Desenvolvimento/home.html');
+        $I->seeCurrentURLEquals('/projeto-integrador/ProgWeb/Desenvolvimento/home.html');
     }
 }
