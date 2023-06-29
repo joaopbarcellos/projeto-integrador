@@ -1,0 +1,784 @@
+/* Importanto fonte */
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&family=Wix+Madefor+Text&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Quicksand:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&family=Parisienne&family=Wix+Madefor+Text&display=swap");
+
+/* Criando uma variavel para cor e grandient */
+:root {
+  --body_grad: linear-gradient(to top right, #057dc2, #83e3cd);
+  --azul_princ: #057dc2;
+  --azul_claro: #00C6FF;
+  --azul-claro_sec: #00a7f5;
+  --branco: #ffffff;
+  --bg_body: #ffffff;
+  --lupa: #145374;
+  --azul_sec: #4267b3;
+  --ciano: #83e3cd;
+  --black: #000000;
+  --azul_terc: #284174;
+  --azul_quart: #183153;
+  --lilas: #4169e1;
+  --roxo: #7f37c9;
+  --azul_quint: #145374;
+  --roxo_princ: #057dc2;
+  --roxo_terc: #145374;
+  --roxo_sec: #057dc2;
+  --header_bg_grad: linear-gradient(to bottom right, #057dc2, #83e3cd);
+  --bg_grad_eve: linear-gradient( 55deg, #83e3cd, #057dc2, #83e3cd);
+  --fundotext: rgba(50, 174, 181, 0.543);
+  --iconesup: #145374;
+  --icone_loc: #145374;
+  --perg1: #145374;
+  --azul_escuro: #3e71a2;;
+  --perg2: #057dc2;
+  --supfund: #057dc2;
+  --semevento: #69696998;
+  --resp: #00C6FF;
+  --textoalerta: #545454;
+  --fundoalerta: #ffffff;
+  --cor_sombraev: 0 3px 5px 5px rgba(131, 131, 131, 0.46);  
+  --sombraalterakey: 0px 0px 19px -3px rgba(0,0,0,0.75);
+  --prev_light: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2383e3cd' %3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+  --next_light: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2383e3cd'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+/* Criando variaveis com cores */
+[data-theme="black"] {
+  --body_grad: linear-gradient(to top right, #7C36A8, #045C8F);
+  --azul_princ: #045C8F;
+  --sombraalterakey: 0px 0px 19px 3px #000000;
+  --textoalerta: #ffffff;
+  --fundoalerta: #113041;
+  --perg1: #4336a8;
+  --perg2: #7C36A8;
+  --resp: #866bb8;
+  --supfund: #a3abe4;
+  --azul_claro: #00A0CC;
+  --azul-claro_sec: #0084C2;
+  --bg_body: #0A212E;
+  --azul_sec: #787fdb;
+  --roxo_princ: #522d96;
+  --semevento: #acacacfb;
+  --lupa: #522d96;
+  --iconesup: #6760ba;
+  --ciano: #B38CE1;
+  --black: #ffffff;
+  --azul_terc: #6760ba;
+  --azul_quart: #183153;
+  --lilas: #4169e1;
+  --roxo: #a96ce6;
+  --azul_quint: #145374;
+  --roxo_sec: #4d55d1;
+  --roxo_terc: #140974;
+  --icone_loc: #83e3cd;
+  --header_bg_grad: linear-gradient(to bottom right, #045C8F, #7C36A8);
+  --bg_grad_eve: linear-gradient( 55deg, #7C36A8, #045C8F, #7C36A8);
+  --fundotext: rgba(11, 28, 102, 0.543);
+  --cor_sombraev: 0px 3px 11px 1px rgba(0,0,0,0.75);
+  --prev_light: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff' %3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+  --next_light: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.swal2-popup{
+  background-color: var(--fundoalerta);
+}
+
+.swal2-title, .swal2-html-container{
+  color: var(--textoalerta);
+}
+
+body{
+  background-color: var(--bg_body) !important;
+}
+
+/* Deixando o texto nao copiavel e tirando o alinhamento vertical */
+img {
+  vertical-align: unset !important;
+  user-select: none;
+}
+
+/* Aplicando margem, fonte e tirando style das listas */
+ul,
+li,
+p {
+  margin: 0px;
+  list-style: none;
+  font-size: 1.2rem;
+  font-family: Arial !important;
+}
+
+/* Adicionando tamanho e posicao */
+header {
+  position: relative;
+  width: 100%;
+  top: 0;
+  z-index: 99999;
+}
+
+/* Deixando o item ficar por cima dos demais */
+.swal2-container {
+  z-index: 999999;
+}
+
+/* Aplicando cor e tirando decoração dos textos */
+.header li,
+.header a {
+  text-decoration: none;
+  color: var(--branco);
+  text-shadow: rgb(0, 0, 0) 0.1em 0.1em 0.2em;
+  cursor: pointer;
+  transition: 0.4s ease;
+  user-select: none;
+}
+
+/* Adicionando cor e tirando sombra dos textos */
+.header a:hover {
+  color: var(--azul_sec) !important;
+  text-shadow: none;
+}
+
+/* Adicionando cor */
+.dropdown-menu {
+  background-color: var(--roxo_princ) !important;
+}
+
+.dropdown-toggle,
+.dropdown-menu {
+  outline: 0;
+  box-shadow: 0 0 0 0;
+}
+
+/* Aplicando margem */
+.search-bar {
+  margin-top: 2%;
+  width: 50%;
+  padding-bottom: 20px;
+}
+
+/* Adicionando cor e transicao */
+#lupa {
+  background-color: var(--roxo_sec);
+  transition: 0.2s ease-in-out;
+}
+
+/* Adicionando cor */
+#lupa:hover {
+  background-color: var( --lupa);
+}
+
+/* Adicionando tamanho */
+#pesquisar {
+  width: 100% !important;
+  max-width: 700px;
+}
+
+/* Tirando outline e sombra */
+#busca {
+  outline: 0;
+  box-shadow: 0 0 0 0;
+}
+
+/* Adicionando tamanho e cor */
+.icones {
+  width: 20px;
+  color: var(--azul_princ);
+}
+
+/* Adicionando cor */
+.links {
+  color: var(--branco) !important;
+}
+
+/* Tirando decoracao e aplicando cor no link */
+a {
+  text-decoration: none !important;
+  cursor: pointer;
+  transition: 0.4s ease;
+  font-family: unset !important;
+}
+
+/* Aplicando cor */
+.desc p {
+  color: var(--branco);
+}
+
+/* Adicionando sombra */
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+/* Aplicando tamanho, borda e margem */
+.icone {
+  width: 24px;
+  border-radius: 5px 5px 5px 5px;
+  margin-bottom: 9px;
+}
+
+/* Aplicando flexbox, alinhamento, cor e sombra*/
+.header {
+  background: var(--header_bg_grad);
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+}
+
+/* Aplicando tamanho, borda e margem */
+#logo {
+  width: 150px;
+  border-radius: 10px;
+  margin-bottom: 5px !important;
+}
+
+/* Recolhendo quebra de espacos  */
+.nav-item {
+  white-space: nowrap;
+}
+
+/* Aplicando margem */
+.menu li {
+  margin-left: 20px;
+}
+
+/* Aplicando cor */
+#textos {
+  color: var(--black);
+}
+
+/* Aplicando fonte, cor, tamanho e espaçamento*/
+footer {
+  font-family: "Wix Madefor Text", sans-serif !important;
+  width: 100%;
+  background-color: var(--azul_princ);
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  color: var(--branco);
+  margin-top: 25vh;
+  box-shadow: 0px -1px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+/* Adicioando fonte */
+footer p {
+  font-family: "Wix Madefor Text", sans-serif;
+}
+
+/* Aplicando cor, display, número de colunas e espaçamento */
+#footer-content {
+  padding-bottom: 2.7rem;
+  margin: auto;
+}
+
+/* Adicionando flex-box */
+#footer_contacts {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Adicionando margin */
+#footer_contacts img,
+#slogan,
+#footer_social_media {
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+#slogan, .h3atualizado, footer p{
+  color: #ffffff !important;
+}
+
+/* Aplicando tamanho e espaçamento */
+#foot {
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+  align-items: center;
+  box-sizing: unset !important;
+}
+
+/* Aplicando flexbox, margem e espacamento */
+#footer_social_media {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+/* Aplicando cor, tamnho e borda */
+#footer_social_media .footer-link {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 5px;
+}
+
+/* Aplicando  flexbox e tirando style da lista */
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Aplicando cor */
+.footer-list .footer-link:hover {
+  color: var(--roxo) !important;
+}
+
+/* Aplicando cor, flexbox e alinhando*/
+#instagram {
+  background: linear-gradient( #7f37c9, #ff2992, #ff9807);
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+/* Aplicando cor, flexbox e alinhando*/
+#facebook {
+  background-color: #1877f2;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+/* Aplicando cor e flexbox */
+#whatsapp {
+  background-color: #1da1f2;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+/* Definindo a margem dos h3 do footer */
+.h3foot {
+  margin: 0px;
+}
+
+/* Aplicando flexbox*/
+#footer_subscribe {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Aplicando flexbox, cor e borda */
+#input_group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--branco);
+  border-radius: 5px 5px 5px 5px;
+}
+
+/* cor, tamanho, espaçamento e colocando propriedades com valor padrão */
+#input_group input {
+  all: unset;
+  padding: 0.75rem;
+  width: 100%;
+  color: #000000;
+}
+
+/* Aplicando cor, borda, fonte e cursor */
+#input_group button {
+  background-color: var(--azul_sec);
+  border: none;
+  color: var(--branco);
+  padding: 0px 1.25rem;
+  font-size: 1.125rem;
+  height: 50px;
+  border-radius: 0px 4px 4px 0px;
+  cursor: pointer;
+}
+
+/* Aplicando opacidade */
+#input_group button:hover {
+  opacity: 0.95;
+}
+
+/* Adicionando margem na imagem */
+#input_group img {
+  margin-top: 13px;
+}
+
+/* aplico cor de fundo, dou as configurações do texto e espacamento */
+#copyright {
+  display: flex;
+  justify-content: center;
+  background-color: var(--roxo_terc);
+  font-size: 0.9rem;
+  padding: 0.8rem;
+  font-weight: 100;
+  font-family: unset !important;
+  user-select: none;
+}
+
+/* Aplicando flexbox */
+.conteudo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Recolhendo espacos em branco  */
+.word-break {
+  word-break: break-word;
+}
+
+/* Aplicando flexbox, tamanho, borda, cor e sombra */
+.evento {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  margin-left: 2%;
+  margin-right: 2%;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: var(--cor_sombraev);
+  background: var(--bg_grad_eve);
+}
+
+/* aplico um display flex entre a imagem e as informacoes de um evento*/
+.informacoes {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+/* Aplicando tamanho e borda*/
+.imgEventos {
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/* Aplicando flexbox e margens */
+.desc {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0px;
+  width: 100%;
+}
+
+/* Adicionando margin */
+.intuito p {
+  margin-bottom: 0.5rem !important;
+}
+
+/* Aplicando fonte e margem */
+.pTitulo {
+  font-style: oblique;
+  font-size: 1.7rem;
+  margin-bottom: 15px;
+}
+
+/* Defininfo margem */
+.data_hora {
+  margin-left: 5px;
+}
+
+/* Adicionando margin */
+.data_hora p {
+  margin-bottom: 0;
+}
+
+/* Adicionando margin */
+.sb-list {
+  margin-left: auto;
+  margin-top: auto;
+}
+
+/* Aplico um flex entre o valor do evento e o botao de inscrever-se */
+.btn_des {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+}
+
+/* Colocando item sobre os demais */
+.swal2-container {
+  z-index: 999999999999 !important;
+}
+
+/* Adicionando tamanho, cor, posicao e transicao */
+.sabermais:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: var(--ciano);
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+}
+
+/* Adicionando tamanho e posicao */
+.sabermais:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+/* Adicionando tamanho da fonte, transicao, colocando ele por cima dos outros elementos e cor */
+.sabermais span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  color: var(--branco);
+  font-size: 1.125em;
+  font-weight: 700;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Adicionando cor e animacao */
+.sabermais:hover span {
+  color: var(--azul_quart);
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+/* Adicionando tamanho, borda, cor, alinhamento, fonte personalizada e posicionamento */
+.sabermais {
+  width: 190px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: var(--azul_terc);
+  font-family: "Noto Sans", sans-serif;
+  box-shadow: 2px 2px 20px 1px rgba(0,0,0,0.75);
+  overflow: hidden;
+  border: none;
+}
+
+/* defino as propriedades do botao de voltar, colocando espacamento, cor de fundo e das fontes, espacamento, sombra e overflow para fazer o span de voltar sumir ao crescer a seta */
+.cssbuttons-io-button {
+  position: relative;
+  margin-left: 1.67em;
+  margin-top: 1.67em;
+  background: var(--azul_princ);
+  color: var(--branco);
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em var(--azul_princ);
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+}
+
+/* mudo o icone de voltar centralizando, tirando espacamento e definindo sombra */
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em var(--azul_quint);
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+/* defino a animacao do botao, quando tiver hover a largura do icone muda */
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+/* coloco o tamanho do icone do botao voltar */
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+}
+
+/* Adiciona transicao */
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+/* css do botao de enviar email */
+.send {
+  background: var(--lilas);
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+/* Adicionando transicao, posicionamento e display */
+.send svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  left: -5px;
+}
+
+.send:hover svg {
+  transform: rotate(45deg) scale(1.1);
+}
+
+/* Adicionando transicao */
+.send:active {
+  transform: scale(0.95);
+}
+
+/* defino a animacao do botao de lista de transmissao do footer */
+.send:hover .svg-wrapper {
+  animation: fly-1 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+@media (max-width: 317px) {
+  .container-fluid {
+    overflow-x: auto;
+  }
+}
+
+/* Aplicando display e cor nos textos de erro*/
+.erro {
+  display: none;
+  color: #f58181;
+  font-size: 1rem;
+  margin-bottom: 1%;
+}
+
+.erroVazio,
+.erroPadrao {
+  color: #f58181;
+}
+
+/* Adicionando cor */
+.certo {
+  color: green;
+}
+
+/* Selecionando todos os inputs e aplicando margem, tamanho e borda */
+input[type="date"] {
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  border: 0;
+  border-bottom: 1px solid var(--black);
+  outline: 0;
+}
+
+/* Adicionadno flex-box e margin */
+.data {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5%;
+}
+
+/* Adicionando margin */
+.data p {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+
+/* cores e transicao  dos icones*/
+.iconeajuda,
+.iconeuser,
+.iconelogout,
+.iconecasinha,
+.iconecria,
+.iconemeusevents,
+.iconesobre,
+.iconeconfig {
+  fill: var(--branco);
+  transition: 0.4s ease;
+}
+
+/* Mudo as cores dos icones quando estao em hover */
+#ajudaa:hover .iconeajuda,
+#perfila:hover .iconeuser,
+#logout:hover .iconelogout,
+#homea:hover .iconecasinha,
+#criaa:hover .iconecria,
+#myeventsa:hover .iconemeusevents,
+#sobrea:hover .iconesobre,
+.dropdown-toggle:hover .iconeconfig{
+  fill: var(--azul_sec);
+}
+
+/* defino a cor do icone de localizacao */
+.iconevoltar,
+.iconevoltar2 {
+  fill: var(--azul_princ);
+}
+
+/* defino a cor do icone de localização e data dos eventos */
+.iconeloc,
+.iconedata{
+  fill: var(--icone_loc);
+}
+
+/* Trocando cursor, adicionando posicionamento e tamanho */
+.olho {
+  cursor: pointer;
+  position: absolute !important;
+  left: unset;
+  right: 0;
+  top: 25px;
+  width: 1.8rem;
+}
+
+/* Adicionando margin e trocando cor da imagem */
+.iconeeditar,
+.iconesenha {
+  fill: var(--branco);
+  margin-top: 1px;
+  margin-bottom: 5px;
+}
+
+/* Adicionando margin, tamanho e trocando cor da imagem */
+.iconesuporte {
+  fill: var(--iconesup);
+  height: 30px;
+  margin: 10px;
+}
+
+/* Adicionando margin e trocando cor */
+.iconeexcluir {
+  fill: var(--branco);
+  margin-bottom: 5px;
+}
+
+/* Adicionando cor */
+.iconelocev,
+.iconedataev {
+  fill: var(--black);
+}
+
+/* Adicionando margin, tamanho e deixando proporcao fixa */
+.iconeSobre {
+  margin-bottom: 0;
+  width: 20px;
+  object-fit: contain;
+  fill: var(--black);
+}
+
+/* Adiciono text decoration para outro tipo de link */
+.link{
+  font-size: 0.8em;
+  left: 0;
+  margin-top: 10px;
+  text-decoration: underline !important;
+}
