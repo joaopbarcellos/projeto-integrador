@@ -14,8 +14,8 @@ class AbreEventoCest
     // tests
     public function abrirEventoTest(AcceptanceTester $I)
     {
-	    $I->amOnPage('/projeto-integrador/Desenvolvimento/home.html'); 
+	    $I->amOnPage('/projeto-integrador/ProgWeb/Desenvolvimento/home.html'); 
 	    $I->click('Saber Mais'); 
-	    $I->seeCurrentURLEquals('/projeto-integrador/Desenvolvimento/eventos/surfItaparica.html');
+	    $I->seeCurrentURLEquals('/projeto-integrador/ProgWeb/Desenvolvimento/eventos/surfItaparica.html');
     }
 }
