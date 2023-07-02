@@ -133,13 +133,10 @@ let stringJSON = {
       eventos_inscritos: [],
 };
 
-console.log("1")
-
 // Salvando os dados no localStorage
 salvar("master@gmail.com", stringJSON);
 
 function salvar(email, stringJSON) {
-  console.log("2")
   // Salvando no localStorage a stringJson com a chave do email master
   localStorage.setItem(email, JSON.stringify(stringJSON));
 }
