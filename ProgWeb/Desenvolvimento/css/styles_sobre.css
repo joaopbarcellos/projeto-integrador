@@ -1,0 +1,129 @@
+/* Importando fonte */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap");
+
+/* Adicionando cor e tirando sombre do texto */
+#sobrea {
+  color: var(--azul_sec) !important;
+  text-shadow: none;
+}
+
+/* Trocando cor da imagem */
+.iconesobre {
+  fill: var(--azul_sec) !important;
+}
+
+/* Adicionando fonte na pagina */
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+/* Adicionando cor e sombra */
+#sobrea {
+  color: var(--azul_sec) !important;
+  text-shadow: none;
+}
+
+/* Adicionando espacamento, flex-box e alinhamento */
+#sobre {
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: justify;
+}
+
+#sobre p, h1{
+  color: var(--black) !important;
+}
+
+/* Adicionando display flex, alinhamento e margin  */
+.h2_equipe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3%;
+  color: var(--black);
+}
+
+/* Adiconando cor, flex-box, espacamento, alinhamento e sombra */
+.pessoas {
+  background-color: var(--azul-claro_sec);
+  border-radius: 20px;
+  display: flex;
+  height: auto;
+  margin-right: 1%;
+  margin-left: 1%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-right: 20px;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.75);
+}
+
+/* Adicionando espacamento */
+.participante {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* Adicionando fonte, quebra de linha e alinhamento */
+.pessoas h3 {
+  font-size: 1.3rem;
+  text-align: center;
+  word-break: break-all;
+  color: var(--black);
+}
+
+/* Adicionando margin */
+.container {
+  margin-top: 3%;
+}
+
+/* Adicionando espacamento e tamanho */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  box-shadow: 0px 2px 15px -1px rgba(0,0,0,0.75);
+}
+
+/* Adicionando tamnho e posicionamento */
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+}
+
+/* Adicionadno alinhamento */
+.row {
+  align-items: center;
+}
+
+/* Adicionando borda, margin e tamanho */
+.foto {
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 85%;
+}
+
+/* Adicionando flex-box e margin */
+.span_integrantes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 2.5%;
+  align-items: center;
+}
+
+/* Adicionando cor e espacamento */
+#textos {
+  color: var(--black) !important;
+  padding: 0 !important;
+}
