@@ -706,6 +706,15 @@ input[type="date"] {
   transition: 0.4s ease;
 }
 
+#ajudaa, #perfila, #logout,
+#homea, #criaa, #myeventsa,
+#sobrea, .dropdown-toggle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
 /* Mudo as cores dos icones quando estao em hover */
 #ajudaa:hover .iconeajuda,
 #perfila:hover .iconeuser,
