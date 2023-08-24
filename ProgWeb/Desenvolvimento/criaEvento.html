@@ -169,91 +169,144 @@
 
     <body>
         <div class="container">
-			<div class="circle ratio ratio-1x1 m-sm-1 m-md-2 m-lg-3 m-xg-4">
-				<div class="form-container">
-					<form id="multi-step-form">
+			<div class="form-container col-12 col-sm-10 col-md-8 col-lg-7 col-xl-6 col-xxl-4">
+				<form id="multi-step-form" class="">
 
-						<!-- Etapa 1 -->
-						<div class="step">	
-							<div class="form-floating mb-3">
+					<!-- Etapa 1 -->
+					<div class="step">
+						<div class="infos">
+							<h1>Cadastre as informações para criar o seu evento</h1>
+							<div class="form-floating mb-3 mt-3">
 								<input type="text" class="form-control" id="floatingInput" placeholder="Nome do evento">
 								<label for="floatingInput">Nome do Evento</label>
-
-								<textarea class="form-control" placeholder="Descrição do Evento" id="floatingTextarea1" maxlength="500"></textarea>
-								<!-- <label for="floatingTextarea2">Descrição do Evento</label> -->
-
-								<button class="next-btn">Próximo</button>
-							</div>		
-						</div>
-		
-						<!-- Etapa 2 
-						<div class="step">
-							<div class="form-floating">
+							</div>
 								
-								<button class="prev-btn">Anterior</button>
-								<button class="next-btn">Próximo</button>
+							<div class="form-floating mb-3">
+								<input type="date" class="form-control" id="floatingInput2" placeholder="Data do Evento">
+								<label  for="floatingInput2">Data do Evento</label>
 							</div>
-						</div>
-						-->
-		
-						<!-- Etapa 3 -->
-						<div class="step">
-							<div>
-								<label for="formFileLg" class="form-label">Adicione fotos do evento </label>
-								<input class="form-control form-control-lg" id="formFileLg" type="file">
-								<button class="prev-btn">Anterior</button>
-								<button class="next-btn">Próximo</button>
-							</div>
-						</div>
-		
-						<!-- Etapa 4 -->
-						<div class="step">
-							<div class="form-floating">
-								<!-- -->
-								<label for="idade" id="labelData">Data do Evento:</label>
-								<input type="date" id="idade" name="dataCampo" tabindex="3"/>
-								<button class="prev-btn">Anterior</button>
-								<button class="next-btn">Próximo</button>
-							</div>
-						</div>
-		
-						<!-- Etapa 5 -->
-						<div class="step">
-							<div class="btn-group" role="group">
-								<input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-								<label class="btn btn-outline-primary" for="btnradio1">Sim</label>
-
-								<input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-								<label class="btn btn-outline-primary" for="btnradio2">Não</label>
-								<button class="prev-btn">Anterior</button>
-								<button class="next-btn">Próximo</button>
-						</div>
-
-						<!-- Etapa 6 -->
-						<div class="step">
-							<div class="btn-group" role="group">
-								<input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-								<label class="btn btn-outline-primary" for="btnradio1">Sim</label>
-
-								<input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-								<label class="btn btn-outline-primary" for="btnradio2">Não</label>
-								<button class="prev-btn">Anterior</button>
-								<button class="next-btn">Próximo</button>
-						</div>
-
-						<!-- Etapa 7 -->
-						<div class="step">	
-								<div class="btn-group" role="group">
-									<label for="final" id="labelData">Data final do Evento:</label>
-									<input type="date" id="data_final" name="dataCampo" tabindex="3"/>
-									<button class="prev-btn">Anterior</button>
-									<button class="next-btn">Próximo</button>
+							<div class="horas">
+								<div class="form-floating mb-3">
+									<input type="time" class="form-control" id="floatingInput3" placeholder="Horário do evento">
+									<label for="floatingInput3">Horário do evento</label>
 								</div>
-						</div>
-					</form>
-				</div>
-            </div>
-        </div>
+								<div class="form-floating mb-3">
+									<input type="time" class="form-control" id="floatingInput4" placeholder="Horário do evento">
+									<label for="floatingInput4">Término Estimado</label>
+								</div>
+							</div>
 
+						</div>
+
+						<button class="next-btn"><span>Próximo</span></button>
+					</div>
+					
+					<div class="step">
+						<div class="infos">
+							<h1>Cadastre as informações para criar o seu evento</h1>
+
+							<div class="form-floating mb-3 mt-3">
+								<input type="text" class="form-control" id="floatingInput" placeholder="Nome do evento">
+								<label for="floatingInput">Nome do Evento</label>
+							</div>
+
+						</div>
+
+						<div class="botoes">
+							<button class="prev-btn">
+								<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" class="iconevoltarevents">
+									<path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></path>
+								</svg>
+								<span>Anterior</span>
+							</button>
+
+							<button class="next-btn"><span>Próximo</span></button>
+						</div>
+					</div>
+
+					<!-- Etapa 3 -->
+					<div class="step">
+						<div>
+							<label for="formFileLg" class="form-label">Adicione uma foto e descrição do evento para alcançar mais pessoas</label>
+							<input class="form-control form-control-lg" id="formFileLg" type="file">
+							<textarea class="form-control" placeholder="Descrição do Evento" id="floatingTextarea1" maxlength="500"></textarea>
+							<!-- <label for="floatingTextarea2">Descrição do Evento</label> -->
+							<div class="botoes">
+								<button class="prev-btn">
+									<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" class="iconevoltarevents">
+										<path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></path>
+									</svg>
+									<span>Anterior</span>
+								</button>
+	
+								<button class="next-btn"><span>Próximo</span></button>
+							</div>
+						</div>
+					</div>
+	
+					<!-- Etapa 4 -->
+					<div class="step">
+						<div class="form-floating">
+							<!-- -->
+							<label for="idade" id="labelData">Data do Evento:</label>
+							<input type="date" id="idade" name="dataCampo" tabindex="3"/>
+							<div class="botoes">
+								<button class="prev-btn">
+									<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" class="iconevoltarevents">
+										<path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></path>
+									</svg>
+									<span>Anterior</span>
+								</button>
+	
+								<button class="next-btn"><span>Próximo</span></button>
+							</div>
+						</div>
+					</div>
+	
+					<!-- Etapa 5 -->
+					<div class="step">
+						<div class="btn-group" role="group">
+							<input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+							<label class="btn btn-outline-primary" for="btnradio1">Sim</label>
+
+							<input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+							<label class="btn btn-outline-primary" for="btnradio2">Não</label>
+							<div class="botoes">
+								<button class="prev-btn">
+									<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" class="iconevoltarevents">
+										<path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></path>
+									</svg>
+									<span>Anterior</span>
+								</button>
+	
+								<button class="next-btn"><span>Próximo</span></button>
+							</div>
+						</div>
+					</div>
+
+					<!-- Etapa 6 -->
+					<div class="step">
+						<div class="btn-group" role="group">
+							<input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+							<label class="btn btn-outline-primary" for="btnradio1">Sim</label>
+
+							<input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+							<label class="btn btn-outline-primary" for="btnradio2">Não</label>
+							<div class="botoes">
+								<button class="prev-btn">
+									<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" class="iconevoltarevents">
+										<path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></path>
+									</svg>
+									<span>Anterior</span>
+								</button>
+	
+								<button class="next-btn"><span>Próximo</span></button>
+							</div>
+						</div>
+					</div>
+
+				</form>
+			</div>
+        </div>
 </body>
 </html>

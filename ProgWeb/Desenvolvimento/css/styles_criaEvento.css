@@ -19,24 +19,29 @@
     padding-top: 10px;
 }
 
-/* Container circular */
-.circle {
-    border-radius: 50%;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    padding: 20px;
+.horas{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    width: 90% !important; 
-    max-width: 600px; 
-    margin: 0 auto; 
-    position: relative;
-    z-index: 1;
+    gap: 10px;
+}
+
+input[type="time"]{
+    width: 130px !important;
+}
+
+.infos{
+    height: 400px;
+}
+
+.step h1{
+    color: white;
+    text-align: center;
 }
 
 .form-container {
+    align-items: flex-start; 
+    flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,12 +51,13 @@
 }
 
 form {
-    background-color: rgba(255, 166, 0, 0.308);
+    background-color: var(--roxo_terc);
     border-radius: 5px;
-    width: 60% !important; 
-    height: 60% !important; 
     padding: 20px; 
-    display: grid;
+    display: flex;
+    flex-direction: column; /* Adicione isso */
+    justify-content: space-between; /* Adicione isso */
+    height: 100%; /* Adicione isso */
     gap: 20px;
 }
 
@@ -69,31 +75,52 @@ form {
     cursor: pointer;
 }
 
-/* Adicionando borda, outline, borda e sombra */
-#floatingInput {
-    border: 1px solid;
-    border-radius: 10px;
-    box-shadow: 0 0 0 0;
-    padding-top: 2rem;
+.botoes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-/* Adicionando minino e maximo nos inputs */
-#floatingTextarea1 {
-    border: 1px solid;
-    border-radius: 10px;
-    box-shadow: 0 0 0 0;
-    padding-top: 2rem;
-    margin-top: 10%;
-    min-height: 100px;
-    max-height: 150px;
-    
+.prev-btn, .next-btn {
+    cursor: pointer;
+    height: 50px;
+    font-weight: 700;
+    font-family: Helvetica, "sans-serif";
+    transition: all .2s;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+.prev-btn:active, .next-btn:active{
+    transform: scale(0.95);
+}
+.iconevoltarevents{
+    fill: var(--azul-claro_sec) !important;
 }
 
-/* Selecionando todos os inputs e aplicando margem e tamanho */
-input[type="date"] {
-    width: 100%;
-    margin-top: 3.5%;
-    border: 0;
-    outline: 0;
-    border-bottom: 1px solid #000000 !important;
+.prev-btn{
+    margin-left: 0 !important;
+    background: white;
+    color: var(--azul-claro_sec);
+}
+.next-btn {
+    background: var(--azul-claro_sec);
+    margin-left: auto !important;
+    color: white;
+}
+
+.next-btn:hover {
+    background: var(--azul_claro);
+}
+
+.prev-btn > svg {
+    margin-right: 10px;
+    transition: transform .3s ease-in-out;
+}
+.prev-btn:hover svg {
+    transform: translateX(-5px);
 }
