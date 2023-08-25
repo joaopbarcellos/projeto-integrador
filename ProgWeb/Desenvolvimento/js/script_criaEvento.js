@@ -43,3 +43,30 @@ prevBtns.forEach(btn => {
 
 // Inicialização
 showStep(currentStep);
+
+// const campoNomeEvento = document.querySelector("#floatingInput");
+// const valorCampoNomeEvento = campoNomeEvento.value;
+
+// const campos = document.querySelectorAll("input");
+
+// function alertaCasoCampoEstejaInvalido(nomeCampo, tipo){
+//     if(tipo == "vazio"){
+//         Swal.fire({
+//             title: "ERRO!",
+//             icon: "error",
+//             text: `O campo ${nomeCampo} não pode ser vazio`
+//         })
+//     } else if(tipo == "pequeno") {
+//         Swal.fire
+//     }
+// }
+
+// function validarCampos(){
+//     campos.forEach(campo => {
+//         if(campo.value == ""){
+//             alertaCasoCampoEstejaInvalido(campo.placeholder, "vazio")
+//         } else if () {
+            
+//         }
+//     });
+// }
