@@ -26,6 +26,12 @@
     gap: 10px;
 }
 
+.qtd{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
 input{
     border: 0 !important;
 }
@@ -48,6 +54,10 @@ input[type="time"]{
 
 .infos{
     height: 400px;
+}
+
+.step, form{
+    width: 100%;
 }
 
 .step h1{

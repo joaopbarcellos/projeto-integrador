@@ -176,54 +176,46 @@
 					<div class="step">
 						<div class="infos">
 							<h1>Informações básicas</h1>
+							
 							<div class="form-floating mb-3 mt-3">
 								<input type="text" class="form-control" id="nomeEvento" placeholder="Nome do evento">
 								<label for="nomeEvento">Nome do Evento</label>
 							</div>
 								
 							<div class="form-floating mb-3">
-								<input type="date" class="form-control" id="dataEvento" placeholder="Data do Evento">
+								<input type="date" class="form-control" id="dataEvento">
 								<label for="dataEvento">Data do Evento</label>
 							</div>
 
 							<div class="horas">
 								<div class="form-floating mb-3">
-									<input type="time" class="form-control" id="horarioInicio" placeholder="Horário do evento">
+									<input type="time" class="form-control" id="horarioInicio">
 									<label for="horarioInicio">Horário do evento</label>
 								</div>
 								<div class="form-floating mb-3">
-									<input type="time" class="form-control" id="horarioFim" placeholder="Horário do evento">
+									<input type="time" class="form-control" id="horarioFim">
 									<label for="horarioFim">Término Estimado</label>
 								</div>
+							</div>
+
+							<!-- Preço -->
+							<div class="form-floating col-6">
+								<input type="text" class="form-control" id="preco" value="R$">
+								<label class="form-label" for="preco">Preço do ingresso</label>		
 							</div>
 
 						</div>
 
 						<button class="next-btn"><span>Próximo</span></button>
 					</div>
-					
+
+					<!-- Etapa 2 -->
 					<div class="step">
 						<div class="infos">
 							<h1>Localização</h1>
 
 							<!-- Logradouro -->
-							<div class="form-floating mb-3">
-								<input type="text" class="form-control" id="logradouroEvento" placeholder="Logradouro">
-								<label for="logradouroEvento">Logradouro</label>
-							</div>
-							<div class="mb-3 m-auto" id="ci-bairro">
-								<div class="form-floating col-6">
-									<input type="text" class="form-control" id="cidadeEvento" placeholder="Cidade">
-									<label for="cidadeEvento">Cidade</label>
-								</div>
-								<!-- Bairro -->
-								<div class="form-floating col-5">
-									<input type="text" class="form-control" id="bairroEvento" placeholder="Bairro">
-									<label for="bairroEvento">Bairro</label>
-								</div>
-							</div>
-														
-							<div class="loc mb-3 m-auto">
+							<div class="loc mb-3 m-auto mt-3">
 								<!-- Cep do Evento -->
 								<div class="form-floating col-4">
 									<input type="text" class="form-control" id="cepEvento" placeholder="CEP">
@@ -232,13 +224,13 @@
 									
 								<!-- Numero do evento -->
 								<div class="form-floating col-4">
-									<input type="text" class="form-control" id="numeroEvento" placeholder="Número">
-									<label for="numeroEvento">Número</label>
+									<input type="text" class="form-control" id="cidadeEvento" placeholder="Cidade">
+									<label for="cidadeEvento">Cidade</label>
 								</div>
 
 								<!-- Estado -->
 								<div class="form-floating col-3">
-									<select class="form-select" id="estadoEvento" placeholder="Estado">
+									<select class="form-select" id="estadoEvento">
 										<option value="1">AC</option>
 										<option value="2">AL</option>
 										<option value="3">AP</option>
@@ -271,7 +263,22 @@
 								</div>
 								
 							</div>
-						
+
+							<div class="form-floating mb-3">
+								<input type="text" class="form-control" id="logradouroEvento" placeholder="Logradouro">
+								<label for="logradouroEvento">Logradouro</label>
+							</div>
+							<div class="mb-3 m-auto" id="ci-bairro">
+								<div class="form-floating col-6">
+									<input type="text" class="form-control" id="bairroEvento" placeholder="Bairro">
+									<label for="bairroEvento">Bairro</label>
+								</div>
+								<!-- Bairro -->
+								<div class="form-floating col-5">
+									<input type="number" class="form-control" id="numeroEvento" placeholder="Número">
+									<label for="numeroEvento">Número</label>
+								</div>
+							</div>						
 
 							<!-- Complemento -->
 							<div class="form-floating mb-3">
@@ -296,25 +303,97 @@
 
 					<div class="step">
 						<div class="infos">
-							<h1>Etapa 3</h1>
-							<!-- Logradouro -->
-							<div class="form-floating mb-3">
-								<input type="text" class="form-control" id="logradouroEvento" placeholder="Logradouro">
-								<label for="logradouroEvento">Logradouro</label>
-							</div>
-							<div class="mb-3 m-auto" id="ci-bairro">
-								<div class="form-floating col-6">
-									<input type="text" class="form-control" id="cidadeEvento" placeholder="Cidade">
-									<label for="cidadeEvento">Cidade</label>
-								</div>
-								<!-- Bairro -->
-								<div class="form-floating col-5">
-									<input type="text" class="form-control" id="bairroEvento" placeholder="Bairro">
-									<label for="bairroEvento">Bairro</label>
-								</div>
-							</div>
-						</div>
 
+							<h1>Vagas</h1>
+
+							<div class="qtd mb-3 mt-3">
+								<!-- Minimo de inscricoes -->
+								<div class="form-floating col-6">
+									<input type="number" class="form-control" id="capMinima" placeholder="Mínimo de inscrições para realização do evento">
+									<label for="capMinima">Quantidade mínima de vagas</label>
+								</div>
+
+								<!-- Qtd de vagas -->
+								<div class="form-floating col-6">
+									<input type="number" class="form-control" id="capMaxima" placeholder="Quantidade de vagas">
+									<label for="capMaxima">Quantidade máxima de vagas</label>
+								</div>
+							</div>
+							
+							
+
+							<div class="horas mb-3">
+								<!-- Evento recorrente -->
+								<div class="form-floating">
+									<select class="form-select" id="idadePublico">
+										<option value="1">De 3 a 7</option>
+										<option value="2">De 8 a 13</option>
+										<option value="3">De 14 a 16</option>
+										<option value="4">De 17 a 20</option>
+										<option value="5">Acima de 18</option>
+										<option value="6">De 20 a 30</option>
+										<option value="7">De 30 a 40</option>
+										<option value="8">Acima de 40</option>
+									</select>
+									<label for="idadePublico">Idade alvo do evento</label>
+								</div>
+
+								<!-- Intuito do evento -->
+								<div class="form-floating">
+									<select  class="form-select" id="intuEvento" placeholder="Intuito do evento">
+										<option>Para toda família</option>
+										<option>Profissionais</option>
+										<option>Treino para amadores</option>
+									</select>
+									<label for="intuEvento">Intuito do evento</label>
+								</div>	
+							</div>
+
+							<div class="intRecor">
+								<!-- Evento recorrente -->
+								<div class="form-floating col-4">
+									<select type="checkbox" class="form-control" id="eveRecorrente">
+										<option value="1">Não</option>
+										<option value="2">Sim</option>
+									</select>
+									<label for="eveRecorrente">O evento é recorrente?</label>
+								</div>
+
+								<div class="form-floating col-5">
+									<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+										
+										<input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+										<label class="btn btn-outline-primary" for="btncheck1">D</label>
+										
+										<input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+										<label class="btn btn-outline-primary" for="btncheck2">S</label>
+										
+										<input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+										<label class="btn btn-outline-primary" for="btncheck3">T</label>
+
+										<input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
+										<label class="btn btn-outline-primary" for="btncheck4">Q</label>
+
+										<input type="checkbox" class="btn-check" id="btncheck5" autocomplete="off">
+										<label class="btn btn-outline-primary" for="btncheck5">Q</label>
+
+										<input type="checkbox" class="btn-check" id="btncheck6" autocomplete="off">
+										<label class="btn btn-outline-primary" for="btncheck6">S</label>
+
+										<input type="checkbox" class="btn-check" id="btncheck7" autocomplete="off">
+										<label class="btn btn-outline-primary" for="btncheck7">S<label>
+
+									</div>		
+								</div>
+										
+								
+								
+														
+							</div>
+
+						
+						</div>
+					
 						<div class="botoes">
 							<button class="prev-btn">
 								<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" class="iconevoltarevents">
@@ -322,63 +401,26 @@
 								</svg>
 								<span>Anterior</span>
 							</button>
-
-							<button class="next-btn"><span>Próximo</span></button>
-						</div>
-					</div>
-
-<!-- 
-							<label for="formFileLg" class="form-label">Adicione uma foto e descrição do evento para alcançar mais pessoas</label>
-							<input class="form-control form-control-lg" id="formFileLg" type="file">
 							
-							<input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-							<label class="btn btn-outline-primary" for="btnradio1">Sim</label>
-							
-							se eh recorrente o evento
-
-							<input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-							<label class="btn btn-outline-primary" for="btnradio2">Não</label>
--->
-
-
-					<div class="step">
-						<div class="infos">
-							<h1>Cadastre as informações para criar o seu evento</h1>
-							
-							<div class="form-floating mb-3 mt-3">
-								<input type="text" class="form-control" id="floatingInput" placeholder="Nome do evento">
-								<label for="floatingInput">Nome do Evento</label>
-							</div>
-						</div>
-							<div class="botoes">
-								<button class="prev-btn">
-									<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" class="iconevoltarevents">
-										<path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></path>
-									</svg>
-									<span>Anterior</span>
-								</button>
+							<button class="btn-53">
 								
-								<button class="btn-53">
-									
-									<div class="original">Finalizar</div>
-									<div class="letters">
-										<span>F</span>
-										<span>I</span>
-										<span>N</span>
-										<span>A</span>
-										<span>L</span>
-										<span>I</span>
-										<span>Z</span>
-										<span>A</span>
-										<span>R</span>
-									</div>
-								</button>
-							</div>
+								<div class="original">Finalizar</div>
+								<div class="letters">
+									<span>F</span>
+									<span>I</span>
+									<span>N</span>
+									<span>A</span>
+									<span>L</span>
+									<span>I</span>
+									<span>Z</span>
+									<span>A</span>
+									<span>R</span>
+								</div>
+							</button>
 						</div>
 					</div>
-
 				</form>
 			</div>
         </div>
-</body>
+	</body>
 </html>
