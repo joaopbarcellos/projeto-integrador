@@ -268,14 +268,14 @@
 								<input type="text" class="form-control" id="logradouroEvento" placeholder="Logradouro">
 								<label for="logradouroEvento">Logradouro</label>
 							</div>
-							<div class="mb-3 m-auto" id="ci-bairro">
+							<div class="alinha mb-3 m-auto" >
 								<div class="form-floating col-6">
 									<input type="text" class="form-control" id="bairroEvento" placeholder="Bairro">
 									<label for="bairroEvento">Bairro</label>
 								</div>
 								<!-- Bairro -->
 								<div class="form-floating col-5">
-									<input type="number" class="form-control" id="numeroEvento" placeholder="Número">
+									<input type="number" min="0" class="form-control" id="numeroEvento" placeholder="Número">
 									<label for="numeroEvento">Número</label>
 								</div>
 							</div>						
@@ -309,22 +309,20 @@
 							<div class="qtd mb-3 mt-3">
 								<!-- Minimo de inscricoes -->
 								<div class="form-floating col-6">
-									<input type="number" class="form-control" id="capMinima" placeholder="Mínimo de inscrições para realização do evento">
+									<input type="number" min="0" class="form-control" id="capMinima" placeholder="Mínimo de inscrições para realização do evento">
 									<label for="capMinima">Quantidade mínima de vagas</label>
 								</div>
 
 								<!-- Qtd de vagas -->
 								<div class="form-floating col-6">
-									<input type="number" class="form-control" id="capMaxima" placeholder="Quantidade de vagas">
+									<input type="number" min="1" class="form-control" id="capMaxima" placeholder="Quantidade de vagas">
 									<label for="capMaxima">Quantidade máxima de vagas</label>
 								</div>
 							</div>
 							
-							
-
-							<div class="horas mb-3">
+							<div class="alinha mb-3 m-auto">
 								<!-- Evento recorrente -->
-								<div class="form-floating">
+								<div class="form-floating col-5">
 									<select class="form-select" id="idadePublico">
 										<option value="1">De 3 a 7</option>
 										<option value="2">De 8 a 13</option>
@@ -339,8 +337,8 @@
 								</div>
 
 								<!-- Intuito do evento -->
-								<div class="form-floating">
-									<select  class="form-select" id="intuEvento" placeholder="Intuito do evento">
+								<div class="form-floating col-6">
+									<select  class="form-select" id="intuEvento">
 										<option>Para toda família</option>
 										<option>Profissionais</option>
 										<option>Treino para amadores</option>

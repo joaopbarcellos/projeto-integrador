@@ -46,7 +46,7 @@ input[type="time"]{
     justify-content: space-between;
 }
 
-#ci-bairro{
+.alinha{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
