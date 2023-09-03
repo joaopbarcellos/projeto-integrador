@@ -17,9 +17,9 @@
 
 	<script src="" type="module" defer></script>
 
-	<script src="js/script_base.js" type="module" defer></script>
+	<script src="js/base.js" type="module" defer></script>
 
-	<script src="js/script_criaEvento.js" defer></script>
+	<script src="js/criaEvento.js" defer></script>
 
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
 
