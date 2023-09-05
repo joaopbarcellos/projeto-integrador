@@ -566,3 +566,30 @@ if (checkbox) {
     this.querySelector("svg").style.animation = "";
   });
 }
+
+// Seletor do campo de telefone
+const telefoneInput = document.querySelector("#floatingInputGroup5");
+
+// Função para formatar o telefone
+function formatTelefone(input) {
+  // Remove todos os caracteres não numéricos
+  let telefone = input.value.replace(/\D/g, '');
+
+  // Verifica se o telefone está vazio após a limpeza
+  if (telefone.length === 0) {
+    input.value = ''; // Se estiver vazio, limpa o campo
+  } else if (telefone.length <= 2) {
+    input.value = '(' + telefone;
+  } else if (telefone.length <= 6) {
+    input.value = '(' + telefone.slice(0, 2) + ') ' + telefone.slice(2);
+  } else if (telefone.length <= 10) {
+    input.value = '(' + telefone.slice(0, 2) + ') ' + telefone.slice(2, 6) + '-' + telefone.slice(6);
+  } else {
+    input.value = '(' + telefone.slice(0, 2) + ') ' + telefone.slice(2, 7) + '-' + telefone.slice(7, 11);
+  }
+}
+
+// Adicione um ouvinte de evento para chamar a função formatTelefone quando o usuário digitar
+telefoneInput.addEventListener("input", function () {
+  formatTelefone(this);
+});

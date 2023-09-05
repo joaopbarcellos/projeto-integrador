@@ -85,6 +85,9 @@ h1 {
   user-select: none;
 }
 
+.form-label{
+  margin-bottom: 0 !important;
+}
 
 /* Adicionando cursor pointer e cor diferente para os hover de botao alterar e alterarsenha */
 #alterar:hover,
@@ -108,7 +111,7 @@ h1 {
 /* trocando css do campos de digitação */
 #floatingInputGroup1,
 #floatingInputGroup2,
-#floatingInputGroup3 {
+#floatingInputGroup5 {
   border: none;
   outline: 0;
   border-radius: 0;
@@ -119,7 +122,7 @@ h1 {
 
 /* adicionando hover */
 #floatingInputGroup1,
-#floatingInputGroup3,
+#floatingInputGroup5,
 #floatingInputGroup2:hover {
   border-bottom: 1px solid var(--black);
 }

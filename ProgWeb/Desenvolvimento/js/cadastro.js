@@ -242,4 +242,3 @@ olho2.addEventListener("click", function () {
     olho2.src = "./img/olho_fechado.png";
   }
 });
-

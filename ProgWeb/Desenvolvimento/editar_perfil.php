@@ -70,6 +70,11 @@
 				<!-- Criando fomulário de Cadastro -->
 				<form>
 
+					<div class="campos">
+						<label for="formFile" class="form-label ">Foto de Perfil:</label>
+						<input class="form-control" type="file" id="formFile" accept="image/*">
+					</div>
+					
 					<!-- Nome do usuário -->
 					<div class="nome campos">
 
@@ -83,6 +88,8 @@
 						<label class="erro fs-6 fs-10 fs-7 fs-6 fs-5" id="noNome">Nome deve ser preenchido!</label>
 
 					</div>
+
+
 
 					<!-- E-mail do usuario -->
 					<div class="email campos">
@@ -101,7 +108,7 @@
 
 					<div class="form-floating">
 							<!-- input de telefone -->
-							<input type="text" class="form-control" id="floatingInputGroup3" placeholder="Telefone">
+							<input type="text" class="form-control" id="floatingInputGroup5" placeholder="Telefone">
 							<label for="telefoe" id="label_telefone">Telefone</label>
 					</div>
 
