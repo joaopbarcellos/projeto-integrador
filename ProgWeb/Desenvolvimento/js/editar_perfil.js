@@ -1,5 +1,5 @@
 // Importando a funcao de autenticacao de campos
-import * as base from "./script_base.js";
+import * as base from "./base.js";
 
 // Pegando os dados do usuario logado
 var emailLogado = sessionStorage.getItem("logado");
@@ -13,7 +13,6 @@ const radios = document.querySelectorAll(".radio");
 
 // Pegando os labels de nome e email
 const labelNome = document.querySelector("#label_nome");
-const labelEmail = document.querySelector("#label_email");
 const labelData = document.querySelector("#labelData");
 const labelJogador = document.querySelector(".label_joga");
 const labelsJogabilidade = document.querySelectorAll(".jogabilidades");

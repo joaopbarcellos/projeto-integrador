@@ -100,6 +100,17 @@
 
 									<!-- Fecho a div de email -->
 								</div>
+								
+								<!-- Div telefone -->
+								<div class="telefone info">
+									<label class="labels texto word-break">Telefone: </label>
+
+									<!-- Escrevo na label o telefone do usuario -->
+									<label class="cadastro texto word-break" id="telefone_usuario"> </label>
+
+									<!-- Fechando div telefone -->
+								</div>						
+
 							</div>
 							<!-- Fecho a div pra inserir os dados -->
 						</div>

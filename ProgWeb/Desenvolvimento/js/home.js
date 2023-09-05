@@ -1,5 +1,5 @@
 // Importando a funcao de autenticacao de campos
-import * as base from "./script_base.js";
+import * as base from "./base.js";
 
 // Pegando todos os botoes para ir para o evento
 const btns = document.querySelectorAll(".sabermais");

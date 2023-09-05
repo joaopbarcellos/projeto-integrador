@@ -16,6 +16,7 @@
     min-height: 100vh;
     max-width: unset !important;
     padding-top: 10px;
+
 }
 
 input{
@@ -96,6 +97,7 @@ form {
     justify-content: space-between; /* Adicione isso */
     height: 100%; /* Adicione isso */
     gap: 20px;
+    box-shadow: -1px -1px 22px 3px rgba(0,0,0,0.75);
 }
 
 .button-container {

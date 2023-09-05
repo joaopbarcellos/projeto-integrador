@@ -101,13 +101,14 @@ h1 {
 
 /* Tirando padding das label */
 #label_nome,
-#label_email, .focado {
+#label_email, .focado, #label_telefone {
   padding-left: 0 !important;
 }
 
 /* trocando css do campos de digitação */
 #floatingInputGroup1,
-#floatingInputGroup2 {
+#floatingInputGroup2,
+#floatingInputGroup3 {
   border: none;
   outline: 0;
   border-radius: 0;
@@ -118,6 +119,7 @@ h1 {
 
 /* adicionando hover */
 #floatingInputGroup1,
+#floatingInputGroup3,
 #floatingInputGroup2:hover {
   border-bottom: 1px solid var(--black);
 }
@@ -141,7 +143,7 @@ h1 {
 
 .input-icon svg {
   height: 16px;
-  fill: rgba(var(--bs-body-color-rgb),.65);;
+  fill: rgba(var(--bs-body-color-rgb),.65);
 }
 
 /* alterando label de email do bootstrap */

@@ -82,6 +82,7 @@
   display: flex;
   align-items: center;
   padding: 30px;
+  padding-top: 0 !important;
 }
 
 .row > * {
@@ -254,4 +255,8 @@
 
 .input:checked + .slider:before {
   transform: translateX(30px);
+}
+
+.telefone{
+  margin-bottom: 0 !important;
 }

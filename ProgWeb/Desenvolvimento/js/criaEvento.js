@@ -1,8 +1,7 @@
-const form = document.getElementById('multi-step-form');
-const steps = form.querySelectorAll('.step');
-const nextBtns = form.querySelectorAll('.next-btn');
-const prevBtns = form.querySelectorAll('.prev-btn');
-const input2 = document.getElementById("preco");
+const form = document.getElementById("multi-step-form");
+const steps = form.querySelectorAll(".step");
+const nextBtns = form.querySelectorAll(".next-btn");
+const prevBtns = form.querySelectorAll(".prev-btn");
 
 // Validação dos campos
 // Campo nome do evento
@@ -52,8 +51,8 @@ function verificaseDatadoEventoeNoMesmoDia(dataEvento){
 const horarioInicio = document.querySelector("#horarioInicio").value;
 const horarioFinal = document.querySelector("#horarioFim").value;
 
-const horaInicio = parseInt(horarioInicio.substring(0, 2));
-const minutoInicio = parseInt(horarioInicio.substring(2));
+const horaInicio = parseInt(horarioInicio.substring(0, 2), 10);
+const minutoInicio = parseInt(horarioInicio.substring(2), 10);
 // Campo horário início
 function validarHorarioInicio(){
     const horarioInicio = document.querySelector("#horarioInicio").value;
@@ -76,8 +75,8 @@ function validarHorarioInicio(){
 function validarTerminoEstimado(){
     const horarioInicio = document.querySelector("#horarioInicio").value;
     const horarioFinal = document.querySelector("#horarioFim").value;
-    let horaFinal = parseInt(horarioFinal.substring(0, 2));
-    let minutoFinal = parseInt(horarioFinal.substring(2));
+    let horaFinal = parseInt(horarioFinal.substring(0, 2), 10);
+    let minutoFinal = parseInt(horarioFinal.substring(2), 10);
 
     if(!horarioFinal){
         return "horário final do evento";
@@ -108,7 +107,6 @@ function verificaStep1(currentStep){
     let listaVerifica = [validarNomeEvento1, validarDataEvento1, validarHorarioInicio1, validarTerminoEstimado1, validarPrecoEvento1];
     let listaNova = "";
     console.log(listaVerifica)
-    let verificacao = true;
     listaVerifica.forEach(elemento => {
         if (elemento !== true){
             listaNova += elemento;
@@ -120,14 +118,7 @@ function verificaStep1(currentStep){
         currentStep++;
         showStep(currentStep);
     }
-     else {
-    //     listaVerifica.forEach(elemento => {
-    //         if (elemento == listaVerifica[listaVerifica.length-1]){
-    //             listaNova += `${elemento}`
-    //         } else if(elemento !== true){
-    //             listaNova += `${elemento}, `;
-    //         } 
-    //})
+    else {
         Swal.fire({
             title: "ERRO!",
             icon: "error",
@@ -194,6 +185,20 @@ function verificaFormatacaoCep(){
     }
 }
 
+function formatCEP(input) {
+    // Remove todos os caracteres não numéricos
+    var cep = input.value.replace(/\D/g, '');
+  
+    // Limita o CEP a 8 dígitos
+    cep = cep.slice(0, 8);
+  
+    // Formata o CEP com o traço apenas quando tiver mais de 5 números
+    if (cep.length > 5) {
+      cep = cep.slice(0, 5) + '-' + cep.slice(5);
+    }
+    input.value = cep;
+  }
+
 // Step 2
     // Campo logradouro
 
@@ -213,24 +218,7 @@ function verificaFormatacaoCep(){
     
     // Campo estado
     
-    
     // Campo complemento
-
-    
-input2.addEventListener("input", (e) => {
-    const { value } = e.target;
-
-    const len = value.length;
-    const dolarIndex = value.indexOf("R$");
-    const number = value.substring(0, len - 1);
-
-
-    if (dolarIndex !== len - 1 || dolarIndex === -1 || isNaN(number)) {
-        e.target.value = "R$";
-        e.target.setSelectionRange(dolarIndex, dolarIndex);
-    }
-});
-
 
 let currentStep = 0;
 
@@ -242,10 +230,10 @@ const showStep = (stepIndex) => {
 
 const nextStep = () => {
     if (currentStep < steps.length - 1) {
-        if (currentStep == 0) {
+        if (currentStep === 0) {
             verificaStep1(currentStep);
         } else {
-            showStep(currentStep);    
+            showStep(currentStep);
         }
     }
 };

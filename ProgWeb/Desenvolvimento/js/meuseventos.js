@@ -1,5 +1,5 @@
 // Importando a funcao de autenticacao de campos
-import * as base from "./script_base.js";
+import * as base from "./base.js";
 
 // Pegando todos os botoes para se inscrever
 const cancel = document.querySelectorAll(".inscricao");
@@ -47,7 +47,7 @@ function meusEventos() {
       meus_eventos.push(evento);
       document.querySelector("#semevento").style.display = "none";
     }
-    if (meus_eventos.length == 0) {
+    if (meus_eventos.length === 0) {
       lupa.classList.add("sembarra");
       barra_pesquisa.classList.add("sembarra");
       barra_pesquisa.classList.remove("form-control");

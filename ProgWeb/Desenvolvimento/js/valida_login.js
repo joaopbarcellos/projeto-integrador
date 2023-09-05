@@ -1,5 +1,5 @@
 // Importando a funcao de autenticacao de campos
-import * as base from "./script_base.js";
+import * as base from "./base.js";
 
 // Capturando o botao da tela e adicionando um ouvidor de clique
 document.querySelector("#btnEnviar").addEventListener("click", autenticar);

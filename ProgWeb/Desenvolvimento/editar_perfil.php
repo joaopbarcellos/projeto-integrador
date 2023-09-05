@@ -99,6 +99,12 @@
 						</div>
 					</div>
 
+					<div class="form-floating">
+							<!-- input de telefone -->
+							<input type="text" class="form-control" id="floatingInputGroup3" placeholder="Telefone">
+							<label for="telefoe" id="label_telefone">Telefone</label>
+					</div>
+
 					<!-- Idade do usuario -->
 					<div class="idade campos">
 						<label for="idade" id="labelData">Data de Nascimento:</label>

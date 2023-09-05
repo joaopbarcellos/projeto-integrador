@@ -88,13 +88,13 @@
 							<div class="loc mb-3 m-auto mt-3">
 								<!-- Cep do Evento -->
 								<div class="form-floating col-4">
-									<input type="text" class="form-control" id="cepEvento" placeholder="CEP">
+									<input type="text" class="form-control" id="cepEvento" placeholder="CEP" >
 									<label for="cepEvento">CEP</label>
 								</div>
 									
 								<!-- Numero do evento -->
 								<div class="form-floating col-4">
-									<input type="text" class="form-control" id="cidadeEvento" placeholder="Cidade">
+									<input type="text" class="form-control" id="cidadeEvento" placeholder="Cidade" oninput="formatCEP()">
 									<label for="cidadeEvento">Cidade</label>
 								</div>
 
@@ -254,13 +254,9 @@
 
 									</div>		
 								</div>
-										
-								
-								
-														
+															
 							</div>
-
-						
+	
 						</div>
 					
 						<div class="botoes">

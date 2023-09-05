@@ -1,5 +1,5 @@
 // Importando a funcao de autenticacao de campos
-import * as base from "./script_base.js";
+import * as base from "./base.js";
 
 // Pegando os campos de senha
 let campoSenhaAntiga = document.querySelector("#floatingInputGroup1");

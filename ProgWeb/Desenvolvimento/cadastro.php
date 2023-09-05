@@ -95,21 +95,27 @@
             <!-- Mensagens de erro -->
             <label class="erro" id="noEmail">E-mail deve ser preenchido!</label>
 
-            <label class="erro" id="noEmailPadrao"
-              >E-mail está fora dos padrões!</label
-            >
+            <label class="erro" id="noEmailPadrao">
+              E-mail está fora dos padrões!</label>
 
-            <label class="erro" id="noEmailExiste"
-              >E-mail já está cadastrado!</label
-            >
+            <label class="erro" id="noEmailExiste">
+              E-mail já está cadastrado!</label>
           </div>
           <!-- Fechando div de email -->
+          
+          <div class="telefone campos">
+            <!-- Div com o input de telefone -->
+            <div class="form-floating fs-5">
+              <input type="text" class="form-control" id="floatingInputGroup5" placeholder="Telefone" name="telefoneCampo" tabindex="2">
+              <label for="floatingInputGroup5" id="telefone_label">Telefone</label>
+            </div>
+          </div>
 
           <!-- Idade do usuário -->
           <div class="idade campos fs-5">
             <!-- Label e input da idade -->
             <label for="idade" id="labelData">Data de Nascimento:</label>
-            <input type="date" id="idade" name="dataCampo" tabindex="3" />
+            <input type="date" id="idade" name="dataCampo" tabindex="3"/>
 
             <!-- Mensagem de erro -->
             <label class="erro" id="noData">Data deve ser preenchida!</label>
@@ -156,9 +162,8 @@
                 name="confsenhaCampo"
                 tabindex="5"
               />
-              <label for="confirmasenha" id="senha_label_confirma"
-                >Confirmação de senha</label
-              >
+              <label for="confirmasenha" id="senha_label_confirma">
+                Confirmação de senha</label>
             </div>
 
             <!-- Mensagens de erro -->
