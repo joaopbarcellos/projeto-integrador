@@ -14,12 +14,10 @@
 
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-
-	<script src="" type="module" defer></script>
+	
+	<script src="js/criaEvento.js" defer></script>
 
 	<script src="js/base.js" type="module" defer></script>
-
-	<script src="js/criaEvento.js" defer></script>
 
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
 
@@ -88,13 +86,13 @@
 							<div class="loc mb-3 m-auto mt-3">
 								<!-- Cep do Evento -->
 								<div class="form-floating col-4">
-									<input type="text" class="form-control" id="cepEvento" placeholder="CEP" >
+									<input type="text" class="form-control" id="cepEvento" placeholder="CEP">
 									<label for="cepEvento">CEP</label>
 								</div>
 									
 								<!-- Numero do evento -->
 								<div class="form-floating col-4">
-									<input type="text" class="form-control" id="cidadeEvento" placeholder="Cidade" oninput="formatCEP()">
+									<input type="text" class="form-control" id="cidadeEvento" placeholder="Cidade">
 									<label for="cidadeEvento">Cidade</label>
 								</div>
 
@@ -145,7 +143,7 @@
 								</div>
 								<!-- Bairro -->
 								<div class="form-floating espaco">
-									<input type="number" min="0" class="form-control" id="numeroEvento" placeholder="Número">
+									<input type="text" class="form-control" id="numeroEvento" placeholder="Número">
 									<label for="numeroEvento">Número</label>
 								</div>
 							</div>						

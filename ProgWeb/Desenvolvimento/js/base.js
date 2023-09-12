@@ -588,8 +588,9 @@ function formatTelefone(input) {
     input.value = '(' + telefone.slice(0, 2) + ') ' + telefone.slice(2, 7) + '-' + telefone.slice(7, 11);
   }
 }
-
-// Adicione um ouvinte de evento para chamar a função formatTelefone quando o usuário digitar
-telefoneInput.addEventListener("input", function () {
-  formatTelefone(this);
-});
+if (telefoneInput){
+  // Adicione um ouvinte de evento para chamar a função formatTelefone quando o usuário digitar
+  telefoneInput.addEventListener("input", function () {
+    formatTelefone(this);
+  });
+}

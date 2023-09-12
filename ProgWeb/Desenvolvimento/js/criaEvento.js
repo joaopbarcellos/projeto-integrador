@@ -2,11 +2,11 @@ const form = document.getElementById("multi-step-form");
 const steps = form.querySelectorAll(".step");
 const nextBtns = form.querySelectorAll(".next-btn");
 const prevBtns = form.querySelectorAll(".prev-btn");
+let currentStep = 1;
 
 // Validação dos campos
 // Campo nome do evento
 function validarNomeEvento(){
-    console.log("Nomeevento")
     const nomeEvento = document.querySelector("#nomeEvento"); 
 
     if (!nomeEvento.value){ // Adicionar a exclamação (!) antes pra funcionar
@@ -48,15 +48,13 @@ function verificaseDatadoEventoeNoMesmoDia(dataEvento){
     return dataEvento.getDate() + 1 == dataAtual.getDate();
 }
 
-const horarioInicio = document.querySelector("#horarioInicio").value;
-const horarioFinal = document.querySelector("#horarioFim").value;
 
-const horaInicio = parseInt(horarioInicio.substring(0, 2), 10);
-const minutoInicio = parseInt(horarioInicio.substring(2), 10);
 // Campo horário início
 function validarHorarioInicio(){
+    var dataEvento = document.querySelector("#dataEvento").value;
     const horarioInicio = document.querySelector("#horarioInicio").value;
-
+    const horaInicio = parseInt(horarioInicio.substring(0, 2), 10);
+    const minutoInicio = parseInt(horarioInicio.substring(2), 10);
     if(!horarioInicio){
         return "horário inicial do evento";
     }
@@ -68,12 +66,18 @@ function validarHorarioInicio(){
         }
         return "horário inicial do evento";
     }
+    if(verificaseDatadoEventoeMaiordoqueaDataAtual(dataEvento)){
+        return true;
+    }
+    return "horário inicial do evento";
+    
 }
 
 
 // Campo término estimado
 function validarTerminoEstimado(){
-    const horarioInicio = document.querySelector("#horarioInicio").value;
+    const horarioInicio = document.querySelector("#horarioInicio").value;0
+    const horaInicio = parseInt(horarioInicio.substring(0, 2), 10);
     const horarioFinal = document.querySelector("#horarioFim").value;
     let horaFinal = parseInt(horarioFinal.substring(0, 2), 10);
     let minutoFinal = parseInt(horarioFinal.substring(2), 10);
@@ -89,15 +93,14 @@ function validarTerminoEstimado(){
 }
 
 function validarPrecoEvento(){
-    const precoEvento = document.querySelector("#preco");
-    
+    const precoEvento = document.querySelector("#preco").value;
     if(!precoEvento || isNaN(precoEvento)){
         return "preço do evento";
     }
     return true;
 }
 // Step 1
-function verificaStep1(currentStep){
+function verificaStep1(){
     let validarNomeEvento1 = validarNomeEvento();
     let validarDataEvento1 = validarDataEvento();
     let validarHorarioInicio1 = validarHorarioInicio();
@@ -105,32 +108,36 @@ function verificaStep1(currentStep){
     let validarPrecoEvento1 = validarPrecoEvento();
 
     let listaVerifica = [validarNomeEvento1, validarDataEvento1, validarHorarioInicio1, validarTerminoEstimado1, validarPrecoEvento1];
-    let listaNova = "";
-    console.log(listaVerifica)
+    let strErros = "";
     listaVerifica.forEach(elemento => {
         if (elemento !== true){
-            listaNova += elemento;
+            strErros += elemento;
         }
     })
 
-    console.log(listaNova)
-    if (!listaNova.length > 0){
+    if (!strErros.length > 0){
         currentStep++;
+        console.log(currentStep)
         showStep(currentStep);
     }
     else {
         Swal.fire({
             title: "ERRO!",
             icon: "error",
-            text: `Os campos ${listaNova} estão inválidos!`
+            text: `Os campos ${strErros} estão inválidos!`
         })
     }
 
 }
 // Step 2
+const campoCep = document.querySelector("#cepEvento");
+campoCep.addEventListener("input", (e) => {
+    formatCEP(campoCep);
+});
+
 // Calllback CEP
 const listaEstados = [0, "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", 'MA', 'MT',
-'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO']					
+'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO'];
 function callbackDaPaginaQueEnviaremosOCepDoEventoCadastradoPeloClienteNaPaginaDeCriarEventoNovo(conteudoRetornadoPelaPagina){
     if (!("erro" in conteudoRetornadoPelaPagina)) {
         //Atualiza os campos com os valores
@@ -149,7 +156,11 @@ function callbackDaPaginaQueEnviaremosOCepDoEventoCadastradoPeloClienteNaPaginaD
             title: "ERRO!",
             icon: "error",
             text: `O CEP não foi encontrado!`
-        })   
+        });
+
+        document.getElementById('logradouroEvento').value="";
+        document.getElementById('bairroEvento').value="";
+        document.getElementById('cidadeEvento').value="";
     }
 }
 
@@ -158,24 +169,20 @@ function validarCEPnoSiteViaCep(cep){
     //Cria um elemento javascript.
     var script = document.createElement('script');
     //Sincroniza com o callback.
-    script.src = `https://viacep.com.br/ws/${cep}/json/?callback=callbackDaPaginaQueEnviaremosOCEPDoEventoCadastradoPeloClienteNaPaginaDeCriarEventoNovo`;
+    script.src = `https://viacep.com.br/ws/${cep}/json/?callback=callbackDaPaginaQueEnviaremosOCepDoEventoCadastradoPeloClienteNaPaginaDeCriarEventoNovo`;
     //Insere script no documento e carrega o conteúdo.
     document.body.appendChild(script);
 }
 
 function verificaFormatacaoCep(){
-    const campoCep = document.querySelector("#cepEvento");
     var cep = campoCep.value;
     
     // Verifica se existe um valor no CEP
-    if (!cep) {
+    if (cep) {
         //Expressão regular para validar o CEP.
         var validacep = /^[0-9]{8}$/;
 
-        //Valida o formato do CEP.
-        if(validacep.test(cep)) {
-            validarCEPnoSiteViaCep(cep);
-        }
+        validarCEPnoSiteViaCep(cep);
     } else {
         Swal.fire({
             title: "ERRO!",
@@ -196,10 +203,16 @@ function formatCEP(input) {
     if (cep.length > 5) {
       cep = cep.slice(0, 5) + '-' + cep.slice(5);
     }
+    if (cep.length == 9) {
+        verificaFormatacaoCep();
+    }
     input.value = cep;
-  }
+}
 
 // Step 2
+function verificaStep2(){
+
+}
     // Campo logradouro
 
 
@@ -220,7 +233,7 @@ function formatCEP(input) {
     
     // Campo complemento
 
-let currentStep = 0;
+
 
 const showStep = (stepIndex) => {
     steps.forEach((step, index) => {
@@ -231,7 +244,9 @@ const showStep = (stepIndex) => {
 const nextStep = () => {
     if (currentStep < steps.length - 1) {
         if (currentStep === 0) {
-            verificaStep1(currentStep);
+            verificaStep1();
+        } else if(currentStep === 1){
+            verificaStep2();
         } else {
             showStep(currentStep);
         }
