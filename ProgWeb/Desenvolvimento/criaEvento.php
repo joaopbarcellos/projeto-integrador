@@ -265,7 +265,7 @@
 								<span>Anterior</span>
 							</button>
 							
-							<button class="btn-53">
+							<button class="btn-53" type="button" id="btnFINALIZAR">
 								
 								<div class="original">Finalizar</div>
 								<div class="letters">

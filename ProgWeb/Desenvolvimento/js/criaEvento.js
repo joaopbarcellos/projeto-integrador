@@ -2,7 +2,7 @@ const form = document.getElementById("multi-step-form");
 const steps = form.querySelectorAll(".step");
 const nextBtns = form.querySelectorAll(".next-btn");
 const prevBtns = form.querySelectorAll(".prev-btn");
-let currentStep = 1;
+let currentStep = 2;
 
 // Validação dos campos
 // Campo nome do evento
@@ -19,7 +19,7 @@ function validarNomeEvento(){
 function validarDataEvento(){
     var dataEvento = document.querySelector("#dataEvento").value;
     if(!dataEvento || !verificaseDatadoEventoeMaiordoqueaDataAtual(dataEvento)){
-        return "data do evento";
+        return "data";
     }
     return true;
 }
@@ -56,7 +56,7 @@ function validarHorarioInicio(){
     const horaInicio = parseInt(horarioInicio.substring(0, 2), 10);
     const minutoInicio = parseInt(horarioInicio.substring(2), 10);
     if(!horarioInicio){
-        return "horário inicial do evento";
+        return "horário inicial";
     }
     if(verificaseDatadoEventoeNoMesmoDia(dataEvento)){
         let dataAtual = new Date();
@@ -64,12 +64,12 @@ function validarHorarioInicio(){
         if(horaInicio == dataAtual.getHours()){
             if(minutoInicio >= dataAtual.getMinutes() + 2) return true;
         }
-        return "horário inicial do evento";
+        return "horário inicial";
     }
     if(verificaseDatadoEventoeMaiordoqueaDataAtual(dataEvento)){
         return true;
     }
-    return "horário inicial do evento";
+    return "horário inicial";
     
 }
 
@@ -83,41 +83,44 @@ function validarTerminoEstimado(){
     let minutoFinal = parseInt(horarioFinal.substring(2), 10);
 
     if(!horarioFinal){
-        return "horário final do evento";
+        return "término estimado";
     }
     if(horaFinal > horaInicio) return true;
     if(horaFinal == horaInicio){
         if(minutoFinal >= minutoInicio + 2) return true;
     }
-    return "horário final do evento";
+    return "término estimado";
 }
 
-function validarPrecoEvento(){
-    const precoEvento = document.querySelector("#preco").value;
-    if(!precoEvento || isNaN(precoEvento)){
-        return "preço do evento";
+function validarNumero(valorCampo, mensagemErro){
+    if(!valorCampo || isNaN(valorCampo)){
+        return mensagemErro;
     }
     return true;
 }
+
 // Step 1
 function verificaStep1(){
     let validarNomeEvento1 = validarNomeEvento();
     let validarDataEvento1 = validarDataEvento();
     let validarHorarioInicio1 = validarHorarioInicio();
     let validarTerminoEstimado1 = validarTerminoEstimado();
-    let validarPrecoEvento1 = validarPrecoEvento();
+    let validarPrecoEvento1 = validarNumero(document.querySelector("#preco").value, "preço");
 
     let listaVerifica = [validarNomeEvento1, validarDataEvento1, validarHorarioInicio1, validarTerminoEstimado1, validarPrecoEvento1];
     let strErros = "";
     listaVerifica.forEach(elemento => {
         if (elemento !== true){
-            strErros += elemento;
+            if (elemento == listaVerifica[(listaVerifica.length-1)]){
+                strErros += `${elemento}`;
+            } else {
+                strErros += `${elemento}, `;
+            }   
         }
     })
 
     if (!strErros.length > 0){
         currentStep++;
-        console.log(currentStep)
         showStep(currentStep);
     }
     else {
@@ -129,7 +132,8 @@ function verificaStep1(){
     }
 
 }
-// Step 2
+
+// Ouvidor de input do campo de cep
 const campoCep = document.querySelector("#cepEvento");
 campoCep.addEventListener("input", (e) => {
     formatCEP(campoCep);
@@ -179,8 +183,7 @@ function verificaFormatacaoCep(){
     
     // Verifica se existe um valor no CEP
     if (cep) {
-        //Expressão regular para validar o CEP.
-        var validacep = /^[0-9]{8}$/;
+        
 
         validarCEPnoSiteViaCep(cep);
     } else {
@@ -195,13 +198,13 @@ function verificaFormatacaoCep(){
 function formatCEP(input) {
     // Remove todos os caracteres não numéricos
     var cep = input.value.replace(/\D/g, '');
-  
+
     // Limita o CEP a 8 dígitos
     cep = cep.slice(0, 8);
-  
+
     // Formata o CEP com o traço apenas quando tiver mais de 5 números
     if (cep.length > 5) {
-      cep = cep.slice(0, 5) + '-' + cep.slice(5);
+        cep = cep.slice(0, 5) + '-' + cep.slice(5);
     }
     if (cep.length == 9) {
         verificaFormatacaoCep();
@@ -209,30 +212,73 @@ function formatCEP(input) {
     input.value = cep;
 }
 
+function verificaSeTaEscritoNoFormulario(valorCampo, mensagemErro){
+    if(!valorCampo | !isNaN(valorCampo)){
+        return mensagemErro;
+    }
+    return true;
+}
+
 // Step 2
 function verificaStep2(){
+    let validaCidade = verificaSeTaEscritoNoFormulario(document.querySelector("#cidadeEvento").value, "cidade");
+    let validaLogradouro = verificaSeTaEscritoNoFormulario(document.querySelector("#logradouroEvento").value, "logradouro");
+    let validaBairro = verificaSeTaEscritoNoFormulario(document.querySelector("#bairroEvento").value, "bairro");
+    let validaComplemento = verificaSeTaEscritoNoFormulario(document.querySelector("#complementoEvento").value, "complemento");
+    let validaNumero =  validarNumero(document.querySelector("#numeroEvento").value, "número");
+    
+    let listaVerifica = [validaCidade, validaLogradouro, validaBairro, validaComplemento, validaNumero];
+    let strErros = "";
+
+    listaVerifica.forEach(elemento => {
+        if (elemento !== true){
+            if (elemento == listaVerifica[(listaVerifica.length-1)]){
+                strErros += `${elemento}`;
+            } else {
+                strErros += `${elemento}, `;
+            }
+        }
+    })
+    
+    if (!strErros.length > 0){
+        currentStep++;
+        showStep(currentStep);
+    }
+    else {
+        Swal.fire({
+            title: "ERRO!",
+            icon: "error",
+            text: `Os campos ${strErros} estão inválidos!`
+        })
+    }
 
 }
-    // Campo logradouro
 
+function verificaStep3(){
+    let validaQtdMin = validarNumero(document.querySelector("#capMinima").value, "quantidade mínima");
+    let validaQtdMax = validarNumero(document.querySelector("#capMaxima").value, "quantidade máxima");
 
-    // Campo cidade
+    let listaVerifica = [validaQtdMin, validaQtdMax];
+    let strErros = "";
     
+    listaVerifica.forEach(elemento => {
+        if (elemento !== true){
+            strErros += `${elemento}, ` ;
+        }
+    })
     
-    // Campo bairro
-    
-    
-    // Campo cep
-    
-    
-    
-    // Campo número
-    
-    
-    // Campo estado
-    
-    // Campo complemento
-
+    if (!strErros.length > 0){
+        currentStep++;
+        document.querySelector("form").submit();
+    }
+    else {
+        Swal.fire({
+            title: "ERRO!",
+            icon: "error",
+            text: `Os campos ${strErros} estão inválidos!`
+        })
+    }
+}
 
 
 const showStep = (stepIndex) => {
@@ -277,3 +323,7 @@ prevBtns.forEach(btn => {
 
 // Inicialização
 showStep(currentStep);
+
+document.querySelector("#btnFINALIZAR").addEventListener("click", () => {
+    verificaStep3();
+})
