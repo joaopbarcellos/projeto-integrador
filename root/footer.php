@@ -10,7 +10,7 @@
 	$dirPath = __DIR__;
 
 	// Parte do caminho que você deseja remover
-	$partToRemove = 'C:\Users\20211tiimi0125\Downloads\USBWebserverv10\root';
+	$partToRemove = 'C:\Users\20211tiimi0060\Downloads\USBWebserverv10\root';
 
 	// Substituir a parte a ser removida por uma string vazia
 	$rootDir = str_replace($partToRemove, '', $dirPath);

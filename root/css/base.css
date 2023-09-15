@@ -39,6 +39,10 @@
   --resp: #00C6FF;
   --textoalerta: #545454;
   --fundoalerta: #ffffff;
+  --colmyeve: #145374;
+  --colmyevehover: rgb(16, 44, 82);
+  --bgmyeve: #a8c5d3;
+  --bgmyevehover: #71a3bd;
   --cor_sombraev: 0 3px 5px 5px rgba(131, 131, 131, 0.46);  
   --sombraalterakey: 0px 0px 19px -3px rgba(0,0,0,0.75);
   --prev_light: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2383e3cd' %3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
@@ -75,6 +79,10 @@
   --roxo_terc: #140974;
   --form_cria: #5534b2;
   --icone_loc: #83e3cd;
+  --colmyeve: #eae3e3;
+  --colmyevehover: #d3d3c9;
+  --bgmyeve: #6b83b8;
+  --bgmyevehover: #5c679b;
   --header_bg_grad: linear-gradient(to bottom right, #045C8F, #7C36A8);
   --bg_grad_eve: linear-gradient( 55deg, #7C36A8, #045C8F, #7C36A8);
   --fundotext: rgba(11, 28, 102, 0.543);

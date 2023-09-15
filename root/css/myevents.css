@@ -16,16 +16,23 @@
 
 h3{
   text-align: center;
-  color: white !important;
 }
 
 .selected {
-  background-color: var(--perg1);
+  background-color: var(--bgmyeve);
+  color: var(--colmyeve);
+  border-bottom: 5px solid var(--colmyeve);
 }
 
 .not-selected {
-  background-color: var(--perg2);
-  color: #989595b1;
+  background-color: var(--bgmyeve);
+  color: var(--colmyeve);
+  transition: 0.3s;
+}
+
+.not-selected:hover{
+  background-color: var(--bgmyevehover);
+  color: var(--colmyevehover);
 }
 
 /* altero o p de semeventos trocando a cor e os espacamentos */
