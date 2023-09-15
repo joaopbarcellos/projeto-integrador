@@ -27,6 +27,10 @@
 		defer></script>
 
 </head>
+
+	<?php 
+		session_start();
+	?>
 <body>
 	<header>
 		<?php include('header.php') ?>

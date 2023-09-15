@@ -10,14 +10,11 @@
 	$dirPath = __DIR__;
 
 	// Parte do caminho que você deseja remover
-	$partToRemove = 'C:\Users\20211tiimi0125\Downloads\usbwebserver\root';
+	$partToRemove = '\root';
+	$caminho = explode($partToRemove, $dirPath);
 
 	// Substituir a parte a ser removida por uma string vazia
-	$rootDir = str_replace($partToRemove, '', $dirPath);
-
-	
-	// Exibir o novo caminho
-	echo $rootDir;
+	$rootDir = $caminho[1];
 	?>
 
     <link rel="icon" type="image/x-icon" href="<?php echo $rootDir . '/logos/icon.png'; ?>">
@@ -164,13 +161,22 @@
 					</li> <!-- Fechando lista geral contendo todos os links -->
 
 					<?php
-						if(!$_SESSION["logado"]){
-					?>  
+						if(!isset($_SESSION["logado"])){
+							echo '<a href="'. $rootDir . '/login.php" id="login_href">Login</a>
+							<a href="'. $rootDir . '/cadastro.php" id="entrar_href">Cadastro</a>';
+						} else {
+							//echo "<a id="nome_usuario"> ".  $_SESSION["logado"] . "</a>";
+							echo "<a id='nome_usuario'></a>";
+							?>
+							<script>
+								var paragrafo = document.querySelector("#nome_usuario");
+								paragrafo.value = JSON.parse(localStorage.getItem(document.querySelector(".paragrafo").value))["nome"];
 
-					<button class="btn_login col-3" type="button" id="btn_login" value="Login">
-					<button class="btn_cadastrar col-3" type="button" id="btn_cadastrar" value="Cadastrar">
-
-					<?php
+								// GUSTAVO VE SE ESSA BOMBA FUNCIONA KKKK
+								// TENTEI COLOCAR O NOME DELE MAS FICOU UMA GAMBIARRA DO KRL
+								// TALVEZ FUNCIONE, TALVEZ N FUNCIONE, 50%
+							</script>
+							<?php
 						}
 					?>
 

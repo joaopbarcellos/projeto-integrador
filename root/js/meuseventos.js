@@ -7,7 +7,8 @@ const cancel = document.querySelectorAll(".inscricao");
 // Pegando o email do usuario logado
 const email = sessionStorage.getItem("logado");
 // Pegando todos os dados do usuario
-const dados = JSON.parse(localStorage.getItem(email));
+const dados = JSON.parse(localStorage.getItem(document.querySelector(".paragrafo").value));
+console.log(dados);
 
 const barra_pesquisa = document.querySelector("#busca");
 
@@ -25,7 +26,7 @@ cancel.forEach((btn) => {
 });
 
 // Caso o usuario nao esteja logado
-if (!email) {
+function naoEstaLogado(){
   Swal.fire({
     // Alert avisando ao usuario fazer login
     title: "Faça login!",

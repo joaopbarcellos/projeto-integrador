@@ -10,13 +10,11 @@
 	$dirPath = __DIR__;
 
 	// Parte do caminho que você deseja remover
-	$partToRemove = 'C:\Users\20211tiimi0125\Downloads\usbwebserver\root';
+	$partToRemove = '\root';
+	$caminho = explode($partToRemove, $dirPath);
 
 	// Substituir a parte a ser removida por uma string vazia
-	$rootDir = str_replace($partToRemove, '', $dirPath);
-
-	// Exibir o novo caminho
-	echo $rootDir;
+	$rootDir = $caminho[1];
 	?>
 
 	<link rel="icon" type="image/x-icon" href="<?php echo $rootDir . '/logos/icon.png'; ?>"> 

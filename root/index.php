@@ -30,11 +30,11 @@
 
 <body>
 	<?php
-      if(isset($_POST['emailCampo'])) { 
-        $emailLogado = trim($_POST["emailCampo"]);
-        session_start();
-        $_SESSION["logado"] = $emailLogado;
-      }
+		session_start();
+		if(isset($_POST['emailCampo'])) { 
+			$emailLogado = trim($_POST["emailCampo"]);
+			$_SESSION["logado"] = $emailLogado;
+		}
     ?>
 
 	<!-- Header com a navbar -->

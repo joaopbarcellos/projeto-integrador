@@ -27,9 +27,26 @@
 		integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"
 		defer></script>
 
+	<?php 
+		session_start();
+	?>
+
+
+
 </head>
 
 <body>
+	
+	<script>
+		function pegar_session(){
+			var paragrafo = document.createElement("h1");
+			paragrafo.className = "paragrafo";
+			paragrafo.style.display = "none";
+			paragrafo.value = "<?php echo $_SESSION["logado"];?>";
+			document.body.appendChild(paragrafo);
+		}
+		pegar_session();
+	</script>
 	<!-- Header com a navbar -->
 	<header>
 		<?php include('header.php') ?>
@@ -581,6 +598,9 @@
 
 		<!--- Fim da Section -->
 	</section>
+
+
+
 
 	<footer>
 		<?php include('footer.php') ?>
