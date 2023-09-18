@@ -1,8 +1,19 @@
+// Importando a funcao de autenticacao de campos
+import * as base from "./base.js";
+
 const form = document.getElementById("multi-step-form");
 const steps = form.querySelectorAll(".step");
 const nextBtns = form.querySelectorAll(".next-btn");
 const prevBtns = form.querySelectorAll(".prev-btn");
 let currentStep = 0;
+
+// Pegando o email do usuario logado
+const email = document.querySelector(".paragrafo").value;
+
+if (!email){
+    base.naoEstaLogado();
+}
+
 
 // Validação dos campos
 // Campo nome do evento

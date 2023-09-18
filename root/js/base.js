@@ -599,3 +599,18 @@ if (telefoneInput){
     formatTelefone(this);
   });
 }
+
+// Caso o usuario nao esteja logado
+export function naoEstaLogado(){
+  Swal.fire({
+    // Alert avisando ao usuario fazer login
+    title: "Faça login!",
+    icon: "error",
+    text: "Você precisa estar logado para acessar essa funcionalidade.",
+    confirmButtonColor: "#3085d6",
+    confirmButtonText: "Login",
+  }).then(() => {
+    // Enviando o usuario para a tela de login
+    window.location.assign("login.php");
+  });
+}

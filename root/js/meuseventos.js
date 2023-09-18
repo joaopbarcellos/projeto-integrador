@@ -5,14 +5,19 @@ import * as base from "./base.js";
 const cancel = document.querySelectorAll(".inscricao");
 
 // Pegando o email do usuario logado
-const email = sessionStorage.getItem("logado");
+const email = document.querySelector(".paragrafo").value;
+
+if (!email){
+  base.naoEstaLogado();
+}
+
 // Pegando todos os dados do usuario
 const dados = JSON.parse(localStorage.getItem(document.querySelector(".paragrafo").value));
-console.log(dados);
 
 const barra_pesquisa = document.querySelector("#busca");
 
 const lupa = document.querySelector("#lupa");
+
 
 var meus_eventos_inscritos = [];
 var meus_eventos_criados = [];
@@ -24,21 +29,6 @@ cancel.forEach((btn) => {
     cancelarInscricao(btn.id);
   });
 });
-
-// Caso o usuario nao esteja logado
-function naoEstaLogado(){
-  Swal.fire({
-    // Alert avisando ao usuario fazer login
-    title: "Faça login!",
-    icon: "error",
-    text: "Você precisa estar logado para acessar essa funcionalidade.",
-    confirmButtonColor: "#3085d6",
-    confirmButtonText: "Login",
-  }).then(() => {
-    // Enviando o usuario para a tela de login
-    window.location.assign("index.php");
-  });
-}
 
 const todosEventos = document.querySelectorAll(".evento");
 function desaparecerTudo(){
