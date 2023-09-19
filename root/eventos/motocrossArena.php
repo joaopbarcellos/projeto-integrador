@@ -28,6 +28,10 @@
 
 </head>
 
+<?php 
+		session_start();
+?>
+
 <body>
 	<!-- Header com a navbar -->
 	<header>

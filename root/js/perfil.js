@@ -1,4 +1,5 @@
-let usuarioLogado = sessionStorage.getItem("logado");
+let usuarioLogado = document.querySelector(".paragrafo").value;
+console.log(usuarioLogado);
 // Armazenando a informacao de qual usuario esta logado
 
 // Verficando se um usuario esta logado
@@ -19,7 +20,7 @@ if (!usuarioLogado) {
   let dados = JSON.parse(localStorage.getItem(usuarioLogado));
 
   // Pegando o nome do usuario logado e colocando no label
-  document.querySelector("#nome_usuario").textContent = dados["nome"];
+  document.querySelector("#nome_usuario_logado").textContent = dados["nome"];
 
   // Pegando o email do usuario logado e colocando no label
   document.querySelector("#email_usuario").textContent = dados["email"];

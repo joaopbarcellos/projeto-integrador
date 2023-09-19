@@ -157,6 +157,18 @@ header {
   text-shadow: none;
 }
 
+#droplogado{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+#fotologado{
+  width: 20px;
+  height: 20px;
+}
+
 /* Adicionando cor */
 .dropdown-menu {
   background-color: var(--roxo_princ) !important;

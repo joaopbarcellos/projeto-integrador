@@ -27,6 +27,10 @@
 	<script src="../js/base.js" type="module" defer></script>
 </head>
 
+<?php 
+		session_start();
+?>
+
 <body>
 	<!-- Header com a navbar -->
 	<header>

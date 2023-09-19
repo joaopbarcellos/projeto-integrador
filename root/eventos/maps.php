@@ -32,13 +32,17 @@
 
 	<script src="../js/maps.js" defer></script>
 
-	<script src="../js/base.js" type="module" defer></script>
+	<script src="../js/base.js" type="module" defer></script> 
+</head>
 
-	<body>
-		<!-- Header com a navbar -->
-		<header>
-			<?php include('../header.php') ?>
-		</header>
+<?php 
+		session_start();
+?>
+<body>
+	<!-- Header com a navbar -->
+	<header>
+		<?php include('../header.php') ?>
+	</header>
 	<div class="d-none d-md-block">
 		<!-- Botao de voltar -->
 		<button class="cssbuttons-io-button "> Voltar

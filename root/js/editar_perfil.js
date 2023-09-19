@@ -2,7 +2,7 @@
 import * as base from "./base.js";
 
 // Pegando os dados do usuario logado
-var emailLogado = sessionStorage.getItem("logado");
+var emailLogado = document.querySelector(".paragrafo").value;
 const dadosUsuario = JSON.parse(localStorage.getItem(emailLogado));
 
 // Pegando os campos na tela

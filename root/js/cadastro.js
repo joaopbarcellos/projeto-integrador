@@ -60,6 +60,11 @@ const labelSenha = document.querySelector("#senha_label");
 const labelNome = document.querySelector("#label_nome");
 const labelData = document.querySelector("#labelData");
 
+function pegarTodasVariaveisFiltradas(nome, email, telefone, data, senha, confimarSenha, jogabilidade){
+
+}
+
+
 function autenticar() {
   // Funcao para autenticar todos os campos
 

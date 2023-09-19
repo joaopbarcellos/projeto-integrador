@@ -77,7 +77,7 @@
 									<label class="labels texto word-break"> Nome: </label>
 
 									<!-- Escrevo na label o nome do usuario -->
-									<label class="cadastro texto word-break" id="nome_usuario"> </label>
+									<label class="cadastro texto word-break" id="nome_usuario_logado"> </label>
 
 									<!-- Fecho a div do nome -->
 								</div>

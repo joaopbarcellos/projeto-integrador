@@ -46,6 +46,13 @@ if (caixa_email) {
   });
 }
 
+// Pegando o email do usuario logado
+if (document.querySelector(".paragrafo")){
+  var emailLogado = document.querySelector(".paragrafo").value;
+} else {
+  var emailLogado = null;
+}
+
 // Funcao para quando o usuario entrar numa tela de evento
 function entrarEvento() {
   // Pegando o nome da janela
@@ -56,7 +63,7 @@ function entrarEvento() {
   if (nomeJanela.length < 15) {
     // Pegando os dados do usuario
     let dados = JSON.parse(
-      localStorage.getItem(sessionStorage.getItem("logado"))
+      localStorage.getItem(emailLogado)
     );
     // Se ele nao estiver inscrito, acabara a funcao
     if (!dados) {
@@ -72,9 +79,6 @@ function entrarEvento() {
 }
 
 function inscrever(evento) {
-  // Pegando o email do usuario logado
-  let emailLogado = sessionStorage.getItem("logado");
-
   if (emailLogado) {
     // Se ele nao for nulo, isto e, se ha um usuario logado
     Swal.fire({
@@ -378,7 +382,7 @@ export function verificaSenhaSalva(
   } else {
     if (
       campoSenha.value !=
-      JSON.parse(localStorage.getItem(sessionStorage.getItem("logado"))).senha
+      JSON.parse(localStorage.getItem(emailLogado)).senha
     ) {
       campoSenha.style.cssText = "border-bottom: 1px solid #f58181";
       erro.style.display = "block";
@@ -413,7 +417,7 @@ export function emailIgual(campoEmail, noEmailExiste, cadastro = false) {
     // Mostrando a label de email ja cadastrado
     noEmailExiste.style.display = "block";
     return false;
-  } else if (dados && dados.email != sessionStorage.getItem("logado")) {
+  } else if (dados && dados.email != emailLogado) {
     // Mostrando uma mensagem de erro para o usuario
     Swal.fire({
       icon: "error",
@@ -515,8 +519,9 @@ if (sair) {
       // Mandando para a tela de login
       window.location.assign("./login.php");
     }
-    // Apagando quem esta logado
-    sessionStorage.clear();
+    // Saindo da session
+    
+    
   });
 }
 

@@ -34,17 +34,6 @@
 	?>
 
 <body>
-	<script>
-		function pegar_session(){
-			var paragrafo = document.createElement("h1");
-			paragrafo.className = "paragrafo";
-			paragrafo.style.display = "none";
-			paragrafo.value = "<?php if (isset($_SESSION["logado"])) echo $_SESSION["logado"];
-			else echo ''?>";
-			document.body.appendChild(paragrafo);
-		}
-		pegar_session();
-	</script>
 	<!-- Header com a navbar -->
 	<header>
 		<?php include('header.php') ?>

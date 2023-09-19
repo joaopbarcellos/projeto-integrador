@@ -120,65 +120,78 @@
 						</a>
 					</li>
 
-					<!-- Lista geral com o dropdown do cara 
-					<li class="nav-item dropdown">
-						<a class="links nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-							aria-expanded="false">
-							<img id="fotouser">
-							<div id="nomeuser"></div>
-						</a>
-
-						
-						<ul class="dropdown-menu">
-							<li>
-								<a class="dropdown-item" href="<?php echo $rootDir . '/perfil.php';?>" id="perfila">
-									<svg class="iconeuser" xmlns="http://www.w3.org/2000/svg" height="1em"
-										viewBox="0 0 512 512">
-										<path
-											d="M399 384.2C376.9 345.8 335.4 320 288 320H224c-47.4 0-88.9 25.8-111 64.2c35.2 39.2 86.2 63.8 143 63.8s107.8-24.7 143-63.8zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 16a72 72 0 1 0 0-144 72 72 0 1 0 0 144z" />
-									</svg>
-									Conta
-								</a>
-							</li>
-
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-
-							<li>
-								<a class="dropdown-item" href="#" id="logout">
-									<svg class="iconelogout" xmlns="http://www.w3.org/2000/svg" height="1em"
-										viewBox="0 0 512 512">
-										<path
-											d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z" />
-									</svg>
-									Sair
-								</a>
-
-							</li>  
-						</ul> -->
-
 					</li> <!-- Fechando lista geral contendo todos os links -->
 
 					<?php
 						if(!isset($_SESSION["logado"])){
-							echo '<a href="'. $rootDir . '/login.php" id="login_href">Login</a>
-							<a href="'. $rootDir . '/cadastro.php" id="entrar_href">Cadastro</a>';
+							echo '
+							<a href="'. $rootDir . '/login.php">
+								<button type="button" id="login_href" class="btn">Login</button>
+							</a>
+
+							<a href="'. $rootDir . '/cadastro.php">
+								<button type="button" id="cadastro_href" class="btn">Cadastro</button>
+							</a>
+							';
 						} else {
-							//echo "<a id="nome_usuario"> ".  $_SESSION["logado"] . "</a>";
-							echo "<a id='nome_usuario'></a>";
+							echo '
+							<li class="nav-item dropdown">
+								<a class="links nav-link dropdown-toggle" id="droplogado" href="#" role="button" data-bs-toggle="dropdown"aria-expanded="false">
+									<img src="img/semfoto.png" id="fotologado"></img>
+									<div id="nome_usuario">' .  $_SESSION["logado"]. '</div>
+								</a>';
+
+								echo '
+								<ul class="dropdown-menu">
+									<li>
+										<a class="dropdown-item" href="' . $rootDir . '/perfil.php" id="perfila">
+											<svg class="iconeuser" xmlns="http://www.w3.org/2000/svg" height="1em"
+												viewBox="0 0 512 512">
+												<path
+													d="M399 384.2C376.9 345.8 335.4 320 288 320H224c-47.4 0-88.9 25.8-111 64.2c35.2 39.2 86.2 63.8 143 63.8s107.8-24.7 143-63.8zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 16a72 72 0 1 0 0-144 72 72 0 1 0 0 144z" />
+											</svg>
+											Conta
+										</a>
+									</li>
+		
+									<li>
+										<hr class="dropdown-divider">
+									</li>
+	
+									<li>
+										<a class="dropdown-item" href="sairConta.php" id="logout">
+											<svg class="iconelogout" xmlns="http://www.w3.org/2000/svg" height="1em"
+											viewBox="0 0 512 512">
+											<path
+												d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z" />
+										</svg>
+										Sair
+										</a>
+									</li>  
+								</ul>
+								
+							<li>';
 							?>
 							<script>
 								var paragrafo = document.querySelector("#nome_usuario");
-								paragrafo.value = JSON.parse(localStorage.getItem(document.querySelector(".paragrafo").value))["nome"];
-
-								// GUSTAVO VE SE ESSA BOMBA FUNCIONA KKKK
-								// TENTEI COLOCAR O NOME DELE MAS FICOU UMA GAMBIARRA DO KRL
-								// TALVEZ FUNCIONE, TALVEZ N FUNCIONE, 50%
+								var email = paragrafo.textContent;
+								var nome = JSON.parse(localStorage.getItem(email))["nome"];
+								paragrafo.innerHTML = nome;
 							</script>
 							<?php
 						}
 					?>
+					<script>
+						function pegar_session(){
+							var paragrafo = document.createElement("h1");
+							paragrafo.className = "paragrafo";
+							paragrafo.style.display = "none";
+							paragrafo.value = "<?php if (isset($_SESSION["logado"])) echo $_SESSION["logado"];
+							else echo ''?>";
+							document.body.appendChild(paragrafo);
+						}
+						pegar_session();
+					</script>
 
 				</ul> <!-- Fechando div com a lista dos links -->
 				
