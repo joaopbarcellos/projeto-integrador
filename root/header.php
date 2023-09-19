@@ -16,7 +16,6 @@
 	// Substituir a parte a ser removida por uma string vazia
 	$rootDir = $caminho[1];
 	?>
-
     <link rel="icon" type="image/x-icon" href="<?php echo $rootDir . '/logos/icon.png'; ?>">
     <title>Time In</title>
     <link rel="stylesheet" href="<?php echo $rootDir . '/css/base.css'; ?>">
@@ -125,6 +124,7 @@
 					<?php
 						if(!isset($_SESSION["logado"])){
 							echo '
+							<div  class="log">
 							<a href="'. $rootDir . '/login.php">
 								<button type="button" id="login_href" class="btn">Login</button>
 							</a>
@@ -132,6 +132,7 @@
 							<a href="'. $rootDir . '/cadastro.php">
 								<button type="button" id="cadastro_href" class="btn">Cadastro</button>
 							</a>
+							</div>
 							';
 						} else {
 							echo '

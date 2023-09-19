@@ -37,11 +37,13 @@
   --supfund: #057dc2;
   --semevento: #69696998;
   --resp: #00C6FF;
+  --btnlog: #057dc2;
   --textoalerta: #545454;
   --fundoalerta: #ffffff;
   --colmyeve: #145374;
   --colmyevehover: rgb(16, 44, 82);
   --bgmyeve: #a8c5d3;
+  --btncad: #057dc2;
   --bgmyevehover: #71a3bd;
   --cor_sombraev: 0 3px 5px 5px rgba(131, 131, 131, 0.46);  
   --sombraalterakey: 0px 0px 19px -3px rgba(0,0,0,0.75);
@@ -59,6 +61,7 @@
   --perg1: #4336a8;
   --perg2: #7C36A8;
   --resp: #866bb8;
+  --btnlog: #787fdb;
   --supfund: #a3abe4;
   --azul_claro: #00A0CC;
   --azul-claro_sec: #0084C2;
@@ -81,6 +84,7 @@
   --icone_loc: #83e3cd;
   --colmyeve: #eae3e3;
   --colmyevehover: #d3d3c9;
+  --btncad: #ffffff;
   --bgmyeve: #6b83b8;
   --bgmyevehover: #5c679b;
   --header_bg_grad: linear-gradient(to bottom right, #045C8F, #7C36A8);
@@ -157,6 +161,12 @@ header {
   text-shadow: none;
 }
 
+.log{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #droplogado{
   display: flex;
   flex-direction: row;
@@ -168,6 +178,34 @@ header {
   width: 20px;
   height: 20px;
 }
+
+#login_href{
+  background-color: var(--btnlog);
+  color: white;
+  transition: 0.3s;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+#login_href:hover, #cadastro_href:hover{
+  background-color: var(--roxo_terc);
+  border: 1px solid var(--roxo_terc);
+  color: white;
+}
+
+#cadastro_href{
+  background-color: white;
+  color: var(--azul_princ);
+  border: 1px solid  var(--btncad);
+  transition: 0.3s;
+  margin-right: 8px;
+}
+
+/* {
+  background-color: var(--azul-claro_sec);
+  border: 1px solid var(--azul-claro_sec);
+  color: white;
+} */
 
 /* Adicionando cor */
 .dropdown-menu {
