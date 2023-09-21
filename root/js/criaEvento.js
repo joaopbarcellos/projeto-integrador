@@ -39,7 +39,7 @@ function validarDataEvento(){
 function verificaseDatadoEventoeMaiordoqueaDataAtual(dataEvento){
     var dataEvento = document.querySelector("#dataEvento").value;
     dataEvento = new Date(dataEvento);
-    dataAtual = new Date();
+    var dataAtual = new Date();
     
     if(dataEvento.getFullYear() > dataAtual.getFullYear()) return true;
     if(dataEvento.getFullYear == dataAtual.getFullYear()){
@@ -55,7 +55,7 @@ function verificaseDatadoEventoeMaiordoqueaDataAtual(dataEvento){
 function verificaseDatadoEventoeNoMesmoDia(dataEvento){
     var dataEvento = document.querySelector("#dataEvento").value;
     dataEvento = new Date(dataEvento);
-    dataAtual = new Date();
+    var dataAtual = new Date();
     return dataEvento.getDate() + 1 == dataAtual.getDate();
 }
 
@@ -338,3 +338,16 @@ showStep(currentStep);
 document.querySelector("#btnFINALIZAR").addEventListener("click", () => {
     verificaStep3();
 })
+
+// Datalist
+var input_ele = document.getElementById('new-opt');
+var add_btn = document.getElementById('add-btn');
+var sel_opts = document.getElementById('sel-opts');
+var input_val;
+add_btn.addEventListener('click', function() {
+    input_val = input_ele.value;
+    if(input_val.trim() != '') {
+        sel_opts.innerHTML += '<option>' +input_val+ '</option>';
+        input_ele.value = '';
+    }
+});

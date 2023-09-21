@@ -42,8 +42,9 @@
 				<!-- Inicio do bloco de redes sociais -->
 				<div class="col-lg-3 col-md-6 col-sm-11 mx-auto footer-block pt-5" id="footer_contacts">
 					<!-- Logoe slogan da marca -->
-					<img src="<?php echo $rootDir . '/logos/9.png'; ?>" id="foot"></img>
-
+						<a href="#" id="foot">
+							<img src="<?php echo $rootDir . '/logos/9.png'; ?>" id="logofoot"></img>
+						<a>
 					<p id="slogan">Always in movement</p>
 
 					<!-- div com nossas redes -->

@@ -36,6 +36,14 @@
   </head>
 
   <body>
+    <?php 
+      $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+      $components = parse_url($url, PHP_URL_QUERY);
+      //parse_str($components, $results);
+      echo $components;
+    
+    ?>
+
     <header class="d-none d-lg-block">
       <!-- Header com imagem dentro de um link -->
       <a href="login.php"> <img id="logo_image" src="logos/11.png" /></a>
@@ -43,7 +51,7 @@
     <!-- Div que ficará com o formulário -->
     <div class="divLogin mt-5 col-lg-4 col-10 m-auto">
       <form id="form" action="index.php" method="post">
-        <legend class="p-3 text-center fs-1">Login</legend>
+        <legend class="p-3 text-center fs-1">Entrar</legend>
 
         <!-- Nome usuário -->
         <div class="campos email mb-5">

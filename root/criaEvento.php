@@ -219,46 +219,79 @@
 								</div>	
 							</div>
 
-							<div class="intRecor">
+							<div class="alinha mb-3">
+								<div class="form-floating espaco">
+									<select class="form-select" id="esporte">
+										<option value="1">Atletismo</option>
+										<option value="2">Automobilismo</option>
+										<option value="3">Badminton</option>
+										<option value="4">Basquete</option>
+										<option value="5">Boxe</option>
+										<option value="6">Canoagem</option>
+										<option value="7">Ciclismo</option>
+										<option value="8">Futebol</option>
+										<option value="9">Futebol Americano</option>
+										<option value="10">Futsal</option>
+										<option value="11">Ginástica Artística</option>
+										<option value="12">Handebol</option>
+										<option value="13">Hipismo</option>
+										<option value="14">Jiu-Jitsu</option>
+										<option value="15">Judô</option>
+										<option value="16">Levantamento de Peso</option>
+										<option value="17">MMA</option>
+										<option value="18">Natação</option>
+										<option value="19">Remo</option>
+										<option value="20">Rugby</option>
+										<option value="21">Skate</option>
+										<option value="22">Surfe</option>
+										<option value="23">Taekwondo</option>
+										<option value="24">Tênis</option>
+										<option value="25">Tênis de Mesa</option>
+										<option value="26">Tiro Esportivo</option>
+										<option value="27">Triatlon</option>
+										<option value="28">Vôlei</option>
+										<option value="29">Xadrez</option>
+										<option value="30">Outro</option>
+									</select>
+									<label for="esporte">Esporte</label>
+								</div>
+
 								<!-- Evento recorrente -->
-								<div class="form-floating col-8 col-sm-6 col-md-5 mb-3">
-									<select type="checkbox" class="form-control" id="eveRecorrente">
+								<div class="form-floating col-7 col-sm-6 col-lg-5 col-xg-4">
+									<select class="form-select" id="eveRecorrente">
 										<option value="1">Não</option>
 										<option value="2">Sim</option>
 									</select>
 									<label for="eveRecorrente">O Evento é Recorrente?</label>
 								</div>
-
-								<div class="form-floating col-12">
-									<p id="legendinha">Caso o evento seja recorrente, assinale os dias em que ele se repete</p>
-									<div class="btn-group" role="group" id="semana" aria-label="Basic checkbox toggle button group">
-										
-										<input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-										<label class="btn btn-outline-primary" for="btncheck1">D</label>
-										
-										<input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-										<label class="btn btn-outline-primary" for="btncheck2">S</label>
-										
-										<input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-										<label class="btn btn-outline-primary" for="btncheck3">T</label>
-
-										<input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
-										<label class="btn btn-outline-primary" for="btncheck4">Q</label>
-
-										<input type="checkbox" class="btn-check" id="btncheck5" autocomplete="off">
-										<label class="btn btn-outline-primary" for="btncheck5">Q</label>
-
-										<input type="checkbox" class="btn-check" id="btncheck6" autocomplete="off">
-										<label class="btn btn-outline-primary" for="btncheck6">S</label>
-
-										<input type="checkbox" class="btn-check" id="btncheck7" autocomplete="off">
-										<label class="btn btn-outline-primary" for="btncheck7">S<label>
-
-									</div>		
-								</div>
-															
 							</div>
-	
+							<div class="form-floating col-12">
+								<p id="legendinha">Caso o evento seja recorrente, assinale os dias em que ele se repete</p>
+								<div class="btn-group" role="group" id="semana" aria-label="Basic checkbox toggle button group">
+									
+									<input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+									<label class="btn btn-outline-primary" for="btncheck1">D</label>
+									
+									<input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+									<label class="btn btn-outline-primary" for="btncheck2">S</label>
+									
+									<input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+									<label class="btn btn-outline-primary" for="btncheck3">T</label>
+
+									<input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
+									<label class="btn btn-outline-primary" for="btncheck4">Q</label>
+
+									<input type="checkbox" class="btn-check" id="btncheck5" autocomplete="off">
+									<label class="btn btn-outline-primary" for="btncheck5">Q</label>
+
+									<input type="checkbox" class="btn-check" id="btncheck6" autocomplete="off">
+									<label class="btn btn-outline-primary" for="btncheck6">S</label>
+
+									<input type="checkbox" class="btn-check" id="btncheck7" autocomplete="off">
+									<label class="btn btn-outline-primary" for="btncheck7">S<label>
+
+								</div>		
+							</div>							
 						</div>
 					
 						<div class="botoes">

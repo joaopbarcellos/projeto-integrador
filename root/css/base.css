@@ -356,12 +356,15 @@ footer p {
 
 /* Aplicando tamanho e espaçamento */
 #foot {
-  width: 150px;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 20px;
   align-items: center;
   box-sizing: unset !important;
+}
+
+#logofoot{
+  width: 150px;
 }
 
 /* Aplicando flexbox, margem e espacamento */

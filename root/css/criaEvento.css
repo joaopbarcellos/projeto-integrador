@@ -12,12 +12,12 @@
 #criaa {
     color: var(--azul_sec) !important;
     text-shadow: none;
-  }
-  
+}
+
   /* Colocando cor no icone de home */
-  .iconecria {
+.iconecria {
     fill: var(--azul_sec) !important;
-  }
+}
 
 /* Container principal */
 .container {

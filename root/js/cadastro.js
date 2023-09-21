@@ -8,7 +8,7 @@ var todosInputs = document.querySelectorAll("input,select");
 
 for (var i = 0 ; i < todosInputs.length; i++) {
   // Percorrendo a lista de inputs ate chegar ao numero total (8)
-   todosInputs[i].addEventListener("keypress", function(event){
+  todosInputs[i].addEventListener("keypress", function(event){
     // Se a tecla clicada for Enter
     if (event.key == "Enter") {
       event.preventDefault();
@@ -22,7 +22,7 @@ for (var i = 0 ; i < todosInputs.length; i++) {
       // Dando foco ao proximo input
       proxInput.focus();
     }
-   })
+  })
 }
 
 // Labels de erro
@@ -104,7 +104,7 @@ function autenticar() {
       title: "Você foi cadastrado!",
     }).then(() => {
       // Enviando para a pagina de index
-      window.location.assign("login.php");
+      document.querySelector("form").submit();
     });
   }
 }

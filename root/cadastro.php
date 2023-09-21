@@ -54,7 +54,7 @@
       <!-- Div para estilizar o formulário -->
       <div class="formulario">
         <!-- Criando fomulário de Cadastro -->
-        <form method="post" action="cadastro.php">
+        <form method="post" action="enviarDadosCadastro.php">
           <legend class="p-3 text-center fs-1">Cadastro</legend>
 
           <!-- Nome do usuário -->
@@ -253,57 +253,6 @@
         </button>
       </div>
     </div>
-    <?php
-      $nome = $_POST["nomeCampo"];
-      $email = $_POST["emailCampo"];
-      $telefone = $_POST["telefoneCampo"];
-      $data = $_POST["dataCampo"];
-      $senha = $_POST["senhaCampo"];
-      $confSenha = $_POST["confsenhaCampo"];
-      if(isset($nome)){
-        if(!empty($nome)){
-          $nomeFiltrado = filter_var(trim($nome), FILTER_SANITIZE_STRING);
-        }
-      }
-
-      if(isset($email)){
-        if(!empty($email)){
-          if(filter_var($email, FILTER_VALIDATE_EMAIL)){
-            $emailFiltrado = filter_var(trim($email), FILTER_SANITIZE_EMAIL);
-          }
-        }
-      }
-
-      if(isset($telefone)){
-        if(!empty($telefone)){
-          $telefoneFiltrado = filter_var(trim($_POST["telefoneCampo"]), FILTER_SANITIZE_NUMBER_INT);
-          if(filter_var($telefoneFiltrado, FILTER_VALIDATE_INT) !== false){
-
-          }
-        }
-      }
-
-      if(isset($data)){
-        if(empty($data)){
-          
-        }
-      }
-      
-      if(isset($senha)){
-        if(!empty($senha)){?>
-          <script>
-            verificaSenhaForaPadrao();
-          </script>
-          
-          
-          <?php
-        }
-      }
-    ?>
-    <script>
-
-
-    </script>
-
+    
   </body>
 </html>
