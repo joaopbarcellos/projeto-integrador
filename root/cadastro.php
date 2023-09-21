@@ -268,9 +268,8 @@
 
       if(isset($email)){
         if(!empty($email)){
-          $emailFiltrado = filter_var(trim($email), FILTER_SANITIZE_EMAIL);
-          if(filter_var($emailFiltrado, FILTER_VALIDATE_EMAIL)){
-
+          if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+            $emailFiltrado = filter_var(trim($email), FILTER_SANITIZE_EMAIL);
           }
         }
       }

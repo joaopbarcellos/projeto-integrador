@@ -126,11 +126,11 @@
 							echo '
 							<div  class="log">
 							<a href="'. $rootDir . '/login.php">
-								<button type="button" id="login_href" class="btn">Login</button>
+								<button type="button" id="login_href" class="btn">Entrar</button>
 							</a>
 
 							<a href="'. $rootDir . '/cadastro.php">
-								<button type="button" id="cadastro_href" class="btn">Cadastro</button>
+								<button type="button" id="cadastro_href" class="btn">Cadastrar</button>
 							</a>
 							</div>
 							';
