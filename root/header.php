@@ -138,7 +138,7 @@
 							echo '
 							<li class="nav-item dropdown">
 								<a class="links nav-link dropdown-toggle" id="droplogado" href="#" role="button" data-bs-toggle="dropdown"aria-expanded="false">
-									<img src="img/semfoto.png" id="fotologado"></img>
+									<img src="' . $rootDir . '/img/semfoto.png" id="fotologado"></img>
 									<div id="nome_usuario">' .  $_SESSION["logado"]. '</div>
 								</a>';
 
@@ -160,7 +160,7 @@
 									</li>
 	
 									<li>
-										<a class="dropdown-item" href="sairConta.php" id="logout">
+										<a class="dropdown-item" href="' . $rootDir . '/sairConta.php" id="logout">
 											<svg class="iconelogout" xmlns="http://www.w3.org/2000/svg" height="1em"
 											viewBox="0 0 512 512">
 											<path

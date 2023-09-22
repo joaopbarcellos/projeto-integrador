@@ -66,11 +66,6 @@ const labelNome = document.querySelector("#label_nome");
 const labelData = document.querySelector("#labelData");
 const labelTelefone = document.querySelector("#telefone_label");
 
-function pegarTodasVariaveisFiltradas(nome, email, telefone, data, senha, confimarSenha, jogabilidade){
-
-}
-
-
 function autenticar() {
   // Funcao para autenticar todos os campos
 
@@ -78,7 +73,7 @@ function autenticar() {
   if (verificaTudo()) {
     // Valor da data de nascimento
     let dataNasc = campoData.value;
-
+    let telefone = campoTelefone.value;
     // Valor do nome
     let nome = campoNome.value;
     // Valor da tipo do jogador
@@ -94,6 +89,7 @@ function autenticar() {
     let stringJSON = {
       email: email,
       nome: nome,
+      telefone: telefone,
       dataNasc: dataNasc,
       senha: senha,
       jogabilidade: jogabilidade,

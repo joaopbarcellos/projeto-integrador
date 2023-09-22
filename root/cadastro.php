@@ -31,7 +31,7 @@
   <body>
     <header class="d-none d-lg-block">
       <!-- Header com imagem dentro de um link -->
-      <a href="index.php"> <img src="logos/11.png"/> </a>
+      <a href="login.php"> <img src="logos/11.png"/> </a>
     </header>
 
     <!-- Div que ficara com o formulário -->

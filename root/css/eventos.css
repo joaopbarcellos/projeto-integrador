@@ -26,6 +26,13 @@ p, h1{
   margin-top: 1.5em !important;
 }
 
+body{
+  background-image: var(--imgfundo);
+  background-repeat: repeat;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
 /* Colocando tamanho nas imagens */
 #img_evento {
   margin-bottom: 20px;

@@ -319,20 +319,29 @@ export function verificaTelefoneValido(
     noTelefone.style.display = "none";
     noTelefoneValido.style.display = "block";
     return false;
-  } 
-  // else {
-  //   fetch(`https://brasilapi.com.br/api/ddd/v1/${campo.value[1]}`)
-  //   .then(resposta => resposta.json())
-  //   .then(dados => {
-  //     console.log(dados);
-  //   })
-  // }
-  // Mudando a borda do campo
-  campo.style.cssText = "border-bottom: 1px solid rgb(95, 201, 74)";
-  // Escondendo as labels de erro
-  noTelefone.style.display = "none";
-  noTelefoneValido.style.display = "none";
-  return true;
+  }
+  let ddd = campo.value.split(" ")[0].replace("(", "").replace(")", "") 
+  var calback = fetch(`https://brasilapi.com.br/api/ddd/v1/${ddd}`)
+  .then(resposta => resposta.json())
+  .then(dados => {
+    console.log(campo.value.length)
+    if(!dados.state || campo.value.length != 15){
+      // Mudando a borda do campo
+      campo.style.cssText = "border-bottom: 1px solid #f58181";
+      // Mostrando a label de erro e escondendo a outra
+      noTelefone.style.display = "none";
+      console.log("csjdcoksknfc")
+      noTelefoneValido.style.display = "block";
+      return false;
+    } else {
+      // Mudando a borda do campo
+      campo.style.cssText = "border-bottom: 1px solid rgb(95, 201, 74)";
+      // Escondendo as labels de erro
+      noTelefone.style.display = "none";
+      noTelefoneValido.style.display = "none";
+      return true;
+    }
+  })
 }
 
 // Funcao para autenticar se a senha esta dentro dos padroes

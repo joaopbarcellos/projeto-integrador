@@ -9,6 +9,7 @@ const dadosUsuario = JSON.parse(localStorage.getItem(emailLogado));
 const campoNome = document.querySelector("#floatingInputGroup1");
 const campoEmail = document.querySelector("#floatingInputGroup2");
 const campoDataNasc = document.querySelector("#idade");
+const campoTelefone = document.querySelector("#floatingInputGroup5")
 const radios = document.querySelectorAll(".radio");
 
 // Pegando os labels de nome e email
@@ -16,6 +17,7 @@ const labelNome = document.querySelector("#label_nome");
 const labelData = document.querySelector("#labelData");
 const labelJogador = document.querySelector(".label_joga");
 const labelsJogabilidade = document.querySelectorAll(".jogabilidades");
+const labelTelefone = document.querySelector("#label_telefone");
 
 // Pegando as labels de erro
 const noNome = document.querySelector("#noNome");
@@ -25,6 +27,8 @@ const noData = document.querySelector("#noData");
 const noJogabilidade = document.querySelector("#noJogabilidade");
 const passouData = document.querySelector("#passouData");
 const noEmailExiste = document.querySelector("#noEmailExiste");
+const noTelefone = document.querySelector("#noTelefone");
+const noTelefoneValido = document.querySelector("#noTelefoneValido");
 
 // Funcao para preencher automaticamente os campos com os dados do usuario
 function preencherAuto() {
@@ -32,6 +36,7 @@ function preencherAuto() {
   campoEmail.value = emailLogado;
   campoEmail.disabled = true;
   campoDataNasc.value = dadosUsuario.dataNasc;
+  campoTelefone.value = dadosUsuario.telefone;
 
   let radioMarcada = dadosUsuario.jogabilidade;
 
@@ -74,7 +79,23 @@ function verificaTudo() {
     noJogabilidade
   );
 
-  let lista = [verificaNome, verDataNasc, verjog];
+  // Verificando o numero de telefone
+  let verificaTelefone = base.verificaCampoVazio(
+    campoTelefone,
+    labelTelefone,
+    noTelefone,
+    noTelefoneValido
+  );
+
+  if (verificaTelefone){
+    verificaTelefone = base.verificaTelefoneValido(
+      campoTelefone,
+      noTelefone,
+      noTelefoneValido
+    );
+  }
+
+  let lista = [verificaNome, verDataNasc, verjog, verificaTelefone];
   // Verificando se todos os elementos sao true
   return lista.every((element) => element);
 }
@@ -111,6 +132,7 @@ function autenticar() {
         dadosUsuario.nome = campoNome.value;
         dadosUsuario.dataNasc = campoDataNasc.value;
         dadosUsuario.jogabilidade = base.jogabilidadeMarcada();
+        dadosUsuario.telefone = campoTelefone.value;
 
         // Chave do usuário para alteracao
         let emailLogado = campoEmail.value;
@@ -120,9 +142,6 @@ function autenticar() {
 
         localStorage.removeItem(emailLogado);
         // Removendo o item antigo
-
-        sessionStorage.setItem("logado", emailLogado);
-        // Setando o novo item no sessionStorage
 
         localStorage.setItem(campoEmail.value, stringJson);
         // Setando o novo item no localStorage

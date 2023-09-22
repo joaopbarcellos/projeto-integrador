@@ -36,14 +36,12 @@
   </head>
 
   <body>
-    <?php 
-      $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-      $components = parse_url($url, PHP_URL_QUERY);
-      //parse_str($components, $results);
-      echo $components;
-    
-    ?>
+    <?php
+      if(isset($_GET["msg"])){
+        echo "<script>alert(". $_GET['msg'] .");</script>";
+      }
 
+    ?>
     <header class="d-none d-lg-block">
       <!-- Header com imagem dentro de um link -->
       <a href="login.php"> <img id="logo_image" src="logos/11.png" /></a>

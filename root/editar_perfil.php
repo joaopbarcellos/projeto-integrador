@@ -108,11 +108,15 @@
 							</div>
 						</div>
 					</div>
-
-					<div class="form-floating">
-							<!-- input de telefone -->
-							<input type="text" class="form-control" id="floatingInputGroup5" placeholder="Telefone">
-							<label for="telefoe" id="label_telefone">Telefone</label>
+					<div class="telefone campos">
+						<div class="form-floating">
+								<!-- input de telefone -->
+								<input type="text" class="form-control" id="floatingInputGroup5" placeholder="Telefone">
+								<label for="telefoe" id="label_telefone">Telefone</label>
+						</div>
+						<!-- Mensagem de erro -->
+						<label class="erro" id="noTelefone">Telefone deve ser preenchido!</label>
+						<label class="erro" id="noTelefoneValido">Telefone inválido!</label>
 					</div>
 
 					<!-- Idade do usuario -->

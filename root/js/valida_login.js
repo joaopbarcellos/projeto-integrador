@@ -130,6 +130,7 @@ let stringJSON = {
       jogabilidade: "Profissional",
       eventos_inscritos: [],
       eventos_criados: [],
+      telefone: "(27) 98765-4321"
 };
 
 // Salvando os dados no localStorage

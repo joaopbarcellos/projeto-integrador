@@ -1,5 +1,4 @@
 let usuarioLogado = document.querySelector(".paragrafo").value;
-console.log(usuarioLogado);
 // Armazenando a informacao de qual usuario esta logado
 
 // Verficando se um usuario esta logado
@@ -24,6 +23,9 @@ if (!usuarioLogado) {
 
   // Pegando o email do usuario logado e colocando no label
   document.querySelector("#email_usuario").textContent = dados["email"];
+
+  // Pegando o telefone do usuario logado e colocando no label
+  document.querySelector("#telefone_usuario").textContent = dados["telefone"];
 
   // Pegando a data de nascimento do usuario logado e colocando no label
   let data =
