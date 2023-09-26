@@ -86,7 +86,7 @@ function verificaTudo() {
     noTelefone,
     noTelefoneValido
   );
-
+  
   if (verificaTelefone){
     verificaTelefone = base.verificaTelefoneValido(
       campoTelefone,
@@ -95,9 +95,11 @@ function verificaTudo() {
     );
   }
 
-  let lista = [verificaNome, verDataNasc, verjog, verificaTelefone];
-  // Verificando se todos os elementos sao true
-  return lista.every((element) => element);
+  let listaTudo = [verificaNome, verDataNasc, verjog, verificaTelefone];
+  // Verificando se todos os elementos sao validos
+  return listaTudo.every((element) => element);
+
+  
 }
 
 // Pegando o botao de editar

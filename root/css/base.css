@@ -45,6 +45,12 @@
   --bgmyeve: #a8c5d3;
   --btncad: #057dc2;
   --bgmyevehover: #71a3bd;
+
+
+  --bgeve: rgba(255, 255, 255, 0.562);
+  --shaeve: 0 8px 32px 0 rgba(254, 254, 255, 0.37);
+
+  
   --cor_sombraev: 0 3px 5px 5px rgba(131, 131, 131, 0.46);  
   --sombraalterakey: 0px 0px 19px -3px rgba(0,0,0,0.75);
   --imgfundo: url('../img/fundowhite.png');
@@ -88,6 +94,12 @@
   --btncad: #ffffff;
   --bgmyeve: #6b83b8;
   --bgmyevehover: #5c679b;
+
+
+  --bgeve: rgb(166, 155, 216);
+  --shaeve: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+
+
   --header_bg_grad: linear-gradient(to bottom right, #045C8F, #7C36A8);
   --bg_grad_eve: linear-gradient( 55deg, #7C36A8, #045C8F, #7C36A8);
   --fundotext: rgba(11, 28, 102, 0.543);

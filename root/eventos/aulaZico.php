@@ -63,92 +63,93 @@
 
 	<!-- Div com o conteudo ta pagina geral -->
 	<div id="container" class="container col-12 m-auto">
+		<div id="fundoev" class="col-12 col-lg-10 m-auto">
+			<!-- Adicionando titulo -->
+			<h1 id="titulo" class="text-center text-lg-start">Aula do Zico</h1>
+			<div id="evento" class="row">
+				<div id="tabela" class="">
+					<img src="../img/6.png" id="img_evento">
+				</div>
 
-		<!-- Adicionando titulo -->
-		<h1 id="titulo" class="text-center text-lg-start offset-1">Aula do Zico</h1>
-		<div id="evento" class="row">
-			<div id="tabela" class="col-12 col-lg-10 m-auto">
-				<img src="../img/6.png" id="img_evento">
-			</div>
+				<!-- Div geral com as informacoes do evento -->
+				<div id="informacoes" class="">
 
-			<!-- Div geral com as informacoes do evento -->
-			<div id="informacoes" class="col-12 col-lg-10 m-auto">
-
-				<!-- Div com as descricoes -->
-				<div id="desc">
-					<p id="t_desc" class="fs-3"><b>Descrição</b></p>
-					<p id="p_desc">
-						Aula ofertada pelo Zico para crianças de até 12 anos. O evento terá duração de 2 horas.
-						Participação somente com inscrição prévia.
-					</p>
-				</div> 
-				
-
-				<!-- Div de localizacao -->
-				<div id="localizacao"><a id="local" href="maps.php">
-					
-						<!-- Icone da localizacao -->
-						<svg class="iconezin iconelocev" xmlns="http://www.w3.org/2000/svg" height="1em"
-							viewBox="0 0 384 512">
-							<path
-								d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
-						</svg>
-						<p>
-							<!-- localizacao do evento-->
-							R. Nelcy Lopes Vieira, 1000 - Jardim Limoeiro, Serra - ES, 29164-018
+					<!-- Div com as descricoes -->
+					<div id="desc">
+						<p id="t_desc" class="fs-3"><b>Descrição</b></p>
+						<p id="p_desc">
+							Aula ofertada pelo Zico para crianças de até 12 anos. O evento terá duração de 2 horas.
+							Participação somente com inscrição prévia.
 						</p>
-					</a>
-				</div>
+					</div> 
+					
 
-
-				<!-- Div com a data -->
-				<div id="data">
-					<svg class="iconezin iconedataev" xmlns="http://www.w3.org/2000/svg" height="1em"
-						viewBox="0 0 448 512">
-						<path
-							d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z" />
-					</svg>
-					<p id="dia">16/08/23 12:00 - 14:00</p>
-				</div>
-
-				<!-- Div com o custo do evento -->
-				<div id="preco">
-					<p id="sifrao"><b>R$: </b> 97,00</p>
-				</div>
-
-				<!-- Div com o publico-alvo do evento -->
-				<div id="alvo">
-					<p id="publi"><b>Público alvo:</b> Entre 5 e 10 anos</p>
-				</div>
-
-				<!-- Div com o intuito do evento -->
-				<div id="intuito">
-					<p id="sifrao"><b>Intuito do Evento:</b> Para toda Família</p>
-				</div>
-
-				<!-- Div com o numero de vagas restantes -->
-				<div class="vagas">
-					<div id="vagas_restam">
-						<p id="t_vagasrestam"><b>Vagas restantes:</b> 8</p>
+					<!-- Div de localizacao -->
+					<div id="localizacao"><a id="local" href="maps.php">
+						
+							<!-- Icone da localizacao -->
+							<svg class="iconezin iconelocev" xmlns="http://www.w3.org/2000/svg" height="1em"
+								viewBox="0 0 384 512">
+								<path
+									d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
+							</svg>
+							<p>
+								<!-- localizacao do evento-->
+								R. Nelcy Lopes Vieira, 1000 - Jardim Limoeiro, Serra - ES, 29164-018
+							</p>
+						</a>
 					</div>
 
-					<!-- Div com o numero de inscritos do evento -->
-					<div id="num_inscritos">
-						<p id="t_numinscritos"><b>Número de Inscritos:</b> 2</p>
+
+					<!-- Div com a data -->
+					<div id="data">
+						<svg class="iconezin iconedataev" xmlns="http://www.w3.org/2000/svg" height="1em"
+							viewBox="0 0 448 512">
+							<path
+								d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z" />
+						</svg>
+						<p id="dia">16/08/23 12:00 - 14:00</p>
 					</div>
-				</div>
 
-				<!-- Div com o organizador do evento -->
-				<div id="organizador">
-					<p id="t_organizador"><b>Evento organizado por:</b> Junio Oliveira</p>
-				</div>
+					<!-- Div com o custo do evento -->
+					<div id="preco">
+						<p id="sifrao"><b>R$: </b> 97,00</p>
+					</div>
 
-				<!-- Botao de inscrever-se -->
-				<button class="inscrever fixo" id="aulaZico">
-					<img src="../img/bola.png">
-					<span class="now">Agora!</span>
-					<span class="play">Inscreva-se</span>
-				</button>
+					<!-- Div com o publico-alvo do evento -->
+					<div id="alvo">
+						<p id="publi"><b>Público alvo:</b> Entre 5 e 10 anos</p>
+					</div>
+
+					<!-- Div com o intuito do evento -->
+					<div id="intuito">
+						<p id="sifrao"><b>Intuito do Evento:</b> Para toda Família</p>
+					</div>
+
+					<!-- Div com o numero de vagas restantes -->
+					<div class="vagas">
+						<div id="vagas_restam">
+							<p id="t_vagasrestam"><b>Vagas restantes:</b> 8</p>
+						</div>
+
+						<!-- Div com o numero de inscritos do evento -->
+						<div id="num_inscritos">
+							<p id="t_numinscritos"><b>Número de Inscritos:</b> 2</p>
+						</div>
+					</div>
+
+					<!-- Div com o organizador do evento -->
+					<div id="organizador">
+						<p id="t_organizador"><b>Evento organizado por:</b> Junio Oliveira</p>
+					</div>
+
+					<!-- Botao de inscrever-se -->
+					<button class="inscrever fixo" id="aulaZico">
+						<img src="../img/bola.png">
+						<span class="now">Agora!</span>
+						<span class="play">Inscreva-se</span>
+					</button>
+				</div>
 			</div>
 		</div>
 	</div>

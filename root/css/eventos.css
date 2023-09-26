@@ -16,6 +16,11 @@ p, h1{
   flex-direction: row;
 }
 
+#titulo{
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+}
+
 /* Adiconando tamanho da fonte */
 #container p {
   font-size: 1.5rem;
@@ -24,6 +29,21 @@ p, h1{
 /* Adicionando margin */
 #container {
   margin-top: 1.5em !important;
+}
+
+#fundoev{
+  border-radius: 10px;
+  padding-top: 1rem !important;
+  padding: 3rem;
+  padding-bottom: 1rem !important;
+  backdrop-filter: blur( 3.5px );
+  -webkit-backdrop-filter: blur( 3.5px );
+
+  background: var(--bgeve);
+  box-shadow: var(--shaeve);
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  color: var(--black);
+  
 }
 
 body{
@@ -44,11 +64,6 @@ body{
 .iconezin {
   height: 25px;
   margin-right: 0.4em;
-}
-
-/* Adicionando espacamento */
-#informacoes {
-  padding-left: 1em !important;
 }
 
 /* Adiconando flex-box, alinhamento e espacamento */
@@ -149,6 +164,10 @@ body{
 .inscrever:hover .now {
   transform: translateX(30px);
   transition-delay: 300ms;
+}
+
+.row{
+  margin: 0 !important;
 }
 
 /* Nao e copiavel */
