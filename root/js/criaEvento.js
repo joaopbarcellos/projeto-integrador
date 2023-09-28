@@ -1,7 +1,7 @@
 // Importando a funcao de autenticacao de campos
 import * as base from "./base.js";
 
-const form = document.getElementById("multi-step-form");
+const form = document.getElementById("multistepform");
 const steps = form.querySelectorAll(".step");
 const nextBtns = form.querySelectorAll(".next-btn");
 const prevBtns = form.querySelectorAll(".prev-btn");
@@ -39,9 +39,8 @@ function verificaseDatadoEventoeMaiordoqueaDataAtual(dataEvento) {
   var dataEvento = document.querySelector("#dataEvento").value;
   dataEvento = new Date(dataEvento);
   var dataAtual = new Date();
-
   if (dataEvento.getFullYear() > dataAtual.getFullYear()) return true;
-  if (dataEvento.getFullYear == dataAtual.getFullYear()) {
+  if (dataEvento.getFullYear() == dataAtual.getFullYear()) {
     if (dataEvento.getMonth() > dataAtual.getMonth()) return true;
     if (dataEvento.getMonth() == dataAtual.getMonth()) {
       if (dataEvento.getDate() + 1 >= dataAtual.getDate()) return true;
@@ -60,9 +59,10 @@ function verificaseDatadoEventoeNoMesmoDia(dataEvento) {
 // Campo horário início
 function validarHorarioInicio() {
   var dataEvento = document.querySelector("#dataEvento").value;
-  const horarioInicio = document.querySelector("#horarioInicio").value;
+  var horarioIni = document.querySelector("#horarioInicio");
+  var horarioInicio = horarioIni.value;
   const horaInicio = parseInt(horarioInicio.substring(0, 2), 10);
-  const minutoInicio = parseInt(horarioInicio.substring(2), 10);
+  const minutoInicio = parseInt(horarioInicio.substring(3), 10);
   if (!horarioInicio) {
     return "horário inicial";
   }
@@ -83,11 +83,11 @@ function validarHorarioInicio() {
 // Campo término estimado
 function validarTerminoEstimado() {
   const horarioInicio = document.querySelector("#horarioInicio").value;
-  0;
   const horaInicio = parseInt(horarioInicio.substring(0, 2), 10);
   const horarioFinal = document.querySelector("#horarioFim").value;
-  let horaFinal = parseInt(horarioFinal.substring(0, 2), 10);
-  let minutoFinal = parseInt(horarioFinal.substring(2), 10);
+  const horaFinal = parseInt(horarioFinal.substring(0, 2), 10);
+  const minutoFinal = parseInt(horarioFinal.substring(3), 10);
+  const minutoInicio = parseInt(horarioInicio.substring(3), 10);
 
   if (!horarioFinal) {
     return "término estimado";
@@ -184,59 +184,51 @@ const listaEstados = [
   "SE",
   "TO",
 ];
-function callbackDaPaginaQueEnviaremosOCepDoEventoCadastradoPeloClienteNaPaginaDeCriarEventoNovo(
-  conteudoRetornadoPelaPagina
-) {
-  if (!("erro" in conteudoRetornadoPelaPagina)) {
-    //Atualiza os campos com os valores
-    document.getElementById("logradouroEvento").value =
-      conteudoRetornadoPelaPagina.logradouro;
-    document.getElementById("bairroEvento").value =
-      conteudoRetornadoPelaPagina.bairro;
-    document.getElementById("cidadeEvento").value =
-      conteudoRetornadoPelaPagina.localidade;
-    for (let i = 0; i < listaEstados.length; i++) {
-      if (listaEstados[i] == conteudoRetornadoPelaPagina.uf) {
-        document.getElementById("estadoEvento").value = i;
-      }
-    }
-  } else {
-    //CEP não Encontrado.
-    Swal.fire({
-      title: "ERRO!",
-      icon: "error",
-      text: `O CEP não foi encontrado!`,
-    });
 
-    document.getElementById("logradouroEvento").value = "";
-    document.getElementById("bairroEvento").value = "";
-    document.getElementById("cidadeEvento").value = "";
+function consultaCep(cep){
+  var url = 'https://viacep.com.br/ws/' + cep +'/json/';
+  var request = new XMLHttpRequest();
+
+  request.open('GET', url);
+  request.onerror = function (e){
+    document.getElementById('return').innerHTML = 'API offline ou Cep Inválido'
   }
+
+  request.onload = () => {
+    var response = JSON.parse(request.responseText);
+
+    if(response.erro == true){
+      Swal.fire({
+              title: "ERRO!",
+              icon: "error",
+              text: `O CEP está em formato inválido!`,
+      });
+    }else{
+      document.getElementById("logradouroEvento").value = response.logradouro;
+      document.getElementById("bairroEvento").value = response.bairro;
+      document.getElementById("cidadeEvento").value = response.localidade;
+      for (let i = 0; i < listaEstados.length; i++) {
+        if (listaEstados[i] == response.uf) {
+          document.getElementById("estadoEvento").value = i;
+        }
+      }
+      
+    }
+
+  }
+  request.send();
+
 }
+
 
 // Script validar CEP
 function validarCEPnoSiteViaCep(cep) {
   //Cria um elemento javascript.
   var script = document.createElement("script");
   //Sincroniza com o callback.
-  script.src = `https://viacep.com.br/ws/${cep}/json/?callback=callbackDaPaginaQueEnviaremosOCepDoEventoCadastradoPeloClienteNaPaginaDeCriarEventoNovo`;
+  script.src = `https://viacep.com.br/ws/${cep}/json/?callback=callbackCEP`;
   //Insere script no documento e carrega o conteúdo.
   document.body.appendChild(script);
-}
-
-function verificaFormatacaoCep() {
-  var cep = campoCep.value;
-
-  // Verifica se existe um valor no CEP
-  if (cep) {
-    validarCEPnoSiteViaCep(cep);
-  } else {
-    Swal.fire({
-      title: "ERRO!",
-      icon: "error",
-      text: `O CEP está em formato inválido!`,
-    });
-  }
 }
 
 function formatCEP(input) {
@@ -251,7 +243,7 @@ function formatCEP(input) {
     cep = cep.slice(0, 5) + "-" + cep.slice(5);
   }
   if (cep.length == 9) {
-    verificaFormatacaoCep();
+    consultaCep(cep);
   }
   input.value = cep;
 }
@@ -337,6 +329,7 @@ function verificaStep3() {
   });
 
   if (!strErros.length > 0) {
+    alert("Seu evento foi criado!")
     currentStep++;
     document.querySelector("form").submit();
   } else {
@@ -392,17 +385,4 @@ showStep(currentStep);
 
 document.querySelector("#btnFINALIZAR").addEventListener("click", () => {
   verificaStep3();
-});
-
-// Datalist
-var input_ele = document.getElementById("new-opt");
-var add_btn = document.getElementById("add-btn");
-var sel_opts = document.getElementById("sel-opts");
-var input_val;
-add_btn.addEventListener("click", function () {
-  input_val = input_ele.value;
-  if (input_val.trim() != "") {
-    sel_opts.innerHTML += "<option>" + input_val + "</option>";
-    input_ele.value = "";
-  }
 });

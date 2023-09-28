@@ -30,8 +30,17 @@
 
 <body>
   <?php
-  if (isset($_GET["msg"])) {
-    echo "<script>alert(" . $_GET['msg'] . ");</script>";
+  $emailUsuario = "";
+  $senhaUsuario = "";
+
+  if (isset($_GET['salvou'])) {
+    $script = $_GET['salvou'];
+    echo "<script>alert('$script');</script>";
+    session_start();
+    if(isset($_SESSION["senha"]) && isset($_SESSION["email"])){
+      $emailUsuario = $_SESSION["email"];
+      $senhaUsuario = $_SESSION["senha"];
+    }
   }
 
   ?>
@@ -47,7 +56,7 @@
       <!-- Nome usuário -->
       <div class="campos email mb-5">
         <div class="form-floating">
-          <input type="text" class="form-control" id="floatingInputGroup1" placeholder="E-mail" name="emailCampo" />
+          <input type="text" class="form-control" id="floatingInputGroup1" placeholder="E-mail" name="emailCampo" value="<?php echo $emailUsuario?>"/>
           <label for="email_usuario" id="label_email">E-mail</label>
         </div>
 
@@ -60,7 +69,7 @@
       <div class="campos senha">
         <div class="form-floating">
           <img src="img/olho_aberto.png" id="olho" class="olho" />
-          <input type="password" class="form-control" id="floatingInputGroup2" placeholder="Senha" name="senhaCampo" />
+          <input type="password" class="form-control" id="floatingInputGroup2" placeholder="Senha" name="senhaCampo" value="<?php echo $senhaUsuario?>"/>
           <label for="senha_usuario" id="label_senha">Senha</label>
         </div>
 

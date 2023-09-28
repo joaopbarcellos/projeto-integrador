@@ -39,7 +39,7 @@ session_start();
 	<body>
 		<div class="container p-1">
 			<div class="form-container p-1 pt-3 p-sm-5  col-12 col-sm-10 col-md-8 col-lg-7 col-xl-6 col-xxl-4">
-				<form id="multi-step-form">
+				<form id="multistepform" name="multistepform" action="index.php" method="post">
 
 					<!-- Etapa 1 -->
 					<div class="step">
@@ -87,19 +87,19 @@ session_start();
 							<div class="loc mb-3 m-auto mt-3">
 								<!-- Cep do Evento -->
 								<div class="form-floating col-4">
-									<input type="text" class="form-control" id="cepEvento" placeholder="CEP">
+									<input type="text" class="form-control" id="cepEvento" name="cepEvento" placeholder="CEP">
 									<label for="cepEvento">CEP</label>
 								</div>
 
 								<!-- Numero do evento -->
 								<div class="form-floating col-4">
-									<input type="text" class="form-control" id="cidadeEvento" placeholder="Cidade">
+									<input type="text" class="form-control" id="cidadeEvento" name="cidadeEvento" placeholder="Cidade">
 									<label for="cidadeEvento">Cidade</label>
 								</div>
 
 								<!-- Estado -->
 								<div class="form-floating col-3">
-									<select class="form-select" id="estadoEvento">
+									<select class="form-select" id="estadoEvento" name="estadoEvento">
 										<option value="1">AC</option>
 										<option value="2">AL</option>
 										<option value="3">AP</option>
@@ -134,12 +134,12 @@ session_start();
 							</div>
 
 							<div class="form-floating mb-3">
-								<input type="text" class="form-control" id="logradouroEvento" placeholder="Logradouro">
+								<input type="text" class="form-control" id="logradouroEvento" placeholder="Logradouro" name="logradouroEvento">
 								<label for="logradouroEvento">Logradouro</label>
 							</div>
 							<div class="alinha mb-3 m-auto">
 								<div class="form-floating col-6">
-									<input type="text" class="form-control" id="bairroEvento" placeholder="Bairro">
+									<input type="text" class="form-control" id="bairroEvento" placeholder="Bairro"  name="bairroEvento">
 									<label for="bairroEvento">Bairro</label>
 								</div>
 								<!-- Bairro -->
