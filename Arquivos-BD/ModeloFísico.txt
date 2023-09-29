@@ -1,4 +1,4 @@
-drop table if exists ESTADO, CIDADE, BAIRRO, TIPO_LOGRADOURO, INTUITO, ENDERECO, EVENTO, HORARIO_FIM, CLASSIFICACAO, EVENTO_CLASSIFICACAO, USUARIO, USUARIO_EVENTO, USUARIO_USUARIO;
+drop table if exists ESTADO, CIDADE, BAIRRO, TIPO_LOGRADOURO, INTUITO, ENDERECO, EVENTO, HORARIO_FIM, CLASSIFICACAO, EVENTO_CLASSIFICACAO, USUARIO, USUARIO_EVENTO, USUARIO_USUARIO, EVENTO_RECORRENTE, RECORRENTE;
 
 create table ESTADO(
  id serial primary key,
@@ -99,7 +99,7 @@ create table USUARIO_EVENTO(
  id serial primary key,
  data_inscricao date,
  FK_USUARIO_id serial,
- FK_EVENTO_id serial+,
+ FK_EVENTO_id serial,
  foreign key (FK_USUARIO_id) references USUARIO(id), 
  foreign key (FK_EVENTO_id) references EVENTO(id)
 );
@@ -119,7 +119,7 @@ create table RECORRENTE(
 create table EVENTO_RECORRENTE(
   id serial primary key,
   FK_EVENTO_id serial,
-  FK_RECORRENTE_id seria,
+  FK_RECORRENTE_id serial,
   foreign key (FK_EVENTO_id) references EVENTO(id),
   foreign key (FK_RECORRENTE_id) references RECORRENTE(id)
 );
