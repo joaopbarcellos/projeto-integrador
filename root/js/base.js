@@ -22,7 +22,7 @@ function send(tag) {
       icon: "error",
       text: "Email inválido!",
       confirmButtonColor: "#3085d6",
-      confirmButtonText: "Login",
+      confirmButtonText: "OK",
     });
   }
   // Definindo o valor do campo como vazio

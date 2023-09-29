@@ -112,9 +112,9 @@
 							<!-- Mensagens de erro -->
 							<span class="erro" id="noConfPass">Confirmar senha deve ser preenchida!</span>
 
-							<span class="erro" id="aotConfPass">Confirmar senha deve ter 6 a 30 caracteres!</span>
+							<span class="erro" id="aotConfPass">Confirme a senha corretamente!</span>
 
-							<span class="erro" id="passConfPass">Confirmar senha deve ser igual à senha nova!</span>
+							<span class="erro" id="passConfPass">Confirme a senha corretamente!</span>
 						</div>
 
 					</div> <!-- Fechando confirmacao de senha  -->

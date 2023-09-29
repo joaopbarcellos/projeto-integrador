@@ -130,7 +130,7 @@
           <!-- Mensagens de erro -->
           <label class="erro" id="noConfPass">Confirmar senha deve ser preenchida!</label>
 
-          <label class="erro" id="aotConfPass">Confirmar senha deve ter 6 a 30 caracteres!</label>
+          <label class="erro" id="aotConfPass">Confirme a senha corretamente!</label>
 
           <label class="erro" id="passConfPass">Confirme a senha corretamente!</label>
         </div>

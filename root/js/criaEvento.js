@@ -273,7 +273,7 @@ function verificaStep2() {
     document.querySelector("#complementoEvento").value,
     "complemento"
   );
-  let validaNumero = validarNumero(
+  let validaNumero = verificaSeTaEscritoNoFormulario(
     document.querySelector("#numeroEvento").value,
     "número"
   );
