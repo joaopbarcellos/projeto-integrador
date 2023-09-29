@@ -57,7 +57,7 @@ create table USUARIO(
 
 create table EVENTO(
  id serial primary key,
- descricao varchar(300),
+ descricao varchar(500),
  nome varchar(100),
  foto varchar(500),
  data date,
