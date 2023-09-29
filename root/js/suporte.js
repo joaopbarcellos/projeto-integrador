@@ -52,7 +52,7 @@ btn.addEventListener("click", suporte);
 // Funcao para preencher o campo de email se estiver logado
 function preencheCampoEmailSeEstiverLogado() {
   // Pegando o email logado do sessionStorage
-  let emailLogado = sessionStorage.getItem("logado");
+  let emailLogado = document.querySelector(".paragrafo").value;
   if (emailLogado) {
     // Se estiver logado
     campoEmail.value = emailLogado; // Coloca o email logado no campo de email

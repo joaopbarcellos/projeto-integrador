@@ -5,7 +5,7 @@ const form = document.getElementById("multistepform");
 const steps = form.querySelectorAll(".step");
 const nextBtns = form.querySelectorAll(".next-btn");
 const prevBtns = form.querySelectorAll(".prev-btn");
-let currentStep = 0;
+let currentStep = 2;
 
 // Pegando o email do usuario logado
 const email = document.querySelector(".paragrafo").value;
@@ -29,6 +29,7 @@ function validarNomeEvento() {
 // Campo data do evento
 function validarDataEvento() {
   var dataEvento = document.querySelector("#dataEvento").value;
+  // Verificando se a data do evento foi escrita ou é maior que a data atual
   if (!dataEvento || !verificaseDatadoEventoeMaiordoqueaDataAtual(dataEvento)) {
     return "data";
   }
@@ -39,6 +40,8 @@ function verificaseDatadoEventoeMaiordoqueaDataAtual(dataEvento) {
   var dataEvento = document.querySelector("#dataEvento").value;
   dataEvento = new Date(dataEvento);
   var dataAtual = new Date();
+
+  // Retornando true se a data do evento for maior do que a atual
   if (dataEvento.getFullYear() > dataAtual.getFullYear()) return true;
   if (dataEvento.getFullYear() == dataAtual.getFullYear()) {
     if (dataEvento.getMonth() > dataAtual.getMonth()) return true;
@@ -53,6 +56,7 @@ function verificaseDatadoEventoeNoMesmoDia(dataEvento) {
   var dataEvento = document.querySelector("#dataEvento").value;
   dataEvento = new Date(dataEvento);
   var dataAtual = new Date();
+  // Verifcando se a data do evento é no mesmo dia que o atual
   return dataEvento.getDate() + 1 == dataAtual.getDate();
 }
 
@@ -63,17 +67,22 @@ function validarHorarioInicio() {
   var horarioInicio = horarioIni.value;
   const horaInicio = parseInt(horarioInicio.substring(0, 2), 10);
   const minutoInicio = parseInt(horarioInicio.substring(3), 10);
+
+  // Verificando se o horário inicial foi escrito
   if (!horarioInicio) {
     return "horário inicial";
   }
   if (verificaseDatadoEventoeNoMesmoDia(dataEvento)) {
+    // Se a data do evento for a mesma que a atual
     let dataAtual = new Date();
+    // Verificando se o horário inicial é maior que o atual
     if (horaInicio > dataAtual.getHours()) return true;
     if (horaInicio == dataAtual.getHours()) {
       if (minutoInicio >= dataAtual.getMinutes() + 2) return true;
     }
     return "horário inicial";
   }
+  // Verificando se a data do evento é maior do que a atual
   if (verificaseDatadoEventoeMaiordoqueaDataAtual(dataEvento)) {
     return true;
   }
@@ -89,9 +98,12 @@ function validarTerminoEstimado() {
   const minutoFinal = parseInt(horarioFinal.substring(3), 10);
   const minutoInicio = parseInt(horarioInicio.substring(3), 10);
 
+  // Verificando se o horário final foi escrito
   if (!horarioFinal) {
     return "término estimado";
   }
+
+  // Verificando se o horário final é maior do que o inicial
   if (horaFinal > horaInicio) return true;
   if (horaFinal == horaInicio) {
     if (minutoFinal >= minutoInicio + 2) return true;
@@ -99,32 +111,24 @@ function validarTerminoEstimado() {
   return "término estimado";
 }
 
-function validarNumero(valorCampo, mensagemErro) {
-  if (!valorCampo || isNaN(valorCampo)) {
-    return mensagemErro;
-  }
-  return true;
-}
-
 // Step 1
 function verificaStep1() {
+  // Verificando todos os campos do PASSO 1
   let validarNomeEvento1 = validarNomeEvento();
   let validarDataEvento1 = validarDataEvento();
   let validarHorarioInicio1 = validarHorarioInicio();
   let validarTerminoEstimado1 = validarTerminoEstimado();
-  let validarPrecoEvento1 = validarNumero(
-    document.querySelector("#preco").value,
-    "preço"
-  );
+  let validarDesc = verificaSeTaEscritoNoFormulario(document.querySelector("#desc").value, "descrição");
 
   let listaVerifica = [
     validarNomeEvento1,
     validarDataEvento1,
     validarHorarioInicio1,
     validarTerminoEstimado1,
-    validarPrecoEvento1,
+    validarDesc
   ];
   let strErros = "";
+  // Verificando se todos os campos estao validos, se nao, escritos em uma string
   listaVerifica.forEach((elemento) => {
     if (elemento !== true) {
       if (elemento == listaVerifica[listaVerifica.length - 1]) {
@@ -135,6 +139,7 @@ function verificaStep1() {
     }
   });
 
+  // Se a string nao apresentar erros
   if (!strErros.length > 0) {
     currentStep++;
     showStep(currentStep);
@@ -142,7 +147,8 @@ function verificaStep1() {
     Swal.fire({
       title: "ERRO!",
       icon: "error",
-      text: `Os campos ${strErros} estão inválidos!`,
+      // Mostrando um alert com os campos errados
+      text: `O(s) campo(s) ${strErros} está(ão) inválido(s)!`,
     });
   }
 }
@@ -153,7 +159,7 @@ campoCep.addEventListener("input", (e) => {
   formatCEP(campoCep);
 });
 
-// Calllback CEP
+// Lista com todos os estados
 const listaEstados = [
   0,
   "AC",
@@ -186,24 +192,35 @@ const listaEstados = [
 ];
 
 function consultaCep(cep){
+  // URL do site da API
   var url = 'https://viacep.com.br/ws/' + cep +'/json/';
+  
+  // Request HMLHttp para acessar a API
   var request = new XMLHttpRequest();
-
+  
+  // Tentando acessar a API
   request.open('GET', url);
+
+  // Caso aconteca erro, informar que a API ou CEP deram erro
   request.onerror = function (e){
     document.getElementById('return').innerHTML = 'API offline ou Cep Inválido'
   }
 
+  // Caso carregue o request na API
   request.onload = () => {
+    // Resposta da request
     var response = JSON.parse(request.responseText);
 
+    // Se a resposta contém um erro
     if(response.erro == true){
+      // Alert de erro 
       Swal.fire({
               title: "ERRO!",
               icon: "error",
               text: `O CEP está em formato inválido!`,
       });
-    }else{
+    }else{ // Se deu certo
+      // Adiciona as informacoes nos campos
       document.getElementById("logradouroEvento").value = response.logradouro;
       document.getElementById("bairroEvento").value = response.bairro;
       document.getElementById("cidadeEvento").value = response.localidade;
@@ -212,12 +229,10 @@ function consultaCep(cep){
           document.getElementById("estadoEvento").value = i;
         }
       }
-      
     }
-
   }
+  // Envia a request pra API
   request.send();
-
 }
 
 
@@ -249,7 +264,16 @@ function formatCEP(input) {
 }
 
 function verificaSeTaEscritoNoFormulario(valorCampo, mensagemErro) {
+  // Verificando se o valor foi escrito ou se o valor e um numero
   if (!valorCampo | !isNaN(valorCampo)) {
+    return mensagemErro;
+  }
+  return true;
+}
+
+function verificaComplemento(valorCampo, mensagemErro){
+  // Verificando se o valor foi escrito e se o valor e um numero
+  if (valorCampo && !isNaN(valorCampo)) {
     return mensagemErro;
   }
   return true;
@@ -257,6 +281,7 @@ function verificaSeTaEscritoNoFormulario(valorCampo, mensagemErro) {
 
 // Step 2
 function verificaStep2() {
+  // Verificando todos os campos do PASSO 2
   let validaCidade = verificaSeTaEscritoNoFormulario(
     document.querySelector("#cidadeEvento").value,
     "cidade"
@@ -269,11 +294,11 @@ function verificaStep2() {
     document.querySelector("#bairroEvento").value,
     "bairro"
   );
-  let validaComplemento = verificaSeTaEscritoNoFormulario(
+  let validaComplemento = verificaComplemento(
     document.querySelector("#complementoEvento").value,
     "complemento"
   );
-  let validaNumero = verificaSeTaEscritoNoFormulario(
+  let validaNumero = base.validarNumeroEndereco(
     document.querySelector("#numeroEvento").value,
     "número"
   );
@@ -286,7 +311,7 @@ function verificaStep2() {
     validaNumero,
   ];
   let strErros = "";
-
+  // Verificando se todos os campos estao validos, se nao, escritos em uma string
   listaVerifica.forEach((elemento) => {
     if (elemento !== true) {
       if (elemento == listaVerifica[listaVerifica.length - 1]) {
@@ -297,6 +322,7 @@ function verificaStep2() {
     }
   });
 
+  // Se a string nao apresentar erros
   if (!strErros.length > 0) {
     currentStep++;
     showStep(currentStep);
@@ -304,30 +330,44 @@ function verificaStep2() {
     Swal.fire({
       title: "ERRO!",
       icon: "error",
-      text: `Os campos ${strErros} estão inválidos!`,
+      // Mostrando um alert com todos os erros
+      text: `O(s) campo(s) ${strErros} está(ão) inválido(s)!`,
     });
   }
 }
 
 function verificaStep3() {
-  let validaQtdMin = validarNumero(
+  // Verificando todos os campos do PASSO 3
+  let validaQtdMin = base.validarNumero(
     document.querySelector("#capMinima").value,
     "quantidade mínima"
   );
-  let validaQtdMax = validarNumero(
+  let validaQtdMax = base.validarNumero(
     document.querySelector("#capMaxima").value,
     "quantidade máxima"
   );
+  let validarPrecoEvento1 = base.validarNumero(
+    document.querySelector("#preco").value,
+    "preço"
+  );
 
-  let listaVerifica = [validaQtdMin, validaQtdMax];
+  let listaVerifica = [validaQtdMin, validaQtdMax, validarPrecoEvento1];
   let strErros = "";
 
+  // Verificando se todos os campos estao validos, se nao, escritos em uma string
   listaVerifica.forEach((elemento) => {
     if (elemento !== true) {
-      strErros += `${elemento}, `;
+      if (elemento == listaVerifica[listaVerifica.length - 1]) {
+        strErros += `${elemento}`;
+      }else{
+        strErros += `${elemento}, `;
+      }
     }
   });
-
+  if(document.querySelector("#capMinima").value >= document.querySelector("#capMaxima").value){
+    strErros = "quantidade mínima e quantidade máxima";
+  }
+  if (validarPrecoEvento1 != true) strErros += ", " + validarPrecoEvento1;
   if (!strErros.length > 0) {
     alert("Seu evento foi criado!")
     currentStep++;
@@ -336,7 +376,7 @@ function verificaStep3() {
     Swal.fire({
       title: "ERRO!",
       icon: "error",
-      text: `Os campos ${strErros} estão inválidos!`,
+      text: `O(s) campo(s) ${strErros} está(ão) inválido(s)!`,
     });
   }
 }
@@ -386,3 +426,5 @@ showStep(currentStep);
 document.querySelector("#btnFINALIZAR").addEventListener("click", () => {
   verificaStep3();
 });
+
+// Repeticao de dias

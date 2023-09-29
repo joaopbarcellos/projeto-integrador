@@ -44,11 +44,16 @@ session_start();
 					<!-- Etapa 1 -->
 					<div class="step">
 						<div class="infos">
-							<h1>Informações básicas</h1>
+							<h1>Informações</h1>
 
 							<div class="form-floating mb-3 mt-3">
 								<input type="text" class="form-control" id="nomeEvento" placeholder="Nome do evento">
 								<label for="nomeEvento">Nome do Evento</label>
+							</div>
+
+							<div class="mb-3">
+								<label id="labelimg">Foto do Evento:</label>
+								<input class="form-control" type="file" placeholder="Foto do Evento" id="imgevento" accept="image/*">
 							</div>
 
 							<div class="form-floating mb-3">
@@ -67,12 +72,10 @@ session_start();
 								</div>
 							</div>
 
-							<!-- Preço -->
-							<div class="form-floating col-6">
-								<input type="text" class="form-control" id="preco" placeholder="R$">
-								<label class="form-label" for="preco">Preço do Ingresso</label>
+							<div class="form-floating mb-3">
+								<textarea class="form-control" id="desc" maxlength="500"></textarea>
+								<label for="desc">Descrição</label>
 							</div>
-
 						</div>
 
 						<button class="next-btn"><span>Próximo</span></button>
@@ -139,7 +142,7 @@ session_start();
 							</div>
 							<div class="alinha mb-3 m-auto">
 								<div class="form-floating col-6">
-									<input type="text" class="form-control" id="bairroEvento" placeholder="Bairro"  name="bairroEvento">
+									<input type="text" class="form-control" id="bairroEvento" placeholder="Bairro" name="bairroEvento">
 									<label for="bairroEvento">Bairro</label>
 								</div>
 								<!-- Bairro -->
@@ -218,7 +221,16 @@ session_start();
 							</div>
 
 							<div class="alinha mb-3">
-								<div class="form-floating espaco">
+								<!-- Evento recorrente -->
+								<div class="form-floating col-7  col-lg-6 col-xg-4 espaco">
+									<select class="form-select" id="eveRecorrente">
+										<option value="1">Não</option>
+										<option value="2">Sim</option>
+									</select>
+									<label for="eveRecorrente">O Evento é Recorrente?</label>
+								</div>
+
+								<div class="form-floating">
 									<select class="form-select" id="esporte">
 										<option value="1">Atletismo</option>
 										<option value="2">Automobilismo</option>
@@ -253,18 +265,9 @@ session_start();
 									</select>
 									<label for="esporte">Esporte</label>
 								</div>
-
-								<!-- Evento recorrente -->
-								<div class="form-floating col-7 col-sm-6 col-lg-5 col-xg-4">
-									<select class="form-select" id="eveRecorrente">
-										<option value="1">Não</option>
-										<option value="2">Sim</option>
-									</select>
-									<label for="eveRecorrente">O Evento é Recorrente?</label>
-								</div>
 							</div>
-							<div class="form-floating col-12">
-								<p id="legendinha">Caso o evento seja recorrente, assinale os dias em que ele se repete</p>
+							<div class="form-floating col-12 mb-3" id="eventorepete">
+								<p id="legendinha">Quais dias ele se repete?</p>
 								<div class="btn-group" role="group" id="semana" aria-label="Basic checkbox toggle button group">
 
 									<input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
@@ -290,13 +293,18 @@ session_start();
 
 								</div>
 							</div>
+
+							<div class="form-floating col-7 mb-3">
+								<input type="text" class="form-control" id="preco" placeholder="R$">
+								<label class="form-label" for="preco">Preço do Ingresso (R$)</label>
+							</div>
+
 						</div>
 
 						<div class="botoes">
 							<button class="prev-btn">
 								<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" class="iconevoltarevents">
 									<path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
-									</path>
 								</svg>
 								<span>Anterior</span>
 							</button>

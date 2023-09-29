@@ -78,7 +78,7 @@ function autenticar() {
 // Funcao para verificar se o login esta salvo no localStorage
 function verificaLogin(email, senha) {
   // Pegando as informacoes do localStorage onde o email deveria estar cadastrado
-  const dadosSalvos = localStorage.getItem(email);
+  const dadosSalvos = localStorage.getItem(email.toLowerCase());
   // Transformando para objeto
   const dados = JSON.parse(dadosSalvos);
   // Verificando se o email esta cadastrado

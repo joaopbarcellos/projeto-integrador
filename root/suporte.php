@@ -25,11 +25,11 @@
 
 </head>
 
-<?php
-session_start();
-?>
-
 <body>
+	<?php
+	session_start();
+	?>
+
 	<!-- Header com a navbar -->
 	<header>
 		<?php include('header.php') ?>
@@ -80,7 +80,7 @@ session_start();
 			<div class="mensagem campos mb-3">
 
 				<div class="form-floating">
-					<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea1" maxlength="500"></textarea>
+					<textarea class="form-control" id="floatingTextarea1" maxlength="500"></textarea>
 					<label for="floatingTextarea2">Mensagem</label>
 				</div>
 

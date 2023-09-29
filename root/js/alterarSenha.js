@@ -52,7 +52,7 @@ function autenticar() {
 
         // Pegando os dados salvos
         let dados = JSON.parse(
-          localStorage.getItem(sessionStorage.getItem("logado"))
+          localStorage.getItem(document.querySelector(".paragrafo").value)
         );
 
         dados.senha = senhaNova;

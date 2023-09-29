@@ -29,6 +29,20 @@ function send(tag) {
   tag.value = "";
 }
 
+export function validarNumeroEndereco(valorCampo, mensagemErro) {
+  if (!valorCampo) {
+    return mensagemErro;
+  }
+  return true;
+}
+
+export function validarNumero(valorCampo, mensagemErro) {
+  if (!valorCampo || isNaN(valorCampo)) {
+    return mensagemErro;
+  }
+  return true;
+}
+
 const enviaEmail = document.querySelector("#enviarEmail");
 const caixa_email = document.querySelector("#email");
 if (enviaEmail) {

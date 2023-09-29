@@ -60,14 +60,13 @@ function excluirPerfil() {
   }).then((result) => {
     if (result.isConfirmed) {
       // Se ele confirmou
-      let email = sessionStorage.getItem("logado");
+      let email = usuarioLogado;
       // Apagando o item do localStorage e do sessionStorage
       localStorage.removeItem(email);
-      sessionStorage.removeItem("logado");
       // Informando ao usuario que sua conta foi deletada
       Swal.fire("Deletada!", "Sua conta foi deletada.", "success").then(() => {
         // Enviando para a tela de login
-        window.location.assign("login.php");
+        window.location.assign("sairConta.php");
       });
     } else if (result.dismiss === Swal.DismissReason.cancel) {
       // Informando ao usuario que sua conta nao foi deletada

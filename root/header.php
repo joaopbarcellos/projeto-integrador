@@ -165,7 +165,7 @@
 					?>
 						<script>
 							var paragrafo = document.querySelector("#nome_usuario");
-							var email = paragrafo.textContent;
+							var email = paragrafo.textContent.toLowerCase();
 							var nome = JSON.parse(localStorage.getItem(email))["nome"];
 							paragrafo.innerHTML = nome;
 						</script>
@@ -177,8 +177,9 @@
 							var paragrafo = document.createElement("h1");
 							paragrafo.className = "paragrafo";
 							paragrafo.style.display = "none";
-							paragrafo.value = "<?php if (isset($_SESSION["logado"])) echo $_SESSION["logado"];
-												else echo '' ?>";
+							var emailSemVerificar = "<?php if (isset($_SESSION["logado"])) echo $_SESSION["logado"];
+														else echo '' ?>";
+							paragrafo.value = emailSemVerificar.toLowerCase();
 							document.body.appendChild(paragrafo);
 						}
 						pegar_session();

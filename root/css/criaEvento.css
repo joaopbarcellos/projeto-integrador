@@ -49,8 +49,13 @@ input {
   width: 100%;
 }
 
+#eventorepete {
+  display: none;
+  transition: 0.3s;
+}
+
 .infos {
-  height: 400px;
+  min-height: 400px;
 }
 
 .step,
@@ -63,8 +68,17 @@ form {
   text-align: center;
 }
 
+#desc {
+  min-height: 58px;
+  max-height: 250px;
+}
+
 #preco {
   max-width: 270px !important;
+}
+
+#labelimg {
+  color: white;
 }
 
 input[type="time"] {
