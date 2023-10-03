@@ -72,7 +72,7 @@ button:focus {
   position: absolute;
   top: 30px;
   left: 15px;
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-shadow: black 0.1em 0.1em 0.2em;
 }

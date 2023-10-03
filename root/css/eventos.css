@@ -6,12 +6,20 @@
   padding: 0;
 }
 
+.row>*{
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
 /* Adicionado cor */
 p,
 h1 {
   color: white !important;
 }
 
+.cssbuttons-io-button{
+  position: absolute !important;
+}
 
 /* Adicionando tamanho e cor */
 .iconelocev,
@@ -140,7 +148,7 @@ h1 {
 
 /* Aumenta tamanho da imagem quando passar o mouse por cima */
 .inscrever:hover img {
-  transform: scale(3) translate(140%);
+  transform: scale(3) translate(120%);
 }
 
 /* Adicionando transicao e posicao */

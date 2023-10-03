@@ -56,8 +56,8 @@ session_start();
 	</div>
 
 	<!-- Div com o conteudo ta pagina geral -->
-	<div id="container" class="container col-12 m-auto">
-		<div id="fundoev" class="col-12 col-lg-10 m-auto">
+	<div id="container" class="container col-12 mt-4 m-auto">
+		<div id="fundoev" class="col-11 col-md-8  col m-auto">
 			<!-- Adicionando titulo -->
 			<h1 id="titulo" class="text-center">Aula do Zico</h1>
 			<div id="evento" class="row">
@@ -103,17 +103,17 @@ session_start();
 
 					<!-- Div com o custo do evento -->
 					<div id="preco">
-						<p id="sifrao"><b>R$: </b> 97,00</p>
+						<p id="sifrao"><b>Custo: </b> 97,00 R$</p>
 					</div>
 
 					<!-- Div com o publico-alvo do evento -->
 					<div id="alvo">
-						<p id="publi"><b>Público alvo:</b> Entre 5 e 10 anos</p>
+						<p id="publi"><b>Faixa Etária:</b> Entre 5 e 10 anos</p>
 					</div>
 
 					<!-- Div com o intuito do evento -->
 					<div id="intuito">
-						<p id="sifrao"><b>Intuito do Evento:</b> Para toda Família</p>
+						<p id="sifrao"><b>Público alvo:</b> Para toda Família</p>
 					</div>
 
 					<!-- Div com o numero de vagas restantes -->
@@ -135,7 +135,7 @@ session_start();
 
 					<!-- Botao de inscrever-se -->
 					<button class="inscrever fixo" id="aulaZico">
-						<img src="../img/bola.png">
+						<img src="../logos/icon2.png">
 						<span class="now">Agora!</span>
 						<span class="play">Inscreva-se</span>
 					</button>

@@ -54,8 +54,8 @@ session_start();
 		</button>
 	</div>
 	<!-- Div com as informações do evento -->
-	<div id="container" class="container col-12 m-auto">
-		<div id="fundoev" class="col-12 col-lg-10 m-auto">
+	<div id="container" class="container col-12 mt-4 m-auto">
+		<div id="fundoev" class="col-11 col-md-8  col m-auto">
 			<h1 id="titulo" class="text-center">Basquete - Praça do Cauê</h1>
 			<div id="evento" class="row">
 				<div id="tabela">
@@ -89,15 +89,15 @@ session_start();
 					</div>
 
 					<div id="preco">
-						<p id="sifrao"><b>R$: </b> Gratuito</p><!-- Custo do evento -->
+						<p id="sifrao"><b>Custo: </b> Gratuito</p><!-- Custo do evento -->
 					</div>
 
 					<div id="alvo">
-						<p id="publi"><b>Público alvo: </b> Acima de 16 anos</p><!-- publico alvo do evento -->
+						<p id="publi"><b>Faixa Etária: </b> Acima de 16 anos</p><!-- publico alvo do evento -->
 					</div>
 
 					<div id="intuito">
-						<p id="sifrao"><b>Intuito do Evento: </b> Treino para amadores</p><!-- intuito do evento -->
+						<p id="sifrao"><b>Público alvo: </b> Treino para amadores</p><!-- intuito do evento -->
 					</div>
 
 					<div class="vagas">
@@ -114,7 +114,7 @@ session_start();
 						<p id="t_organizador"><b>Evento organizado por: </b> Gabrielle Castro Lima</p><!-- Criador do evento -->
 					</div>
 					<button class="inscrever fixo" id="basqueteCaue"> <!-- botao de inscrever-se no evento -->
-						<img src="../img/bola.png">
+						<img src="../logos/icon2.png">
 						<span class="now">Agora!</span>
 						<span class="play">Inscreva-se</span>
 					</button>

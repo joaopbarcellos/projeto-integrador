@@ -132,7 +132,7 @@ session_start();
 						<div class="jogabilidade">
 
 							<!-- Grau de conhecimento -->
-							<label for="jogabilidade" class="label_joga">Jogador:</label>
+							<label for="jogabilidade" class="label_joga">Frequência de Prática esportiva:</label>
 
 							<div class="radios">
 
@@ -142,7 +142,7 @@ session_start();
 									<!-- Input e label -->
 									<input type="radio" id="Profissional" name="jogabilidade" class="bolaRadio">
 
-									<label class="jogabilidades" for="Profissional"> Profissional </label>
+									<label class="jogabilidades" for="Profissional">5 ou mais vezes por semana</label>
 
 								</div>
 
@@ -152,7 +152,7 @@ session_start();
 									<!-- Input e label -->
 									<input type="radio" id="Amador" name="jogabilidade" class="bolaRadio">
 
-									<label class="jogabilidades" for="Amador"> Amador </label>
+									<label class="jogabilidades" for="Amador">De 2 a 4 vezes por semana</label>
 
 								</div>
 
@@ -162,13 +162,12 @@ session_start();
 									<!-- Input e label -->
 									<input type="radio" id="Iniciante" name="jogabilidade" class="bolaRadio">
 
-									<label class="jogabilidades" for="Iniciante"> Iniciante </label>
+									<label class="jogabilidades" for="Iniciante">No máximo 1 vez por semana</label>
 
 								</div>
 
 								<!-- Mensagem de erro -->
-								<label class="erro fs-6 fs-10 fs-7 fs-6 fs-5" id="noJogabilidade">Nível de experiência
-									deve ser escolhido!</label>
+								<label class="erro fs-6 fs-10 fs-7 fs-6 fs-5" id="noJogabilidade">Frequência deve ser preenchida!</label>
 
 								<!-- Fim da div radios -->
 							</div>

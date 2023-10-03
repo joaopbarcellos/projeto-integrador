@@ -133,16 +133,16 @@ if (isset($_POST['emailCampo'])) {
 						</p>
 						<!-- Div com o intuito-->
 						<div class="intuito d-none d-lg-block">
-							<p><b>Intuito:</b> Para toda Família</p>
+							<p><b>Público alvo:</b> Para toda Família</p>
 						</div>
 
 						<!-- Div com o público-->
 						<div class="publico d-none d-lg-block">
-							<p><b>Público-alvo:</b> Entre 5 e 10 anos</p>
+							<p><b>Faixa Etária:</b> Entre 5 e 10 anos</p>
 						</div>
 						<!-- Div com botão para inscrever-se e parágrafo dizendo o valor do evento-->
 						<div class="btn_des">
-							<p><b>R$:</b> 97,00</p>
+							<p><b>Custo:</b> 97,00 R$</p>
 						</div>
 
 						<!-- Button para o usuário se inscrever -->
@@ -189,17 +189,17 @@ if (isset($_POST['emailCampo'])) {
 
 						<!-- Div com o intuito-->
 						<div class="intuito d-none d-lg-block">
-							<p><b>Intuito:</b> Treino para Amadores</p>
+							<p><b>Público alvo:</b> Treino para Amadores</p>
 						</div>
 
 						<!-- Div com o público-->
 						<div class="publico d-none d-lg-block">
-							<p><b>Público-alvo:</b> Entre 18 e 35 anos</p>
+							<p><b>Faixa Etária:</b> Entre 18 e 35 anos</p>
 						</div>
 
 						<!-- Div com botão para inscrever-se e parágrafo dizendo o valor do evento-->
 						<div class="btn_des">
-							<p><b>R$:</b> Gratuito</p>
+							<p><b>Custo:</b> Gratuito</p>
 						</div>
 
 						<button class="sabermais sb-list "><span>Saber Mais</span></button>
@@ -246,17 +246,17 @@ if (isset($_POST['emailCampo'])) {
 
 						<!-- Div com o intuito-->
 						<div class="intuito d-none d-lg-block">
-							<p><b>Intuito:</b> Para toda Família</p>
+							<p><b>Público alvo:</b> Para toda Família</p>
 						</div>
 
 						<!-- Div com o público-->
 						<div class="publico d-none d-lg-block">
-							<p><b>Público-alvo:</b> Acima de 2 anos</p>
+							<p><b>Faixa Etária:</b> Acima de 2 anos</p>
 						</div>
 
 						<!-- Div com botão para inscrever-se e parágrafo dizendo o valor do evento-->
 						<div class="btn_des">
-							<p><b>R$:</b> Gratuito</p>
+							<p><b>Custo:</b> Gratuito</p>
 						</div>
 
 						<button class="sabermais  sb-list"><span>Saber Mais</span></button>
@@ -303,17 +303,17 @@ if (isset($_POST['emailCampo'])) {
 
 						<!-- Div com o intuito-->
 						<div class="intuito d-none d-lg-block">
-							<p><b>Intuito:</b> Para toda Família</p>
+							<p><b>Público alvo:</b> Para toda Família</p>
 						</div>
 
 						<!-- Div com o público-->
 						<div class="publico d-none d-lg-block">
-							<p><b>Público-alvo:</b> Acima de 12 anos</p>
+							<p><b>Faixa Etária:</b> Acima de 12 anos</p>
 						</div>
 
 						<!-- Div com botão para inscrever-se e parágrafo dizendo o valor do evento-->
 						<div class="btn_des">
-							<p><b>R$:</b> 10,00</p>
+							<p><b>Custo:</b> 10,00 R$</p>
 						</div>
 
 						<button class="sabermais  sb-list"><span>Saber Mais</span></button>
@@ -357,17 +357,17 @@ if (isset($_POST['emailCampo'])) {
 
 						<!-- Div com o intuito-->
 						<div class="intuito d-none d-lg-block">
-							<p><b>Intuito:</b> Para profissionais</p>
+							<p><b>Público alvo:</b> Para profissionais</p>
 						</div>
 
 						<!-- Div com o público-->
 						<div class="publico d-none d-lg-block">
-							<p><b>Público-alvo:</b> Acima de 6 anos</p>
+							<p><b>Faixa Etária:</b> Acima de 6 anos</p>
 						</div>
 
 						<!-- Div com botão para inscrever-se e parágrafo dizendo o valor do evento-->
 						<div class="btn_des">
-							<p><b>R$:</b> Gratuito</p>
+							<p><b>Custo:</b> Gratuito</p>
 						</div>
 
 						<button class="sabermais  sb-list"><span>Saber Mais</span></button>
@@ -409,17 +409,17 @@ if (isset($_POST['emailCampo'])) {
 
 						<!-- Div com o intuito-->
 						<div class="intuito d-none d-lg-block">
-							<p><b>Intuito:</b> Para profissionais</p>
+							<p><b>Público alvo:</b> Para profissionais</p>
 						</div>
 
 						<!-- Div com o público-->
 						<div class="publico d-none d-lg-block">
-							<p><b>Público-alvo:</b> Acima de 18 anos</p>
+							<p><b>Faixa Etária:</b> Acima de 18 anos</p>
 						</div>
 
 						<div class="btn_des">
 							<!-- Div com botão para inscrever-se e parágrafo dizendo o valor do evento-->
-							<p><b>R$:</b> 130,00</p>
+							<p><b>Custo:</b> 130,00 R$</p>
 						</div>
 
 						<button class="sabermais  sb-list"><span>Saber Mais</span></button>
@@ -463,17 +463,17 @@ if (isset($_POST['emailCampo'])) {
 
 						<!-- Div com o intuito-->
 						<div class="intuito d-none d-lg-block">
-							<p><b>Intuito:</b> Treino para amadores</p>
+							<p><b>Público alvo:</b> Treino para amadores</p>
 						</div>
 
 						<!-- Div com o público-->
 						<div class="publico d-none d-lg-block">
-							<p><b>Público-alvo:</b> Acima de 12 anos</p>
+							<p><b>Faixa Etária:</b> Acima de 12 anos</p>
 						</div>
 
 						<div class="btn_des">
 							<!-- Div com botão para inscrever-se e parágrafo dizendo o valor do evento-->
-							<p><b>R$:</b> Gratuito</p>
+							<p><b>Custo:</b> Gratuito</p>
 						</div>
 
 						<button class="sabermais  sb-list"><span>Saber Mais</span></button>
@@ -515,17 +515,17 @@ if (isset($_POST['emailCampo'])) {
 
 						<!-- Div com o intuito-->
 						<div class="intuito d-none d-lg-block">
-							<p><b>Intuito:</b> Treino para amadores</p>
+							<p><b>Público alvo:</b> Treino para amadores</p>
 						</div>
 
 						<!-- Div com o público-->
 						<div class="publico d-none d-lg-block">
-							<p><b>Público-alvo:</b> Acima de 16 anos</p>
+							<p><b>Faixa Etária:</b> Acima de 16 anos</p>
 						</div>
 
 						<div class="btn_des">
 							<!-- Div com botão para inscrever-se e parágrafo dizendo o valor do evento-->
-							<p><b>R$:</b> Gratuito</p>
+							<p><b>Custo:</b> Gratuito</p>
 						</div>
 
 						<button class="sabermais  sb-list"><span>Saber Mais</span></button>
@@ -566,19 +566,19 @@ if (isset($_POST['emailCampo'])) {
 						</p>
 						<!-- Div com o intuito-->
 						<div class="intuito d-none d-lg-block">
-							<p><b>Intuito:</b> Para profissionais</p>
+							<p><b>Público alvo:</b> Para profissionais</p>
 						</div>
 
 						<!-- Div com o público-->
 						<div class="publico d-none d-lg-block">
-							<p><b>Público-alvo:</b> Acima de 18 anos</p>
+							<p><b>Faixa Etária:</b> Acima de 18 anos</p>
 						</div>
 
 
 
 						<!-- Div com botão para inscrever-se e parágrafo dizendo o valor do evento-->
 						<div class="btn_des">
-							<p><b>R$:</b> 15,90</p>
+							<p><b>Custo:</b> 15,90 R$</p>
 						</div>
 
 						<button class="sabermais sb-list"><span>Saber Mais</span></button>

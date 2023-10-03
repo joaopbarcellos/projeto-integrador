@@ -51,8 +51,7 @@ session_start();
 			<!--- Div com resposta -->
 			<div class="resp" id="conteudo1">
 
-				1. Na tela de home, localize e clique no botão "+" posicionado no canto
-				inferior direito da tela.<br>
+				1. Na Topo da tela, localize e clique no botão "+ Criar Evento".<br>
 
 				<br>
 				2. Na página do formulário, preencha todas informações do seu evento,
@@ -64,7 +63,7 @@ session_start();
 
 				<br>
 				4. Quando estiver satisfeito com as informações inseridas, clique no botão
-				"Cadastrar evento" para enviar o formulário.<br>
+				"Finalizar" para enviar o formulário.<br>
 
 				<br>
 				5. Aguarde até que a mensagem de confirmação apareça na tela, confirmando
@@ -91,7 +90,6 @@ session_start();
 
 			<!--- Div com resposta -->
 			<div class="resp" id="conteudo2">
-
 				Não! Nosso site não possui nenhuma ferramenta paga. Todas as ferramentas
 				e recursos disponíveis em nossa plataforma são gratuitos para uso, sem
 				custos adicionais ou taxas ocultas. Nós acreditamos em fornecer um serviço
