@@ -69,7 +69,7 @@ function autenticar() {
         icon: "error",
         text: verificaLogin(campoEmail.value.toLowerCase(), campoSenha.value),
         confirmButtonColor: "#3085d6",
-        confirmButtonText: "Confirmar",
+        confirmButtonText: "OK!",
       });
     }
   }
@@ -85,7 +85,7 @@ function verificaLogin(email, senha) {
   if (!dadosSalvos) {
     noEmailCadastrado.style.display = "block";
     campoEmail.style.cssText = "border-bottom: 1px solid #f58181";
-    return "Esse email não está cadastrado!";
+    return "Credenciais inválidas!";
   } else {
     // Vericando se a senha e a mesma
     if (dados.senha == senha) {
@@ -93,7 +93,7 @@ function verificaLogin(email, senha) {
     } else {
       aotPass.style.display = "block";
       campoSenha.style.cssText = "border-bottom: 1px solid #f58181";
-      return "A senha está errada!";
+      return "Credenciais inválidas!";
     }
   }
 }

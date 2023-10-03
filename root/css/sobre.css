@@ -33,6 +33,7 @@ body {
   text-align: justify;
 }
 
+/* Adicionando cor */
 #sobre p,
 h1 {
   color: var(--black) !important;

@@ -94,15 +94,18 @@
   --next_light: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 
+/* Adicionando cor */
 .swal2-popup {
   background-color: var(--fundoalerta);
 }
 
+/* Adicionando cor */
 .swal2-title,
 .swal2-html-container {
   color: var(--textoalerta);
 }
 
+/* Adicionando cor */
 body {
   background-color: var(--bg_body) !important;
 }
@@ -113,10 +116,12 @@ img {
   user-select: none;
 }
 
+/* Deixando item como nao selecionavel  */
 button {
   user-select: none;
 }
 
+/* Deixando item como nao selecionavel  */
 .form-floating > label,
 input {
   user-select: none !important;
@@ -162,12 +167,14 @@ header {
   text-shadow: none;
 }
 
+/* Adiconando flex box e margin */
 .log {
   display: flex;
   align-items: center;
   margin-left: auto;
 }
 
+/* Adicionando flex box e espacamente entre divs */
 #droplogado {
   display: flex;
   flex-direction: row;
@@ -175,11 +182,13 @@ header {
   gap: 4px;
 }
 
+/* Adicionando tamanho */
 #fotologado {
   width: 20px;
   height: 20px;
 }
 
+/* Adicionando cor, margin e transicao */
 #login_href {
   background-color: var(--btnlog);
   color: white;
@@ -188,6 +197,7 @@ header {
   margin-right: 8px;
 }
 
+/* Adicionando cor e borda */
 #login_href:hover,
 #cadastro_href:hover {
   background-color: var(--roxo_terc);
@@ -195,6 +205,7 @@ header {
   color: white;
 }
 
+/* Adicionando cor, borda, trasicao e margin na direita */
 #cadastro_href {
   background-color: white;
   color: var(--azul_princ);
@@ -203,24 +214,20 @@ header {
   margin-right: 8px;
 }
 
-/* {
-  background-color: var(--azul-claro_sec);
-  border: 1px solid var(--azul-claro_sec);
-  color: white;
-} */
 
 /* Adicionando cor */
 .dropdown-menu {
   background-color: var(--roxo_princ) !important;
 }
 
+/* Retirando o contorno e sombra */
 .dropdown-toggle,
 .dropdown-menu {
   outline: 0;
   box-shadow: 0 0 0 0;
 }
 
-/* Aplicando margem */
+/* Aplicando margem, padding e altura */
 .search-bar {
   margin-top: 2%;
   width: 50%;
@@ -352,6 +359,7 @@ footer p {
   text-align: center !important;
 }
 
+/* Adiconando cor */
 #slogan,
 .h3atualizado,
 footer p {
@@ -367,6 +375,7 @@ footer p {
   box-sizing: unset !important;
 }
 
+/* Adicionando tamanho */
 #logofoot {
   width: 150px;
 }
@@ -699,6 +708,7 @@ footer p {
   left: -5px;
 }
 
+/* Reposicionando div na tela */
 .send:hover svg {
   transform: rotate(45deg) scale(1.1);
 }
@@ -736,6 +746,7 @@ footer p {
   margin-bottom: 1%;
 }
 
+/* Adicionando cor */
 .erroVazio,
 .erroPadrao {
   color: #f58181;
@@ -782,6 +793,7 @@ input[type="date"] {
   transition: 0.4s ease;
 }
 
+/* Adicionando flexbox e espacamento entre divs */
 #ajudaa,
 #perfila,
 #logout,
@@ -873,6 +885,7 @@ input[type="date"] {
   text-decoration: underline !important;
 }
 
+/* Adicionando espacamento na esquerda e no centro das divs */
 .btn_login,
 .btn_cadastrar {
   padding-left: 3%;

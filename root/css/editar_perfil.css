@@ -28,6 +28,7 @@ header {
   align-items: start;
 }
 
+/* Adicionando borda na parte de baixo da div */
 input {
   border-bottom: 1px solid #000000 !important;
 }
@@ -85,6 +86,8 @@ h1 {
   user-select: none;
 }
 
+
+/* Adicionando margin na parte de baixo */
 .form-label {
   margin-bottom: 0 !important;
 }
@@ -134,6 +137,7 @@ h1 {
   position: relative;
 }
 
+/* Adiconando posicionamento, flex-box */
 .input-icon {
   position: absolute;
   top: 0;
@@ -145,6 +149,7 @@ h1 {
   pointer-events: none;
 }
 
+/* Adicionando tamanho e cor */
 .input-icon svg {
   height: 16px;
   fill: rgba(var(--bs-body-color-rgb), 0.65);

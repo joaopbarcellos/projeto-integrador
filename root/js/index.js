@@ -2,7 +2,7 @@
 import * as base from "./base.js";
 
 // Pegando todos os botoes para ir para o evento
-const btns = document.querySelectorAll(".sabermais");
+const btns = document.querySelectorAll(".evento");
 
 // Percorrendo todos os botoes
 btns.forEach((btn) => {

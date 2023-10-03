@@ -6,11 +6,14 @@
   padding: 0;
 }
 
+/* Adicionado cor */
 p,
 h1 {
   color: white !important;
 }
 
+
+/* Adicionando tamanho e cor */
 .iconelocev,
 .iconedataev {
   fill: white !important;
@@ -23,6 +26,7 @@ h1 {
   flex-direction: row;
 }
 
+/* Adicionando espacamento */
 #titulo {
   padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5);
@@ -33,6 +37,7 @@ h1 {
   font-size: 1.3rem;
 }
 
+/* Adicionando cor, borda, espacamento e sombra */
 #fundoev {
   background-color: var(--form_cria) !important;
   border-radius: 5px;
@@ -153,6 +158,7 @@ h1 {
   transition-delay: 300ms;
 }
 
+/* Retirando a margin */
 .row {
   margin: 0 !important;
 }

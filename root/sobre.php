@@ -40,26 +40,10 @@ session_start();
 		<h1 class="fs-1 text">Sobre nós</h1>
 
 		<p class="fs-sm-6 fs-lg-5">
-			Somos uma equipe dedicada e apaixonada por esportes, e criamos esta plataforma para ajudar os organizadores
-			de eventos e os participantes
-			a se conectarem de forma fácil e eficiente. Nosso objetivo é tornar a participação em eventos esportivos o
-			mais fácil e acessível possível.
-			Para isso, oferecemos uma variedade de ferramentas que ajudam a organizar e promover eventos, além de
-			permitir que os participantes
-			encontrem e se inscrevam para eventos em todo o país. Nós trabalhamos com organizadores de eventos
-			esportivos de diferentes modalidades, desde
-			corridas de rua até competições de ciclismo, para garantir que nossa plataforma atenda às necessidades de
-			todos os tipos de eventos.
-			Nós nos esforçamos para oferecer uma experiência online sem complicações para todos os nossos usuários.
-			Através de nossa interface intuitiva,
-			os organizadores de eventos podem criar e gerenciar seus eventos com facilidade, enquanto os participantes
-			podem encontrar e se inscrever para
-			eventos com apenas alguns cliques. Além disso, nossa equipe de suporte está sempre pronta para ajudar em
-			caso de quaisquer problemas ou dúvidas.
-			Queremos garantir que todos os nossos usuários tenham uma experiência positiva em nosso site. Obrigado por
-			escolher a Time In como sua plataforma
-			de eventos esportivos preferida. Estamos ansiosos para ajudá-lo a descobrir novos eventos emocionantes e
-			apoiá-lo em sua jornada esportiva.
+			Somos uma equipe apaixonada por esportes e criamos esta plataforma para conectar organizadores e participantes,
+			facilitando inscrições e criações de eventos esportivos de todo o país, com suporte e interface intuitiva. 
+			Estamos ansiosos para ajudá-lo a descobrir novos eventos emocionantes e apoiá-lo em sua jornada esportiva.
+			Obrigado por escolher a Time In como sua plataforma	de eventos esportivos preferida.
 
 		</p>
 	</div>

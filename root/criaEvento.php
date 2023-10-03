@@ -165,7 +165,6 @@ session_start();
 							<button class="prev-btn">
 								<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" class="iconevoltarevents">
 									<path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
-									</path>
 								</svg>
 								<span>Anterior</span>
 							</button>
@@ -177,9 +176,10 @@ session_start();
 					<div class="step">
 						<div class="infos">
 
-							<h1>Vagas</h1>
+							<h1>Finalizando</h1>
 
-							<div class="alinha mb-3 mt-3">
+							<p class="mt-3">Vagas:</p>
+							<div class="alinha mb-3 ">
 								<!-- Minimo de inscricoes -->
 								<div class="form-floating col-6">
 									<input type="number" min="0" class="form-control" id="capMinima" placeholder="Mínimo de inscrições para realização do evento">

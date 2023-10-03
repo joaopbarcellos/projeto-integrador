@@ -63,9 +63,11 @@ input[type="date"] {
   border-bottom: 1px solid #000000 !important;
 }
 
+/* Adicionando margin na parte de cima da div */
 label[id="labelData"] {
   margin-top: 2.5% !important;
 }
+
 /* Adicionando espacamento  */
 #label_nome,
 #email_label,

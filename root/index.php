@@ -41,7 +41,7 @@ if (isset($_POST['emailCampo'])) {
 		<?php include('header.php') ?>
 	</header> <!-- Fechando header -->
 
-	<div id="carouselExampleInterval" class="carousel slide d-none d-sm-block col-11 col-md-10 col-lg-8 col-xg-6 m-auto" data-bs-ride="carousel">
+	<div id="carouselExampleInterval" class="carousel slide d-none d-md-block col-9 col-md-8 col-lg-5 m-auto" data-bs-ride="carousel">
 
 		<div class="carousel-inner">
 			<div class="carousel-item active" data-bs-interval="7000" data-bs-pause="true">
@@ -103,7 +103,7 @@ if (isset($_POST['emailCampo'])) {
 		<div id="naoAchou" class="fs-4 msg_erro">Nenhum resultado para "" foi encontrado!</div>
 
 		<!-- Div primeiro evento -->
-		<div class="evento mt-3 mt-sm-4 mt-4 mt-5 mt-3 primeiro">
+		<div class="evento mt-3 mt-sm-4 mt-4 mt-5 mt-3 primeiro"  id="aulaZico">
 
 			<!-- Div onde ficará todas as informações  -->
 			<div class="informacoes">
@@ -146,7 +146,7 @@ if (isset($_POST['emailCampo'])) {
 						</div>
 
 						<!-- Button para o usuário se inscrever -->
-						<button class="sabermais sb-list" id="aulaZico"><span>Saber Mais</span></button>
+						<button class="sabermais sb-list"><span>Saber Mais</span></button>
 
 						<!-- Fim da div desc -->
 					</div>
@@ -159,7 +159,7 @@ if (isset($_POST['emailCampo'])) {
 		</div>
 
 		<!-- Div do segundo evento -->
-		<div class="evento mt-3 mt-sm-4 mt-4 mt-5 mt-3 segundo">
+		<div class="evento mt-3 mt-sm-4 mt-4 mt-5 mt-3 segundo"  id="treinoBlack">
 
 			<div class="informacoes">
 				<div class="row">
@@ -202,7 +202,7 @@ if (isset($_POST['emailCampo'])) {
 							<p><b>R$:</b> Gratuito</p>
 						</div>
 
-						<button class="sabermais sb-list " id="treinoBlack"><span>Saber Mais</span></button>
+						<button class="sabermais sb-list "><span>Saber Mais</span></button>
 
 
 
@@ -216,7 +216,7 @@ if (isset($_POST['emailCampo'])) {
 		</div>
 
 		<!-- Div do terceiro evento -->
-		<div class="evento mt-3 mt-sm-4 mt-4 mt-5 mt-3 terceiro">
+		<div class="evento mt-3 mt-sm-4 mt-4 mt-5 mt-3 terceiro" id="desafioNatacao">
 
 			<div class="informacoes">
 				<div class="row">
@@ -259,7 +259,7 @@ if (isset($_POST['emailCampo'])) {
 							<p><b>R$:</b> Gratuito</p>
 						</div>
 
-						<button class="sabermais  sb-list" id="desafioNatacao"><span>Saber Mais</span></button>
+						<button class="sabermais  sb-list"><span>Saber Mais</span></button>
 
 
 
@@ -273,7 +273,7 @@ if (isset($_POST['emailCampo'])) {
 		</div>
 
 		<!-- Div do quarto evento -->
-		<div class="evento mt-3 mt-sm-4 mt-4 mt-5 mt-3 quarto">
+		<div class="evento mt-3 mt-sm-4 mt-4 mt-5 mt-3 quarto" id="marDourado">
 
 			<div class="informacoes">
 				<div class="row">
@@ -316,7 +316,7 @@ if (isset($_POST['emailCampo'])) {
 							<p><b>R$:</b> 10,00</p>
 						</div>
 
-						<button class="sabermais  sb-list" id="marDourado"><span>Saber Mais</span></button>
+						<button class="sabermais  sb-list"><span>Saber Mais</span></button>
 
 
 
@@ -329,7 +329,7 @@ if (isset($_POST['emailCampo'])) {
 		</div><!-- Fim da div evento quarto -->
 
 		<!-- Div do quinto evento -->
-		<div class="evento mt-3 mt-sm-4 mt-4 mt-5 mt-3 quinto">
+		<div class="evento mt-3 mt-sm-4 mt-4 mt-5 mt-3 quinto" id="corridaPenha">
 
 			<div class="informacoes">
 				<div class="row">
@@ -370,7 +370,7 @@ if (isset($_POST['emailCampo'])) {
 							<p><b>R$:</b> Gratuito</p>
 						</div>
 
-						<button class="sabermais  sb-list" id="corridaPenha"><span>Saber Mais</span></button>
+						<button class="sabermais  sb-list"><span>Saber Mais</span></button>
 
 						<!-- Fim da div desc -->
 					</div>
@@ -382,7 +382,7 @@ if (isset($_POST['emailCampo'])) {
 		</div>
 
 		<!-- Div do sexto evento -->
-		<div class="evento mt-3 mt-sm-4 mt-4 mt-5 mt-3 sexto">
+		<div class="evento mt-3 mt-sm-4 mt-4 mt-5 mt-3 sexto" id="etapeRio">
 
 			<div class="informacoes">
 				<div class="row">
@@ -422,7 +422,7 @@ if (isset($_POST['emailCampo'])) {
 							<p><b>R$:</b> 130,00</p>
 						</div>
 
-						<button class="sabermais  sb-list" id="etapeRio"><span>Saber Mais</span></button>
+						<button class="sabermais  sb-list"><span>Saber Mais</span></button>
 
 					</div>
 
@@ -436,7 +436,7 @@ if (isset($_POST['emailCampo'])) {
 		</div>
 
 		<!-- Div do setimo evento -->
-		<div class="evento mt-3 mt-sm-4 mt-4 mt-5 mt-3 setimo">
+		<div class="evento mt-3 mt-sm-4 mt-4 mt-5 mt-3 setimo" id="surfItaparica">
 
 			<div class="informacoes">
 				<div class="row">
@@ -476,7 +476,7 @@ if (isset($_POST['emailCampo'])) {
 							<p><b>R$:</b> Gratuito</p>
 						</div>
 
-						<button class="sabermais  sb-list" id="surfItaparica"><span>Saber Mais</span></button>
+						<button class="sabermais  sb-list"><span>Saber Mais</span></button>
 
 						<!-- Fim da div desc -->
 					</div>
@@ -488,7 +488,7 @@ if (isset($_POST['emailCampo'])) {
 		</div>
 
 		<!-- Div do setimo evento -->
-		<div class="evento mt-3 mt-sm-4 mt-4 mt-5 mt-3 oitavo">
+		<div class="evento mt-3 mt-sm-4 mt-4 mt-5 mt-3 oitavo" id="basqueteCaue">
 
 			<div class="informacoes">
 				<div class="row">
@@ -528,7 +528,7 @@ if (isset($_POST['emailCampo'])) {
 							<p><b>R$:</b> Gratuito</p>
 						</div>
 
-						<button class="sabermais  sb-list" id="basqueteCaue"><span>Saber Mais</span></button>
+						<button class="sabermais  sb-list"><span>Saber Mais</span></button>
 
 						<!-- Fim da div desc -->
 					</div>
@@ -539,7 +539,7 @@ if (isset($_POST['emailCampo'])) {
 			<!-- Fim da div evento oitavo -->
 		</div>
 		<!-- Div do nove evento -->
-		<div class="evento mt-3 mt-sm-4 mt-4 mt-5 mt-3 nove">
+		<div class="evento mt-3 mt-sm-4 mt-4 mt-5 mt-3 nove" id="motocrossArena">
 
 			<div class="informacoes">
 				<div class="row">
@@ -581,7 +581,7 @@ if (isset($_POST['emailCampo'])) {
 							<p><b>R$:</b> 15,90</p>
 						</div>
 
-						<button class="sabermais sb-list" id="motocrossArena"><span>Saber Mais</span></button>
+						<button class="sabermais sb-list"><span>Saber Mais</span></button>
 
 
 

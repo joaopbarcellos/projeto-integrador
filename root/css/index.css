@@ -123,6 +123,7 @@ button:focus {
   background-image: var(--next_light) !important;
 }
 
+/* Adicionando fundo */
 .carousel-control-prev-icon {
   background-image: var(--prev_light) !important;
 }

@@ -85,6 +85,7 @@
   padding-top: 0 !important;
 }
 
+/* Retirando espacamento */
 .row > * {
   padding: 0 !important;
 }
@@ -95,7 +96,7 @@
   position: relative;
 }
 
-/* mudo os espacamentos e cores de fonte dos botoes */
+/* Mudo os espacamentos e cores de fonte dos botoes */
 #editar,
 #excluir {
   padding: 10px;
@@ -244,18 +245,22 @@
   }
 }
 
+/* Adicionando cor */
 .input:checked + .slider {
   background-color: #183153;
 }
 
+/* Adicionando sombra */
 .input:focus + .slider {
   box-shadow: 0 0 1px #183153;
 }
 
+/* Reposicinando div na tela  */
 .input:checked + .slider:before {
   transform: translateX(30px);
 }
 
+/* Adicionando margin na parte de baixo da div */
 .telefone {
   margin-bottom: 0 !important;
 }

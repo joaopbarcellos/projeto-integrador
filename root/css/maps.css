@@ -28,34 +28,42 @@
   height: 90px !important;
 }
 
+/* Adicionando display para a div nao aparecer */
 .NavBar_MapTypeButtonDropDownIcon {
   display: none !important;
 }
 
+/* Adicionando display para a div nao aparecer */
 .birdseye {
   display: none !important;
 }
 
+/* Adicionando display para a div aparecer */
 #ZoomInButton {
   display: block !important;
 }
 
+/* Adicionando display para a div nao aparecer */
 .disabled {
   display: none !important;
 }
 
+/* Adicionando tamanho */
 .labelCanvas {
   width: 100% !important;
 }
 
+/* Adicionando display para a div nao aparecer */
 .CopyrightContainer {
   display: none !important;
 }
 
+/* Adicionando display para a div nao aparecer */
 .bm_LogoContainer {
   display: none !important;
 }
 
+/* Adicionando margin na parte de baxo da div */
 .ScaleBar {
   margin-bottom: 10px !important;
 }

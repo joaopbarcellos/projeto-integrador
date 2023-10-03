@@ -14,6 +14,18 @@ if (!email) {
   base.naoEstaLogado();
 }
 
+// Repeticao de dias
+const selectDias = document.querySelector("#eveRecorrente");
+selectDias.addEventListener("change", () => {
+  if (selectDias.value == "2"){
+    document.querySelector("#eventorepete").style.opacity = "1";
+    document.querySelector("#eventorepete").style.height = "auto";
+  } else {
+    document.querySelector("#eventorepete").style.opacity = "0";
+    document.querySelector("#eventorepete").style.height = "0";
+  }
+});
+
 // Validação dos campos
 // Campo nome do evento
 function validarNomeEvento() {
@@ -336,6 +348,19 @@ function verificaStep2() {
   }
 }
 
+// Verifica checkbox
+function verificaRecorrente(erro){
+  if (selectDias.value == "2"){ 
+    const todasCheckbox = document.querySelectorAll("checkbox");
+    todasCheckbox.forEach(checkbox => {
+      if(checkbox.checked) return true;
+    });
+    return erro;
+  }
+  return true;
+}
+
+
 function verificaStep3() {
   // Verificando todos os campos do PASSO 3
   let validaQtdMin = base.validarNumero(
@@ -350,8 +375,9 @@ function verificaStep3() {
     document.querySelector("#preco").value,
     "preço"
   );
+  let validaRecorrencia = verificaRecorrente("recorrência");
 
-  let listaVerifica = [validaQtdMin, validaQtdMax, validarPrecoEvento1];
+  let listaVerifica = [validaQtdMin, validaQtdMax, validarPrecoEvento1, validaRecorrencia];
   let strErros = "";
 
   // Verificando se todos os campos estao validos, se nao, escritos em uma string
@@ -368,6 +394,7 @@ function verificaStep3() {
     strErros = "quantidade mínima e quantidade máxima";
   }
   if (validarPrecoEvento1 != true) strErros += ", " + validarPrecoEvento1;
+  if (validaRecorrencia != true) strErros += ", " + validaRecorrencia;
   if (!strErros.length > 0) {
     alert("Seu evento foi criado!")
     currentStep++;
@@ -426,5 +453,3 @@ showStep(currentStep);
 document.querySelector("#btnFINALIZAR").addEventListener("click", () => {
   verificaStep3();
 });
-
-// Repeticao de dias

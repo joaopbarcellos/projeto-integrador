@@ -9,27 +9,32 @@
   fill: var(--azul_sec) !important;
 }
 
+/* Adicionando flex-box */
 #seletorevento {
   display: flex;
   flex-direction: row;
 }
 
+/* Alinhando texto no centro */
 h3 {
   text-align: center;
 }
 
+/* Adicionando cor e borda */
 .selected {
   background-color: var(--bgmyeve);
   color: var(--colmyeve);
   border-bottom: 5px solid var(--colmyeve);
 }
 
+/* Adicionando cor e transicao */
 .not-selected {
   background-color: var(--bgmyeve);
   color: var(--colmyeve);
   transition: 0.3s;
 }
 
+/* Adicionando cor */
 .not-selected:hover {
   background-color: var(--bgmyevehover);
   color: var(--colmyevehover);

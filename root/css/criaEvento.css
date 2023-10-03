@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Quicksand:wght@600&display=swap");
 
+/* Definicoes gerais da pagina */
 * {
   padding: 0;
   margin: 0;
@@ -29,79 +30,102 @@
   padding-top: 10px;
 }
 
+/* Retirando a borda */
 input {
   border: 0 !important;
 }
 
+/* Adicionando flex-box */
 .loc {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
+/* Adicionando flex-box e espacamento entre divs */
 .alinha {
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
 
+/* Adicionando tamanho */
 .espaco {
   width: 100%;
 }
 
+/* Retirando opacidade, altura e adicionando transicao */
 #eventorepete {
-  display: none;
-  transition: 0.3s;
+  opacity: 0;
+  height: 0;
+  transition: opacity 0.5s ease, height 0.5s ease;
 }
 
+.infos p{
+  color: white !important;
+  margin-bottom: 0.3rem !important;
+  font-size: 0.9rem !important;
+}
+
+/* Adicionando minimo de altura */
 .infos {
   min-height: 400px;
 }
 
+/* Adicionando tamanho */
 .step,
 form {
   width: 100%;
 }
 
+/* Adicionando cor e centralizando o texto */
 .step h1 {
   color: white;
   text-align: center;
 }
 
+/* Adicionando minimo e maximo de altura */
 #desc {
   min-height: 58px;
   max-height: 250px;
 }
 
+/* Adicionando maximo de altura */
 #preco {
   max-width: 270px !important;
 }
 
+/* Adicionando cor */
 #labelimg {
   color: white;
 }
 
+/* Adicionado tamanho */
 input[type="time"] {
   width: 130px !important;
 }
 
+/* Adicionando cor, fonte e margin na parte de baixo da div */
 #legendinha {
   color: white;
   font-size: 0.8rem;
   margin-bottom: 0 !important;
 }
 
+/* Adicionando cor e borda */
 .btn-outline-primary {
   color: white !important;
   border-color: white !important;
   --bs-btn-active-bg: white !important;
 }
 
+/* Adicionado cor e borda */
 .btn-check:checked + .btn {
   color: var(--roxo_terc) !important;
   border-color: var(--roxo_terc) !important;
 }
 
+/* Adicionando flex-box, tamanho espacamento */
 .form-container {
   align-items: flex-start;
   flex-direction: column;
@@ -113,6 +137,7 @@ input[type="time"] {
   padding: 20px;
 }
 
+/* Adicionando cor, flex-box, espacamento e sombra */
 form {
   background-color: var(--form_cria) !important;
   border-radius: 5px;
@@ -125,12 +150,14 @@ form {
   box-shadow: -1px -1px 15px 1px rgba(0, 0, 0, 0.75);
 }
 
+/* Adicionadno flex-box e margin no topo da div */
 .button-container {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
 }
 
+/* Adicionando espacamento, borda, cor e trocando o cursor */
 .button-container button {
   padding: 10px 20px;
   border: none;
@@ -139,12 +166,14 @@ form {
   cursor: pointer;
 }
 
+/* Adicionando flex-box */
 .botoes {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
+/* Adicionando fonte, flex-box, espacamento e trocando o cursor */
 .prev-btn,
 .next-btn {
   cursor: pointer;
@@ -160,37 +189,49 @@ form {
   justify-content: center;
   font-size: 15px;
 }
+
+/* Reposicionando a div */
 .prev-btn:active,
 .next-btn:active {
   transform: scale(0.95);
 }
+
+/* Adicionadno cor */
 .iconevoltarevents {
   fill: var(--azul-claro_sec) !important;
 }
 
+/* Adicionando margin na esqueda e cor */
 .prev-btn {
   margin-left: 0 !important;
   background: white;
   color: var(--azul-claro_sec);
 }
+
+/* Adicionando cor e margin */
 .next-btn {
   background: var(--azul-claro_sec);
   margin-left: auto !important;
   color: white;
 }
 
+/* Adicionando cor */
 .next-btn:hover {
   background: var(--azul_claro);
 }
 
+/* Adicionando margin e transicao */
 .prev-btn > svg {
   margin-right: 10px;
   transition: transform 0.3s ease-in-out;
 }
+
+/* Reposicionando div  */
 .prev-btn:hover svg {
   transform: translateX(-5px);
 }
 
+/* Adicionando borda */
 .btn-53,
 .btn-53 *,
 .btn-53 :after,
@@ -200,6 +241,8 @@ form {
   border: 0 solid;
   box-sizing: border-box;
 }
+
+/* Adicionado cor, fonte, espacamente, posicionamento e escondendo parte do elemento*/
 .btn-53 {
   -webkit-tap-highlight-color: transparent;
   margin-left: auto !important;
@@ -225,19 +268,29 @@ form {
   position: relative;
   text-transform: uppercase;
 }
+
+/* Adicionando cursor padrao */
 .btn-53:disabled {
   cursor: default;
 }
+
+/* Adicionadno contorno automatico */
 .btn-53:-moz-focusring {
   outline: auto;
 }
+
+/* Centralizando item na esquerda e deixando ele exposto  */
 .btn-53 svg {
   display: block;
   vertical-align: middle;
 }
+
+/* Deixando div escondida */
 .btn-53 [hidden] {
   display: none;
 }
+
+/* Adicionando cor, posicionamento, transicao e tirando a distancia entre divs */
 .btn-53 .original {
   background: var(--azul-claro_sec);
   color: white;
@@ -247,36 +300,56 @@ form {
   position: absolute;
   transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1);
 }
+
+/* Reposicioando div */
 .btn-53:hover .original {
   transform: translateY(100%);
 }
+
+/* Adicionando posicionamento */
 .btn-53 .letters {
   display: inline-flex;
 }
+
+/* Adicioando transicao, reposicionando div e tirando opacidade */
 .btn-53 span {
   opacity: 0;
   transform: translateY(-15px);
   transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.2s;
 }
+
+/* Reposicionando div  */
 .btn-53 span:nth-child(2n) {
   transform: translateY(15px);
 }
+
+/* Adicionado opacidade e reposicionado div */
 .btn-53:hover span {
   opacity: 1;
   transform: translateY(-3px);
 }
+
+/* Adicionando tempo de atraso */
 .btn-53:hover span:nth-child(2) {
   transition-delay: 0.1s;
 }
+
+/* Adicionando tempo de atraso */
 .btn-53:hover span:nth-child(3) {
   transition-delay: 0.2s;
 }
+
+/* Adicionando tempo de atraso */
 .btn-53:hover span:nth-child(4) {
   transition-delay: 0.3s;
 }
+
+/* Adicionando tempo de atraso */
 .btn-53:hover span:nth-child(5) {
   transition-delay: 0.4s;
 }
+
+/* Adicionando tempo de atraso */
 .btn-53:hover span:nth-child(6) {
   transition-delay: 0.5s;
 }
