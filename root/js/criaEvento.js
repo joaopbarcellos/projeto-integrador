@@ -26,6 +26,18 @@ selectDias.addEventListener("change", () => {
   }
 });
 
+// Evento gratuito ou não
+const selectGratuito = document.querySelector("#eveGra");
+selectGratuito.addEventListener("change", () => {
+  if (selectGratuito.value == "2"){
+    document.querySelector("#evePre").style.opacity = "1";
+    document.querySelector("#evePre").style.height = "auto";
+  } else {
+    document.querySelector("#evePre").style.opacity = "0";
+    document.querySelector("#evePre").style.height = "0";
+  }
+});
+
 // Validação dos campos
 // Campo nome do evento
 function validarNomeEvento() {
@@ -351,9 +363,9 @@ function verificaStep2() {
 // Verifica checkbox
 function verificaRecorrente(erro){
   if (selectDias.value == "2"){ 
-    const todasCheckbox = document.querySelectorAll("checkbox");
+    const todasCheckbox = document.querySelectorAll(".btn-check");
     todasCheckbox.forEach(checkbox => {
-      if(checkbox.checked) return true;
+      if(checkbox.checked && erro == "recorrência") erro = true;;
     });
     return erro;
   }
@@ -371,10 +383,8 @@ function verificaStep3() {
     document.querySelector("#capMaxima").value,
     "quantidade máxima"
   );
-  let validarPrecoEvento1 = base.validarNumero(
-    document.querySelector("#preco").value,
-    "preço"
-  );
+  let validarPrecoEvento1 = true;
+  if (selectGratuito.value == "2") validarPrecoEvento1 = base.validarNumero(document.querySelector("#preco").value,"preço");
   let validaRecorrencia = verificaRecorrente("recorrência");
 
   let listaVerifica = [validaQtdMin, validaQtdMax, validarPrecoEvento1, validaRecorrencia];
@@ -390,11 +400,11 @@ function verificaStep3() {
       }
     }
   });
-  if(document.querySelector("#capMinima").value >= document.querySelector("#capMaxima").value){
+  if(parseInt(document.querySelector("#capMinima").value) >= parseInt(document.querySelector("#capMaxima").value) ){
     strErros = "quantidade mínima e quantidade máxima";
-  }
-  if (validarPrecoEvento1 != true) strErros += ", " + validarPrecoEvento1;
-  if (validaRecorrencia != true) strErros += ", " + validaRecorrencia;
+    if (validarPrecoEvento1 != true) strErros += ", " + validarPrecoEvento1;
+    if (validaRecorrencia != true) strErros += ", " + validaRecorrencia;
+  }  
   if (!strErros.length > 0) {
     alert("Seu evento foi criado!")
     currentStep++;

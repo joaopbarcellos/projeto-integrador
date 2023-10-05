@@ -100,6 +100,12 @@ form {
   color: white;
 }
 
+#evePre{
+  opacity: 0;
+  height: 0;
+  transition: opacity 0.5s ease, height 0.5s ease;
+}
+
 /* Adicionado tamanho */
 input[type="time"] {
   width: 130px !important;

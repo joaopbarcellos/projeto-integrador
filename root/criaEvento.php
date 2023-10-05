@@ -294,9 +294,19 @@ session_start();
 								</div>
 							</div>
 
-							<div class="form-floating col-7 mb-3">
-								<input type="text" class="form-control" id="preco" placeholder="R$">
-								<label class="form-label" for="preco">Preço do Ingresso (R$)</label>
+							<div class="alinha mb-3"> 
+								<div class="form-floating col-7  col-lg-6 col-xg-4 espaco">
+									<select class="form-select" id="eveGra">
+										<option value="1">Sim</option>
+										<option value="2">Não</option>
+									</select>
+									<label for="eveGra">O Evento é Gratuito?</label>
+								</div>
+
+								<div class="form-floating evepre" id="evePre">
+									<input type="text" class="form-control" id="preco" placeholder="R$">
+									<label class="form-label" for="preco">Preço do Ingresso (R$)</label>
+								</div>
 							</div>
 
 						</div>
