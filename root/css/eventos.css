@@ -66,6 +66,11 @@ h1 {
   margin-right: 0.4em;
 }
 
+
+p, .alinhando p{
+  margin-bottom: 0 !important;
+}
+
 /* Adiconando flex-box, alinhamento e espacamento */
 #localizacao,
 #alvo,
@@ -75,11 +80,12 @@ h1 {
 #preco,
 #num_inscritos,
 #vagas_restam,
-#organizador {
+#organizador, .alinhando, #p_desc {
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  padding-top: 0.5em;
+  padding-top: 0;
+  margin-bottom: 1rem !important;
 }
 
 /* Adicionando margin */
@@ -88,7 +94,7 @@ h1 {
 }
 
 /* Adicionando margin */
-#organizador {
+#preco {
   margin-bottom: 1.5em;
 }
 

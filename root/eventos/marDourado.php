@@ -78,6 +78,11 @@ session_start();
 						</p>
 					</div>
 
+					<!-- Div com o Esporte-->
+					<div class="alinhando">
+						<p><b>Esporte:</b> Beach Tennis</p>
+					</div>
+ 
 					<!-- Div de localizacao -->
 					<div id="localizacao"><a id="local" href="maps.php">
 
@@ -100,10 +105,7 @@ session_start();
 						<p id="dia">12/09/23 11:00</p>
 					</div>
 
-					<!-- Div com o custo do evento -->
-					<div id="preco">
-						<p id="sifrao"><b>Custo: </b>10,00 R$</p>
-					</div>
+					
 
 					<!-- Div com o publico-alvo do evento -->
 					<div id="alvo">
@@ -131,7 +133,16 @@ session_start();
 					<div id="organizador">
 						<p id="t_organizador"><b>Evento organizado por: </b> Pedro Henrique Santos Castro</p>
 					</div>
-
+					
+					<!-- Div com o contato-->
+					<div class="alinhando">
+						<p><b>Contato:</b> (27)90453-2377</p>
+					</div>
+ 
+					<!-- Div com o custo do evento -->
+					<div id="preco">
+						<p id="sifrao"><b>Custo: </b>10,00 R$</p>
+					</div>
 					<!-- Botao de inscrever-se -->
 					<button class="inscrever fixo" id="marDourado">
 						<img src="../logos/icon2.png">

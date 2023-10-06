@@ -131,15 +131,22 @@ if (isset($_POST['emailCampo'])) {
 							</svg>
 							R. Nelcy Lopes Vieira, 1000 - Jardim Limoeiro, Serra - ES, 29164-018
 						</p>
+						
+						<!-- Div com o Esporte-->
+						<div class="intuito">
+							<p><b>Esporte:</b> Futebol</p>
+						</div>
+ 
 						<!-- Div com o intuito-->
 						<div class="intuito d-none d-lg-block">
 							<p><b>Público alvo:</b> Para toda Família</p>
 						</div>
 
 						<!-- Div com o público-->
-						<div class="publico d-none d-lg-block">
+						<div class="intuito d-none d-lg-block">
 							<p><b>Faixa Etária:</b> Entre 5 e 10 anos</p>
 						</div>
+						
 						<!-- Div com botão para inscrever-se e parágrafo dizendo o valor do evento-->
 						<div class="btn_des">
 							<p><b>Custo:</b> 97,00 R$</p>
@@ -187,13 +194,18 @@ if (isset($_POST['emailCampo'])) {
 							R. Ana Viêira Mafra, s/n - Mata da Praia, Vitória - ES, 29066-010
 						</p>
 
+						<!-- Div com o Esporte-->
+						<div class="intuito">
+							<p><b>Esporte:</b> Futebol Americano</p>
+						</div>
+
 						<!-- Div com o intuito-->
 						<div class="intuito d-none d-lg-block">
 							<p><b>Público alvo:</b> Treino para Amadores</p>
 						</div>
 
 						<!-- Div com o público-->
-						<div class="publico d-none d-lg-block">
+						<div class="intuito d-none d-lg-block">
 							<p><b>Faixa Etária:</b> Entre 18 e 35 anos</p>
 						</div>
 
@@ -244,13 +256,18 @@ if (isset($_POST['emailCampo'])) {
 							Rodovia ES-010, Km 35 - Santa Cruz, Aracruz - ES, 29199-548
 						</p>
 
+						<!-- Div com o Esporte-->
+						<div class="intuito">
+							<p><b>Esporte:</b> Natação</p>
+						</div>
+						
 						<!-- Div com o intuito-->
 						<div class="intuito d-none d-lg-block">
 							<p><b>Público alvo:</b> Para toda Família</p>
 						</div>
 
 						<!-- Div com o público-->
-						<div class="publico d-none d-lg-block">
+						<div class="intuito d-none d-lg-block">
 							<p><b>Faixa Etária:</b> Acima de 2 anos</p>
 						</div>
 
@@ -301,13 +318,18 @@ if (isset($_POST['emailCampo'])) {
 							Av. Est. José Júlio de Souza - Praia de Itaparica, Vila Velha - ES, 29103-865
 						</p>
 
+						<!-- Div com o Esporte-->
+						<div class="intuito">
+							<p><b>Esporte:</b> Beach Tennis</p>
+						</div>
+						
 						<!-- Div com o intuito-->
 						<div class="intuito d-none d-lg-block">
 							<p><b>Público alvo:</b> Para toda Família</p>
 						</div>
 
 						<!-- Div com o público-->
-						<div class="publico d-none d-lg-block">
+						<div class="intuito d-none d-lg-block">
 							<p><b>Faixa Etária:</b> Acima de 12 anos</p>
 						</div>
 
@@ -355,13 +377,18 @@ if (isset($_POST['emailCampo'])) {
 							Prainha
 						</p>
 
+						<!-- Div com o Esporte-->
+						<div class="intuito">
+							<p><b>Esporte:</b> Corrida</p>
+						</div>
+						
 						<!-- Div com o intuito-->
 						<div class="intuito d-none d-lg-block">
 							<p><b>Público alvo:</b> Para profissionais</p>
 						</div>
 
 						<!-- Div com o público-->
-						<div class="publico d-none d-lg-block">
+						<div class="intuito d-none d-lg-block">
 							<p><b>Faixa Etária:</b> Acima de 6 anos</p>
 						</div>
 
@@ -407,13 +434,18 @@ if (isset($_POST['emailCampo'])) {
 							Avenida Infante Dom Henrique - Marina da Glória, Rio de Janeiro, RJ, Brasil
 						</p>
 
+						<!-- Div com o Esporte-->
+						<div class="intuito">
+							<p><b>Esporte:</b> Ciclismo</p>
+						</div>
+						
 						<!-- Div com o intuito-->
 						<div class="intuito d-none d-lg-block">
 							<p><b>Público alvo:</b> Para profissionais</p>
 						</div>
-
+ 
 						<!-- Div com o público-->
-						<div class="publico d-none d-lg-block">
+						<div class="intuito d-none d-lg-block">
 							<p><b>Faixa Etária:</b> Acima de 18 anos</p>
 						</div>
 
@@ -460,14 +492,19 @@ if (isset($_POST['emailCampo'])) {
 							</svg>
 							Vila Velha - ES na Praia de Itaparica
 						</p>
-
+						
+						<!-- Div com o Esporte-->
+						<div class="intuito">
+							<p><b>Esporte:</b> Surf</p>
+						</div>
+						
 						<!-- Div com o intuito-->
 						<div class="intuito d-none d-lg-block">
 							<p><b>Público alvo:</b> Treino para amadores</p>
 						</div>
 
 						<!-- Div com o público-->
-						<div class="publico d-none d-lg-block">
+						<div class="intuito d-none d-lg-block">
 							<p><b>Faixa Etária:</b> Acima de 12 anos</p>
 						</div>
 
@@ -513,13 +550,18 @@ if (isset($_POST['emailCampo'])) {
 							Praça Cristóvão Jaques, 189-273 - Santa Helena, Vitória - ES, 29055-070
 						</p>
 
+						<!-- Div com o Esporte-->
+						<div class="intuito">
+							<p><b>Esporte:</b> Basquete</p>
+						</div>
+						
 						<!-- Div com o intuito-->
 						<div class="intuito d-none d-lg-block">
 							<p><b>Público alvo:</b> Treino para amadores</p>
 						</div>
 
 						<!-- Div com o público-->
-						<div class="publico d-none d-lg-block">
+						<div class="intuito d-none d-lg-block">
 							<p><b>Faixa Etária:</b> Acima de 16 anos</p>
 						</div>
 
@@ -564,13 +606,19 @@ if (isset($_POST['emailCampo'])) {
 							</svg>
 							Arena Jacaraípe. Av. Abido Saad, n° 714, Estância Monazítica Município da Serra / ES.
 						</p>
+						
+						<!-- Div com o Esporte-->
+						<div class="intuito">
+							<p><b>Esporte:</b> Motocross</p>
+						</div>
+						
 						<!-- Div com o intuito-->
 						<div class="intuito d-none d-lg-block">
 							<p><b>Público alvo:</b> Para profissionais</p>
 						</div>
 
 						<!-- Div com o público-->
-						<div class="publico d-none d-lg-block">
+						<div class="intuito d-none d-lg-block">
 							<p><b>Faixa Etária:</b> Acima de 18 anos</p>
 						</div>
 

@@ -77,6 +77,11 @@ session_start();
 						</p>
 					</div>
 
+					<!-- Div com o esporte-->
+					<div class="alinhando">
+						<p><b>Esporte:</b> Ciclismo</p>
+					</div>
+ 
 					<!-- Div de localizacao -->
 					<div id="localizacao"><a id="local" href="maps.php">
 							<!-- Icone da localizacao -->
@@ -98,10 +103,7 @@ session_start();
 						<p id="dia">30/06/23 12:00</p>
 					</div>
 
-					<!-- Div com o custo do evento -->
-					<div id="preco">
-						<p id="sifrao"><b>Custo: </b> 130,00 R$</p>
-					</div>
+					
 
 					<!-- Div com o publico-alvo do evento -->
 					<div id="alvo">
@@ -129,7 +131,16 @@ session_start();
 					<div id="organizador">
 						<p id="t_organizador"><b>Evento organizado por: </b> Isadora Ferreira Lima</p>
 					</div>
-
+					
+					<!-- Div com o contato-->
+					<div class="alinhando">
+						<p><b>Contato:</b> (27)98864-2323</p>
+					</div>
+ 
+					<!-- Div com o custo do evento -->
+					<div id="preco">
+						<p id="sifrao"><b>Custo: </b> 130,00 R$</p>
+					</div>
 					<!-- Botao de inscrever-se -->
 					<button class="inscrever fixo" id="etapeRio">
 						<img src="../logos/icon2.png">

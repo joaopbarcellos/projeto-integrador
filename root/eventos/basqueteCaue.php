@@ -71,6 +71,11 @@ session_start();
 						</p>
 					</div>
 
+					<!-- Div com o esporte-->
+					<div class="alinhando">
+						<p><b>Esporte:</b> Basquete</p>
+					</div>
+ 
 					<div id="localizacao"><a id="local" href="maps.php">
 							<svg class="iconezin iconelocev" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512">
 								<path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
@@ -87,11 +92,7 @@ session_start();
 						</svg>
 						<p id="dia">05/07/23 18:00</p><!-- Data do evento -->
 					</div>
-
-					<div id="preco">
-						<p id="sifrao"><b>Custo: </b> Gratuito</p><!-- Custo do evento -->
-					</div>
-
+					
 					<div id="alvo">
 						<p id="publi"><b>Faixa Etária: </b> Acima de 16 anos</p><!-- publico alvo do evento -->
 					</div>
@@ -112,6 +113,15 @@ session_start();
 					</div>
 					<div id="organizador">
 						<p id="t_organizador"><b>Evento organizado por: </b> Gabrielle Castro Lima</p><!-- Criador do evento -->
+					</div>
+					
+					<!-- Div com o contato-->
+					<div class="alinhando">
+						<p><b>Contato:</b> (27)99080-2342</p>
+					</div>
+ 
+					<div id="preco">
+						<p id="sifrao"><b>Custo: </b> Gratuito</p><!-- Custo do evento -->
 					</div>
 					<button class="inscrever fixo" id="basqueteCaue"> <!-- botao de inscrever-se no evento -->
 						<img src="../logos/icon2.png">
