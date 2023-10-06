@@ -49,9 +49,7 @@ create table USUARIO(
  foto varchar(500),
  telefone varchar(12),
  FK_INTUITO_id integer,
- FK_ENDERECO_id integer,
- foreign key (FK_INTUITO_id) references INTUITO(id),
- foreign key (FK_ENDERECO_id) references ENDERECO(id)
+ foreign key (FK_INTUITO_id) references INTUITO(id)
 );
 
 create table IDADE_PUBLICO(
@@ -65,11 +63,13 @@ create table EVENTO(
  nome varchar(100),
  foto varchar(500),
  data date,
+ horario_inicio time,
+ horario_fim time,
  telefone varchar(12),
  min_pessoas integer,
  preco float,
- horario_inicio time,
  max_pessoas integer,
+ visibiliadade_tabela boolean,
  FK_INTUITO_id integer,
  FK_ENDERECO_id integer,
  FK_USUARIO_id integer,
