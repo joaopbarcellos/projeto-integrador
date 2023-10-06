@@ -49,9 +49,7 @@ create table USUARIO(
  foto varchar(500),
  telefone varchar(12),
  FK_INTUITO_id integer,
- FK_ENDERECO_id integer,
- foreign key (FK_INTUITO_id) references INTUITO(id),
- foreign key (FK_ENDERECO_id) references ENDERECO(id)
+ foreign key (FK_INTUITO_id) references INTUITO(id)
 );
 
 create table IDADE_PUBLICO(
