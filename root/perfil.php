@@ -51,7 +51,7 @@ session_start();
 	</label>
 
 	<div id="container">
-		<div class="col-10 col-md-6 col-lg-5 col-xg-3 col-xxl-4" id="alinhar">
+		<div class="col-10 col-lg-5 col-sm-8 col-md-6 col-xg-3 " id="alinhar">
 			<!-- Crio a section com a carteirinha -->
 			<section id="perfil">
 
@@ -59,13 +59,13 @@ session_start();
 				<div class="fot_desc">
 					<div class="row col-12">
 
-						<div class="col-12 col-lg-4 text-center">
+						<div class="col-12 col-lg-3 text-center">
 							<!-- Como padrao o usuario n possui foto -->
-							<img src="img/semfoto.png" id="semfoto"></img>
+							<div class="mx-auto" id="semfoto"></div>
 						</div>
-						<div class="col-12 col-lg-8 ">
+						<div class="col-12 col-lg-9 ">
 							<!-- Crio a div pra inserir os dados -->
-							<div class="dados">
+							<div class="dados ms-lg-0">
 
 								<!-- Crio a div do nome -->
 								<div class="info">
@@ -119,10 +119,10 @@ session_start();
 				<!-- Crio o rodape da carteirinha com logo e hashtag -->
 				<div id="hashtag">
 
+					<img src="logos/icon2.png" id="logo_cart"></img>
 					<p class=" word-break" id="sloganperfil">#AlwaysInMovement</p>
 
-					<img src="logos/icon2.png" id="logo_cart"></img>
-
+					<label class="word-break" id="qualidade"></label>
 				</div>
 
 				<!-- Fecho a section com a carteirinha -->

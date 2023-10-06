@@ -41,6 +41,7 @@
   --textoalerta: #545454;
   --fundoalerta: #ffffff;
   --colmyeve: #145374;
+  --fotosemperfil: url('../img/semfoto.png');
   --colmyevehover: rgb(16, 44, 82);
   --bgmyeve: #a8c5d3;
   --btncad: #057dc2;
@@ -54,6 +55,7 @@
 [data-theme="black"] {
   --body_grad: linear-gradient(to top right, #7c36a8, #045c8f);
   --azul_princ: #045c8f;
+  --fotosemperfil: url('../img/semfoto2.png');
   --sombraalterakey: 0px 0px 19px 3px #000000;
   --textoalerta: #ffffff;
   --fundoalerta: #113041;

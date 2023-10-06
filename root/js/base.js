@@ -29,6 +29,7 @@ function send(tag) {
   tag.value = "";
 }
 
+// Funcao pra validar o numero do endereco
 export function validarNumeroEndereco(valorCampo, mensagemErro) {
   if (!valorCampo) {
     return mensagemErro;
@@ -36,6 +37,28 @@ export function validarNumeroEndereco(valorCampo, mensagemErro) {
   return true;
 }
 
+// Funcao pra validar se tem algum numero no nome
+export function validarSeNomeTemNumero(valorCampo, mensagemErro){
+  const regex = /[0-9]/;
+  if(regex.test(valorCampo)) return true;
+  return mensagemErro;
+}
+
+// Funcao pra validar se tem caracter especial no nome
+export function validarSeNomeTemCaracterEspecial(valorCampo, mensagemErro){
+  const regex = /[!@#$%¨&*()-_=+§{}°?ªº|<>,.~^`]/;
+  if(regex.test(valorCampo)) return true;
+  return mensagemErro;
+}
+
+// Funcao pra validar se nome tem caracter valido
+export function validarSeNomeTemCaracterValido(valorCampo, mensagemErro){
+  let valor = valorCampo.replace(/[!@#$%¨&*()-_=+§{}°?ªº|<>,.~^`]/g, "").replace(" ", "");
+  if (isNaN(valor)) return true;
+  return mensagemErro;
+}
+
+// Funcao pra validar um numero
 export function validarNumero(valorCampo, mensagemErro) {
   if (!valorCampo || isNaN(valorCampo)) {
     return mensagemErro;
@@ -51,6 +74,7 @@ if (enviaEmail) {
     send(document.querySelector("#email"));
   });
 }
+
 if (caixa_email) {
   // Enviar email do footer
   caixa_email.addEventListener("keypress", (event) => {

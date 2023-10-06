@@ -27,6 +27,9 @@ if (!usuarioLogado) {
   // Pegando o telefone do usuario logado e colocando no label
   document.querySelector("#telefone_usuario").textContent = dados["telefone"];
 
+  // Pegando o intuito do usuario logado e colocando no label
+  document.querySelector("#qualidade").textContent = dados["jogabilidade"];
+
   // Pegando a data de nascimento do usuario logado e colocando no label
   let data =
     dados["dataNasc"].substring(8, 10) +

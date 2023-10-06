@@ -5,7 +5,7 @@ const form = document.getElementById("multistepform");
 const steps = form.querySelectorAll(".step");
 const nextBtns = form.querySelectorAll(".next-btn");
 const prevBtns = form.querySelectorAll(".prev-btn");
-let currentStep = 2;
+let currentStep = 0;
 
 // Pegando o email do usuario logado
 const email = document.querySelector(".paragrafo").value;
@@ -42,11 +42,8 @@ selectGratuito.addEventListener("change", () => {
 // Campo nome do evento
 function validarNomeEvento() {
   const nomeEvento = document.querySelector("#nomeEvento");
-
-  if (!nomeEvento.value) {
-    // Adicionar a exclamação (!) antes pra funcionar
-    return "nome do evento";
-  }
+  if (!nomeEvento.value) return "nome do evento";
+  if (!base.validarSeNomeTemCaracterValido(nomeEvento.value, false)) return "nome do evento";
   return true;
 }
 

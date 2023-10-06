@@ -112,10 +112,12 @@ function autenticar() {
     });
   }
 }
-
+ 
 function verificaTudo() {
   // Verificando se o campo de nome e vazio
   let verificaNome = base.verificaCampoVazio(campoNome, labelNome, noNome);
+  if (verificaNome) verificaNome = base.validarSeNomeTemNumero(campoNome.value, false);
+  if (verificaNome) verificaNome = base.validarSeNomeTemCaracterEspecial(campoNome.value, false);
 
   // Verificando se o campo de email e vazio
   let verificaEmail = base.verificaCampoVazio(

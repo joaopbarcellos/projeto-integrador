@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Asap+Condensed&family=Dela+Gothic+One&display=swap');
+
 /* Adiciono a cor do link, retiro sua sombra e coloco o fundo branco atras */
 #perfila {
   color: var(--azul_sec) !important;
@@ -40,9 +42,11 @@
 
 /* edito a foto */
 #semfoto {
+  width: 8rem;
   height: 8rem;
-  width: auto;
-  margin: 20px;
+  margin-top: 20px;
+  background-image: var(--fotosemperfil);
+  background-size: auto 8rem;
 }
 
 /* deixo quebrar as letras quando nao couber no espaco horizontal */
@@ -82,7 +86,14 @@
   display: flex;
   align-items: center;
   padding: 30px;
+  padding-bottom: 20px;
   padding-top: 0 !important;
+}
+
+#qualidade{
+  font-family: 'Acme', sans-serif;
+  font-size: 1.3rem;
+  color: #145374;
 }
 
 /* Retirando espacamento */
