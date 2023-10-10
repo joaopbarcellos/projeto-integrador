@@ -87,3 +87,24 @@ localStorage.setItem(
   "motocrossArena",
   '{"0":-20.144511854276182, "1": -40.18332926312631}'
 );
+
+jQuery(document).ready(function($) {
+  $(".owl-carousel").owlCarousel({
+    center: true,
+    loop: true,
+    margin: 10,
+    nav: true,
+    items: 3,
+    responsive:{
+      0:{
+        items: 1
+      },
+      600:{
+        items: 2
+      },
+      1000:{
+        items: 3
+      }
+    }
+  });
+});

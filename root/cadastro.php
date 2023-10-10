@@ -41,7 +41,7 @@
     <!-- Div para estilizar o formulário -->
     <div class="formulario">
       <!-- Criando fomulário de Cadastro -->
-      <form method="post" action="enviarDadosCadastro.php">
+      <form method="post" action="conexaoBancoDados/registrar.php">
         <legend class="p-3 text-center fs-1">Cadastro</legend>
 
         <!-- Nome do usuário -->
@@ -146,21 +146,21 @@
             <div class="radios">
               <!-- Profissional-->
               <div class="radio profissa">
-                <input type="radio" id="Profissional" name="jogabilidade" class="bolaRadio" tabindex="6" />
+                <input type="radio" id="Profissional" name="jogabilidade" class="bolaRadio" name="intuito" tabindex="6" />
 
                 <label class="jogabilidades" for="Profissional">5 ou mais vezes por semana</label>
               </div>
 
               <!-- Amador -->
               <div class="radio amad">
-                <input type="radio" id="Amador" name="jogabilidade" class="bolaRadio" tabindex="7" />
+                <input type="radio" id="Amador" name="jogabilidade" class="bolaRadio" name="intuito" tabindex="7" />
 
                 <label class="jogabilidades" for="Amador">De 2 a 4 vezes por semana</label>
               </div>
 
               <!--Iniciante -->
               <div class="radio inic">
-                <input type="radio" id="Iniciante" name="jogabilidade" class="bolaRadio" tabindex="8" />
+                <input type="radio" id="Iniciante" name="jogabilidade" class="bolaRadio" name="intuito" tabindex="8" />
 
                 <label class="jogabilidades" for="Iniciante">No máximo 1 vez por semana</label>
               </div>
@@ -176,6 +176,9 @@
 
           <!-- Fim da div joga -->
         </div>
+        <button type="submit" class="btn-cadastra mb-4 mt-3 p-2 rounded-3">
+        CADASTRAR
+      </button>
       </form>
 
       <!-- Botão para cadastrar usuário, está fora do form para não resetar a página ao clicar-->

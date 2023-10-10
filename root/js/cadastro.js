@@ -102,6 +102,7 @@ function autenticar() {
     // Salvando os dados no localStorage
     salvar(email, stringJSON);
 
+    
     // Alerta de conta cadastrada
     Swal.fire({
       icon: "success",
@@ -137,10 +138,11 @@ function verificaTudo() {
     );
   }
 
-  if (verificaEmail) {
+  // if (verificaEmail) {
     // Verificando se o email ja foi cadastrado antes
-    verificaEmail = base.emailIgual(campoEmail, noEmailExiste, true);
-  }
+    // verificaEmail = base.emailIgual(campoEmail, noEmailExiste, true);
+  // }
+
   // Verificando se o campo de senha e vazio
   let verificaSenha = base.verificaCampoVazio(
     campoSenha,

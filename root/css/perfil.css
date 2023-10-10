@@ -275,3 +275,25 @@
 .telefone {
   margin-bottom: 0 !important;
 }
+
+
+
+/* Ajustando tamanho da div */
+@media (min-width: 1395px) and (max-width: 10000px) {
+  #alinhar {
+    width: 570px !important;
+  }
+}
+
+
+/* Ajustando tamanho da div */
+@media (min-width: 1216px) and (max-width: 10000px) {
+  .foto {
+    width: 30% !important;
+  }
+
+  .todosdados{
+    width: 70% !important;
+  }
+}
+

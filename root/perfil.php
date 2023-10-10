@@ -51,7 +51,7 @@ session_start();
 	</label>
 
 	<div id="container">
-		<div class="col-10 col-lg-5 col-sm-8 col-md-6 col-xg-3 " id="alinhar">
+		<div class="col-10 col-lg-5 col-sm-8 col-md-5" id="alinhar">
 			<!-- Crio a section com a carteirinha -->
 			<section id="perfil">
 
@@ -59,11 +59,11 @@ session_start();
 				<div class="fot_desc">
 					<div class="row col-12">
 
-						<div class="col-12 col-lg-3 text-center">
+						<div class="col-12 col-lg-4 text-center foto">
 							<!-- Como padrao o usuario n possui foto -->
 							<div class="mx-auto" id="semfoto"></div>
 						</div>
-						<div class="col-12 col-lg-9 ">
+						<div class="col-12 col-lg-8 todosdados">
 							<!-- Crio a div pra inserir os dados -->
 							<div class="dados ms-lg-0">
 
