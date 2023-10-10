@@ -89,22 +89,53 @@ localStorage.setItem(
 );
 
 jQuery(document).ready(function($) {
-  $(".owl-carousel").owlCarousel({
+  var owl = $(".owl-carousel").owlCarousel({
     center: true,
     loop: true,
     margin: 10,
-    nav: true,
+    nav: false,
     items: 3,
-    responsive:{
-      0:{
+    autoplay: true,
+    autoplayTimeout: 7000,
+    autoplaySpeed: 1500,
+    responsive: {
+      0: {
         items: 1
       },
-      600:{
+      600: {
         items: 2
       },
-      1000:{
+      1000: {
         items: 3
       }
+    },
+    onInitialized: function(event) {
+      updateDotsOpacity(event.item.index, event.item.count);
+    },
+    onChanged: function(event) {
+      updateDotsOpacity(event.item.index, event.item.count);
     }
   });
+
+  function updateDotsOpacity(currentIndex, itemCount) {
+    $(".custom-dot").removeClass("active");
+    $(".custom-dot[data-dot-index='" + (currentIndex - 3) + "']").addClass("active");
+  }
+
+  $(".custom-dot").on("click", function() {
+    var dotIndex = $(this).data("dot-index");
+    owl.trigger("to.owl.carousel", [dotIndex, 300]);
+  });
+
+  $(".custom-prev").on("click", function() {
+    owl.trigger("prev.owl.carousel");
+  });
+  
+  $(".custom-next").on("click", function() {
+    owl.trigger("next.owl.carousel");
+  });
+  var slideHeight = $(".owl-carousel .item").height();
+  var slideTop = $(".owl-carousel .item").offset().top;
+  var arrowTopPosition = slideTop + (slideHeight / 2) - ($(".custom-prev").height() / 2);
+  $(".custom-prev, .custom-next").css("top", arrowTopPosition + 30);
 });

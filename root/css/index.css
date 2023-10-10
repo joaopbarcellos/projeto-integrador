@@ -135,3 +135,46 @@ button:focus {
   margin-bottom: 10%;
   text-align: center;
 }
+
+.custom-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.custom-dot {
+  display: inline-block;
+  width: 30px;
+  height: 5px;
+  background-color: var(--ciano);
+  margin: 0 5px;
+  cursor: pointer;
+  border: 0;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.custom-dot.active {
+  opacity: 1;
+}
+
+.custom-carousel {
+  position: relative;
+}
+
+.custom-prev,
+.custom-next {
+  position: absolute;
+  transform: translateY(-50%);
+  z-index: 2;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.custom-prev {
+  left: 0;
+}
+
+.custom-next {
+  right: 0;
+}

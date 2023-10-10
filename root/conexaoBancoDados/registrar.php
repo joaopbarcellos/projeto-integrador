@@ -10,8 +10,9 @@ $resposta = array();
 
 require_once('conexao_db.php');
 
-if (isset($_POST['nomeCampo'])){
-	echo $_POST['nomeCampo'];
+if (isset($_POST['intuito'])){
+    echo "aaa";
+	echo $_POST['intuito'];
 }
 
 
@@ -25,7 +26,6 @@ if (isset($_POST['emailCampo']) && isset($_POST['dataCampo']) && isset($_POST['n
 	$intuito = trim($_POST['intuito']);
 	$telefone = trim($_POST['telefoneCampo']);
 
-	echo $nome;
 	// o bd não armazena diretamente a senha do usuário, mas sim 
 	// um código hash que é gerado a partir da senha.
 	$token = password_hash($senha, PASSWORD_DEFAULT);
@@ -82,7 +82,7 @@ if (isset($_POST['emailCampo']) && isset($_POST['dataCampo']) && isset($_POST['n
 				// se houve erro na consulta, indicamos que não houve sucesso
 				// na operação e o motivo no campo de erro.
 				$resposta["sucesso"] = 0;
-				$resposta["erro"] = "erro BD: " . $consulta->error;
+				$resposta["erro"] = "erro BD: " . $consulta->$error;
 			}
 		}
 	}
@@ -100,5 +100,6 @@ $db_con = null;
 
 // converte o array de resposta em uma string no formato JSON e 
 // imprime na tela.
+echo $resposta;
 echo json_encode($resposta);
 ?>

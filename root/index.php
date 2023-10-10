@@ -103,31 +103,47 @@ if (isset($_POST['emailCampo'])) {
 	</header> <!-- Fechando header -->
 
 	<div class="owl-carousel">
-  <div class="item">
-    <img src="img/12.png" alt="Surf - Praia de Itaparica">
-    <div class="carousel-caption">
-      <h3>Surf - Praia de Itaparica</h3>
-      <p>Surf na cidade de Vila Velha - ES na Praia de Itaparica</p>
-      <button class="sabermais slide sb-slide" id="surfItaparica"><span>Saber Mais</span></button>
-    </div>
-  </div>
-  <div class="item">
-    <img src="img/13.png" alt="Basquete - Praça do Cauê">
-    <div class="carousel-caption">
-      <h3>Basquete - Praça do Cauê</h3>
-      <p>Basquete na cidade de Vitória - ES na Praça do Cauê, perto da Terceira Ponte</p>
-      <button class="sabermais sb-slide slide" id="basqueteCaue"><span>Saber Mais</span></button>
-    </div>
-  </div>
-  <div class="item">
-    <img src="img/14.png" alt="Motocross - Arena Capixaba de Verão">
-    <div class="carousel-caption">
-      <h3>Motocross - Arena Capixaba de Verão</h3>
-      <p>Motocross no Espírito Santo na Arena Capixaba de Verão</p>
-      <button class="sabermais sb-slide slide" id="motocrossArena"><span class="p-0 p-md-1">Saber Mais</span></button>
-    </div>
-  </div>
-</div>
+  		<div class="item">
+    		<img src="img/12.png" alt="Surf - Praia de Itaparica">
+    		<div class="carousel-caption">
+				<h3>Surf - Praia de Itaparica</h3>
+				<p>Surf na cidade de Vila Velha - ES na Praia de Itaparica</p>
+				<button class="sabermais slide sb-slide" id="surfItaparica"><span>Saber Mais</span></button>
+    		</div>
+  		</div>
+
+		<div class="item">
+			<img src="img/13.png" alt="Basquete - Praça do Cauê">
+			<div class="carousel-caption">
+				<h3>Basquete - Praça do Cauê</h3>
+				<p>Basquete na cidade de Vitória - ES na Praça do Cauê, perto da Terceira Ponte</p>
+				<button class="sabermais sb-slide slide" id="basqueteCaue"><span>Saber Mais</span></button>
+			</div>
+		</div>
+		<div class="item">
+			<img src="img/14.png" alt="Motocross - Arena Capixaba de Verão">
+			<div class="carousel-caption">
+				<h3>Motocross - Arena Capixaba de Verão</h3>
+				<p>Motocross no Espírito Santo na Arena Capixaba de Verão</p>
+				<button class="sabermais sb-slide slide" id="motocrossArena"><span class="p-0 p-md-1">Saber Mais</span></button>
+			</div>
+		</div>
+	</div>
+	<div class="custom-nav">
+		<button class="custom-prev" type="button">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		</button>
+		<button class="custom-next" type="button">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		</button>
+	</div>
+	<div class="custom-dots">
+		<button class="custom-dot" data-dot-index="0"></button>
+  		<button class="custom-dot" data-dot-index="1"></button>
+  		<button class="custom-dot" data-dot-index="2"></button>
+	</div>
 
 	<!-- Section que carrega todas as div eventos -->
 	<section class="conteudo col-11 m-auto">
