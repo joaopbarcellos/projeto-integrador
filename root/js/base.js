@@ -507,11 +507,9 @@ export function barraVazia(lista_conteudo, home = false) {
   // Funcao chamada quando a barra de pesquisa ficar vazia
   if (home) {
     // Se a funcao foi chamada na tela principal
-    let divSlides = document.querySelector(".carousel-inner");
-    let divDots = document.querySelector(".carousel-indicators");
+    let divSlides = document.querySelector(".owl-carousel");
     // Mostrando os slides e seus complementos
     divSlides.style.display = "block";
-    divDots.style.display = "flex";
   }
   // Mostrando todos os eventos
   lista_conteudo.forEach((conteudo) => {
@@ -538,11 +536,9 @@ export function pesquisar(lista_conteudo, barra_pesquisa, home = false) {
     // Se o valor nao for vazio
     if (home) {
       // Se essa funcao foi chamada na tela principal
-      let divSlides = document.querySelector(".carousel-inner");
-      let divDots = document.querySelector(".carousel-indicators");
+      let divSlides = document.querySelector(".owl-carousel");
       // Escondendo os slides e seus complementos
       divSlides.style.display = "none";
-      divDots.style.display = "none";
     }
     // Percorrendo por todos os eventos
     lista_conteudo.forEach((conteudo) => {

@@ -108,7 +108,7 @@ jQuery(document).ready(function($) {
     items: 3,
     autoplay: true,
     autoplayTimeout: 7000,
-    autoplaySpeed: 1500,
+    autoplaySpeed: 2000,
     responsive: {
       0: {
         items: 1

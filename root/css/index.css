@@ -15,7 +15,6 @@
   left: 80%;
 }
 
-
 /* Aplicando tamanho, posição, cor, sombra, borda, posicionamento, cursor e tirando coportamento da borda*/
 input {
   height: 50px;
@@ -34,24 +33,10 @@ button:focus {
   outline: none;
 }
 
-/* colocando margins nas cetinhas */
-.carousel-indicators {
-  top: 57%;
-  margin-top: 10px;
-  margin-bottom: 10px !important;
-  position: relative !important;
-}
-
-/* mudando cor de fundo */
-.carousel-indicators [data-bs-target] {
-  background-color: var(--ciano) !important;
-}
-
 /* colocando espacamento no primeiro evento */
 .primeiro {
   margin-top: 0 !important;
 }
-
 
 .slideh3{
   background: rgba(40, 65, 116, 0.24);
@@ -60,13 +45,20 @@ button:focus {
   backdrop-filter: blur(4.9px);
   -webkit-backdrop-filter: blur(4.9px);
   border: 1px solid rgba(40, 65, 116, 0.3);
+
+  padding: 8px;
+
   font-size: 20px;
+  margin-top: 8px;
+  width: auto !important;
+  display: inline-block;
 }
 
 .carousel-caption{
-  padding-bottom: 0 !important
+  padding: 0 !important;
+  left:20% !important;
+  right: 20% !important;
 }
-
 
 /* adiciono espacamento no carousel */
 .carousel-inner {
@@ -91,7 +83,6 @@ button:focus {
   margin-bottom: 10%;
   text-align: center;
 }
-
 
 .custom-prev,
 .custom-next {
