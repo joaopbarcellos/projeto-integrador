@@ -11,7 +11,7 @@ $resposta = array();
 require_once('conexao_db.php');
 
 if (isset($_POST['intuito'])){
-    echo "aaa";
+    echo PHP_VERSION;
 	echo $_POST['intuito'];
 }
 

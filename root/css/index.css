@@ -15,15 +15,6 @@
   left: 80%;
 }
 
-/* Definindo tamanho,posição e flexbox */
-.container {
-  width: 100%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-}
 
 /* Aplicando tamanho, posição, cor, sombra, borda, posicionamento, cursor e tirando coportamento da borda*/
 input {
@@ -61,56 +52,21 @@ button:focus {
   margin-top: 0 !important;
 }
 
-/* ao ter hover, o fundotexto aparece */
-.active:hover .fundoTexto {
-  opacity: 1;
+
+.slideh3{
+  background: rgba(40, 65, 116, 0.24);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.9px);
+  -webkit-backdrop-filter: blur(4.9px);
+  border: 1px solid rgba(40, 65, 116, 0.3);
+  font-size: 20px;
 }
 
-/* Aplicando cor, posição e fonte */
-.titul {
-  color: var(--branco);
-  position: absolute;
-  top: 30px;
-  left: 15px;
-  font-size: 1.7rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-shadow: black 0.1em 0.1em 0.2em;
+.carousel-caption{
+  padding-bottom: 0 !important
 }
 
-/* Aplicando display, tamanho, posição, cor, borda e transição */
-.fundoTexto {
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  box-sizing: border-box;
-  width: 100%;
-  min-height: 60px;
-  height: 11%;
-  text-align: center;
-  padding: 12px;
-  position: absolute;
-  bottom: 0px;
-  background-color: var(--fundotext);
-}
-
-/* Aplicando cor, fonte, tamanho e alinhamento */
-.text {
-  color: var(--branco);
-  font-size: 1rem;
-  width: 100%;
-  text-align: left;
-}
-
-/* edito o slide com tamanhos, font e posicionamento */
-.sb-slide {
-  height: 100% !important;
-  min-height: 30px;
-  font-size: 100%;
-  left: 0 !important;
-  width: 200px !important;
-}
 
 /* adiciono espacamento no carousel */
 .carousel-inner {
@@ -136,30 +92,6 @@ button:focus {
   text-align: center;
 }
 
-.custom-dots {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.custom-dot {
-  display: inline-block;
-  width: 30px;
-  height: 5px;
-  background-color: var(--ciano);
-  margin: 0 5px;
-  cursor: pointer;
-  border: 0;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-}
-
-.custom-dot.active {
-  opacity: 1;
-}
-
-.custom-carousel {
-  position: relative;
-}
 
 .custom-prev,
 .custom-next {

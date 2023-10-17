@@ -12,6 +12,17 @@ btns.forEach((btn) => {
   });
 });
 
+// Pegando todos os botoes para ir para o evento
+const eventoSlide = document.querySelectorAll(".item");
+
+// Percorrendo todos os botoes
+eventoSlide.forEach((ev) => {
+  // Adicionando um EventListener em cada um
+  ev.addEventListener("click", () => {
+    window.location.assign(`eventos/${ev.id}.php`);
+  });
+});
+
 const barra_pesquisa = document.querySelector("#busca");
 // Pegando a barra de pesquisa
 
@@ -108,19 +119,9 @@ jQuery(document).ready(function($) {
       1000: {
         items: 3
       }
-    },
-    onInitialized: function(event) {
-      updateDotsOpacity(event.item.index, event.item.count);
-    },
-    onChanged: function(event) {
-      updateDotsOpacity(event.item.index, event.item.count);
     }
   });
-
-  function updateDotsOpacity(currentIndex, itemCount) {
-    $(".custom-dot").removeClass("active");
-    $(".custom-dot[data-dot-index='" + (currentIndex - 3) + "']").addClass("active");
-  }
+    
 
   $(".custom-dot").on("click", function() {
     var dotIndex = $(this).data("dot-index");
@@ -130,10 +131,11 @@ jQuery(document).ready(function($) {
   $(".custom-prev").on("click", function() {
     owl.trigger("prev.owl.carousel");
   });
-  
+
   $(".custom-next").on("click", function() {
     owl.trigger("next.owl.carousel");
   });
+
   var slideHeight = $(".owl-carousel .item").height();
   var slideTop = $(".owl-carousel .item").offset().top;
   var arrowTopPosition = slideTop + (slideHeight / 2) - ($(".custom-prev").height() / 2);

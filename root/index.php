@@ -1,59 +1,3 @@
-<!-- <div id="carouselExampleInterval" class="carousel slide d-none d-md-block col-9 col-md-8 col-lg-5 m-auto" data-bs-ride="carousel">
-
-	<div class="carousel-inner">
-		<div class="carousel-item active" data-bs-interval="7000" data-bs-pause="true">
-			<img src="img/12.png" class="d-block w-100" alt="...">
-
-			<div class="titul"><b>Surf - Praia de Itaparica</b></div>
-
-			<div class="fundoTexto">
-				<div class="text">Surf na cidade de Vila Velha - ES na Praia de Itaparica</div>
-				<button class="sabermais slide sb-slide" id="surfItaparica"><span>Saber Mais</span></button>
-			</div>
-		</div>
-
-		<div class="carousel-item" data-bs-interval="7000" data-bs-pause="true">
-			<img src="img/13.png" class="d-block w-100" alt="...">
-			<div class="titul"><b>Basquete - Praça do Cauê</b></div>
-
-			<div class="fundoTexto">
-
-				<div class="text">Basquete na cidade de Vitória - ES na Praça do Cauê, perto da Terceira Ponte</div>
-				<button class="sabermais sb-slide slide" id="basqueteCaue"><span>Saber Mais</span></button>
-			</div>
-		</div>
-
-		<div class="carousel-item" data-bs-interval="7000" data-bs-pause="true">
-			<img src="img/14.png" class="d-block w-100" alt="...">
-			<div class="titul"><b>Motocross - Arena Capixaba de Verão</b></div>
-
-			<div class="fundoTexto">
-
-				<div class="text">Motocross no Espírito Santo na Arena Capixaba de Verão</div>
-
-				<button class="sabermais sb-slide slide" id="motocrossArena"><span class="p-0 p-md-1">Saber
-						Mais</span></button>
-			</div>
-		</div>
-		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Previous</span>
-		</button>
-
-		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Next</span>
-		</button>
-	</div>
-	<div class="carousel-indicators">
-		<button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-		<button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="1" aria-label="Slide 2"></button>
-		<button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="2" aria-label="Slide 3"></button>
-	</div>
-
-
-</div> -->
-
 <?php
 session_start();
 if (isset($_POST['emailCampo'])) {
@@ -103,29 +47,23 @@ if (isset($_POST['emailCampo'])) {
 	</header> <!-- Fechando header -->
 
 	<div class="owl-carousel">
-  		<div class="item">
+  		<div class="item" id="surfItaparica">
     		<img src="img/12.png" alt="Surf - Praia de Itaparica">
     		<div class="carousel-caption">
-				<h3>Surf - Praia de Itaparica</h3>
-				<p>Surf na cidade de Vila Velha - ES na Praia de Itaparica</p>
-				<button class="sabermais slide sb-slide" id="surfItaparica"><span>Saber Mais</span></button>
+				<h3 class="slideh3">Surf - Praia de Itaparica</h3>
     		</div>
   		</div>
 
-		<div class="item">
+		<div class="item" id="basqueteCaue">
 			<img src="img/13.png" alt="Basquete - Praça do Cauê">
 			<div class="carousel-caption">
-				<h3>Basquete - Praça do Cauê</h3>
-				<p>Basquete na cidade de Vitória - ES na Praça do Cauê, perto da Terceira Ponte</p>
-				<button class="sabermais sb-slide slide" id="basqueteCaue"><span>Saber Mais</span></button>
+				<h3 class="slideh3">Basquete - Praça do Cauê</h3>
 			</div>
 		</div>
-		<div class="item">
+		<div class="item" id="motocrossArena">
 			<img src="img/14.png" alt="Motocross - Arena Capixaba de Verão">
 			<div class="carousel-caption">
-				<h3>Motocross - Arena Capixaba de Verão</h3>
-				<p>Motocross no Espírito Santo na Arena Capixaba de Verão</p>
-				<button class="sabermais sb-slide slide" id="motocrossArena"><span class="p-0 p-md-1">Saber Mais</span></button>
+				<h3 class="slideh3">Motocross de Verão</h3>
 			</div>
 		</div>
 	</div>
@@ -138,11 +76,6 @@ if (isset($_POST['emailCampo'])) {
 			<span class="carousel-control-next-icon" aria-hidden="true"></span>
 			<span class="visually-hidden">Next</span>
 		</button>
-	</div>
-	<div class="custom-dots">
-		<button class="custom-dot" data-dot-index="0"></button>
-  		<button class="custom-dot" data-dot-index="1"></button>
-  		<button class="custom-dot" data-dot-index="2"></button>
 	</div>
 
 	<!-- Section que carrega todas as div eventos -->
