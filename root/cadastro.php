@@ -146,21 +146,21 @@
             <div class="radios">
               <!-- Profissional-->
               <div class="radio profissa">
-                <input type="radio" id="Profissional" name="intuito" class="bolaRadio" tabindex="6" />
+                <input type="radio" id="Profissional" name="intuito" class="bolaRadio" value="2" tabindex="6" />
 
                 <label class="jogabilidades" for="Profissional">5 ou mais vezes por semana</label>
               </div>
 
               <!-- Amador -->
               <div class="radio amad">
-                <input type="radio" id="Amador" name="intuito" class="bolaRadio" tabindex="7" />
+                <input type="radio" id="Amador" name="intuito" class="bolaRadio" value="3" tabindex="7" />
 
                 <label class="jogabilidades" for="Amador">De 2 a 4 vezes por semana</label>
               </div>
 
               <!--Iniciante -->
               <div class="radio inic">
-                <input type="radio" id="Iniciante" name="intuito" class="bolaRadio" tabindex="8" />
+                <input type="radio" id="Iniciante" name="intuito" class="bolaRadio" value="1" tabindex="8" />
 
                 <label class="jogabilidades" for="Iniciante">No máximo 1 vez por semana</label>
               </div>

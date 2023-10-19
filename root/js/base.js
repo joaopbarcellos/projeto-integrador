@@ -510,6 +510,7 @@ export function barraVazia(lista_conteudo, home = false) {
     let divSlides = document.querySelector(".owl-carousel");
     // Mostrando os slides e seus complementos
     divSlides.style.display = "block";
+    document.querySelector(".custom-nav").style.display = "block";
   }
   // Mostrando todos os eventos
   lista_conteudo.forEach((conteudo) => {
@@ -539,6 +540,7 @@ export function pesquisar(lista_conteudo, barra_pesquisa, home = false) {
       let divSlides = document.querySelector(".owl-carousel");
       // Escondendo os slides e seus complementos
       divSlides.style.display = "none";
+      document.querySelector(".custom-nav").style.display = "none";
     }
     // Percorrendo por todos os eventos
     lista_conteudo.forEach((conteudo) => {

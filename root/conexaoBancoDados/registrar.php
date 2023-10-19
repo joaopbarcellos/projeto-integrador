@@ -11,10 +11,8 @@ $resposta = array();
 require_once('conexao_db.php');
 
 if (isset($_POST['intuito'])){
-    echo PHP_VERSION;
 	echo $_POST['intuito'];
 }
-
 
 // verifica se todos os campos necessários foram enviados ao servidor
 if (isset($_POST['emailCampo']) && isset($_POST['dataCampo']) && isset($_POST['nomeCampo']) && isset($_POST['senhaCampo']) && isset($_POST['intuito']) && isset($_POST['telefoneCampo'])) {
@@ -28,11 +26,12 @@ if (isset($_POST['emailCampo']) && isset($_POST['dataCampo']) && isset($_POST['n
 
 	// o bd não armazena diretamente a senha do usuário, mas sim 
 	// um código hash que é gerado a partir da senha.
-	$token = password_hash($senha, PASSWORD_DEFAULT);
+	//$token = password_hash($senha, PASSWORD_DEFAULT);
+	$token = $senha;
 	
 	// antes de registrar o novo usuário, verificamos se ele já
 	// não existe.
-	$consulta_usuario_existe = $db_con->prepare("SELECT email FROM usuarios WHERE email='$email'");
+	$consulta_usuario_existe = $db_con->prepare("SELECT email FROM usuario WHERE email='$email'");
 	$consulta_usuario_existe->execute();
 	if ($consulta_usuario_existe->rowCount() > 0) { 
 		// se já existe um usuario para login
@@ -73,7 +72,7 @@ if (isset($_POST['emailCampo']) && isset($_POST['dataCampo']) && isset($_POST['n
 		}
 		if($verifica){
 			// se o usuário ainda não existe, inserimos ele no bd.
-			$consulta = $db_con->prepare("INSERT INTO usuarios(nome, email, token, data_nascimento, telefone, foto, FK_INTUITO_id) VALUES('$nome', '$email', '$token', '$data', '$telefone', 'foto.png', '$intuito')");
+			$consulta = $db_con->prepare("INSERT INTO usuario(nome, email, token, data_nascimento, telefone, foto, FK_INTUITO_id) VALUES('$nome', '$email', '$token', '$data,', '$telefone', 'semfoto.png', '$intuito')");
 			if ($consulta->execute()) {
 				// se a consulta deu certo, indicamos sucesso na operação.
 				$resposta["sucesso"] = 1;
