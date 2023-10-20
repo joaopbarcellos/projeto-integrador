@@ -42,7 +42,7 @@
 			<div class="col-lg-3 col-md-6 col-sm-11 mx-auto footer-block pt-5" id="footer_contacts">
 				<!-- Logoe slogan da marca -->
 				<a href="#" id="foot">
-					<img src="<?php echo $rootDir . 'root/logos/9.png'; ?>" id="logofoot"></img>
+					<img src="<?php echo $rootDir . '/root/logos/9.png'; ?>" id="logofoot"></img>
 					<a>
 						<p id="slogan">Always in movement</p>
 
@@ -52,21 +52,21 @@
 							<!-- link para nosso instagram -->
 							<a href="https://www.instagram.com/timein.aim/" target="_blank" class="links footer-link" id="instagram">
 
-								<img class="icone" src="<?php echo $rootDir . 'root/img/insta2.png'; ?>">
+								<img class="icone" src="<?php echo $rootDir . '/root/img/insta2.png'; ?>">
 
 							</a>
 
 							<!-- link para nosso face -->
 							<a href="https://www.facebook.com/profile.php?id=100091952533773" target="_blank" class="links footer-link" id="facebook">
 
-								<img class="icone" src="<?php echo $rootDir . 'root/img/face.png'; ?>">
+								<img class="icone" src="<?php echo $rootDir . '/root/img/face.png'; ?>">
 
 							</a>
 
 							<!-- link para nosso twitter -->
 							<a href="https://twitter.com/TimeIn2000" target="_blank" class="links footer-link" id="whatsapp">
 
-								<img class="icone" src="<?php echo $rootDir . 'root/img/twitter.png'; ?>">
+								<img class="icone" src="<?php echo $rootDir . '/root/img/twitter.png'; ?>">
 
 							</a>
 
