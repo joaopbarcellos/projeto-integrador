@@ -176,9 +176,6 @@
 
           <!-- Fim da div joga -->
         </div>
-        <button type="submit" class="btn-cadastra mb-4 mt-3 p-2 rounded-3">
-        CADASTRAR
-      </button>
       </form>
 
       <!-- Botão para cadastrar usuário, está fora do form para não resetar a página ao clicar-->

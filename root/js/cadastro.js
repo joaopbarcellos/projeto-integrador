@@ -73,36 +73,6 @@ function autenticar() {
 
   // Verificando se todos os campos sao validos
   if (verificaTudo()) {
-    // Valor da data de nascimento
-    let dataNasc = campoData.value;
-    let telefone = campoTelefone.value;
-    // Valor do nome
-    let nome = campoNome.value;
-    // Valor da tipo do jogador
-    let jogabilidade = base.jogabilidadeMarcada();
-
-    // Valor do email
-    let email = campoEmail.value.toLowerCase();
-
-    // Valores de senha
-    let senha = campoSenha.value;
-
-    // Verificando se o email ja foi cadastrado
-    let stringJSON = {
-      email: email,
-      nome: nome,
-      telefone: telefone,
-      dataNasc: dataNasc,
-      senha: senha,
-      jogabilidade: jogabilidade,
-      eventos_inscritos: [],
-      eventos_criados: [],
-    };
-
-    // Salvando os dados no localStorage
-    salvar(email, stringJSON);
-
-    
     // Alerta de conta cadastrada
     Swal.fire({
       icon: "success",
@@ -113,7 +83,7 @@ function autenticar() {
     });
   }
 }
- 
+
 function verificaTudo() {
   // Verificando se o campo de nome e vazio
   let verificaNome = base.verificaCampoVazio(campoNome, labelNome, noNome);
@@ -232,7 +202,7 @@ function verificaTudo() {
     verificaTelefone,
   ];
   // Verificando se todos os elementos sao validos
-  return listaTudo.every((element) => element);
+  return listaTudo.every((element) => element = true);
 }
 
 function salvar(email, stringJSON) {

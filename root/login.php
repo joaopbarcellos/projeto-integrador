@@ -50,7 +50,7 @@
   </header>
   <!-- Div que ficará com o formulário -->
   <div class="divLogin mt-5 col-lg-4 col-10 m-auto">
-    <form id="form" action="index.php" method="post">
+    <form id="form" action="conexaoBancoDados/carregaLogin.php" method="post">
       <legend class="p-3 text-center fs-1">Entrar</legend>
 
       <!-- Nome usuário -->
