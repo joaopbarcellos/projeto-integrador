@@ -9,6 +9,7 @@ if (isset($_POST["nomeCampo"])) {
     // Sanitizando o nome retornado
     $nomeFiltrado = filter_var(trim($nome), FILTER_SANITIZE_SPECIAL_CHARS);
     $verifica = true;
+    $_POST["nomeCampo"] = $nome;
   } else {
     $verifica = false;
   }
@@ -26,6 +27,7 @@ if (isset($_POST["emailCampo"])) {
       $emailFiltrado = filter_var(trim($email), FILTER_SANITIZE_EMAIL);
       $_SESSION["email"] = $emailFiltrado;
       $verifica = true;
+      $_POST["emailCampo"] = $emailFiltrado;
     } else {
       $verifica = false;
     }
@@ -42,6 +44,7 @@ if (isset($_POST["telefoneCampo"])) {
     // Sanitizando o telefone retornado
     $telefoneFiltrado = filter_var(trim($telefone), FILTER_SANITIZE_NUMBER_INT);
     $verifica = true;
+    $_POST["telefoneCampo"] = $telefoneFiltrado;
   } else {
     $verifica = false;
   }
@@ -50,14 +53,12 @@ if (isset($_POST["telefoneCampo"])) {
 }
 
 if (isset($_POST["senhaCampo"])) {
-  $senha = $_POST["senhaCampo"];
-  $_SESSION["senha"] = $senha;
+  $_SESSION["senha"] = $_POST["senhaCampo"];
 }
 
 // Verificando se todos os valores foram sanitizados
 if ($verifica) {
-  // Enviar dados aqui
-
   // Enviando para a tela de login
-  header("location: login.php");
+  header("location: registrar.php");
 }
+?>

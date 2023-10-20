@@ -35,7 +35,6 @@
 
   if (isset($_GET['salvou'])) {
     $script = $_GET['salvou'];
-    echo "<script>alert('$script');</script>";
     session_start();
     if (isset($_SESSION["senha"]) && isset($_SESSION["email"])) {
       $emailUsuario = $_SESSION["email"];

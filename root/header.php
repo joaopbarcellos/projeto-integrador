@@ -31,7 +31,7 @@
 	<!-- navbar com menu hamburguer -->
 	<nav class="navbar navbar-expand-lg header ">
 		<div class="container-fluid col-11 m-auto">
-			<a class="navbar-brand" href="<?php echo $rootDir . '/index.php'; ?>"><img src="<?php echo $rootDir . '/logos/9.png'; ?>" id="logo"></a>
+			<a class="navbar-brand" href="<?php echo $rootDir . '/index.php'; ?>"><img src="<?php echo $rootDir . 'root/logos/9.png'; ?>" id="logo"></a>
 			<!-- Botao com imagem do menu hamburguer -->
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>

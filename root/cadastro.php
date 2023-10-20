@@ -41,7 +41,7 @@
     <!-- Div para estilizar o formulário -->
     <div class="formulario">
       <!-- Criando fomulário de Cadastro -->
-      <form method="post" action="conexaoBancoDados/registrar.php">
+      <form method="post" action="conexaoBancoDados/registrar.php"> 
         <legend class="p-3 text-center fs-1">Cadastro</legend>
 
         <!-- Nome do usuário -->
