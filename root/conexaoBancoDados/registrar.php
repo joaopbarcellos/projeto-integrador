@@ -152,10 +152,7 @@ if ($verifica) {
 	// A conexão com o bd sempre tem que ser fechada
 	$db_con = null;
 
-	// converte o array de resposta em uma string no formato JSON e 
-	// imprime na tela.
-	echo $resposta;
-	echo json_encode($resposta);
+	// envia pra outra pagina
 	header("location: ../login.php?salvou='salvou'");
 }
 ?>
