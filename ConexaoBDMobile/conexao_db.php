@@ -2,11 +2,11 @@
 
 // Abre uma conexao com o BD.
 
-$host        = "host = babar.db.elephantsql.com;";
-$port        = "port = 5500;";
-$dbname      = "dbname = fkagdkur;";
-$dbuser 	 = "fkagdkur";
-$dbpassword	 = "KH3lGTQlmW6QeKynF4h0B4Y38T_hJz8O";
+$host        = "host = tuffi.db.elephantsql.com;";
+$port        = "port = 5432;";
+$dbname      = "dbname = avkiwzkv;";
+$dbuser      = "avkiwzkv";
+$dbpassword  = "HCJB168S5umEFXb_Cb3JzQeTtlvcmuzA";
 
 
 
