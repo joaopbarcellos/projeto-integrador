@@ -42,6 +42,20 @@
     }
   }
 
+  if (isset($_GET['erroLogin'])) {
+    $erro = $_GET['erroLogin'];
+    session_start();
+    echo '<script>
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: `' . $_GET["erroLogin"] . '`
+    });
+    
+    </script>';
+
+  }
+
   ?>
   <header class="d-none d-lg-block">
     <!-- Header com imagem dentro de um link -->
@@ -58,10 +72,6 @@
           <input type="text" class="form-control" id="floatingInputGroup1" placeholder="E-mail" name="emailCampo" value="<?php echo $emailUsuario ?>" />
           <label for="email_usuario" id="label_email">E-mail</label>
         </div>
-
-        <label class="erro" id="noEmail">E-mail deve ser preenchido corretamente!</label>
-
-        <label class="erro" id="noEmailCadastrado">E-mail não está cadastrado!</label>
       </div>
 
       <!-- Senha usuário -->
@@ -71,11 +81,6 @@
           <input type="password" class="form-control" id="floatingInputGroup2" placeholder="Senha" name="senhaCampo" value="<?php echo $senhaUsuario ?>" />
           <label for="senha_usuario" id="label_senha">Senha</label>
         </div>
-
-        <label class="erro" id="noPass">Senha deve ser preenchida!</label>
-
-        <label class="erro" id="aotPass">Senha está incorreta!</label>
-
         <!-- Links caso o usuário tenha esquecido a senha ou ainda não possui uma conta -->
         <a href="cadastro.php" class="link"> Não possui uma conta? </a>
       </div>

@@ -16,85 +16,19 @@ document.querySelectorAll("input").forEach((input) => {
   });
 });
 
-// Capturando as labels com mensagem de erro
-const noEmail = document.querySelector("#noEmail");
-const noEmailCadastrado = document.querySelector("#noEmailCadastrado");
-const noPass = document.querySelector("#noPass");
-const aotPass = document.querySelector("#aotPass");
-
-// Capturando a label de email e senha
-const labelEmail = document.querySelector("#label_email");
-const labelSenha = document.querySelector("#label_senha");
-
 function autenticar() {
-  // Verificando se o email esta vazio
-  let verificaEmail = base.verificaCampoVazio(
-    campoEmail,
-    labelEmail,
-    noEmail,
-    noEmailCadastrado
-  );
-
-  if (verificaEmail) {
-    // Verifica o padrao do email
-    verificaEmail = base.verificaEmailForaPadrao(
-      campoEmail,
-      noEmail,
-      noEmail,
-      noEmailCadastrado
-    );
-  }
-
-  // Verifica se o campo de senha esta vazio
-  let verificaSenhaVazia = base.verificaCampoVazio(
-    campoSenha,
-    labelSenha,
-    noPass,
-    aotPass
-  );
-
   // Verificando se estao todos os campos certos
-  if (verificaEmail && verificaSenhaVazia) {
-    // Se o usuario tiver a conta criada
-    if (
-      verificaLogin(campoEmail.value.toLowerCase(), campoSenha.value) == "certo"
-    ) {
-      // Passa a tela para home com a conta logada
-
-      passaTela();
-    } else {
-      Swal.fire({
-        // Alert informando para o usuario que algo esta errado
-        title: "ERRO!",
-        icon: "error",
-        text: verificaLogin(campoEmail.value.toLowerCase(), campoSenha.value),
-        confirmButtonColor: "#3085d6",
-        confirmButtonText: "OK!",
-      });
-    }
-  }
-}
-
-// Funcao para verificar se o login esta salvo no localStorage
-function verificaLogin(email, senha) {
-  // Pegando as informacoes do localStorage onde o email deveria estar cadastrado
-  const dadosSalvos = localStorage.getItem(email.toLowerCase());
-  // Transformando para objeto
-  const dados = JSON.parse(dadosSalvos);
-  // Verificando se o email esta cadastrado
-  if (!dadosSalvos) {
-    noEmailCadastrado.style.display = "block";
-    campoEmail.style.cssText = "border-bottom: 1px solid #f58181";
-    return "Credenciais inválidas!";
+  if (campoEmail.value && campoSenha.value) {
+    passaTela();
   } else {
-    // Vericando se a senha e a mesma
-    if (dados.senha == senha) {
-      return "certo";
-    } else {
-      aotPass.style.display = "block";
-      campoSenha.style.cssText = "border-bottom: 1px solid #f58181";
-      return "Credenciais inválidas!";
-    }
+    Swal.fire({
+      // Alert informando para o usuario que algo esta errado
+      title: "ERRO!",
+      icon: "error",
+      text: "Preencha todos os campos!",
+      confirmButtonColor: "#3085d6",
+      confirmButtonText: "OK!",
+    });
   }
 }
 
@@ -120,23 +54,3 @@ olho.addEventListener("click", function () {
     olho.src = "./img/olho_fechado.png";
   }
 });
-
-// Email Master
-let stringJSON = {
-  email: "master@gmail.com",
-  nome: "Master",
-  dataNasc: "2000-01-01",
-  senha: "123456",
-  jogabilidade: "Profissional",
-  eventos_inscritos: [],
-  eventos_criados: [],
-  telefone: "(27) 98765-4321",
-};
-
-// Salvando os dados no localStorage
-salvar("master@gmail.com", stringJSON);
-
-function salvar(email, stringJSON) {
-  // Salvando no localStorage a stringJson com a chave do email master
-  localStorage.setItem(email, JSON.stringify(stringJSON));
-}

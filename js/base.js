@@ -49,7 +49,7 @@ export function validarSeNomeTemNumero(valorCampo, mensagemErro, campo, label){
 
 // Funcao pra validar se tem caracter especial no nome
 export function validarSeNomeTemCaracterEspecial(valorCampo, mensagemErro, campo, label){
-  const regex = /[!@#$%¨&*()_=+§{}°?ªº|<>,.-`]/;
+  const regex = /[!@#$%¨&*()_=+§{}°?ªº|<>,.`]/;
   if(regex.test(valorCampo)){ 
     campo.style.cssText = "border-bottom: 1px solid #f58181;";
     label.classList.remove("certo");

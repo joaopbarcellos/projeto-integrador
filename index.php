@@ -1,9 +1,5 @@
 <?php
 session_start();
-if (isset($_POST['emailCampo'])) {
-	$emailLogado = trim($_POST["emailCampo"]);
-	$_SESSION["logado"] = $emailLogado;
-}
 ?>
 
 <!DOCTYPE html>

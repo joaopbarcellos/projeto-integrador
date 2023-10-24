@@ -75,7 +75,7 @@ if ($verifica) {
 	// o método trim elimina caracteres especiais/ocultos da string
 	$nome = trim($_POST['nomeCampo']);
 	$data = trim($_POST['dataCampo']);
-	$email = trim($_POST['emailCampo']);
+	$email = strtolower(trim($_POST['emailCampo']));
 	$senha = trim($_POST['senhaCampo']);
 	$intuito = trim($_POST['intuito']);
 	$telefone = trim($_POST['telefoneCampo']);
@@ -132,6 +132,7 @@ if ($verifica) {
 		}
 		if($verifica){
 			// se o usuário ainda não existe, inserimos ele no bd.
+			$email = strtolower($email);
 			$consulta = $db_con->prepare("INSERT INTO usuario(nome, email, token, data_nascimento, telefone, foto, FK_INTUITO_id) VALUES('$nome', '$email', '$token', '$data,', '$telefone', 'semfoto.png', '$intuito')");
 			if ($consulta->execute()) {
 				// se a consulta deu certo, indicamos sucesso na operação.
