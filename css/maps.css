@@ -1,0 +1,70 @@
+/* coloco o botao de voltar como fixo */
+.cssbuttons-io-button {
+  position: fixed !important;
+  top: 100px;
+  z-index: 1;
+}
+
+/* Coloco o mapa com a largura total */
+#mapa {
+  width: 100% !important;
+}
+
+/* Tiro os espacaentos padrao do row do bootstrap */
+.row {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Tiro os espacaentos padrao do row do bootstrap e coloco uma tamanho total*/
+.row > * {
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Abaixo altero os campos do Bing Maps Api */
+.slot {
+  height: 90px !important;
+}
+
+/* Adicionando display para a div nao aparecer */
+.NavBar_MapTypeButtonDropDownIcon {
+  display: none !important;
+}
+
+/* Adicionando display para a div nao aparecer */
+.birdseye {
+  display: none !important;
+}
+
+/* Adicionando display para a div aparecer */
+#ZoomInButton {
+  display: block !important;
+}
+
+/* Adicionando display para a div nao aparecer */
+.disabled {
+  display: none !important;
+}
+
+/* Adicionando tamanho */
+.labelCanvas {
+  width: 100% !important;
+}
+
+/* Adicionando display para a div nao aparecer */
+.CopyrightContainer {
+  display: none !important;
+}
+
+/* Adicionando display para a div nao aparecer */
+.bm_LogoContainer {
+  display: none !important;
+}
+
+/* Adicionando margin na parte de baxo da div */
+.ScaleBar {
+  margin-bottom: 10px !important;
+}
+/* término de alteração dos campos do Bing Maps Api */

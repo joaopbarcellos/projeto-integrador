@@ -1,0 +1,206 @@
+/* Importando fonte */
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Quicksand:wght@100&display=swap");
+
+/* Adicionando espacamento na pagina toda */
+* {
+  padding: 0;
+}
+
+.row>*{
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+/* Adicionado cor */
+p,
+h1 {
+  color: white !important;
+}
+
+.cssbuttons-io-button{
+  position: absolute !important;
+}
+
+/* Adicionando tamanho e cor */
+.iconelocev,
+.iconedataev {
+  fill: white !important;
+  width: 25px !important;
+}
+
+/* Adiconando flex-box */
+#evento {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Adicionando espacamento */
+#titulo {
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+}
+
+/* Adiconando tamanho da fonte */
+#container p {
+  font-size: 1.3rem;
+}
+
+/* Adicionando cor, borda, espacamento e sombra */
+#fundoev {
+  background-color: var(--form_cria) !important;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: -1px -1px 15px 1px rgba(0, 0, 0, 0.75);
+}
+
+/* Colocando tamanho nas imagens */
+#img_evento {
+  margin-bottom: 20px;
+  min-height: 15%;
+  min-width: 15%;
+}
+
+/* Adicionando tamnho e espacamento */
+.iconezin {
+  height: 25px;
+  margin-right: 0.4em;
+}
+
+
+p, .alinhando p{
+  margin-bottom: 0 !important;
+}
+
+/* Adiconando flex-box, alinhamento e espacamento */
+#localizacao,
+#alvo,
+#intuito,
+#data,
+#contato,
+#preco,
+#num_inscritos,
+#vagas_restam,
+#organizador, .alinhando, #p_desc {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  padding-top: 0;
+  margin-bottom: 1rem !important;
+}
+
+/* Adicionando margin */
+#sifrao {
+  margin-right: 5px;
+}
+
+/* Adicionando margin */
+#preco {
+  margin-bottom: 1.5em;
+}
+
+/* Adicionando espacamento, flex-box, tamanho, borda, espaco entre letras, tamanho de letras, cor, transicao e defino um overflow hidden para fazer o span sumir quando nao estiver no botao */
+.inscrever {
+  margin-left: auto !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  width: 250px;
+  gap: 10px;
+  padding: 0 10px;
+  color: var(--branco);
+  text-shadow: 2px 2px rgb(116, 116, 116);
+  text-transform: uppercase;
+  border: none;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 1rem;
+  background-color: var(--azul_princ);
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+/* Adicionando transicao e transform  */
+.inscrever:active {
+  transform: scale(0.9);
+  transition: all 100ms ease;
+}
+
+/* Tirando espacamento */
+.container {
+  padding: 0 !important;
+}
+
+/* Adicionando transicao e tamanho */
+.inscrever img {
+  transition: all 0.5s ease;
+  z-index: 2;
+  width: 48px;
+  height: 48px;
+}
+
+/* Adicionando transicao */
+.play {
+  transition: all 0.5s ease;
+  transition-delay: 300ms;
+}
+
+/* Adicionando cor */
+.inscrever:hover {
+  background-color: var(--azul_sec);
+}
+
+/* Aumenta tamanho da imagem quando passar o mouse por cima */
+.inscrever:hover img {
+  transform: scale(3) translate(120%);
+}
+
+/* Adicionando transicao e posicao */
+.now {
+  position: absolute;
+  left: 0;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+/* Adicionando transicao */
+.inscrever:hover .now {
+  transform: translateX(30px);
+  transition-delay: 300ms;
+}
+
+/* Retirando a margin */
+.row {
+  margin: 0 !important;
+}
+
+/* Nao e copiavel */
+.inscrever {
+  user-select: none;
+}
+
+/* Adicionando transicao */
+.inscrever:hover .play {
+  transform: translateX(200%);
+  transition-delay: 300ms;
+}
+
+/* Adicionando flex-box */
+#tabela {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Adicionando cor e flex */
+#local {
+  color: var(--black) !important;
+  display: flex;
+}
+
+/* Adicionando margin */
+footer {
+  margin-top: 20vh;
+}
