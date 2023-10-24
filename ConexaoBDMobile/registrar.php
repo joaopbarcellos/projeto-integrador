@@ -5,7 +5,6 @@
  * Método do tipo POST.
  */
 
-require_once('conexao_db.php');
 
 // array de resposta
 $resposta = array();
