@@ -41,7 +41,7 @@ if(autenticar($db_con)) {
 				$resposta["descricao"] = $linha["descricao"];
 				$resposta["data"] = $linha["data"];
 				$resposta["telefone"] = $linha["telefone"];
-				$resposta["min_pessoas"] = $linha["min_pessoas"];
+				$resposta["max_pessoas"] = $linha["max_pessoas"];
 				$resposta["min_pessoas"] = $linha["min_pessoas"];
 				$resposta["horario_inicio"] = $linha["horario_inicio"];
 				$resposta["intuito"] = $linha["intuito"];
