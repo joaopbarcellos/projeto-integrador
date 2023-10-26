@@ -162,22 +162,22 @@ VALUES (1, 1, 1),
 (9, 9, 4);
 
 INSERT INTO FOTO_EVENTO(id, foto, FK_EVENTO_id)
-VALUES (1, 'aulaZico.png', 1),
-(2, 'aulaZico2.png', 1),
-(3, 'aulaZico3.png', 1),
-(4, 'blackKnights.png', 2),
-(5, 'desafioNatacao.png', 3),
-(6, 'desafioNatacao2.png', 3),
-(7, 'motocrossJacara.png', 9),
-(8, 'basqueteCaue.png',  8),
-(9, 'marDourado.png', 4),
-(10, 'marDourado2.png', 4),
-(11, 'surfItaparica.png', 7),
-(12, 'corridaPenha.png', 5),
-(13, 'corridaPenha2.png', 5),
-(14, 'letapeRio.png', 6),
-(15, 'letapeRio2.png', 6),
-(16, 'letapeRio3.png', 6);
+VALUES (1, 'https://i.imgur.com/e3zPVU7.png', 1),
+(2, 'https://i.imgur.com/e3zPVU7.png', 1),
+(3, 'https://i.imgur.com/e3zPVU7.png', 1),
+(4, 'https://i.imgur.com/VCe3NHw.png', 2),
+(5, 'https://i.imgur.com/kCM7mkC.png', 3),
+(6, 'https://i.imgur.com/kCM7mkC.png', 3),
+(7, 'https://i.imgur.com/l9I9hL4.png', 9),
+(8, 'https://i.imgur.com/MH8QB1D.png',  8),
+(9, 'https://i.imgur.com/o0DzAVc.png', 4),
+(10, 'https://i.imgur.com/o0DzAVc.png', 4),
+(11, 'https://i.imgur.com/9Hq0GSy.png', 7),
+(12, 'https://i.imgur.com/3GbNJut.png', 5),
+(13, 'https://i.imgur.com/3GbNJut.png', 5),
+(14, 'https://i.imgur.com/q24YyoK.png', 6),
+(15, 'https://i.imgur.com/q24YyoK.png', 6),
+(16, 'https://i.imgur.com/q24YyoK.png', 6);
 
 INSERT INTO RECORRENTE(id, recorrencia)
 VALUES (1, 'Domingo'),
