@@ -33,11 +33,6 @@ button:focus {
   outline: none;
 }
 
-/* colocando espacamento no primeiro evento */
-.primeiro {
-  margin-top: 0 !important;
-}
-
 .slideh3{
   background: rgba(40, 65, 116, 0.24);
   border-radius: 16px;
