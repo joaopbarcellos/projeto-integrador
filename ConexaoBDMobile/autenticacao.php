@@ -49,14 +49,8 @@ function autenticar($db_con) {
 			$linha = $consulta->fetch(PDO::FETCH_ASSOC);
 			if(password_verify($senha, $linha['token'])){
 				return true;
-			}else{
-				echo "<script>console.log('Senha');</script>";
 			}
-		}else{
-			echo "<script>console.log('Tabela');</script>";
 		}
-	}else{
-		echo "<script>console.log('Email');</script>";
 	}
 	return false;
 }
