@@ -24,7 +24,7 @@ if (isset($_POST['etEmailCadastro']) && isset($_POST['etData']) && isset($_POST[
 	
 	// antes de registrar o novo usuário, verificamos se ele já
 	// não existe.
-	$consulta_usuario_existe = $db_con->prepare("SELECT email FROM usuarios WHERE email='$email'");
+	$consulta_usuario_existe = $db_con->prepare("SELECT email FROM usuario WHERE email='$email'");
 	$consulta_usuario_existe->execute();
 	if ($consulta_usuario_existe->rowCount() > 0) { 
 		// se já existe um usuario para login
@@ -35,7 +35,7 @@ if (isset($_POST['etEmailCadastro']) && isset($_POST['etData']) && isset($_POST[
 	}
 	else {
 		// se o usuário ainda não existe, inserimos ele no bd.
-		$consulta = $db_con->prepare("INSERT INTO usuarios(nome, email, token, data_nascimento, FK_INTUITO_id) VALUES('$nome', '$email', '$token', '$data', '$intuito')");
+		$consulta = $db_con->prepare("INSERT INTO usuario(nome, email, token, data_nascimento, FK_INTUITO_id) VALUES('$nome', '$email', '$token', '$data', '$intuito')");
 		if ($consulta->execute()) {
 			// se a consulta deu certo, indicamos sucesso na operação.
 			$resposta["sucesso"] = 1;
