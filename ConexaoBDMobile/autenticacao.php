@@ -49,8 +49,14 @@ function autenticar($db_con) {
 			$linha = $consulta->fetch(PDO::FETCH_ASSOC);
 			if(password_verify($token, $linha['token'])){
 				return true;
+			}else{
+				console.log("Ta errado a senha paizao");
 			}
+		}else{
+			console.log("Ta errado a tabela irmao");
 		}
+	}else{
+		console.log("Ta errado o email paizao");
 	}
 	return false;
 }
