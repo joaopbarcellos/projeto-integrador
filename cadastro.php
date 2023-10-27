@@ -1,4 +1,5 @@
-<?php session_start(); ?>
+<?php session_start(); 
+echo phpversion();?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">

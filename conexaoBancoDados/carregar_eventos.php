@@ -33,9 +33,7 @@ if($db_con) {
 			$resposta["eventos"] = array();
 			$resposta["sucesso"] = 1;
 
-			echo "ababab";
 			if ($consulta->rowCount() > 0) {
-				echo "teste";
 				while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
 					// Para cada evento, sao retornados somente o 
 					// pid (id do evento), o nome do evento e o preço. Nao ha necessidade 
@@ -53,7 +51,7 @@ if($db_con) {
 					$consulta_foto_evento = $db_con->prepare("SELECT foto FROM foto_evento WHERE fk_evento_id = " . $evento["id"]);
 					$consulta_foto_evento->execute();
 					$linha_foto_evento = $consulta_foto_evento->fetch(PDO::FETCH_ASSOC);
-					$evento["foto"] = $linha_foto_evento;
+					$evento["foto"] = $linha_foto_evento["foto"];
 
 
 					$consulta_evento_classificacao = $db_con->prepare("SELECT fk_classificacao_id FROM evento_classificacao WHERE fk_evento_id = " . $evento["id"]);
@@ -92,17 +90,17 @@ if($db_con) {
 					$consulta_estado->execute();
 					$linha_estado = $consulta_estado->fetch(PDO::FETCH_ASSOC);
 
-					$evento["classificacao"] = $linha_classificacao;
+					$evento["classificacao"] = $linha_classificacao["nome"];
 					$evento["nome"] = $linha["nome"];
-					$evento["preco"] = $linha["preco"];
+					$evento["preco"] = number_format($linha["preco"], 2, ',', '');
 					$evento["data"] = $linha["data"];
 					$evento["min_pessoas"] = $linha["min_pessoas"];
 					$evento["max_pessoas"] = $linha["max_pessoas"];
 					$evento["horario_fim"] = $linha["horario_fim"];
 					$evento["horario_inicio"] = $linha["horario_inicio"];
-					$evento["intuito"] = $linha_intuito;
-					$evento["endereco"] = $linha_tipo_logradouro . "" . $linha_endereco["descricao"] . ", " . $linha_endereco["numero"] . " - " . $linha_bairro["nome"] . ", " . $linha_cidade["nome"] . " - " . $linha_estado . ", " . $linha_endereco["cep"];
-					$evento["idade_publico"] = $linha_idade_publico;
+					$evento["intuito"] = $linha_intuito["nome"];
+					$evento["endereco"] = $linha_tipo_logradouro["tipo"] . " " . $linha_endereco["descricao"] . ", " . $linha_endereco["numero"] . " - " . $linha_bairro["nome"] . ", " . $linha_cidade["nome"] . " - " . $linha_estado["nome"] . ", " . $linha_endereco["cep"];
+					$evento["idade_publico"] = $linha_idade_publico["intervalo"];
 
 					// Adiciona o evento no array de eventos.
 					array_push($resposta["eventos"], $evento);
@@ -114,7 +112,7 @@ if($db_con) {
 			// recebe a chave "sucesso" com valor 0. A chave "erro" indica o 
 			// motivo da falha.
 			$resposta["sucesso"] = 0;
-			$resposta["erro"] = "Erro no BD: " . $consulta->error;
+			$resposta["erro"] = "Erro no BD: " . $consulta->$error;
 		}
 	}
 	else {

@@ -157,7 +157,8 @@ header {
 .header a {
   text-decoration: none;
   color: var(--branco);
-  text-shadow: rgb(0, 0, 0) 0.1em 0.1em 0.2em;
+  /* text-shadow: rgb(0, 0, 0) 0.1em 0.1em 0.2em; */
+  text-shadow: 2px 5px 12px rgba(0,0,0,0.59);
   cursor: pointer;
   transition: 0.4s ease;
   user-select: none;
@@ -166,7 +167,6 @@ header {
 /* Adicionando cor e tirando sombra dos textos */
 .header a:hover {
   color: var(--azul_sec) !important;
-  text-shadow: none;
 }
 
 /* Adiconando flex box e margin */
@@ -238,8 +238,19 @@ header {
 
 /* Adicionando cor e transicao */
 #lupa {
+  width: 50px !important;
+  height: 50px !important;
   background-color: var(--roxo_sec);
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
   transition: 0.2s ease-in-out;
+}
+
+/* Estilize o ícone */
+.iconelupa {
+  width: 16px;
+  height: 16px;
 }
 
 /* Adicionando cor */
@@ -790,6 +801,7 @@ input[type="date"] {
 .iconecria,
 .iconemeusevents,
 .iconesobre,
+.iconelupa,
 .iconeconfig {
   fill: var(--branco);
   transition: 0.4s ease;

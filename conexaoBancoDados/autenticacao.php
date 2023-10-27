@@ -35,6 +35,7 @@ function autenticar($db_con) {
 	$email = trim($GLOBALS['email']);
 	$senha = trim($GLOBALS['senha']);
 	//$db_con = $GLOBALS['db_con'];
+	$token = password_hash($senha, PASSWORD_DEFAULT);
 	
 	// Verifica antes se o parâmetro de login foi enviado ao servidor
 	if(!is_null($email)) {
@@ -47,7 +48,7 @@ function autenticar($db_con) {
 		// o verifica junto a senha enviada ao servidor
 		if($consulta->rowCount() > 0){
 			$linha = $consulta->fetch(PDO::FETCH_ASSOC);
-			if(password_verify($senha, $linha['token'])){
+			if(password_verify($token, $linha['token'])){
 				return true;
 			}
 		}

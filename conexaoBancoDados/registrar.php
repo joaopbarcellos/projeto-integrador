@@ -16,6 +16,7 @@ session_start();
 session_unset();
 session_destroy();
 session_start();
+
 if (isset($_POST["nomeCampo"])) {
   // Verificando se o campo de nome retornou algum valor diferente de vazio
   $nome = $_POST["nomeCampo"];
@@ -82,8 +83,7 @@ if ($verifica) {
 
 	// o bd não armazena diretamente a senha do usuário, mas sim 
 	// um código hash que é gerado a partir da senha.
-	//$token = password_hash($senha, PASSWORD_DEFAULT);
-	$token = $senha;
+	$token = password_hash($senha, PASSWORD_DEFAULT);
 	
 	// antes de registrar o novo usuário, verificamos se ele já
 	// não existe.
