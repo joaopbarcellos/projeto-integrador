@@ -10,13 +10,14 @@ require_once('conexao_db.php');
 $resposta = array();
 
 // verifica se todos os campos necessários foram enviados ao servidor
-if (isset($_POST['etEmailCadastro']) && isset($_POST['etData']) && isset($_POST['etNome']) && isset($_POST['etSenhaCadastro']) && isset($_POST['intuito'])) {
+if (isset($_POST['etEmailCadastro']) && isset($_POST['etData']) && isset($_POST['etNome']) && isset($_POST['etSenhaCadastro']) && isset($_POST['intuito']) && isset($_POST['etTelefone'])) {
     // o método trim elimina caracteres especiais/ocultos da string
 	$nome = trim($_POST['etNome']);
 	$data = trim($_POST['etData']);
 	$email = trim($_POST['etEmailCadastro']);
 	$senha = trim($_POST['etSenhaCadastro']);
 	$intuito = trim($_POST['intuito']);
+        $telefone = trim($_POST['etTelefone']);
 
 	// o bd não armazena diretamente a senha do usuário, mas sim 
 	// um código hash que é gerado a partir da senha.
@@ -35,7 +36,7 @@ if (isset($_POST['etEmailCadastro']) && isset($_POST['etData']) && isset($_POST[
 	}
 	else {
 		// se o usuário ainda não existe, inserimos ele no bd.
-		$consulta = $db_con->prepare("INSERT INTO usuario(nome, email, token, data_nascimento, FK_INTUITO_id) VALUES('$nome', '$email', '$token', '$data', '$intuito')");
+		$consulta = $db_con->prepare("INSERT INTO usuario(nome, email, token, data_nascimento, telefone, FK_INTUITO_id) VALUES('$nome', '$email', '$token', '$data', '$telefone', '$intuito')");
 		if ($consulta->execute()) {
 			// se a consulta deu certo, indicamos sucesso na operação.
 			$resposta["sucesso"] = 1;
