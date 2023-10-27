@@ -50,13 +50,13 @@ function autenticar($db_con) {
 			if(password_verify($token, $linha['token'])){
 				return true;
 			}else{
-				console.log("Ta errado a senha paizao");
+				echo "<script>console.log('Senha');</script>";
 			}
 		}else{
-			console.log("Ta errado a tabela irmao");
+			echo "<script>console.log('Tabela');</script>";
 		}
 	}else{
-		console.log("Ta errado o email paizao");
+		echo "<script>console.log('Email');</script>";
 	}
 	return false;
 }
