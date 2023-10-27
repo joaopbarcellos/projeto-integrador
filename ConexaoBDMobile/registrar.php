@@ -36,7 +36,7 @@ if (isset($_POST['etEmailCadastro']) && isset($_POST['etData']) && isset($_POST[
 	}
 	else {
 		// se o usuário ainda não existe, inserimos ele no bd.
-		$consulta = $db_con->prepare("INSERT INTO usuario(nome, email, token, data_nascimento, telefone, FK_INTUITO_id) VALUES('$nome', '$email', '$token', '$data', '$telefone', '$intuito')");
+		$consulta = $db_con->prepare("INSERT INTO usuario(nome, email, token, data_nascimento, telefone, foto, FK_INTUITO_id) VALUES('$nome', '$email', '$token', '$data', '$telefone', 'https://i.imgur.com/RyUD05p.png', '$intuito')");
 		if ($consulta->execute()) {
 			// se a consulta deu certo, indicamos sucesso na operação.
 			$resposta["sucesso"] = 1;
