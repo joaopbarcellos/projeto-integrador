@@ -81,7 +81,7 @@ if(autenticar($db_con)) {
 			// recebe a chave "sucesso" com valor 0. A chave "erro" indica o 
 			// motivo da falha.
 			$resposta["sucesso"] = 0;
-			$resposta["erro"] = "Erro ao criar produto no BD: " . $consulta->error;
+			$resposta["erro"] = "Erro ao criar produto no BD: " . $consulta->$error;
 		}
 	} else {
 		// Se a requisicao foi feita incorretamente, ou seja, os parametros 

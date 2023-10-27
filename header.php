@@ -131,7 +131,7 @@
 							<li class="nav-item dropdown">
 								<a class="links nav-link dropdown-toggle" id="droplogado" href="#" role="button" data-bs-toggle="dropdown"aria-expanded="false">
 									<img src="' . $rootDir . '/img/semfoto.png" id="fotologado"></img>
-									<div id="nome_usuario">' .  $_SESSION["logado"] . '</div>
+									<div id="nome_usuario">' .  $_SESSION["logado_nome"] . '</div>
 								</a>';
 
 						echo '
@@ -164,28 +164,8 @@
 								</ul>
 								
 							<li>';
-					?>
-						<script>
-							var paragrafo = document.querySelector("#nome_usuario");
-							var email = paragrafo.textContent.toLowerCase();
-							var nome = JSON.parse(localStorage.getItem(email))["nome"];
-							paragrafo.innerHTML = nome;
-						</script>
-					<?php
-					}
-					?>
-					<script>
-						function pegar_session() {
-							var paragrafo = document.createElement("h1");
-							paragrafo.className = "paragrafo";
-							paragrafo.style.display = "none";
-							var emailSemVerificar = "<?php if (isset($_SESSION["logado"])) echo $_SESSION["logado"];
-														else echo '' ?>";
-							paragrafo.value = emailSemVerificar.toLowerCase();
-							document.body.appendChild(paragrafo);
 						}
-						pegar_session();
-					</script>
+					?>
 
 				</ul> <!-- Fechando div com a lista dos links -->
 

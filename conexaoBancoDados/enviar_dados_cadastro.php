@@ -1,4 +1,4 @@
-?php
+<?php
 $verifica = false;
 
 session_start();

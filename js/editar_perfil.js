@@ -2,8 +2,7 @@
 import * as base from "./base.js";
 
 // Pegando os dados do usuario logado
-var emailLogado = document.querySelector(".paragrafo").value;
-const dadosUsuario = JSON.parse(localStorage.getItem(emailLogado));
+var emailLogado = document.querySelector("#nome_usuario").innerHTML;
 
 // Pegando os campos na tela
 const campoNome = document.querySelector("#floatingInputGroup1");
@@ -21,24 +20,15 @@ const labelTelefone = document.querySelector("#label_telefone");
 
 // Pegando as labels de erro
 const noNome = document.querySelector("#noNome");
-const noEmail = document.querySelector("#noEmail");
-const noEmailPadrao = document.querySelector("#noEmailPadrao");
 const noData = document.querySelector("#noData");
 const noJogabilidade = document.querySelector("#noJogabilidade");
 const passouData = document.querySelector("#passouData");
-const noEmailExiste = document.querySelector("#noEmailExiste");
 const noTelefone = document.querySelector("#noTelefone");
 const noTelefoneValido = document.querySelector("#noTelefoneValido");
 
 // Funcao para preencher automaticamente os campos com os dados do usuario
 function preencherAuto() {
-  campoNome.value = dadosUsuario.nome;
-  campoEmail.value = emailLogado;
-  campoEmail.disabled = true;
-  campoDataNasc.value = dadosUsuario.dataNasc;
-  campoTelefone.value = dadosUsuario.telefone;
-
-  let radioMarcada = dadosUsuario.jogabilidade;
+  let radioMarcada = document.querySelector("#jogabilidade_invisivel").innerText;
 
   // Mudando a classe dos labels para fins esteticos
   labelNome.classList.add("focado");
@@ -128,30 +118,7 @@ function autenticar() {
       cancelButtonText: "Não",
     }).then((result) => {
       if (result.isConfirmed) {
-        // Alterando os dados no localStorage
-        dadosUsuario.nome = campoNome.value;
-        dadosUsuario.dataNasc = campoDataNasc.value;
-        dadosUsuario.jogabilidade = base.jogabilidadeMarcada();
-        dadosUsuario.telefone = campoTelefone.value;
-
-        // Chave do usuário para alteracao
-        let emailLogado = campoEmail.value;
-
-        // Colocando tudo no dicionario/mapa de dadosUsuario
-        let stringJson = JSON.stringify(dadosUsuario);
-
-        localStorage.removeItem(emailLogado);
-        // Removendo o item antigo
-
-        localStorage.setItem(campoEmail.value, stringJson);
-        // Setando o novo item no localStorage
-        Swal.fire({
-          icon: "success",
-          title: "Perfil atualizado",
-        }).then(() => {
-          // Enviando para a pagina de perfil
-          window.location.assign("perfil.php");
-        });
+        document.querySelector("form").submit();
       }
     });
   }

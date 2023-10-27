@@ -8,9 +8,9 @@ const prevBtns = form.querySelectorAll(".prev-btn");
 let currentStep = 0;
 
 // Pegando o email do usuario logado
-const email = document.querySelector(".paragrafo").value;
+const nome_usuario = document.querySelector("#nome_usuario").innerHTML;
 
-if (!email) {
+if (!nome_usuario) {
   base.naoEstaLogado();
 }
 

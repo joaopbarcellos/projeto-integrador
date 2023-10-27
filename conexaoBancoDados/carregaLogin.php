@@ -21,6 +21,7 @@ if(isset($_POST["emailCampo"]) && isset($_POST["senhaCampo"])) {
 		$linha = $consulta->fetch(PDO::FETCH_ASSOC);
 		if($linha['token'] == $senhaLogin){
 			$_SESSION["logado"] = $emailLogin;
+			require_once("carregar_detalhes_logado.php");
 			header("location: ../index.php");
 		} else {
 			header("location: ../login.php?erroLogin=Credenciais inválidas");

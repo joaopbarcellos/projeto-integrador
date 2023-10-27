@@ -73,7 +73,7 @@ session_start();
 									<label class="labels texto word-break"> Nome: </label>
 
 									<!-- Escrevo na label o nome do usuario -->
-									<label class="cadastro texto word-break" id="nome_usuario_logado"> </label>
+									<label class="cadastro texto word-break" id="nome_usuario_logado"><?php echo $_SESSION["logado_nome"];?></label>
 
 									<!-- Fecho a div do nome -->
 								</div>
@@ -84,7 +84,7 @@ session_start();
 									<label class="labels texto word-break">Data de Nascimento: </label>
 
 									<!-- Escrevo na label o nascimento do usuario -->
-									<label class="cadastro texto word-break" id="dataNasc_usuario"> </label>
+									<label class="cadastro texto word-break" id="dataNasc_usuario"><?php echo date("d/m/Y", strtotime($_SESSION["logado_data"]));?></label>
 
 									<!-- Fecho a div do nascimento -->
 								</div>
@@ -95,7 +95,7 @@ session_start();
 									<label class="labels texto word-break">Email: </label>
 
 									<!-- Escrevo na label o email do usuario -->
-									<label class="cadastro texto word-break" id="email_usuario"> </label>
+									<label class="cadastro texto word-break" id="email_usuario"><?php echo $_SESSION["logado"];?></label>
 
 									<!-- Fecho a div de email -->
 								</div>
@@ -105,7 +105,7 @@ session_start();
 									<label class="labels texto word-break">Telefone: </label>
 
 									<!-- Escrevo na label o telefone do usuario -->
-									<label class="cadastro texto word-break" id="telefone_usuario"> </label>
+									<label class="cadastro texto word-break" id="telefone_usuario"><?php echo $_SESSION["logado_telefone"];?></label>
 
 									<!-- Fechando div telefone -->
 								</div>
@@ -122,7 +122,7 @@ session_start();
 					<img src="logos/icon2.png" id="logo_cart"></img>
 					<p class=" word-break" id="sloganperfil">#AlwaysInMovement</p>
 
-					<label class="word-break" id="qualidade"></label>
+					<label class="word-break" id="qualidade"> <?php echo $_SESSION["logado_intuito"] ?></label>
 				</div>
 
 				<!-- Fecho a section com a carteirinha -->

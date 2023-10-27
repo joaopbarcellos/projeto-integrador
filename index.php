@@ -82,7 +82,6 @@ session_start();
 	$json_data = include("conexaoBancoDados/carregar_eventos.php");
 	
 	$eventos = json_decode($json_data, true);
-	var_dump($eventos);
 	foreach ($eventos["eventos"] as $evento){
 		echo '<!-- Div evento -->
 		<div class="evento mt-3 mt-sm-4 mt-4 mt-5 mt-3"  id="'. $evento["id"] .'">

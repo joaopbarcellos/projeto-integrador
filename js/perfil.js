@@ -1,6 +1,6 @@
-let usuarioLogado = document.querySelector(".paragrafo").value;
+let usuarioLogado = document.querySelector("#nome_usuario").innerText;
 // Armazenando a informacao de qual usuario esta logado
-
+console.log(usuarioLogado);
 // Verficando se um usuario esta logado
 if (!usuarioLogado) {
   Swal.fire({
@@ -14,30 +14,6 @@ if (!usuarioLogado) {
     // Enviando para a pagina de login
     window.location.assign("login.php");
   });
-} else {
-  // Armazenando as informacoes do usuario logado
-  let dados = JSON.parse(localStorage.getItem(usuarioLogado));
-
-  // Pegando o nome do usuario logado e colocando no label
-  document.querySelector("#nome_usuario_logado").textContent = dados["nome"];
-
-  // Pegando o email do usuario logado e colocando no label
-  document.querySelector("#email_usuario").textContent = dados["email"];
-
-  // Pegando o telefone do usuario logado e colocando no label
-  document.querySelector("#telefone_usuario").textContent = dados["telefone"];
-
-  // Pegando o intuito do usuario logado e colocando no label
-  document.querySelector("#qualidade").textContent = dados["jogabilidade"];
-
-  // Pegando a data de nascimento do usuario logado e colocando no label
-  let data =
-    dados["dataNasc"].substring(8, 10) +
-    "/" +
-    dados["dataNasc"].substring(5, 7) +
-    "/" +
-    dados["dataNasc"].substring(0, 4);
-  document.querySelector("#dataNasc_usuario").textContent = data;
 }
 
 document.querySelector("#editar").addEventListener("click", () => {
