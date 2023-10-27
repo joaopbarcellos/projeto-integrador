@@ -37,7 +37,7 @@ function autenticar($db_con) {
 	//$db_con = $GLOBALS['db_con'];
 	$token = password_hash($senha, PASSWORD_DEFAULT);
 	// Verifica antes se o parâmetro de login foi enviado ao servidor
-	if(!is_null($login)) {
+	if(!is_null($email)) {
 		
 		// realiza a consula no bd pelo usuário login
 		$consulta = $db_con->prepare("SELECT token FROM usuarios WHERE email='$email'");
