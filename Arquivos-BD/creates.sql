@@ -47,7 +47,7 @@ create table USUARIO(
  data_nascimento date,
  token varchar(100),
  foto varchar(500),
- telefone varchar(12),
+ telefone varchar(15),
  FK_INTUITO_id integer,
  foreign key (FK_INTUITO_id) references INTUITO(id)
 );

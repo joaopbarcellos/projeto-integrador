@@ -66,11 +66,11 @@ session_start();
 			<div class="formulario fs-5">
 
 				<!-- Criando fomulário de Cadastro -->
-				<form>
+				<form method="post" action="conexaoBancoDados/editar_perfilBanco.php" enctype="multipart/form-data">
 
 					<div class="campos">
 						<label for="formFile" class="form-label ">Foto de Perfil:</label>
-						<input class="form-control" type="file" id="formFile" accept="image/*">
+						<input class="form-control" type="file" id="formFile" accept="image/*" name="foto">
 					</div>
 
 					<!-- Nome do usuário -->
@@ -78,7 +78,7 @@ session_start();
 
 						<div class="form-floating">
 							<!-- input de nome -->
-							<input type="text" class="form-control" id="floatingInputGroup1" placeholder="Nome" value="<?php echo $_SESSION["logado_nome"];?>">
+							<input type="text" class="form-control" name="nomeCampo" id="floatingInputGroup1" placeholder="Nome" value="<?php echo $_SESSION["logado_nome"];?>">
 							<label for="nome" id="label_nome">Nome</label>
 						</div>
 
@@ -94,7 +94,7 @@ session_start();
 						<div class="form-floating">
 							<label for="floatingInputGroup2" class="focado">E-mail</label>
 							<div class="input-group">
-								<input type="email" class="form-control" id="floatingInputGroup2" placeholder="E-mail" value="<?php echo $_SESSION["logado"];?>">
+								<input type="email" class="form-control" name="emailCampo" id="floatingInputGroup2" placeholder="E-mail" value="<?php echo $_SESSION["logado"];?>">
 								<div class="input-icon">
 									<svg class="iconefechadura" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
 										<path d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z" />
@@ -106,7 +106,7 @@ session_start();
 					<div class="telefone campos">
 						<div class="form-floating">
 							<!-- input de telefone -->
-							<input type="text" class="form-control" id="floatingInputGroup5" placeholder="Telefone" value="<?php echo $_SESSION["logado_telefone"];?>">
+							<input type="text" class="form-control" id="floatingInputGroup5" name="telefoneCampo" placeholder="Telefone" value="<?php echo $_SESSION["logado_telefone"];?>">
 							<label for="telefoe" id="label_telefone">Telefone</label>
 						</div>
 						<!-- Mensagem de erro -->
@@ -118,7 +118,7 @@ session_start();
 					<div class="idade campos">
 						<label for="idade" id="labelData">Data de Nascimento:</label>
 
-						<input type="date" id="idade" name="idade_usuario" value="<?php echo $_SESSION["logado_data"];?>">
+						<input type="date" id="idade" name="dataCampo" value="<?php echo $_SESSION["logado_data"];?>">
 
 						<!-- Mensagens de erro -->
 						<label class="erro fs-6 fs-10 fs-7 fs-6 fs-5" id="noData">Data deve ser preenchida!</label>
@@ -141,7 +141,7 @@ session_start();
 								<div class="radio profissa">
 
 									<!-- Input e label -->
-									<input type="radio" id="Profissional" name="jogabilidade" class="bolaRadio">
+									<input type="radio" id="Profissional" name="jogabilidade" class="bolaRadio" value="2">
 
 									<label class="jogabilidades" for="Profissional">5 ou mais vezes por semana</label>
 
@@ -151,7 +151,7 @@ session_start();
 								<div class="radio amad">
 
 									<!-- Input e label -->
-									<input type="radio" id="Amador" name="jogabilidade" class="bolaRadio">
+									<input type="radio" id="Amador" name="jogabilidade" class="bolaRadio" value="3">
 
 									<label class="jogabilidades" for="Amador">De 2 a 4 vezes por semana</label>
 
@@ -161,7 +161,7 @@ session_start();
 								<div class="radio inic">
 
 									<!-- Input e label -->
-									<input type="radio" id="Iniciante" name="jogabilidade" class="bolaRadio">
+									<input type="radio" id="Iniciante" name="jogabilidade" class="bolaRadio" value="1">
 
 									<label class="jogabilidades" for="Iniciante">No máximo 1 vez por semana</label>
 
