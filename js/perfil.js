@@ -1,6 +1,6 @@
 let usuarioLogado = document.querySelector("#nome_usuario").innerText;
 // Armazenando a informacao de qual usuario esta logado
-console.log(usuarioLogado);
+
 // Verficando se um usuario esta logado
 if (!usuarioLogado) {
   Swal.fire({

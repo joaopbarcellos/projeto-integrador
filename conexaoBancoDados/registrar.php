@@ -57,7 +57,7 @@ if (isset($_POST["telefoneCampo"])) {
   $telefone = $_POST["telefoneCampo"];
   if (!empty($telefone)) {
     // Sanitizando o telefone retornado
-    $telefoneFiltrado = filter_var(trim($telefone), FILTER_SANITIZE_NUMBER_INT);
+    $telefoneFiltrado = trim($telefone);
     $verifica = true;
     $_POST["telefoneCampo"] = $telefoneFiltrado;
   } else {
@@ -126,7 +126,7 @@ if ($verifica) {
 		$telefone = $_POST["telefoneCampo"];
 		if (!empty($telefone)) {
 			// Sanitizando o telefone retornado
-			$telefone = filter_var($telefone, FILTER_SANITIZE_NUMBER_INT);
+			$telefone = trim($telefone);
 			$verifica = true;
 		} else {
 			$verifica = false;

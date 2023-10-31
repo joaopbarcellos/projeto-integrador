@@ -8,7 +8,7 @@ $resposta = array();
 
 if (isset($_SESSION["logado"])){
     $email = $_SESSION["logado"];
-    $consulta = $db_con->prepare("SELECT * FROM usuario WHERE email='$emailLogin'");
+    $consulta = $db_con->prepare("SELECT * FROM usuario WHERE email='$email'");
     $consulta->execute();   
     if ($consulta->rowCount() > 0) {
         $linha = $consulta->fetch(PDO::FETCH_ASSOC);
@@ -27,7 +27,6 @@ if (isset($_SESSION["logado"])){
     }
     
 }
-
 // Fecha a conexao com o BD
 $db_con = null;
 ?>

@@ -22,7 +22,10 @@ $dbpassword  = "HCJB168S5umEFXb_Cb3JzQeTtlvcmuzA";
 // para conectar ao mysql, substitua pgsql por mysql
 $db_con= new PDO('pgsql:' . $host . $port . $dbname, $dbuser, $dbpassword);
 
+
 //alguns atributos de performance.
 $db_con->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
 $db_con->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+
+return $db_con;
 ?>
