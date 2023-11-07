@@ -401,8 +401,6 @@ function verificaStep3() {
     if (validaRecorrencia != true) strErros += ", " + validaRecorrencia;
   }  
   if (!strErros.length > 0) {
-    alert("Seu evento foi criado!")
-    currentStep++;
     document.querySelector("form").submit();
   } else {
     Swal.fire({

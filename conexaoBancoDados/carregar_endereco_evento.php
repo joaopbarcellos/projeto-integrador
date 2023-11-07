@@ -1,8 +1,4 @@
 <?php
-
-require_once('conexao_db.php');
-require_once('autenticacao.php');
-
 $resposta = array();
 function carregar_endereco($db_con, $cep, $bairro, $cidade, $estado, $descricao, $numero, $complemento){
     $cep = trim($cep);
@@ -16,7 +12,7 @@ function carregar_endereco($db_con, $cep, $bairro, $cidade, $estado, $descricao,
         $numero = trim($numero);
         $complemento = trim($complemento);
         
-        $consulta_estado = $db_con->prepare("SELECT id FROM estado WHERE nome = " . $estado);
+        $consulta_estado = $db_con->prepare("SELECT id FROM estado WHERE id = " . $estado);
         $consulta_estado->execute();
         $linha_estado = $consulta_estado->fetch(PDO::FETCH_ASSOC);
 
@@ -80,6 +76,6 @@ function carregar_endereco($db_con, $cep, $bairro, $cidade, $estado, $descricao,
     $resposta["sucesso"] = 1;
     $resposta["erro"] = 0;
     $resposta["id"] = $linha_endereco["id"];
-    return $resposta;
+    return $resposta["id"];
 }
 ?>

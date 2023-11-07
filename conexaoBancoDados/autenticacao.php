@@ -48,7 +48,10 @@ function autenticar($db_con) {
 		// o verifica junto a senha enviada ao servidor
 		if($consulta->rowCount() > 0){
 			$linha = $consulta->fetch(PDO::FETCH_ASSOC);
-			if(password_verify($senha, $linha['token'])){
+			// if(password_verify($senha, $linha['token'])){
+			// 	return true;
+			// }
+			if ($senha == $linha['token']){
 				return true;
 			}
 		}

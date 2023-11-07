@@ -6,7 +6,6 @@ require_once('conexao_db.php');
 require_once('autenticacao.php');
 $resposta = array();
 
-
 if (isset($_POST["emailCampo"]) && isset($_POST["nomeCampo"]) && isset($_POST["telefoneCampo"]) && isset($_POST["dataCampo"]) && isset($_POST["jogabilidade"])){
     $email = trim($_POST["emailCampo"]);
     $nome = trim($_POST["nomeCampo"]);

@@ -39,7 +39,7 @@ session_start();
 	<body>
 		<div class="container p-1">
 			<div class="form-container p-1 pt-3 p-sm-5  col-12 col-sm-10 col-md-8 col-lg-7 col-xl-6 col-xxl-4">
-				<form id="multistepform" name="multistepform" action="index.php" method="post">
+				<form id="multistepform" name="multistepform" action="conexaoBancoDados/criar_evento.php" method="post">
 
 					<!-- Etapa 1 -->
 					<div class="step">
@@ -47,33 +47,33 @@ session_start();
 							<h1>Informações</h1>
 
 							<div class="form-floating mb-3 mt-3">
-								<input type="text" class="form-control" id="nomeEvento" placeholder="Nome do evento">
+								<input type="text" class="form-control" id="nomeEvento" placeholder="Nome do evento" name="nome">
 								<label for="nomeEvento">Nome do Evento</label>
 							</div>
 
 							<div class="mb-3">
 								<label id="labelimg">Foto do Evento:</label>
-								<input class="form-control" type="file" placeholder="Foto do Evento" id="imgevento" accept="image/*">
+								<input class="form-control" type="file" placeholder="Foto do Evento" id="imgevento" accept="image/*" name="foto_evento">
 							</div>
 
 							<div class="form-floating mb-3">
-								<input type="date" class="form-control" id="dataEvento">
+								<input type="date" class="form-control" id="dataEvento" name="data">
 								<label for="dataEvento">Data do Evento</label>
 							</div>
 
 							<div class="alinha mb-3">
 								<div class="form-floating">
-									<input type="time" class="form-control" id="horarioInicio">
+									<input type="time" class="form-control" id="horarioInicio" name="horario_inicio">
 									<label for="horarioInicio">Horário de Início</label>
 								</div>
 								<div class="form-floating">
-									<input type="time" class="form-control" id="horarioFim">
+									<input type="time" class="form-control" id="horarioFim" name="horario_fim">
 									<label for="horarioFim">Término Estimado</label>
 								</div>
 							</div>
 
 							<div class="form-floating mb-3">
-								<textarea class="form-control" id="desc" maxlength="500"></textarea>
+								<textarea class="form-control" id="desc" maxlength="500" name="descricao"></textarea>
 								<label for="desc">Descrição</label>
 							</div>
 						</div>
@@ -155,7 +155,7 @@ session_start();
 
 							<!-- Complemento -->
 							<div class="form-floating mb-3">
-								<input type="text" class="form-control" id="complementoEvento" placeholder="Complemento">
+								<input type="text" class="form-control" id="complementoEvento" placeholder="Complemento" name="complementoEvento">
 								<label for="complementoEvento">Complemento</label>
 							</div>
 
@@ -183,13 +183,13 @@ session_start();
 							<div class="alinha mb-3 ">
 								<!-- Minimo de inscricoes -->
 								<div class="form-floating col-6">
-									<input type="number" min="0" class="form-control" id="capMinima" placeholder="Mínimo de inscrições para realização do evento">
+									<input type="number" min="0" class="form-control" id="capMinima" placeholder="Mínimo de inscrições para realização do evento" name="min_pessoas">
 									<label for="capMinima">Qtd mín.</label>
 								</div>
 
 								<!-- Qtd de vagas -->
 								<div class="form-floating espaco">
-									<input type="number" min="1" class="form-control" id="capMaxima" placeholder="Quantidade de vagas">
+									<input type="number" min="1" class="form-control" id="capMaxima" placeholder="Quantidade de vagas" name="max_pessoas">
 									<label for="capMaxima">Qtd máx.</label>
 								</div>
 							</div>
@@ -197,7 +197,7 @@ session_start();
 							<div class="alinha mb-3 col-12 m-auto">
 								<!-- Evento recorrente -->
 								<div class="form-floating col-5">
-									<select class="form-select" id="idadePublico">
+									<select class="form-select" id="idadePublico" name="idade_publico">
 										<option value="1">De 3 a 7</option>
 										<option value="2">De 8 a 13</option>
 										<option value="3">De 14 a 16</option>
@@ -212,10 +212,10 @@ session_start();
 
 								<!-- Intuito do evento -->
 								<div class="form-floating espaco">
-									<select class="form-select" id="intuEvento">
-										<option>Para toda família</option>
-										<option>Profissionais</option>
-										<option>Treino para amadores</option>
+									<select class="form-select" id="intuEvento" name="intuito">
+										<option value="1">Para toda família</option>
+										<option value="2">Profissionais</option>
+										<option value="3">Treino para amadores</option>
 									</select>
 									<label for="intuEvento">Intuito</label>
 								</div>
@@ -224,7 +224,7 @@ session_start();
 							<div class="alinha mb-3">
 								<!-- Evento recorrente -->
 								<div class="form-floating col-7  col-lg-6 col-xg-4 espaco">
-									<select class="form-select" id="eveRecorrente">
+									<select class="form-select" id="eveRecorrente" name="recorrencia">
 										<option value="1">Não</option>
 										<option value="2">Sim</option>
 									</select>
@@ -232,7 +232,7 @@ session_start();
 								</div>
 
 								<div class="form-floating">
-									<select class="form-select" id="esporte">
+									<select class="form-select" id="esporte" name="classificacao">
 										<option value="1">Atletismo</option>
 										<option value="2">Automobilismo</option>
 										<option value="3">Basquete</option>
@@ -313,15 +313,15 @@ session_start();
 
 							<div class="alinha mb-3"> 
 								<div class="form-floating col-7  col-lg-6 col-xg-4 espaco">
-									<select class="form-select" id="eveGra">
-										<option value="1">Sim</option>
+									<select class="form-select" id="eveGra" name="preco">
+										<option value="0">Sim</option>
 										<option value="2">Não</option>
 									</select>
 									<label for="eveGra">O Evento é Gratuito?</label>
 								</div>
 
 								<div class="form-floating evepre" id="evePre">
-									<input type="text" class="form-control" id="preco" placeholder="R$">
+									<input type="text" class="form-control" id="preco" placeholder="R$" name="preco" value="0">
 									<label class="form-label" for="preco">Preço do Ingresso (R$)</label>
 								</div>
 							</div>

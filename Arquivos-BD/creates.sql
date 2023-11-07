@@ -1,4 +1,4 @@
-drop table if exists IDADE_PUBLICO, FOTO_EVENTO, ESTADO, CIDADE, BAIRRO, INTUITO, ENDERECO, EVENTO, CLASSIFICACAO, EVENTO_CLASSIFICACAO, USUARIO, USUARIO_EVENTO, EVENTO_RECORRENTE, RECORRENTE;
+drop table if exists IDADE_PUBLICO, FOTO_EVENTO, ESTADO, CIDADE, BAIRRO, INTUITO, ENDERECO, EVENTO, CLASSIFICACAO, USUARIO, USUARIO_EVENTO, EVENTO_RECORRENTE, RECORRENTE CASCADE;
 
 create table ESTADO(
  id serial primary key,
@@ -22,6 +22,11 @@ create table BAIRRO(
 create table INTUITO(
  id serial primary key,
  nome varchar(12)
+);
+
+create table CLASSIFICACAO(
+ id serial primary key,
+ nome varchar(50)
 );
 
 create table ENDERECO(
@@ -60,11 +65,12 @@ create table EVENTO(
  min_pessoas integer,
  preco float,
  max_pessoas integer,
- visibilidade_tabela boolean,
  FK_INTUITO_id integer,
  FK_ENDERECO_id integer,
  FK_USUARIO_id integer,
  FK_IDADE_PUBLICO_id integer,
+ FK_CLASSIFICACAO_id integer,
+ foreign key (FK_CLASSIFICACAO_id) references CLASSIFICACAO(id),
  foreign key (FK_INTUITO_id) references INTUITO(id),
  foreign key (FK_ENDERECO_id) references ENDERECO(id),
  foreign key (FK_USUARIO_id) references USUARIO(id),
@@ -76,19 +82,6 @@ create table FOTO_EVENTO(
  foto varchar(500),
  FK_EVENTO_id integer,
  foreign key (FK_EVENTO_id) references EVENTO(id)
-);
-
-create table CLASSIFICACAO(
- id serial primary key,
- nome varchar(50)
-);
-
-create table EVENTO_CLASSIFICACAO(
- id serial primary key,
- FK_EVENTO_id integer,
- FK_CLASSIFICACAO_id integer,
- foreign key (FK_EVENTO_id) references EVENTO(id),
- foreign key (FK_CLASSIFICACAO_id) references CLASSIFICACAO(id)
 );
 
 create table USUARIO_EVENTO(

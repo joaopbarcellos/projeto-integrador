@@ -75,35 +75,72 @@ VALUES (1, 1000, 29164018, 'Nelcy Lopes Vieira', 1),
 INSERT INTO IDADE_PUBLICO(id, intervalo)
 VALUES (1, 'De 3 a 7'),
 (2, 'De 8 a 13'),
-(3, 'De 14 a 15'),
-(4, 'De 16 a 18'),
-(5, 'Acima de 18');
+(3, 'De 14 a 16'),
+(4, 'De 17 a 20'),
+(5, 'Acima de 18'),
+(6, 'De 20 a 30'),
+(7, 'De 30 a 40'),
+(8, 'Acima de 40');
+
+INSERT INTO CLASSIFICACAO (id, nome)
+VALUES (1, 'Atletismo'),
+(2, 'Automobilismo'),
+(3, 'Basquete'),
+(4, 'Beach Tennis'),
+(5, 'Bicicross'),
+(6, 'Boxe'),
+(7, 'Capoeira'),
+(8, 'Canoagem'),
+(9, 'Corrida'),
+(10, 'Ciclismo'),
+(11, 'Escalada Esportiva'),
+(12, 'Futebol'),
+(13, 'Futebol Americano'),
+(14, 'Futsal'),
+(15, 'Ginástica Artística'),
+(16, 'Handebol'),
+(17, 'Hipismo'),
+(18, 'Hóquei em Patins'),
+(19, 'Jiu-Jitsu'),
+(20, 'Judô'),
+(21, 'Kitesurf'),
+(22, 'Levantamento de Peso'),
+(23, 'Mergulho'),
+(24, 'MMA'),
+(25, 'Motocross'),
+(26, 'Mountain Bike'),
+(27, 'Natação'),
+(28, 'Natação Sincronizada'),
+(29, 'Pentatlo Moderno'),
+(30, 'Polo Aquático'),
+(31, 'Remo'),
+(32, 'Rugby'),
+(33, 'Rugby em Cadeira de Rodas'),
+(34, 'Skate'),
+(35, 'Surfe'),
+(36, 'Surfe de Remo'),
+(37, 'Taekwondo'),
+(38, 'Tênis'),
+(39, 'Tênis de Mesa'),
+(40, 'Tiro Esportivo'),
+(41, 'Triatlo'),
+(42, 'Vôlei'),
+(43, 'Vôlei de Praia'),
+(44, 'Vôlei Sentado'),
+(45, 'Xadrez'),
+(46, 'Outro');
 
 
-INSERT INTO EVENTO(id, descricao, nome, data, min_pessoas, preco, max_pessoas, visibilidade_tabela, horario_inicio, horario_fim, FK_INTUITO_id, FK_ENDERECO_id, FK_USUARIO_id, FK_IDADE_PUBLICO_id)
-VALUES (1, 'Aula ofertada pelo Zico para crianças de até 12 anos. O evento terá duração de 2 horas. Participação somente com inscrição prévia.','Aula do Zico', '2023-08-16', 2, 97, 10, TRUE, '12:00:00', '14:00:00', 1, 1, 7, 2),
-(2, 'Treino de futebol americano da igreja. Não pode xingamentos! Venha se ajuntar conosco pra praticar este esporte tão raro aqui no Brasil', 'Treino Black Knights', '2023-05-26', 5, 0, 18, TRUE, '10:00:00', '11:00:00', 2, 2, 11, 5),
-(3, 'Aulão de natação no sesc de Aracruz, venha aprender mais sobre natação e se divertir nesse dia!', 'Desafio de Natação', '2023-07-12', 2, 0, 25, FALSE, '08:00:00', '10:00:00', 1, 3, 21, 1),
-(4, 'Este é um projeto da Prefeitura de Vila Velha junto com o Point Mar Dourado de Beach Tennis, para inserir a modalidade nos esportes educacionais ofertados nas escolas futuramente.', 'Mar Dourado Beach Tennis', '2023-09-12', 5, 10, 50, FALSE, '11:00:00', '12:00:00', 1, 4, 25, 3),
-(5, 'O percurso será da Praça dos Ciclista à Prainha. Os participantes passarão pelas avenidas Estudante José Júlio de Souza e Gil Veloso, além das ruas Castelo Branco e Antônio Ataíde. Durante o trajeto, uma das faixas das vias será interditada para passagem dos atletas. A Guarda Municipal dará apoio com batedores da motopatrulha e viaturas no deslocamento.', '10ª corrida da Penha', '2023-04-09', 100, 0, 500, FALSE, '07:30:00', '08:30:00', 3, 4, 30, 5),
-(6, 'O L’ÉTAPE RIO DE JANEIRO SANTANDER é um evento de ciclismo amador, cujo objetivo é aproximar os participantes da experiência da maior competição de ciclismo do mundo.', 'L’ÉTAPE RIO DE JANEIRO', '2023-06-30', 500, 130, 1500, FALSE, '12:00:00', '14:00:00', 2, 5, 12, 5),
-(7, 'Surf na cidade de Vila Velha - ES na Praia de Itaparica.', 'Surf - Praia de Itaparica', '2023-08-27', 2, 0, 10, FALSE, '06:00:00', '08:00:00', 3, 4, 25, 3),
-(8, 'Basquete na cidade de Vitória - ES na Praça do Cauê, perto da Terceira Ponte.', 'Basquete - Praça do Cauê', '2023-07-05', 6, 0, 18, FALSE, '18:00:00', '20:00:00', 3, 6, 15, 4),
-(9, 'Motocross na praia de Jacaraípe, venha aproveitar desse esporte conosco!', 'Motocross Arena Jacaraípe', '2023-09-20', 10, 15.9, 50, FALSE, '08:00:00', '11:00:00', 2, 7, 8, 5);
-
-INSERT INTO CLASSIFICACAO (id, nome) 
-VALUES (1, 'Futebol'), 
-(2, 'Corrida'), 
-(3, 'Natação'),
-(4, 'Motocross'),
-(5, 'Surf'),
-(6, 'Basquete'),
-(7, 'Vôlei'),
-(8, 'Futebol americano'),
-(9, 'Tênis'),
-(10, 'Beach Tênis'),
-(11, 'Ciclismo');
-
+INSERT INTO EVENTO(id, descricao, nome, data, min_pessoas, preco, max_pessoas, horario_inicio, horario_fim, FK_CLASSIFICACAO_id, FK_INTUITO_id, FK_ENDERECO_id, FK_USUARIO_id, FK_IDADE_PUBLICO_id)
+VALUES (1, 'Aula ofertada pelo Zico para crianças de até 12 anos. O evento terá duração de 2 horas. Participação somente com inscrição prévia.','Aula do Zico', '2023-08-16', 2, 97, 10, '12:00:00', '14:00:00', 12, 1, 1, 7, 2),
+(2, 'Treino de futebol americano da igreja. Não pode xingamentos! Venha se ajuntar conosco pra praticar este esporte tão raro aqui no Brasil', 'Treino Black Knights', '2023-05-26', 5, 0, 18, '10:00:00', '11:00:00', 13, 2, 2, 11, 5),
+(3, 'Aulão de natação no sesc de Aracruz, venha aprender mais sobre natação e se divertir nesse dia!', 'Desafio de Natação', '2023-07-12', 2, 0, 25, '08:00:00', '10:00:00', 27, 1, 3, 21, 1),
+(4, 'Este é um projeto da Prefeitura de Vila Velha junto com o Point Mar Dourado de Beach Tennis, para inserir a modalidade nos esportes educacionais ofertados nas escolas futuramente.', 'Mar Dourado Beach Tennis', '2023-09-12', 5, 10, 50, '11:00:00', '12:00:00', 4, 1, 4, 25, 3),
+(5, 'O percurso será da Praça dos Ciclista à Prainha. Os participantes passarão pelas avenidas Estudante José Júlio de Souza e Gil Veloso, além das ruas Castelo Branco e Antônio Ataíde. Durante o trajeto, uma das faixas das vias será interditada para passagem dos atletas. A Guarda Municipal dará apoio com batedores da motopatrulha e viaturas no deslocamento.', '10ª corrida da Penha', '2023-04-09', 100, 0, 500, '07:30:00', '08:30:00', 9, 3, 4, 30, 5),
+(6, 'O L’ÉTAPE RIO DE JANEIRO SANTANDER é um evento de ciclismo amador, cujo objetivo é aproximar os participantes da experiência da maior competição de ciclismo do mundo.', 'L’ÉTAPE RIO DE JANEIRO', '2023-06-30', 500, 130, 1500, '12:00:00', '14:00:00', 10, 2, 5, 12, 5),
+(7, 'Surf na cidade de Vila Velha - ES na Praia de Itaparica.', 'Surf - Praia de Itaparica', '2023-08-27', 2, 0, 10, '06:00:00', '08:00:00', 35, 3, 4, 25, 3),
+(8, 'Basquete na cidade de Vitória - ES na Praça do Cauê, perto da Terceira Ponte.', 'Basquete - Praça do Cauê', '2023-07-05', 6, 0, 18, '18:00:00', '20:00:00', 3, 3, 6, 15, 4),
+(9, 'Motocross na praia de Jacaraípe, venha aproveitar desse esporte conosco!', 'Motocross Arena Jacaraípe', '2023-09-20', 10, 15.9, 50, '08:00:00', '11:00:00', 25, 2, 7, 8, 5);
 
 INSERT INTO USUARIO_EVENTO(id, FK_USUARIO_id, FK_EVENTO_id)
 VALUES (1, 28, 1), 
@@ -125,17 +162,6 @@ VALUES (1, 28, 1),
 (17, 17, 8),
 (18, 28, 9),
 (19, 17, 9);
-
-INSERT INTO EVENTO_CLASSIFICACAO(id, FK_EVENTO_id, FK_CLASSIFICACAO_id)
-VALUES (1, 1, 1),
-(2, 2, 8),
-(3, 3, 3),
-(4, 4, 10), 
-(5, 5, 11),
-(6, 6, 11),
-(7, 7, 5),
-(8, 8, 6),
-(9, 9, 4);
 
 INSERT INTO FOTO_EVENTO(id, foto, FK_EVENTO_id)
 VALUES (1, 'https://i.imgur.com/e3zPVU7.png', 1),
