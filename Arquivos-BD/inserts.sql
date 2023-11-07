@@ -63,38 +63,14 @@ VALUES (1, 'Jardim Limoeiro', 1),
 (6, 'Santa Helena', 4),
 (7, 'Estância Monazítica', 1);
 
-INSERT INTO TIPO_LOGRADOURO(id, tipo)
-VALUES (1, 'Avenida'),
-(2, 'Rua'),
-(3, 'Alameda'),
-(4, 'Condomínio'),
-(5, 'Distrito'),
-(6, 'Morro'),
-(7, 'Estrada'),
-(8, 'Loteamento'),
-(9, 'Via'),
-(10, 'Viaduto'),
-(11, 'Vale'),
-(12, 'Vereda'),
-(13, 'Viela'),
-(14, 'Vila'),
-(15, 'Praça'),
-(16, 'Pátio'),
-(17, 'Parque'),
-(18, 'Jardim'),
-(19, 'Quadra'),
-(20, 'Recanto'),
-(21, 'Residência'),
-(22, 'Rodovia');
-
-INSERT INTO ENDERECO(id, numero, cep, descricao, FK_TIPO_LOGRADOURO_id, FK_BAIRRO_id)
-VALUES (1, 1000, 29164018, 'Nelcy Lopes Vieira', 2, 1),
-(2, 0, 29066010, 'Ana Viêira Mafra', 2, 2),
-(3, 35, 29199548, 'ES-010', 22, 3),
-(4, 0, 29103865, 'Est. José Júlio de Souza', 1, 4),
-(5, 0, 20021140, 'Infante Dom Henrique', 1, 5),
-(6, 189273, 29055070, 'Cristóvão Jaques', 15, 6),
-(7, 714, 29175520, 'Abido Saadi', 1, 7);
+INSERT INTO ENDERECO(id, numero, cep, descricao, FK_BAIRRO_id)
+VALUES (1, 1000, 29164018, 'Nelcy Lopes Vieira', 1),
+(2, 0, 29066010, 'Ana Viêira Mafra', 2),
+(3, 35, 29199548, 'ES-010', 3),
+(4, 0, 29103865, 'Est. José Júlio de Souza', 4),
+(5, 0, 20021140, 'Infante Dom Henrique', 5),
+(6, 189273, 29055070, 'Cristóvão Jaques', 6),
+(7, 714, 29175520, 'Abido Saadi', 7);
 
 INSERT INTO IDADE_PUBLICO(id, intervalo)
 VALUES (1, 'De 3 a 7'),
