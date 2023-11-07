@@ -64,10 +64,6 @@ if(autenticar($db_con)) {
 				$consulta_endereco = $db_con->prepare("SELECT * FROM endereco WHERE id = " . $linha["fk_endereco_id"]);
 				$consulta_endereco->execute();
 				$linha_endereco = $consulta_endereco->fetch(PDO::FETCH_ASSOC);
-				
-				$consulta_tipo_logradouro = $db_con->prepare("SELECT tipo FROM tipo_logradouro WHERE id = ". $linha_endereco["fk_tipo_logradouro_id"]);
-				$consulta_tipo_logradouro->execute();
-				$linha_tipo_logradouro = $consulta_tipo_logradouro->fetch(PDO::FETCH_ASSOC);
 
 				$consulta_bairro = $db_con->prepare("SELECT * FROM bairro WHERE id = " . $linha_endereco["fk_bairro_id"]);
 				$consulta_bairro->execute();
@@ -95,7 +91,7 @@ if(autenticar($db_con)) {
 				$evento["horario_inicio"] = $linha["horario_inicio"];
 				$evento["horario_fim"] = $linha["horario_fim"];
 				$evento["usuario"] = $linha_usuario["nome"];
-				$evento["endereco"] = $linha_tipo_logradouro["tipo"] . " " . $linha_endereco["descricao"] . ", " . $linha_endereco["numero"] . " - " . $linha_bairro["nome"] . ", " . $linha_cidade["nome"] . " - " . $linha_estado["nome"] . ", " . $linha_endereco["cep"];
+				$evento["endereco"] = $linha_endereco["descricao"] . ", " . $linha_endereco["numero"] . " - " . $linha_bairro["nome"] . ", " . $linha_cidade["nome"] . " - " . $linha_estado["nome"] . ", " . $linha_endereco["cep"];
 					
 
 				// Caso o produto exista no BD, o cliente 

@@ -1,4 +1,4 @@
-drop table if exists IDADE_PUBLICO, FOTO_EVENTO, ESTADO, CIDADE, BAIRRO, INTUITO, ENDERECO, EVENTO, CLASSIFICACAO, EVENTO_CLASSIFICACAO, USUARIO, USUARIO_EVENTO, EVENTO_RECORRENTE, RECORRENTE;
+drop table if exists IDADE_PUBLICO, FOTO_EVENTO, ESTADO, CIDADE, BAIRRO, TIPO_LOGRADOURO, INTUITO, ENDERECO, EVENTO, CLASSIFICACAO, EVENTO_CLASSIFICACAO, USUARIO, USUARIO_EVENTO, EVENTO_RECORRENTE, RECORRENTE;
 
 create table ESTADO(
  id serial primary key,
@@ -19,6 +19,11 @@ create table BAIRRO(
  foreign key (FK_CIDADE_id) references CIDADE(id)
 );
 
+create table TIPO_LOGRADOURO(
+ id serial primary key,
+ tipo varchar(30)
+);
+
 create table INTUITO(
  id serial primary key,
  nome varchar(12)
@@ -27,9 +32,11 @@ create table INTUITO(
 create table ENDERECO(
  id serial primary key,
  numero integer,
- cep integer unique,
+ cep integer,
  descricao varchar(200),
+ FK_TIPO_LOGRADOURO_id integer,
  FK_BAIRRO_id integer,
+ foreign key (FK_TIPO_LOGRADOURO_id) references TIPO_LOGRADOURO(id),
  foreign key (FK_BAIRRO_id) references BAIRRO(id)
 );
 

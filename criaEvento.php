@@ -135,11 +135,12 @@ session_start();
 								</div>
 
 							</div>
-
+							
 							<div class="form-floating mb-3">
 								<input type="text" class="form-control" id="logradouroEvento" placeholder="Logradouro" name="logradouroEvento">
 								<label for="logradouroEvento">Logradouro</label>
 							</div>
+
 							<div class="alinha mb-3 m-auto">
 								<div class="form-floating col-6">
 									<input type="text" class="form-control" id="bairroEvento" placeholder="Bairro" name="bairroEvento">
@@ -147,7 +148,7 @@ session_start();
 								</div>
 								<!-- Bairro -->
 								<div class="form-floating espaco">
-									<input type="text" class="form-control" id="numeroEvento" placeholder="Número">
+									<input type="text" class="form-control" id="numeroEvento" name="numeroEvento" placeholder="Número">
 									<label for="numeroEvento">Número</label>
 								</div>
 							</div>
