@@ -27,7 +27,7 @@ create table INTUITO(
 create table ENDERECO(
  id serial primary key,
  numero integer,
- cep integer,
+ cep integer unique,
  descricao varchar(200),
  FK_BAIRRO_id integer,
  foreign key (FK_BAIRRO_id) references BAIRRO(id)
