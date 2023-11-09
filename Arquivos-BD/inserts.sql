@@ -5,7 +5,7 @@ VALUES (1, 'Família'),
 
 
 INSERT INTO USUARIO (email, nome, data_nascimento, token, foto, telefone, FK_INTUITO_id) 
-VALUES ('gustavo@gmail.com', 'Gustavo Alves', '2000-01-01', 'https://i.imgur.com/RyUD05p.png', 'gu.png', '(99) 99999-9999', 1),
+VALUES ('gustavo@gmail.com', 'Gustavo Alves', '2000-01-01', 'gustavo123', 'https://i.imgur.com/RyUD05p.png', '(99) 99999-9999', 1),
 ('pedro@gmail.com', 'Pedro Ramos', '2006-05-10', 'pedro123', 'https://i.imgur.com/RyUD05p.png', '(99) 99999-9999', 2),
 ('joao@gmail.com', 'João Pedro', '1988-12-20', 'barcellos123', 'https://i.imgur.com/RyUD05p.png', '(99) 99999-9999', 1),
 ('fellipy@gmail.com', 'Fellipy Silva', '1999-07-15', 'pitico123', 'https://i.imgur.com/RyUD05p.png', '(99) 99999-9999', 2),
@@ -45,32 +45,32 @@ VALUES (1, 'AC'), (2, 'AL'), (3, 'AM'), (4, 'AP'), (5, 'BA'),
        (21, 'RO'), (22, 'RR'), (23, 'RS'), (24, 'SC'), (25, 'SE'), 
        (26, 'SP'), (27, 'TO');
 
-INSERT INTO CIDADE (id, nome, FK_ESTADO_id) 
-VALUES (1, 'Serra', 8), 
-(2, 'Cariacica', 8), 
-(3, 'Guarapari', 8), 
-(4, 'Vitória', 8), 
-(5, 'Vila Velha', 8),
-(6, 'Aracruz', 8),
-(7, 'Rio de Janeiro', 19); 
+INSERT INTO CIDADE (nome, FK_ESTADO_id) 
+VALUES ('Serra', 8), 
+('Cariacica', 8), 
+('Guarapari', 8), 
+('Vitória', 8), 
+('Vila Velha', 8),
+('Aracruz', 8),
+('Rio de Janeiro', 19); 
 
-INSERT INTO BAIRRO(id, nome, FK_CIDADE_id)
-VALUES (1, 'Jardim Limoeiro', 1),
-(2, 'Mata da Praia', 4),
-(3, 'Santa Cruz', 6),
-(4, 'Itaparica', 5),
-(5, 'Marina da Glória', 7),
-(6, 'Santa Helena', 4),
-(7, 'Estância Monazítica', 1);
+INSERT INTO BAIRRO(nome, FK_CIDADE_id)
+VALUES ('Jardim Limoeiro', 1),
+('Mata da Praia', 4),
+('Santa Cruz', 6),
+('Itaparica', 5),
+('Marina da Glória', 7),
+('Santa Helena', 4),
+('Estância Monazítica', 1);
 
-INSERT INTO ENDERECO(id, numero, cep, descricao, FK_BAIRRO_id)
-VALUES (1, 1000, 29164018, 'Nelcy Lopes Vieira', 1),
-(2, 0, 29066010, 'Ana Viêira Mafra', 2),
-(3, 35, 29199548, 'ES-010', 3),
-(4, 0, 29103865, 'Est. José Júlio de Souza', 4),
-(5, 0, 20021140, 'Infante Dom Henrique', 5),
-(6, 189273, 29055070, 'Cristóvão Jaques', 6),
-(7, 714, 29175520, 'Abido Saadi', 7);
+INSERT INTO ENDERECO(numero, cep, descricao, FK_BAIRRO_id)
+VALUES ('1000', 29164018, 'Nelcy Lopes Vieira', 1),
+('0', 29066010, 'Ana Viêira Mafra', 2),
+('35', 29199548, 'ES-010', 3),
+('0', 29103865, 'Est. José Júlio de Souza', 4),
+('0', 20021140, 'Infante Dom Henrique', 5),
+('189273', 29055070, 'Cristóvão Jaques', 6),
+('714', 29175520, 'Abido Saadi', 7);
 
 INSERT INTO IDADE_PUBLICO(id, intervalo)
 VALUES (1, 'De 3 a 7'),
@@ -131,55 +131,38 @@ VALUES (1, 'Atletismo'),
 (46, 'Outro');
 
 
-INSERT INTO EVENTO(id, descricao, nome, data, min_pessoas, preco, max_pessoas, horario_inicio, horario_fim, FK_CLASSIFICACAO_id, FK_INTUITO_id, FK_ENDERECO_id, FK_USUARIO_id, FK_IDADE_PUBLICO_id)
-VALUES (1, 'Aula ofertada pelo Zico para crianças de até 12 anos. O evento terá duração de 2 horas. Participação somente com inscrição prévia.','Aula do Zico', '2023-08-16', 2, 97, 10, '12:00:00', '14:00:00', 12, 1, 1, 7, 2),
-(2, 'Treino de futebol americano da igreja. Não pode xingamentos! Venha se ajuntar conosco pra praticar este esporte tão raro aqui no Brasil', 'Treino Black Knights', '2023-05-26', 5, 0, 18, '10:00:00', '11:00:00', 13, 2, 2, 11, 5),
-(3, 'Aulão de natação no sesc de Aracruz, venha aprender mais sobre natação e se divertir nesse dia!', 'Desafio de Natação', '2023-07-12', 2, 0, 25, '08:00:00', '10:00:00', 27, 1, 3, 21, 1),
-(4, 'Este é um projeto da Prefeitura de Vila Velha junto com o Point Mar Dourado de Beach Tennis, para inserir a modalidade nos esportes educacionais ofertados nas escolas futuramente.', 'Mar Dourado Beach Tennis', '2023-09-12', 5, 10, 50, '11:00:00', '12:00:00', 4, 1, 4, 25, 3),
-(5, 'O percurso será da Praça dos Ciclista à Prainha. Os participantes passarão pelas avenidas Estudante José Júlio de Souza e Gil Veloso, além das ruas Castelo Branco e Antônio Ataíde. Durante o trajeto, uma das faixas das vias será interditada para passagem dos atletas. A Guarda Municipal dará apoio com batedores da motopatrulha e viaturas no deslocamento.', '10ª corrida da Penha', '2023-04-09', 100, 0, 500, '07:30:00', '08:30:00', 9, 3, 4, 30, 5),
-(6, 'O L’ÉTAPE RIO DE JANEIRO SANTANDER é um evento de ciclismo amador, cujo objetivo é aproximar os participantes da experiência da maior competição de ciclismo do mundo.', 'L’ÉTAPE RIO DE JANEIRO', '2023-06-30', 500, 130, 1500, '12:00:00', '14:00:00', 10, 2, 5, 12, 5),
-(7, 'Surf na cidade de Vila Velha - ES na Praia de Itaparica.', 'Surf - Praia de Itaparica', '2023-08-27', 2, 0, 10, '06:00:00', '08:00:00', 35, 3, 4, 25, 3),
-(8, 'Basquete na cidade de Vitória - ES na Praça do Cauê, perto da Terceira Ponte.', 'Basquete - Praça do Cauê', '2023-07-05', 6, 0, 18, '18:00:00', '20:00:00', 3, 3, 6, 15, 4),
-(9, 'Motocross na praia de Jacaraípe, venha aproveitar desse esporte conosco!', 'Motocross Arena Jacaraípe', '2023-09-20', 10, 15.9, 50, '08:00:00', '11:00:00', 25, 2, 7, 8, 5);
+INSERT INTO EVENTO(descricao, nome, data, min_pessoas, preco, max_pessoas, horario_inicio, horario_fim, foto, FK_CLASSIFICACAO_id, FK_INTUITO_id, FK_ENDERECO_id, FK_USUARIO_id, FK_IDADE_PUBLICO_id)
+VALUES ('Aula ofertada pelo Zico para crianças de até 12 anos. O evento terá duração de 2 horas. Participação somente com inscrição prévia.','Aula do Zico', '2023-08-16', 2, 97, 10, '12:00:00', '14:00:00', 'https://i.imgur.com/e3zPVU7.png', 12, 1, 1, 7, 2),
+('Treino de futebol americano da igreja. Não pode xingamentos! Venha se ajuntar conosco pra praticar este esporte tão raro aqui no Brasil', 'Treino Black Knights', '2023-05-26', 5, 0, 18, '10:00:00', '11:00:00', 'https://i.imgur.com/ebF3p8e.png', 13, 2, 2, 11, 5),
+('Aulão de natação no sesc de Aracruz, venha aprender mais sobre natação e se divertir nesse dia!', 'Desafio de Natação', '2023-07-12', 2, 0, 25, '08:00:00', '10:00:00', 'https://i.imgur.com/VCe3NHw.png', 27, 1, 3, 21, 1),
+('Este é um projeto da Prefeitura de Vila Velha junto com o Point Mar Dourado de Beach Tennis, para inserir a modalidade nos esportes educacionais ofertados nas escolas futuramente.', 'Mar Dourado Beach Tennis', '2023-09-12', 5, 10, 50, '11:00:00', '12:00:00', 'https://i.imgur.com/o0DzAVc.png', 4, 1, 4, 25, 3),
+('O percurso será da Praça dos Ciclista à Prainha. Os participantes passarão pelas avenidas Estudante José Júlio de Souza e Gil Veloso, além das ruas Castelo Branco e Antônio Ataíde. Durante o trajeto, uma das faixas das vias será interditada para passagem dos atletas. A Guarda Municipal dará apoio com batedores da motopatrulha e viaturas no deslocamento.', '10ª corrida da Penha', '2023-04-09', 100, 0, 500, '07:30:00', '08:30:00', 'https://i.imgur.com/3GbNJut.png', 9, 3, 4, 30, 5),
+('O L’ÉTAPE RIO DE JANEIRO SANTANDER é um evento de ciclismo amador, cujo objetivo é aproximar os participantes da experiência da maior competição de ciclismo do mundo.', 'L’ÉTAPE RIO DE JANEIRO', '2023-06-30', 500, 130, 1500, '12:00:00', '14:00:00', 'https://i.imgur.com/q24YyoK.png', 10, 2, 5, 12, 5),
+('Surf na cidade de Vila Velha - ES na Praia de Itaparica.', 'Surf - Praia de Itaparica', '2023-08-27', 2, 0, 10, '06:00:00', '08:00:00', 'https://i.imgur.com/9Hq0GSy.png', 35, 3, 4, 25, 3),
+('Basquete na cidade de Vitória - ES na Praça do Cauê, perto da Terceira Ponte.', 'Basquete - Praça do Cauê', '2023-07-05', 6, 0, 18, '18:00:00', '20:00:00', 'https://i.imgur.com/MH8QB1D.png', 3, 3, 6, 15, 4),
+('Motocross na praia de Jacaraípe, venha aproveitar desse esporte conosco!', 'Motocross Arena Jacaraípe', '2023-09-20', 10, 15.9, 50, '08:00:00', '11:00:00', 'https://i.imgur.com/l9I9hL4.png', 25, 2, 7, 8, 5);
 
-INSERT INTO USUARIO_EVENTO(id, FK_USUARIO_id, FK_EVENTO_id)
-VALUES (1, 28, 1), 
-(2, 29, 1),
-(3, 18, 3),
-(4, 19, 3),
-(5, 1, 4), 
-(6, 2, 4), 
-(7, 3, 4),
-(8, 4, 4),
-(9, 5, 4),
-(10, 8, 5),
-(11, 22, 5),
-(12, 30, 6),
-(13, 29, 6),
-(14, 2, 7),
-(15, 3, 7),
-(16, 16, 8),
-(17, 17, 8),
-(18, 28, 9),
-(19, 17, 9);
+INSERT INTO USUARIO_EVENTO(FK_USUARIO_id, FK_EVENTO_id)
+VALUES (28, 1), 
+(29, 1),
+(18, 3),
+(19, 3),
+(1, 4), 
+(2, 4), 
+(3, 4),
+(4, 4),
+(5, 4),
+(8, 5),
+(22, 5),
+(30, 6),
+(29, 6),
+(2, 7),
+(3, 7),
+(16, 8),
+(17, 8),
+(28, 9),
+(17, 9);
 
-INSERT INTO FOTO_EVENTO(id, foto, FK_EVENTO_id)
-VALUES (1, 'https://i.imgur.com/e3zPVU7.png', 1),
-(2, 'https://i.imgur.com/e3zPVU7.png', 1),
-(3, 'https://i.imgur.com/e3zPVU7.png', 1),
-(4, 'https://i.imgur.com/VCe3NHw.png', 2),
-(5, 'https://i.imgur.com/kCM7mkC.png', 3),
-(6, 'https://i.imgur.com/kCM7mkC.png', 3),
-(7, 'https://i.imgur.com/l9I9hL4.png', 9),
-(8, 'https://i.imgur.com/MH8QB1D.png',  8),
-(9, 'https://i.imgur.com/o0DzAVc.png', 4),
-(10, 'https://i.imgur.com/o0DzAVc.png', 4),
-(11, 'https://i.imgur.com/9Hq0GSy.png', 7),
-(12, 'https://i.imgur.com/3GbNJut.png', 5),
-(13, 'https://i.imgur.com/3GbNJut.png', 5),
-(14, 'https://i.imgur.com/q24YyoK.png', 6),
-(15, 'https://i.imgur.com/q24YyoK.png', 6),
-(16, 'https://i.imgur.com/q24YyoK.png', 6);
 
 INSERT INTO RECORRENTE(id, recorrencia)
 VALUES (1, 'Domingo'),
@@ -190,8 +173,8 @@ VALUES (1, 'Domingo'),
 (6, 'Sexta'),
 (7, 'Sábado');
 
-INSERT INTO EVENTO_RECORRENTE(id, FK_EVENTO_id, FK_RECORRENTE_id)
-VALUES (1, 1, 4),
-(2, 4, 3),
-(3, 2, 6),
-(4, 1, 7);
+INSERT INTO EVENTO_RECORRENTE(FK_EVENTO_id, FK_RECORRENTE_id)
+VALUES (1, 4),
+(4, 3),
+(2, 6),
+(1, 7);

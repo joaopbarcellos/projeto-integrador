@@ -45,7 +45,7 @@
   width: 8rem;
   height: 8rem;
   margin-top: 20px;
-  background-image: var(--fotosemperfil);
+  border-radius: 50%;
   background-size: auto 8rem;
 }
 

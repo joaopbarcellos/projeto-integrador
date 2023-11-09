@@ -58,10 +58,11 @@ session_start();
 				<!-- Crio a div com as informacoes do ususario -->
 				<div class="fot_desc">
 					<div class="row col-12">
-
 						<div class="col-12 col-lg-4 text-center foto">
 							<!-- Como padrao o usuario n possui foto -->
-							<div class="mx-auto" id="semfoto"></div>
+							<div class="mx-auto">
+								<img src="<?php echo $_SESSION["logado_foto"];?>" id="semfoto">
+							</div>
 						</div>
 						<div class="col-12 col-lg-8 todosdados">
 							<!-- Crio a div pra inserir os dados -->

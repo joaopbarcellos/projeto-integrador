@@ -9,14 +9,14 @@ create table CIDADE(
  id serial primary key,
  nome varchar(30),
  FK_ESTADO_id integer,
- foreign key (FK_ESTADO_id) references ESTADO(id)
+ foreign key (FK_ESTADO_id) references ESTADO(id) ON DELETE CASCADE
 );
 
 create table BAIRRO(
  id serial primary key,
  nome varchar(30),
  FK_CIDADE_id integer,
- foreign key (FK_CIDADE_id) references CIDADE(id)
+ foreign key (FK_CIDADE_id) references CIDADE(id) ON DELETE CASCADE
 );
 
 create table INTUITO(
@@ -31,11 +31,11 @@ create table CLASSIFICACAO(
 
 create table ENDERECO(
  id serial primary key,
- numero integer,
- cep integer,
+ numero varchar(10),
+ cep varchar(9),
  descricao varchar(200),
  FK_BAIRRO_id integer,
- foreign key (FK_BAIRRO_id) references BAIRRO(id)
+ foreign key (FK_BAIRRO_id) references BAIRRO(id) ON DELETE CASCADE
 );
 
 create table USUARIO(
@@ -47,7 +47,7 @@ create table USUARIO(
  foto varchar(500),
  telefone varchar(15),
  FK_INTUITO_id integer,
- foreign key (FK_INTUITO_id) references INTUITO(id)
+ foreign key (FK_INTUITO_id) references INTUITO(id) ON DELETE CASCADE
 );
 
 create table IDADE_PUBLICO(
@@ -64,6 +64,7 @@ create table EVENTO(
  horario_fim time,
  min_pessoas integer,
  preco float,
+ foto varchar(500),
  max_pessoas integer,
  FK_INTUITO_id integer,
  FK_ENDERECO_id integer,
@@ -72,24 +73,17 @@ create table EVENTO(
  FK_CLASSIFICACAO_id integer,
  foreign key (FK_CLASSIFICACAO_id) references CLASSIFICACAO(id),
  foreign key (FK_INTUITO_id) references INTUITO(id),
- foreign key (FK_ENDERECO_id) references ENDERECO(id),
- foreign key (FK_USUARIO_id) references USUARIO(id),
+ foreign key (FK_ENDERECO_id) references ENDERECO(id) ON DELETE CASCADE,
+ foreign key (FK_USUARIO_id) references USUARIO(id) ON DELETE CASCADE,
  foreign key (FK_IDADE_PUBLICO_id) references IDADE_PUBLICO(id)
-);
-
-create table FOTO_EVENTO(
- id serial primary key,
- foto varchar(500),
- FK_EVENTO_id integer,
- foreign key (FK_EVENTO_id) references EVENTO(id)
 );
 
 create table USUARIO_EVENTO(
  id serial primary key,
  FK_USUARIO_id integer,
  FK_EVENTO_id integer,
- foreign key (FK_USUARIO_id) references USUARIO(id), 
- foreign key (FK_EVENTO_id) references EVENTO(id)
+ foreign key (FK_USUARIO_id) references USUARIO(id) ON DELETE CASCADE, 
+ foreign key (FK_EVENTO_id) references EVENTO(id) ON DELETE CASCADE
 );
 
 
@@ -102,6 +96,6 @@ create table EVENTO_RECORRENTE(
   id serial primary key,
   FK_EVENTO_id integer,
   FK_RECORRENTE_id integer,
-  foreign key (FK_EVENTO_id) references EVENTO(id),
+  foreign key (FK_EVENTO_id) references EVENTO(id) ON DELETE CASCADE,
   foreign key (FK_RECORRENTE_id) references RECORRENTE(id)
 );

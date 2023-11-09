@@ -35,19 +35,51 @@ if(autenticar($db_con)) {
 				// e entregue agora pois ha um php exclusivo para obter 
 				// a imagem do produto.
 				$linha = $consulta->fetch(PDO::FETCH_ASSOC);
-	
 				$resposta["nome"] = $linha["nome"];
 				$resposta["preco"] = $linha["preco"];
 				$resposta["descricao"] = $linha["descricao"];
 				$resposta["data"] = $linha["data"];
-				$resposta["telefone"] = $linha["telefone"];
+				$resposta["foto"] = $linha["foto"];
 				$resposta["max_pessoas"] = $linha["max_pessoas"];
 				$resposta["min_pessoas"] = $linha["min_pessoas"];
 				$resposta["horario_inicio"] = $linha["horario_inicio"];
-				$resposta["intuito"] = $linha["intuito"];
-				$resposta["endereco"] = $linha["endereco"];
-				$resposta["usuario"] = $linha["usuario"];
-				$resposta["idade_publico"] = $linha["idade_publico"];
+				$resposta["horario_fim"] = $linha["horario_fim"];
+				$intuito = $linha["fk_intuito_id"];
+				$endereco = $linha["fk_endereco_id"];
+				$usuario = $linha["fk_usuario_id"];
+				$idade_publico = $linha["fk_idade_publico_id"];
+				$classificacao = $linha["fk_classificacao_id"];
+
+
+				$consulta_intuito = $db_con->prepare("SELECT nome FROM intuito WHERE id = " . $intuito);
+				$consulta_intuito->execute();
+				$linha_intuito = $consulta_intuito->fetch(PDO::FETCH_ASSOC);
+
+				$resposta["intuito"] = $linha_intuito["nome"];
+
+				$consulta_usuario = $db_con->prepare("SELECT nome FROM usuario WHERE id = " . $usuario);
+				$consulta_usuario->execute();
+				$linha_usuario = $consulta_usuario->fetch(PDO::FETCH_ASSOC);
+
+				$resposta["usuario"] = $linha_usuario["nome"];
+
+				$consulta_idade_publico = $db_con->prepare("SELECT intervalo FROM idade_publico WHERE id = " . $idade_publico);
+				$consulta_idade_publico->execute();
+				$linha_idade_publico = $consulta_idade_publico->fetch(PDO::FETCH_ASSOC);
+
+				$resposta["idade_publico"] = $linha_idade_publico["intervalo"];
+
+				$consulta_endereco = $db_con->prepare("SELECT * FROM endereco WHERE id = " . $endereco);
+				$consulta_endereco->execute();
+				$linha_endereco = $consulta_endereco->fetch(PDO::FETCH_ASSOC);
+
+				$resposta["endereco"] = $linha_endereco["descricao"];
+
+				$consulta_classificacao = $db_con->prepare("SELECT nome FROM classificacao WHERE id = " . $classificacao);
+				$consulta_classificacao->execute();
+				$linha_classificacao = $consulta_classificacao->fetch(PDO::FETCH_ASSOC);
+
+				$resposta["classificacao"] = $linha_classificacao["nome"];
 
 				// Caso o produto exista no BD, o cliente 
 				// recebe a chave "sucesso" com valor 1.
@@ -65,7 +97,7 @@ if(autenticar($db_con)) {
 			// recebe a chave "sucesso" com valor 0. A chave "erro" indica o 
 			// motivo da falha.
 			$resposta["sucesso"] = 0;
-			$resposta["erro"] = "Erro no BD: " . $consulta->error;
+			$resposta["erro"] = "Erro no BD: " . $consulta->$error;
 		}
 	} else {
 		// Se a requisicao foi feita incorretamente, ou seja, os parametros 
