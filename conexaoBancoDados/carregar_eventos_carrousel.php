@@ -28,7 +28,7 @@ if($consulta_mais_inscritos->execute()) {
             array_push($resposta["eventos"], $evento);
         }
     }
-}
+}   
 
 // Converte a resposta para o formato JSON.
 return json_encode($resposta);

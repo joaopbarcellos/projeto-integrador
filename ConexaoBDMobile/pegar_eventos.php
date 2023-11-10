@@ -51,7 +51,6 @@ if (isset($_GET['limit']) && isset($_GET['offset'])) {
 				// Adiciona o evento no array de eventos.
 				array_push($resposta["eventos"], $evento);
 			}
-		}
 	}
 	else {
 		// Caso ocorra falha no BD, o cliente 
