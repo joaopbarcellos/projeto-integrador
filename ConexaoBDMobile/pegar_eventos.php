@@ -40,10 +40,7 @@ if (isset($_GET['limit']) && isset($_GET['offset'])) {
 				
 				
 				$evento["id"] = $linha["id"];
-				$consulta_foto_evento = $db_con->prepare("SELECT foto FROM foto_evento WHERE fk_evento_id = " . $evento["id"]);
-				$consulta_foto_evento->execute();
-				$linha_foto_evento = $consulta_foto_evento->fetch(PDO::FETCH_ASSOC);
-				$evento["foto"] = $linha_foto_evento["foto"];
+				$evento["foto"] = $linha["foto"];
 
 				$evento["nome"] = $linha["nome"];
 				$evento["preco"] = number_format($linha["preco"], 2, ',', '');
