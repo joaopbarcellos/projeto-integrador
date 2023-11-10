@@ -5,16 +5,12 @@ import * as base from "./base.js";
 const cancel = document.querySelectorAll(".inscricao");
 
 // Pegando o email do usuario logado
-const email = document.querySelector(".nome_usuario");
+const email = document.querySelector("#nome_usuario");
+console.log(email)
 
 if (!email) {
   base.naoEstaLogado();
 }
-
-// Pegando todos os dados do usuario
-const dados = JSON.parse(
-  localStorage.getItem(document.querySelector(".paragrafo").value)
-);
 
 const barra_pesquisa = document.querySelector("#busca");
 
@@ -31,13 +27,8 @@ cancel.forEach((btn) => {
   });
 });
 
-const todosEventos = document.querySelectorAll(".evento");
-function desaparecerTudo() {
-  todosEventos.forEach((evento) => {
-    evento.style.display = "none";
-  });
-}
-desaparecerTudo();
+const todosEventosInscritos = document.querySelectorAll(".inscritos");
+const todosEventosCriados = document.querySelectorAll(".criados");
 
 function meusEventosInscritos() {
   todosEventos.forEach((evento) => {
@@ -119,9 +110,10 @@ divCriado.addEventListener("click", (e) => {
   divCriado.classList.remove("not-selected");
 });
 
+// Funcao para cancelar a inscricao
 function cancelarInscricao(id) {
+  // Iniciando um alert perguntando se o usuario deseja cancelar a inscricao.
   Swal.fire({
-    // Iniciando um alert perguntando se o usuario deseja cancelar a inscricao.
     title: "Cancelar inscrição?",
     icon: "question",
     showCancelButton: true,
@@ -129,35 +121,15 @@ function cancelarInscricao(id) {
     cancelButtonColor: "#d33",
     confirmButtonText: "Sim",
     cancelButtonText: "Não",
-  }).then((result) => {
-    if (result.isConfirmed) {
-      // Alert para caso o usuario cancelou sua inscricao.
-      Swal.fire("Feito!", "Sua inscrição foi cancelada.", "success");
-
-      dados.eventos_inscritos = dados.eventos_inscritos.filter((valor) => {
-        return valor != id;
-        // Retirando da lista o evento que o usuario esta desinscrevendo
-      });
-
-      let stringJson = JSON.stringify(dados);
-      localStorage.setItem(email, stringJson);
-      // Setando novamente no localStorage
-
-      document.querySelector(`#div${id}`).style.display = "none";
-      meus_eventos_inscritos.splice(`#div${id}`);
-      // Retirando o evento da tela
-      if (!dados.eventos_inscritos.length) {
-        document.querySelector(".semevento").style.display = "block";
-        document.querySelector("#pesquisar").classList.add("sembarra");
-        document.querySelector("#pesquisar").classList.remove("d-flex");
-        document.querySelector("#seminscrito").style.display = "block";
-        document.querySelector("#semcriado").style.display = "none";
-        // Caso nao haja eventos inscritos, ira aparecer a mensagem
-      }
+  }).then((result) => { // Depois da resposta
+    if (result.isConfirmed) { // Se confirmar
+      // dar refresh na pagina na proxima linha
+      // nessa linha:
     }
   });
 }
 
+// Barra de pesquisa
 lupa.addEventListener("click", () => {
   if (divInscrito.classList.contains("selected")) {
     base.pesquisar(meus_eventos_inscritos, barra_pesquisa);
