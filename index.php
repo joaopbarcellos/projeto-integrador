@@ -1,4 +1,4 @@
-	<?php
+<?php
 session_start();
 ?>
 
@@ -43,25 +43,21 @@ session_start();
 	</header> <!-- Fechando header -->
 
 	<div class="owl-carousel">
-		<div class="item" id="surfItaparica">
-    		<img src="img/12.png" alt="Surf - Praia de Itaparica">
-    		<div class="carousel-caption">
-				<h3 class="slideh3">Surf - Praia de Itaparica</h3>
-    		</div>
-		</div>
+		<?php 
+		$json_data_carrousel = include("conexaoBancoDados/carregar_eventos_carrousel.php");
+		
+		$eventos_carrousel = json_decode($json_data_carrousel, true);
+		foreach ($eventos_carrousel["eventos"] as $evento){
+			echo"<div class='item' id =" . $evento['id'] . ">
+						<img src=" . $evento['foto']. ">
+						<div class='carousel-caption'>
+							<h3 class='slideh3'>" . $evento['nome'] . "</h3>
+						</div>
+					</div>";
+		}
+		
+		?>
 
-		<div class="item" id="basqueteCaue">
-			<img src="img/13.png" alt="Basquete - Praça do Cauê">
-			<div class="carousel-caption">
-				<h3 class="slideh3">Basquete - Praça do Cauê</h3>
-			</div>
-		</div>
-		<div class="item" id="motocrossArena">
-			<img src="img/14.png" alt="Motocross - Arena Capixaba de Verão">
-			<div class="carousel-caption">
-				<h3 class="slideh3">Motocross de Verão</h3>
-			</div>
-		</div>
 	</div>
 	<div class="custom-nav">
 		<button class="custom-prev" type="button">

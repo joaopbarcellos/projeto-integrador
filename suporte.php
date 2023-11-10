@@ -67,7 +67,7 @@
 			<div class="email campos mt-3">
 
 				<div class="form-floating">
-					<input type="email" class="form-control" id="floatingInputGrid" placeholder="E-mail para contato">
+					<input type="email" class="form-control" id="floatingInputGrid" placeholder="E-mail para contato" value="<?php if (isset($_SESSION['logado'])) echo $_SESSION['logado'];  ?>">
 					<label for="floatingInputGrid">Email</label>
 				</div>
 

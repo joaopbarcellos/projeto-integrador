@@ -5,7 +5,7 @@ import * as base from "./base.js";
 const cancel = document.querySelectorAll(".inscricao");
 
 // Pegando o email do usuario logado
-const email = document.querySelector(".paragrafo").value;
+const email = document.querySelector(".nome_usuario");
 
 if (!email) {
   base.naoEstaLogado();

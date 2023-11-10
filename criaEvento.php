@@ -39,7 +39,7 @@ session_start();
 	<body>
 		<div class="container p-1">
 			<div class="form-container p-1 pt-3 p-sm-5  col-12 col-sm-10 col-md-8 col-lg-7 col-xl-6 col-xxl-4">
-				<form id="multistepform" name="multistepform" action="conexaoBancoDados/criar_evento.php" method="post">
+				<form id="multistepform" name="multistepform" action="conexaoBancoDados/criar_evento.php" method="post" enctype="multipart/form-data">
 
 					<!-- Etapa 1 -->
 					<div class="step">
