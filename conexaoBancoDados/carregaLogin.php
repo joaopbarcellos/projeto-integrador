@@ -1,4 +1,6 @@
 <?php
+require_once("conexao_db.php");
+
 // array de resposta
 $resposta = array();
 session_start();

@@ -51,8 +51,7 @@ if (isset($_POST['nome']) && isset($_POST['preco']) && isset($_POST['descricao']
 	$endereco = carregar_endereco($db_con, $cep_evento, $bairro_evento, $cidade_evento, $estado_evento, $descricao_evento, $numero_evento, $complemento_evento);
 
 	// Chamar funcao para pegar o id do usuario
-	$usuario = carregar_usuario($db_con);		
-
+	$usuario = carregar_usuario($db_con);
 	if ($_FILES["foto_evento"]["size"] > 0){
 		$curl = curl_init();
 		$client_id="6d2b5be8400b2b3";
@@ -90,16 +89,25 @@ if (isset($_POST['nome']) && isset($_POST['preco']) && isset($_POST['descricao']
 			// Fechar a sessão cURL
 			curl_close($curl);
 		}
-
-		$consulta = $db_con->prepare("INSERT INTO EVENTO(descricao, nome, foto, data, telefone, min_pessoas, horario_inicio, horario_fim, max_pessoas, FK_CLASSIFICACAO_id, FK_INTUITO_id, FK_ENDERECO_id, FK_USUARIO_id, FK_IDADE_PUBLICO_id) VALUES('$descricao', '$nome', '$foto', '$data', '$telefone', '$min_pessoas', '$horario_inicio', '$horario_fim', '$max_pessoas', '$classificacao', '$intuito', '$endereco', '$usuario', '$idade_publico')");
+		if ($foto == NULL){
+			$consulta = $db_con->prepare("INSERT INTO EVENTO(descricao, nome, foto, data, min_pessoas, horario_inicio, horario_fim, max_pessoas, FK_CLASSIFICACAO_id, FK_INTUITO_id, FK_ENDERECO_id, FK_USUARIO_id, FK_IDADE_PUBLICO_id, preco) VALUES('$descricao', '$nome', 'https://i.imgur.com/ebF3p8e.png', '$data', $min_pessoas, '$horario_inicio', '$horario_fim', $max_pessoas, $classificacao, $intuito, $endereco, $usuario, $idade_publico, $preco)");
 		if ($consulta->execute()) {
 			$resposta["sucesso"] = 1;
 		} else {
 			$resposta["sucesso"] = 0;
 			$resposta["erro"] = "Erro ao criar produto no BD: " . $consulta->$error;
 		}
+		} else {
+			$consulta = $db_con->prepare("INSERT INTO EVENTO(descricao, nome, foto, data, min_pessoas, horario_inicio, horario_fim, max_pessoas, FK_CLASSIFICACAO_id, FK_INTUITO_id, FK_ENDERECO_id, FK_USUARIO_id, FK_IDADE_PUBLICO_id, preco) VALUES('$descricao', '$nome', '$foto', '$data', $min_pessoas, '$horario_inicio', '$horario_fim', $max_pessoas, $classificacao, $intuito, $endereco, $usuario, $idade_publico, $preco)");
+			if ($consulta->execute()) {
+				$resposta["sucesso"] = 1;
+			} else {
+				$resposta["sucesso"] = 0;
+				$resposta["erro"] = "Erro ao criar produto no BD: " . $consulta->$error;
+			}
+		}
 	} else {
-		$consulta = $db_con->prepare("INSERT INTO EVENTO(descricao, nome, foto, data, telefone, min_pessoas, horario_inicio, horario_fim, max_pessoas, FK_CLASSIFICACAO_id, FK_INTUITO_id, FK_ENDERECO_id, FK_USUARIO_id, FK_IDADE_PUBLICO_id) VALUES('$descricao', '$nome', 'https://i.imgur.com/ebF3p8e.png', '$data', '$telefone', '$min_pessoas', '$horario_inicio', '$horario_fim', '$max_pessoas', '$classificacao', '$intuito', '$endereco', '$usuario', '$idade_publico')");
+		$consulta = $db_con->prepare("INSERT INTO EVENTO(descricao, nome, foto, data, min_pessoas, horario_inicio, horario_fim, max_pessoas, FK_CLASSIFICACAO_id, FK_INTUITO_id, FK_ENDERECO_id, FK_USUARIO_id, FK_IDADE_PUBLICO_id, preco) VALUES('$descricao', '$nome', 'https://i.imgur.com/ebF3p8e.png', '$data', $min_pessoas, '$horario_inicio', '$horario_fim', $max_pessoas, $classificacao, $intuito, $endereco, $usuario, $idade_publico, $preco)");
 		if ($consulta->execute()) {
 			$resposta["sucesso"] = 1;
 		} else {
@@ -121,4 +129,7 @@ $db_con = null;
 
 // Converte a resposta para o formato JSON.
 echo json_encode($resposta);
+
+// Mandar para proxima pagina
+header("location: ../index.php");
 ?>

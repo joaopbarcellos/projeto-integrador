@@ -57,8 +57,10 @@ function carregar_endereco($db_con, $cep, $bairro, $cidade, $estado, $descricao,
         $linha_bairro = $consulta_bairro->fetch(PDO::FETCH_ASSOC);
 
         $id_bairro = $linha_bairro["id"];
-        $descricao =  $descricao . ", " . $complemento;
-        $consulta_criar_endereco = $db_con->prepare("INSERT INTO endereco(numero, cep, descricao, FK_BAIRRO_id) VALUES('$numero', '$cep', '$descricao', '$id_bairro')");
+        if ($complemento){
+            $descricao =  $descricao . ", " . $complemento;
+        }
+        $consulta_criar_endereco = $db_con->prepare("INSERT INTO endereco(numero, cep, descricao, FK_BAIRRO_id) VALUES('$numero', '$cep', '$descricao', '$id_bairro') returning id");
         if ($consulta_criar_endereco->execute()) {
             // se a consulta deu certo, indicamos sucesso na operação.
             $resposta["sucesso"] = 1;
@@ -69,10 +71,8 @@ function carregar_endereco($db_con, $cep, $bairro, $cidade, $estado, $descricao,
             $resposta["sucesso"] = 0;
             $resposta["erro"] = "erro BD: " . $consulta_criar_endereco->error;
         }
-        $consulta_endereco = $db_con->prepare("SELECT id FROM endereco WHERE cep = '$cep'");
-        $consulta_endereco->execute();
     }
-    $linha_endereco = $consulta_endereco->fetch(PDO::FETCH_ASSOC);
+    $linha_endereco = $consulta_criar_endereco->fetch(PDO::FETCH_ASSOC);
     $resposta["sucesso"] = 1;
     $resposta["id"] = $linha_endereco["id"];
     return $resposta["id"];

@@ -46,19 +46,9 @@ if($db_con) {
 					// em caso de real interesse.
 					$evento = array();
 					
-					
 					$evento["id"] = $linha["id"];
-					$consulta_foto_evento = $db_con->prepare("SELECT foto FROM foto_evento WHERE fk_evento_id = " . $evento["id"]);
-					$consulta_foto_evento->execute();
-					$linha_foto_evento = $consulta_foto_evento->fetch(PDO::FETCH_ASSOC);
-					$evento["foto"] = $linha_foto_evento["foto"];
 
-
-					$consulta_evento_classificacao = $db_con->prepare("SELECT fk_classificacao_id FROM evento_classificacao WHERE fk_evento_id = " . $evento["id"]);
-					$consulta_evento_classificacao->execute();
-					$linha_evento_classificacao = $consulta_evento_classificacao->fetch(PDO::FETCH_ASSOC);
-
-					$consulta_classificacao = $db_con->prepare("SELECT nome FROM classificacao WHERE id = " . $linha_evento_classificacao["fk_classificacao_id"]);
+					$consulta_classificacao = $db_con->prepare("SELECT nome FROM classificacao WHERE id = " . $linha["fk_classificacao_id"]);
 					$consulta_classificacao->execute();
 					$linha_classificacao = $consulta_classificacao->fetch(PDO::FETCH_ASSOC);
 
@@ -97,6 +87,7 @@ if($db_con) {
 					$evento["intuito"] = $linha_intuito["nome"];
 					$evento["endereco"] = $linha_endereco["descricao"] . ", " . $linha_endereco["numero"] . " - " . $linha_bairro["nome"] . ", " . $linha_cidade["nome"] . " - " . $linha_estado["nome"] . ", " . $linha_endereco["cep"];
 					$evento["idade_publico"] = $linha_idade_publico["intervalo"];
+					$evento["foto"] = $linha["foto"];
 
 					// Adiciona o evento no array de eventos.
 					array_push($resposta["eventos"], $evento);
