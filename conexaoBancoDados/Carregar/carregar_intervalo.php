@@ -1,5 +1,4 @@
 <?php
-
 function carregar_intervalo($db_con, $intervalo_id){
     $consulta_idade_publico = $db_con->prepare("SELECT intervalo FROM idade_publico WHERE id = " . $intervalo_id);
     $consulta_idade_publico->execute();

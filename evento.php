@@ -27,13 +27,21 @@
 
 <?php
 session_start();
+date_default_timezone_set("America/Sao_Paulo"); 
+require('conexaoBancoDados/conexao_db.php');
+
+require_once('conexaoBancoDados/Carregar/carregar_endereco_evento.php');
+require_once('conexaoBancoDados/Carregar/carregar_intuito.php');
+require_once('conexaoBancoDados/Carregar/carregar_classificacao.php');
+require_once('conexaoBancoDados/Carregar/carregar_intervalo.php');
 
 if (isset($_GET['id_evento'])) {
-	$id = trim($_GET['id_evento']);
-	$json_data = include_once("conexaoBancoDados/carregar_detalhes_eventos.php?id=$id");
+	$_SESSION["evento_atual"] = trim($_GET['id_evento']);
+	$json_data = include_once("conexaoBancoDados/carregar_detalhes_eventos.php");
 } else {
 	header("location: index.php");
 }
+
 $evento = json_decode($json_data, true);
 ?>
 
@@ -86,21 +94,19 @@ $evento = json_decode($json_data, true);
 
 					<!-- Div com o esporte-->
 					<div class="alinhando">
-						<p><b>Esporte:</b> <?php echo $evento["classificacao"];?></p>
+						<p><b>Esporte:</b> <?php echo carregar_classificacao($db_con, $evento["id_classificacao"]);?></p>
 					</div>
  
 					<!-- Div de localizacao -->
-					<div id="localizacao"><a id="local" href="maps.php">
-
+					<div id="localizacao">
 							<!-- Icone da localizacao -->
 							<svg class="iconezin iconelocev" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512">
 								<path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
 							</svg>
 							<p>
 								<!-- localizacao do evento-->
-								<?php echo $evento["endereco"];?>
+								<?php echo carregar_endereco($db_con, $evento["id_endereco"]);?>
 							</p>
-						</a>
 					</div>
 
 					<!-- Div com a data -->
@@ -113,12 +119,12 @@ $evento = json_decode($json_data, true);
 
 					<!-- Div com o publico-alvo do evento -->
 					<div id="alvo">
-						<p id="publi"><b>Faixa Etária: </b> <?php echo $evento["intervalo"];?></p>
+						<p id="publi"><b>Faixa Etária: </b> <?php echo carregar_intervalo($db_con, $evento["id_idade_publico"]);?></p>
 					</div>
 
 					<!-- Div com o intuito do evento -->
 					<div id="intuito">
-						<p id="sifrao"><b>Público alvo: </b><?php echo $evento["intuito"];?></p>
+						<p id="sifrao"><b>Público alvo: </b><?php echo carregar_intuito($db_con, $evento["id_intuito"]);?></p>
 					</div>
 
 					<!-- Div com o numero de vagas restantes -->
@@ -140,16 +146,20 @@ $evento = json_decode($json_data, true);
 
 					<!-- Div com o contato-->
 					<div class="alinhando">
-						<p><b>Contato:</b> <?php echo $evento["telefone"];?></p>
+						<p><b>Contato:</b> <?php echo $evento["contato"];?></p>
 					</div>
  
 					<!-- Div com o custo do evento -->
 					<div id="preco">
-						<p id="sifrao"><b>Custo: </b> <?php echo $evento["preco"];?></p>
+						<p id="sifrao"><b>Custo:</b> <?php if ($evento["preco"] == 0){
+							echo ' Gratuito';
+						} else {
+							echo ' R$'.  $evento["preco"];
+						}?></p>
 					</div>
 
 					<!-- Botao de inscrever-se -->
-					<button class="inscrever fixo" id="desafioNatacao">
+					<button class="inscrever fixo" id="<?php echo $evento['id'];?>">
 						<img src="logos/icon2.png">
 						<span class="now">Agora!</span>
 						<span class="play">Inscreva-se</span>
@@ -160,7 +170,10 @@ $evento = json_decode($json_data, true);
 		</div>
 	</div>
 	<footer>
-		<?php include('footer.php') ?>
+		<?php
+			$db_con = NULL; 
+			include('footer.php') 
+		?>
 	</footer>
 
 </body>

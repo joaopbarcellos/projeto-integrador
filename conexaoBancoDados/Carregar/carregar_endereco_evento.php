@@ -1,6 +1,4 @@
 <?php
-
-
 function carregar_endereco($db_con, $id_endereco){
     $consulta_endereco = $db_con->prepare("SELECT * FROM endereco WHERE id = " . $id_endereco);
     $consulta_endereco->execute();

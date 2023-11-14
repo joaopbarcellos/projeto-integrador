@@ -96,9 +96,10 @@ jQuery(document).ready(function($) {
   $(".custom-next").on("click", function() {
     owl.trigger("next.owl.carousel");
   });
-
-  var slideHeight = $(".owl-carousel .item").height();
-  var slideTop = $(".owl-carousel .item").offset().top;
-  var arrowTopPosition = slideTop + (slideHeight / 2) - ($(".custom-prev").height() / 2);
-  $(".custom-prev, .custom-next").css("top", arrowTopPosition + 30);
+  $(document).ready(function() {
+    var slideHeight = $(".owl-carousel .item").height();
+    var slideTop = $(".owl-carousel .item").offset().top;
+    var arrowTopPosition = slideTop + (slideHeight / 2) - ($(".custom-prev").height() / 2);
+    $(".custom-prev, .custom-next").css("top", arrowTopPosition + 30);
+  });
 });

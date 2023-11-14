@@ -92,36 +92,17 @@ if (caixa_email) {
 }
 
 // Pegando o email do usuario logado
-if (document.querySelector(".paragrafo")) {
-  var emailLogado = document.querySelector(".paragrafo").value;
-} else {
-  var emailLogado = null;
-}
+var emailLogado = document.querySelector("#nome_usuario");
 
 // Funcao para quando o usuario entrar numa tela de evento
 function entrarEvento() {
-  // Pegando o nome da janela
-  let nomeJanela = window.location.pathname
-    .replace("/eventos/", "")
-    .replace(".php", "");
-  // Verificando se o nome se encaixa nos tamanhos possiveis para eventos
-  if (nomeJanela.length < 15) {
-    // Pegando os dados do usuario
-    let dados = JSON.parse(localStorage.getItem(emailLogado));
-    // Se ele nao estiver inscrito, acabara a funcao
-    if (!dados) {
-      return;
-    }
-    // Verificando se o usuario esta inscrito no evento
-    if (dados.eventos_inscritos.find((janela) => janela == nomeJanela)) {
-      // Mudando o que esta escrito no evento
-      document.querySelector(".play").textContent = "Você está inscrito!";
-      document.querySelector(".now").textContent = "Prepare-se!";
-    }
-  }
+  // Mudando o que esta escrito no evento
+  document.querySelector(".play").textContent = "Você está inscrito!";
+  document.querySelector(".now").textContent = "Prepare-se!";
 }
 
 function inscrever(evento) {
+  console.log(evento)
   if (emailLogado) {
     // Se ele nao for nulo, isto e, se ha um usuario logado
     Swal.fire({
@@ -135,36 +116,8 @@ function inscrever(evento) {
       cancelButtonText: "Cancelar",
     }).then((result) => {
       if (result.isConfirmed) {
-        // Alert para caso ele confirmou
-        Swal.fire("Confirmado!", "Você foi inscrito.", "success").then(
-          (result) => {
-            if (result.isConfirmed) {
-              // Se ele se inscreveu, ira atualizar o botao
-              entrarEvento();
-            }
-          }
-        );
-        let dados = JSON.parse(localStorage.getItem(emailLogado));
-        // Percorrendo a lista de eventos salva no usuairo para saber se ele ja foi inscrito no evento
-        for (let i = 0; i < dados.eventos_inscritos.length; i++) {
-          if (dados.eventos_inscritos[i] == evento.id) {
-            Swal.fire({
-              // Alert informando ao usuario se ele ja foi inscrito
-              title: "Você já está inscrito!",
-              icon: "info",
-              confirmButtonColor: "#3085d6",
-              confirmButtonText: "OK",
-            });
-            entrarEvento();
-            return;
-          }
-        }
-        // Pegando os dados do usuario logado e adicionando na lista de eventos inscritos o novo evento
-        dados.eventos_inscritos.push(evento.id);
-
-        let stringJson = JSON.stringify(dados);
-        // Setando novamente no localStorage
-        localStorage.setItem(emailLogado, stringJson);
+        // Mandar inscrever de verdade
+        window.location.assign(`conexaoBancoDados/inscrever_evento.php?id='${evento.id}'`);
       }
     });
   } else {

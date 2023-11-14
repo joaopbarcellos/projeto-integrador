@@ -14,7 +14,6 @@ session_start();
 	<link rel="stylesheet" href="css/base.css">
 
 	<link rel="stylesheet" href="css/index.css">
-
 	
 	<script src="js/index.js" type="module" defer></script>
 
@@ -43,9 +42,9 @@ session_start();
 	</header> <!-- Fechando header -->
 
 	<div class="owl-carousel">
-		<?php 
+		<?php
 		$json_data_carrousel = include("conexaoBancoDados/carregar_eventos_carrousel.php");
-		
+
 		$eventos_carrousel = json_decode($json_data_carrousel, true);
 		foreach ($eventos_carrousel["eventos"] as $evento){
 			echo"<div class='item' id =" . $evento['id'] . ">
@@ -78,6 +77,7 @@ session_start();
 	$json_data = include("conexaoBancoDados/carregar_eventos.php");
 	
 	$eventos = json_decode($json_data, true);
+	date_default_timezone_set("America/Sao_Paulo"); 
 	foreach ($eventos["eventos"] as $evento){
 		echo '<!-- Div evento -->
 		<div class="evento mt-3 mt-sm-4 mt-4 mt-5 mt-3"  id="'. $evento["id"] .'">
