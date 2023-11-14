@@ -5,17 +5,17 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/x-icon" href="../logos/icon.png">
+	<link rel="icon" type="image/x-icon" href="logos/icon.png">
 	<title>Time In</title>
-	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="css/base.css">
 
-	<link rel="stylesheet" href="../css/eventos.css">
+	<link rel="stylesheet" href="css/eventos.css">
 
 	<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css" rel="stylesheet">
 
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
-	<script src="../js/base.js" type="module" defer></script>
+	<script src="js/base.js" type="module" defer></script>
 
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js" defer></script>
 
@@ -27,12 +27,20 @@
 
 <?php
 session_start();
+
+if (isset($_GET['id_evento'])) {
+	$id = trim($_GET['id_evento']);
+	$json_data = include_once("conexaoBancoDados/carregar_detalhes_eventos.php?id=$id");
+} else {
+	header("location: index.php");
+}
+$evento = json_decode($json_data, true);
 ?>
 
 <body>
 	<!-- Header com a navbar -->
 	<header>
-		<?php include('../header.php') ?>
+		<?php include('header.php') ?>
 	</header>
 	<div class="d-none d-md-block">
 		<!-- Botao de voltar -->
@@ -59,10 +67,10 @@ session_start();
 	<div id="container" class="container col-12 m-auto mt-4">
 		<div id="fundoev" class="col-11 col-md-8  col m-auto">
 			<!-- Adicionando titulo -->
-			<h1 id="titulo" class="text-center">Desafio de Natação</h1>
+			<h1 id="titulo" class="text-center"><?php echo $evento["nome"];?></h1>
 			<div id="evento" class="row">
 				<div id="tabela">
-					<img src="../img/10.png" id="img_evento">
+					<img src="<?php echo $evento["foto"];?>" id="img_evento">
 				</div>
 
 				<!-- Div geral com as informacoes do evento -->
@@ -72,13 +80,13 @@ session_start();
 					<div id="desc">
 						<p id="t_desc" class="fs-3"><b>Descrição</b></p>
 						<p id="p_desc">
-							Aulão de natação no sesc de Aracruz, venha aprender mais sobre natação e se divertir nesse dia!
+							<?php echo $evento["descricao"];?>
 						</p>
 					</div>
 
 					<!-- Div com o esporte-->
 					<div class="alinhando">
-						<p><b>Esporte:</b> Natação</p>
+						<p><b>Esporte:</b> <?php echo $evento["classificacao"];?></p>
 					</div>
  
 					<!-- Div de localizacao -->
@@ -90,7 +98,7 @@ session_start();
 							</svg>
 							<p>
 								<!-- localizacao do evento-->
-								Rodovia ES-010, Km 35 - Santa Cruz, Aracruz - ES, 29199-548
+								<?php echo $evento["endereco"];?>
 							</p>
 						</a>
 					</div>
@@ -100,49 +108,49 @@ session_start();
 						<svg class="iconezin iconedataev" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
 							<path d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z" />
 						</svg>
-						<p id="dia">12/07/23 08:00</p>
+						<p id="dia"><?php echo date("d/m/Y", strtotime($evento["data"])). ' ' . date("H:i", strtotime($evento["horario_inicio"])) . ' - ' .date("H:i", strtotime($evento["horario_fim"]));?></p>
 					</div>
 
 					<!-- Div com o publico-alvo do evento -->
 					<div id="alvo">
-						<p id="publi"><b>Faixa Etária: </b> Acima de 2 anos</p>
+						<p id="publi"><b>Faixa Etária: </b> <?php echo $evento["intervalo"];?></p>
 					</div>
 
 					<!-- Div com o intuito do evento -->
 					<div id="intuito">
-						<p id="sifrao"><b>Público alvo: </b>Para toda Família</p>
+						<p id="sifrao"><b>Público alvo: </b><?php echo $evento["intuito"];?></p>
 					</div>
 
 					<!-- Div com o numero de vagas restantes -->
 					<div class="vagas">
 						<div id="vagas_restam">
-							<p id="t_vagasrestam"><b>Vagas restantes: </b> 23</p>
+							<p id="t_vagasrestam"><b>Vagas restantes: </b> <?php echo $evento["vagas_restantes"];?></p>
 						</div>
 
 						<!-- Div com o numero de inscritos do evento -->
 						<div id="num_inscritos">
-							<p id="t_numinscritos"><b>Número de Inscritos: </b>2</p>
+							<p id="t_numinscritos"><b>Número de Inscritos: </b> <?php echo $evento["inscritos"];?></p>
 						</div>
 					</div>
 
 					<!-- Div com o organizador do evento -->
 					<div id="organizador">
-						<p id="t_organizador"><b>Evento organizado por: </b> Rafaela Oliveira Costa</p>
+						<p id="t_organizador"><b>Evento organizado por: </b><?php echo $evento["usuario"];?></p>
 					</div>
 
 					<!-- Div com o contato-->
 					<div class="alinhando">
-						<p><b>Contato:</b> (27)99752-4329</p>
+						<p><b>Contato:</b> <?php echo $evento["telefone"];?></p>
 					</div>
  
 					<!-- Div com o custo do evento -->
 					<div id="preco">
-						<p id="sifrao"><b>Custo: </b> Gratuito</p>
+						<p id="sifrao"><b>Custo: </b> <?php echo $evento["preco"];?></p>
 					</div>
 
 					<!-- Botao de inscrever-se -->
 					<button class="inscrever fixo" id="desafioNatacao">
-						<img src="../logos/icon2.png">
+						<img src="logos/icon2.png">
 						<span class="now">Agora!</span>
 						<span class="play">Inscreva-se</span>
 					</button>
@@ -152,7 +160,7 @@ session_start();
 		</div>
 	</div>
 	<footer>
-		<?php include('../footer.php') ?>
+		<?php include('footer.php') ?>
 	</footer>
 
 </body>

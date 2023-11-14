@@ -29,9 +29,6 @@
     <a href="login.php"> <img src="logos/11.png" /> </a>
   </header>
 
-  
-
-
   <!-- Div que ficara com o formulário -->
   <div class="div_cadastro mt-5 col-lg-4 col-10 m-auto">
     <div>

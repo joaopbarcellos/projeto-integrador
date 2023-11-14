@@ -83,8 +83,7 @@ if ($verifica) {
 
 	// o bd não armazena diretamente a senha do usuário, mas sim 
 	// um código hash que é gerado a partir da senha.
-	// $token = password_hash($senha, PASSWORD_DEFAULT);
-	$token = $senha;
+	$token = password_hash($senha, PASSWORD_DEFAULT);
 
 	// antes de registrar o novo usuário, verificamos se ele já
 	// não existe.

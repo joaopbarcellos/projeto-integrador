@@ -12,6 +12,13 @@ require_once('conexao_db.php');
 // autenticação
 require_once('autenticacao.php');
 
+require_once('Carregar/carregar_endereco_evento.php');
+
+require_once('Carregar/carregar_intuito.php');
+require_once('Carregar/carregar_classificacao.php');
+
+require_once('Carregar/carregar_intervalo.php');
+
 // array de resposta
 $resposta = array();
 
@@ -36,62 +43,34 @@ if(autenticar($db_con)) {
 				// a imagem do produto.
 				$linha = $consulta->fetch(PDO::FETCH_ASSOC);
 				$evento["id"] = $linha["id"];
-	
-				$consulta_foto_evento = $db_con->prepare("SELECT foto FROM foto_evento WHERE fk_evento_id = " . $evento["id"]);
-				$consulta_foto_evento->execute();
-				$linha_foto_evento = $consulta_foto_evento->fetch(PDO::FETCH_ASSOC);
-				$evento["foto"] = $linha_foto_evento["foto"];
 
-				$consulta_evento_classificacao = $db_con->prepare("SELECT fk_classificacao_id FROM evento_classificacao WHERE fk_evento_id = " . $evento["id"]);
-				$consulta_evento_classificacao->execute();
-				$linha_evento_classificacao = $consulta_evento_classificacao->fetch(PDO::FETCH_ASSOC);
+				$evento["classificacao"] = carregar_classificacao($db_con, $linha["fk_classificacao_id"]);
 
-				$consulta_classificacao = $db_con->prepare("SELECT nome FROM classificacao WHERE id = " . $linha_evento_classificacao["fk_classificacao_id"]);
-				$consulta_classificacao->execute();
-				$linha_classificacao = $consulta_classificacao->fetch(PDO::FETCH_ASSOC);
-				$evento["classificacao"] = $linha_classificacao["nome"];
+				$evento["idade_publico"] = carregar_intervalo($db_con, $linha["fk_idade_publico_id"]);
 
-				$consulta_intuito = $db_con->prepare("SELECT nome FROM intuito WHERE id = " . $linha["fk_intuito_id"]);
-				$consulta_intuito->execute();
-				$linha_intuito = $consulta_intuito->fetch(PDO::FETCH_ASSOC);
-				$evento["intuito"] = $linha_intuito["nome"];
-
-				$consulta_idade_publico = $db_con->prepare("SELECT intervalo FROM idade_publico WHERE id = " . $linha["fk_idade_publico_id"]);
-				$consulta_idade_publico->execute();
-				$linha_idade_publico = $consulta_idade_publico->fetch(PDO::FETCH_ASSOC);
-				$evento["intervalo"] = $linha_idade_publico["intervalo"];
-
-				$consulta_endereco = $db_con->prepare("SELECT * FROM endereco WHERE id = " . $linha["fk_endereco_id"]);
-				$consulta_endereco->execute();
-				$linha_endereco = $consulta_endereco->fetch(PDO::FETCH_ASSOC);
-
-				$consulta_bairro = $db_con->prepare("SELECT * FROM bairro WHERE id = " . $linha_endereco["fk_bairro_id"]);
-				$consulta_bairro->execute();
-				$linha_bairro = $consulta_bairro->fetch(PDO::FETCH_ASSOC);
-
-				$consulta_cidade = $db_con->prepare("SELECT * FROM cidade WHERE id = " . $linha_bairro["fk_cidade_id"]);
-				$consulta_cidade->execute();
-				$linha_cidade = $consulta_cidade->fetch(PDO::FETCH_ASSOC);
-
-				$consulta_estado = $db_con->prepare("SELECT nome FROM estado WHERE id = " . $linha_cidade["fk_estado_id"]);
-				$consulta_estado->execute();
-				$linha_estado = $consulta_estado->fetch(PDO::FETCH_ASSOC);
-
-				$consulta_usuario = $db_con->prepare("SELECT nome FROM usuario WHERE id = " . $linha["fk_usuario_id"]);
+				$consulta_usuario = $db_con->prepare("SELECT * FROM usuario WHERE id = " . $linha["fk_usuario_id"]);
 				$consulta_usuario->execute();
 				$linha_usuario = $consulta_usuario->fetch(PDO::FETCH_ASSOC);
 
+				$consulta_inscritos = $db_con->prepare("SELECT * FROM usuario_evento WHERE fk_evento_id = " . $evento["id"]);
+				$consulta_inscritos->execute();
+				$evento["inscritos"] = $consulta_inscritos->rowCount();
+				
 				$evento["nome"] = $linha["nome"];
 				$evento["preco"] = $linha["preco"];
 				$evento["descricao"] = $linha["descricao"];
 				$evento["data"] = $linha["data"];
 				$evento["telefone"] = $linha["telefone"];
-				$evento["min_pessoas"] = $linha["min_pessoas"];
-				$evento["max_pessoas"] = $linha["max_pessoas"];
+				// $evento["min_pessoas"] = $linha["min_pessoas"];
+				// $evento["max_pessoas"] = $linha["max_pessoas"];
+				$evento["vagas_restantes"] = $linha["max_pessoas"] - $evento["inscritos"];
 				$evento["horario_inicio"] = $linha["horario_inicio"];
 				$evento["horario_fim"] = $linha["horario_fim"];
 				$evento["usuario"] = $linha_usuario["nome"];
-				$evento["endereco"] = $linha_endereco["descricao"] . ", " . $linha_endereco["numero"] . " - " . $linha_bairro["nome"] . ", " . $linha_cidade["nome"] . " - " . $linha_estado["nome"] . ", " . $linha_endereco["cep"];
+				$evento["contato"] = $linha_usuario["telefone"];
+				$evento["foto"] = $linha["foto"];
+				$evento["intuito"] = carregar_intuito($db_con, $linha["fk_intuito_id"]);
+				$evento["endereco"] = carregar_endereco($db_con, $linha["fk_endereco_id"]);
 					
 
 				// Caso o produto exista no BD, o cliente 

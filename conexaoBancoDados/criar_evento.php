@@ -12,7 +12,7 @@ require_once('conexao_db.php');
 require_once('autenticacao.php');
 
 // endereco evento
-require_once('carregar_endereco_evento.php');
+require_once('criar_endereco_evento.php');
 
 // usuario que criou evento
 require_once('carregar_usuario_evento.php');
@@ -48,7 +48,7 @@ if (isset($_POST['nome']) && isset($_POST['preco']) && isset($_POST['descricao']
 	$numero_evento = trim($_POST['numeroEvento']);
 	$complemento_evento = trim($_POST['complementoEvento']);
 
-	$endereco = carregar_endereco($db_con, $cep_evento, $bairro_evento, $cidade_evento, $estado_evento, $descricao_evento, $numero_evento, $complemento_evento);
+	$endereco = criar_endereco($db_con, $cep_evento, $bairro_evento, $cidade_evento, $estado_evento, $descricao_evento, $numero_evento, $complemento_evento);
 
 	// Chamar funcao para pegar o id do usuario
 	$usuario = carregar_usuario($db_con);
