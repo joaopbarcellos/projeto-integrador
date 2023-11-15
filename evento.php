@@ -34,6 +34,7 @@ require_once('conexaoBancoDados/Carregar/carregar_endereco_evento.php');
 require_once('conexaoBancoDados/Carregar/carregar_intuito.php');
 require_once('conexaoBancoDados/Carregar/carregar_classificacao.php');
 require_once('conexaoBancoDados/Carregar/carregar_intervalo.php');
+require_once('conexaoBancoDados/inscrito.php');
 
 if (isset($_GET['id_evento'])) {
 	$_SESSION["evento_atual"] = trim($_GET['id_evento']);
@@ -148,7 +149,7 @@ $evento = json_decode($json_data, true);
 					<div class="alinhando">
 						<p><b>Contato:</b> <?php echo $evento["contato"];?></p>
 					</div>
- 
+
 					<!-- Div com o custo do evento -->
 					<div id="preco">
 						<p id="sifrao"><b>Custo:</b> <?php if ($evento["preco"] == 0){
@@ -159,13 +160,24 @@ $evento = json_decode($json_data, true);
 					</div>
 
 					<!-- Botao de inscrever-se -->
-					<button class="inscrever fixo" id="<?php echo $evento['id'];?>">
-						<img src="logos/icon2.png">
-						<span class="now">Agora!</span>
-						<span class="play">Inscreva-se</span>
-					</button>
+					<?php
+					if (inscrito($evento['id'], $db_con)){
+						echo 
+						'<button class="inscrever fixo" id="'. $evento['id'] . '" disabled>
+							<img src="logos/icon2.png">
+							<span class="now">Prepare-se!</span>
+							<span class="play">Você está inscrito!</span>
+						</button>';
+					} else {
+						echo 
+						'<button class="inscrever fixo" id="' . $evento['id']. '">
+							<img src="logos/icon2.png">
+							<span class="now">Agora!</span>
+							<span class="play">Inscreva-se</span>
+						</button>';
+					}
+					?>
 				</div>
-
 			</div>
 		</div>
 	</div>

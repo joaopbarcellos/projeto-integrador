@@ -1,10 +1,10 @@
 <?php
 
 /*
- * O codigo seguinte retorna os dados detalhados de um produto.
- * Essa e uma requisicao do tipo GET. Um produto e identificado 
- * pelo campo id.
- */
+* O codigo seguinte retorna os dados detalhados de um produto.
+* Essa e uma requisicao do tipo GET. Um produto e identificado 
+* pelo campo id.
+*/
 
 // conexão com bd
 require_once('conexao_db.php');

@@ -17,7 +17,7 @@ if(isset($_POST["emailCampo"]) && isset($_POST["senhaCampo"])) {
 	// o verifica junto a senha enviada ao servidor
 	if($consulta->rowCount() > 0){
 		$linha = $consulta->fetch(PDO::FETCH_ASSOC);
-		if($linha['token'] == $senhaLogin){
+		if(password_verify($senhaLogin, $linha['token'])){
 			$_SESSION["logado"] = $emailLogin;
 			require_once("carregar_detalhes_logado.php");
 			header("location: ../index.php");

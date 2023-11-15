@@ -94,15 +94,7 @@ if (caixa_email) {
 // Pegando o email do usuario logado
 var emailLogado = document.querySelector("#nome_usuario");
 
-// Funcao para quando o usuario entrar numa tela de evento
-function entrarEvento() {
-  // Mudando o que esta escrito no evento
-  document.querySelector(".play").textContent = "Você está inscrito!";
-  document.querySelector(".now").textContent = "Prepare-se!";
-}
-
 function inscrever(evento) {
-  console.log(evento)
   if (emailLogado) {
     // Se ele nao for nulo, isto e, se ha um usuario logado
     Swal.fire({
@@ -117,7 +109,7 @@ function inscrever(evento) {
     }).then((result) => {
       if (result.isConfirmed) {
         // Mandar inscrever de verdade
-        window.location.assign(`conexaoBancoDados/inscrever_evento.php?id='${evento.id}'`);
+        window.location.assign(`conexaoBancoDados/inscrever_evento.php?id=${evento.id}`);
       }
     });
   } else {
@@ -135,7 +127,6 @@ function inscrever(evento) {
 
 let btnInscrever = document.querySelector(".inscrever");
 if (btnInscrever) {
-  entrarEvento();
   // Adicionando o ouvidor do evento para se inscrever
   btnInscrever.addEventListener("click", () => {
     inscrever(btnInscrever);
