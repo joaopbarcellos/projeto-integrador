@@ -33,6 +33,10 @@ button:focus {
   outline: none;
 }
 
+.item img{
+  background-color: var(--azul_terc);
+}
+
 .slideh3{
   background: rgba(40, 65, 116, 0.24);
   border-radius: 16px;

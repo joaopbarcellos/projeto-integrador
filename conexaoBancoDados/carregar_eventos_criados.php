@@ -16,17 +16,13 @@ $consultaEmail->execute();
 $linhaUsuario = $consultaEmail->fetch(PDO::FETCH_ASSOC);
 $id_logado = intval($linhaUsuario['id']);
 
-$consulta = $db_con->prepare("SELECT * FROM usuario_evento WHERE fk_usuario_id =$id_logado");
+$consulta = $db_con->prepare("SELECT * FROM evento WHERE fk_usuario_id =$id_logado");
 $consulta->execute();
 if ($consulta->rowCount() > 0) {
-    while($linha_tabela = $consulta->fetch(PDO::FETCH_ASSOC)){
+    while($linha = $consulta->fetch(PDO::FETCH_ASSOC)){
         $evento = array();
-        $evento["id"] = $linha_tabela['fk_evento_id'];
+        $evento["id"] = $linha['id'];
         
-
-        $consulta_evento = $db_con->prepare("SELECT * FROM evento where id = '" . $evento["id"] . "'");
-        $consulta_evento->execute();
-        $linha = $consulta_evento->fetch(PDO::FETCH_ASSOC);
         $evento["idade_publico"] = carregar_intervalo($db_con, $linha["fk_idade_publico_id"]);
         $evento["classificacao"] = carregar_classificacao($db_con, $linha["fk_classificacao_id"]);
         $evento["nome"] = $linha["nome"];
@@ -39,7 +35,6 @@ if ($consulta->rowCount() > 0) {
         $evento["foto"] = $linha["foto"];
         // Adiciona o evento no array de eventos.
         array_push($resposta["eventos"], $evento);
-        
     }
 }
 return json_encode($resposta);

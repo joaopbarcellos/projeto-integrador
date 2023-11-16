@@ -24,6 +24,7 @@ h3 {
 .selected {
   background-color: var(--bgmyeve);
   color: var(--colmyeve);
+  border: 0;
   border-bottom: 5px solid var(--colmyeve);
 }
 
@@ -31,6 +32,7 @@ h3 {
 .not-selected {
   background-color: var(--bgmyeve);
   color: var(--colmyeve);
+  border: 0;
   transition: 0.3s;
 }
 
@@ -45,20 +47,15 @@ h3 {
   color: var(--semevento);
   margin-top: 10%;
   margin-bottom: 10%;
-  display: none;
 }
 
-/* deixo como padrão os eventos invisíveis */
-.evento {
-  display: none;
-}
 
 /* mexo no botao de cancelar inscricao, colocando padding e trocando as cores e espacamento */
 .inscricao {
   padding: 10px;
   color: var(--branco);
   border: 0 !important;
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: red;
   transition: 0.4s ease;
   user-select: none;
@@ -97,5 +94,65 @@ input {
   display: none;
 }
 
+.editBtn {
+  width: 115px; /* Adjust as needed */
+  height: 44px;
+  border-radius: 15px;
+  border: none;
+  background-color: var(--azul_terc);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the left */
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.123);
+  cursor: pointer;
+  position: relative;
+  margin-left: auto;
+  margin-top: auto;
+  overflow: hidden;
+  transition: all 0.3s;
+}
 
+.editBtn:hover::before {
+  transform: scale(1.5); /* Adjust as needed */
+}
 
+.editText {
+  margin-right: 25px !important;
+  margin-left: auto;
+  text-align: center;
+  color: white;
+}
+
+.editBtn svg {
+  height: 17px;
+  margin-left: 10px;
+  fill: white;
+  z-index: 3;
+  transition: all 0.2s;
+  transform-origin: bottom;
+}
+
+.editBtn:hover svg {
+  transform: rotate(-15deg) translateX(5px);
+}
+
+.editBtn::after {
+  content: "";
+  width: 25px;
+  height: 1.5px;
+  position: absolute;
+  bottom: 13px;
+  left: -5px;
+  background-color: white;
+  border-radius: 2px;
+  z-index: 2;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-out;
+}
+
+.editBtn:hover::after {
+  transform: scaleX(1);
+  left: -4px;
+  transform-origin: right;
+}

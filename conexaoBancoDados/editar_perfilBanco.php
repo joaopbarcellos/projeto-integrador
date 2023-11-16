@@ -2,8 +2,6 @@
 // conexão com bd
 require_once('conexao_db.php');
 
-// autenticação
-require_once('autenticacao.php');
 $resposta = array();
 
 if (isset($_POST["emailCampo"]) && isset($_POST["nomeCampo"]) && isset($_POST["telefoneCampo"]) && isset($_POST["dataCampo"]) && isset($_POST["jogabilidade"])){
@@ -14,14 +12,21 @@ if (isset($_POST["emailCampo"]) && isset($_POST["nomeCampo"]) && isset($_POST["t
     $intuito = trim($_POST["jogabilidade"]);
 
     if ($_FILES["foto"]["size"] > 0){
-        $curl = curl_init();
+        echo 'entrou';
+        $curl = curl_init(); //está com errooooooooooo aqui
+        echo '1';
         $client_id="6d2b5be8400b2b3";
-        $filename = $_FILES['foto']['tmp_name'];    
+        echo '2';
+        $filename = $_FILES['foto']['tmp_name']; 
+        echo '3';   
         $handle = fopen($filename, "r");
+        echo '4';
         $data = fread($handle, filesize($filename));
+        echo '5';
         $pvars   = array('image' => base64_encode($data));
+        echo '6';
         $timeout = 30;
-
+        echo '7';
         if ($curl === false) {
             // Lidar com erro na inicialização do cURL
             echo "Erro ao inicializar cURL";

@@ -25,6 +25,7 @@ if (isset($_GET['limit']) && isset($_GET['offset'])) {
 
 	// Realiza uma consulta ao BD e obtem todos os produtos.
 	$consulta = $db_con->prepare("SELECT * FROM evento LIMIT " . $limit . " OFFSET " . $offset);
+	$consulta -> execute();
 	if ($consulta->rowCount() > 0) {
 			while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
 				// Para cada evento, sao retornados somente o 

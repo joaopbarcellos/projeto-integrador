@@ -1,11 +1,4 @@
 <?php
-
-/*
-* O codigo seguinte retorna os dados detalhados de um produto.
-* Essa e uma requisicao do tipo GET. Um produto e identificado 
-* pelo campo id.
-*/
-
 // conexão com bd
 require_once('conexao_db.php');
 
@@ -26,11 +19,6 @@ if (isset($_SESSION["evento_atual"])) {
 
 	if ($consulta->execute()) {
 		if ($consulta->rowCount() > 0) {
-
-			// Se o produto existe, os dados completos do produto 
-			// sao adicionados no array de resposta. A imagem nao 
-			// e entregue agora pois ha um php exclusivo para obter 
-			// a imagem do produto.
 			$linha = $consulta->fetch(PDO::FETCH_ASSOC);
 			$evento["id"] = $linha["id"];
 

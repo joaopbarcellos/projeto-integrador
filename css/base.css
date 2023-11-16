@@ -552,6 +552,7 @@ footer p {
   display: flex;
   flex-direction: column;
   margin-bottom: 0px;
+  position: relative;
   width: 100%;
 }
 

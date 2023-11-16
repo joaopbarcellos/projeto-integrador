@@ -4,9 +4,7 @@ $resposta = array();
 $resposta["eventos"] = array();
 $limit = 5;
 $consulta_mais_inscritos = $db_con->prepare(
-    "SELECT evento.id, COUNT(usuario_evento.id) FROM usuario_evento 
-    INNER JOIN evento ON (evento.id = usuario_evento.fk_evento_id) 
-    GROUP BY evento.id ORDER BY evento.id LIMIT " . $limit);
+    "SELECT evento.id, evento.max_pessoas FROM evento ORDER BY evento.max_pessoas LIMIT " . $limit);
 if($consulta_mais_inscritos->execute()) {
     if ($consulta_mais_inscritos->rowCount() > 0) {
         while ($linha_mais_inscritos = $consulta_mais_inscritos->fetch(PDO::FETCH_ASSOC)) {

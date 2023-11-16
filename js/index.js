@@ -13,8 +13,6 @@ btns.forEach((btn) => {
   });
 });
 
-console.log(btns)
-
 // Pegando todos os botoes para ir para o evento
 const eventoSlide = document.querySelectorAll(".item");
 

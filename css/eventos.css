@@ -204,3 +204,68 @@ p, .alinhando p{
 footer {
   margin-top: 20vh;
 }
+
+
+.editBtn {
+  width: 150px; /* Adjust as needed */
+  height: 66px;
+  border-radius: 15px;
+  border: none;
+  background-color: var(--azul_terc);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the left */
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.123);
+  cursor: pointer;
+  position: relative;
+  margin-left: auto;
+  margin-top: auto;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.editBtn:hover::before {
+  transform: scale(1.5); /* Adjust as needed */
+}
+
+.editText {
+  margin-right: 40px !important;
+  margin-left: auto;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+
+.editBtn svg {
+  height: 20px;
+  margin-left: 10px;
+  fill: white;
+  z-index: 3;
+  transition: all 0.2s;
+  transform-origin: bottom;
+}
+
+.editBtn:hover svg {
+  transform: rotate(-15deg) translateX(5px);
+}
+
+.editBtn::after {
+  content: "";
+  width: 25px;
+  height: 1.5px;
+  position: absolute;
+  bottom: 22px;
+  left: -5px;
+  background-color: white;
+  border-radius: 2px;
+  z-index: 2;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-out;
+}
+
+.editBtn:hover::after {
+  transform: scaleX(1);
+  left: -9px;
+  transform-origin: right;
+}
