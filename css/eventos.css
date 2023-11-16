@@ -228,9 +228,22 @@ footer {
   transform: scale(1.5); /* Adjust as needed */
 }
 
+.editBtn::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--roxo_princ);
+  position: absolute;
+  z-index: 1;
+  transform: scale(0);
+  transition: all 0.2s;
+  filter: blur(10px);
+}
+
 .editText {
   margin-right: 40px !important;
   margin-left: auto;
+  z-index: 9999;
   font-size: 20px;
   text-align: center;
   color: white;
@@ -238,7 +251,7 @@ footer {
 
 .editBtn svg {
   height: 20px;
-  margin-left: 10px;
+  margin-left: 20px;
   fill: white;
   z-index: 3;
   transition: all 0.2s;
@@ -266,6 +279,6 @@ footer {
 
 .editBtn:hover::after {
   transform: scaleX(1);
-  left: -9px;
+  left: 1px;
   transform-origin: right;
 }

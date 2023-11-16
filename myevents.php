@@ -226,13 +226,8 @@
 			carregar_eventos_inscritos();
 		}
 		?>
-
 		<!--- Fim da Section -->
 	</section>
-
-
-
-
 	<footer>
 		<?php include('footer.php') ?>
 	</footer>
