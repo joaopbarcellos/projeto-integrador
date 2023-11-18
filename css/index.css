@@ -77,7 +77,6 @@ button:focus {
 
 /* deixo a msg de erro e altero seus espacamentos */
 .msg_erro {
-  display: none;
   margin-top: 25px;
   margin-bottom: 10%;
   text-align: center;

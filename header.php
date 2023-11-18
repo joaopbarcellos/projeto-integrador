@@ -43,14 +43,24 @@
 				// Verifique qual página está sendo acessada para colocar ou não a barra de pesquisa
 				$currentPage = basename($_SERVER['PHP_SELF']);
 
-				if ($currentPage === 'index.php' || $currentPage === 'myevents.php') {
+				if ($currentPage === 'index.php') {
+					// Incluir a barra de pesquisa apenas na pagina
+					echo "<!-- Div com barra de pesquisa -->
+						<form action='index.php' method='post' class='d-flex m-auto' role='search' id='pesquisar'>
+							<!-- input -->
+							<input class='form-control me-2' placeholder='Pesquisar evento' aria-label='Search' id='busca'
+								incremental='incremental' type='search' name='pesquisar'>
+								<button class='btn' id='lupa'>
+								<svg class='iconelupa' xmlns='http://www.w3.org/2000/svg' height='1em' viewBox='0 0 512 512'><path d='M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z'/></svg>
+								</button>
+						</form>";
+				} else if ($currentPage === 'myevents.php'){
 					// Incluir a barra de pesquisa apenas na pagina
 					echo "<!-- Div com barra de pesquisa -->
 						<div class='d-flex m-auto' role='search' id='pesquisar'>
-
 							<!-- input -->
 							<input class='form-control me-2' placeholder='Pesquisar evento' aria-label='Search' id='busca'
-								incremental='incremental' type='search'>
+								incremental='incremental' type='search' name='pesquisar'>
 								<button class='btn' id='lupa'>
 								<svg class='iconelupa' xmlns='http://www.w3.org/2000/svg' height='1em' viewBox='0 0 512 512'><path d='M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z'/></svg>
 								</button>

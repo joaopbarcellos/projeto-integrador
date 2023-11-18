@@ -67,7 +67,7 @@
 				
 				foreach ($eventos["eventos"] as $evento){
 					echo '<!-- Div evento -->
-					<div class="evento mt-3 mt-sm-4 mt-4 mt-5 mt-3"  id="'. $evento["id"] .'">
+					<div class="evento mt-3 mt-sm-4 mt-4 mt-5 mt-3"  id="'. $evento["id"] .'" name="'. $evento["nome"] . '">
 					<!-- Div onde ficará todas as informações -->
 						<div class="informacoes">
 							<div class="row">
@@ -145,7 +145,7 @@
 			} else {
 				foreach ($eventos["eventos"] as $evento){
 					echo '<!-- Div evento -->
-					<div class="evento mt-3 mt-sm-4 mt-4 mt-5 mt-3"  id="'. $evento["id"] .'">
+					<div class="evento mt-3 mt-sm-4 mt-4 mt-5 mt-3"  id="'. $evento["id"] .'" name="'. $evento["nome"] .'">
 					<!-- Div onde ficará todas as informações -->
 						<div class="informacoes">
 							<div class="row">
