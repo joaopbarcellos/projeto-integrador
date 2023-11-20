@@ -90,7 +90,7 @@ if (isset($_POST['nome']) && isset($_POST['preco']) && isset($_POST['descricao']
 			curl_close($curl);
 		}
 		if ($foto == NULL){
-			$consulta = $db_con->prepare("INSERT INTO EVENTO(descricao, nome, foto, data, min_pessoas, horario_inicio, horario_fim, max_pessoas, FK_CLASSIFICACAO_id, FK_INTUITO_id, FK_ENDERECO_id, FK_USUARIO_id, FK_IDADE_PUBLICO_id, preco) VALUES('$descricao', '$nome', 'https://i.imgur.com/ebF3p8e.png', '$data', $min_pessoas, '$horario_inicio', '$horario_fim', $max_pessoas, $classificacao, $intuito, $endereco, $usuario, $idade_publico, $preco)");
+			$consulta = $db_con->prepare("INSERT INTO EVENTO(descricao, nome, foto, data, min_pessoas, horario_inicio, horario_fim, max_pessoas, FK_CLASSIFICACAO_id, FK_INTUITO_id, FK_ENDERECO_id, FK_USUARIO_id, FK_IDADE_PUBLICO_id, preco) VALUES('$descricao', '$nome', 'https://i.imgur.com/ebF3p8e.png', '$data', $min_pessoas, '$horario_inicio', '$horario_fim', $max_pessoas, $classificacao, $intuito, $endereco, $usuario, $idade_publico, $preco) returning id");
 		if ($consulta->execute()) {
 			$resposta["sucesso"] = 1;
 		} else {
@@ -98,7 +98,7 @@ if (isset($_POST['nome']) && isset($_POST['preco']) && isset($_POST['descricao']
 			$resposta["erro"] = "Erro ao criar produto no BD: " . $consulta->$error;
 		}
 		} else {
-			$consulta = $db_con->prepare("INSERT INTO EVENTO(descricao, nome, foto, data, min_pessoas, horario_inicio, horario_fim, max_pessoas, FK_CLASSIFICACAO_id, FK_INTUITO_id, FK_ENDERECO_id, FK_USUARIO_id, FK_IDADE_PUBLICO_id, preco) VALUES('$descricao', '$nome', '$foto', '$data', $min_pessoas, '$horario_inicio', '$horario_fim', $max_pessoas, $classificacao, $intuito, $endereco, $usuario, $idade_publico, $preco)");
+			$consulta = $db_con->prepare("INSERT INTO EVENTO(descricao, nome, foto, data, min_pessoas, horario_inicio, horario_fim, max_pessoas, FK_CLASSIFICACAO_id, FK_INTUITO_id, FK_ENDERECO_id, FK_USUARIO_id, FK_IDADE_PUBLICO_id, preco) VALUES('$descricao', '$nome', '$foto', '$data', $min_pessoas, '$horario_inicio', '$horario_fim', $max_pessoas, $classificacao, $intuito, $endereco, $usuario, $idade_publico, $preco) returning id");
 			if ($consulta->execute()) {
 				$resposta["sucesso"] = 1;
 			} else {
@@ -107,7 +107,7 @@ if (isset($_POST['nome']) && isset($_POST['preco']) && isset($_POST['descricao']
 			}
 		}
 	} else {
-		$consulta = $db_con->prepare("INSERT INTO EVENTO(descricao, nome, foto, data, min_pessoas, horario_inicio, horario_fim, max_pessoas, FK_CLASSIFICACAO_id, FK_INTUITO_id, FK_ENDERECO_id, FK_USUARIO_id, FK_IDADE_PUBLICO_id, preco) VALUES('$descricao', '$nome', 'https://i.imgur.com/ebF3p8e.png', '$data', $min_pessoas, '$horario_inicio', '$horario_fim', $max_pessoas, $classificacao, $intuito, $endereco, $usuario, $idade_publico, $preco)");
+		$consulta = $db_con->prepare("INSERT INTO EVENTO(descricao, nome, foto, data, min_pessoas, horario_inicio, horario_fim, max_pessoas, FK_CLASSIFICACAO_id, FK_INTUITO_id, FK_ENDERECO_id, FK_USUARIO_id, FK_IDADE_PUBLICO_id, preco) VALUES('$descricao', '$nome', 'https://i.imgur.com/ebF3p8e.png', '$data', $min_pessoas, '$horario_inicio', '$horario_fim', $max_pessoas, $classificacao, $intuito, $endereco, $usuario, $idade_publico, $preco) returning id");
 		if ($consulta->execute()) {
 			$resposta["sucesso"] = 1;
 		} else {
@@ -124,12 +124,15 @@ if (isset($_POST['nome']) && isset($_POST['preco']) && isset($_POST['descricao']
 	$resposta["erro"] = "Campo requerido nao preenchido";
 }
 
-// Fecha a conexao com o BD
-$db_con = null;
+
+$linha_id = $consulta->fetch(PDO::FETCH_ASSOC);
+$id_evento = $linha_id["id"];
 
 // Converte a resposta para o formato JSON.
 echo json_encode($resposta);
 
-// Mandar para proxima pagina
-header("location: ../index.php");
+// Fecha a conexao com o BD
+$db_con = null;
+
+header("location: ../evento.php?id_evento=$id_evento");
 ?>

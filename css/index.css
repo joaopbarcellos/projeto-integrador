@@ -33,6 +33,13 @@ button:focus {
   outline: none;
 }
 
+#naoAchou{
+  color: var(--semevento);
+  margin-top: 10%;
+  margin-bottom: 10%;
+  font-size: 1.2rem;
+}
+
 .item img{
   background-color: var(--azul_terc);
 }

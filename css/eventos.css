@@ -71,6 +71,20 @@ p, .alinhando p{
   margin-bottom: 0 !important;
 }
 
+#localizacao {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#localizacao svg {
+  margin-right: 8px; /* ou ajuste a margem desejada entre o ícone e o texto */
+}
+
+#localizacao p {
+  margin: 0; /* remova as margens padrão do parágrafo para evitar espaços indesejados */
+}
+
 /* Adiconando flex-box, alinhamento e espacamento */
 #localizacao,
 #alvo,
@@ -238,6 +252,10 @@ footer {
   transform: scale(0);
   transition: all 0.2s;
   filter: blur(10px);
+}
+
+#loc_evento{
+  color: white;
 }
 
 .editText {

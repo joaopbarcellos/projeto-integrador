@@ -26,7 +26,7 @@ if($db_con) {
 	// Primeiro, verifica-se se todos os parametros foram enviados pelo cliente.
 	// limit - quantidade de eventos a ser entregues
 	// offset - indica a partir de qual evento começa a lista
-	$limit = 20;
+	$limit = 10;
 
 	// Realiza uma consulta ao BD e obtem todos os eventos.
 	$consulta = $db_con->prepare("SELECT * FROM evento LIMIT " . $limit);
