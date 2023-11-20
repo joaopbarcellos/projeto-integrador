@@ -454,73 +454,6 @@ export function emailIgual(campoEmail, noEmailExiste, cadastro = false) {
   return true;
 }
 
-export function barraVazia(lista_conteudo, home = false) {
-  // Funcao chamada quando a barra de pesquisa ficar vazia
-  if (home) {
-    // Se a funcao foi chamada na tela principal
-    let divSlides = document.querySelector(".owl-carousel");
-    // Mostrando os slides e seus complementos
-    divSlides.style.display = "block";
-    document.querySelector(".custom-nav").style.display = "block";
-  }
-  // Mostrando todos os eventos
-  lista_conteudo.forEach((conteudo) => {
-    conteudo.style.display = "block";
-  });
-  // Escondendo mensagem de erro
-  naoAchou.style.display = "none";
-}
-
-export function esconderNaoAchou() {
-  let naoAchou = document.querySelector("#naoAchou");
-  naoAchou.style.display = "none";
-}
-
-export function pesquisar(lista_conteudo, barra_pesquisa, home = false) {
-  // Funcao para pesquisar evento
-  let naoAchou = document.querySelector("#naoAchou");
-  let contAchou = 0;
-
-  // Se o valor da barra de pesquisa for vazio, ira chamar a funcao
-  if (!barra_pesquisa.value) {
-    barraVazia(lista_conteudo, home);
-  } else {
-    // Se o valor nao for vazio
-    if (home) {
-      // Se essa funcao foi chamada na tela principal
-      let divSlides = document.querySelector(".owl-carousel");
-      // Escondendo os slides e seus complementos
-      divSlides.style.display = "none";
-      document.querySelector(".custom-nav").style.display = "none";
-    }
-    // Percorrendo por todos os eventos
-    lista_conteudo.forEach((conteudo) => {
-      // Pegando o titulo do evento
-      let titulo =
-        conteudo.children[0].children[0].children[1].children[0].textContent.toUpperCase();
-
-      // Verificando se o texto pesquisado e o mesmo que o titulo
-      if (titulo.includes(barra_pesquisa.value.toUpperCase())) {
-        // Mostrando todos os conteudos que tiverem o texto pesquisado como titulo
-        conteudo.style.display = "block";
-        contAchou += 1;
-      } else {
-        // Escondendo todos os conteudos que nao tiverem o texto pesquisado como titulo
-        conteudo.style.display = "none";
-      }
-
-      if (contAchou > 0) {
-        // Se achou pelo menos 1 evento, ira esconder mensagem de erro
-        naoAchou.style.display = "none";
-      } else {
-        // Caso nao ache nenhum evento, escreve mensagem na tela informando que a pesquisa feita nao foi encontrada
-        naoAchou.textContent = `Nenhum resultado para "${barra_pesquisa.value}" encontrado!`;
-        naoAchou.style.display = "block";
-      }
-    });
-  }
-}
-
 const sair = document.querySelector("#logout");
 
 if (sair) {
@@ -623,6 +556,7 @@ function formatTelefone(input) {
       telefone.slice(7, 11);
   }
 }
+
 if (telefoneInput) {
   // Adicione um ouvinte de evento para chamar a função formatTelefone quando o usuário digitar
   telefoneInput.addEventListener("input", function () {

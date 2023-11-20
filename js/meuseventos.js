@@ -15,6 +15,7 @@ cards.forEach((card) => {
 // Pegando o email do usuario logado
 const email = document.querySelector("#nome_usuario");
 
+// Identificando se o usuario esta logado ou nao
 if (!email) {
   base.naoEstaLogado();
 }
@@ -50,38 +51,61 @@ function cancelarInscricao(id) {
   });
 }
 
-// Barra de pesquisa
+// Pegando a barra de pesquisa e a lupa
 const barra_pesquisa = document.querySelector("#busca");
 const lupa = document.querySelector("#lupa");
 
 // Adicionando EventListener para quando for feita a pesquisa
 lupa.addEventListener("click", () => {
   cards.forEach((card) => {
-    if(!(card.name == barra_pesquisa.value)) card.style.display = "none";
-    else card.style.display = "block";
+    if(card.getAttribute("name").toLowerCase().includes(barra_pesquisa.value.toLowerCase())) card.style.display = "block";
+    else card.style.display = "none";
   });
+  pesquisa(barra_pesquisa.value);
 });
 
 barra_pesquisa.addEventListener("keypress", (event) => {
   let tecla = event.key;
   if (tecla == "Enter") {
     cards.forEach((card) => {
-      if(!(card.name == barra_pesquisa.value)) card.style.display = "none";
-      else card.style.display = "block";
+      if(card.getAttribute("name").toLowerCase().includes(barra_pesquisa.value.toLowerCase())) card.style.display = "block";
+      else card.style.display = "none";
     });
+    pesquisa(barra_pesquisa.value);
   }
 });
 
 barra_pesquisa.addEventListener("search", () => {
   cards.forEach((card) => {
-    if(!(card.name == barra_pesquisa.value)) card.style.display = "none";
-    else card.style.display = "block";
+    if(card.getAttribute("name").toLowerCase().includes(barra_pesquisa.value.toLowerCase())) card.style.display = "block";
+    else card.style.display = "none";
   });
+  pesquisa(barra_pesquisa.value);
 });
 
 barra_pesquisa.addEventListener("input", () => {
   cards.forEach((card) => {
-    if(!(card.name == barra_pesquisa.value)) card.style.display = "none";
-    else card.style.display = "block";
+    if(card.getAttribute("name").toLowerCase().includes(barra_pesquisa.value.toLowerCase())) card.style.display = "block";
+    else card.style.display = "none";
   });
+  pesquisa(barra_pesquisa.value);
 });
+// ------------------------------------------------------------------------------------
+
+
+// Funcao pra saber se foi encontrado um evento com o valor da barra de pesquisa
+function pesquisa(valor){
+  var conteudo = document.querySelector("#naoAchou");
+  var cont = 0;
+  cards.forEach((card) => {
+    if (card.style.display == "block") cont+=1;
+  })
+  if (cont == 0){ 
+    conteudo.textContent = `Nenhum resultado para "${valor}" encontrado!`;
+    conteudo.style.display = "block";
+  } else {
+    conteudo.style.display = "none";
+  }
+}
+// ------------------------------------------------------------------------------------
+

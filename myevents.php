@@ -63,8 +63,8 @@
 			date_default_timezone_set("America/Sao_Paulo");
 			if (count($eventos['eventos']) == 0){
 				echo '<p class="text-center semevento" id="seminscrito">Você não está inscrito em nenhum evento!</p>';
+				echo '<script defer> document.querySelector("#busca").style.display = "none"; document.querySelector("#lupa").style.display = "none";</script>';
 			} else {
-				
 				foreach ($eventos["eventos"] as $evento){
 					echo '<!-- Div evento -->
 					<div class="evento mt-3 mt-sm-4 mt-4 mt-5 mt-3"  id="'. $evento["id"] .'" name="'. $evento["nome"] . '">
@@ -142,6 +142,7 @@
 			date_default_timezone_set("America/Sao_Paulo");
 			if (count($eventos['eventos']) == 0){
 				echo '<p class="text-center semevento" id="semcriado">Você não criou nenhum evento!</p>';
+				echo '<script defer> document.querySelector("#busca").style.display = "none"; document.querySelector("#lupa").style.display = "none";</script>';
 			} else {
 				foreach ($eventos["eventos"] as $evento){
 					echo '<!-- Div evento -->
