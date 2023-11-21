@@ -63,7 +63,7 @@
 			date_default_timezone_set("America/Sao_Paulo");
 			if (count($eventos['eventos']) == 0){
 				echo '<p class="text-center semevento" id="seminscrito">Você não está inscrito em nenhum evento!</p>';
-				echo '<script defer> document.querySelector("#busca").style.display = "none"; document.querySelector("#lupa").style.display = "none";</script>';
+				echo'<script defer> document.querySelector("#busca").style.display = "none"; document.querySelector("#lupa").style.display = "none";</script>';
 			} else {
 				foreach ($eventos["eventos"] as $evento){
 					echo '<!-- Div evento -->

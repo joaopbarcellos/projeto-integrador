@@ -35,7 +35,7 @@ const lupa = document.querySelector("#lupa");
 // Adicionando EventListener para resetar a pagina quando o campo estiver em branco
 barra_pesquisa.addEventListener("search", () => {
   if (!barra_pesquisa.value) {
-    base.barraVazia(lista_conteudo, true);
+    window.location.assign("index.php");
   }
 });
 
@@ -44,17 +44,21 @@ barra_pesquisa.addEventListener("keypress", (event) => {
   let tecla = event.key;
 
   if (tecla == "Enter") {
-    base.pesquisar(lista_conteudo, barra_pesquisa, true);
+    if (!barra_pesquisa.value) {
+      window.location.assign("index.php");
+    }
   }
 });
 
 lupa.addEventListener("click", () => {
-  base.pesquisar(lista_conteudo, barra_pesquisa, true);
+  if (!barra_pesquisa.value) {
+    window.location.assign("index.php");
+  }
 });
 
 barra_pesquisa.addEventListener("input", () => {
   if (!barra_pesquisa.value) {
-    base.barraVazia(lista_conteudo, true);
+    window.location.assign("index.php");
   }
 });
 

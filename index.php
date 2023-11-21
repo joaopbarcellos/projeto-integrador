@@ -46,10 +46,11 @@ session_start();
 		if (isset($_POST['pesquisar'])){
 			$_SESSION['pesquisar'] = $_POST['pesquisar'];
 			$json_data = include("conexaoBancoDados/pesquisar_eventos.php");
+			$palavra = $_POST["pesquisar"];
 
 			$eventos = json_decode($json_data, true);
 			date_default_timezone_set("America/Sao_Paulo");
-
+			echo'<script defer> document.querySelector("#busca").value = "'. $palavra .'"; </script>';
 			if (count($eventos) == 0)  {
 				$pesquisar = $_POST['pesquisar'];
 				echo "<div id='naoAchou' class='fs-4 msg_erro'>Nenhum resultado para '$pesquisar' foi encontrado!</div>";
