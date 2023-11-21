@@ -3,8 +3,7 @@ require_once("conexao_db.php");
 $resposta = array();
 $resposta["eventos"] = array();
 $limit = 5;
-$consulta_mais_inscritos = $db_con->prepare(
-    "SELECT evento.id, evento.max_pessoas FROM evento ORDER BY evento.max_pessoas LIMIT " . $limit);
+$consulta_mais_inscritos = $db_con->prepare("SELECT * FROM (SELECT e.*, (COUNT(ue.fk_evento_id) * 100 / e.max_pessoas) AS porcentagem FROM evento e LEFT JOIN usuario_evento ue ON ue.fk_evento_id = e.id GROUP BY e.id, e.max_pessoas) AS subquery WHERE porcentagem < 100 ORDER BY max_pessoas DESC LIMIT " . $limit);
 if($consulta_mais_inscritos->execute()) {
     if ($consulta_mais_inscritos->rowCount() > 0) {
         while ($linha_mais_inscritos = $consulta_mais_inscritos->fetch(PDO::FETCH_ASSOC)) {

@@ -132,7 +132,7 @@ VALUES (1, 'Atletismo'),
 
 
 INSERT INTO EVENTO(descricao, nome, data, min_pessoas, preco, max_pessoas, horario_inicio, horario_fim, foto, FK_CLASSIFICACAO_id, FK_INTUITO_id, FK_ENDERECO_id, FK_USUARIO_id, FK_IDADE_PUBLICO_id)
-VALUES ('Aula ofertada pelo Zico para crianças de até 12 anos. O evento terá duração de 2 horas. Participação somente com inscrição prévia.','Aula do Zico', '2023-08-16', 1, 97, 2, '12:00:00', '14:00:00', 'https://i.imgur.com/e3zPVU7.png', 12, 1, 1, 7, 2),
+VALUES ('Aula ofertada pelo Zico para crianças de até 12 anos. O evento terá duração de 2 horas. Participação somente com inscrição prévia.','Aula do Zico', '2023-08-16', 1, 97, 3, '12:00:00', '14:00:00', 'https://i.imgur.com/e3zPVU7.png', 12, 1, 1, 7, 2),
 ('Treino de futebol americano da igreja. Não pode xingamentos! Venha se ajuntar conosco pra praticar este esporte tão raro aqui no Brasil', 'Treino Black Knights', '2023-05-26', 5, 0, 18, '10:00:00', '11:00:00', 'https://i.imgur.com/ebF3p8e.png', 13, 2, 2, 11, 5),
 ('Aulão de natação no sesc de Aracruz, venha aprender mais sobre natação e se divertir nesse dia!', 'Desafio de Natação', '2023-07-12', 2, 0, 25, '08:00:00', '10:00:00', 'https://i.imgur.com/VCe3NHw.png', 27, 1, 3, 21, 1),
 ('Este é um projeto da Prefeitura de Vila Velha junto com o Point Mar Dourado de Beach Tennis, para inserir a modalidade nos esportes educacionais ofertados nas escolas futuramente.', 'Mar Dourado Beach Tennis', '2023-09-12', 5, 10, 50, '11:00:00', '12:00:00', 'https://i.imgur.com/o0DzAVc.png', 4, 1, 4, 25, 3),

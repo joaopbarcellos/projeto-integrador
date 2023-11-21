@@ -39,6 +39,8 @@ if (isset($_POST['nome']) && isset($_POST['preco']) && isset($_POST['descricao']
 	$classificacao = trim($_POST['classificacao']);
 	$idade_publico = trim($_POST['idade_publico']);
 
+	
+
 	// Chamar funcao para criar o endereço
 	$cep_evento = trim($_POST['cepEvento']);
 	$bairro_evento = trim($_POST['bairroEvento']);
@@ -47,11 +49,12 @@ if (isset($_POST['nome']) && isset($_POST['preco']) && isset($_POST['descricao']
 	$descricao_evento = trim($_POST['logradouroEvento']);
 	$numero_evento = trim($_POST['numeroEvento']);
 	$complemento_evento = trim($_POST['complementoEvento']);
-
+	
 	$endereco = criar_endereco($db_con, $cep_evento, $bairro_evento, $cidade_evento, $estado_evento, $descricao_evento, $numero_evento, $complemento_evento);
 	
 	// Chamar funcao para pegar o id do usuario
 	$usuario = carregar_usuario($db_con);
+
 	if ($_FILES["foto_evento"]["size"] > 0){
 		$curl = curl_init();
 		$client_id="6d2b5be8400b2b3";
@@ -76,6 +79,7 @@ if (isset($_POST['nome']) && isset($_POST['preco']) && isset($_POST['descricao']
 			curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
 			
 			$result = curl_exec($curl);
+			var_dump($result);
 
 			if ($result === false) {
 				// Lidar com erro na execução da solicitação

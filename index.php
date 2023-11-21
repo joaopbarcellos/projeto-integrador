@@ -169,7 +169,6 @@ session_start();
 			';
 
 			$json_data = include("conexaoBancoDados/carregar_eventos.php");
-	
 			$eventos = json_decode($json_data, true);
 			date_default_timezone_set("America/Sao_Paulo"); 
 			foreach ($eventos["eventos"] as $evento){

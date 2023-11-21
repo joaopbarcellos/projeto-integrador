@@ -3,13 +3,13 @@ $resposta = array();
 function criar_endereco($db_con, $cep, $bairro, $cidade, $estado, $descricao, $numero, $complemento){
     $cep = trim($cep);
     $numero = trim($numero);
-    $consulta_endereco = $db_con->prepare("SELECT * FROM endereco WHERE cep = '$cep' and numero = '$numero'");
+    $descricao = trim($descricao);
+
+    $consulta_endereco = $db_con->prepare("SELECT * FROM endereco WHERE cep = '$cep' and numero = '$numero' and descricao='$descricao'");
     $consulta_endereco->execute();
     if($consulta_endereco->rowCount() == 0){
-            
         $bairro = trim($bairro);
         $cidade = trim($cidade); 
-        $descricao = trim($descricao);
         $complemento = trim($complemento);
         
         $consulta_estado = $db_con->prepare("SELECT id FROM estado WHERE id = '$estado'");
@@ -60,7 +60,7 @@ function criar_endereco($db_con, $cep, $bairro, $cidade, $estado, $descricao, $n
         if ($complemento){
             $descricao =  $descricao . ", " . $complemento;
         }
-        $consulta_criar_endereco = $db_con->prepare("INSERT INTO endereco(numero, cep, descricao, FK_BAIRRO_id) VALUES('$numero', '$cep', '$descricao', '$id_bairro') returning id");
+        $consulta_criar_endereco = $db_con->prepare("INSERT INTO endereco(numero, cep, descricao, FK_BAIRRO_id) VALUES('$numero', '$cep', '$descricao', $id_bairro) returning id");
         if ($consulta_criar_endereco->execute()) {
             // se a consulta deu certo, indicamos sucesso na operação.
             $resposta["sucesso"] = 1;
