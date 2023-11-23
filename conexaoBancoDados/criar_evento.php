@@ -20,6 +20,8 @@ require_once('carregar_usuario_evento.php');
 // array de resposta
 $resposta = array();
 
+ini_set('display_errors', 1);
+
 if (isset($_POST['nome']) && isset($_POST['preco']) && isset($_POST['descricao']) && isset($_POST['data']) && isset($_POST['min_pessoas']) 
 && isset($_POST['horario_inicio']) && isset($_POST['max_pessoas']) && isset($_POST['intuito']) && isset($_POST['cepEvento']) 
 && isset($_POST['cidadeEvento']) && isset($_POST['estadoEvento']) && isset($_POST['logradouroEvento']) && isset($_POST['bairroEvento']) 
@@ -54,45 +56,42 @@ if (isset($_POST['nome']) && isset($_POST['preco']) && isset($_POST['descricao']
 	
 	// Chamar funcao para pegar o id do usuario
 	$usuario = carregar_usuario($db_con);
-
 	if ($_FILES["foto_evento"]["size"] > 0){
-		$curl = curl_init();
-		$client_id="6d2b5be8400b2b3";
-		$filename = $_FILES['foto_evento']['tmp_name'];    
-		$handle = fopen($filename, "r");
-		$data_foto = fread($handle, filesize($filename));
-		$pvars   = array('image' => base64_encode($data_foto));
-		$timeout = 30;
-
-		if ($curl === false) {
-			// Lidar com erro na inicialização do cURL
-			echo "Erro ao inicializar cURL";
+		$foto = NULL;
+		$client_id = "6d2b5be8400b2b3";
+		$filename = $_FILES['foto_evento']['tmp_name'];
+	
+		$image_data = file_get_contents($filename);
+		$image_data_base64 = base64_encode($image_data);
+	
+		$api_url = 'https://api.imgur.com/3/image.json';
+	
+		$headers = [
+			'Authorization: Client-ID ' . $client_id
+		];
+	
+		$postData = [
+			'image' => $image_data_base64
+		];
+	
+		$options = [
+			'http' => [
+				'header' => implode("\r\n", $headers),
+				'method' => 'POST',
+				'content' => http_build_query($postData)
+			]
+		];
+	
+		$context = stream_context_create($options);
+		$result = file_get_contents($api_url, false, $context);
+	
+		if ($result === FALSE) {
+			echo "Erro ao enviar arquivo para o Imgur";
 		} else {
-			// Configurar e executar a solicitação cURL
-			curl_setopt($curl, CURLOPT_URL, 'https://api.imgur.com/3/image.json');
-			curl_setopt($curl, CURLOPT_TIMEOUT, $timeout);
-			curl_setopt($curl, CURLOPT_HTTPHEADER, array('Authorization: Client-ID ' . $client_id));
-			curl_setopt($curl, CURLOPT_POST, 1);
-			curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-			curl_setopt($curl, CURLOPT_POSTFIELDS, $pvars);
-			curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-			curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-			
-			$result = curl_exec($curl);
-			var_dump($result);
-
-			if ($result === false) {
-				// Lidar com erro na execução da solicitação
-				echo "Erro na execução do cURL: " . curl_error($curl);
-			} else {
-				// Processar a resposta
-				$pms = json_decode($result,true);
-				$foto = $pms['data']['link'];
-			}
-
-			// Fechar a sessão cURL
-			curl_close($curl);
+			$response = json_decode($result, true);
+			$foto = $response['data']['link'];
 		}
+
 		if ($foto == NULL){
 			$consulta = $db_con->prepare("INSERT INTO EVENTO(descricao, nome, foto, data, min_pessoas, horario_inicio, horario_fim, max_pessoas, FK_CLASSIFICACAO_id, FK_INTUITO_id, FK_ENDERECO_id, FK_USUARIO_id, FK_IDADE_PUBLICO_id, preco) VALUES('$descricao', '$nome', 'https://i.imgur.com/ebF3p8e.png', '$data', $min_pessoas, '$horario_inicio', '$horario_fim', $max_pessoas, $classificacao, $intuito, $endereco, $usuario, $idade_publico, $preco) returning id");
 		if ($consulta->execute()) {

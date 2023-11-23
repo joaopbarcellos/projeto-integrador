@@ -186,6 +186,7 @@ header {
 #fotologado {
   width: 20px;
   height: 20px;
+  border-radius: 50%;
 }
 
 /* Adicionando cor, margin e transicao */
