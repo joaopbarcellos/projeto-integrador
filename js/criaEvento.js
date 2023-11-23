@@ -110,24 +110,12 @@ function validarHorarioInicio() {
 
 // Campo término estimado
 function validarTerminoEstimado() {
-  const horarioInicio = document.querySelector("#horarioInicio").value;
-  const horaInicio = parseInt(horarioInicio.substring(0, 2), 10);
   const horarioFinal = document.querySelector("#horarioFim").value;
-  const horaFinal = parseInt(horarioFinal.substring(0, 2), 10);
-  const minutoFinal = parseInt(horarioFinal.substring(3), 10);
-  const minutoInicio = parseInt(horarioInicio.substring(3), 10);
-
   // Verificando se o horário final foi escrito
   if (!horarioFinal) {
-    return "término estimado";
+    return "horário final";
   }
-
-  // Verificando se o horário final é maior do que o inicial
-  if (horaFinal > horaInicio) return true;
-  if (horaFinal == horaInicio) {
-    if (minutoFinal >= minutoInicio + 2) return true;
-  }
-  return "término estimado";
+  return true;
 }
 
 // Step 1
@@ -394,12 +382,7 @@ function verificaStep3() {
         strErros += `${elemento}, `;
       }
     }
-  });
-  if(parseInt(document.querySelector("#capMinima").value) >= parseInt(document.querySelector("#capMaxima").value) ){
-    strErros = "quantidade mínima e quantidade máxima";
-    if (validarPrecoEvento1 != true) strErros += ", " + validarPrecoEvento1;
-    if (validaRecorrencia != true) strErros += ", " + validaRecorrencia;
-  }  
+  }); 
   if (!strErros.length > 0) {
     document.querySelector("form").submit();
   } else {

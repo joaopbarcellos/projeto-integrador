@@ -140,7 +140,7 @@
 						echo '
 							<li class="nav-item dropdown">
 								<a class="links nav-link dropdown-toggle" id="droplogado" href="#" role="button" data-bs-toggle="dropdown"aria-expanded="false">
-									<img src="' . $rootDir . '/img/semfoto.png" id="fotologado"></img>
+									<img src="' . $_SESSION["logado_foto"] . '" id="fotologado"></img>
 									<div id="nome_usuario">' .  $_SESSION["logado_nome"] . '</div>
 								</a>';
 
