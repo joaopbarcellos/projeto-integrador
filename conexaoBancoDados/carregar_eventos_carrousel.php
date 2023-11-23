@@ -1,5 +1,9 @@
 <?php
+// esse arquivo CONSULTA dados dos eventos que
+// devem preencher o carrousel da pagina inicial
+
 require_once("conexao_db.php");
+
 $resposta = array();
 $resposta["eventos"] = array();
 $limit = 5;

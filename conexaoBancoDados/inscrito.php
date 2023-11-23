@@ -1,4 +1,7 @@
 <?php
+// esse arquivo CONSULTA se o usuario
+// esta inscrito no evento que ele clicou
+
 function inscrito($id_evento, $db_con){
     $email = $_SESSION["logado"];
 

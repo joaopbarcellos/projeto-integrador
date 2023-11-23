@@ -1,4 +1,7 @@
 <?php
+// esse arquivo aplica o DELETE no banco de dados
+// de uma inscricao de um usuario em um evento
+
 require_once("conexao_db.php");
 if (isset($_GET['id'])){
     $id = $_GET['id'];

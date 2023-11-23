@@ -1,7 +1,8 @@
 <?php
+// esse arquivo CONSULTA as informacoes do 
+// banco de um usuario que realizou login
 
 require_once('conexao_db.php');
-require_once('autenticacao.php');
 
 // array de resposta
 $resposta = array();

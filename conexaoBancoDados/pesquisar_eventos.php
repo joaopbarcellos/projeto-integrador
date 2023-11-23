@@ -1,4 +1,7 @@
 <?php
+// esse arquivo CONSULTA um evento
+// com base no que o usuario pesquisou
+
 require_once('conexao_db.php');
 require_once('Carregar/carregar_endereco_evento.php');
 require_once('Carregar/carregar_intuito.php');

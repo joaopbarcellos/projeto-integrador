@@ -1,4 +1,7 @@
 <?php
+// esse arquivo CONSULTA se o usuario
+// logado criou o evento que a pagina carregou
+
 function criador($id, $db_con){
     $email = $_SESSION["logado"];
 

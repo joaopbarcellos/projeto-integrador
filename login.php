@@ -1,3 +1,9 @@
+<!--
+  Esse arquivo vai dar um POST para
+  CONSULTAR o banco de dados e checar
+  se o usuario acertou o email e senha
+-->
+
 <!DOCTYPE html>
 
 <html lang="pt-BR">

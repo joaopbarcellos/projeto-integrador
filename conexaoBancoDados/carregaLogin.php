@@ -1,4 +1,10 @@
 <?php
+// esse arquivo CONSULTA o banco
+// pra fazer o login do usuario
+// com as informacoes cadastradas no 
+// banco de dados
+
+
 require_once("conexao_db.php");
 
 // array de resposta
@@ -17,6 +23,7 @@ if(isset($_POST["emailCampo"]) && isset($_POST["senhaCampo"])) {
 	// o verifica junto a senha enviada ao servidor
 	if($consulta->rowCount() > 0){
 		$linha = $consulta->fetch(PDO::FETCH_ASSOC);
+		// CRIPTOGRAFIA
 		if(password_verify($senhaLogin, $linha['token'])){
 			$_SESSION["logado"] = $emailLogin;
 			require_once("carregar_detalhes_logado.php");

@@ -1,7 +1,9 @@
 <?php
+// esse arquivo contem uma funcao que
+// CONSULTA o id do usuario logado
 
 require_once('conexao_db.php');
-require_once('autenticacao.php');
+
 session_start();
 
 $resposta = array();

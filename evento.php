@@ -1,3 +1,8 @@
+<!-- 
+	Esse arquivo CONSULTA o banco de dados
+	para preencher as informacoes do evento
+-->
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 

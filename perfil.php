@@ -1,3 +1,8 @@
+<!-- 
+	Esse arquivo CONSULTA as informacoes de usuario
+	do banco de dados para preencher a pagina
+-->
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 

@@ -1,4 +1,8 @@
 <?php
+/*
+Esse arquivo que CONSULTA todos os eventos criados pelo usuario logado
+*/
+
 require_once('conexao_db.php');
 require_once('Carregar/carregar_endereco_evento.php');
 

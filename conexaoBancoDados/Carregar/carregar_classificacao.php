@@ -1,4 +1,7 @@
 <?php
+// esse arquivo CONSULTA a classificacao
+// do banco de dados
+
 function carregar_classificacao($db_con, $classificacao_id){
     $consulta_classificacao = $db_con->prepare("SELECT nome FROM classificacao WHERE id = " . $classificacao_id);
     $consulta_classificacao->execute();

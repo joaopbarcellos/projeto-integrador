@@ -1,4 +1,7 @@
 <?php
+// esse arquivo SANITIZA as entradas
+// do cadastro de usuario
+
 $verifica = false;
 
 session_start();

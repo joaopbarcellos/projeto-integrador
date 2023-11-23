@@ -1,4 +1,7 @@
 <?php
+// esse arquivo EDITA informacoes do
+// usuario no banco de dados
+
 // conexão com bd
 require_once('conexao_db.php');
 

@@ -1,4 +1,10 @@
-<?php session_start();?>
+<?php 
+session_start();
+
+// esse arquivo vai dar um POST para
+// CRIAR o usuario no banco de dados
+
+?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">

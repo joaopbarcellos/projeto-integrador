@@ -1,4 +1,7 @@
-<?php 
+<?php
+// esse arquivo DELETA um usuario do banco
+// de dados e destroi a sessao no php
+
 session_start();
 require_once("conexao_db.php");
 $emailLogin = $_SESSION["logado"];

@@ -1,3 +1,9 @@
+<!-- 
+	Esse arquivo vai dar um POST para
+	ALTERAR/EDITAR as informacoes de usuario
+	no banco de dados
+-->
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 

@@ -1,12 +1,6 @@
 <?php
-
-/*
- * O seguinte codigo retorna para o cliente a lista de eventos 
- * armazenados no servidor. Essa e uma requisicao do tipo GET. 
- * Devem ser enviados os parâmetro de limit e offset para 
- * realização da paginação de dados no cliente.
- * A resposta e no formato JSON.
- */
+// esse arquivo CONSULTA os eventos que devem
+// aparecer na pagina inicial
 
 // conexão com bd
 require_once('conexao_db.php');

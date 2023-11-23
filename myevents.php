@@ -1,3 +1,9 @@
+<!-- 
+	Esse arquivo CONSULTA o banco de dados
+	para verificar os eventos que o usuario
+	esta inscrito ou os eventos que ele criou
+-->
+
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-BR">

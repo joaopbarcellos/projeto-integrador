@@ -1,5 +1,9 @@
 <?php
 session_start();
+
+// esse arquivo utiliza a CONSULTA do banco de dados
+// para preencher os blocos de evento no carrousel e
+// no resto da pagina
 ?>
 
 <!DOCTYPE html>

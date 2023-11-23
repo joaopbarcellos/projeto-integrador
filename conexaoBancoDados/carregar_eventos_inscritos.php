@@ -1,4 +1,7 @@
 <?php
+// esse arquivo CONSULTA os eventos que
+// o usuario logado esta inscrito
+
 require_once('conexao_db.php');
 require_once('Carregar/carregar_endereco_evento.php');
 

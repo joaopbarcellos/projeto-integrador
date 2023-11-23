@@ -1,9 +1,6 @@
 <?php
-
-/*
- * O código abaixo registra um novo usuário.
- * Método do tipo POST.
- */
+// esse arquivo SANITIZA os dados do usuario
+// e CRIA o usuario no banco de dados
 
 // array de resposta
 $resposta = array();
@@ -18,57 +15,60 @@ session_destroy();
 session_start();
 
 if (isset($_POST["nomeCampo"])) {
-  // Verificando se o campo de nome retornou algum valor diferente de vazio
-  $nome = $_POST["nomeCampo"];
-  if (!empty($nome)) {
-    // Sanitizando o nome retornado
-    $nomeFiltrado = filter_var(trim($nome), FILTER_SANITIZE_SPECIAL_CHARS);
-    $verifica = true;
-    $_POST["nomeCampo"] = $nome;
-  } else {
-    $verifica = false;
-  }
+	// Verificando se o campo de nome retornou algum valor diferente de vazio
+	$nome = $_POST["nomeCampo"];
+	if (!empty($nome)) {
+			// Sanitizando o nome retornado
+		$nomeFiltrado = filter_var(trim($nome), FILTER_SANITIZE_SPECIAL_CHARS);
+		$verifica = true;
+		$_POST["nomeCampo"] = $nome;
+	} else {
+		$verifica = false;
+	}
 } else {
-  $verifica = false;
+	$verifica = false;
 }
 
 if (isset($_POST["emailCampo"])) {
-  // Verificando se o campo de email retornou algum valor diferente de vazio
-  $email = $_POST["emailCampo"];
-  if (!empty($email)) {
-    // Verificando se o campo de email e valido para os padroes do filtro
-    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      // Sanitizando o email retornado
-      $emailFiltrado = filter_var(trim($email), FILTER_SANITIZE_EMAIL);
-      $_SESSION["email"] = $emailFiltrado;
-      $verifica = true;
-      $_POST["emailCampo"] = $emailFiltrado;
-    } else {
-      $verifica = false;
-    }
-  } else {
-    $verifica = false;
-  }
+	// Verificando se o campo de email retornou algum valor diferente de vazio
+	$email = $_POST["emailCampo"];
+	
+	if (!empty($email)) {
+		// Verificando se o campo de email e valido para os padroes do filtro
+		if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+		// Sanitizando o email retornado
+		$emailFiltrado = filter_var(trim($email), FILTER_SANITIZE_EMAIL);
+		$_SESSION["email"] = $emailFiltrado;
+		$verifica = true;
+		$_POST["emailCampo"] = $emailFiltrado;
+		} else {
+		$verifica = false;
+		}
+	} else {
+		$verifica = false;
+	}
 } else {
-  $verifica = false;
+	$verifica = false;
 }
+
 if (isset($_POST["telefoneCampo"])) {
-  // Verificando se o campo de telefone retornou algum valor diferente de vazio
-  $telefone = $_POST["telefoneCampo"];
-  if (!empty($telefone)) {
-    // Sanitizando o telefone retornado
-    $telefoneFiltrado = trim($telefone);
-    $verifica = true;
-    $_POST["telefoneCampo"] = $telefoneFiltrado;
-  } else {
-    $verifica = false;
-  }
+	// Verificando se o campo de telefone retornou algum valor diferente de vazio
+	$telefone = $_POST["telefoneCampo"];
+	
+	if (!empty($telefone)) {
+		// Sanitizando o telefone retornado
+		$telefoneFiltrado = trim($telefone);
+		$verifica = true;
+		$_POST["telefoneCampo"] = $telefoneFiltrado;
+	} else {
+		$verifica = false;
+	}
 } else {
-  $verifica = false;
+	$verifica = false;
 }
 
 if (isset($_POST["senhaCampo"])) {
-  $_SESSION["senha"] = $_POST["senhaCampo"];
+	$_SESSION["senha"] = $_POST["senhaCampo"];
 }
 
 // Verificando se todos os valores foram sanitizados
@@ -83,6 +83,7 @@ if ($verifica) {
 
 	// o bd não armazena diretamente a senha do usuário, mas sim 
 	// um código hash que é gerado a partir da senha.
+	// CRIPTOGRAFIA
 	$token = password_hash($senha, PASSWORD_DEFAULT);
 
 	// antes de registrar o novo usuário, verificamos se ele já

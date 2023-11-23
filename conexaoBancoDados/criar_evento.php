@@ -1,15 +1,8 @@
 <?php
-
-/*
- * O seguinte codigo abre uma conexao com o BD e adiciona um evento nele.
- * As informacoes de um evemto sao recebidas atraves de uma requisicao POST.
- */
+// esse arquivo CRIA um evento no banco de dados
 
 // conexão com bd
 require_once('conexao_db.php');
-
-// autenticação
-require_once('autenticacao.php');
 
 // endereco evento
 require_once('criar_endereco_evento.php');

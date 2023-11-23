@@ -1,16 +1,16 @@
 <?php
+// esse arquivo CONSULTA as informacoes 
+// de um evento que o usuario pesquisou
+// ou clicou na pagina inicial, em meus eventos
+
 // conexão com bd
 require_once('conexao_db.php');
-
-// autenticação
-require_once('autenticacao.php');
 
 // array de resposta
 $resposta = array();
 
 // Verifica se o parametro id foi enviado na requisicao
 if (isset($_SESSION["evento_atual"])) {
-	
 	// Aqui sao obtidos os parametros
 	$id = $_SESSION["evento_atual"];
 	

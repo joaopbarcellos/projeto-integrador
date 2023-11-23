@@ -1,4 +1,7 @@
 <?php
+// esse arquivo CRIA a inscricao de um
+// usuario no banco de dados
+
 require_once("conexao_db.php");
 
 // array de resposta

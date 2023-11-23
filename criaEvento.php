@@ -1,3 +1,9 @@
+<!-- 
+	Esse arquivo vai dar POST para 
+	CRIAR um evento no banco de dados
+
+-->
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 

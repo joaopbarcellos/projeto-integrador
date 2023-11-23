@@ -1,3 +1,8 @@
+<!-- 
+	Todos os arquivos darao include
+	nesse footer
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 

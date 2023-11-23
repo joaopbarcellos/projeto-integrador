@@ -1,4 +1,10 @@
 <?php
+// esse arquivo CRIA um endereco no
+// banco de dados ou CONSULTA
+// um endereco que tenha as mesmas
+// informacoes que o usuario tentou
+// cadastrar
+
 $resposta = array();
 function criar_endereco($db_con, $cep, $bairro, $cidade, $estado, $descricao, $numero, $complemento){
     $cep = trim($cep);
