@@ -14,7 +14,7 @@ btns.forEach((btn) => {
 });
 
 // Pegando todos os botoes para ir para o evento
-const eventoSlide = document.querySelectorAll(".item");
+const eventoSlide = document.querySelectorAll(".eventoslide");
 
 // Percorrendo todos os botoes
 eventoSlide.forEach((ev) => {
@@ -27,8 +27,6 @@ eventoSlide.forEach((ev) => {
 const barra_pesquisa = document.querySelector("#busca");
 // Pegando a barra de pesquisa
 
-const lista_conteudo = document.querySelectorAll(".evento");
-// Pegando a lista de eventos
 
 const lupa = document.querySelector("#lupa");
 
@@ -63,7 +61,7 @@ barra_pesquisa.addEventListener("input", () => {
 });
 
 jQuery(document).ready(function($) {
-  var owl = $(".owl-carousel").owlCarousel({
+  var owl = $(".slideowl").owlCarousel({
     center: true,
     loop: true,
     margin: 10,
@@ -84,12 +82,6 @@ jQuery(document).ready(function($) {
       }
     }
   });
-    
-
-  $(".custom-dot").on("click", function() {
-    var dotIndex = $(this).data("dot-index");
-    owl.trigger("to.owl.carousel", [dotIndex, 300]);
-  });
 
   $(".custom-prev").on("click", function() {
     owl.trigger("prev.owl.carousel");
@@ -103,5 +95,37 @@ jQuery(document).ready(function($) {
     var slideTop = $(".owl-carousel .item").offset().top;
     var arrowTopPosition = slideTop + (slideHeight / 2) - ($(".custom-prev").height() / 2);
     $(".custom-prev, .custom-next").css("top", arrowTopPosition + 30);
+  });
+});
+
+
+jQuery(document).ready(function($) {
+  var owl2 = $(".filtro").owlCarousel({
+      loop: true,
+      margin: 20, // Ajuste a margem conforme necessário
+      nav: false,
+      autoplay: false,
+      autoplayTimeout: 0,
+      autoplayHoverPause: false,
+      responsive: {
+          0: {
+              items: 4, // Ajuste o número de itens para telas menores
+          },  
+          416: {
+              items: 6, // Ajuste o número de itens para telas menores
+          },
+          600: {
+              items: 8,
+          },
+          700: {
+              items: 10, // Ajuste o número de itens para telas de tamanho médio
+          },
+          1000: {
+              items: 15, // Ajuste o número de itens para telas maiores
+          },
+          1814: {
+              items: 20, // Ajuste o número de itens para telas maiores
+          }
+      }
   });
 });

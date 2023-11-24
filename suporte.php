@@ -61,7 +61,7 @@
 		<h1 class="text-center fs-1 ">Seu contato é muito importante para nós!</h1>
 		<p class="text-center">Envie-nos um e-mail preenchendo os campos abaixo, e logo retornaremos o seu contato</p>
 
-		<form class="container col-lg-11 col-md-11 col-sm-11 m-4" id="form">
+		<form class="container col-lg-11 col-md-11 col-sm-11 m-4" id="form" action="processa_formulario.php" method="post">
 
 			<!-- E-mail do usuário -->
 			<div class="email campos mt-3">

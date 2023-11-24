@@ -4,7 +4,7 @@
 // com as informacoes cadastradas no 
 // banco de dados
 
-
+ini_set('display_errors', 1);
 require_once("conexao_db.php");
 
 // array de resposta

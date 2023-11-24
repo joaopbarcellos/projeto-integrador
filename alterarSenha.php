@@ -62,7 +62,7 @@
 		<h1 class="p-3 text-center fs-1 pb-0">Alterar Senha </h1>
 		<!-- Formulario -->
 		<div class="formulario mt-0">
-			<form>
+			<form method="post" action="conexaoBancoDados/alterar_senha.php">
 
 				<!-- Legenda do formulario -->
 				<div id="senhas">
@@ -71,7 +71,7 @@
 
 						<div class="form-floating">
 							<img src="img/olho_aberto.png" id="olho" class="olho">
-							<input type="password" class="form-control" id="floatingInputGroup1" placeholder="Senha antiga" name="senhaAntiCampo">
+							<input type="password" class="form-control" id="floatingInputGroup1" placeholder="Senha antiga" name="senhaAntigaCampo">
 							<label for="senhaAnti_usuario" id="label_senhaAnti">Senha Antiga</label>
 
 							<!-- Mesagens de erro -->
