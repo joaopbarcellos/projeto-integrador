@@ -5,6 +5,7 @@ $resposta["eventos"] = array();
 
 if (isset($_POST["esporte"])){
     $esporte = trim($_POST["esporte"]);
+	var_dump($esporte);
 
     $consulta_esporte = $db_con->prepare("SELECT id FROM classificacao WHERE nome=$esporte");
     $consulta_esporte->execute();
@@ -41,6 +42,7 @@ if (isset($_POST["esporte"])){
 		}
 	}
 
-    return $resposta;
+    return json_encode($resposta);
+
 }
 ?>

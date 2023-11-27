@@ -40,46 +40,92 @@ button:focus {
   font-size: 1.2rem;
 }
 
-.filtroesporte svg, .filtroesporte img{
-  width: 30px !important;
-  height: 30px !important;
+
+
+
+
+
+
+
+
+
+
+.teladrag{
+  flex-direction: row;
+  white-space: nowrap;
+  display: flex;
+}
+
+#maisfiltros img{
+  height: 16px;
+}
+
+#maisfiltros{
+  padding: 5px;
+  align-items: center;
+  border-radius: 10px;
+  background-color: var(--supfund);
+  border: 1px solid var(--iconesup);
+  color: white;
+  height: 32px;
+  display: inline-block;
+  margin-right: 5 !important;
+}
+
+#filtros{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-left: 10px;
+  gap: 5px;
+  flex-wrap: nowrap;
+  width: 100vw; 
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.alinhafiltro{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  height: 20px !important;
+}
+
+.alinhafiltro path, .alinhafiltro img {
+  width: 16px !important;
   fill: white;
 }
 
 .filtroesporte{
   display: flex;
+  flex: 0 0 auto; 
+  margin-right: 10px !important;
   align-items: center;
-  justify-content: center;
   border-radius: 10px;
   background-color: var(--supfund);
   border: 1px solid var(--iconesup);
-  padding: 10px;
-  height: auto;
+  padding: 5px;
+  color: white;
 }
 
-.owl-carousel {
-  display: flex;
-  justify-content: center;
-}
 
-.filtro .owl-carousel {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); 
-  gap: 20px; 
-  justify-content: center;
-}
 
-.filtro .owl-carousel .owl-item {
-  flex: 1;
-}
 
-.filtro .owl-carousel .owl-item > div {
-  width: 100%; 
-}
 
-.filtro .owl-carousel .owl-item .item {
-  width: 100%; 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .eventoslide img{
   background-color: var(--azul_terc);

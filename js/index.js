@@ -99,33 +99,28 @@ jQuery(document).ready(function($) {
 });
 
 
-jQuery(document).ready(function($) {
-  var owl2 = $(".filtro").owlCarousel({
-      loop: true,
-      margin: 20, // Ajuste a margem conforme necessário
-      nav: false,
-      autoplay: false,
-      autoplayTimeout: 0,
-      autoplayHoverPause: false,
-      responsive: {
-          0: {
-              items: 4, // Ajuste o número de itens para telas menores
-          },  
-          416: {
-              items: 6, // Ajuste o número de itens para telas menores
-          },
-          600: {
-              items: 8,
-          },
-          700: {
-              items: 10, // Ajuste o número de itens para telas de tamanho médio
-          },
-          1000: {
-              items: 15, // Ajuste o número de itens para telas maiores
-          },
-          1814: {
-              items: 20, // Ajuste o número de itens para telas maiores
-          }
-      }
-  });
+const filterContent = document.querySelectorAll('.teladrag');
+let isMouseDown = false;
+let startX, scrollLeft;
+
+filterContent.addEventListener('mousedown', (e) => {
+    isMouseDown = true;
+    startX = e.pageX - filterContent.offsetLeft;
+    scrollLeft = filterContent.scrollLeft;
+});
+
+filterContent.addEventListener('mouseleave', () => {
+    isMouseDown = false;
+});
+
+filterContent.addEventListener('mouseup', () => {
+    isMouseDown = false;
+});
+
+filterContent.addEventListener('mousemove', (e) => {
+    if (!isMouseDown) return;
+    e.preventDefault();
+    const x = e.pageX - filterContent.offsetLeft;
+    const walk = (x - startX) * 3; // Ajuste da sensibilidade do movimento
+    filterContent.scrollLeft = scrollLeft - walk;
 });
