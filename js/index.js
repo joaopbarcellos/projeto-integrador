@@ -97,30 +97,3 @@ jQuery(document).ready(function($) {
     $(".custom-prev, .custom-next").css("top", arrowTopPosition + 30);
   });
 });
-
-
-const filterContent = document.querySelectorAll('.teladrag');
-let isMouseDown = false;
-let startX, scrollLeft;
-
-filterContent.addEventListener('mousedown', (e) => {
-    isMouseDown = true;
-    startX = e.pageX - filterContent.offsetLeft;
-    scrollLeft = filterContent.scrollLeft;
-});
-
-filterContent.addEventListener('mouseleave', () => {
-    isMouseDown = false;
-});
-
-filterContent.addEventListener('mouseup', () => {
-    isMouseDown = false;
-});
-
-filterContent.addEventListener('mousemove', (e) => {
-    if (!isMouseDown) return;
-    e.preventDefault();
-    const x = e.pageX - filterContent.offsetLeft;
-    const walk = (x - startX) * 3; // Ajuste da sensibilidade do movimento
-    filterContent.scrollLeft = scrollLeft - walk;
-});
