@@ -52,7 +52,6 @@ button:focus {
 
 .teladrag{
   flex-direction: row;
-  white-space: nowrap;
   display: flex;
 }
 
@@ -68,20 +67,15 @@ button:focus {
   border: 1px solid var(--iconesup);
   color: white;
   height: 32px;
-  display: inline-block;
   margin-right: 5 !important;
 }
 
 #filtros{
   display: flex;
   flex-direction: row;
-  position: relative;
   margin-left: 10px;
   gap: 5px;
-  flex-wrap: nowrap;
-  width: 100vw; 
-  flex-shrink: 0;
-  white-space: nowrap;
+  width: 100vw;
 }
 
 .alinhafiltro{
@@ -99,7 +93,6 @@ button:focus {
 
 .filtroesporte{
   display: flex;
-  flex: 0 0 auto; 
   margin-right: 10px !important;
   align-items: center;
   border-radius: 10px;
