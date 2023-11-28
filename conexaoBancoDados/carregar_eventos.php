@@ -17,7 +17,7 @@ $resposta["eventos"] = array();
 
 // verifica se o usuário conseguiu autenticar
 if($db_con) {
-	$limit = 10;
+	$limit = 5;
 	
 	// Realiza uma consulta ao BD e obtem todos os eventos.
 	$consulta_filtrado = $db_con->prepare("SELECT id FROM (SELECT e.id, (COUNT(ue.fk_evento_id) * 100 / e.max_pessoas) AS porcentagem FROM evento e LEFT JOIN usuario_evento ue ON ue.fk_evento_id = e.id GROUP BY e.id, e.max_pessoas) AS subquery WHERE porcentagem < 100 ORDER BY porcentagem DESC LIMIT " . $limit);

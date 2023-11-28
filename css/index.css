@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
 /* Tirando sombra */
 #homea {
   color: var(--azul_sec) !important;
@@ -7,6 +9,10 @@
 /* Colocando cor no icone de home */
 .iconecasinha {
   fill: var(--azul_sec) !important;
+}
+
+body{
+  overflow-x: hidden;
 }
 
 /* editando carousel de eventos principais */
@@ -38,136 +44,6 @@ button:focus {
   margin-top: 10%;
   margin-bottom: 10%;
   font-size: 1.2rem;
-}
-
-#maisfiltros img{
-  height: 16px;
-}
-
-#maisfiltros{
-  padding: 5px;
-  float: left;
-  align-items: center;
-  border-radius: 10px;
-  background-color: var(--supfund);
-  border: 1px solid var(--iconesup);
-  color: white;
-  height: 32px;
-  margin-right: 5 !important;
-}
-
-/* #filtros{
-  display: flex;
-  flex-direction: row;
-  margin-left: 10px;
-  gap: 5px;
-  width: 100vw;
-} */
-
-.alinhafiltro{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 5px;
-  height: 20px !important;
-}
-
-.alinhafiltro path, .alinhafiltro img {
-  width: 16px !important;
-  fill: white;
-}
-
-.filtroesporte{
-  display: flex;
-  margin-right: 10px !important;
-  align-items: center;
-  border-radius: 10px;
-  background-color: var(--supfund);
-  border: 1px solid var(--iconesup);
-  padding: 5px;
-  color: white;
-  white-space: nowrap;
-}
-
-body{
-  overflow-x: hidden;
-  margin:0;
-  padding:0;
-  background-color:whitesmoke;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-}
-
-.carouselOfImages{
-  position: relative;
-  margin: auto;
-  overflow: visible;
-  width: 100%;
-}
-
-.carouselImage {
-  position: relative;
-  width: 20%;
-  height: 45px;
-  padding: 24px;
-  border: 1.5px solid black;
-  margin-right: 33px;
-  margin-top: 70px;
-  margin-bottom: 50px;
-  counter-increment: carousel-cell;
-  text-align: center;
-  vertical-align: center;
-  transition: transform 0.5s;
-  font-size: 1.2em;
-}
-
-.carouselImage.is-selected {
-  border: 1.5px solid #00ADEE;
-  color:#00ADEE;
-  z-index:10;
-  transform: scale(1);
-}
-.carouselImage.nextToSelectedLeft, .carouselImage.nextToSelectedRight {
-  transform: scale(1);
-  z-index:5;
-}
-
-.flickity-enabled {
-  position: relative;
-}
-
-.flickity-viewport {
-  overflow: hidden;
-  position: relative;
-  height: 100%;
-}
-
-.flickity-slider {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.flickity-enabled.is-draggable {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.flickity-enabled.is-draggable .flickity-viewport {
-  cursor: move;
-  cursor: -webkit-grab;
-  cursor: grab;
-}
-
-.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-.flickity-viewport {
-  margin: 0px;
-  width: 100%;
 }
 
 .eventoslide img{
@@ -235,4 +111,134 @@ body{
 
 .custom-next {
   right: 0;
+}
+
+.nome_filtro{
+  margin-top: 10px;
+  margin-left: 20px;
+  font-family: 'Russo One', sans-serif;
+  font-size: 3rem !important;
+  color: var(--black);
+}
+
+/* configurações dos filtros com principais esportes */
+/* #maisfiltros img{
+  height: 16px;
+}
+
+#maisfiltros{
+  padding: 5px;
+  float: left;
+  align-items: center;
+  border-radius: 10px;
+  background-color: var(--supfund);
+  border: 1px solid var(--iconesup);
+  color: white;
+  height: 32px;
+  margin-right: 5 !important;
+} */
+
+.alinhafiltro{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  height: 16px !important;
+}
+
+.alinhafiltro path, .alinhafiltro img {
+  width: 16px !important;
+  fill: white;
+}
+
+.gradient-left{
+  display: block;
+  position: relative;
+  background-image: linear-gradient(to right, rgba(245, 245, 245, 0.572), transparent 100%);
+  margin-top: -38px;
+  height: 38px;
+  width: 1%;
+  content: '';
+}
+.gradient-right{
+  display: block;
+  position: relative;
+  float: right;
+  right:0;
+  background-image: linear-gradient(to left, rgba(245, 245, 245, 0.572), transparent 100%);
+  margin-top: -38px;
+  height: 38px;
+  width: 1%;
+  content: '';
+}
+
+.carouselOfImages{
+  position: relative;
+  margin: auto;
+  overflow: visible;
+  width: 100%;
+}
+
+.filtro_selecionado{
+  background-color: var(--iconesup) !important;
+  border: 0 !important;
+}
+
+.carouselimage {
+  display: flex;
+  margin-right: 10px !important;
+  align-items: center;
+  border-radius: 10px;
+  background-color: var(--supfund);
+  border: 1px solid var(--iconesup);
+  padding: 5px;
+  height: 38px;
+  color: white;
+  white-space: nowrap;
+  position: relative;
+  counter-increment: carousel-cell;
+  text-align: center;
+  vertical-align: center;
+  transition: transform 0.5s;
+}
+
+.flickity-enabled {
+  position: relative;
+}
+
+.flickity-viewport {
+  overflow: hidden;
+  align-items: center;
+  position: relative;
+  height: 38px !important;
+}
+
+.flickity-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.flickity-enabled.is-draggable {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+.flickity-viewport {
+  margin: 0px;
+  width: 100%;
 }
