@@ -1,13 +1,19 @@
 <?php
 require_once("conexao_db.php");
+require_once('Carregar/carregar_endereco_evento.php');
+require_once('Carregar/carregar_intuito.php');
+require_once('Carregar/carregar_classificacao.php');
+require_once('Carregar/carregar_intervalo.php');
+
 $resposta = array();
 $resposta["eventos"] = array();
+session_start();
+
+ini_set('display_errors', 1);
 
 if (isset($_POST["esporte"])){
     $esporte = trim($_POST["esporte"]);
-	var_dump($esporte);
-
-    $consulta_esporte = $db_con->prepare("SELECT id FROM classificacao WHERE nome=$esporte");
+    $consulta_esporte = $db_con->prepare("SELECT id FROM classificacao WHERE nome='$esporte'");
     $consulta_esporte->execute();
 
     $linha_esporte = $consulta_esporte->fetch(PDO::FETCH_ASSOC);
@@ -42,7 +48,7 @@ if (isset($_POST["esporte"])){
 		}
 	}
 
-    return json_encode($resposta);
-
+    $_SESSION["filtro"] = json_encode($resposta);
+	header("Location: ../index.php?filtro=$esporte");
 }
 ?>
