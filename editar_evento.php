@@ -1,7 +1,6 @@
 <!-- 
 	Esse arquivo vai dar POST para 
 	EDITAR/ALTERAR um evento no banco de dados
-
 -->
 
 <!DOCTYPE html>
@@ -32,6 +31,26 @@
 
 <?php
 session_start();
+date_default_timezone_set("America/Sao_Paulo"); 
+
+require('conexaoBancoDados/conexao_db.php');
+require_once('conexaoBancoDados/Carregar/carregar_endereco_evento.php');
+require_once('conexaoBancoDados/Carregar/carregar_intuito.php');
+require_once('conexaoBancoDados/Carregar/carregar_classificacao.php');
+require_once('conexaoBancoDados/Carregar/carregar_intervalo.php');
+require_once('conexaoBancoDados/inscrito.php');
+require_once('conexaoBancoDados/criador.php');
+
+if (isset($_GET['id_evento'])) {
+	$_SESSION["evento_atual"] = trim($_GET['id_evento']);
+	$json_data = include_once("conexaoBancoDados/carregar_detalhes_eventos.php");
+} else {
+	header("location: index.php");
+}
+
+
+$evento = json_decode($json_data, true);
+$db_con = null;
 ?>
 
 <body>
@@ -43,38 +62,36 @@ session_start();
 	<body>
         <div class="container p-1">
 			<div class="form-container p-1 pt-3 p-sm-5  col-12 col-sm-10 col-md-8 col-lg-7 col-xl-6 col-xxl-4">
-				<form id="multistepform" name="multistepform" action="conexaoBancoDados/criar_evento.php" method="post" enctype="multipart/form-data">
+				<form id="multistepform" name="multistepform" action="conexaoBancoDados/editar_evento_criado.php" method="post" enctype="multipart/form-data">
 
-					<!-- Etapa 1 -->
 					<div class="step">
 						<div class="infos">
 							<h1>Informações</h1>
 
 							<div class="form-floating mb-3 mt-3">
-								<input type="text" class="form-control" id="nomeEvento" placeholder="Nome do evento" name="nome">
+								<input type="text" class="form-control" id="nomeEvento" placeholder="Nome do evento" name="nome" value="<?php echo $evento['nome'];?>">
 								<label for="nomeEvento">Nome do Evento</label>
 							</div>
 
 							<div class="alinha mb-3">
 								<div class="form-floating">
-                                    <input type="number" min="0" class="form-control" id="capMinima" placeholder="Mínimo de inscrições para realização do evento" name="min_pessoas">
+                                    <input type="number" min="0" class="form-control" id="capMinima" placeholder="Mínimo de inscrições para realização do evento" name="min_pessoas" value="<?php echo $evento['min_pessoas'];?>">
 									<label for="capMinima">Qtd mín.</label>
 								</div>
 								<div class="form-floating">
-                                    <input type="number" min="1" class="form-control" id="capMaxima" placeholder="Quantidade de vagas" name="max_pessoas">
+                                    <input type="number" min="1" class="form-control" id="capMaxima" placeholder="Quantidade de vagas" name="max_pessoas" value="<?php echo $evento['max_pessoas'];?>">
 									<label for="capMaxima">Qtd máx.</label>
 								</div>
 							</div>
 
 							<div class="form-floating mb-3">
-								<textarea class="form-control" id="desc" maxlength="500" name="descricao"></textarea>
+								<textarea class="form-control" id="desc" maxlength="500" name="descricao"><?php echo $evento['descricao'];?></textarea>
 								<label for="desc">Descrição</label>
 							</div>
 						</div>
-
+						
                         <button type="submit" class="next-btn"><span>Editar</span></button>
-
-					</div>
+						</div>
                 </form>
             </div>
         </div>

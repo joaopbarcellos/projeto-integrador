@@ -29,6 +29,16 @@ function send(tag) {
   tag.value = "";
 }
 
+// Criador do evento 
+const btn_editar = document.querySelectorAll(".editBtn");
+btn_editar.forEach((btn) => {
+  // Adicionando um EventListener em cada um
+  btn.addEventListener("click", (event) => {
+    event.stopPropagation();
+    window.location.assign(`editar_evento.php?id_evento=${btn.id}`);
+  });
+});
+
 // Funcao pra validar o numero do endereco
 export function validarNumeroEndereco(valorCampo, mensagemErro) {
   if (!valorCampo) {

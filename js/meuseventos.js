@@ -32,6 +32,15 @@ cancel.forEach((btn) => {
   });
 });
 
+const btn_editar = document.querySelectorAll(".editBtn");
+btn_editar.forEach((btn) => {
+  // Adicionando um EventListener em cada um
+  btn.addEventListener("click", (event) => {
+    event.stopPropagation();
+    window.location.assign(`editar_evento.php?id_evento=${btn.id}`);
+  });
+});
+
 // Funcao para cancelar a inscricao
 function cancelarInscricao(id) {
   // Iniciando um alert perguntando se o usuario deseja cancelar a inscricao.

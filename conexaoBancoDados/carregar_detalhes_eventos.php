@@ -37,8 +37,8 @@ if (isset($_SESSION["evento_atual"])) {
 			}
 			$evento["descricao"] = $linha["descricao"];
 			$evento["data"] = $linha["data"];
-			// $evento["min_pessoas"] = $linha["min_pessoas"];
-			// $evento["max_pessoas"] = $linha["max_pessoas"];
+			$evento["min_pessoas"] = $linha["min_pessoas"];
+			$evento["max_pessoas"] = $linha["max_pessoas"];
 			$evento["vagas_restantes"] = $linha["max_pessoas"] - $evento["inscritos"];
 			$evento["horario_inicio"] = $linha["horario_inicio"];
 			$evento["horario_fim"] = $linha["horario_fim"];
