@@ -95,17 +95,16 @@ jQuery(document).ready(function($) {
   });
 });
 
-
-
 //configurações do dragble de filtros de esporte
 var $imagesCarousel = jQuery('.carouselOfImages').flickity({
   accessibility: false,
   autoPlay: false,
   pauseAutoPlayOnHover: false,
-  cellAlign: 'center',
-  contain: false,
+  cellAlign: 'left',
+  contain: true,
   draggable: true,
-  friction: 0.2,
+  friction: 0.3,
+  velocity: 0.8,
   initialIndex: 0,
   lazyLoad: false,
   percentPosition: true,
@@ -113,7 +112,9 @@ var $imagesCarousel = jQuery('.carouselOfImages').flickity({
   pageDots: false,
   resize: true,
   rightToLeft: false,
+  freeScroll: true,
+  freeScrollFriction: 0.03,
   setGallerySize: true,
   watchCSS: false,
-  wrapAround: true
+  wrapAround: false
 });
