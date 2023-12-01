@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Quicksand:wght@600&display=swap");
+
+/* Definicoes gerais da pagina */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Troco a cor do link de myevents */
+#myeventsa {
+  color: var(--azul_sec) !important;
+  text-shadow: none;
+}
+
+/* Mudo o icone de myevents */
+.iconemeusevents {
+  fill: var(--azul_sec) !important;
+}
+
+/* Container principal */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinha o círculo no topo do container */
+  min-height: 100vh;
+  max-width: unset !important;
+  padding-top: 10px;
+}
+
+/* Retirando a borda */
+input {
+  border: 0 !important;
+}
+
+/* Adicionando flex-box */
+.loc {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Adicionando flex-box e espacamento entre divs */
+.alinha {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+/* Adicionando tamanho */
+.espaco {
+  width: 100%;
+}
+
+/* Retirando opacidade, altura e adicionando transicao */
+#eventorepete {
+  opacity: 0;
+  height: 0;
+  transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+.infos p{
+  color: white !important;
+  margin-bottom: 0.3rem !important;
+  font-size: 0.9rem !important;
+}
+
+/* Adicionando minimo de altura */
+.infos {
+  min-height: 400px;
+}
+
+/* Adicionando tamanho */
+.step,
+form {
+  width: 100%;
+}
+
+/* Adicionando cor e centralizando o texto */
+.step h1 {
+  color: white;
+  text-align: center;
+}
+
+/* Adicionando minimo e maximo de altura */
+#desc {
+  min-height: 58px;
+  max-height: 250px;
+}
+
+/* Adicionando cor */
+#labelimg {
+  color: white;
+}
+
+
+/* Adicionando flex-box, tamanho espacamento */
+.form-container {
+  align-items: flex-start;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Adicionando cor, flex-box, espacamento e sombra */
+form {
+  background-color: var(--form_cria) !important;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Adicione isso */
+  justify-content: space-between; /* Adicione isso */
+  height: 100%; /* Adicione isso */
+  gap: 20px;
+  box-shadow: -1px -1px 15px 1px rgba(0, 0, 0, 0.75);
+}
+
+.excluir{
+  width: 150px;
+}
+
+.excluir .excluir__icon {
+  transform: translateX(113px);
+}
+
+.excluir:hover .excluir__icon {
+  width: 150px;
+  transform: translateX(0px);
+}
+
+#salvarEvento{
+  border-radius: 10px !important;
+  height: 50px !important;
+}

@@ -56,8 +56,8 @@ h1 {
 /* Colocando tamanho nas imagens */
 #img_evento {
   margin-bottom: 20px;
-  min-height: 15%;
-  min-width: 15%;
+  width: 100%;
+  object-fit: cover;
 }
 
 /* Adicionando tamnho e espacamento */

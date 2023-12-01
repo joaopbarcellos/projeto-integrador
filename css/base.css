@@ -142,12 +142,12 @@ header {
   position: relative;
   width: 100%;
   top: 0;
-  z-index: 99999;
+  z-index: 999;
 }
 
 /* Deixando o item ficar por cima dos demais */
 .swal2-container {
-  z-index: 999999;
+  z-index: 9999;
 }
 
 /* Aplicando cor e tirando decoração dos textos */
@@ -857,7 +857,6 @@ input[type="date"] {
 }
 
 /* Adicionando margin e trocando cor da imagem */
-.iconeeditar,
 .iconesenha {
   fill: var(--branco);
   margin-top: 1px;
@@ -904,4 +903,181 @@ input[type="date"] {
 .btn_cadastrar {
   padding-left: 3%;
   gap: 3%;
+}
+
+/* Botao de excluir perfil e evento*/
+.excluir {
+  position: relative;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid #cc0000;
+  background-color: #e50000;
+  box-shadow: 5px 5px 0px #b20000;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.excluir, .excluir__icon, .excluir__text {
+  transition-duration: 0.3s;
+}
+
+.excluir .excluir__text {
+  transform: translateX(13px);
+  color: #fff;
+  font-weight: 600;
+}
+
+.excluir .excluir__icon {
+  position: absolute;
+
+  height: 100%;
+  width: 37px;
+  background-color: #e50000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.excluir .svg {
+  width: 20px;
+}
+
+.excluir:hover .excluir__text {
+  color: transparent;
+}
+
+.excluir:active .excluir__icon {
+  background-color: #b20000;
+}
+
+.excluir:active {
+  border: 1px solid #b20000;
+  box-shadow: 2px 2px 0px #b20000;
+}
+
+
+/* Adicionando borda */
+.salvar,
+.salvar *,
+.salvar :after,
+.salvar :before,
+.salvar:after,
+.salvar:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+
+/* Adicionado cor, fonte, espacamente, posicionamento e escondendo parte do elemento*/
+.salvar {
+  -webkit-tap-highlight-color: transparent;
+  margin-left: auto !important;
+  -webkit-appearance: button;
+  background-color: var(--azul_quart);
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+  border-radius: 20px;
+  display: block;
+  font-weight: 900;
+  height: 50px;
+  overflow: hidden;
+  padding: 1rem;
+  position: relative;
+  text-transform: uppercase;
+}
+
+/* Adicionando cursor padrao */
+.salvar:disabled {
+  cursor: default;
+}
+
+/* Adicionadno contorno automatico */
+.salvar:-moz-focusring {
+  outline: auto;
+}
+
+/* Centralizando item na esquerda e deixando ele exposto  */
+.salvar svg {
+  display: block;
+  vertical-align: middle;
+}
+
+/* Deixando div escondida */
+.salvar [hidden] {
+  display: none;
+}
+
+/* Adicionando cor, posicionamento, transicao e tirando a distancia entre divs */
+.salvar .original {
+  background: var(--azul-claro_sec);
+  color: white;
+  display: grid;
+  inset: 0;
+  place-content: center;
+  position: absolute;
+  transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+/* Reposicioando div */
+.salvar:hover .original {
+  transform: translateY(100%);
+}
+
+/* Adicionando posicionamento */
+.salvar .letters {
+  display: inline-flex;
+}
+
+/* Adicioando transicao, reposicionando div e tirando opacidade */
+.salvar span {
+  opacity: 0;
+  transform: translateY(-15px);
+  transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.2s;
+}
+
+/* Reposicionando div  */
+.salvar span:nth-child(2n) {
+  transform: translateY(15px);
+}
+
+/* Adicionado opacidade e reposicionado div */
+.salvar:hover span {
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+/* Adicionando tempo de atraso */
+.salvar:hover span:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+/* Adicionando tempo de atraso */
+.salvar:hover span:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+/* Adicionando tempo de atraso */
+.salvar:hover span:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+/* Adicionando tempo de atraso */
+.salvar:hover span:nth-child(5) {
+  transition-delay: 0.4s;
+}
+
+/* Adicionando tempo de atraso */
+.salvar:hover span:nth-child(6) {
+  transition-delay: 0.5s;
 }

@@ -222,3 +222,17 @@ button:focus {
 .flickity-slider{
   margin-left: 5px !important;
 }
+
+.fade:not(.show) {
+  height: 0 !important;
+}
+
+
+.modal {
+  z-index: 9999 !important;
+   background-color: red !important; /*mexer */
+}
+
+.modal-dialog{
+  z-index: 99999 !important;
+} 

@@ -180,7 +180,7 @@ session_start();
 			<!-- filtros principais de esporte -->
 			<form class="carouselContainer" action="conexaoBancoDados/filtrar_esporte.php" method="post">
 				<div class="carouselOfImages">
-					<button class="carouselimage" type="submit" value="Futebol" name="esporte">
+					<button type="button" class="carouselimage" value="Filtrar" data-bs-toggle="modal" data-bs-target="#Modalfiltros">
 						<img src="img/filtro.png">
 					</button>
 
@@ -350,16 +350,24 @@ session_start();
 					</button>
 				</div>
 			</form>
-		
-			
-			<button id="maisfiltros">
-				<div class="alinhafiltro">
-					<img src="img/filtro.png">
-					Filtrar
-				</div>
-			</button>
-			
 
+			<div class="modal fade" id="Modalfiltros" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							...
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-primary">Save changes</button>
+						</div>
+					</div>
+				</div>
+			</div>
 
 			<?php
 			if (isset($_GET['filtro'])) {

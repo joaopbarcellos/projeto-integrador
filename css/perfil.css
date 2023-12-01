@@ -107,46 +107,10 @@
   position: relative;
 }
 
-/* Mudo os espacamentos e cores de fonte dos botoes */
-#editar,
-#excluir {
-  padding: 10px;
-  border: 0px solid black;
-  border-radius: 5px;
-  color: var(--branco);
-  transition: 0.4s ease;
-  user-select: none;
-}
-
-/* defino a cor de fundo, espacamento e largura de editar */
-#editar {
-  width: 180px;
-  background-color: var(--azul_princ);
-  margin-bottom: 10px;
-}
-
 /* coloco um flex na div que possui os botoes */
 #botoes {
   display: flex;
   flex-direction: column;
-}
-
-/* coloco a cor e defino a largura do botao de excluir perfil */
-#excluir {
-  background-color: #c20505;
-  width: 130px;
-}
-
-/* mudo o cursor e a cor de fundo no hover do botao de excluir perfil */
-#excluir:hover {
-  cursor: pointer;
-  background-color: #740707;
-}
-
-/* mudo o cursor e a cor de fundo no hover do botao de editar perfil */
-#editar:hover {
-  cursor: pointer;
-  background-color: var(--azul_terc);
 }
 
 /* Abaixo tenho os css do switch que está em desenvolvimento para a funcao de alterar tema */
@@ -297,3 +261,60 @@
   }
 }
 
+.editar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100px;
+  height: 40px;
+  border: none;
+  padding: 0px 20px;
+  background-color: var(--azul_princ);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px var(--azul_terc);
+  transition-duration: 0.3s;
+}
+
+.iconeEditar {
+  width: 13px;
+  position: absolute;
+  right: 0;
+  margin-right: 15px;
+  fill: white;
+  transition-duration: 0.3s;
+}
+
+.editar:hover {
+  color: transparent;
+}
+
+.editar:hover svg {
+  right: 43%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  transition-duration: 0.3s;
+}
+
+.editar:active {
+  transform: translate(3px , 3px);
+  transition-duration: 0.3s;
+  box-shadow: 2px 2px 0px var(--azul_terc);
+}
+
+.excluir{
+  width: 143px;
+}
+
+.excluir .excluir__icon {
+  transform: translateX(100px);
+}
+
+.excluir:hover .excluir__icon {
+  width: 143px;
+  transform: translateX(-7px);
+}

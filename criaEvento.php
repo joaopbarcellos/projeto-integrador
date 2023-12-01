@@ -44,7 +44,7 @@ session_start();
 
 	<body>
 		<div class="container p-1">
-			<div class="form-container p-1 pt-3 p-sm-5  col-12 col-sm-10 col-md-8 col-lg-7 col-xl-6 col-xxl-4">
+			<div class="form-container p-1 pt-3 p-sm-5 col-12 col-sm-10 col-md-8 col-lg-7 col-xl-6 col-xxl-4">
 				<form id="multistepform" name="multistepform" action="conexaoBancoDados/criar_evento.php" method="post" enctype="multipart/form-data">
 
 					<!-- Etapa 1 -->
@@ -62,19 +62,19 @@ session_start();
 								<input class="form-control" type="file" placeholder="Foto do Evento" id="imgevento" accept="image/*" name="foto_evento">
 							</div>
 
-							<div class="form-floating mb-3">
-								<input type="date" class="form-control" id="dataEvento" name="data">
-								<label for="dataEvento">Data do Evento</label>
-							</div>
-
 							<div class="alinha mb-3">
 								<div class="form-floating">
+									<input type="date" class="form-control" id="dataEvento" name="data">
+									<label for="dataEvento">Data do Evento</label>
+								</div>					
+
+								<div class="form-floating">
 									<input type="time" class="form-control" id="horarioInicio" name="horario_inicio">
-									<label for="horarioInicio">Horário de Início</label>
+									<label for="horarioInicio">Início</label>
 								</div>
 								<div class="form-floating">
 									<input type="time" class="form-control" id="horarioFim" name="horario_fim">
-									<label for="horarioFim">Término Estimado</label>
+									<label for="horarioFim">Término</label>
 								</div>
 							</div>
 
@@ -227,7 +227,7 @@ session_start();
 								</div>
 							</div>
 
-							<div class="alinha mb-3">
+							<div class="alinha">
 								<!-- Evento recorrente -->
 								<div class="form-floating col-7  col-lg-6 col-xg-4 espaco">
 									<select class="form-select" id="eveRecorrente" name="recorrencia">
@@ -342,8 +342,7 @@ session_start();
 								<span>Anterior</span>
 							</button>
 
-							<button class="btn-53" type="button" id="btnFINALIZAR">
-
+							<button class="salvar" type="button" id="btnFINALIZAR">
 								<div class="original">Finalizar</div>
 								<div class="letters">
 									<span>F</span>
