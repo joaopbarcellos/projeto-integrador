@@ -230,7 +230,7 @@ button:focus {
 
 .modal {
   z-index: 9999 !important;
-   background-color: red !important; /*mexer */
+  /* background-color: rgb(224, 224, 224) !important; /*mexer */
 }
 
 .modal-dialog{

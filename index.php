@@ -248,7 +248,7 @@ session_start();
 					<button class="carouselimage" type="submit" value ="Tênis" name="esporte">
 						<div class="alinhafiltro">
 							<img src="img/tennis.png">
-							Tennis
+							Tênis
 						</div>
 					</button>
 
@@ -355,16 +355,121 @@ session_start();
 				<div class="modal-dialog modal-dialog-centered">
 					<div class="modal-content">
 						<div class="modal-header">
-							<h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+							<h1 class="modal-title fs-5" id="exampleModalLabel">Filtros</h1>
 							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 						</div>
-						<div class="modal-body">
-							...
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-							<button type="button" class="btn btn-primary">Save changes</button>
-						</div>
+						<form action="conexaoBancoDados/filtrar_geral.php" method="post">
+							<div class="modal-body">
+								<label for="preco">Preço</label>
+								<select name="preco" id="preco">
+									<option value="-1">Sem filtro</option>
+									<option value="0">Gratuito</option>
+									<option value="10">Igual ou abaixo de R$ 10</option>
+									<option value="20">Igual ou abaixo de R$ 20</option>
+									<option value="30">Igual ou abaixo de R$ 30</option>
+									<option value="40">Igual ou abaixo de R$ 40</option>
+									<option value="50">Igual ou abaixo de R$ 50</option>
+									<option value="100">Igual ou abaixo de R$ 100</option>
+									<option value="150">Igual ou abaixo de R$ 150</option>
+									<option value="200">Igual ou abaixo de R$ 200</option>
+									<option value="300">Igual ou abaixo de R$ 300</option>
+									<option value="400">Igual ou abaixo de R$ 400</option>
+									<option value="500">Igual ou abaixo de R$ 500</option>
+									<option value="600">Igual ou abaixo de R$ 600</option>
+									<option value="700">Igual ou abaixo de R$ 700</option>
+									<option value="800">Igual ou abaixo de R$ 800</option>
+									<option value="900">Igual ou abaixo de R$ 900</option>
+									<option value="1000">Igual ou abaixo de R$ 1000</option>
+								</select>
+								
+								<label for="esporte">Esporte</label>
+								<select id="esporte" name="esporte">
+									<option value="0">Sem filtro</option>
+									<option value="1">Atletismo</option>
+									<option value="2">Automobilismo</option>
+									<option value="3">Basquete</option>
+									<option value="4">Beach Tennis</option>
+									<option value="5">Bicicross</option>
+									<option value="6">Boxe</option>
+									<option value="7">Capoeira</option>
+									<option value="8">Canoagem</option>
+									<option value="9">Corrida</option>
+									<option value="10">Ciclismo</option>
+									<option value="11">Escalada Esportiva</option>
+									<option value="12">Futebol</option>
+									<option value="13">Futebol Americano</option>
+									<option value="14">Futsal</option>
+									<option value="15">Ginástica Artística</option>
+									<option value="16">Handebol</option>
+									<option value="17">Hipismo</option>
+									<option value="18">Hóquei em Patins</option>
+									<option value="19">Jiu-Jitsu</option>
+									<option value="20">Judô</option>
+									<option value="21">Kitesurf</option>
+									<option value="22">Levantamento de Peso</option>
+									<option value="23">Mergulho</option>
+									<option value="24">MMA</option>
+									<option value="25">Motocross</option>
+									<option value="26">Mountain Bike</option>
+									<option value="27">Natação</option>
+									<option value="28">Natação Sincronizada</option>
+									<option value="29">Pentatlo Moderno</option>
+									<option value="30">Polo Aquático</option>
+									<option value="31">Remo</option>
+									<option value="32">Rugby</option>
+									<option value="33">Rugby em Cadeira de Rodas</option>
+									<option value="34">Skate</option>
+									<option value="35">Surfe</option>
+									<option value="36">Surfe de Remo</option>
+									<option value="37">Taekwondo</option>
+									<option value="38">Tênis</option>
+									<option value="39">Tênis de Mesa</option>
+									<option value="40">Tiro Esportivo</option>
+									<option value="41">Triatlo</option>
+									<option value="42">Vôlei</option>
+									<option value="43">Vôlei de Praia</option>
+									<option value="44">Vôlei Sentado</option>
+									<option value="45">Xadrez</option>
+									<option value="46">Outro</option>
+								</select>
+
+								<label for="idadePublico">Idade</label>
+								<select id="idadePublico" name="idade">
+									<option value="0">Sem filtro</option>
+									<option value="1">De 3 a 7</option>
+									<option value="2">De 8 a 13</option>
+									<option value="3">De 14 a 16</option>
+									<option value="4">De 17 a 20</option>
+									<option value="5">Acima de 18</option>
+									<option value="6">De 20 a 30</option>
+									<option value="7">De 30 a 40</option>
+									<option value="8">Acima de 40</option>
+								</select>
+
+								<label for="intuEvento">Intuito</label>
+								<select id="intuEvento" name="intuito">
+									<option value="0">Sem filtro</option>
+									<option value="1">Para toda família</option>
+									<option value="2">Profissionais</option>
+									<option value="3">Treino para amadores</option>
+								</select>
+
+
+								<label for="dataEvento">Data do Evento</label>
+								<input type="date" id="dataEvento" name="data">
+								
+								<label for="horarioInicio">Início</label>
+								<input type="time" id="horarioInicio" name="horario_inicio">
+
+								<label for="horarioFim">Término</label>
+								<input type="time" id="horarioFim" name="horario_fim">
+
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+								<button type="submit" class="btn btn-primary">Filtrar</button>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
