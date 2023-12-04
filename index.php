@@ -31,10 +31,7 @@ session_start();
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
-
-	<!-- Flickity -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js"></script>
-
 
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 

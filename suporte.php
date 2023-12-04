@@ -21,6 +21,8 @@
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
 
+	<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous" defer></script>
 
 </head>
@@ -61,7 +63,7 @@
 		<h1 class="text-center fs-1 ">Seu contato é muito importante para nós!</h1>
 		<p class="text-center">Envie-nos um e-mail preenchendo os campos abaixo, e logo retornaremos o seu contato</p>
 
-		<form class="container col-lg-11 col-md-11 col-sm-11 m-4" id="form" action="processa_formulario.php" method="post">
+		<form class="container col-lg-11 col-md-11 col-sm-11 m-4" id="form" method="post">
 
 			<!-- E-mail do usuário -->
 			<div class="email campos mt-3">
