@@ -21,7 +21,7 @@ if (!email) {
 }
 
 // Pegando todos os botoes para se inscrever
-const cancel = document.querySelectorAll(".inscricao");
+const cancel = document.querySelectorAll(".excluir");
 
 // Percorrendo todos os botoes
 cancel.forEach((btn) => {

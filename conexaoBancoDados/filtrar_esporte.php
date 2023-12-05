@@ -13,11 +13,13 @@ ini_set('display_errors', 1);
 
 if (isset($_POST["esporte"])){
     $esporte = trim($_POST["esporte"]);
+	
     $consulta_esporte = $db_con->prepare("SELECT id FROM classificacao WHERE nome='$esporte'");
     $consulta_esporte->execute();
 
     $linha_esporte = $consulta_esporte->fetch(PDO::FETCH_ASSOC);
     $id_esporte = $linha_esporte["id"];
+	$_SESSION["filtro_esporte"] = $id_esporte;
 
     $consulta = $db_con->prepare("SELECT * FROM evento WHERE fk_classificacao_id=$id_esporte");
     $consulta->execute();

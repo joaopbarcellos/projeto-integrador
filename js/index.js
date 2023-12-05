@@ -120,19 +120,30 @@ var $imagesCarousel = jQuery('.carouselOfImages').flickity({
 });
 
 // Evento gratuito ou não
-const checkGratuito = document.querySelector("#flexCheckDefault");
+const checkGratuito = document.querySelector(".form-check-input");
+const precomax = document.querySelector("#divprecomax");
+
+if (checkGratuito.checked == false){
+  precomax.style.opacity = "1";
+  precomax.style.height = "auto";
+} else {
+  precomax.style.opacity = "0";
+  precomax.style.height = "0";
+}
+
 checkGratuito.addEventListener("change", () => {
   if (checkGratuito.checked == false){
-    document.querySelector("#range-preco").style.opacity = "1";
-    document.querySelector("#range-preco").style.height = "auto";
+    precomax.style.opacity = "1";
+    precomax.style.height = "auto";
   } else {
-    document.querySelector("#range-preco").style.opacity = "0";
-    document.querySelector("#range-preco").style.height = "0";
+    precomax.style.opacity = "0";
+    precomax.style.height = "0";
   }
 });
 
 // Botao limpar filtros
 const limpar_filtros = document.querySelector("#btn_limpar_filtros");
 limpar_filtros.addEventListener("click", () =>{
-  window.location.assign("../index.php");
+  window.location.assign("../conexaoBancoDados/limpar_filtros.php");
 });
+

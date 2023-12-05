@@ -358,121 +358,67 @@ session_start();
 						<form action="conexaoBancoDados/filtrar_geral.php" method="post">
 							<div class="modal-body">
 								<!-- Filtros de retirada -->
-								
-								<label for="esporte">Esporte</label>
-								<select class="form-select mb-3" id="esporte" name="esporte">
-									<option value="0">Sem filtro</option>
-									<option value="1">Atletismo</option>
-									<option value="2">Automobilismo</option>
-									<option value="3">Basquete</option>
-									<option value="4">Beach Tennis</option>
-									<option value="5">Bicicross</option>
-									<option value="6">Boxe</option>
-									<option value="7">Capoeira</option>
-									<option value="8">Canoagem</option>
-									<option value="9">Corrida</option>
-									<option value="10">Ciclismo</option>
-									<option value="11">Escalada Esportiva</option>
-									<option value="12">Futebol</option>
-									<option value="13">Futebol Americano</option>
-									<option value="14">Futsal</option>
-									<option value="15">Ginástica Artística</option>
-									<option value="16">Handebol</option>
-									<option value="17">Hipismo</option>
-									<option value="18">Hóquei em Patins</option>
-									<option value="19">Jiu-Jitsu</option>
-									<option value="20">Judô</option>
-									<option value="21">Kitesurf</option>
-									<option value="22">Levantamento de Peso</option>
-									<option value="23">Mergulho</option>
-									<option value="24">MMA</option>
-									<option value="25">Motocross</option>
-									<option value="26">Mountain Bike</option>
-									<option value="27">Natação</option>
-									<option value="28">Natação Sincronizada</option>
-									<option value="29">Pentatlo Moderno</option>
-									<option value="30">Polo Aquático</option>
-									<option value="31">Remo</option>
-									<option value="32">Rugby</option>
-									<option value="33">Rugby em Cadeira de Rodas</option>
-									<option value="34">Skate</option>
-									<option value="35">Surfe</option>
-									<option value="36">Surfe de Remo</option>
-									<option value="37">Taekwondo</option>
-									<option value="38">Tênis</option>
-									<option value="39">Tênis de Mesa</option>
-									<option value="40">Tiro Esportivo</option>
-									<option value="41">Triatlo</option>
-									<option value="42">Vôlei</option>
-									<option value="43">Vôlei de Praia</option>
-									<option value="44">Vôlei Sentado</option>
-									<option value="45">Xadrez</option>
-									<option value="46">Outro</option>
-								</select>
-
 								<label for="idadePublico">Idade alvo</label>
 								<select class="form-select mb-3" id="idadePublico" name="idade">
-									<option value="0">Sem filtro</option>
-									<option value="1">De 3 a 7</option>
-									<option value="2">De 8 a 13</option>
-									<option value="3">De 14 a 16</option>
-									<option value="4">De 17 a 20</option>
-									<option value="5">Acima de 18</option>
-									<option value="6">De 20 a 30</option>
-									<option value="7">De 30 a 40</option>
-									<option value="8">Acima de 40</option>
+									<option value="0" <?php if (isset($_SESSION["filtro_idade"])) if ($_SESSION["filtro_idade"] == "0") echo "selected";?> >Sem filtro</option>
+									<option value="1" <?php if (isset($_SESSION["filtro_idade"])) if ($_SESSION["filtro_idade"] == "1") echo "selected";?> >De 3 a 7</option>
+									<option value="2" <?php if (isset($_SESSION["filtro_idade"])) if ($_SESSION["filtro_idade"] == "2") echo "selected";?> >De 8 a 13</option>
+									<option value="3" <?php if (isset($_SESSION["filtro_idade"])) if ($_SESSION["filtro_idade"] == "3") echo "selected";?> >De 14 a 16</option>
+									<option value="4" <?php if (isset($_SESSION["filtro_idade"])) if ($_SESSION["filtro_idade"] == "4") echo "selected";?> >De 17 a 20</option>
+									<option value="5" <?php if (isset($_SESSION["filtro_idade"])) if ($_SESSION["filtro_idade"] == "5") echo "selected";?> >Acima de 18</option>
+									<option value="6" <?php if (isset($_SESSION["filtro_idade"])) if ($_SESSION["filtro_idade"] == "6") echo "selected";?> >De 20 a 30</option>
+									<option value="7" <?php if (isset($_SESSION["filtro_idade"])) if ($_SESSION["filtro_idade"] == "7") echo "selected";?> >De 30 a 40</option>
+									<option value="8" <?php if (isset($_SESSION["filtro_idade"])) if ($_SESSION["filtro_idade"] == "8") echo "selected";?> >Acima de 40</option>
 								</select>
 
 								<label for="intuEvento">Intuito do evento</label>
 								<select class="form-select mb-3" id="intuEvento" name="intuito">
-									<option value="0">Sem filtro</option>
-									<option value="1">Para toda família</option>
-									<option value="2">Profissionais</option>
-									<option value="3">Treino para amadores</option>
+									<option value="0" <?php if (isset($_SESSION["filtro_intuito"])) if ($_SESSION["filtro_intuito"] == "0") echo "selected";?> >Sem filtro</option>
+									<option value="1" <?php if (isset($_SESSION["filtro_intuito"])) if ($_SESSION["filtro_intuito"] == "1") echo "selected";?> >Para toda família</option>
+									<option value="2" <?php if (isset($_SESSION["filtro_intuito"])) if ($_SESSION["filtro_intuito"] == "2") echo "selected";?> >Profissionais</option>
+									<option value="3" <?php if (isset($_SESSION["filtro_intuito"])) if ($_SESSION["filtro_intuito"] == "3") echo "selected";?> >Treino para amadores</option>
 								</select>
 
 								<label for="Turno">Turno do Evento</label>
 								<select class="form-select mb-3" id="Turno" name="turno">
-									<option value="0">Sem filtro</option>
-									<option value="1">Manhã</option>
-									<option value="2">Tarde</option>
-									<option value="3">Noite</option>
+									<option value="0" <?php if (isset($_SESSION["filtro_turno"])) if ($_SESSION["filtro_turno"] == "0") echo "selected";?> >Sem filtro</option>
+									<option value="1" <?php if (isset($_SESSION["filtro_turno"])) if ($_SESSION["filtro_turno"] == "1") echo "selected";?> >Manhã</option>
+									<option value="2" <?php if (isset($_SESSION["filtro_turno"])) if ($_SESSION["filtro_turno"] == "2") echo "selected";?> >Tarde</option>
+									<option value="3" <?php if (isset($_SESSION["filtro_turno"])) if ($_SESSION["filtro_turno"] == "3") echo "selected";?> >Noite</option>
 								</select>
 
 								<div class="form-check mb-3">
-									<input class="form-check-input" type="checkbox" value="0" id="gratis" name="gratuito">
-									<label class="form-check-label" for="gratis">
-										Gratuito
-									</label>
+									<label class="form-check-label" for="gratis">Gratuito</label>
+									<input class="form-check-input" type="checkbox" value="0" id="gratis" name="gratuito" <?php if(isset($_SESSION["filtro_gratuito"])) echo "checked=true"; ?> >
 								</div>
 
 								<!-- Filtros de margem -->
-								<div class="mb-3" id="range_preco">
-									<label for="precomax" class="form-label">Preco Máximo</label>
-									<input type="range" class="form-range" id="precomax" min="1" max="1000" value="500"name="preco">
+								<div id="divprecomax">
+									<label>Preco Máximo</label>
+									<div class="form-floating mb-3" id="range_preco">
+										<input type="text" class="form-control" id="precomax" placeholder="Preco Máximo" name="preco"   <?php if (isset($_SESSION["filtro_preco"]))?> value="<?php echo $_SESSION["filtro_preco"];?>" >
+										<label for="precomax">R$</label>
+									</div>
 								</div>
-
 								<label>Data do evento</label>
 								<div class="mb-3 row">
 									<div class="col-6 data">
-										<label>Entre </label>
+										<label>Entre</label>
 										<div class="form-floating">
-											<input type="date" class="form-control datinha" id="dataEvento" name="data1">
+											<input type="date" class="form-control datinha" id="dataEvento" name="data1" <?php if (isset($_SESSION["filtro_data1"]))?> value="<?php echo $_SESSION["filtro_data1"];?>">
 										</div>	
 									</div>
 
 									<div class="col-6 data">
-										<label>E </label>
+										<label>e</label>
 										<div class="form-floating">
-											<input type="date" class="form-control datinha" id="dataEvento2" name="data2">
+											<input type="date" class="form-control datinha" id="dataEvento2" name="data2" <?php if (isset($_SESSION["filtro_data2"]))?> value="<?php echo $_SESSION["filtro_data2"];?>">
 										</div>	
 									</div>	
 								</div>
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="" id="btn_limpar_filtros">Limpar filtros</button>
-
-								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+								<button type="button" class="btn btn-secondary" id="btn_limpar_filtros">Limpar filtros</button>
 								<button type="submit" class="btn btn-primary">Filtrar</button>
 							</div>
 						</form>
@@ -489,7 +435,8 @@ session_start();
 					filtro.classList.add('filtro_selecionado');
 					filtro.type='button';
 					</script>";
-				} else {
+				} else if (isset($_SESSION["filtro_esporte"])){
+					$filtro_esporte = ;
 					echo "<script defer>
 					var filtros = document.querySelectorAll('.carouselimage');
 					filtros.forEach(filtro =>{

@@ -227,7 +227,7 @@ button:focus {
   height: 0 !important;
 }
 
-#range_preco{
+#divprecomax{
   transition: 0.3s;
 }
 
@@ -240,6 +240,7 @@ button:focus {
 .modal-dialog{
   z-index: 99999 !important;
   height: 700px !important;
+
 }
 
 .modal-body{
@@ -257,13 +258,32 @@ button:focus {
 }
 
 .datinha{
-padding: 5px !important;
-padding-top: 5px !important;
-padding-bottom: 5px !important;
-height: 30px !important;
-border: 0 !important;
+  margin-left: 5px !important;
+  padding: 5px !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  height: 30px !important;
+  border: 0 !important;
 }
 
 #gratis{
   padding: 5px !important;
+  background-color: #d4d5dfb0;
+}
+
+.form-check-input{
+  border: 1px solid #212529 !important;
+}
+
+.form-check-input:checked[type=checkbox]{
+  background-color: #0d6efd !important;
+}
+
+.datinha, .modal-content select, #precomax{
+  background-color: #d4d5dfb0 !important;
+}
+
+input, select{
+ box-shadow: none !important;
+ border: none !important;
 }
