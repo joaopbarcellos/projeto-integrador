@@ -227,12 +227,43 @@ button:focus {
   height: 0 !important;
 }
 
+#range_preco{
+  transition: 0.3s;
+}
 
 .modal {
   z-index: 9999 !important;
+  overflow: hidden !important;
   background-color: rgba(49, 49, 49, 0) !important; 
 }
 
 .modal-dialog{
   z-index: 99999 !important;
-} 
+  height: 700px !important;
+}
+
+.modal-body{
+  max-height: 500px !important;
+}
+
+.modal-body{
+  overflow-y: auto !important;
+}
+
+.data{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.datinha{
+padding: 5px !important;
+padding-top: 5px !important;
+padding-bottom: 5px !important;
+height: 30px !important;
+border: 0 !important;
+}
+
+#gratis{
+  padding: 5px !important;
+}

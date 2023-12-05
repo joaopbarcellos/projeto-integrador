@@ -118,3 +118,21 @@ var $imagesCarousel = jQuery('.carouselOfImages').flickity({
   watchCSS: false,
   wrapAround: false
 });
+
+// Evento gratuito ou não
+const checkGratuito = document.querySelector("#flexCheckDefault");
+checkGratuito.addEventListener("change", () => {
+  if (checkGratuito.checked == false){
+    document.querySelector("#range-preco").style.opacity = "1";
+    document.querySelector("#range-preco").style.height = "auto";
+  } else {
+    document.querySelector("#range-preco").style.opacity = "0";
+    document.querySelector("#range-preco").style.height = "0";
+  }
+});
+
+// Botao limpar filtros
+const limpar_filtros = document.querySelector("#btn_limpar_filtros");
+limpar_filtros.addEventListener("click", () =>{
+  window.location.assign("../index.php");
+});

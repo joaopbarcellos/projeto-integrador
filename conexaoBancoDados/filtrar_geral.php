@@ -13,8 +13,8 @@ session_start();
 
 $codigo_sql = "SELECT * FROM evento WHERE ";
 
-if (isset($_POST["preco"])){
-    if ($_POST["preco"] != -1) $condicoes[] = "preco <= " . $_POST["preco"];
+if (isset($_POST["esporte"])){
+    if ($_POST["esporte"] != 0) $condicoes[] = "fk_classificacao_id = " . $_POST["esporte"];
 }
 
 if (isset($_POST["idade"])){
@@ -25,21 +25,24 @@ if (isset($_POST["intuito"])){
     if($_POST["intuito"] != 0) $condicoes[] = "fk_intuito_id = " . $_POST["intuito"];
 }
 
-if (isset($_POST["horario_inicio"])){
-    if ($_POST["horario_inicio"] != "") $condicoes[] = "horario_inicio = '" . trim($_POST["horario_inicio"]). "'";
+if (isset($_POST["gratuito"])){
+    $condicoes[] = "preco = " . 0;
+} else if (isset($_POST["preco"])){
+    if ($_POST["preco"]) $condicoes[] = "preco <= " . $_POST["preco"];
 }
 
-if (isset($_POST["horario_fim"])){
-    if ($_POST["horario_fim"] != "") $condicoes[] = "horario_fim = '" . trim($_POST["horario_fim"])."'";
+if (isset($_POST["turno"])){
+    if($_POST["turno"] == 1) $condicoes[] = "horario_inicio < '12:00:00' AND horario_inicio >= '00:00:00'";
+    if($_POST["turno"] == 2) $condicoes[] = "horario_inicio < '18:00:00' AND horario_inicio >= '12:00:00'";
+    if($_POST["turno"] == 3) $condicoes[] = "horario_inicio <= '23:59:99' AND horario_inicio >= '18:00:00'";
 }
 
-if (isset($_POST["data"])){
-    if ($_POST["data"] != "") $condicoes[] = "data = " . $_POST["data"];
-
+if (isset($_POST["data1"])){
+    if ($_POST["data1"] != "") $condicoes[] = "data > " . $_POST["data1"];
 }
 
-if (isset($_POST["esporte"])){
-    if ($_POST["esporte"] != 0) $condicoes[] = "fk_classificacao_id = " . $_POST["esporte"];
+if (isset($_POST["data2"])){
+    if ($_POST["data2"] != "") $condicoes[] = "data < " . $_POST["data2"];
 }
 
 if (!empty($condicoes)) {
@@ -47,6 +50,8 @@ if (!empty($condicoes)) {
 } else {
     $codigo_sql .= "true"; // Se nenhum filtro for aplicado, retorna todos os registros
 }
+
+$codigo_sql .= " ORDER BY preco";
 
 $consulta_filtrado = $db_con->prepare($codigo_sql);
 $consulta_filtrado->execute();
@@ -80,5 +85,5 @@ if ($consulta_filtrado->rowCount() > 0) {
 
 $db_con = null;
 $_SESSION["filtro"] = json_encode($resposta);
-header("Location: ../index.php?filtro=Filtro personalizado")
+header("Location: ../index.php?filtro=")
 ?>

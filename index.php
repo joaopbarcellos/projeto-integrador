@@ -177,7 +177,7 @@ session_start();
 			<!-- filtros principais de esporte -->
 			<form class="carouselContainer" action="conexaoBancoDados/filtrar_esporte.php" method="post">
 				<div class="carouselOfImages">
-					<button type="button" class="carouselimage" value="Filtrar" data-bs-toggle="modal" data-bs-target="#Modalfiltros">
+					<button type="button" class="carouselimage" value="Filtrar" data-bs-toggle="modal" data-bs-target="#Modalfiltros" id="filtro_geral">
 						<img src="img/filtro.png">
 					</button>
 
@@ -357,30 +357,10 @@ session_start();
 						</div>
 						<form action="conexaoBancoDados/filtrar_geral.php" method="post">
 							<div class="modal-body">
-								<label for="preco">Preço</label>
-								<select name="preco" id="preco">
-									<option value="-1">Sem filtro</option>
-									<option value="0">Gratuito</option>
-									<option value="10">Igual ou abaixo de R$ 10</option>
-									<option value="20">Igual ou abaixo de R$ 20</option>
-									<option value="30">Igual ou abaixo de R$ 30</option>
-									<option value="40">Igual ou abaixo de R$ 40</option>
-									<option value="50">Igual ou abaixo de R$ 50</option>
-									<option value="100">Igual ou abaixo de R$ 100</option>
-									<option value="150">Igual ou abaixo de R$ 150</option>
-									<option value="200">Igual ou abaixo de R$ 200</option>
-									<option value="300">Igual ou abaixo de R$ 300</option>
-									<option value="400">Igual ou abaixo de R$ 400</option>
-									<option value="500">Igual ou abaixo de R$ 500</option>
-									<option value="600">Igual ou abaixo de R$ 600</option>
-									<option value="700">Igual ou abaixo de R$ 700</option>
-									<option value="800">Igual ou abaixo de R$ 800</option>
-									<option value="900">Igual ou abaixo de R$ 900</option>
-									<option value="1000">Igual ou abaixo de R$ 1000</option>
-								</select>
+								<!-- Filtros de retirada -->
 								
 								<label for="esporte">Esporte</label>
-								<select id="esporte" name="esporte">
+								<select class="form-select mb-3" id="esporte" name="esporte">
 									<option value="0">Sem filtro</option>
 									<option value="1">Atletismo</option>
 									<option value="2">Automobilismo</option>
@@ -430,8 +410,8 @@ session_start();
 									<option value="46">Outro</option>
 								</select>
 
-								<label for="idadePublico">Idade</label>
-								<select id="idadePublico" name="idade">
+								<label for="idadePublico">Idade alvo</label>
+								<select class="form-select mb-3" id="idadePublico" name="idade">
 									<option value="0">Sem filtro</option>
 									<option value="1">De 3 a 7</option>
 									<option value="2">De 8 a 13</option>
@@ -443,26 +423,55 @@ session_start();
 									<option value="8">Acima de 40</option>
 								</select>
 
-								<label for="intuEvento">Intuito</label>
-								<select id="intuEvento" name="intuito">
+								<label for="intuEvento">Intuito do evento</label>
+								<select class="form-select mb-3" id="intuEvento" name="intuito">
 									<option value="0">Sem filtro</option>
 									<option value="1">Para toda família</option>
 									<option value="2">Profissionais</option>
 									<option value="3">Treino para amadores</option>
 								</select>
 
+								<label for="Turno">Turno do Evento</label>
+								<select class="form-select mb-3" id="Turno" name="turno">
+									<option value="0">Sem filtro</option>
+									<option value="1">Manhã</option>
+									<option value="2">Tarde</option>
+									<option value="3">Noite</option>
+								</select>
 
-								<label for="dataEvento">Data do Evento</label>
-								<input type="date" id="dataEvento" name="data">
-								
-								<label for="horarioInicio">Início</label>
-								<input type="time" id="horarioInicio" name="horario_inicio">
+								<div class="form-check mb-3">
+									<input class="form-check-input" type="checkbox" value="0" id="gratis" name="gratuito">
+									<label class="form-check-label" for="gratis">
+										Gratuito
+									</label>
+								</div>
 
-								<label for="horarioFim">Término</label>
-								<input type="time" id="horarioFim" name="horario_fim">
+								<!-- Filtros de margem -->
+								<div class="mb-3" id="range_preco">
+									<label for="precomax" class="form-label">Preco Máximo</label>
+									<input type="range" class="form-range" id="precomax" min="1" max="1000" value="500"name="preco">
+								</div>
 
+								<label>Data do evento</label>
+								<div class="mb-3 row">
+									<div class="col-6 data">
+										<label>Entre </label>
+										<div class="form-floating">
+											<input type="date" class="form-control datinha" id="dataEvento" name="data1">
+										</div>	
+									</div>
+
+									<div class="col-6 data">
+										<label>E </label>
+										<div class="form-floating">
+											<input type="date" class="form-control datinha" id="dataEvento2" name="data2">
+										</div>	
+									</div>	
+								</div>
 							</div>
 							<div class="modal-footer">
+								<button type="button" class="" id="btn_limpar_filtros">Limpar filtros</button>
+
 								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
 								<button type="submit" class="btn btn-primary">Filtrar</button>
 							</div>
@@ -474,20 +483,27 @@ session_start();
 			<?php
 			if (isset($_GET['filtro'])) {
 				$filtro_esporte = $_GET['filtro'];
-				echo "<script defer>
-				var filtros = document.querySelectorAll('.carouselimage');
-				filtros.forEach(filtro =>{
-					if(filtro.value == '$filtro_esporte'){
-						filtro.classList.add('filtro_selecionado');
-						filtro.type='button';
-					}
-				})
+				if ($_GET['filtro'] == ""){
+					echo "<script defer>
+					var filtro = document.querySelector('#filtro_geral');
+					filtro.classList.add('filtro_selecionado');
+					filtro.type='button';
+					</script>";
+				} else {
+					echo "<script defer>
+					var filtros = document.querySelectorAll('.carouselimage');
+					filtros.forEach(filtro =>{
+						if(filtro.value == '$filtro_esporte'){
+							filtro.classList.add('filtro_selecionado');
+							filtro.type='button';
+						}
+					})
 
-				document.querySelector('.filtro_selecionado').addEventListener('click', () =>{
-					window.location.assign('index.php');
-				});
-				</script>";
-
+					document.querySelector('.filtro_selecionado').addEventListener('click', () =>{
+						window.location.assign('index.php');
+					});
+					</script>";
+				}
 				$json_data = $_SESSION["filtro"];
 
 				echo '
