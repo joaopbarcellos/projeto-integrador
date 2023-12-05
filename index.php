@@ -435,13 +435,31 @@ session_start();
 					filtro.classList.add('filtro_selecionado');
 					filtro.type='button';
 					</script>";
-				} else if (isset($_SESSION["filtro_esporte"])){
-					$filtro_esporte = ;
+					
+					if (isset($_SESSION["filtro_esporte_nome"])){
+						$filtro_esporte_nome = $_SESSION["filtro_esporte_nome"];
+						echo "<script defer>
+						var filtros = document.querySelectorAll('.carouselimage');
+						filtros.forEach(filtro =>{
+							if(filtro.value == '$filtro_esporte_nome'){
+								filtro.classList.add('filtro_selecionado');
+								filtro.classList.add('filtro_selecionado_esporte');
+								filtro.type='button';
+							}
+						})
+						document.querySelector('.filtro_selecionado_esporte').addEventListener('click', () =>{
+							window.location.assign('index.php');
+						});
+						</script>";
+					}
+				} else if (isset($_SESSION["filtro_esporte_nome"])){
+					$filtro_esporte_nome = $_SESSION["filtro_esporte_nome"];
 					echo "<script defer>
 					var filtros = document.querySelectorAll('.carouselimage');
 					filtros.forEach(filtro =>{
-						if(filtro.value == '$filtro_esporte'){
+						if(filtro.value == '$filtro_esporte_nome'){
 							filtro.classList.add('filtro_selecionado');
+							filtro.classList.add('filtro_selecionado_esporte');
 							filtro.type='button';
 						}
 					})
@@ -454,7 +472,7 @@ session_start();
 				$json_data = $_SESSION["filtro"];
 
 				echo '
-				<h1 class="nome_filtro">'. $filtro_esporte . '</h1>
+				<h1 class="nome_filtro">'. $filtro_esporte_nome . '</h1>
 
 				<!-- Section que carrega todas as div eventos -->
 				<section class="conteudo col-11 m-auto">
@@ -465,7 +483,8 @@ session_start();
 				date_default_timezone_set("America/Sao_Paulo"); 
 				
 				if(count($eventos["eventos"]) == 0){
-					echo "<div id='naoAchou' class='fs-4 msg_erro'>Nenhum evento de '$filtro_esporte' foi encontrado!</div>";
+					if (isset($_SESSION["filtro_esporte_nome"])) $filtro_esporte_nome = $_SESSION["filtro_esporte_nome"];
+					echo "<div id='naoAchou' class='fs-4 msg_erro'>Nenhum evento de '$filtro_esporte_nome' foi encontrado!</div>";
 				} else {
 					foreach ($eventos["eventos"] as $evento){
 						echo '<!-- Div evento -->

@@ -13,8 +13,8 @@ session_start();
 
 $codigo_sql = "SELECT * FROM evento WHERE ";
 
-if (isset($_SESSION["filtro_esporte"])){
-    if ($_SESSION["filtro_esporte"] != 0) $condicoes[] = "fk_classificacao_id = " . $_SESSION["filtro_esporte"];
+if (isset($_SESSION["filtro_esporte_id"])){
+    if ($_SESSION["filtro_esporte_id"] != 0) $condicoes[] = "fk_classificacao_id = " . $_SESSION["filtro_esporte_id"];
 }
 
 if (isset($_POST["idade"])){
@@ -52,7 +52,7 @@ if (isset($_POST["data2"])){
     $_SESSION["filtro_data2"] = $_POST["data2"];
     if ($_POST["data2"] != "") $condicoes[] = "data < '" . $_POST["data2"] ."'";
 }
-
+var_dump($condicoes);
 if (!empty($condicoes)) {
     $codigo_sql .= implode(" AND ", $condicoes);
 } else {
@@ -87,10 +87,9 @@ if ($consulta_filtrado->rowCount() > 0) {
         $evento["foto"] = $linha["foto"];
 
         // Adiciona o evento no array de eventos.
-        array_push($resposta["eventos"], $evento);
+        array_push($resposta['eventos'], $evento);
     }
 }
-
 $db_con = null;
 $_SESSION["filtro"] = json_encode($resposta);
 header("Location: ../index.php?filtro=")

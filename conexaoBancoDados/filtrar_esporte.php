@@ -19,7 +19,8 @@ if (isset($_POST["esporte"])){
 
     $linha_esporte = $consulta_esporte->fetch(PDO::FETCH_ASSOC);
     $id_esporte = $linha_esporte["id"];
-	$_SESSION["filtro_esporte"] = $id_esporte;
+	$_SESSION["filtro_esporte_nome"] = $esporte;
+	$_SESSION["filtro_esporte_id"] = $id_esporte;
 
     $consulta = $db_con->prepare("SELECT * FROM evento WHERE fk_classificacao_id=$id_esporte");
     $consulta->execute();
