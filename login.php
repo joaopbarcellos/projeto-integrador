@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!--
   Esse arquivo vai dar um POST para
   CONSULTAR o banco de dados e checar
@@ -41,7 +45,6 @@
 
   if (isset($_GET['salvou'])) {
     $script = $_GET['salvou'];
-    session_start();
     if (isset($_SESSION["senha"]) && isset($_SESSION["email"])) {
       $emailUsuario = $_SESSION["email"];
       $senhaUsuario = $_SESSION["senha"];
