@@ -124,9 +124,6 @@ if (isset($_POST['nome']) && isset($_POST['preco']) && isset($_POST['descricao']
 $linha_id = $consulta->fetch(PDO::FETCH_ASSOC);
 $id_evento = $linha_id["id"];
 
-// Converte a resposta para o formato JSON.
-echo json_encode($resposta);
-
 // Fecha a conexao com o BD
 $db_con = null;
 
