@@ -10,5 +10,6 @@ if (isset($_SESSION["filtro_preco"])) unset($_SESSION["filtro_preco"]);
 if (isset($_SESSION["filtro_turno"])) unset($_SESSION["filtro_turno"]);
 if (isset($_SESSION["filtro_data1"])) unset($_SESSION["filtro_data1"]);
 if (isset($_SESSION["filtro_data2"])) unset($_SESSION["filtro_data2"]);
+if (isset($_SESSION["filtro_personalizado"])) unset($_SESSION["filtro_personalizado"]);
 header("location: ../index.php")
 ?>

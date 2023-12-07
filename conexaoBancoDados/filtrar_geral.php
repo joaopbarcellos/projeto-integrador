@@ -13,6 +13,12 @@ session_start();
 
 $codigo_sql = "SELECT * FROM evento WHERE ";
 
+if (isset($_POST["cancelar_esporte"])) {
+    if (isset($_SESSION["filtro_esporte"])) unset($_SESSION["filtro_esporte"]);
+    if (isset($_SESSION["filtro_esporte_nome"])) unset($_SESSION["filtro_esporte_nome"]);
+    if (isset($_SESSION["filtro_esporte_id"])) unset($_SESSION["filtro_esporte_id"]);
+}
+
 if (isset($_SESSION["filtro_esporte_id"])){
     if ($_SESSION["filtro_esporte_id"] != 0) $condicoes[] = "fk_classificacao_id = " . $_SESSION["filtro_esporte_id"];
 }
@@ -40,7 +46,7 @@ if (isset($_POST["turno"])){
     $_SESSION["filtro_turno"] = $_POST["turno"];
     if($_POST["turno"] == 1) $condicoes[] = "horario_inicio < '12:00:00' AND horario_inicio >= '00:00:00'";
     if($_POST["turno"] == 2) $condicoes[] = "horario_inicio < '18:00:00' AND horario_inicio >= '12:00:00'";
-    if($_POST["turno"] == 3) $condicoes[] = "horario_inicio <= '23:59:99' AND horario_inicio >= '18:00:00'";
+    if($_POST["turno"] == 3) $condicoes[] = "horario_inicio <= '23:59:59' AND horario_inicio >= '18:00:00'";
 }
 
 if (isset($_POST["data1"])){
@@ -92,5 +98,6 @@ if ($consulta_filtrado->rowCount() > 0) {
 }
 $db_con = null;
 $_SESSION["filtro"] = json_encode($resposta);
+$_SESSION["filtro_personalizado"] = "feito"; 
 header("Location: ../index.php?filtro=")
 ?>

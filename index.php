@@ -355,7 +355,7 @@ session_start();
 							<h1 class="modal-title fs-5" id="exampleModalLabel">Filtros</h1>
 							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 						</div>
-						<form action="conexaoBancoDados/filtrar_geral.php" method="post">
+						<form action="conexaoBancoDados/filtrar_geral.php" method="post" id="form_do_filtro">
 							<div class="modal-body">
 								<!-- Filtros de retirada -->
 								<label for="idadePublico">Idade alvo</label>
@@ -414,7 +414,9 @@ session_start();
 										<div class="form-floating">
 											<input type="date" class="form-control datinha" id="dataEvento2" name="data2" <?php if (isset($_SESSION["filtro_data2"]))?> value="<?php echo $_SESSION["filtro_data2"];?>">
 										</div>	
-									</div>	
+									</div>
+									
+									<input type="hidden" name="cancelar_esporte" value="" id="escondido_cancelar_esporte">
 								</div>
 							</div>
 							<div class="modal-footer">
@@ -448,7 +450,10 @@ session_start();
 							}
 						})
 						document.querySelector('.filtro_selecionado_esporte').addEventListener('click', () =>{
-							window.location.assign('index.php');
+							campoInvisivel = document.querySelector('#escondido_cancelar_esporte')
+							campoInvisivel.value = 'cancelar';
+							formulario = document.querySelector('#form_do_filtro');
+							formulario.submit();
 						});
 						</script>";
 					}
@@ -465,7 +470,7 @@ session_start();
 					})
 
 					document.querySelector('.filtro_selecionado').addEventListener('click', () =>{
-						window.location.assign('index.php');
+						window.location.assign('conexaoBancoDados/limpar_filtro_esporte.php');
 					});
 					</script>";
 				}
