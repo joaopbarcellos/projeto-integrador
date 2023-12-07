@@ -58,7 +58,6 @@ if (isset($_POST["data2"])){
     $_SESSION["filtro_data2"] = $_POST["data2"];
     if ($_POST["data2"] != "") $condicoes[] = "data < '" . $_POST["data2"] ."'";
 }
-var_dump($condicoes);
 if (!empty($condicoes)) {
     $codigo_sql .= implode(" AND ", $condicoes);
 } else {
