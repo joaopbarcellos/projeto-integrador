@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -28,10 +32,6 @@
 </head>
 
 <body>
-	<?php
-	session_start();
-	?>
-
 	<!-- Header com a navbar -->
 	<header>
 		<?php include('header.php') ?>
