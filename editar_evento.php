@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!-- 
 	Esse arquivo vai dar POST para 
 	EDITAR/ALTERAR um evento no banco de dados
@@ -32,7 +36,6 @@
 </head>
 
 <?php
-session_start();
 date_default_timezone_set("America/Sao_Paulo"); 
 
 require('conexaoBancoDados/conexao_db.php');
