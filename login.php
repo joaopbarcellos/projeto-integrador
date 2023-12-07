@@ -65,7 +65,7 @@
   ?>
   <header class="d-none d-lg-block">
     <!-- Header com imagem dentro de um link -->
-    <a href="login.php"> <img id="logo_image" src="logos/11.png" /></a>
+    <a href="index.php"> <img id="logo_image" src="logos/11.png" /></a>
   </header>
   <!-- Div que ficará com o formulário -->
   <div class="divLogin mt-5 col-lg-4 col-10 m-auto">

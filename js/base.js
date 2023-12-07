@@ -588,3 +588,4 @@ export function naoEstaLogado() {
     window.location.assign("login.php");
   });
 }
+

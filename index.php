@@ -488,8 +488,13 @@ session_start();
 				date_default_timezone_set("America/Sao_Paulo"); 
 				
 				if(count($eventos["eventos"]) == 0){
-					if (isset($_SESSION["filtro_esporte_nome"])) $filtro_esporte_nome = $_SESSION["filtro_esporte_nome"];
-					echo "<div id='naoAchou' class='fs-4 msg_erro'>Nenhum evento de $filtro_esporte_nome foi encontrado!</div>";
+					if (isset($_SESSION["filtro_esporte_nome"])){
+						$filtro_esporte_nome = $_SESSION["filtro_esporte_nome"];
+						echo "<div id='naoAchou' class='fs-4 msg_erro'>Nenhum evento de $filtro_esporte_nome foi encontrado!</div>";
+					} 
+					else{
+						echo "<div id='naoAchou' class='fs-4 msg_erro'>Nenhum evento foi encontrado!</div>";
+					}
 				} else {
 					foreach ($eventos["eventos"] as $evento){
 						echo '<!-- Div evento -->
