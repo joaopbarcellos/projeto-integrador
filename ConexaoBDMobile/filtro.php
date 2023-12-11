@@ -10,7 +10,7 @@ if(isset($_GET["limit"]) && isset($_GET["offset"])){
     $offset = $_GET["offset"];
   
     $string_consulta = "SELECT * from evento where";
-    if($_GET["preco"] != "0"){
+    if($_GET["preco"] != "-1"){
       $array_precos = [" preco >= 0.00 and preco < 10.00", " preco >= 10.00 and preco < 20.00", " preco >= 20.00 and preco < 30.00", " preco >= 30.00 and preco < 50.00", " preco >= 50.00 and preco < 100.00",
         " preco >= 100.00 and preco < 200.00", " preco >= 200.00 and preco < 500.00", " preco >= 500.00 and preco < 1000.00", " preco >= 1000.00 and preco <= 5000.00"];
       $index = intval($_GET["preco"]);
@@ -34,7 +34,7 @@ if(isset($_GET["limit"]) && isset($_GET["offset"])){
       $consulta_intuito = $db_con->prepare("SELECT * from intuito where nome = '$intuito'");
       $consulta_intuito->execute();
       $id_intuito = $consulta_intuito->fetch(PDO::FETCH_ASSOC)["id"];
-       if($_GET["preco"] != "0" || $_GET["idade"] != "Nenhum"){
+       if($_GET["preco"] != "-1" || $_GET["idade"] != "Nenhum"){
         $string_consulta .= " and fk_intuito_id = $id_intuito";
       }else{
         $string_consulta .= " fk_intuito_id = $id_intuito";
