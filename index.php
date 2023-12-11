@@ -344,10 +344,18 @@ session_start();
 						</div>
 					</button>
 
-					<button class="carouselimage" type="submit" value ="Polo Aquático" name="esporte" id="ultimo">
+					<button class="carouselimage" type="submit" value ="Polo Aquático" name="esporte">
 						<div class="alinhafiltro">
 							<img src="img/poloaquatico.png">
 							Polo Aquático
+						</div>
+					</button>
+					<button class="carouselimage" type="submit" value ="Outro" name="esporte" id="ultimo">
+						<div class="alinhafiltro">
+							<svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
+								<path d="M8 256a56 56 0 1 1 112 0A56 56 0 1 1 8 256zm160 0a56 56 0 1 1 112 0 56 56 0 1 1 -112 0zm216-56a56 56 0 1 1 0 112 56 56 0 1 1 0-112z"/>
+							</svg>
+							Outros
 						</div>
 					</button>
 				</div>
