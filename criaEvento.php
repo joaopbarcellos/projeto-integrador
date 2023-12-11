@@ -260,7 +260,7 @@ session_start();
 										<option value="19">Judô</option>
 										<option value="20">Canoagem</option>
 										<option value="21">Polo Aquático</option>
-										<option value="22">Outro</option>
+										<option value="22">Outros</option>
 									</select>
 									<label for="esporte">Esporte</label>
 								</div>
