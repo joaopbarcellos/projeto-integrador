@@ -67,10 +67,13 @@ function criar_endereco($db_con, $cep, $bairro, $cidade, $estado, $descricao, $n
             $descricao =  $descricao . ", " . $complemento;
         }
         $consulta_criar_endereco = $db_con->prepare("INSERT INTO endereco(numero, cep, descricao, FK_BAIRRO_id) VALUES('$numero', '$cep', '$descricao', $id_bairro) returning id");
-        $consulta_criar_endereco->execute();
-        $linha_endereco = $consulta_criar_endereco->fetch(PDO::FETCH_ASSOC);
-        $resposta["sucesso"] = 1;
-        $resposta["id"] = $linha_endereco["id"];
+        
+        
+        if($consulta_criar_endereco->execute()){
+            $linha_endereco = $consulta_criar_endereco->fetch(PDO::FETCH_ASSOC);
+            $resposta["sucesso"] = 1;
+            $resposta["id"] = $linha_endereco["id"];
+        }
     }
     
     return $resposta["id"];

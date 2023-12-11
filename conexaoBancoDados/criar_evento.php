@@ -44,7 +44,7 @@ if (isset($_POST['nome']) && isset($_POST['preco']) && isset($_POST['descricao']
 	$descricao_evento = trim($_POST['logradouroEvento']);
 	$numero_evento = trim($_POST['numeroEvento']);
 	$complemento_evento = trim($_POST['complementoEvento']);
-	
+	//var_dump($db_con);
 	$endereco = criar_endereco($db_con, $cep_evento, $bairro_evento, $cidade_evento, $estado_evento, $descricao_evento, $numero_evento, $complemento_evento);
 	
 	// Chamar funcao para pegar o id do usuario
