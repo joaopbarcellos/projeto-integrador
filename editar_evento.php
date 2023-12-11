@@ -84,52 +84,28 @@ $db_con = null;
 
 							<div class="form-floating mb-3">
 								<select class="form-select" id="esporte" name="classificacao">
-									<option value="1" <?php if ($evento["id_classificacao"] == 1) echo "selected"?>>Corrida</option>
-									<option value="2" <?php if ($evento["id_classificacao"] == 2) echo "selected"?>>Automobilismo</option>
-									<option value="3"  <?php if ($evento["id_classificacao"] == 3) echo "selected"?>>Basquete</option>
-									<option value="4"  <?php if ($evento["id_classificacao"] == 4) echo "selected"?>>Beach Tennis</option>
-									<option value="5"  <?php if ($evento["id_classificacao"] == 5) echo "selected"?>>Bicicross</option>
-									<option value="6"  <?php if ($evento["id_classificacao"] == 6) echo "selected"?>>Boxe</option>
-									<option value="7"  <?php if ($evento["id_classificacao"] == 7) echo "selected"?>>Capoeira</option>
-									<option value="8"  <?php if ($evento["id_classificacao"] == 8) echo "selected"?>>Canoagem</option>
-									<option value="9"  <?php if ($evento["id_classificacao"] == 9) echo "selected"?>>Corrida</option>
+									<option value="1" <?php if ($evento["id_classificacao"] == 1) echo "selected"?>>Futebol</option>
+									<option value="2" <?php if ($evento["id_classificacao"] == 2) echo "selected"?>>Basquete</option>
+									<option value="3"  <?php if ($evento["id_classificacao"] == 3) echo "selected"?>>Corrida</option>
+									<option value="4"  <?php if ($evento["id_classificacao"] == 4) echo "selected"?>>Natação</option>
+									<option value="5"  <?php if ($evento["id_classificacao"] == 5) echo "selected"?>>Vôlei</option>
+									<option value="6"  <?php if ($evento["id_classificacao"] == 6) echo "selected"?>>Xadrez</option>
+									<option value="7"  <?php if ($evento["id_classificacao"] == 7) echo "selected"?>>Skate</option>
+									<option value="8"  <?php if ($evento["id_classificacao"] == 8) echo "selected"?>>Tênis</option>
+									<option value="9"  <?php if ($evento["id_classificacao"] == 9) echo "selected"?>>Surfe</option>
 									<option value="10"  <?php if ($evento["id_classificacao"] == 10) echo "selected"?>>Ciclismo</option>
-									<option value="11"  <?php if ($evento["id_classificacao"] == 11) echo "selected"?>>Escalada Esportiva</option>
-									<option value="12"  <?php if ($evento["id_classificacao"] == 12) echo "selected"?>>Futebol</option>
-									<option value="13"  <?php if ($evento["id_classificacao"] == 13) echo "selected"?>>Futebol Americano</option>
-									<option value="14"  <?php if ($evento["id_classificacao"] == 14) echo "selected"?>>Futsal</option>
-									<option value="15"  <?php if ($evento["id_classificacao"] == 15) echo "selected"?>>Ginástica Artística</option>
-									<option value="16"  <?php if ($evento["id_classificacao"] == 16) echo "selected"?>>Handebol</option>
-									<option value="17"  <?php if ($evento["id_classificacao"] == 17) echo "selected"?>>Hipismo</option>
-									<option value="18"  <?php if ($evento["id_classificacao"] == 18) echo "selected"?>>Hóquei em Patins</option>
-									<option value="19"  <?php if ($evento["id_classificacao"] == 19) echo "selected"?>>Jiu-Jitsu</option>
-									<option value="20"  <?php if ($evento["id_classificacao"] == 20) echo "selected"?>>Judô</option>
-									<option value="21"  <?php if ($evento["id_classificacao"] == 21) echo "selected"?>>Kitesurf</option>
-									<option value="22"  <?php if ($evento["id_classificacao"] == 22) echo "selected"?>>Levantamento de Peso</option>
-									<option value="23"  <?php if ($evento["id_classificacao"] == 23) echo "selected"?>>Mergulho</option>
-									<option value="24"  <?php if ($evento["id_classificacao"] == 24) echo "selected"?>>MMA</option>
-									<option value="25"  <?php if ($evento["id_classificacao"] == 25) echo "selected"?>>Motocross</option>
-									<option value="26"  <?php if ($evento["id_classificacao"] == 26) echo "selected"?>>Mountain Bike</option>
-									<option value="27"  <?php if ($evento["id_classificacao"] == 27) echo "selected"?>>Natação</option>
-									<option value="28"  <?php if ($evento["id_classificacao"] == 28) echo "selected"?>>Natação Sincronizada</option>
-									<option value="29"  <?php if ($evento["id_classificacao"] == 29) echo "selected"?>>Pentatlo Moderno</option>
-									<option value="30"  <?php if ($evento["id_classificacao"] == 30) echo "selected"?>>Polo Aquático</option>
-									<option value="31"  <?php if ($evento["id_classificacao"] == 31) echo "selected"?>>Remo</option>
-									<option value="32"  <?php if ($evento["id_classificacao"] == 32) echo "selected"?>>Rugby</option>
-									<option value="33"  <?php if ($evento["id_classificacao"] == 33) echo "selected"?>>Rugby em Cadeira de Rodas</option>
-									<option value="34"  <?php if ($evento["id_classificacao"] == 34) echo "selected"?>>Skate</option>
-									<option value="35"  <?php if ($evento["id_classificacao"] == 35) echo "selected"?>>Surfe</option>
-									<option value="36"  <?php if ($evento["id_classificacao"] == 36) echo "selected"?>>Surfe de Remo</option>
-									<option value="37"  <?php if ($evento["id_classificacao"] == 37) echo "selected"?>>Taekwondo</option>
-									<option value="38"  <?php if ($evento["id_classificacao"] == 38) echo "selected"?>>Tênis</option>
-									<option value="39"  <?php if ($evento["id_classificacao"] == 39) echo "selected"?>>Tênis de Mesa</option>
-									<option value="40"  <?php if ($evento["id_classificacao"] == 40) echo "selected"?>>Tiro Esportivo</option>
-									<option value="41"  <?php if ($evento["id_classificacao"] == 41) echo "selected"?>>Triatlo</option>
-									<option value="42"  <?php if ($evento["id_classificacao"] == 42) echo "selected"?>>Vôlei</option>
-									<option value="43"  <?php if ($evento["id_classificacao"] == 43) echo "selected"?>>Vôlei de Praia</option>
-									<option value="44"  <?php if ($evento["id_classificacao"] == 44) echo "selected"?>>Vôlei Sentado</option>
-									<option value="45"  <?php if ($evento["id_classificacao"] == 45) echo "selected"?>>Xadrez</option>
-									<option value="46"  <?php if ($evento["id_classificacao"] == 46) echo "selected"?>>Outro</option>
+									<option value="11"  <?php if ($evento["id_classificacao"] == 11) echo "selected"?>>Handebol</option>
+									<option value="12"  <?php if ($evento["id_classificacao"] == 12) echo "selected"?>>Tênis de Mesa</option>
+									<option value="13"  <?php if ($evento["id_classificacao"] == 13) echo "selected"?>>Motocross</option>
+									<option value="14"  <?php if ($evento["id_classificacao"] == 14) echo "selected"?>>Mountain Bike</option>
+									<option value="15"  <?php if ($evento["id_classificacao"] == 15) echo "selected"?>>Futebol Americano</option>
+									<option value="16"  <?php if ($evento["id_classificacao"] == 16) echo "selected"?>>Hipismo</option>
+									<option value="17"  <?php if ($evento["id_classificacao"] == 17) echo "selected"?>>Boxe</option>
+									<option value="18"  <?php if ($evento["id_classificacao"] == 18) echo "selected"?>>Capoeira</option>
+									<option value="19"  <?php if ($evento["id_classificacao"] == 19) echo "selected"?>>Judô</option>
+									<option value="20"  <?php if ($evento["id_classificacao"] == 20) echo "selected"?>>Canoagem</option>
+									<option value="21"  <?php if ($evento["id_classificacao"] == 21) echo "selected"?>>Polo Aquático</option>
+									<option value="22"  <?php if ($evento["id_classificacao"] == 22) echo "selected"?>>Outros</option>
 								</select>
 								<label for="esporte">Esporte</label>
 							</div>
