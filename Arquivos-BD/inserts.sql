@@ -105,7 +105,7 @@ VALUES (1, 'De 3 a 7'),
 INSERT INTO CLASSIFICACAO (id, nome)
 VALUES (1, 'Futebol'),
 (2, 'Basquete'),
-(3, 'Atletismo'),
+(3, 'Corrida'),
 (4, 'Natação'),
 (5, 'Vôlei'),
 (6, 'Xadrez'),
@@ -128,15 +128,15 @@ VALUES (1, 'Futebol'),
 
 
 INSERT INTO EVENTO(descricao, nome, data, min_pessoas, preco, max_pessoas, horario_inicio, horario_fim, foto, FK_CLASSIFICACAO_id, FK_INTUITO_id, FK_ENDERECO_id, FK_USUARIO_id, FK_IDADE_PUBLICO_id)
-VALUES ('Aula ofertada pelo Zico para crianças de até 12 anos. O evento terá duração de 2 horas. Participação somente com inscrição prévia.','Aula do Zico', '2024-08-16', 1, 97, 3, '12:00:00', '14:00:00', 'https://i.imgur.com/e3zPVU7.png', 12, 1, 1, 7, 2),
-('Treino de futebol americano da igreja. Não pode xingamentos! Venha se ajuntar conosco pra praticar este esporte tão raro aqui no Brasil', 'Treino Black Knights', '2024-05-26', 5, 0, 18, '10:00:00', '11:00:00', 'https://i.imgur.com/ebF3p8e.png', 13, 2, 2, 11, 5),
-('Aulão de natação no sesc de Aracruz, venha aprender mais sobre natação e se divertir nesse dia!', 'Desafio de Natação', '2024-07-12', 2, 0, 25, '08:00:00', '10:00:00', 'https://i.imgur.com/VCe3NHw.png', 20, 1, 3, 21, 1),
-('Este é um projeto da Prefeitura de Vila Velha junto com o Point Mar Dourado de Beach Tennis, para inserir a modalidade nos esportes educacionais ofertados nas escolas futuramente.', 'Mar Dourado Beach Tennis', '2024-09-12', 5, 10, 50, '11:00:00', '12:00:00', 'https://i.imgur.com/o0DzAVc.png', 4, 1, 4, 25, 3),
-('O percurso será da Praça dos Ciclista à Prainha. Os participantes passarão pelas avenidas Estudante José Júlio de Souza e Gil Veloso, além das ruas Castelo Branco e Antônio Ataíde. Durante o trajeto, uma das faixas das vias será interditada para passagem dos atletas. A Guarda Municipal dará apoio com batedores da motopatrulha e viaturas no deslocamento.', '10ª corrida da Penha', '2024-04-09', 100, 0, 500, '07:30:00', '08:30:00', 'https://i.imgur.com/3GbNJut.png', 9, 3, 4, 30, 5),
+VALUES ('Aula ofertada pelo Zico para crianças de até 12 anos. O evento terá duração de 2 horas. Participação somente com inscrição prévia.','Aula do Zico', '2024-08-16', 1, 97, 3, '12:00:00', '14:00:00', 'https://i.imgur.com/e3zPVU7.png', 1, 1, 1, 7, 2),
+('Treino de futebol americano da igreja. Não pode xingamentos! Venha se ajuntar conosco pra praticar este esporte tão raro aqui no Brasil', 'Treino Black Knights', '2024-05-26', 5, 0, 18, '10:00:00', '11:00:00', 'https://i.imgur.com/ebF3p8e.png', 15, 2, 2, 11, 5),
+('Aulão de natação no sesc de Aracruz, venha aprender mais sobre natação e se divertir nesse dia!', 'Desafio de Natação', '2024-07-12', 2, 0, 25, '08:00:00', '10:00:00', 'https://i.imgur.com/VCe3NHw.png', 4, 1, 3, 21, 1),
+('Este é um projeto da Prefeitura de Vila Velha junto com o Point Mar Dourado de Beach Tennis, para inserir a modalidade nos esportes educacionais ofertados nas escolas futuramente.', 'Mar Dourado Beach Tennis', '2024-09-12', 5, 10, 50, '11:00:00', '12:00:00', 'https://i.imgur.com/o0DzAVc.png', 22, 1, 4, 25, 3),
+('O percurso será da Praça dos Ciclista à Prainha. Os participantes passarão pelas avenidas Estudante José Júlio de Souza e Gil Veloso, além das ruas Castelo Branco e Antônio Ataíde. Durante o trajeto, uma das faixas das vias será interditada para passagem dos atletas. A Guarda Municipal dará apoio com batedores da motopatrulha e viaturas no deslocamento.', '10ª corrida da Penha', '2024-04-09', 100, 0, 500, '07:30:00', '08:30:00', 'https://i.imgur.com/3GbNJut.png', 3, 3, 4, 30, 5),
 ('O L’ÉTAPE RIO DE JANEIRO SANTANDER é um evento de ciclismo amador, cujo objetivo é aproximar os participantes da experiência da maior competição de ciclismo do mundo.', 'L’ÉTAPE RIO DE JANEIRO', '2024-06-30', 500, 130, 1500, '12:00:00', '14:00:00', 'https://i.imgur.com/q24YyoK.png', 10, 2, 5, 12, 5),
 ('Surf na cidade de Vila Velha - ES na Praia de Itaparica.', 'Surf - Praia de Itaparica', '2024-08-27', 2, 0, 10, '06:00:00', '08:00:00', 'https://i.imgur.com/9Hq0GSy.png', 15, 3, 4, 25, 3),
-('Basquete na cidade de Vitória - ES na Praça do Cauê, perto da Terceira Ponte.', 'Basquete - Praça do Cauê', '2024-07-05', 6, 0, 18, '18:00:00', '20:00:00', 'https://i.imgur.com/MH8QB1D.png', 3, 3, 6, 15, 4),
-('Motocross na praia de Jacaraípe, venha aproveitar desse esporte conosco!', 'Motocross Arena Jacaraípe', '2024-09-20', 10, 15.9, 50, '08:00:00', '11:00:00', 'https://i.imgur.com/l9I9hL4.png', 22, 2, 7, 8, 5);
+('Basquete na cidade de Vitória - ES na Praça do Cauê, perto da Terceira Ponte.', 'Basquete - Praça do Cauê', '2024-07-05', 6, 0, 18, '18:00:00', '20:00:00', 'https://i.imgur.com/MH8QB1D.png', 2, 3, 6, 15, 4),
+('Motocross na praia de Jacaraípe, venha aproveitar desse esporte conosco!', 'Motocross Arena Jacaraípe', '2024-09-20', 10, 15.9, 50, '08:00:00', '11:00:00', 'https://i.imgur.com/l9I9hL4.png', 13, 2, 7, 8, 5);
 
 INSERT INTO USUARIO_EVENTO(FK_USUARIO_id, FK_EVENTO_id)
 VALUES (28, 1), 
