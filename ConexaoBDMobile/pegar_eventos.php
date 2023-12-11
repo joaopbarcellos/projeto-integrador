@@ -13,8 +13,7 @@ require_once('conexao_db.php');
 
 // array for JSON resposta
 $resposta = array();
-
-
+$resposta["eventos"] = array();
 // Primeiro, verifica-se se todos os parametros foram enviados pelo cliente.
 // limit - quantidade de produtos a ser entregues
 // offset - indica a partir de qual produto começa a lista
@@ -25,7 +24,7 @@ if (isset($_GET['limit']) && isset($_GET['offset'])) {
 
 	// Realiza uma consulta ao BD e obtem todos os produtos.
 	$consulta = $db_con->prepare("SELECT * FROM evento LIMIT " . $limit . " OFFSET " . $offset);
-	$consulta -> execute();
+	$consulta->execute();
 	if ($consulta->rowCount() > 0) {
 			while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
 				// Para cada evento, sao retornados somente o 
@@ -52,6 +51,7 @@ if (isset($_GET['limit']) && isset($_GET['offset'])) {
 				// Adiciona o evento no array de eventos.
 				array_push($resposta["eventos"], $evento);
 			}
+		$resposta["sucesso"] = 1;
 	}
 	else {
 		// Caso ocorra falha no BD, o cliente 
@@ -74,5 +74,5 @@ else {
 $db_con = null;
 
 // Converte a resposta para o formato JSON.
-return json_encode($resposta);
+echo json_encode($resposta);
 ?>

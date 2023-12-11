@@ -23,7 +23,6 @@ if(autenticar($db_con)) {
 	//  nome
 	//  foto
 	//  data
-	//  telefone
 	//  min_pessoas 
 	//  preco
 	//  horario_inicio
@@ -37,46 +36,64 @@ if(autenticar($db_con)) {
 	&& isset($_POST['horario_inicio']) && isset($_POST["estado"]) && isset($_POST["cidade"]) && isset($_POST["bairro"]) && isset($_POST["cep"]) && isset($_POST['horario_fim']) 
     && isset($_POST['max_pessoas']) && isset($_POST["numero"]) && isset($_POST['intuito']) && isset($_POST['endereco']) && isset($_POST['idade_publico']) && isset($_POST['classificacao'])) {
 
-		// Aqui sao obtidos os parametros
-		$nome = trim($_POST['nome']);
-		$preco = trim($_POST['preco']);
-		$descricao = trim($_POST['descricao']);
-		$data = trim($_POST['data']);
-		$min_pessoas = trim($_POST['min_pessoas']);
-		$horario_inicio = trim($_POST['horario_inicio']);
-		$horario_fim = trim($_POST['horario_fim']);
-		$max_pessoas = trim($_POST['max_pessoas']);
-		$intuito = $_POST['intuito'];
-		$endereco = trim($_POST['endereco']);
-		$idade_publico = $_POST['idade_publico'];
-		$estado = $_POST['estado'];
-		$cidade = trim($_POST['cidade']);
-		$bairro = trim($_POST['bairro']);
-		$cep = trim($_POST['cep']);
-		$numero = trim($_POST["numero"]);
-		$classificacao = $_POST['classificacao'];
+	// Aqui sao obtidos os parametros
+	$nome = trim($_POST['nome']);
+	$preco = trim($_POST['preco']);
+	$descricao = trim($_POST['descricao']);
+	$data_evento = trim($_POST['data']);
+	$min_pessoas = trim($_POST['min_pessoas']);
+	$horario_inicio = trim($_POST['horario_inicio']);
+	$horario_fim = trim($_POST['horario_fim']);
+	$max_pessoas = trim($_POST['max_pessoas']);
+	$intuito = $_POST['intuito'];
+	$endereco = trim($_POST['endereco']);
+	$idade_publico = $_POST['idade_publico'];
+	$estado = $_POST['estado'];
+	$cidade = trim($_POST['cidade']);
+	$bairro = trim($_POST['bairro']);
+	$cep = trim($_POST['cep']);
+	$numero = trim($_POST["numero"]);
+	$classificacao = $_POST['classificacao'];
+	$email = $_POST["email"];
 
-		$filename = $_FILES['foto']['tmp_name'];
-		$client_id="ce5d3a656e2aa51";
-		$handle = fopen($filename, "r");
-		$data = fread($handle, filesize($filename));
-		$pvars   = array('image' => base64_encode($data));
-		$timeout = 30;
-		$curl = curl_init();
-		curl_setopt($curl, CURLOPT_URL, 'https://api.imgur.com/3/image.json');
-		curl_setopt($curl, CURLOPT_TIMEOUT, $timeout);
-		curl_setopt($curl, CURLOPT_HTTPHEADER, array('Authorization: Client-ID ' . $client_id));
-		curl_setopt($curl, CURLOPT_POST, 1);
-		curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-		curl_setopt($curl, CURLOPT_POSTFIELDS, $pvars);
-		$out = curl_exec($curl);
-		curl_close ($curl);
-		$pms = json_decode($out,true);
-		$img_url=$pms['data']['link'];
+	$filename = $_FILES['foto']['tmp_name'];
+	$client_id="ce5d3a656e2aa51";
+	$handle = fopen($filename, "r");
+	$data = fread($handle, filesize($filename));
+	$pvars   = array('image' => base64_encode($data));
+	$timeout = 30;
+	$curl = curl_init();
+	curl_setopt($curl, CURLOPT_URL, 'https://api.imgur.com/3/image.json');
+	curl_setopt($curl, CURLOPT_TIMEOUT, $timeout);
+	curl_setopt($curl, CURLOPT_HTTPHEADER, array('Authorization: Client-ID ' . $client_id));
+	curl_setopt($curl, CURLOPT_POST, 1);
+	curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($curl, CURLOPT_POSTFIELDS, $pvars);
+	$out = curl_exec($curl);
+	curl_close ($curl);
+	$pms = json_decode($out,true);
+	$img_url=$pms['data']['link'];
 
-		$consulta_cidade = $db_con->prepare("SELECT * FROM cidade WHERE nome = " . $cidade);
+	$consulta_intuito = $db_con->prepare("SELECT * from intuito where nome = '$intuito'");
+	$consulta_intuito->execute();
+	$intuito = $consulta_intuito->fetch(PDO::FETCH_ASSOC)["id"];
+
+	$consulta_classificacao = $db_con->prepare("SELECT * from classificacao where nome = '$classificacao'");
+	$consulta_classificacao->execute();
+	$classificacao = $consulta_classificacao->fetch(PDO::FETCH_ASSOC)["id"];
+
+	$consulta_idade_publico = $db_con->prepare("SELECT * from idade_publico where intervalo = '$idade_publico'");
+	$consulta_idade_publico->execute();
+	$idade_publico = $consulta_idade_publico->fetch(PDO::FETCH_ASSOC)["id"];
+
+	
+	$consulta_cidade = $db_con->prepare("SELECT * FROM cidade WHERE nome = '" .  $cidade . "'");
         $consulta_cidade->execute();
         if($consulta_cidade->rowCount() == 0){
+			$consulta_estado = $db_con->prepare("SELECT * from estado where nome = '$estado'");
+			$consulta_estado->execute();
+			$linha_estado = $consulta_estado->fetch(PDO::FETCH_ASSOC);
+
             $id_estado = $linha_estado["id"];
             $consulta_criar_cidade = $db_con->prepare("INSERT INTO cidade(nome, FK_ESTADO_id) VALUES('$cidade', '$id_estado')");
             if ($consulta_criar_cidade->execute()) {
@@ -89,16 +106,16 @@ if(autenticar($db_con)) {
                 $resposta["sucesso"] = 0;
                 $resposta["erro"] = "erro ao criar cidade BD: " . $consulta_criar_cidade->$error;
             }
-            $consulta_cidade = $db_con->prepare("SELECT id FROM cidade WHERE nome = " . $cidade);
+            $consulta_cidade = $db_con->prepare("SELECT id FROM cidade WHERE nome = '" . $cidade . "'");
             $consulta_cidade->execute();
         }
         $linha_cidade = $consulta_cidade->fetch(PDO::FETCH_ASSOC);
 
-        $consulta_bairro = $db_con->prepare("SELECT * FROM bairro WHERE nome = " . $bairro);
+        $consulta_bairro = $db_con->prepare("SELECT * FROM bairro WHERE nome = '" . $bairro . "'");
         $consulta_bairro->execute();
         if($consulta_bairro->rowCount() == 0){
             $id_cidade = $linha_cidade["id"];
-            $consulta_criar_bairro = $db_con->prepare("INSERT INTO bairro(nome, FK_ESTADO_id) VALUES('$bairro', '$id_cidade')");
+            $consulta_criar_bairro = $db_con->prepare("INSERT INTO bairro(nome, FK_cidade_id) VALUES('$bairro', '$id_cidade')");
             if ($consulta_criar_bairro->execute()) {
                 // se a consulta deu certo, indicamos sucesso na operação.
                 $resposta["sucesso"] = 1;
@@ -109,7 +126,7 @@ if(autenticar($db_con)) {
                 $resposta["sucesso"] = 0;
                 $resposta["erro"] = "erro ao criar bairro BD: " . $consulta_criar_bairro->$error;
             }
-            $consulta_bairro = $db_con->prepare("SELECT id FROM bairro WHERE nome = " . $bairro);
+            $consulta_bairro = $db_con->prepare("SELECT id FROM bairro WHERE nome = '" . $bairro . "'");
             $consulta_bairro->execute();
         }
         $linha_bairro = $consulta_bairro->fetch(PDO::FETCH_ASSOC);
@@ -118,14 +135,14 @@ if(autenticar($db_con)) {
 		$consulta_endereco = $db_con->prepare("INSERT INTO endereco(numero, cep, descricao, FK_BAIRRO_id) VALUES('$numero', '$cep', '$endereco', '$id_bairro')");
 		$consulta_endereco->execute();
 		
-		$consulta_endereco = $db_con->prepare("SELECT id FROM endereco WHERE numero = " . $numero . " and cep = ". $cep);
+		$consulta_endereco = $db_con->prepare("SELECT id FROM endereco WHERE numero = '" . $numero . "' and cep = '". $cep . "'");
 		$consulta_endereco->execute();
 		$linha_endereco = $consulta_endereco->fetch(PDO::FETCH_ASSOC);
 
 
 		$id_endereco = $linha_endereco["id"];
 
-		$consulta_usuario = $db_con->prepare("SELECT id FROM usuario WHERE email = " . $email);
+		$consulta_usuario = $db_con->prepare("SELECT id FROM usuario WHERE email = '" . $email . "'");
 		$consulta_usuario->execute();
 		$linha_usuario = $consulta_usuario->fetch(PDO::FETCH_ASSOC);
 
@@ -133,8 +150,8 @@ if(autenticar($db_con)) {
 
 		// A proxima linha insere um novo produto no BD.
 		// A variavel consulta indica se a insercao foi feita corretamente ou nao.
-		$consulta = $db_con->prepare("INSERT INTO EVENTO(descricao, nome, foto, data, telefone, min_pessoas, horario_inicio, horario_fim, max_pessoas, FK_INTUITO_id, FK_ENDERECO_id, FK_USUARIO_id, FK_IDADE_PUBLICO_id, FK_CLASSIFICACAO_id)
-		VALUES('$descricao', '$nome', '$img_url', '$data', '$telefone', '$min_pessoas', '$horario_inicio', '$horario_fim', '$max_pessoas', '$intuito', '$id_endereco', '$id_usuario', '$idade_publico', '$classificacao')");
+		$consulta = $db_con->prepare("INSERT INTO EVENTO(descricao, nome, foto, data, min_pessoas, horario_inicio, horario_fim, max_pessoas, FK_INTUITO_id, FK_ENDERECO_id, FK_USUARIO_id, FK_IDADE_PUBLICO_id, FK_CLASSIFICACAO_id, preco)
+		VALUES('$descricao', '$nome', '$img_url', '$data_evento', '$min_pessoas', '$horario_inicio', '$horario_fim', '$max_pessoas', '$intuito', '$id_endereco', '$id_usuario', '$idade_publico', '$classificacao', '$preco')");
 		if ($consulta->execute()) {
 			// Se o produto foi inserido corretamente no servidor, o cliente 
 			// recebe a chave "sucesso" com valor 1
