@@ -124,7 +124,7 @@ VALUES (1, 'Futebol'),
 (19, 'Judô'),
 (20, 'Canoagem'),
 (21, 'Polo Aquático'),
-(22, 'Outro');
+(22, 'Outros');
 
 
 INSERT INTO EVENTO(descricao, nome, data, min_pessoas, preco, max_pessoas, horario_inicio, horario_fim, foto, FK_CLASSIFICACAO_id, FK_INTUITO_id, FK_ENDERECO_id, FK_USUARIO_id, FK_IDADE_PUBLICO_id)
