@@ -36,8 +36,9 @@ if(isset($_GET["id_esporte"]) && isset($_GET["limit"]) && isset($_GET["offset"])
 				// Adiciona o evento no array de eventos.
 				array_push($resposta["eventos"], $evento);
 			}
-		$resposta["sucesso"] = 1;
+		
 	}
+	$resposta["sucesso"] = 1;
 }else{
   $resposta["sucesso"] = 0;
   $resposta["erro"] = "Campo requirido não preenchido";
