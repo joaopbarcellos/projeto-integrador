@@ -84,7 +84,7 @@ $db_con = null;
 
 							<div class="form-floating mb-3">
 								<select class="form-select" id="esporte" name="classificacao">
-									<option value="1" <?php if ($evento["id_classificacao"] == 1) echo "selected"?>>Atletismo</option>
+									<option value="1" <?php if ($evento["id_classificacao"] == 1) echo "selected"?>>Corrida</option>
 									<option value="2" <?php if ($evento["id_classificacao"] == 2) echo "selected"?>>Automobilismo</option>
 									<option value="3"  <?php if ($evento["id_classificacao"] == 3) echo "selected"?>>Basquete</option>
 									<option value="4"  <?php if ($evento["id_classificacao"] == 4) echo "selected"?>>Beach Tennis</option>
