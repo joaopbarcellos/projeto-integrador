@@ -257,7 +257,7 @@ session_start();
 					<button class="carouselimage" type="submit" value ="Surfe" name="esporte">
 						<div class="alinhafiltro">
 							<img src="img/surf.png">
-							Surf
+							Surfe
 						</div>
 					</button>
 
