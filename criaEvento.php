@@ -241,7 +241,7 @@ session_start();
 									<select class="form-select" id="esporte" name="classificacao">
 										<option value="1">Futebol</option>
 										<option value="2">Basquete</option>
-										<option value="3">Atletismo</option>
+										<option value="3">Corrida</option>
 										<option value="4">Natação</option>
 										<option value="5">Vôlei</option>
 										<option value="6">Xadrez</option>
