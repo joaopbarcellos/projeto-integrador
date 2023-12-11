@@ -67,16 +67,7 @@ function criar_endereco($db_con, $cep, $bairro, $cidade, $estado, $descricao, $n
             $descricao =  $descricao . ", " . $complemento;
         }
         $consulta_criar_endereco = $db_con->prepare("INSERT INTO endereco(numero, cep, descricao, FK_BAIRRO_id) VALUES('$numero', '$cep', '$descricao', $id_bairro) returning id");
-        if ($consulta_criar_endereco->execute()) {
-            // se a consulta deu certo, indicamos sucesso na operação.
-            $resposta["sucesso"] = 1;
-        }
-        else {
-            // se houve erro na consulta, indicamos que não houve sucesso
-            // na operação e o motivo no campo de erro.
-            $resposta["sucesso"] = 0;
-            $resposta["erro"] = "erro BD: " . $consulta_criar_endereco->error;
-        }
+        $consulta_criar_endereco->execute();
     }
     $linha_endereco = $consulta_criar_endereco->fetch(PDO::FETCH_ASSOC);
     $resposta["sucesso"] = 1;
