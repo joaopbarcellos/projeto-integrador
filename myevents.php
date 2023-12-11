@@ -73,12 +73,15 @@
 			} else {
 				foreach ($eventos["eventos"] as $evento){
 					echo '<!-- Div evento -->
-					<div class="evento mt-3 mt-sm-4 mt-4 mt-5 mt-3"  id="'. $evento["id"] .'" name="'. $evento["nome"] . '">
+					<div class="evento mt-3 col-12"  id="'. $evento["id"] .'">
 					<!-- Div onde ficará todas as informações -->
-						<div class="informacoes">
-							<div class="row">
+						<div class="informacoes col-12">
+							<div class="row col-12">
 							
-								<img src="' . $evento["foto"] . '" alt="'. $evento["nome"] .'" class="imgEventos img-fluid col-12  col-lg-5">
+								<div class="divdafoto col-12 col-lg-5">
+									<img src="' . $evento["foto"] . '" alt="'. $evento["nome"] .'" class="imgEventos">
+								</div>
+
 								<!-- Div desc que contem todas as descrições do evento -->
 								<div class="desc col-12 col-lg-7">
 									<!-- Parágrafo com título do evento -->
@@ -157,12 +160,15 @@
 			} else {
 				foreach ($eventos["eventos"] as $evento){
 					echo '<!-- Div evento -->
-					<div class="evento mt-3 mt-sm-4 mt-4 mt-5 mt-3"  id="'. $evento["id"] .'" name="'. $evento["nome"] .'">
+					<div class="evento mt-3 col-12"  id="'. $evento["id"] .'">
 					<!-- Div onde ficará todas as informações -->
-						<div class="informacoes">
-							<div class="row">
+						<div class="informacoes col-12">
+							<div class="row col-12">
 							
-								<img src="' . $evento["foto"] . '" alt="'. $evento["nome"] .'" class="imgEventos img-fluid col-12  col-lg-5">
+								<div class="divdafoto col-12 col-lg-5">
+									<img src="' . $evento["foto"] . '" alt="'. $evento["nome"] .'" class="imgEventos">
+								</div>
+
 								<!-- Div desc que contem todas as descrições do evento -->
 								<div class="desc col-12 col-lg-7">
 									<!-- Parágrafo com título do evento -->

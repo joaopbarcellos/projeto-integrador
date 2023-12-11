@@ -539,13 +539,24 @@ footer p {
 .informacoes {
   display: flex;
   flex-direction: row;
-  width: 100%;
+}
+
+.informacoes .row{
+  margin-left: 0 !important;
+}
+
+.divdafoto{
+  height: 361.14px;
+  border-radius: 5px;
+  padding-left: 0 !important;
 }
 
 /* Aplicando tamanho e borda*/
 .imgEventos {
   border-radius: 5px;
   object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 /* Aplicando flexbox e margens */
@@ -555,6 +566,7 @@ footer p {
   margin-bottom: 0px;
   position: relative;
   width: 100%;
+  padding-right: 0 !important;
 }
 
 /* Adicionando margin */
@@ -1080,4 +1092,14 @@ input[type="date"] {
 /* Adicionando tempo de atraso */
 .salvar:hover span:nth-child(6) {
   transition-delay: 0.5s;
+}
+
+@media screen and (max-width: 992px) {
+  .divdafoto{
+    padding-right: 0 !important;
+  }
+
+  .desc {
+    padding-left: 0 !important;
+  }
 }

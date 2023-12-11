@@ -72,6 +72,20 @@ button:focus {
   right: 20% !important;
 }
 
+.fotoslide{
+  height: 253px;
+}
+
+.fotoslide img{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.owl-dots{
+  display: none !important;
+}
+
 /* adiciono espacamento no carousel */
 .carousel-inner {
   margin-top: 2%;
