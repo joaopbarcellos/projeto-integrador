@@ -5,9 +5,9 @@ VALUES (1, 'Família'),
 
 
 INSERT INTO USUARIO (email, nome, data_nascimento, token, foto, telefone, FK_INTUITO_id) 
-VALUES ('gustavo@gmail.com', 'Gustavo Alves', '2000-01-01', '$2y$10$.HdlOPVMXBj2n/doLnPwPuHm/PUgHk8IMPVr4gmfJVlYuDuL4EXRC', 'https://i.imgur.com/RyUD05p.png', '(99) 99999-9999', 1),
-('pedro@gmail.com', 'Pedro Ramos', '2006-05-10', '$2y$10$.HdlOPVMXBj2n/doLnPwPuHm/PUgHk8IMPVr4gmfJVlYuDuL4EXRC', 'https://i.imgur.com/RyUD05p.png', '(99) 99999-9999', 2),
-('joao@gmail.com', 'João Pedro', '1988-12-20', '$2y$10$.HdlOPVMXBj2n/doLnPwPuHm/PUgHk8IMPVr4gmfJVlYuDuL4EXRC', 'https://i.imgur.com/RyUD05p.png', '(99) 99999-9999', 1),
+VALUES ('gustavo@gmail.com', 'Gustavo Alves', '2000-01-01', '$2y$10$.HdlOPVMXBj2n/doLnPwPuHm/PUgHk8IMPVr4gmfJVlYuDuL4EXRC', 'https://i.imgur.com/RyUD05p.png', '(27) 98823-1756', 1),
+('pedro@gmail.com', 'Pedro Soares', '2006-05-10', '$2y$10$.HdlOPVMXBj2n/doLnPwPuHm/PUgHk8IMPVr4gmfJVlYuDuL4EXRC', 'https://i.imgur.com/RyUD05p.png', '(27) 99890-5887', 2),
+('joao@gmail.com', 'João Pedro', '1988-12-20', '$2y$10$.HdlOPVMXBj2n/doLnPwPuHm/PUgHk8IMPVr4gmfJVlYuDuL4EXRC', 'https://i.imgur.com/RyUD05p.png', '(27) 99986-0303', 1),
 ('ana@gmail.com', 'Ana Silva', '1995-03-15', '$2y$10$.HdlOPVMXBj2n/doLnPwPuHm/PUgHk8IMPVr4gmfJVlYuDuL4EXRC', 'https://i.imgur.com/RyUD05p.png', '(99) 99999-9999', 3),
 ('carlos@gmail.com', 'Carlos Oliveira', '1980-07-25', '$2y$10$.HdlOPVMXBj2n/doLnPwPuHm/PUgHk8IMPVr4gmfJVlYuDuL4EXRC', 'https://i.imgur.com/RyUD05p.png', '(99) 99999-9999', 2),
 ('maria@gmail.com', 'Maria Santos', '1992-09-10', '$2y$10$.HdlOPVMXBj2n/doLnPwPuHm/PUgHk8IMPVr4gmfJVlYuDuL4EXRC', 'https://i.imgur.com/RyUD05p.png', '(99) 99999-9999', 1),
@@ -28,7 +28,7 @@ VALUES ('gustavo@gmail.com', 'Gustavo Alves', '2000-01-01', '$2y$10$.HdlOPVMXBj2
 ('marcos@gmail.com', 'Marcos Silva', '1982-07-17', '$2y$10$.HdlOPVMXBj2n/doLnPwPuHm/PUgHk8IMPVr4gmfJVlYuDuL4EXRC', 'https://i.imgur.com/RyUD05p.png', '(99) 99999-9999', 2),
 ('clara@gmail.com', 'Clara Costa', '1998-09-22', '$2y$10$.HdlOPVMXBj2n/doLnPwPuHm/PUgHk8IMPVr4gmfJVlYuDuL4EXRC', 'https://i.imgur.com/RyUD05p.png', '(99) 99999-9999', 3),
 ('raissa@gmail.com', 'Raíssa Oliveira', '1989-11-05', '$2y$10$.HdlOPVMXBj2n/doLnPwPuHm/PUgHk8IMPVr4gmfJVlYuDuL4EXRC', 'https://i.imgur.com/RyUD05p.png', '(99) 99999-9999', 1),
-('fellipy@gmail.com', 'Fellipy Silva', '1999-07-15', '$2y$10$.HdlOPVMXBj2n/doLnPwPuHm/PUgHk8IMPVr4gmfJVlYuDuL4EXRC', 'https://i.imgur.com/RyUD05p.png', '(99) 99999-9999', 2),
+('fellipy@gmail.com', 'Fellipy Silva', '1999-07-15', '$2y$10$.HdlOPVMXBj2n/doLnPwPuHm/PUgHk8IMPVr4gmfJVlYuDuL4EXRC', 'https://i.imgur.com/RyUD05p.png', '(27) 99752-4329', 2),
 ('moises@gmail.com', 'Moisés Omena', '1992-03-25', '$2y$10$.HdlOPVMXBj2n/doLnPwPuHm/PUgHk8IMPVr4gmfJVlYuDuL4EXRC', 'https://i.imgur.com/RyUD05p.png', '(99) 99999-9999', 1),
 ('anaclarasantos@gmail.com', 'Ana Clara Santos Lima', '1990-09-12', '$2y$10$.HdlOPVMXBj2n/doLnPwPuHm/PUgHk8IMPVr4gmfJVlYuDuL4EXRC', 'https://i.imgur.com/RyUD05p.png', '(99) 99999-9999', 3),
 ('caioferreira@gmail.com', 'Caio Ferreira Alves', '2007-11-05', '$2y$10$.HdlOPVMXBj2n/doLnPwPuHm/PUgHk8IMPVr4gmfJVlYuDuL4EXRC', 'https://i.imgur.com/RyUD05p.png', '(99) 99999-9999', 3),
