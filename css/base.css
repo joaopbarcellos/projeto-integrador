@@ -523,6 +523,7 @@ footer p {
 
 /* Aplicando flexbox, tamanho, borda, cor e sombra */
 .evento {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
